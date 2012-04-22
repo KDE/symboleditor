@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE kpartgui SYSTEM "kpartgui.dtd">
+<kpartgui name="SymbolEditor" version="0.1.0">
+<MenuBar>
+    <Menu name="file">
+        <Action name="saveSymbol"/>
+        <Action name="saveSymbolAsNew"/>
+        <Action name="importLibrary"/>
+    </Menu>
+    <Menu name="tools"><text>&amp;Tools</text>
+        <Action name="moveTo"/>
+        <Action name="lineTo"/>
+        <Action name="cubicTo"/>
+        <Action name="rectangle"/>
+        <Action name="ellipse"/>
+        <Action name="rotateLeft"/>
+        <Action name="rotateRight"/>
+        <Action name="flipHorizontal"/>
+        <Action name="flipVertical"/>
+        <Action name="enableSnap"/>
+        <Action name="enableFill"/>
+	</Menu>
+</MenuBar>
+<ToolBar name="mainToolBar" fullWidth="false">
+    <Action name="saveSymbol"/>
+</ToolBar>
+<ToolBar name="ToolsToolbar" fullWidth="false"><text>Tool Toolbar</text>
+    <Action name="moveTo"/>
+    <Action name="lineTo"/>
+    <Action name="cubicTo"/>
+    <Action name="rectangle"/>
+    <Action name="ellipse"/>
+    <Action name="rotateLeft"/>
+    <Action name="rotateRight"/>
+    <Action name="flipHorizontal"/>
+    <Action name="flipVertical"/>
+    <Action name="enableSnap"/>
+    <Action name="enableFill"/>
+</ToolBar>
+</kpartgui>
+

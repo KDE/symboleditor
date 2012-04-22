@@ -1,0 +1,13 @@
+# KDE Config File
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=SymbolEditor
+GenericName=Cross Stitch Symbol Editor
+Comment=A cross stitch symbol creation and editing application
+Icon=symboleditor
+Exec=SymbolEditor -caption %c %i %U
+Terminal=false
+MimeType=application/SymbolEditor;
+Categories=Qt;KDE;Graphics;2DGraphics;RasterGraphics;
+
