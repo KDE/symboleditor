@@ -39,10 +39,12 @@
  *  - @ref file_menu
  *  - @ref edit_menu
  *   - @ref file_edit_toolbar
+ *  - @ref rendering_menu
  *  - @ref tools_menu
  *   - @ref tools_toolbar
  * - @ref editor_window
  *  - @ref editor_tools
+ *  - @ref path_rendering
  *  - @ref points
  *  - @ref editing_symbols
  * - @ref symbol_library
@@ -77,7 +79,7 @@ int main (int argc, char *argv[])
 {
     KAboutData aboutData("SymbolEditor",
                 "SymbolEditor",
-                ki18n("SymbolEditor"), "1.0.0",
+                ki18n("SymbolEditor"), "1.1.0",
                 ki18n("A cross stitch symbol editor."),
                 KAboutData::License_GPL_V2,
                 ki18n("(c)2011 Stephen Allewell"),
