@@ -22,8 +22,15 @@
  * consists of one or more subpaths. Each subpath has a start point, which defaults to (0,0), but can be moved as
  * required. The various tools require one or more additional points to define the subpath. For each of the
  * tools used,the last point of the last tool becomes the first point of the next. Consequently all the individual
- * tools are joined together to create a single subpath. The exception to this is the use of the rectangle and
- * ellipse tools which create stand alone subpaths.
+ * tools are joined together to create a single subpath. A new subpath can be started by using the move to option
+ * to specify a new start point. Additionally the use of the rectangle and ellipse tools will create stand alone subpaths.
+ *
+ * The editor shows a green square which is the largest preferred size of the symbol. This allows some white space
+ * around the symbol when it will be rendered in a pattern.
+ *
+ * When placing points, guide lines will be shown when the cursor is at a position that aligns with other
+ * points either horizontally, vertically or at a 45 degree angle. The circle guides are created if the cursor
+ * is at a position that aligns with another point on a circle where the center is at the center of the grid.
  *
  * @section editor_tools Editor Tools
  *
@@ -64,15 +71,57 @@
  * The selection of points can either be snapped to the grid or can be freely placed depending on if
  * the snap option is toggled on or off.
  *
+ * @section path_rendering Path Rendering
+ *
  * @subsection fill_mode Fill Mode
  * The defined path can either be set to filled or outline depending on if the fill mode is toggled
  * on or off.
  *
+ * @subsection fill_rule Fill Rule
+ * When filling is enabled the path will be filled. The rule defining the fill will be either Winding  of
+ * Odd-Even.
+ *
+ * @par Winding
+ * The winding rule will completely fill the objects boundary.
+ *
+ * @par Odd Even
+ * The odd even rule will fill produce a checker board style fill where adjacent areas will be different
+ * to each other.
+ *
+ * @subsection line_cap Line End Cap Style
+ * The start and end of a path line can have different visual appearance depending on the following
+ * attributes.
+ *
+ * @par Flat Cap
+ * The line is stopped at the end point and the line end is cut square to the direction.
+ *
+ * @par Square Cap
+ * The line is projected beyond the end point by half the line width and the line end is cut square to
+ * the direction.
+ *
+ * @par Round Cap
+ * The line is projected beyond the end point by half the line width and the line end is rounded.
+ *
+ * @subsection line_join Line Join Style
+ * Where two lines join, the way the join is shown is determined by the join style as follows.
+ *
+ * @par Bevel Join
+ * The lines are beveled at the intersection.
+ *
+ * @par Miter Join
+ * The lines are extended and mitered to provide a corner.
+ *
+ * @par Round Join
+ * The lines are joined with a rounded corner.
+ *
+ * @subsection line_width Line Width
+ * The line width can be increased and decreased. The width is rendered equally about the line between
+ * the two points. This attribute is mostly relevant to unfilled shapes.
+ *
  * @section points Points
  * The points can either be snapped to the grid intersections or placed freely depending on the snap option.
- * The symbol can be filled or just shown as an outline depending on the fill option.  All points can be
- * moved by hovering over them until the cursor changes to a move cursor, then hold down the left mouse
- * button and drag the point to its new location.
+ * All points can be moved by hovering over them until the cursor changes to a move cursor, then hold down
+ * the left mouse button and drag the point to its new location.
  *
  * @section editing_symbols Editing Symbols
  * Editing a symbol in the library can be done by double clicking the symbol in the library view. This will
@@ -141,27 +190,30 @@ Editor::~Editor()
 
 
 /**
- * Get the painterPath and index.
+ * Get the index and Symbol.
+ * Update the Symbol with the path being edited.
  *
- * @return the edited QPainterPath and it's index in a QPair
+ * @return the edited Symbol and it's index in a QPair
  */
-QPair<qint16, QPainterPath> Editor::painterPath() const
+QPair<qint16, Symbol> Editor::symbol()
 {
-    return QPair<qint16, QPainterPath>(m_index, m_painterPath);
+    m_symbol.setPath(m_painterPath);
+    return QPair<qint16, Symbol>(m_index, m_symbol);
 }
 
 
 /**
- * Set the painter path and index to be edited.
+ * Set the symbol and index to be edited.
  * The undo stack will be cleared.
  *
- * @param pair a QPair consisting of the index and the QPainterPath
+ * @param pair a QPair consisting of the index and the Symbol
  */
-void Editor::setPainterPath(const QPair<qint16, QPainterPath> &pair)
+void Editor::setSymbol(const QPair<qint16, Symbol> &pair)
 {
     m_undoStack.clear();
     m_index = pair.first;
-    m_painterPath = pair.second;
+    m_symbol = pair.second;
+    m_painterPath = m_symbol.path();
     deconstructPainterPath();
     update();
 }
@@ -378,6 +430,71 @@ void Editor::flipPointsVertical()
 
 
 /**
+ * Set the fill state of the symbols path.
+ *
+ * @param filled @c true if the path is to be filled, @c false for outline paths
+ */
+void Editor::setFilled(bool filled)
+{
+    m_symbol.setFilled(filled);
+    update();
+}
+
+
+/**
+ * Set the fill rule of the symbols path.
+ *
+ * @param rule a Qt::FillRule value, see the QPainterPath documentation for details
+ */
+void Editor::setFillRule(Qt::FillRule rule)
+{
+    m_painterPath.setFillRule(rule);
+    update();
+}
+
+
+/**
+ * Set the pen cap style, see the QPen documentation for details on the styles.
+ *
+ * @param capStyle a Qt::PenCapStyle value
+ */
+void Editor::setCapStyle(Qt::PenCapStyle capStyle)
+{
+    m_symbol.setCapStyle(capStyle);
+    update();
+}
+
+
+/**
+ * Set the pen join style, see the QPen documentation for details on the styles.
+ *
+ * @param joinStyle a Qt::PenJoinStyle value
+ */
+void Editor::setJoinStyle(Qt::PenJoinStyle joinStyle)
+{
+    m_symbol.setJoinStyle(joinStyle);
+    update();
+}
+
+
+/**
+ * Set the line width.
+ * The width parameter is rounded to 2 decimal places to avoid errors in the comparisons.
+ * Signals are emitted to enable or disable the relevant actions depending on the values.
+ *
+ * @param width the new line width
+ */
+void Editor::setLineWidth(double width)
+{
+    width = round(width*100)/100;
+    m_symbol.setLineWidth(width);
+    emit minLineWidth(width == 0.01);
+    emit maxLineWidth(width == 1.00);
+    update();
+}
+
+
+/**
  * Clear the editor to represent a blank symbol.
  * Delete the existing data and update the display.
  */
@@ -388,7 +505,8 @@ void Editor::clear()
     m_activePoints.clear();
     m_elements.clear();
     m_index = 0;
-    m_painterPath = QPainterPath();
+    m_symbol = Symbol();
+    m_painterPath = m_symbol.path();
     update();
 }
 
@@ -407,12 +525,14 @@ QUndoStack *Editor::undoStack()
 /**
  * Select the next tool.
  * Remove any points that may have been used in the last tool command but not yet committed.
- * Set the tool mode from the sending actions data and do any initialisation needed for the tool.
+ * Set the tool mode from the sending actions data.
+ *
+ * @param action a pointer to the action triggering the selection
  */
-void Editor::selectTool()
+void Editor::selectTool(QAction *action)
 {
     m_activePoints.clear();
-    m_toolMode = static_cast<Editor::ToolMode>(qobject_cast<QAction *>(sender())->data().toInt());
+    m_toolMode = static_cast<Editor::ToolMode>(action->data().toInt());
 }
 
 
@@ -430,12 +550,68 @@ void Editor::enableSnap(bool enabled)
 /**
  * Switch the fill mode on or off.
  *
- * @param enabled true if on, false otherwise
+ * @param filled true if on, false otherwise
  */
-void Editor::enableFill(bool enabled)
+void Editor::selectFilled(bool filled)
 {
-    m_fill = enabled;
-    update();
+    m_undoStack.push(new ChangeFilledCommand(this, m_symbol.filled(), filled));
+}
+
+
+/**
+ * Select the fill rule to be used when filling is enabled.
+ * The specified rule is taken from the sending actions data.
+ *
+ * @param action a pointer to the action triggering the selection
+ */
+void Editor::selectFillRule(QAction *action)
+{
+    Qt::FillRule fillRule = static_cast<Qt::FillRule>(action->data().toInt());
+    m_undoStack.push(new ChangeFillRuleCommand(this, m_symbol.path().fillRule(), fillRule));
+}
+
+
+/**
+ * Select the pen cap style.
+ * The specified value is taken from the sending actions data.
+ *
+ * @param action a pointer to the action that triggered the selection
+ */
+void Editor::selectCapStyle(QAction *action)
+{
+    Qt::PenCapStyle capStyle = static_cast<Qt::PenCapStyle>(action->data().toInt());
+    m_undoStack.push(new ChangeCapStyleCommand(this, m_symbol.capStyle(), capStyle));
+}
+
+
+/**
+ * Select the pen join style.
+ * The specified value is taken from the sending actions data.
+ *
+ * @param action a pointer to the action that triggered the selection
+ */
+void Editor::selectJoinStyle(QAction *action)
+{
+    Qt::PenJoinStyle joinStyle = static_cast<Qt::PenJoinStyle>(action->data().toInt());
+    m_undoStack.push(new ChangeJoinStyleCommand(this, m_symbol.joinStyle(), joinStyle));
+}
+
+
+/**
+ * Increase the thickness of the path.
+ */
+void Editor::increaseLineWidth()
+{
+    m_undoStack.push(new IncreaseLineWidthCommand(this, m_symbol.lineWidth(), m_symbol.lineWidth()+0.01));
+}
+
+
+/**
+ * Decrease the thickness of the path.
+ */
+void Editor::decreaseLineWidth()
+{
+    m_undoStack.push(new DecreaseLineWidthCommand(this, m_symbol.lineWidth(), m_symbol.lineWidth()-0.01));
 }
 
 
@@ -484,7 +660,7 @@ void Editor::flipVertical()
  */
 void Editor::mousePressEvent(QMouseEvent *event)
 {
-    QPointF p = (m_snap)?toSnap(event->pos()):toSymbol(event->pos());
+    QPointF p = snapPoint(event->pos());
 
     if (event->buttons() & Qt::LeftButton)
     {
@@ -526,7 +702,7 @@ void Editor::mouseMoveEvent(QMouseEvent *event)
         update();
     }
 
-    QPointF p = (m_snap)?toSnap(event->pos()):toSymbol(event->pos());
+    QPointF p = snapPoint(event->pos());
 
     if (event->buttons() & Qt::LeftButton)
     {
@@ -577,7 +753,7 @@ void Editor::mouseMoveEvent(QMouseEvent *event)
  */
 void Editor::mouseReleaseEvent(QMouseEvent *event)
 {
-    QPointF p = (m_snap)?toSnap(event->pos()):toSymbol(event->pos());
+    QPointF p = snapPoint(event->pos());
 
     if (m_dragging)
     {
@@ -602,7 +778,7 @@ void Editor::mouseReleaseEvent(QMouseEvent *event)
  * tool represents. This function adds the points and keeps track of the number of points
  * required.  When the number of points required have been selected, the tool command can
  * be implemented and added to the symbol undo stack.
- * The points are in the range 0..1
+ * The points are in symbol coordinates in the range 0..1
  *
  * @param point a const reference to a QPointF
  */
@@ -683,8 +859,6 @@ void Editor::paintEvent(QPaintEvent *event)
 
     // create a dashed pen for use with curve references and a wide pen for the shape
     QPen dashedPen(Qt::DashLine);
-    QPen widePen(Qt::black);
-    widePen.setWidth(2);
 
     // draw all the points as a circle
     p.setBrush(Qt::SolidPattern);
@@ -768,17 +942,16 @@ void Editor::paintEvent(QPaintEvent *event)
 
     // scale the painter and draw the path
     p.scale(m_size, m_size);
-    QBrush pathFill(Qt::NoBrush);
-    if (m_fill)
-    {
-        QColor c(Qt::black);
-        c.setAlpha(128);
-        pathFill.setColor(c);
-        pathFill.setStyle(Qt::SolidPattern);
-    }
+    QColor c(Qt::black);
+    c.setAlpha(128);
+    QPen pathPen(c);
+    pathPen.setWidthF(m_symbol.filled()?0.0:m_symbol.lineWidth());
+    pathPen.setCapStyle(m_symbol.capStyle());
+    pathPen.setJoinStyle(m_symbol.joinStyle());
+    p.setPen(pathPen);
+    QBrush pathFill(m_symbol.filled()?Qt::SolidPattern:Qt::NoBrush);
+    pathFill.setColor(c);
     p.setBrush(pathFill);
-    widePen.setWidthF(0.01);
-    p.setPen(widePen);
     p.drawPath(m_painterPath);
 
     // draw the guidelines
@@ -787,6 +960,12 @@ void Editor::paintEvent(QPaintEvent *event)
     QPen guidePen(red);
     p.setPen(guidePen);
     p.setBrush(Qt::NoBrush);
+    QRectF snapRect(0, 0, 0.03, 0.03);
+    foreach (const QPointF &snapPoint, m_snapPoints)
+    {
+        snapRect.moveCenter(snapPoint);
+        p.drawRect(snapRect);
+    }
     foreach (const QLineF &guideLine, m_guideLines)
         p.drawLine(guideLine);
     foreach (qreal guideCircle, m_guideCircles)
@@ -834,19 +1013,76 @@ QPointF Editor::toSymbol(const QPoint &point) const
 
 
 /**
- * Convert a point to a symbol snap point.
- * The point will have come from the mouse events pos() value and will be converted to
- * a value that represents an intersection of the grid lines.
+ * Convert a point to a snap point.
+ *
+ * The point comes from the mouse events pos() value and will be converted to a value
+ * in symbol coordinates. If snapping is enabled, the point will be snapped to a guide
+ * or to a grid intersection. If snapping is disabled, the point is returned converted
+ * to the symbol coordinates.
  *
  * @param point a const reference to a QPoint
  *
- * @return a QPointF representing the snap point, the values will be between 0..1
+ * @return a QPointF representing the symbol coordinates either snapped or not.
  */
-QPointF Editor::toSnap(const QPoint &point) const
+QPointF Editor::snapPoint(const QPoint &point) const
 {
-    double sx = round(static_cast<double>(point.x()) * gridElements / (m_size))/gridElements;
-    double sy = round(static_cast<double>(point.y()) * gridElements / (m_size))/gridElements;
-    return QPointF(sx, sy);
+    QPair<bool, QPointF> snap = snapToGuide(toSymbol(point));
+    if (!snap.first)
+        snap = snapToGrid(point);
+    return snap.second;
+}
+
+
+/**
+ * Convert a point to a symbol snap point.
+ * The point will have come from the mouse events pos() value and will be converted to
+ * a value that represents an intersection of the grid lines. This will happen only if
+ * snapping is enabled.
+ *
+ * @param point a const reference to a QPoint
+ *
+ * @return a QPair<bool, QPointF> the bool element determines if a snap point was found represented by the QPointF element
+ */
+QPair<bool, QPointF> Editor::snapToGrid(const QPoint &point) const
+{
+    QPair<bool, QPointF> snap(false, point);
+    if (m_snap)
+    {
+        double sx = round(static_cast<double>(point.x()) * gridElements / (m_size))/gridElements;
+        double sy = round(static_cast<double>(point.y()) * gridElements / (m_size))/gridElements;
+        snap.first = true;
+        snap.second = QPointF(sx, sy);
+    }
+    return snap;
+}
+
+
+/**
+ * Convert a point to a guide snap point.
+ * The point will have come from the mouse events pos() value and will be converted to
+ * a value that is within the threshold of a calculated guide intersection. This will
+ * happen only if the snapping is enabled.
+ *
+ * @param point a const reference to a QPointF
+ *
+ * @return a QPair<bool, QPointF> the bool element determines if a snap point was found represented by the QPointF element
+ */
+QPair<bool, QPointF> Editor::snapToGuide(const QPointF &point) const
+{
+    QPair<bool, QPointF> snap(false, point);
+    if (m_snap)
+    {
+        foreach (const QPointF &p, m_snapPoints)
+        {
+            if ((point-p).manhattanLength() < threshold)
+            {
+                snap.first = true;
+                snap.second = p;
+                break;
+            }
+        }
+    }
+    return snap;
 }
 
 
@@ -970,26 +1206,28 @@ void Editor::deconstructPainterPath()
  */
 void Editor::constructPainterPath()
 {
-    m_painterPath = QPainterPath();
+    QPainterPath path;;
     for (int i = 0, j = 0 ; i < m_elements.count() ; ++i)
     {
         QPainterPath::ElementType e = m_elements[i];
         switch (e)
         {
             case QPainterPath::MoveToElement:
-                m_painterPath.moveTo(m_points[j++]);
+                path.moveTo(m_points[j++]);
                 break;
 
             case QPainterPath::LineToElement:
-                m_painterPath.lineTo(m_points[j++]);
+                path.lineTo(m_points[j++]);
                 break;
 
             case QPainterPath::CurveToElement:
-                m_painterPath.cubicTo(m_points[j], m_points[j+1], m_points[j+2]);
+                path.cubicTo(m_points[j], m_points[j+1], m_points[j+2]);
                 j += 3;
                 break;
         }
     }
+    path.setFillRule(m_painterPath.fillRule());
+    m_painterPath = path;
 }
 
 
@@ -1022,7 +1260,7 @@ bool Editor::constructGuides(const QPointF &to)
 
 /**
  * Construct line guides for the given point.
- * The angle formed by the line t to p is tested against the allowed angles.
+ * The angle formed by the line from-to is tested against the allowed angles.
  * If the angle is acceptable a new QLineF is created projected to the edges of
  * the grid.
  *
@@ -1074,7 +1312,7 @@ void Editor::constructCircleGuides(const QPointF &from, const QPointF &to)
 /**
  * Project the line to the edges of the grid.
  * Calculate the points where the projected line would intersect the edges.
- * Check which edges get intersected within the coordinate 0..1 which will determine the
+ * Check which edges get intersected within the coordinate 0..1 which will determine
  * which points are required to construct the projected line.
  * A special case occurs when the line is a diagonal passing through the corners as it
  * intersects all sides within the coordinate range 0..1

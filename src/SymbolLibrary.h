@@ -25,6 +25,8 @@
 
 #include <KUrl>
 
+#include "Symbol.h"
+
 
 class QDataStream;
 class QListWidget;
@@ -47,9 +49,9 @@ public:
 
     void clear();
 
-    QPainterPath symbol(qint16 index);
-    QPainterPath takeSymbol(qint16 index);
-    qint16 setSymbol(qint16 index, const QPainterPath &path);
+    Symbol symbol(qint16 index);
+    Symbol takeSymbol(qint16 index);
+    qint16 setSymbol(qint16 index, const Symbol &symbol);
     QListWidgetItem *item(qint16 index);
 
     KUrl url() const;
@@ -65,9 +67,9 @@ public:
 private:
     void generateItems();
     QListWidgetItem *generateItem(qint16 index);
-    QIcon generateIcon(const QPainterPath &path);
+    QIcon generateIcon(const Symbol &symbol);
 
-    static const qint32 version = 100;              /**< stream version of this file */
+    static const qint32 version = 101;              /**< stream version of this file */
 
     QUndoStack m_undoStack;                         /**< holds the commands that have made changes to this library */
 
@@ -76,7 +78,7 @@ private:
     QListWidget *m_listWidget;                      /**< pointer to a QListWidget containing the QListWidgetItems for the QIcons, this may be null for an imported file */
 
     qint16                          m_nextIndex;    /**< index for the next symbol added */
-    QMap<qint16, QPainterPath>      m_symbols;      /**< map of the QPainterPath to indexes */
+    QMap<qint16, Symbol>            m_symbols;      /**< map of the Symbol to indexes */
     QMap<qint16, QListWidgetItem *> m_listItems;    /**< map of the QListWidgetItems to indexes */
 };
 

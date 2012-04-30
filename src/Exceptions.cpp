@@ -141,3 +141,21 @@ QString FailedWriteLibrary::statusMessage() const
     return QString(i18n("Undefined status message status %1", m_status));
 }
 
+
+/**
+ * Constructor
+ *
+ * @param v the version of the Symbol being read
+ */
+InvalidSymbolVersion::InvalidSymbolVersion(qint32 v)
+    :   version(v)
+{
+}
+
+
+/**
+ * Destructor
+ */
+InvalidSymbolVersion::~InvalidSymbolVersion()
+{
+}

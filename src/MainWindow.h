@@ -30,6 +30,7 @@ class KTabWidget;
 
 class KUrl;
 class Editor;
+class Symbol;
 class SymbolLibrary;
 
 
@@ -77,17 +78,23 @@ protected slots:
 
     void currentChanged(int index);
     void itemDoubleClicked(QListWidgetItem *item);
+    void listWidgetContextMenuRequested(const QPoint &pos);
+    void deleteSymbol();
 
 private:
     bool editorClean();
     bool libraryClean();
     void setupActions();
+    void setActionsFromSymbol(const Symbol &symbol);
 
     KTabWidget  *m_tabWidget;           /**< pointer to the KTabWidget containing the editor and library tabs */
     Editor      *m_editor;              /**< pointer to the Editor */
     QListWidget *m_listWidget;          /**< pointer to the QListWidget containing icons for the library symbols */
 
     SymbolLibrary   *m_symbolLibrary;   /**< pointer to a SymbolLibrary */
+
+    QListWidgetItem *m_item;            /**< pointer to a QListWidgetItem in m_listWidget found for the context menu */
+    QMenu           *m_menu;            /**< pointer to a popup context menu */
 
     QUndoGroup  m_undoGroup;            /**< the QUndoGroup has the QUndoStacks for the Editor and the SymbolLibrary added to it */
 };

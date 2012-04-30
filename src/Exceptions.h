@@ -89,4 +89,19 @@ private:
 };
 
 
+/**
+ * @brief Found an invalid symbol version.
+ *
+ * This is thrown when the symbol being read was not a known version.
+ */
+class InvalidSymbolVersion
+{
+public:
+    InvalidSymbolVersion(qint32 v);
+    ~InvalidSymbolVersion();
+
+    qint32  version;                /** the version of the symbol read */
+};
+
+
 #endif

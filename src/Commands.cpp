@@ -37,6 +37,25 @@
 #include "Editor.h"
 #include "SymbolLibrary.h"
 
+enum IDs {MoveTo,
+          LineTo,
+          CubicTo,
+          Rectangle,
+          Ellipse,
+          MovePoint,
+          UpdateSymbol,
+          ImportLibrary,
+          RotateLeft,
+          RotateRight,
+          FlipHorizontal,
+          FlipVertical,
+          ChangeFilled,
+          ChangeFillRule,
+          ChangeCapStyle,
+          ChangeJoinStyle,
+          DeleteSymbol,
+          IncreaseLineWidth,
+          DecreaseLineWidth};
 
 /**
  * Constructor
@@ -302,13 +321,13 @@ void MovePointCommand::redo()
  *
  * @param library a pointer to the SymbolLibrary
  * @param index the index of the symbol to be updated
- * @param path a const reference to a QPainterPath representing the updated symbol
+ * @param symbol a const reference to a Symbol representing the updated symbol
  */
-UpdateSymbolCommand::UpdateSymbolCommand(SymbolLibrary *library, qint16 index, const QPainterPath &path)
-    :   QUndoCommand(),
+UpdateSymbolCommand::UpdateSymbolCommand(SymbolLibrary *library, qint16 index, const Symbol &symbol)
+    :   QUndoCommand(i18n("Update Symbol")),
         m_symbolLibrary(library),
         m_index(index),
-        m_path(path)
+        m_symbol(symbol)
 {
 }
 
@@ -327,25 +346,25 @@ UpdateSymbolCommand::~UpdateSymbolCommand()
  */
 void UpdateSymbolCommand::undo()
 {
-    if (m_originalPath.isEmpty())
+    if (m_symbol.path().isEmpty())
     {
         m_symbolLibrary->takeSymbol(m_index);
         m_index = 0;
     }
     else
-        m_symbolLibrary->setSymbol(m_index, m_originalPath);
+        m_symbolLibrary->setSymbol(m_index, m_originalSymbol);
 }
 
 
 /**
- * Redo the update symbol command. The original QPainterPath is saved for undo. This may be empty.
- * The new QPainterPath is set in the library for the given index. If the index is 0 a new index
+ * Redo the update symbol command. The original Symbol is saved for undo. This may be empty.
+ * The new Symbol is set in the library for the given index. If the index is 0 a new index
  * is generated, returned and saved for undo.
  */
 void UpdateSymbolCommand::redo()
 {
-    m_originalPath = m_symbolLibrary->symbol(m_index);
-    m_index = m_symbolLibrary->setSymbol(m_index, m_path);
+    m_originalSymbol = m_symbolLibrary->symbol(m_index);
+    m_index = m_symbolLibrary->setSymbol(m_index, m_symbol);
 }
 
 
@@ -392,10 +411,7 @@ void ImportLibraryCommand::undo()
 void ImportLibraryCommand::redo()
 {
     foreach (qint16 i, m_imported->indexes())
-    {
-        QPainterPath path = m_imported->symbol(i);
-        m_addedIndexes.append(m_symbolLibrary->setSymbol(0, path)); // gets a new index
-    }
+        m_addedIndexes.append(m_symbolLibrary->setSymbol(0, m_imported->symbol(i))); // gets a new index
 }
 
 
@@ -550,4 +566,352 @@ void FlipVerticalCommand::undo()
 void FlipVerticalCommand::redo()
 {
     m_editor->flipPointsVertical();
+}
+
+
+/**
+ * Constructor
+ *
+ * @param editor a pointer to the Editor
+ * @param from @c true if the currently filled, @c false otherwise
+ * @param to @c true if changing to filled, @c false otherwise
+ */
+ChangeFilledCommand::ChangeFilledCommand(Editor *editor, bool from, bool to)
+    :   QUndoCommand(i18n("Change Fill State")),
+        m_editor(editor),
+        m_from(from),
+        m_to(to)
+{
+}
+
+
+/**
+ * Destructor
+ */
+ChangeFilledCommand::~ChangeFilledCommand()
+{
+}
+
+
+/**
+ * Undo the change fill state command. Call the Editor::setFilled function to set the original value
+ */
+void ChangeFilledCommand::undo()
+{
+    m_editor->setFilled(m_from);
+}
+
+
+/**
+ * Redo the change fill state command. Call the Editor::setFilled function to set the new value.
+ */
+void ChangeFilledCommand::redo()
+{
+    m_editor->setFilled(m_to);
+}
+
+
+/**
+ * Constructor
+ *
+ * @param editor a point to the Editor
+ * @param from a Qt::FillRule value representing the original setting
+ * @param to a Qt::FillRule value representing the new setting
+ */
+ChangeFillRuleCommand::ChangeFillRuleCommand(Editor *editor, Qt::FillRule from, Qt::FillRule to)
+    :   QUndoCommand(i18n("Change Fill Rule")),
+        m_editor(editor),
+        m_from(from),
+        m_to(to)
+{
+}
+
+
+/**
+ * Destructor
+ */
+ChangeFillRuleCommand::~ChangeFillRuleCommand()
+{
+}
+
+
+/**
+ * Undo the change fill rule command. Call the Editor::setFillRule function to set the original value.
+ */
+void ChangeFillRuleCommand::undo()
+{
+    m_editor->setFillRule(m_from);
+}
+
+
+/**
+ * Redo the change fill rule command. Call the Editor::setFillRule function to set the new value.
+ */
+void ChangeFillRuleCommand::redo()
+{
+    m_editor->setFillRule(m_to);
+}
+
+
+/**
+ * Constructor
+ *
+ * @param editor a pointer to the Editor
+ * @param from a Qt::PenCapStyle value representing the orginal setting
+ * @param to a Qt::PenCapStyle value representing the new setting
+ */
+ChangeCapStyleCommand::ChangeCapStyleCommand(Editor *editor, Qt::PenCapStyle from, Qt::PenCapStyle to)
+    :   QUndoCommand(i18n("Change Cap Style")),
+        m_editor(editor),
+        m_from(from),
+        m_to(to)
+{
+}
+
+
+/**
+ * Destructor
+ */
+ChangeCapStyleCommand::~ChangeCapStyleCommand()
+{
+}
+
+
+/**
+ * Undo the change pen cap style command.
+ */
+void ChangeCapStyleCommand::undo()
+{
+    m_editor->setCapStyle(m_from);
+}
+
+
+/**
+ * Redo the change pen cap style command.
+ */
+void ChangeCapStyleCommand::redo()
+{
+    m_editor->setCapStyle(m_to);
+}
+
+
+/**
+ * Constructor
+ *
+ * @param editor a pointer to the Editor
+ * @param from a Qt::PenJoinStyle value representing the original setting
+ * @param to a Qt::PenJoinStyle value representing the new setting
+ */
+ChangeJoinStyleCommand::ChangeJoinStyleCommand(Editor *editor, Qt::PenJoinStyle from, Qt::PenJoinStyle to)
+    :   QUndoCommand(i18n("Change Join Style")),
+        m_editor(editor),
+        m_from(from),
+        m_to(to)
+{
+}
+
+
+/**
+ * Destructor
+ */
+ChangeJoinStyleCommand::~ChangeJoinStyleCommand()
+{
+}
+
+
+/**
+ * Undo the change pen join style command.
+ */
+void ChangeJoinStyleCommand::undo()
+{
+    m_editor->setJoinStyle(m_from);
+}
+
+
+/**
+ * Redo the change pen join style command.
+ */
+void ChangeJoinStyleCommand::redo()
+{
+    m_editor->setJoinStyle(m_to);
+}
+
+
+/**
+ * Constructor
+ *
+ * @param library a pointer to the SymbolLibrary
+ * @param index the index of the Symbol to delete
+ */
+DeleteSymbolCommand::DeleteSymbolCommand(SymbolLibrary *library, qint16 index)
+    :   QUndoCommand(i18n("Delete Symbol")),
+        m_symbolLibrary(library),
+        m_index(index)
+{
+}
+
+
+/**
+ * Destructor
+ */
+DeleteSymbolCommand::~DeleteSymbolCommand()
+{
+}
+
+
+/**
+ * Undo deleting the Symbol restoring it from the saved one.
+ */
+void DeleteSymbolCommand::undo()
+{
+    m_symbolLibrary->setSymbol(m_index, m_symbol);
+}
+
+
+/**
+ * Redo deleting the Symbol. Store the removed Symbol for undo.
+ */
+void DeleteSymbolCommand::redo()
+{
+    m_symbol = m_symbolLibrary->takeSymbol(m_index);
+}
+
+
+/**
+ * Constructor
+ *
+ * @param editor a pointer to the Editor
+ * @param from the value of the original setting
+ * @param to the value of the new setting
+ */
+IncreaseLineWidthCommand::IncreaseLineWidthCommand(Editor *editor, qreal from, qreal to)
+    :   QUndoCommand(i18n("Increase Line Width")),
+        m_editor(editor),
+        m_from(from),
+        m_to(to)
+{
+}
+
+
+/**
+ * Destructor
+ */
+IncreaseLineWidthCommand::~IncreaseLineWidthCommand()
+{
+}
+
+
+/**
+ * Undo the line width increase.
+ */
+void IncreaseLineWidthCommand::undo()
+{
+    m_editor->setLineWidth(m_from);
+}
+
+
+/**
+ * Redo the line width increase.
+ */
+void IncreaseLineWidthCommand::redo()
+{
+    m_editor->setLineWidth(m_to);
+}
+
+
+/**
+ * Get the id related to this command.
+ *
+ * @return int representing the value from the IDs enum
+ */
+int IncreaseLineWidthCommand::id() const
+{
+    return static_cast<int>(IncreaseLineWidth);
+}
+
+
+/**
+ * Merge this command with another IncreaseLineWidthCommand.
+ * This allows repeated increases without additional commands added to the stack.
+ *
+ * @param command a pointer to the additional QUndoCommand
+ *
+ * @return @c true if the merge succeeded, @c false otherwise
+ */
+bool IncreaseLineWidthCommand::mergeWith(const QUndoCommand *command)
+{
+    if (command->id() != id())
+        return false;
+    m_to += static_cast<const IncreaseLineWidthCommand *>(command)->m_to;
+    return true;
+}
+
+
+/**
+ * Constructor
+ *
+ * @param editor a pointer to the Editor
+ * @param from the value of the original setting
+ * @param to the value of the new setting
+ */
+DecreaseLineWidthCommand::DecreaseLineWidthCommand(Editor *editor, qreal from, qreal to)
+    :   QUndoCommand(i18n("Decrease Line Width")),
+        m_editor(editor),
+        m_from(from),
+        m_to(to)
+{
+}
+
+
+/**
+ * Destructor
+ */
+DecreaseLineWidthCommand::~DecreaseLineWidthCommand()
+{
+}
+
+
+/**
+ * Undo the line width decrease.
+ */
+void DecreaseLineWidthCommand::undo()
+{
+    m_editor->setLineWidth(m_from);
+}
+
+
+/**
+ * Redo the line width decrease.
+ */
+void DecreaseLineWidthCommand::redo()
+{
+    m_editor->setLineWidth(m_to);
+}
+
+
+/**
+ * Get the id related to this command.
+ *
+ * @return int representing the value from the IDs enum
+ */
+int DecreaseLineWidthCommand::id() const
+{
+    return static_cast<int>(DecreaseLineWidth);
+}
+
+
+/**
+ * Merge this command with another DecreaseLineWidthCommand.
+ * This allows repeated decreases without additional commands added to the stack.
+ *
+ * @param command a pointer to the additional QUndoCommand
+ *
+ * @return @c true if the merge succeeded, @c false otherwise
+ */
+bool DecreaseLineWidthCommand::mergeWith(const QUndoCommand *command)
+{
+    if (command->id() != id())
+        return false;
+    m_to -= static_cast<const DecreaseLineWidthCommand *>(command)->m_to;
+    return true;
 }

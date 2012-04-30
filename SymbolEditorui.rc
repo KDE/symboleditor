@@ -18,8 +18,23 @@
         <Action name="flipHorizontal"/>
         <Action name="flipVertical"/>
         <Action name="enableSnap"/>
-        <Action name="enableFill"/>
-	</Menu>
+    </Menu>
+    <Menu name="rendering"><text>&amp;Rendering</text>
+        <Action name="fillPath"/>
+        <Action name="windingFill"/>
+        <Action name="oddEvenFill"/>
+        <Separator/>
+        <Action name="flatCap"/>
+        <Action name="squareCap"/>
+        <Action name="roundCap"/>
+        <Separator/>
+        <Action name="bevelJoin"/>
+        <Action name="miterJoin"/>
+        <Action name="roundJoin"/>
+        <Separator/>
+        <Action name="increaseLineWidth"/>
+        <Action name="decreaseLineWidth"/>
+    </Menu>
 </MenuBar>
 <ToolBar name="mainToolBar" fullWidth="false">
     <Action name="saveSymbol"/>
@@ -35,7 +50,22 @@
     <Action name="flipHorizontal"/>
     <Action name="flipVertical"/>
     <Action name="enableSnap"/>
-    <Action name="enableFill"/>
+</ToolBar>
+<ToolBar name="RenderingToolbar" fullWidth="false"><text>Rendering Toolbar</text>
+    <Action name="fillPath"/>
+    <Action name="windingFill"/>
+    <Action name="oddEvenFill"/>
+    <Separator/>
+    <Action name="flatCap"/>
+    <Action name="squareCap"/>
+    <Action name="roundCap"/>
+    <Separator/>
+    <Action name="bevelJoin"/>
+    <Action name="miterJoin"/>
+    <Action name="roundJoin"/>
+    <Separator/>
+    <Action name="increaseLineWidth"/>
+    <Action name="decreaseLineWidth"/>
 </ToolBar>
 </kpartgui>
 

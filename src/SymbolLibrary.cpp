@@ -33,6 +33,9 @@
  * and the active one is dependent on which of the tabs is selected. Undoing commands in the editor tab does not
  * affect the library, similarly undoing commands in the library does not affect the editor.
  *
+ * A context menu is available for the symbols in the list allowing individual symbols to be deleted. This can be
+ * undone if required.
+ *
  * Using the File->Import Library it is also possible to import symbols from another symbol file into the current
  * symbol library. These will then be appended to the current set of symbols.
  *
@@ -56,8 +59,8 @@
 /**
  * Construct a SymbolLibrary.
  * Set the url to Untitled and the index to 0.
- * The index will be set when a file is loaded and will be incremented before use for new
- * library symbols being added. It will be saved with the file for the next time it is loaded.
+ * The index will be set when a file is loaded and will be incremented when a new symbols
+ * has been added. It will be saved with the file for the next time it is loaded.
  */
 SymbolLibrary::SymbolLibrary(QListWidget *listWidget)
     :   m_listWidget(listWidget)
@@ -78,7 +81,7 @@ SymbolLibrary::~SymbolLibrary()
 /**
  * Clear the file of symbols.
  * Clears the undo stack, deletes all the QListWidgetItems and clears the symbol map.
- * The index is reset to 0.
+ * The index is reset to 1.
  * The url is initialized to Untitled
  */
 void SymbolLibrary::clear()
@@ -88,67 +91,70 @@ void SymbolLibrary::clear()
     foreach (QListWidgetItem *item, m_listItems)
         delete item;
     m_listItems.clear();
-    m_nextIndex = 0;
+    m_nextIndex = 1;
     m_url = KUrl(i18n("Untitled"));
 }
 
 
 /**
  * Get the path associated with an index.
- * If the index is not in the library it returns an empty path.
+ * If the index is not in the library it returns a default constructed Symbol.
  *
  * @param index a qint16 representing the index to find
  *
- * @return a QPainterPath representing the symbol
+ * @return a Symbol
  */
-QPainterPath SymbolLibrary::symbol(qint16 index)
+Symbol SymbolLibrary::symbol(qint16 index)
 {
-    return (m_symbols.contains(index)?m_symbols[index]:QPainterPath());
+    return (m_symbols.contains(index)?m_symbols[index]:Symbol());
 }
 
 
 /**
- * Take a path from the library.
- * Remove a path identified by it's index and return it.
+ * Take a symbol from the library.
+ * Remove a symbol identified by it's index and return it.
  * The QListWidgetItem associated with the symbol is also removed and deleted.
- * If the index is not in the libary it returns an empty path.
+ * If the index is not in the libary it returns a default constructed symbol.
  *
  * @param index the index of the Symbol to be removed
  *
- * @return a QPainterPath representing the symbol
+ * @return a Symbol
  */
-QPainterPath SymbolLibrary::takeSymbol(qint16 index)
+Symbol SymbolLibrary::takeSymbol(qint16 index)
 {
-    QPainterPath path;
+    Symbol symbol;
     if (m_symbols.contains(index))
     {
-        path = m_symbols.take(index);
+        symbol = m_symbols.take(index);
         delete m_listItems.take(index);
     }
-    return path;
+    return symbol;
 }
 
 
 /**
- * Update the path for an index in the library.
- * If the index supplied is 0, a new index will be taken from the incremented file index
- * and this will be returned.
+ * Update the Symbol for an index in the library.
+ * If the index supplied is 0, a new index will be taken from the m_nextIndex value which is
+ * the incremented. This value will be returned.
  * For new symbols a new QListWidgetItem is created. The icon is created for new symbols and
  * updated for existing ones.
  *
  * @param index a qint16 representing the index
- * @param path a const reference to a QPainterPath
+ * @param symbol a const reference to a Symbol
  *
  * @return a qint16 representing the index, this is useful when the original index was 0
  */
-qint16 SymbolLibrary::setSymbol(qint16 index, const QPainterPath &path)
+qint16 SymbolLibrary::setSymbol(qint16 index, const Symbol &symbol)
 {
     if (!index)
-        index = ++m_nextIndex;
-    m_symbols.insert(index, path);
+        index = m_nextIndex++;
+    m_symbols.insert(index, symbol);
 
-    QListWidgetItem *item = (m_listItems.contains(index))?m_listItems[index]:generateItem(index);
-    item->setIcon(generateIcon(path));
+    if (m_listWidget)
+    {
+        QListWidgetItem *item = (m_listItems.contains(index))?m_listItems[index]:generateItem(index);
+        item->setIcon(generateIcon(symbol));
+    }
 
     return index;
 }
@@ -163,7 +169,10 @@ qint16 SymbolLibrary::setSymbol(qint16 index, const QPainterPath &path)
  */
 QListWidgetItem *SymbolLibrary::item(qint16 index)
 {
-    return m_listItems[index];
+    QListWidgetItem *item = 0;
+    if (m_listItems.contains(index))
+        item = m_listItems[index];
+    return item;
 }
 
 
@@ -217,10 +226,14 @@ QUndoStack *SymbolLibrary::undoStack()
  * Generate all the items in the library.
  * This will be called when a library file is loaded to generate all the new
  * QListWidgetItems for the symbols in the library and generate an icon for it.
+ * A list of sorted QMap keys is retrieved to allow adding items in the correct
+ * order.
  */
 void SymbolLibrary::generateItems()
 {
-    QList<qint16> keys = m_symbols.keys();
+    if (!m_listWidget)
+        return;
+    QList<qint16> keys = indexes();
     foreach (qint16 index, keys)
     {
         QListWidgetItem *item = generateItem(index);
@@ -231,8 +244,8 @@ void SymbolLibrary::generateItems()
 
 /**
  * Generate the QListWidgetItem for the specified symbol.
- * The new item is assigned the index and is added to the list of items and
- * is also added to the QListWidget.
+ * The new item is assigned the index and is added to or inserted into the list of
+ * items and is also added to the QListWidget.
  *
  * @param index the index of the item
  *
@@ -243,27 +256,40 @@ QListWidgetItem *SymbolLibrary::generateItem(qint16 index)
     QListWidgetItem *item = new QListWidgetItem;
     item->setData(Qt::UserRole, index);
     m_listItems.insert(index, item);
-    m_listWidget->addItem(item);
+    int i = index;
+    while (++i < m_nextIndex)
+        if (m_listItems.contains(i))
+            break;
+    if (i == m_nextIndex)
+        m_listWidget->addItem(item);
+    else
+        m_listWidget->insertItem(m_listWidget->row(m_listItems[i]), item);
     return item;
 }
 
 
 /**
- * Generate a QIcon for the supplied QPainterPath.
+ * Generate a QIcon for the supplied Symbol.
  *
- * @param path a const reference to a QPainterPath
+ * @param symbol a const reference to a Symbol
  *
  * @return a QIcon
  */
-QIcon SymbolLibrary::generateIcon(const QPainterPath &path)
+QIcon SymbolLibrary::generateIcon(const Symbol &symbol)
 {
     QPixmap icon(48, 48);
     icon.fill(Qt::white);
     QPainter p(&icon);
     p.setRenderHint(QPainter::Antialiasing, true);
     p.scale(48, 48);
-    p.setBrush(Qt::SolidPattern);
-    p.drawPath(path);
+    QBrush brush(symbol.filled()?Qt::SolidPattern:Qt::NoBrush);
+    QPen pen;
+    pen.setWidthF(symbol.lineWidth());
+    pen.setCapStyle(symbol.capStyle());
+    pen.setJoinStyle(symbol.joinStyle());
+    p.setBrush(brush);
+    p.setPen(pen);
+    p.drawPath(symbol.path());
     p.end();
     return QIcon(icon);
 }
@@ -286,9 +312,9 @@ QDataStream &operator<<(QDataStream &stream, const SymbolLibrary &library)
     stream.setVersion(QDataStream::Qt_4_0);
     stream << library.version;
     stream << library.m_nextIndex;
-    stream << library.m_symbols;
     if (stream.status() != QDataStream::Ok)
         throw FailedWriteLibrary(stream.status());
+    stream << library.m_symbols;
     return stream;
 }
 
@@ -316,17 +342,37 @@ QDataStream &operator>>(QDataStream &stream, SymbolLibrary &library)
     stream.readRawData(magic, 15);
     if (strncmp(magic, "KXStitchSymbols", 15) == 0)
     {
+        stream.setVersion(QDataStream::Qt_4_0);
         qint32 version;
         qint16 nextIndex;
+        QMap<qint16, QPainterPath> paths_v100;
+        QList<qint16> paths_v100_keys;
         stream >> version;
         switch (version)
         {
-            case 100:
-                stream >> library.m_nextIndex >> library.m_symbols;
+            case 101:
+                stream >> library.m_nextIndex;
                 if (stream.status() != QDataStream::Ok)
                     throw FailedReadLibrary(stream.status());
-                if (library.m_listWidget)
-                    library.generateItems();
+                stream >> library.m_symbols;
+                library.generateItems();
+                break;
+
+            case 100:
+                stream >> library.m_nextIndex;
+                library.m_nextIndex++;
+                stream >> paths_v100;
+                paths_v100_keys = paths_v100.keys();
+                foreach (qint16 index, paths_v100_keys)
+                {
+                    Symbol symbol;
+                    symbol.setPath(paths_v100[index]);
+                    library.setSymbol(index, symbol);
+                }
+                break;
+
+            default:
+                throw InvalidFileVersion(version);
                 break;
         }
     }

@@ -47,6 +47,9 @@ class QPaintEvent;
  * is an accurate representation of the final path. The QPainterPath is deconstructed into
  * its individual elements and points for editing.
  *
+ * There are additional attributes used to draw the path, filled or unfilled, the fill rule,
+ * line width, end cap and join styles can be changed to alter the appearance of the path.
+ *
  * The user interacts with the editor using the various tools. For each tool a number of
  * points need to be defined, simple tools like move to and line to only require one point
  * whereas cubic to requires three to define the two control points and the end point.
@@ -76,8 +79,8 @@ public:
     Editor(QWidget *parent = 0);
     ~Editor();
 
-    QPair<qint16, QPainterPath> painterPath() const;
-    void setPainterPath(const QPair<qint16, QPainterPath> &pair);
+    QPair<qint16, Symbol> symbol();
+    void setSymbol(const QPair<qint16, Symbol> &pair);
 
     QPainterPath moveTo(const QPointF &to);
     QPainterPath lineTo(const QPointF &to);
@@ -90,15 +93,25 @@ public:
     void rotatePointsRight();
     void flipPointsHorizontal();
     void flipPointsVertical();
+    void setFilled(bool filled);
+    void setFillRule(Qt::FillRule rule);
+    void setCapStyle(Qt::PenCapStyle capStyle);
+    void setJoinStyle(Qt::PenJoinStyle joinStyle);
+    void setLineWidth(double width);
 
     void clear();
 
     QUndoStack *undoStack();
 
 public slots:
-    void selectTool();
+    void selectTool(QAction *action);
     void enableSnap(bool enabled);
-    void enableFill(bool enabled);
+    void selectFilled(bool enabled);
+    void selectFillRule(QAction *action);
+    void selectCapStyle(QAction *action);
+    void selectJoinStyle(QAction *action);
+    void increaseLineWidth();
+    void decreaseLineWidth();
 
     void rotateLeft();
     void rotateRight();
@@ -107,6 +120,8 @@ public slots:
 
 signals:
     void message(const QString &text);
+    void minLineWidth(bool reached);
+    void maxLineWidth(bool reached);
 
 protected:
     void mousePressEvent(QMouseEvent *event);
@@ -119,7 +134,9 @@ protected:
 
 private:
     void addPoint(const QPointF &point);
-    QPointF toSnap(const QPoint &point) const;
+    QPointF snapPoint(const QPoint &point) const;
+    QPair<bool, QPointF> snapToGrid(const QPoint &point) const;
+    QPair<bool, QPointF> snapToGuide(const QPointF &point) const;
     QPointF toSymbol(const QPoint &point) const;
     QPoint toScreen(const QPointF &point) const;
     bool node(const QPointF &point) const;
@@ -146,7 +163,8 @@ private:
     QList<QPointF>      m_activePoints;             /**< the points that are being entered for the current command */
 
     qint16              m_index;                    /**< the index of the symbol as stored in the library, this is 0 for new symbols */
-    QPainterPath        m_painterPath;              /**< the path constructed from the elements in m_elements and m_points */
+    QPainterPath        m_painterPath;              /**< the path from m_symbol currently being edited */
+    Symbol              m_symbol;                   /**< the symbol containing the QPainterPath and rendering attributes */
 
     bool                m_dragging;                 /**< true if currently dragging a point around */
     QPointF             m_start;                    /**< the start position of a drag operation or the start of a rubber band selection */
@@ -157,6 +175,7 @@ private:
     QVector<qreal>      m_angles;                   /**< the angles allowed for constructing guide lines */
     QList<QLineF>       m_guideLines;               /**< the guide lines that have been constructed for a given point */
     QList<qreal>        m_guideCircles;             /**< the guide circles that have been constructed for a given point */
+    QList<QPointF>      m_snapPoints;               /**< points that intersect with guide lines */
     QLineF              m_topEdge;                  /**< represents the top edge of the editor from 0,0 to 1,0 */
     QLineF              m_bottomEdge;               /**< represents the bottom edge of the editor from 0,1 to 1,1 */
     QLineF              m_leftEdge;                 /**< represents the left edge of the editor from 0,1 to 0,1 */

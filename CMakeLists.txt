@@ -20,6 +20,7 @@ set (SymbolEditor_SRCS
     src/Exceptions.cpp
     src/Main.cpp
     src/MainWindow.cpp
+    src/Symbol.cpp
     src/SymbolLibrary.cpp
 )
 

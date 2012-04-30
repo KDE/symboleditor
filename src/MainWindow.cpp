@@ -65,7 +65,10 @@
  *
  * @subsection file_close Close
  * Close the current library. The editor and the library are cleared leaving an empty library ready for new symbols
- * to be added. If the current symbol and library need to be saved
+ * to be added. If the current symbol and library need to be saved the user is prompted to do so.
+ *
+ * @subsection file_quit Quit
+ * Quit the application. If the current symbol and library need to be saved the user is prompted to do so.
  *
  * @section edit_menu Edit Menu
  *
@@ -90,6 +93,22 @@
  * - @ref edit_redo
  * - @ref file_save_symbol
  *
+ * @section rendering_menu Rendering Menu
+ * The defined path can be rendered with various settings. Filled or unfilled, for which the fill method can be defined.
+ * The path end cap can be defined as flat, square and round. The line join type can be defined as bevel, miter and round.
+ * The line width can be increased or decreased.
+ *
+ * For full details of the rendering options, see the @ref path_rendering.
+ *
+ * @subsection rendering_toolbar Rendering Toolbar
+ * The rendering toolbar allows quick access to these common functions.
+ * @image html ui-rendering-toolbar.png
+ * - @ref fill_mode
+ * - @ref fill_rule
+ * - @ref line_cap
+ * - @ref line_join
+ * - @ref line_width
+ *
  * @section tools_menu Tools Menu
  * A number of tools are available to aid the design of the symbols. The symbols are composed of a series of sub paths
  * and each sub path is composed of a move to the start position (this defaults to 0,0 for new symbols) followed by
@@ -105,7 +124,7 @@
  * For full details of the tools see the @ref editor_tools.
  *
  * @subsection tools_toolbar Tools Toolbar
- * The tools menu toolbar allows quick access to these common functions.
+ * The tools toolbar allows quick access to these common functions.
  * @image html ui-tools-toolbar.png
  * - @ref move_to
  * - @ref line_to
@@ -117,7 +136,6 @@
  * - @ref flip_horizontal
  * - @ref flip_vertical
  * - @ref snap_grid
- * - @ref fill_mode
  */
 
 
@@ -126,6 +144,7 @@
 #include <QVBoxLayout>
 #include <QListWidget>
 #include <QListWidgetItem>
+#include <QMenu>
 
 #include <KAction>
 #include <KActionCollection>
@@ -147,37 +166,40 @@
 /**
  * Construct the MainWindow.
  * Create an instance of a symbol file.
- * Create the editor, list widget and the tab widget which they are added to. The tab widget is then set as
- * the central widget.
+ * Create the tab widget, editor, list widget and the symbol file. The tab widget is then set as
+ * the central widget and will contain the editor and list widgets. The Editor is added to a
+ * layout to allow it to be centralized in the
  * Set up the actions, add the two undo stacks to the undo group and connect any signal slots required.
  * Set up the GUI from the applications rc file.
  * The editor page is selected in the tab widget which should also initialise the undo redo buttons.
  * The moveTo tool action is triggered to enable the moveTo tool as the initial one.
+ * Other actions are initialised from the current Editor symbol.
  */
 MainWindow::MainWindow()
+    :   m_tabWidget(new KTabWidget(this)),
+        m_editor(new Editor),
+        m_listWidget(new QListWidget),
+        m_symbolLibrary(new SymbolLibrary(m_listWidget)),
+        m_item(0),
+        m_menu(0)
 {
     setObjectName("MainWindow#");
 
     KActionCollection *actions = actionCollection();
 
-    m_tabWidget = new KTabWidget(this);
-
     QVBoxLayout *editorLayout = new QVBoxLayout;
-    m_editor = new Editor();
     editorLayout->addWidget(m_editor, 0, Qt::AlignCenter);
     QWidget *layoutWidget = new QWidget;
     layoutWidget->setLayout(editorLayout);
 
-    m_listWidget = new QListWidget();
     m_listWidget->setResizeMode(QListView::Adjust);
     m_listWidget->setViewMode(QListView::IconMode);
     m_listWidget->setIconSize(QSize(48, 48));
     m_listWidget->setGridSize(QSize(64, 64));
+    m_listWidget->setContextMenuPolicy(Qt::CustomContextMenu);
 
     m_tabWidget->addTab(layoutWidget, "Editor");
     m_tabWidget->addTab(m_listWidget, "Symbol Library");
-
-    m_symbolLibrary = new SymbolLibrary(m_listWidget);
 
     setCentralWidget(m_tabWidget);
 
@@ -187,6 +209,8 @@ MainWindow::MainWindow()
     m_undoGroup.addStack(m_symbolLibrary->undoStack());
     connect(m_tabWidget, SIGNAL(currentChanged(int)), this, SLOT(currentChanged(int)));
     connect(m_editor, SIGNAL(message(QString)), statusBar(), SLOT(showMessage(QString)));
+    connect(m_editor, SIGNAL(minLineWidth(bool)), actions->action("decreaseLineWidth"), SLOT(setDisabled(bool)));
+    connect(m_editor, SIGNAL(maxLineWidth(bool)), actions->action("increaseLineWidth"), SLOT(setDisabled(bool)));
     connect(&m_undoGroup, SIGNAL(canUndoChanged(bool)), actions->action("edit_undo"), SLOT(setEnabled(bool)));
     connect(&m_undoGroup, SIGNAL(canRedoChanged(bool)), actions->action("edit_redo"), SLOT(setEnabled(bool)));
     connect(&m_undoGroup, SIGNAL(undoTextChanged(QString)), this, SLOT(undoTextChanged(QString)));
@@ -196,6 +220,7 @@ MainWindow::MainWindow()
     connect(m_editor->undoStack(), SIGNAL(cleanChanged(bool)), actions->action("saveSymbolAsNew"), SLOT(setDisabled(bool)));
     connect(m_symbolLibrary->undoStack(), SIGNAL(cleanChanged(bool)), actions->action("file_save"), SLOT(setDisabled(bool)));
     connect(m_listWidget, SIGNAL(itemDoubleClicked(QListWidgetItem*)), this, SLOT(itemDoubleClicked(QListWidgetItem*)));
+    connect(m_listWidget, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(listWidgetContextMenuRequested(QPoint)));
 
     setupGUI(KXmlGuiWindow::Default, "SymbolEditorui.rc");
 
@@ -203,10 +228,10 @@ MainWindow::MainWindow()
     currentChanged(0);                                      // setting current index above doesn't trigger the signal
     actions->action("moveTo")->trigger();	                // select draw tool
     actions->action("enableSnap")->setChecked(true);        // enable snap
-    actions->action("enableFill")->setChecked(true);        // enable fill
     actions->action("file_save")->setEnabled(false);        // nothing to save yet
     actions->action("saveSymbol")->setEnabled(false);       // nothing to save yet
     actions->action("saveSymbolAsNew")->setEnabled(false);  // nothing to save yet
+    setActionsFromSymbol(m_editor->symbol().second);        // set the actions that depend on the current empty symbol, i.e. the defaults
 }
 
 
@@ -309,11 +334,13 @@ bool MainWindow::queryExit()
 
 /**
  * Open a file.
- * Use the KFileDialog::getOpenUrl to get a KUrl to open which is then passed to open(const KURl &).
+ * Use the KFileDialog::getOpenUrl to get a KUrl to open which is then passed to filOpen(const KURl &).
  */
 void MainWindow::fileOpen()
 {
-    fileOpen(KFileDialog::getOpenUrl(KUrl("kfiledialog:///"), i18n("*.sym|Cross Stitch Symbols"), this));
+    KUrl url = KFileDialog::getOpenUrl(KUrl("kfiledialog:///"), i18n("*.sym|Cross Stitch Symbols"), this);
+    if (!url.isEmpty())
+        fileOpen(url);
 }
 
 
@@ -360,6 +387,10 @@ void MainWindow::fileOpen(const KUrl &url)
                 catch (const InvalidFileVersion &e)
                 {
                     KMessageBox::sorry(0, i18n("Version %1 of the library file is not supported in this version of SymbolEditor", e.version));
+                }
+                catch (const InvalidSymbolVersion &e)
+                {
+                    KMessageBox::sorry(0, i18n("Version %1 of the symbol is not supported in this version of SymbolEditor", e.version));
                 }
                 catch (const FailedReadLibrary &e)
                 {
@@ -417,6 +448,7 @@ void MainWindow::save()
 /**
  * Save the library using a different url.
  * This is also called from save when the assigned url is Untitled.
+ * The new url is added to the recent files list.
  */
 void MainWindow::saveAs()
 {
@@ -441,6 +473,7 @@ void MainWindow::saveAs()
  * Initialise a new symbol.
  * Check if the current symbol has been saved or can be overwritten and then call clear
  * on the editor which initializes the editor with an empty symbol.
+ * The actions are reset to those relevant to the new empty symbol.
  * The moveTo action is triggered as this is the most likely to be used next.
  */
 void MainWindow::newSymbol()
@@ -448,6 +481,7 @@ void MainWindow::newSymbol()
     if (editorClean())
     {
         m_editor->clear();
+        setActionsFromSymbol(m_editor->symbol().second);
         actionCollection()->action("moveTo")->trigger();   // Select draw tool
     }
 }
@@ -461,7 +495,7 @@ void MainWindow::newSymbol()
  */
 void MainWindow::saveSymbol()
 {
-    QPair<qint16, QPainterPath> pair = m_editor->painterPath();
+    QPair<qint16, Symbol> pair = m_editor->symbol();
     m_symbolLibrary->undoStack()->push(new UpdateSymbolCommand(m_symbolLibrary, pair.first, pair.second));
     m_editor->undoStack()->setClean();
 }
@@ -476,10 +510,10 @@ void MainWindow::saveSymbol()
  */
 void MainWindow::saveSymbolAsNew()
 {
-    QPair<qint16, QPainterPath> pair = m_editor->painterPath();
+    QPair<qint16, Symbol> pair = m_editor->symbol();
     pair.first = 0;
     m_symbolLibrary->undoStack()->push(new UpdateSymbolCommand(m_symbolLibrary, pair.first, pair.second));
-    m_editor->setPainterPath(pair);
+    m_editor->setSymbol(pair);
 }
 
 
@@ -495,6 +529,8 @@ void MainWindow::saveSymbolAsNew()
 void MainWindow::importLibrary()
 {
     KUrl url = KFileDialog::getOpenUrl(KUrl("kfiledialog:///"), i18n("*.sym|Cross Stitch Symbols"), this);
+    if (url.isEmpty())
+        return;
     if (url.isValid())
     {
         QString src;
@@ -639,20 +675,52 @@ void MainWindow::currentChanged(int index)
  * Check if the current symbol being edited has been changed. If yes, ask if it should be
  * saved or discarded.
  * Clear the contents of the editor and assign a copy of the item symbol to it to edit.
+ * The actions are updated to reflect the settings of the symbol being edited.
  *
  * @param item a pointer to a QListWidgetItem that was double clicked.
  */
 void MainWindow::itemDoubleClicked(QListWidgetItem *item)
 {
-    QPair<qint16, QPainterPath> pair;
+    QPair<qint16, Symbol> pair;
     if (editorClean())
     {
         m_editor->clear();
         pair.first = static_cast<qint16>(item->data(Qt::UserRole).toInt());
         pair.second = m_symbolLibrary->symbol(pair.first);
-        m_editor->setPainterPath(pair);
+        m_editor->setSymbol(pair);
+        setActionsFromSymbol(pair.second);
         m_tabWidget->setCurrentIndex(0);
     }
+}
+
+
+/**
+ * Display a context menu for the list widget.
+ * Options:
+ *  Delete Symbol
+ *
+ * @param pos a const reference to a QPoint representing the cursor position
+ */
+void MainWindow::listWidgetContextMenuRequested(const QPoint &pos)
+{
+    if (m_item = m_listWidget->itemAt(pos))
+    {
+        if (!m_menu)
+        {
+            m_menu = new QMenu;
+            m_menu->addAction(i18n("Delete Symbol"), this, SLOT(deleteSymbol()));
+        }
+        m_menu->popup(QCursor::pos());
+    }
+}
+
+
+/**
+ * Delete the symbol pointed to by m_item.
+ */
+void MainWindow::deleteSymbol()
+{
+    m_symbolLibrary->undoStack()->push(new DeleteSymbolCommand(m_symbolLibrary, static_cast<qint16>(m_item->data(Qt::UserRole).toInt())));
 }
 
 
@@ -660,7 +728,7 @@ void MainWindow::itemDoubleClicked(QListWidgetItem *item)
  * Set up the applications actions.
  * Create standard actions.
  * Create other actions, setting the icon and data as required.
- * The tool actions are added to an exclusive action group.
+ * Several actions are added to groups which are set as exclusive.
  * All actions are added to the applications KActionCollection.
  */
 void MainWindow::setupActions()
@@ -700,7 +768,104 @@ void MainWindow::setupActions()
     KStandardAction::undo(this, SLOT(undo()), actions);
     KStandardAction::redo(this, SLOT(redo()), actions);
 
-    // View menu
+    // Rendering menu
+    action = new KAction(this);
+    action->setText(i18n("Fill Path"));
+    action->setIcon(KIcon("rating"));
+    action->setCheckable(true);
+    connect(action, SIGNAL(triggered(bool)), m_editor, SLOT(selectFilled(bool)));
+    actions->addAction("fillPath", action);
+
+    actionGroup = new QActionGroup(this);
+    actionGroup->setExclusive(true);
+
+    action = new KAction(this);
+    action->setText(i18n("Odd Even Fill"));
+    action->setData(Qt::OddEvenFill);
+    action->setIcon(KIcon("odd-even-fill"));
+    action->setCheckable(true);
+    actions->addAction("oddEvenFill", action);
+    actionGroup->addAction(action);
+
+    action = new KAction(this);
+    action->setText(i18n("Winding Fill"));
+    action->setData(Qt::WindingFill);
+    action->setIcon(KIcon("winding-fill"));
+    action->setCheckable(true);
+    actions->addAction("windingFill", action);
+    actionGroup->addAction(action);
+
+    connect(actionGroup, SIGNAL(triggered(QAction*)), m_editor, SLOT(selectFillRule(QAction*)));
+
+    actionGroup = new QActionGroup(this);
+    actionGroup->setExclusive(true);
+
+    action = new KAction(this);
+    action->setText(i18n("Flat Cap"));
+    action->setData(Qt::FlatCap);
+    action->setIcon(KIcon("flat-cap"));
+    action->setCheckable(true);
+    actions->addAction("flatCap", action);
+    actionGroup->addAction(action);
+
+    action = new KAction(this);
+    action->setText(i18n("Square Cap"));
+    action->setData(Qt::SquareCap);
+    action->setIcon(KIcon("square-cap"));
+    action->setCheckable(true);
+    actions->addAction("squareCap", action);
+    actionGroup->addAction(action);
+
+    action = new KAction(this);
+    action->setText(i18n("Round Cap"));
+    action->setData(Qt::RoundCap);
+    action->setIcon(KIcon("round-cap"));
+    action->setCheckable(true);
+    actions->addAction("roundCap", action);
+    actionGroup->addAction(action);
+
+    connect(actionGroup, SIGNAL(triggered(QAction*)), m_editor, SLOT(selectCapStyle(QAction*)));
+
+    actionGroup = new QActionGroup(this);
+    actionGroup->setExclusive(true);
+
+    action = new KAction(this);
+    action->setText(i18n("Bevel Join"));
+    action->setData(Qt::BevelJoin);
+    action->setIcon(KIcon("bevel-join"));
+    action->setCheckable(true);
+    actions->addAction("bevelJoin", action);
+    actionGroup->addAction(action);
+
+    action = new KAction(this);
+    action->setText(i18n("Miter Join"));
+    action->setData(Qt::MiterJoin);
+    action->setIcon(KIcon("miter-join"));
+    action->setCheckable(true);
+    actions->addAction("miterJoin", action);
+    actionGroup->addAction(action);
+
+    action = new KAction(this);
+    action->setText(i18n("Round Join"));
+    action->setData(Qt::RoundJoin);
+    action->setIcon(KIcon("round-join"));
+    action->setCheckable(true);
+    actions->addAction("roundJoin", action);
+    actionGroup->addAction(action);
+
+    connect(actionGroup, SIGNAL(triggered(QAction*)), m_editor, SLOT(selectJoinStyle(QAction*)));
+
+    action = new KAction(this);
+    action->setText(i18n("Increase Line Width"));
+    action->setIcon(KIcon("increase-line-width"));
+    connect(action, SIGNAL(triggered()), m_editor, SLOT(increaseLineWidth()));
+    actions->addAction("increaseLineWidth", action);
+
+    action = new KAction(this);
+    action->setText(i18n("Decrease Line Width"));
+    action->setIcon(KIcon("decrease-line-width"));
+    connect(action, SIGNAL(triggered()), m_editor, SLOT(decreaseLineWidth()));
+    actions->addAction("decreaseLineWidth", action);
 
     // Tools Menu
     actionGroup = new QActionGroup(this);
@@ -711,7 +876,6 @@ void MainWindow::setupActions()
     action->setData(Editor::MoveTo);
     action->setIcon(KIcon("go-jump"));
     action->setCheckable(true);
-    connect(action, SIGNAL(triggered()), m_editor, SLOT(selectTool()));
     actions->addAction("moveTo", action);
     actionGroup->addAction(action);
 
@@ -720,7 +884,6 @@ void MainWindow::setupActions()
     action->setData(Editor::LineTo);
     action->setIcon(KIcon("draw-line"));
     action->setCheckable(true);
-    connect(action, SIGNAL(triggered()), m_editor, SLOT(selectTool()));
     actions->addAction("lineTo", action);
     actionGroup->addAction(action);
 
@@ -729,7 +892,6 @@ void MainWindow::setupActions()
     action->setData(Editor::CubicTo);
     action->setIcon(KIcon("draw-bezier-curves"));
     action->setCheckable(true);
-    connect(action, SIGNAL(triggered()), m_editor, SLOT(selectTool()));
     actions->addAction("cubicTo", action);
     actionGroup->addAction(action);
 
@@ -738,7 +900,6 @@ void MainWindow::setupActions()
     action->setData(Editor::Rectangle);
     action->setIcon(KIcon("draw-rectangle"));
     action->setCheckable(true);
-    connect(action, SIGNAL(triggered()), m_editor, SLOT(selectTool()));
     actions->addAction("rectangle", action);
     actionGroup->addAction(action);
 
@@ -747,23 +908,10 @@ void MainWindow::setupActions()
     action->setData(Editor::Ellipse);
     action->setIcon(KIcon("draw-ellipse"));
     action->setCheckable(true);
-    connect(action, SIGNAL(triggered()), m_editor, SLOT(selectTool()));
     actions->addAction("ellipse", action);
     actionGroup->addAction(action);
 
-    action = new KAction(this);
-    action->setText(i18n("Enable Snap"));
-    action->setIcon(KIcon("snap-to-grid"));
-    action->setCheckable(true);
-    connect(action, SIGNAL(toggled(bool)), m_editor, SLOT(enableSnap(bool)));
-    actions->addAction("enableSnap", action);
-
-    action = new KAction(this);
-    action->setText(i18n("Enable Fill"));
-    action->setIcon(KIcon("rating"));
-    action->setCheckable(true);
-    connect(action, SIGNAL(toggled(bool)), m_editor, SLOT(enableFill(bool)));
-    actions->addAction("enableFill", action);
+    connect(actionGroup, SIGNAL(triggered(QAction*)), m_editor, SLOT(selectTool(QAction*)));
 
     action = new KAction(this);
     action->setText(i18n("Rotate Left"));
@@ -789,5 +937,68 @@ void MainWindow::setupActions()
     connect(action, SIGNAL(triggered()), m_editor, SLOT(flipVertical()));
     actions->addAction("flipVertical", action);
 
+    action = new KAction(this);
+    action->setText(i18n("Enable Snap"));
+    action->setIcon(KIcon("snap-to-grid"));
+    action->setCheckable(true);
+    connect(action, SIGNAL(toggled(bool)), m_editor, SLOT(enableSnap(bool)));
+    actions->addAction("enableSnap", action);
+
     // Settings Menu
 }
+
+
+/**
+ * Set the actions status based on the settings in the specified Symbol.
+ *
+ * @param symbol a const reference to a Symbol
+ */
+void MainWindow::setActionsFromSymbol(const Symbol &symbol)
+{
+    action("fillPath")->setChecked(symbol.filled());
+
+    switch (symbol.path().fillRule())
+    {
+        case Qt::WindingFill:
+            action("windingFill")->setChecked(true);
+            break;
+
+        case Qt::OddEvenFill:
+            action("oddEvenFill")->setChecked(true);
+            break;
+    }
+
+    switch (symbol.capStyle())
+    {
+        case Qt::FlatCap:
+            action("flatCap")->setChecked(true);
+            break;
+
+        case Qt::SquareCap:
+            action("squareCap")->setChecked(true);
+            break;
+
+        case Qt::RoundCap:
+            action("roundCap")->setChecked(true);
+            break;
+    }
+
+    switch (symbol.joinStyle())
+    {
+        case Qt::BevelJoin:
+            action("bevelJoin")->setChecked(true);
+            break;
+
+        case Qt::MiterJoin:
+            action("miterJoin")->setChecked(true);
+            break;
+
+        case Qt::RoundJoin:
+            action("roundJoin")->setChecked(true);
+            break;
+    }
+
+    action("increaseLineWidth")->setDisabled(symbol.lineWidth() == 1.00);
+    action("decreaseLineWidth")->setDisabled(symbol.lineWidth() == 0.01);
+}
+
