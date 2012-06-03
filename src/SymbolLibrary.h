@@ -29,8 +29,9 @@
 
 
 class QDataStream;
-class QListWidget;
 class QListWidgetItem;
+
+class SymbolListWidget;
 
 
 /**
@@ -38,13 +39,14 @@ class QListWidgetItem;
  *
  * The symbol library holds all the symbols that have been added to it or loaded from a file.
  * The symbols are indexed and the index is incremented for each symbol added starting from 1.
- * For each of the symbols there is a QListWidgetItem which is assigned the QIcon that is
- * generated from the QPainterPath associated with the index.
+ * When a SymbolListWidget is assigned to the SymbolLibrary each of the symbols is added to
+ * the SymbolListWidget which will create a QListWidgetItem which is assigned the QIcon that
+ * is generated from the QPainterPath associated with the index.
  */
 class SymbolLibrary
 {
 public:
-    SymbolLibrary(QListWidget *listWidget = 0);
+    SymbolLibrary(SymbolListWidget *listWidget = 0);
     ~SymbolLibrary();
 
     void clear();
@@ -52,10 +54,12 @@ public:
     Symbol symbol(qint16 index);
     Symbol takeSymbol(qint16 index);
     qint16 setSymbol(qint16 index, const Symbol &symbol);
-    QListWidgetItem *item(qint16 index);
 
     KUrl url() const;
     void setUrl(const KUrl &url);
+
+    QString name() const;
+    void setName(const QString &name);
 
     QList<qint16> indexes() const;
 
@@ -66,8 +70,6 @@ public:
 
 private:
     void generateItems();
-    QListWidgetItem *generateItem(qint16 index);
-    QIcon generateIcon(const Symbol &symbol);
 
     static const qint32 version = 101;              /**< stream version of this file */
 
@@ -75,11 +77,12 @@ private:
 
     KUrl    m_url;                                  /**< url of the file loaded, this may be Untitled */
 
-    QListWidget *m_listWidget;                      /**< pointer to a QListWidget containing the QListWidgetItems for the QIcons, this may be null for an imported file */
+    QString m_name;                                 /**< name of the symbol library */
+
+    SymbolListWidget *m_listWidget;                 /**< pointer to a QListWidget containing the QListWidgetItems for the QIcons, this may be null for an imported file */
 
     qint16                          m_nextIndex;    /**< index for the next symbol added */
     QMap<qint16, Symbol>            m_symbols;      /**< map of the Symbol to indexes */
-    QMap<qint16, QListWidgetItem *> m_listItems;    /**< map of the QListWidgetItems to indexes */
 };
 
 

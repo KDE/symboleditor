@@ -142,7 +142,6 @@
 #include "MainWindow.h"
 
 #include <QVBoxLayout>
-#include <QListWidget>
 #include <QListWidgetItem>
 #include <QMenu>
 
@@ -160,6 +159,7 @@
 
 #include "Editor.h"
 #include "Exceptions.h"
+#include "SymbolListWidget.h"
 #include "SymbolLibrary.h"
 
 
@@ -168,7 +168,7 @@
  * Create an instance of a symbol file.
  * Create the tab widget, editor, list widget and the symbol file. The tab widget is then set as
  * the central widget and will contain the editor and list widgets. The Editor is added to a
- * layout to allow it to be centralized in the
+ * layout to allow it to be centralized in the main window.
  * Set up the actions, add the two undo stacks to the undo group and connect any signal slots required.
  * Set up the GUI from the applications rc file.
  * The editor page is selected in the tab widget which should also initialise the undo redo buttons.
@@ -178,7 +178,7 @@
 MainWindow::MainWindow()
     :   m_tabWidget(new KTabWidget(this)),
         m_editor(new Editor),
-        m_listWidget(new QListWidget),
+        m_listWidget(new SymbolListWidget(m_tabWidget)),
         m_symbolLibrary(new SymbolLibrary(m_listWidget)),
         m_item(0),
         m_menu(0)
@@ -192,10 +192,7 @@ MainWindow::MainWindow()
     QWidget *layoutWidget = new QWidget;
     layoutWidget->setLayout(editorLayout);
 
-    m_listWidget->setResizeMode(QListView::Adjust);
-    m_listWidget->setViewMode(QListView::IconMode);
-    m_listWidget->setIconSize(QSize(48, 48));
-    m_listWidget->setGridSize(QSize(64, 64));
+    m_listWidget->setIconSize(48);
     m_listWidget->setContextMenuPolicy(Qt::CustomContextMenu);
 
     m_tabWidget->addTab(layoutWidget, "Editor");
@@ -219,7 +216,7 @@ MainWindow::MainWindow()
     connect(m_editor->undoStack(), SIGNAL(cleanChanged(bool)), actions->action("saveSymbol"), SLOT(setDisabled(bool)));
     connect(m_editor->undoStack(), SIGNAL(cleanChanged(bool)), actions->action("saveSymbolAsNew"), SLOT(setDisabled(bool)));
     connect(m_symbolLibrary->undoStack(), SIGNAL(cleanChanged(bool)), actions->action("file_save"), SLOT(setDisabled(bool)));
-    connect(m_listWidget, SIGNAL(itemDoubleClicked(QListWidgetItem*)), this, SLOT(itemDoubleClicked(QListWidgetItem*)));
+    connect(m_listWidget, SIGNAL(executed(QListWidgetItem*)), this, SLOT(itemSelected(QListWidgetItem*)));
     connect(m_listWidget, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(listWidgetContextMenuRequested(QPoint)));
 
     setupGUI(KXmlGuiWindow::Default, "SymbolEditorui.rc");
@@ -482,7 +479,7 @@ void MainWindow::newSymbol()
     {
         m_editor->clear();
         setActionsFromSymbol(m_editor->symbol().second);
-        actionCollection()->action("moveTo")->trigger();   // Select draw tool
+        actionCollection()->action("moveTo")->trigger();   // Select move tool
     }
 }
 
@@ -588,7 +585,7 @@ void MainWindow::close()
  */
 void MainWindow::quit()
 {
-    close();
+    KXmlGuiWindow::close();
 }
 
 
@@ -679,7 +676,7 @@ void MainWindow::currentChanged(int index)
  *
  * @param item a pointer to a QListWidgetItem that was double clicked.
  */
-void MainWindow::itemDoubleClicked(QListWidgetItem *item)
+void MainWindow::itemSelected(QListWidgetItem *item)
 {
     QPair<qint16, Symbol> pair;
     if (editorClean())

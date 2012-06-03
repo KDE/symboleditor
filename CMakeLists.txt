@@ -22,6 +22,7 @@ set (SymbolEditor_SRCS
     src/MainWindow.cpp
     src/Symbol.cpp
     src/SymbolLibrary.cpp
+    src/SymbolListWidget.cpp
 )
 
 add_subdirectory(icons)

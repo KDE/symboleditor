@@ -24,14 +24,15 @@
 #include <KXmlGuiWindow>
 
 
-class QListWidget;
 class QListWidgetItem;
 class KTabWidget;
 
 class KUrl;
+
 class Editor;
 class Symbol;
 class SymbolLibrary;
+class SymbolListWidget;
 
 
 /**
@@ -77,7 +78,7 @@ protected slots:
     void cleanChanged(bool clean);
 
     void currentChanged(int index);
-    void itemDoubleClicked(QListWidgetItem *item);
+    void itemSelected(QListWidgetItem *item);
     void listWidgetContextMenuRequested(const QPoint &pos);
     void deleteSymbol();
 
@@ -87,9 +88,9 @@ private:
     void setupActions();
     void setActionsFromSymbol(const Symbol &symbol);
 
-    KTabWidget  *m_tabWidget;           /**< pointer to the KTabWidget containing the editor and library tabs */
-    Editor      *m_editor;              /**< pointer to the Editor */
-    QListWidget *m_listWidget;          /**< pointer to the QListWidget containing icons for the library symbols */
+    KTabWidget          *m_tabWidget;   /**< pointer to the KTabWidget containing the editor and library tabs */
+    Editor              *m_editor;      /**< pointer to the Editor */
+    SymbolListWidget    *m_listWidget;  /**< pointer to the SymbolListWidget containing icons for the library symbols */
 
     SymbolLibrary   *m_symbolLibrary;   /**< pointer to a SymbolLibrary */
 

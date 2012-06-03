@@ -20,8 +20,10 @@
  * The symbols created are stored in symbol files. A number of different files can be created containing symbols
  * of different themes. When files are opened the symbol library will be populated with the contents of the file.
  *
- * The symbol library provides an icon view of all the existing symbols. Double clicking on one of the icons will
- * open this symbol in the editor and allow it to be modified. New symbols created can be saved to the library.
+ * The symbol library can be associated with a LibraryListWidget which will provide an icon view of all the
+ * existing symbols. Clicking on one of the icons will open this symbol in the editor and allow it to be modified.
+ * New symbols created can be saved to the library.
+ *
  * Note that symbols saved to the library are not immediately saved to disk. The user is required to save the
  * library with the File->Save command. The user may also use the File->Save As command to save the library to a
  * different file.
@@ -54,15 +56,16 @@
 #include <KLocale>
 
 #include "Exceptions.h"
+#include "SymbolListWidget.h"
 
 
 /**
  * Construct a SymbolLibrary.
- * Set the url to Untitled and the index to 0.
- * The index will be set when a file is loaded and will be incremented when a new symbols
- * has been added. It will be saved with the file for the next time it is loaded.
+ * Set the url to Untitled and the index to 1.
+ * The index will be set when a file is loaded and will be incremented when new symbols
+ * have been added. It will be saved with the file for the next time it is loaded.
  */
-SymbolLibrary::SymbolLibrary(QListWidget *listWidget)
+SymbolLibrary::SymbolLibrary(SymbolListWidget *listWidget)
     :   m_listWidget(listWidget)
 {
     clear();
@@ -87,10 +90,12 @@ SymbolLibrary::~SymbolLibrary()
 void SymbolLibrary::clear()
 {
     m_undoStack.clear();
+    if (m_listWidget)
+    {
+        foreach (qint16 index, indexes())
+            m_listWidget->removeSymbol(index);
+    }
     m_symbols.clear();
-    foreach (QListWidgetItem *item, m_listItems)
-        delete item;
-    m_listItems.clear();
     m_nextIndex = 1;
     m_url = KUrl(i18n("Untitled"));
 }
@@ -114,7 +119,7 @@ Symbol SymbolLibrary::symbol(qint16 index)
  * Take a symbol from the library.
  * Remove a symbol identified by it's index and return it.
  * The QListWidgetItem associated with the symbol is also removed and deleted.
- * If the index is not in the libary it returns a default constructed symbol.
+ * If the index is not in the library it returns a default constructed symbol.
  *
  * @param index the index of the Symbol to be removed
  *
@@ -126,7 +131,8 @@ Symbol SymbolLibrary::takeSymbol(qint16 index)
     if (m_symbols.contains(index))
     {
         symbol = m_symbols.take(index);
-        delete m_listItems.take(index);
+        if (m_listWidget)
+            m_listWidget->removeSymbol(index);
     }
     return symbol;
 }
@@ -135,9 +141,9 @@ Symbol SymbolLibrary::takeSymbol(qint16 index)
 /**
  * Update the Symbol for an index in the library.
  * If the index supplied is 0, a new index will be taken from the m_nextIndex value which is
- * the incremented. This value will be returned.
- * For new symbols a new QListWidgetItem is created. The icon is created for new symbols and
- * updated for existing ones.
+ * then incremented. This value will be returned.
+ * When a LibraryListWidget has been linked to the SymbolLibrary the symbol is added to the
+ * LibraryListWidget.
  *
  * @param index a qint16 representing the index
  * @param symbol a const reference to a Symbol
@@ -151,28 +157,9 @@ qint16 SymbolLibrary::setSymbol(qint16 index, const Symbol &symbol)
     m_symbols.insert(index, symbol);
 
     if (m_listWidget)
-    {
-        QListWidgetItem *item = (m_listItems.contains(index))?m_listItems[index]:generateItem(index);
-        item->setIcon(generateIcon(symbol));
-    }
+        m_listWidget->addSymbol(index, symbol);
 
     return index;
-}
-
-
-/**
- * Get the QListWidgetItem associated with this symbol.
- *
- * @param index the index of the symbol
- *
- * @return a pointer to a QListWidgetItem
- */
-QListWidgetItem *SymbolLibrary::item(qint16 index)
-{
-    QListWidgetItem *item = 0;
-    if (m_listItems.contains(index))
-        item = m_listItems[index];
-    return item;
 }
 
 
@@ -195,6 +182,26 @@ KUrl SymbolLibrary::url() const
 void SymbolLibrary::setUrl(const KUrl &url)
 {
     m_url = url;
+}
+
+
+/**
+ * Get the name of the symbol library.
+ */
+QString  SymbolLibrary::name() const
+{
+    return m_name;
+}
+
+
+/**
+ * Set the name of the symbol library.
+ *
+ * @param name the name to be set
+ */
+void SymbolLibrary::setName(const QString &name)
+{
+    m_name = name;
 }
 
 
@@ -233,65 +240,8 @@ void SymbolLibrary::generateItems()
 {
     if (!m_listWidget)
         return;
-    QList<qint16> keys = indexes();
-    foreach (qint16 index, keys)
-    {
-        QListWidgetItem *item = generateItem(index);
-        item->setIcon(generateIcon(m_symbols[index]));
-    }
-}
-
-
-/**
- * Generate the QListWidgetItem for the specified symbol.
- * The new item is assigned the index and is added to or inserted into the list of
- * items and is also added to the QListWidget.
- *
- * @param index the index of the item
- *
- * @return a pointer to a QListWidgetItem
- */
-QListWidgetItem *SymbolLibrary::generateItem(qint16 index)
-{
-    QListWidgetItem *item = new QListWidgetItem;
-    item->setData(Qt::UserRole, index);
-    m_listItems.insert(index, item);
-    int i = index;
-    while (++i < m_nextIndex)
-        if (m_listItems.contains(i))
-            break;
-    if (i == m_nextIndex)
-        m_listWidget->addItem(item);
-    else
-        m_listWidget->insertItem(m_listWidget->row(m_listItems[i]), item);
-    return item;
-}
-
-
-/**
- * Generate a QIcon for the supplied Symbol.
- *
- * @param symbol a const reference to a Symbol
- *
- * @return a QIcon
- */
-QIcon SymbolLibrary::generateIcon(const Symbol &symbol)
-{
-    QPixmap icon(48, 48);
-    icon.fill(Qt::white);
-    QPainter p(&icon);
-    p.setRenderHint(QPainter::Antialiasing, true);
-    p.scale(48, 48);
-    QBrush brush(symbol.filled()?Qt::SolidPattern:Qt::NoBrush);
-    QPen pen;
-    pen.setWidthF(symbol.lineWidth());
-    pen.setCapStyle(symbol.capStyle());
-    pen.setJoinStyle(symbol.joinStyle());
-    p.setBrush(brush);
-    p.setPen(pen);
-    p.drawPath(symbol.path());
-    p.end();
-    return QIcon(icon);
+    foreach (qint16 index, indexes())
+        m_listWidget->addSymbol(index, m_symbols[index]);
 }
 
 
