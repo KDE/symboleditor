@@ -31,9 +31,11 @@
 
 #include "SymbolListWidget.h"
 
+#include <QMimeData>
 #include <QPainter>
 #include <QPen>
 
+#include "Commands.h"
 #include "Symbol.h"
 #include "SymbolLibrary.h"
 
@@ -88,7 +90,7 @@ void SymbolListWidget::loadFromLibrary(SymbolLibrary *library)
         return;
 
     m_library = library;
-//    QList<qint16> keys = library->indexes();
+
     foreach (qint16 index, library->indexes())
         addSymbol(index, library->symbol(index));
 }
@@ -181,6 +183,72 @@ QIcon SymbolListWidget::createIcon(const Symbol &symbol, int size)
     p.drawPath(symbol.path());
     p.end();
     return QIcon(icon);
+}
+
+
+/**
+ * Provide a list of mimetypes that this widget provides when dragging from it.
+ *
+ * @return a QStringList containing the mimetype strings
+ */
+QStringList SymbolListWidget::mimeTypes() const
+{
+    QStringList mimetypes;
+    mimetypes.append("application/kxstitchsymbol");
+    return mimetypes;
+}
+
+
+Qt::DropActions SymbolListWidget::supportedDropActions() const
+{
+    return Qt::CopyAction;
+}
+
+
+/**
+ * Called when dragging items from one KListWidget to another to provide the serialised data.
+ *
+ * @param items a QList of pointers to the QListWidgetItems to provide data for
+ *
+ * @return a pointer to the QMimeData created
+ */
+QMimeData *SymbolListWidget::mimeData(const QList<QListWidgetItem *> items) const
+{
+    QMimeData *mimeData = new QMimeData;
+
+    QByteArray data;
+    QDataStream stream(&data, QIODevice::WriteOnly);
+
+    foreach (QListWidgetItem *item, items) {
+        qint16 index = static_cast<qint16>(item->data(Qt::UserRole).toInt());
+        Symbol symbol = m_library->symbol(index);
+        stream << symbol;
+    }
+
+    mimeData->setData("application/kxstitchsymbol", data);
+    return mimeData;
+}
+
+
+/**
+ * Called when KListWidgetItems are dragged from one KListWidget to another.
+ *
+ * @param index the position index of the dropped item
+ * @param mimeData a pointer to the serialised data from the source
+ * @param action the requested drop action, only copying will be implemented
+ *
+ * @return @c true if the action is handled, @c false otherwise
+ */
+bool SymbolListWidget::dropMimeData(int index, const QMimeData *mimeData, Qt::DropAction action)
+{
+    Q_UNUSED(action);
+
+    if (mimeData->hasFormat("application/kxstitchsymbol")) {
+        m_library->undoStack()->push(new DragAndDropCommand(m_library, mimeData));
+        return true;
+    }
+
+    return false;
 }
 
 

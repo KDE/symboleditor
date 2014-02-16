@@ -484,5 +484,25 @@ private:
 };
 
 
+/**
+ * @brief Add new symbols dragged from another instance of the SymbolEditor.
+ *
+ * Allows copying of symbols from one symbol library to another using drag and drop.
+ */
+class DragAndDropCommand : public QUndoCommand
+{
+public:
+    DragAndDropCommand(SymbolLibrary *library, const QMimeData *mimeData);
+
+    virtual void redo();
+    virtual void undo();
+
+private:
+    SymbolLibrary   *m_library;
+    QList<Symbol>   m_symbols;
+    QList<qint16>   m_indexes;
+};
+
+
 #endif
 

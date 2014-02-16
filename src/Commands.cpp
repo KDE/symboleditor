@@ -31,11 +31,13 @@
 #include "Commands.h"
 
 #include <QPainterPath>
+#include <QMimeData>
 
 #include <KLocale>
 
 #include "Editor.h"
 #include "SymbolLibrary.h"
+
 
 enum IDs {MoveTo,
           LineTo,
@@ -55,7 +57,10 @@ enum IDs {MoveTo,
           ChangeJoinStyle,
           DeleteSymbol,
           IncreaseLineWidth,
-          DecreaseLineWidth};
+          DecreaseLineWidth,
+          DragAndDrop
+          };
+
 
 /**
  * Constructor
@@ -914,4 +919,49 @@ bool DecreaseLineWidthCommand::mergeWith(const QUndoCommand *command)
         return false;
     m_to -= static_cast<const DecreaseLineWidthCommand *>(command)->m_to;
     return true;
+}
+
+
+/**
+ * Constructor.
+ *
+ * @param library pointer to the symbol library to add the new symbols to
+ * @param mimeData pointer to the QMimeData containing the new symbols
+ */
+DragAndDropCommand::DragAndDropCommand(SymbolLibrary *library, const QMimeData *mimeData)
+    :   QUndoCommand(i18n("Add Symbols")),
+        m_library(library)
+{
+    QByteArray data = mimeData->data("application/kxstitchsymbol");
+    QDataStream stream(&data, QIODevice::ReadOnly);
+
+    while (!stream.atEnd()) {
+        Symbol symbol;
+        stream >> symbol;
+        m_symbols.append(symbol);
+    }
+}
+
+
+/**
+ * Redo the addition of symbols dragged to the list.
+ */
+void DragAndDropCommand::redo()
+{
+    foreach (Symbol symbol, m_symbols) {
+        m_indexes.append(m_library->setSymbol(0, symbol));
+    }
+}
+
+
+/**
+ * Undo the addition of the symbols added.
+ */
+void DragAndDropCommand::undo()
+{
+    foreach (qint16 index, m_indexes) {
+        m_library->takeSymbol(index);
+    }
+
+    m_indexes.clear();
 }

@@ -154,6 +154,7 @@ qint16 SymbolLibrary::setSymbol(qint16 index, const Symbol &symbol)
 {
     if (!index)
         index = m_nextIndex++;
+
     m_symbols.insert(index, symbol);
 
     if (m_listWidget)
@@ -240,8 +241,8 @@ void SymbolLibrary::generateItems()
 {
     if (!m_listWidget)
         return;
-    foreach (qint16 index, indexes())
-        m_listWidget->addSymbol(index, m_symbols[index]);
+
+    m_listWidget->loadFromLibrary(this);
 }
 
 
@@ -298,6 +299,7 @@ QDataStream &operator>>(QDataStream &stream, SymbolLibrary &library)
         QMap<qint16, QPainterPath> paths_v100;
         QList<qint16> paths_v100_keys;
         stream >> version;
+
         switch (version)
         {
             case 101:
@@ -317,8 +319,9 @@ QDataStream &operator>>(QDataStream &stream, SymbolLibrary &library)
                 {
                     Symbol symbol;
                     symbol.setPath(paths_v100[index]);
-                    library.setSymbol(index, symbol);
+                    library.m_symbols.insert(index, symbol);
                 }
+                library.generateItems();
                 break;
 
             default:
