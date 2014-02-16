@@ -948,7 +948,7 @@ DragAndDropCommand::DragAndDropCommand(SymbolLibrary *library, const QMimeData *
  */
 void DragAndDropCommand::redo()
 {
-    foreach (Symbol symbol, m_symbols) {
+    foreach (const Symbol &symbol, m_symbols) {
         m_indexes.append(m_library->setSymbol(0, symbol));
     }
 }

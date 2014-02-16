@@ -239,7 +239,7 @@ private:
 class RotateLeftCommand : public QUndoCommand
 {
 public:
-    RotateLeftCommand(Editor *editor);
+    explicit RotateLeftCommand(Editor *editor);
     ~RotateLeftCommand();
 
     virtual void undo();
@@ -260,7 +260,7 @@ private:
 class RotateRightCommand : public QUndoCommand
 {
 public:
-    RotateRightCommand(Editor *editor);
+    explicit RotateRightCommand(Editor *editor);
     ~RotateRightCommand();
 
     virtual void undo();
@@ -282,7 +282,7 @@ private:
 class FlipHorizontalCommand : public QUndoCommand
 {
 public:
-    FlipHorizontalCommand(Editor *editor);
+    explicit FlipHorizontalCommand(Editor *editor);
     ~FlipHorizontalCommand();
 
     virtual void undo();
@@ -304,7 +304,7 @@ private:
 class FlipVerticalCommand : public QUndoCommand
 {
 public:
-    FlipVerticalCommand(Editor *editor);
+    explicit FlipVerticalCommand(Editor *editor);
     ~FlipVerticalCommand();
 
     virtual void undo();

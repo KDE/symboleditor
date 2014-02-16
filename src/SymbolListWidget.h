@@ -43,7 +43,7 @@ class Symbol;
 class SymbolListWidget : public KListWidget
 {
 public:
-    SymbolListWidget(QWidget *parent);
+    explicit SymbolListWidget(QWidget *parent);
     ~SymbolListWidget();
 
     void setIconSize(int size);

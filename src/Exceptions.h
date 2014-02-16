@@ -46,7 +46,7 @@ private:
 class InvalidFileVersion
 {
 public:
-    InvalidFileVersion(qint32 v);
+    explicit InvalidFileVersion(qint32 v);
     ~InvalidFileVersion();
 
     qint32 version;                 /**< the version of the file read */
@@ -61,7 +61,7 @@ public:
 class FailedReadLibrary
 {
 public:
-    FailedReadLibrary(QDataStream::Status status);
+    explicit FailedReadLibrary(QDataStream::Status status);
     ~FailedReadLibrary();
 
     QString statusMessage() const;
@@ -79,7 +79,7 @@ private:
 class FailedWriteLibrary
 {
 public:
-    FailedWriteLibrary(QDataStream::Status status);
+    explicit FailedWriteLibrary(QDataStream::Status status);
     ~FailedWriteLibrary();
 
     QString statusMessage() const;
@@ -97,7 +97,7 @@ private:
 class InvalidSymbolVersion
 {
 public:
-    InvalidSymbolVersion(qint32 v);
+    explicit InvalidSymbolVersion(qint32 v);
     ~InvalidSymbolVersion();
 
     qint32  version;                /** the version of the symbol read */

@@ -46,7 +46,7 @@ class SymbolListWidget;
 class SymbolLibrary
 {
 public:
-    SymbolLibrary(SymbolListWidget *listWidget = 0);
+    explicit SymbolLibrary(SymbolListWidget *listWidget = 0);
     ~SymbolLibrary();
 
     void clear();
