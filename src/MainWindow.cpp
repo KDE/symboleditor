@@ -223,7 +223,7 @@ MainWindow::MainWindow()
 
     m_tabWidget->setCurrentIndex(0);                        // select the editor
     currentChanged(0);                                      // setting current index above doesn't trigger the signal
-    actions->action("moveTo")->trigger();	                // select draw tool
+    actions->action("moveTo")->trigger();                   // select draw tool
     actions->action("enableSnap")->setChecked(true);        // enable snap
     actions->action("file_save")->setEnabled(false);        // nothing to save yet
     actions->action("saveSymbol")->setEnabled(false);       // nothing to save yet
@@ -263,26 +263,27 @@ bool MainWindow::queryClose()
 bool MainWindow::editorClean()
 {
     bool clean = m_editor->undoStack()->isClean();
-    if (!clean)
-    {
+
+    if (!clean) {
         int messageBoxResult = KMessageBox::warningYesNoCancel(this, i18n("Save changes to the symbol?\nSelecting No discards changes."));
-        switch (messageBoxResult)
-        {
-            case KMessageBox::Yes:
-                saveSymbol();
-                save();
-                clean = true;
-                break;
 
-            case KMessageBox::No:
-                clean = true;
-                break;
+        switch (messageBoxResult) {
+        case KMessageBox::Yes:
+            saveSymbol();
+            save();
+            clean = true;
+            break;
 
-            case KMessageBox::Cancel:
-                clean = false;
-                break;
+        case KMessageBox::No:
+            clean = true;
+            break;
+
+        case KMessageBox::Cancel:
+            clean = false;
+            break;
         }
     }
+
     return clean;
 }
 
@@ -295,25 +296,26 @@ bool MainWindow::editorClean()
 bool MainWindow::libraryClean()
 {
     bool clean = m_symbolLibrary->undoStack()->isClean();
-    if (!clean)
-    {
+
+    if (!clean) {
         int messageBoxResult = KMessageBox::warningYesNoCancel(this, i18n("Save changes to the library?\nSelecting No discards changes."));
-        switch (messageBoxResult)
-        {
-            case KMessageBox::Yes:
-                save();
-                clean = true;
-                break;
 
-            case KMessageBox::No:
-                clean = true;
-                break;
+        switch (messageBoxResult) {
+        case KMessageBox::Yes:
+            save();
+            clean = true;
+            break;
 
-            case KMessageBox::Cancel:
-                clean = false;
-                break;
+        case KMessageBox::No:
+            clean = true;
+            break;
+
+        case KMessageBox::Cancel:
+            clean = false;
+            break;
         }
     }
+
     return clean;
 }
 
@@ -336,8 +338,10 @@ bool MainWindow::queryExit()
 void MainWindow::fileOpen()
 {
     KUrl url = KFileDialog::getOpenUrl(KUrl("kfiledialog:///"), i18n("*.sym|Cross Stitch Symbols"), this);
-    if (!url.isEmpty())
+
+    if (!url.isEmpty()) {
         fileOpen(url);
+    }
 }
 
 
@@ -353,57 +357,50 @@ void MainWindow::fileOpen()
  */
 void MainWindow::fileOpen(const KUrl &url)
 {
-    if (!editorClean() || !libraryClean())
+    if (!editorClean() || !libraryClean()) {
         return;
+    }
 
     m_symbolLibrary->clear();
     m_editor->clear();
 
-    if (url.isValid())
-    {
+    if (url.isValid()) {
         QString src;
-        if (KIO::NetAccess::download(url, src, 0))
-        {
+
+        if (KIO::NetAccess::download(url, src, 0)) {
             QFile file(src);
-            if (file.open(QIODevice::ReadOnly))
-            {
+
+            if (file.open(QIODevice::ReadOnly)) {
                 QDataStream stream(&file);
-                try
-                {
+
+                try {
                     stream >> *m_symbolLibrary;
                     m_symbolLibrary->setUrl(url);
                     KRecentFilesAction *action = static_cast<KRecentFilesAction *>(actionCollection()->action("file_open_recent"));
                     action->addUrl(url);
                     action->saveEntries(KConfigGroup(KGlobal::config(), "RecentFiles"));
                     m_tabWidget->setCurrentIndex(1);
-                }
-                catch (const InvalidFile &e)
-                {
+                } catch (const InvalidFile &e) {
                     KMessageBox::sorry(0, i18n("This doesn't appear to be a valid symbol file"));
-                }
-                catch (const InvalidFileVersion &e)
-                {
+                } catch (const InvalidFileVersion &e) {
                     KMessageBox::sorry(0, i18n("Version %1 of the library file is not supported in this version of SymbolEditor", e.version));
-                }
-                catch (const InvalidSymbolVersion &e)
-                {
+                } catch (const InvalidSymbolVersion &e) {
                     KMessageBox::sorry(0, i18n("Version %1 of the symbol is not supported in this version of SymbolEditor", e.version));
-                }
-                catch (const FailedReadLibrary &e)
-                {
+                } catch (const FailedReadLibrary &e) {
                     KMessageBox::sorry(0, i18n("Failed to read the library\n%1", e.statusMessage()));
                     m_symbolLibrary->clear();
                 }
+
                 file.close();
-            }
-            else
+            } else {
                 KMessageBox::sorry(0, i18n("Failed to open the file %1", url.fileName()));
-        }
-        else
+            }
+        } else {
             KMessageBox::sorry(0, i18n("Failed to download the file %1", url.fileName()));
-    }
-    else
+        }
+    } else {
         KMessageBox::sorry(0, i18n("The url %1 is invalid", url.fileName()));
+    }
 }
 
 
@@ -416,28 +413,27 @@ void MainWindow::fileOpen(const KUrl &url)
 void MainWindow::save()
 {
     KUrl url = m_symbolLibrary->url();
-    if (url == KUrl(i18n("Untitled")))
+
+    if (url == KUrl(i18n("Untitled"))) {
         saveAs();
-    else
-    {
+    } else {
         QFile file(url.path());
-        if (file.open(QIODevice::WriteOnly | QIODevice::Truncate))
-        {
+
+        if (file.open(QIODevice::WriteOnly | QIODevice::Truncate)) {
             QDataStream stream(&file);
             stream.setVersion(QDataStream::Qt_4_0);
-            try
-            {
+
+            try {
                 stream << *m_symbolLibrary;
-            }
-            catch (const FailedWriteLibrary &e)
-            {
+            } catch (const FailedWriteLibrary &e) {
                 KMessageBox::sorry(0, i18n("Failed to write the library\n%1", e.statusMessage()));
             }
+
             file.close();
             m_symbolLibrary->undoStack()->setClean();
-        }
-        else
+        } else {
             KMessageBox::sorry(0, i18n("Failed to open the file %1\n%2", url.fileName(), file.errorString()));
+        }
     }
 }
 
@@ -450,13 +446,14 @@ void MainWindow::save()
 void MainWindow::saveAs()
 {
     KUrl url = KFileDialog::getSaveUrl(QString("::%1").arg(KGlobalSettings::documentPath()), i18n("*.sym|Cross Stitch Symbols"), this, i18n("Save As"));
-    if (url.isValid())
-    {
-        if (KIO::NetAccess::exists(url, false, 0))
-        {
-            if (KMessageBox::warningYesNo(this, i18n("This file already exists\nDo you want to overwrite it?")) == KMessageBox::No)
+
+    if (url.isValid()) {
+        if (KIO::NetAccess::exists(url, false, 0)) {
+            if (KMessageBox::warningYesNo(this, i18n("This file already exists\nDo you want to overwrite it?")) == KMessageBox::No) {
                 return;
+            }
         }
+
         m_symbolLibrary->setUrl(url);
         save();
         KRecentFilesAction *action = static_cast<KRecentFilesAction *>(actionCollection()->action("file_open_recent"));
@@ -475,8 +472,7 @@ void MainWindow::saveAs()
  */
 void MainWindow::newSymbol()
 {
-    if (editorClean())
-    {
+    if (editorClean()) {
         m_editor->clear();
         setActionsFromSymbol(m_editor->symbol().second);
         actionCollection()->action("moveTo")->trigger();   // Select move tool
@@ -526,41 +522,40 @@ void MainWindow::saveSymbolAsNew()
 void MainWindow::importLibrary()
 {
     KUrl url = KFileDialog::getOpenUrl(KUrl("kfiledialog:///"), i18n("*.sym|Cross Stitch Symbols"), this);
-    if (url.isEmpty())
+
+    if (url.isEmpty()) {
         return;
-    if (url.isValid())
-    {
+    }
+
+    if (url.isValid()) {
         QString src;
-        if (KIO::NetAccess::download(url, src, 0))
-        {
+
+        if (KIO::NetAccess::download(url, src, 0)) {
             QFile file(src);
-            if (file.open(QIODevice::ReadOnly))
-            {
+
+            if (file.open(QIODevice::ReadOnly)) {
                 SymbolLibrary *lib = new SymbolLibrary;
                 QDataStream stream(&file);
-                try
-                {
+
+                try {
                     stream >> *lib;
                     m_symbolLibrary->undoStack()->push(new ImportLibraryCommand(m_symbolLibrary, lib));
-                }
-                catch (const InvalidFile &e)
-                {
+                } catch (const InvalidFile &e) {
                     KMessageBox::sorry(0, i18n("This doesn't appear to be a valid symbol file"));
-                }
-                catch (const InvalidFileVersion &e)
-                {
+                } catch (const InvalidFileVersion &e) {
                     KMessageBox::sorry(0, i18n("Version %1 of the library file is not supported in this version of SymbolEditor", e.version));
                 }
+
                 file.close();
-            }
-            else
+            } else {
                 KMessageBox::sorry(0, i18n("Failed to open the file %1", url.fileName()));
-        }
-        else
+            }
+        } else {
             KMessageBox::sorry(0, i18n("Failed to download the file %1", url.fileName()));
-    }
-    else
+        }
+    } else {
         KMessageBox::sorry(0, i18n("The url %1 is invalid", url.fileName()));
+    }
 }
 
 
@@ -571,8 +566,7 @@ void MainWindow::importLibrary()
  */
 void MainWindow::close()
 {
-    if (editorClean() && libraryClean())
-    {
+    if (editorClean() && libraryClean()) {
         m_editor->clear();
         m_symbolLibrary->clear();
     }
@@ -645,8 +639,11 @@ void MainWindow::redoTextChanged(const QString &text)
 void MainWindow::cleanChanged(bool clean)
 {
     QString tab(i18nc("The Editor tab title", "Editor"));
-    if (m_tabWidget->currentIndex() == 1)
+
+    if (m_tabWidget->currentIndex() == 1) {
         tab = QString(i18nc("The Library tab title", "Library"));
+    }
+
     setCaption(tab, !clean);
 }
 
@@ -660,10 +657,11 @@ void MainWindow::cleanChanged(bool clean)
  */
 void MainWindow::currentChanged(int index)
 {
-    if (index == 0) // Editor
+    if (index == 0) { // Editor
         m_undoGroup.setActiveStack(m_editor->undoStack());
-    else if (index == 1) // QListWidget
+    } else if (index == 1) { // QListWidget
         m_undoGroup.setActiveStack(m_symbolLibrary->undoStack());
+    }
 }
 
 
@@ -679,8 +677,8 @@ void MainWindow::currentChanged(int index)
 void MainWindow::itemSelected(QListWidgetItem *item)
 {
     QPair<qint16, Symbol> pair;
-    if (editorClean())
-    {
+
+    if (editorClean()) {
         m_editor->clear();
         pair.first = static_cast<qint16>(item->data(Qt::UserRole).toInt());
         pair.second = m_symbolLibrary->symbol(pair.first);
@@ -700,13 +698,12 @@ void MainWindow::itemSelected(QListWidgetItem *item)
  */
 void MainWindow::listWidgetContextMenuRequested(const QPoint &pos)
 {
-    if (m_item = m_listWidget->itemAt(pos))
-    {
-        if (!m_menu)
-        {
+    if (m_item = m_listWidget->itemAt(pos)) {
+        if (!m_menu) {
             m_menu = new QMenu;
             m_menu->addAction(i18n("Delete Symbol"), this, SLOT(deleteSymbol()));
         }
+
         m_menu->popup(QCursor::pos());
     }
 }
@@ -954,45 +951,42 @@ void MainWindow::setActionsFromSymbol(const Symbol &symbol)
 {
     action("fillPath")->setChecked(symbol.filled());
 
-    switch (symbol.path().fillRule())
-    {
-        case Qt::WindingFill:
-            action("windingFill")->setChecked(true);
-            break;
+    switch (symbol.path().fillRule()) {
+    case Qt::WindingFill:
+        action("windingFill")->setChecked(true);
+        break;
 
-        case Qt::OddEvenFill:
-            action("oddEvenFill")->setChecked(true);
-            break;
+    case Qt::OddEvenFill:
+        action("oddEvenFill")->setChecked(true);
+        break;
     }
 
-    switch (symbol.capStyle())
-    {
-        case Qt::FlatCap:
-            action("flatCap")->setChecked(true);
-            break;
+    switch (symbol.capStyle()) {
+    case Qt::FlatCap:
+        action("flatCap")->setChecked(true);
+        break;
 
-        case Qt::SquareCap:
-            action("squareCap")->setChecked(true);
-            break;
+    case Qt::SquareCap:
+        action("squareCap")->setChecked(true);
+        break;
 
-        case Qt::RoundCap:
-            action("roundCap")->setChecked(true);
-            break;
+    case Qt::RoundCap:
+        action("roundCap")->setChecked(true);
+        break;
     }
 
-    switch (symbol.joinStyle())
-    {
-        case Qt::BevelJoin:
-            action("bevelJoin")->setChecked(true);
-            break;
+    switch (symbol.joinStyle()) {
+    case Qt::BevelJoin:
+        action("bevelJoin")->setChecked(true);
+        break;
 
-        case Qt::MiterJoin:
-            action("miterJoin")->setChecked(true);
-            break;
+    case Qt::MiterJoin:
+        action("miterJoin")->setChecked(true);
+        break;
 
-        case Qt::RoundJoin:
-            action("roundJoin")->setChecked(true);
-            break;
+    case Qt::RoundJoin:
+        action("roundJoin")->setChecked(true);
+        break;
     }
 
     action("increaseLineWidth")->setDisabled(symbol.lineWidth() == 1.00);

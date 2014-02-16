@@ -97,11 +97,13 @@ FailedReadLibrary::~FailedReadLibrary()
  */
 QString FailedReadLibrary::statusMessage() const
 {
-    if (m_status == QDataStream::ReadPastEnd)
+    if (m_status == QDataStream::ReadPastEnd) {
         return QString(i18n("Tried to read past the end of the data"));
+    }
 
-    if (m_status == QDataStream::ReadCorruptData)
+    if (m_status == QDataStream::ReadCorruptData) {
         return QString(i18n("Tried to read corrupted data"));
+    }
 
     return QString(i18n("Undefined status message status %1", m_status));
 }
@@ -134,8 +136,11 @@ FailedWriteLibrary::~FailedWriteLibrary()
 QString FailedWriteLibrary::statusMessage() const
 {
 #if QT_VERSION >= 0x040800
-    if (m_status == QDataStream::WriteFailed)
+
+    if (m_status == QDataStream::WriteFailed) {
         return QString(i18n("Failed to write to the device"));
+    }
+
 #endif
 
     return QString(i18n("Undefined status message status %1", m_status));

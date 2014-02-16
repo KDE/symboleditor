@@ -165,7 +165,7 @@ Editor::Editor(QWidget *parent)
         m_size(gridElements*elementSize),
         m_index(0)
 {
-    resize(m_size+1, m_size+1);
+    resize(m_size + 1, m_size + 1);
     setMinimumSize(size());
 
     setMouseTracking(true);
@@ -350,16 +350,16 @@ void Editor::movePoint(int index, const QPointF &to)
  */
 void Editor::rotatePointsLeft()
 {
-    for (int i = 0 ; i < m_points.count() ; ++i)
-    {
+    for (int i = 0 ; i < m_points.count() ; ++i) {
         QPointF p = m_points[i];
-        m_points[i] = QPointF(p.y(), 1.0-p.x());
+        m_points[i] = QPointF(p.y(), 1.0 - p.x());
     }
-    for (int i = 0 ; i < m_activePoints.count() ; ++i)
-    {
+
+    for (int i = 0 ; i < m_activePoints.count() ; ++i) {
         QPointF p = m_activePoints[i];
-        m_activePoints[i] = QPointF(p.y(), 1.0-p.x());
+        m_activePoints[i] = QPointF(p.y(), 1.0 - p.x());
     }
+
     constructPainterPath();
     update();
 }
@@ -370,16 +370,16 @@ void Editor::rotatePointsLeft()
  */
 void Editor::rotatePointsRight()
 {
-    for (int i = 0 ; i < m_points.count() ; ++i)
-    {
+    for (int i = 0 ; i < m_points.count() ; ++i) {
         QPointF p = m_points[i];
-        m_points[i] = QPointF(1.0-p.y(), p.x());
+        m_points[i] = QPointF(1.0 - p.y(), p.x());
     }
-    for (int i = 0 ; i < m_activePoints.count() ; ++i)
-    {
+
+    for (int i = 0 ; i < m_activePoints.count() ; ++i) {
         QPointF p = m_activePoints[i];
-        m_activePoints[i] = QPointF(1.0-p.y(), p.x());
+        m_activePoints[i] = QPointF(1.0 - p.y(), p.x());
     }
+
     constructPainterPath();
     update();
 }
@@ -390,18 +390,18 @@ void Editor::rotatePointsRight()
  */
 void Editor::flipPointsHorizontal()
 {
-    for (int i = 0 ; i < m_points.count() ; ++i)
-    {
+    for (int i = 0 ; i < m_points.count() ; ++i) {
         QPointF p = m_points[i];
-        p.setX(1.0-p.x());
+        p.setX(1.0 - p.x());
         m_points[i] = p;
     }
-    for (int i = 0 ; i < m_activePoints.count() ; ++i)
-    {
+
+    for (int i = 0 ; i < m_activePoints.count() ; ++i) {
         QPointF p = m_activePoints[i];
-        p.setX(1.0-p.x());
+        p.setX(1.0 - p.x());
         m_activePoints[i] = p;
     }
+
     constructPainterPath();
     update();
 }
@@ -412,18 +412,18 @@ void Editor::flipPointsHorizontal()
  */
 void Editor::flipPointsVertical()
 {
-    for (int i = 0 ; i < m_points.count() ; ++i)
-    {
+    for (int i = 0 ; i < m_points.count() ; ++i) {
         QPointF p = m_points[i];
-        p.setY(1.0-p.y());
+        p.setY(1.0 - p.y());
         m_points[i] = p;
     }
-    for (int i = 0 ; i < m_activePoints.count() ; ++i)
-    {
+
+    for (int i = 0 ; i < m_activePoints.count() ; ++i) {
         QPointF p = m_activePoints[i];
-        p.setY(1.0-p.y());
+        p.setY(1.0 - p.y());
         m_activePoints[i] = p;
     }
+
     constructPainterPath();
     update();
 }
@@ -486,7 +486,7 @@ void Editor::setJoinStyle(Qt::PenJoinStyle joinStyle)
  */
 void Editor::setLineWidth(double width)
 {
-    width = round(width*100)/100;
+    width = round(width * 100) / 100;
     m_symbol.setLineWidth(width);
     emit minLineWidth(width == 0.01);
     emit maxLineWidth(width == 1.00);
@@ -602,7 +602,7 @@ void Editor::selectJoinStyle(QAction *action)
  */
 void Editor::increaseLineWidth()
 {
-    m_undoStack.push(new IncreaseLineWidthCommand(this, m_symbol.lineWidth(), m_symbol.lineWidth()+0.01));
+    m_undoStack.push(new IncreaseLineWidthCommand(this, m_symbol.lineWidth(), m_symbol.lineWidth() + 0.01));
 }
 
 
@@ -611,7 +611,7 @@ void Editor::increaseLineWidth()
  */
 void Editor::decreaseLineWidth()
 {
-    m_undoStack.push(new DecreaseLineWidthCommand(this, m_symbol.lineWidth(), m_symbol.lineWidth()-0.01));
+    m_undoStack.push(new DecreaseLineWidthCommand(this, m_symbol.lineWidth(), m_symbol.lineWidth() - 0.01));
 }
 
 
@@ -662,18 +662,18 @@ void Editor::mousePressEvent(QMouseEvent *event)
 {
     QPointF p = snapPoint(event->pos());
 
-    if (event->buttons() & Qt::LeftButton)
-    {
+    if (event->buttons() & Qt::LeftButton) {
         m_start = m_tracking = p;
         m_rubberBand = QRectF();
-        if (node(p))
-        {
+
+        if (node(p)) {
             m_dragging = true;
             m_dragPointIndex = nodeUnderCursor(p);
-        }
-        else
+        } else {
             addPoint(p);
+        }
     }
+
     update();
 }
 
@@ -695,8 +695,7 @@ void Editor::mousePressEvent(QMouseEvent *event)
  */
 void Editor::mouseMoveEvent(QMouseEvent *event)
 {
-    if (!m_guideLines.isEmpty())
-    {
+    if (!m_guideLines.isEmpty()) {
         m_guideLines.clear();
         m_guideCircles.clear();
         update();
@@ -704,38 +703,34 @@ void Editor::mouseMoveEvent(QMouseEvent *event)
 
     QPointF p = snapPoint(event->pos());
 
-    if (event->buttons() & Qt::LeftButton)
-    {
-        if (m_tracking != p)
-        {
+    if (event->buttons() & Qt::LeftButton) {
+        if (m_tracking != p) {
             m_tracking = p;
-            if (m_dragging)
-            {
-                if (m_dragPointIndex.first)
-                {
+
+            if (m_dragging) {
+                if (m_dragPointIndex.first) {
                     m_points[m_dragPointIndex.second] = p;
                     constructPainterPath();
-                }
-                else
+                } else {
                     m_activePoints[m_dragPointIndex.second] = p;
-            }
-            else if (m_toolMode == Rectangle || m_toolMode == Ellipse)
-            {
+                }
+            } else if (m_toolMode == Rectangle || m_toolMode == Ellipse) {
                 m_rubberBand = QRectF(m_start, m_tracking).normalized();
             }
+
             update();
         }
-    }
-    else
-    {
-        if (node(p))
+    } else {
+        if (node(p)) {
             setCursor(Qt::SizeAllCursor);
-        else
+        } else {
             setCursor(Qt::ArrowCursor);
+        }
     }
 
-    if (constructGuides(p))
+    if (constructGuides(p)) {
         update();
+    }
 }
 
 
@@ -755,17 +750,18 @@ void Editor::mouseReleaseEvent(QMouseEvent *event)
 {
     QPointF p = snapPoint(event->pos());
 
-    if (m_dragging)
-    {
-        if ((p != m_start) && (m_dragPointIndex.first))
+    if (m_dragging) {
+        if ((p != m_start) && (m_dragPointIndex.first)) {
             m_undoStack.push(new MovePointCommand(this, m_dragPointIndex.second, m_start, p));
+        }
+
         m_dragging = false;
-    }
-    else if (m_toolMode == Rectangle || m_toolMode == Ellipse)
-    {
+    } else if (m_toolMode == Rectangle || m_toolMode == Ellipse) {
         m_rubberBand = QRectF();
-        if (p != m_start)
+
+        if (p != m_start) {
             addPoint(p);
+        }
     }
 
     update();
@@ -785,32 +781,33 @@ void Editor::mouseReleaseEvent(QMouseEvent *event)
 void Editor::addPoint(const QPointF &point)
 {
     m_activePoints.append(point);
-    if (m_activePoints.count() == pointsRequired[m_toolMode])
-    {
-        switch (m_toolMode)
-        {
-            case MoveTo:
-                m_undoStack.push(new MoveToCommand(this, m_activePoints.at(0)));
-                break;
 
-            case LineTo:
-                m_undoStack.push(new LineToCommand(this, m_activePoints.at(0)));
-                break;
+    if (m_activePoints.count() == pointsRequired[m_toolMode]) {
+        switch (m_toolMode) {
+        case MoveTo:
+            m_undoStack.push(new MoveToCommand(this, m_activePoints.at(0)));
+            break;
 
-            case CubicTo:
-                m_undoStack.push(new CubicToCommand(this, m_activePoints.at(0), m_activePoints.at(1), m_activePoints.at(2)));
-                break;
+        case LineTo:
+            m_undoStack.push(new LineToCommand(this, m_activePoints.at(0)));
+            break;
 
-            case Rectangle:
-                m_undoStack.push(new RectangleCommand(this, m_activePoints.at(0), m_activePoints.at(1)));
-                break;
+        case CubicTo:
+            m_undoStack.push(new CubicToCommand(this, m_activePoints.at(0), m_activePoints.at(1), m_activePoints.at(2)));
+            break;
 
-            case Ellipse:
-                m_undoStack.push(new EllipseCommand(this, m_activePoints.at(0), m_activePoints.at(1)));
-                break;
+        case Rectangle:
+            m_undoStack.push(new RectangleCommand(this, m_activePoints.at(0), m_activePoints.at(1)));
+            break;
+
+        case Ellipse:
+            m_undoStack.push(new EllipseCommand(this, m_activePoints.at(0), m_activePoints.at(1)));
+            break;
         }
+
         m_activePoints.clear();
     }
+
     update();
 }
 
@@ -835,23 +832,25 @@ void Editor::paintEvent(QPaintEvent *event)
     p.fillRect(event->rect(), Qt::white);
 
     // draw vertical grid
-    for (int x = 0 ; x < gridElements+1 ; ++x)
-    {
-        if (x % elementGroup)
+    for (int x = 0 ; x < gridElements + 1 ; ++x) {
+        if (x % elementGroup) {
             p.setPen(Qt::lightGray);
-        else
+        } else {
             p.setPen(Qt::darkGray);
-        p.drawLine(x*elementSize, 0, x*elementSize, m_size+1);
+        }
+
+        p.drawLine(x * elementSize, 0, x * elementSize, m_size + 1);
     }
 
     // draw horizontal grid
-    for (int y = 0 ; y < gridElements+1 ; ++y)
-    {
-        if (y % elementGroup)
+    for (int y = 0 ; y < gridElements + 1 ; ++y) {
+        if (y % elementGroup) {
             p.setPen(Qt::lightGray);
-        else
+        } else {
             p.setPen(Qt::darkGray);
-        p.drawLine(0, y*elementSize, m_size+1, y*elementSize);
+        }
+
+        p.drawLine(0, y * elementSize, m_size + 1, y * elementSize);
     }
 
     // define a rectangle for the points
@@ -862,69 +861,69 @@ void Editor::paintEvent(QPaintEvent *event)
 
     // draw all the points as a circle
     p.setBrush(Qt::SolidPattern);
-    for (int i = 0 ; i < m_points.count() ; ++i)
-    {
+
+    for (int i = 0 ; i < m_points.count() ; ++i) {
         QPoint s = toScreen(m_points.at(i));
         dot.moveCenter(s);
         p.drawEllipse(dot);
     }
-    for (int i = 0 ; i < m_activePoints.count() ; ++i)
-    {
+
+    for (int i = 0 ; i < m_activePoints.count() ; ++i) {
         QPoint s = toScreen(m_activePoints.at(i));
         dot.moveCenter(s);
         p.drawEllipse(dot);
     }
 
     // iterate through the elements and for each curve element draw the reference lines with a dashed pen
-    for (int i = 0, j = 0 ; i < m_elements.count() ; ++i)
-    {
+    for (int i = 0, j = 0 ; i < m_elements.count() ; ++i) {
         QPainterPath::ElementType element = m_elements[i];
         QPoint s;
         QPoint e;
         QPoint c1;
         QPoint c2;
-        switch (element)
-        {
-            case QPainterPath::MoveToElement:
-                // increment to next pointer
-                ++j;
-                break;
 
-            case QPainterPath::LineToElement:
-                // increment to next pointer
-                j++;
-                break;
+        switch (element) {
+        case QPainterPath::MoveToElement:
+            // increment to next pointer
+            ++j;
+            break;
 
-            case QPainterPath::CurveToElement:
-                p.setPen(dashedPen);
-                s = toScreen(m_points.at(j-1));
-                c1 = toScreen(m_points.at(j++));
-                c2 = toScreen(m_points.at(j++));
-                e = toScreen(m_points.at(j++));
-                p.drawLine(s, c1);
-                p.drawLine(c1, c2);
-                p.drawLine(c2, e);
-                break;
+        case QPainterPath::LineToElement:
+            // increment to next pointer
+            j++;
+            break;
+
+        case QPainterPath::CurveToElement:
+            p.setPen(dashedPen);
+            s = toScreen(m_points.at(j - 1));
+            c1 = toScreen(m_points.at(j++));
+            c2 = toScreen(m_points.at(j++));
+            e = toScreen(m_points.at(j++));
+            p.drawLine(s, c1);
+            p.drawLine(c1, c2);
+            p.drawLine(c2, e);
+            break;
         }
     }
 
     // draw the rubber band rectangle or the active points for the current command
-    if (m_rubberBand.isValid())
-    {
+    if (m_rubberBand.isValid()) {
         p.setBrush(Qt::NoBrush);
-        if (m_toolMode == Rectangle)
+
+        if (m_toolMode == Rectangle) {
             p.drawRect(QRect(toScreen(m_rubberBand.topLeft()), toScreen(m_rubberBand.bottomRight())));
-        else
+        } else {
             p.drawEllipse(QRect(toScreen(m_rubberBand.topLeft()), toScreen(m_rubberBand.bottomRight())));
-    }
-    else if (m_activePoints.count() && m_toolMode != Rectangle && m_toolMode != Ellipse)
-    {
+        }
+    } else if (m_activePoints.count() && m_toolMode != Rectangle && m_toolMode != Ellipse) {
         p.setPen(dashedPen);
         QPoint s;
-        if (m_points.count())
+
+        if (m_points.count()) {
             s = toScreen(m_points.last());
-        for (int i = 0 ; i < m_activePoints.count() ; ++i)
-        {
+        }
+
+        for (int i = 0 ; i < m_activePoints.count() ; ++i) {
             QPoint e = toScreen(m_activePoints[i]);
             p.drawLine(s, e);
             s = e;
@@ -932,7 +931,7 @@ void Editor::paintEvent(QPaintEvent *event)
     }
 
     // draw a rectangle representing the preferred symbol size allowing for some white space
-    int border = elementSize*2;
+    int border = elementSize * 2;
     QRect preferredSizeRect = QRect(0, 0, m_size, m_size).adjusted(border, border, -border, -border);
     QColor preferredSizeColor(Qt::green);
     preferredSizeColor.setAlpha(128);
@@ -945,11 +944,11 @@ void Editor::paintEvent(QPaintEvent *event)
     QColor c(Qt::black);
     c.setAlpha(128);
     QPen pathPen(c);
-    pathPen.setWidthF(m_symbol.filled()?0.0:m_symbol.lineWidth());
+    pathPen.setWidthF(m_symbol.filled() ? 0.0 : m_symbol.lineWidth());
     pathPen.setCapStyle(m_symbol.capStyle());
     pathPen.setJoinStyle(m_symbol.joinStyle());
     p.setPen(pathPen);
-    QBrush pathFill(m_symbol.filled()?Qt::SolidPattern:Qt::NoBrush);
+    QBrush pathFill(m_symbol.filled() ? Qt::SolidPattern : Qt::NoBrush);
     pathFill.setColor(c);
     p.setBrush(pathFill);
     p.drawPath(m_painterPath);
@@ -961,15 +960,19 @@ void Editor::paintEvent(QPaintEvent *event)
     p.setPen(guidePen);
     p.setBrush(Qt::NoBrush);
     QRectF snapRect(0, 0, 0.03, 0.03);
-    foreach (const QPointF &snapPoint, m_snapPoints)
-    {
+
+    foreach (const QPointF & snapPoint, m_snapPoints) {
         snapRect.moveCenter(snapPoint);
         p.drawRect(snapRect);
     }
-    foreach (const QLineF &guideLine, m_guideLines)
+
+    foreach (const QLineF & guideLine, m_guideLines) {
         p.drawLine(guideLine);
-    foreach (qreal guideCircle, m_guideCircles)
+    }
+
+    foreach (qreal guideCircle, m_guideCircles) {
         p.drawEllipse(QPointF(0.5, 0.5), guideCircle, guideCircle);
+    }
 }
 
 
@@ -980,16 +983,15 @@ void Editor::paintEvent(QPaintEvent *event)
  */
 void Editor::keyPressEvent(QKeyEvent *event)
 {
-    switch (event->key())
-    {
-        case Qt::Key_Escape:
-            m_activePoints.clear();
-            update();
-            break;
+    switch (event->key()) {
+    case Qt::Key_Escape:
+        m_activePoints.clear();
+        update();
+        break;
 
-        default:
-            QWidget::keyPressEvent(event);
-            break;
+    default:
+        QWidget::keyPressEvent(event);
+        break;
     }
 }
 
@@ -1006,8 +1008,8 @@ void Editor::keyPressEvent(QKeyEvent *event)
  */
 QPointF Editor::toSymbol(const QPoint &point) const
 {
-    double sx = static_cast<double>(point.x())/m_size;
-    double sy = static_cast<double>(point.y())/m_size;
+    double sx = static_cast<double>(point.x()) / m_size;
+    double sy = static_cast<double>(point.y()) / m_size;
     return QPointF(sx, sy);
 }
 
@@ -1027,8 +1029,11 @@ QPointF Editor::toSymbol(const QPoint &point) const
 QPointF Editor::snapPoint(const QPoint &point) const
 {
     QPair<bool, QPointF> snap = snapToGuide(toSymbol(point));
-    if (!snap.first)
+
+    if (!snap.first) {
         snap = snapToGrid(point);
+    }
+
     return snap.second;
 }
 
@@ -1046,13 +1051,14 @@ QPointF Editor::snapPoint(const QPoint &point) const
 QPair<bool, QPointF> Editor::snapToGrid(const QPoint &point) const
 {
     QPair<bool, QPointF> snap(false, point);
-    if (m_snap)
-    {
-        double sx = round(static_cast<double>(point.x()) * gridElements / (m_size))/gridElements;
-        double sy = round(static_cast<double>(point.y()) * gridElements / (m_size))/gridElements;
+
+    if (m_snap) {
+        double sx = round(static_cast<double>(point.x()) * gridElements / (m_size)) / gridElements;
+        double sy = round(static_cast<double>(point.y()) * gridElements / (m_size)) / gridElements;
         snap.first = true;
         snap.second = QPointF(sx, sy);
     }
+
     return snap;
 }
 
@@ -1070,18 +1076,17 @@ QPair<bool, QPointF> Editor::snapToGrid(const QPoint &point) const
 QPair<bool, QPointF> Editor::snapToGuide(const QPointF &point) const
 {
     QPair<bool, QPointF> snap(false, point);
-    if (m_snap)
-    {
-        foreach (const QPointF &p, m_snapPoints)
-        {
-            if ((point-p).manhattanLength() < threshold)
-            {
+
+    if (m_snap) {
+        foreach (const QPointF & p, m_snapPoints) {
+            if ((point - p).manhattanLength() < threshold) {
                 snap.first = true;
                 snap.second = p;
                 break;
             }
         }
     }
+
     return snap;
 }
 
@@ -1115,17 +1120,20 @@ bool Editor::node(const QPointF &point) const
 {
     bool found = false;
 
-    for (int i = 0 ; i < m_points.count() ; ++i)
-    {
+    for (int i = 0 ; i < m_points.count() ; ++i) {
         QPointF distance = point - m_points[i];
-        if (distance.manhattanLength() < threshold)
+
+        if (distance.manhattanLength() < threshold) {
             found = true;
+        }
     }
-    for (int i = 0 ; i < m_activePoints.count() ; ++i)
-    {
+
+    for (int i = 0 ; i < m_activePoints.count() ; ++i) {
         QPointF distance = point - m_activePoints[i];
-        if (distance.manhattanLength() < threshold)
+
+        if (distance.manhattanLength() < threshold) {
             found = true;
+        }
     }
 
     return found;
@@ -1143,18 +1151,20 @@ bool Editor::node(const QPointF &point) const
  */
 QPair<bool, int> Editor::nodeUnderCursor(const QPointF &point) const
 {
-    for (int i = 0 ; i < m_points.count() ; ++i)
-    {
+    for (int i = 0 ; i < m_points.count() ; ++i) {
         QPointF distance = point - m_points[i];
-        if (distance.manhattanLength() < threshold)
+
+        if (distance.manhattanLength() < threshold) {
             return QPair<bool, int>(true, i);
+        }
     }
 
-    for (int i = 0 ; i < m_activePoints.count() ; ++i)
-    {
+    for (int i = 0 ; i < m_activePoints.count() ; ++i) {
         QPointF distance = point - m_activePoints[i];
-        if (distance.manhattanLength() < threshold)
+
+        if (distance.manhattanLength() < threshold) {
             return QPair<bool, int>(false, i);
+        }
     }
 
     return QPair<bool, int>(false, -1);
@@ -1171,29 +1181,29 @@ void Editor::deconstructPainterPath()
     m_points.clear();
     m_activePoints.clear();
     m_elements.clear();
-    for (int i = 0 ; i < m_painterPath.elementCount() ; ++i)
-    {
+
+    for (int i = 0 ; i < m_painterPath.elementCount() ; ++i) {
         QPainterPath::Element e = m_painterPath.elementAt(i);
-        switch(e.type)
-        {
-            case QPainterPath::MoveToElement:
-                m_elements.append(e.type);
-                m_points.append(QPointF(e));
-                break;
 
-            case QPainterPath::LineToElement:
-                m_elements.append(e.type);
-                m_points.append(QPointF(e));
-                break;
+        switch (e.type) {
+        case QPainterPath::MoveToElement:
+            m_elements.append(e.type);
+            m_points.append(QPointF(e));
+            break;
 
-            case QPainterPath::CurveToElement:
-                m_elements.append(e.type);
-                m_points.append(QPointF(e));
-                break;
+        case QPainterPath::LineToElement:
+            m_elements.append(e.type);
+            m_points.append(QPointF(e));
+            break;
 
-            case QPainterPath::CurveToDataElement:
-                m_points.append(QPointF(e));
-                break;
+        case QPainterPath::CurveToElement:
+            m_elements.append(e.type);
+            m_points.append(QPointF(e));
+            break;
+
+        case QPainterPath::CurveToDataElement:
+            m_points.append(QPointF(e));
+            break;
         }
     }
 }
@@ -1207,25 +1217,26 @@ void Editor::deconstructPainterPath()
 void Editor::constructPainterPath()
 {
     QPainterPath path;;
-    for (int i = 0, j = 0 ; i < m_elements.count() ; ++i)
-    {
+
+    for (int i = 0, j = 0 ; i < m_elements.count() ; ++i) {
         QPainterPath::ElementType e = m_elements[i];
-        switch (e)
-        {
-            case QPainterPath::MoveToElement:
-                path.moveTo(m_points[j++]);
-                break;
 
-            case QPainterPath::LineToElement:
-                path.lineTo(m_points[j++]);
-                break;
+        switch (e) {
+        case QPainterPath::MoveToElement:
+            path.moveTo(m_points[j++]);
+            break;
 
-            case QPainterPath::CurveToElement:
-                path.cubicTo(m_points[j], m_points[j+1], m_points[j+2]);
-                j += 3;
-                break;
+        case QPainterPath::LineToElement:
+            path.lineTo(m_points[j++]);
+            break;
+
+        case QPainterPath::CurveToElement:
+            path.cubicTo(m_points[j], m_points[j + 1], m_points[j + 2]);
+            j += 3;
+            break;
         }
     }
+
     path.setFillRule(m_painterPath.fillRule());
     m_painterPath = path;
 }
@@ -1243,13 +1254,12 @@ void Editor::constructPainterPath()
  */
 bool Editor::constructGuides(const QPointF &to)
 {
-    foreach (const QPointF &from, m_points)
-    {
+    foreach (const QPointF & from, m_points) {
         constructLineGuides(from, to);
         constructCircleGuides(from, to);
     }
-    foreach (const QPointF &from, m_activePoints)
-    {
+
+    foreach (const QPointF & from, m_activePoints) {
         constructLineGuides(from, to);
         constructCircleGuides(from, to);
     }
@@ -1269,12 +1279,13 @@ bool Editor::constructGuides(const QPointF &to)
  */
 void Editor::constructLineGuides(const QPointF &from, const QPointF &to)
 {
-        if (from != to)
-        {
-            QLineF line(from, to);
-            if (m_angles.contains(line.angle()))
-                m_guideLines.append(projected(line));
+    if (from != to) {
+        QLineF line(from, to);
+
+        if (m_angles.contains(line.angle())) {
+            m_guideLines.append(projected(line));
         }
+    }
 }
 
 
@@ -1292,20 +1303,23 @@ void Editor::constructLineGuides(const QPointF &from, const QPointF &to)
 void Editor::constructCircleGuides(const QPointF &from, const QPointF &to)
 {
     QVector<QPointF> intersections;
-    intersections << QPointF(1.0-from.x(), from.y()) << QPointF(from.x(), 1.0-from.y()) << QPointF(1.0-from.x(), 1.0-from.y());
+    intersections << QPointF(1.0 - from.x(), from.y()) << QPointF(from.x(), 1.0 - from.y()) << QPointF(1.0 - from.x(), 1.0 - from.y());
     bool circles = false;
-    foreach (const QPointF &i, intersections)
-    {
-        if (i == from) // point is on center line
+
+    foreach (const QPointF & i, intersections) {
+        if (i == from) { // point is on center line
             break;
-        if (i == to)
-        {
+        }
+
+        if (i == to) {
             m_guideLines.append(projected(QLineF(i, to)));
             circles = true;
         }
     }
-    if (circles)
-        m_guideCircles.append(sqrt(pow(0.5-to.x(), 2) + pow(0.5-to.y(), 2)));
+
+    if (circles) {
+        m_guideCircles.append(sqrt(pow(0.5 - to.x(), 2) + pow(0.5 - to.y(), 2)));
+    }
 }
 
 
@@ -1338,28 +1352,30 @@ QLineF Editor::projected(const QLineF &line) const
     l = line.intersect(m_leftEdge, &intersectLeft);
     r = line.intersect(m_rightEdge, &intersectRight);
 
-    if (t == 0)        // horizontal line
+    if (t == 0) {      // horizontal line
         return QLineF(intersectLeft, intersectRight);
-
-    if (l == 0)        // vertical line
-        return QLineF(intersectTop, intersectBottom);
-
-    if (intersectTop == QPointF(0.0, 0.0) || intersectTop == QPointF(1.0, 0.0)) // diagonal line at the corners
-        return QLineF(intersectTop, intersectBottom);
-
-    if (intersectTop.x() > 0.0 && intersectTop.x() < 1.0)
-    {
-        if (intersectLeft.y() > 0.0 && intersectLeft.y() < 1.0)
-            return QLineF(intersectTop, intersectLeft);
-        else
-            return QLineF(intersectTop, intersectRight);
     }
-    else
-    {
-        if (intersectLeft.y() > 0.0 && intersectLeft.y() < 1.0)
+
+    if (l == 0) {      // vertical line
+        return QLineF(intersectTop, intersectBottom);
+    }
+
+    if (intersectTop == QPointF(0.0, 0.0) || intersectTop == QPointF(1.0, 0.0)) { // diagonal line at the corners
+        return QLineF(intersectTop, intersectBottom);
+    }
+
+    if (intersectTop.x() > 0.0 && intersectTop.x() < 1.0) {
+        if (intersectLeft.y() > 0.0 && intersectLeft.y() < 1.0) {
+            return QLineF(intersectTop, intersectLeft);
+        } else {
+            return QLineF(intersectTop, intersectRight);
+        }
+    } else {
+        if (intersectLeft.y() > 0.0 && intersectLeft.y() < 1.0) {
             return QLineF(intersectBottom, intersectLeft);
-        else
+        } else {
             return QLineF(intersectBottom, intersectRight);
+        }
     }
 }
 

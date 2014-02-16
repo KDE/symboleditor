@@ -174,8 +174,11 @@ void Symbol::setJoinStyle(Qt::PenJoinStyle joinStyle)
 QDataStream &operator<<(QDataStream &stream, const Symbol &symbol)
 {
     stream << symbol.version << symbol.m_path << symbol.m_filled << symbol.m_lineWidth << static_cast<qint32>(symbol.m_capStyle) << static_cast<qint32>(symbol.m_joinStyle);
-    if (stream.status() != QDataStream::Ok)
+
+    if (stream.status() != QDataStream::Ok) {
         throw FailedWriteLibrary(stream.status());
+    }
+
     return stream;
 }
 
@@ -194,17 +197,18 @@ QDataStream &operator>>(QDataStream &stream, Symbol &symbol)
     qint32 capStyle;
     qint32 joinStyle;
     stream >> version;
-    switch (version)
-    {
-        case 100:
-            stream >> symbol.m_path >> symbol.m_filled >> symbol.m_lineWidth >> capStyle >> joinStyle;
-            symbol.m_capStyle = static_cast<Qt::PenCapStyle>(capStyle);
-            symbol.m_joinStyle = static_cast<Qt::PenJoinStyle>(joinStyle);
-            break;
 
-        default:
-            throw InvalidSymbolVersion(version);
-            break;
+    switch (version) {
+    case 100:
+        stream >> symbol.m_path >> symbol.m_filled >> symbol.m_lineWidth >> capStyle >> joinStyle;
+        symbol.m_capStyle = static_cast<Qt::PenCapStyle>(capStyle);
+        symbol.m_joinStyle = static_cast<Qt::PenJoinStyle>(joinStyle);
+        break;
+
+    default:
+        throw InvalidSymbolVersion(version);
+        break;
     }
+
     return stream;
 }

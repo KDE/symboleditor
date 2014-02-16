@@ -90,11 +90,13 @@ SymbolLibrary::~SymbolLibrary()
 void SymbolLibrary::clear()
 {
     m_undoStack.clear();
-    if (m_listWidget)
-    {
-        foreach (qint16 index, indexes())
+
+    if (m_listWidget) {
+        foreach (qint16 index, indexes()) {
             m_listWidget->removeSymbol(index);
+        }
     }
+
     m_symbols.clear();
     m_nextIndex = 1;
     m_url = KUrl(i18n("Untitled"));
@@ -111,7 +113,7 @@ void SymbolLibrary::clear()
  */
 Symbol SymbolLibrary::symbol(qint16 index)
 {
-    return (m_symbols.contains(index)?m_symbols[index]:Symbol());
+    return (m_symbols.contains(index) ? m_symbols[index] : Symbol());
 }
 
 
@@ -128,12 +130,15 @@ Symbol SymbolLibrary::symbol(qint16 index)
 Symbol SymbolLibrary::takeSymbol(qint16 index)
 {
     Symbol symbol;
-    if (m_symbols.contains(index))
-    {
+
+    if (m_symbols.contains(index)) {
         symbol = m_symbols.take(index);
-        if (m_listWidget)
+
+        if (m_listWidget) {
             m_listWidget->removeSymbol(index);
+        }
     }
+
     return symbol;
 }
 
@@ -152,13 +157,15 @@ Symbol SymbolLibrary::takeSymbol(qint16 index)
  */
 qint16 SymbolLibrary::setSymbol(qint16 index, const Symbol &symbol)
 {
-    if (!index)
+    if (!index) {
         index = m_nextIndex++;
+    }
 
     m_symbols.insert(index, symbol);
 
-    if (m_listWidget)
+    if (m_listWidget) {
         m_listWidget->addSymbol(index, symbol);
+    }
 
     return index;
 }
@@ -239,8 +246,9 @@ QUndoStack *SymbolLibrary::undoStack()
  */
 void SymbolLibrary::generateItems()
 {
-    if (!m_listWidget)
+    if (!m_listWidget) {
         return;
+    }
 
     m_listWidget->loadFromLibrary(this);
 }
@@ -263,8 +271,11 @@ QDataStream &operator<<(QDataStream &stream, const SymbolLibrary &library)
     stream.setVersion(QDataStream::Qt_4_0);
     stream << library.version;
     stream << library.m_nextIndex;
-    if (stream.status() != QDataStream::Ok)
+
+    if (stream.status() != QDataStream::Ok) {
         throw FailedWriteLibrary(stream.status());
+    }
+
     stream << library.m_symbols;
     return stream;
 }
@@ -291,8 +302,8 @@ QDataStream &operator>>(QDataStream &stream, SymbolLibrary &library)
 
     char magic[15];
     stream.readRawData(magic, 15);
-    if (strncmp(magic, "KXStitchSymbols", 15) == 0)
-    {
+
+    if (strncmp(magic, "KXStitchSymbols", 15) == 0) {
         stream.setVersion(QDataStream::Qt_4_0);
         qint32 version;
         qint16 nextIndex;
@@ -300,37 +311,40 @@ QDataStream &operator>>(QDataStream &stream, SymbolLibrary &library)
         QList<qint16> paths_v100_keys;
         stream >> version;
 
-        switch (version)
-        {
-            case 101:
-                stream >> library.m_nextIndex;
-                if (stream.status() != QDataStream::Ok)
-                    throw FailedReadLibrary(stream.status());
-                stream >> library.m_symbols;
-                library.generateItems();
-                break;
+        switch (version) {
+        case 101:
+            stream >> library.m_nextIndex;
 
-            case 100:
-                stream >> library.m_nextIndex;
-                library.m_nextIndex++;
-                stream >> paths_v100;
-                paths_v100_keys = paths_v100.keys();
-                foreach (qint16 index, paths_v100_keys)
-                {
-                    Symbol symbol;
-                    symbol.setPath(paths_v100[index]);
-                    library.m_symbols.insert(index, symbol);
-                }
-                library.generateItems();
-                break;
+            if (stream.status() != QDataStream::Ok) {
+                throw FailedReadLibrary(stream.status());
+            }
 
-            default:
-                throw InvalidFileVersion(version);
-                break;
+            stream >> library.m_symbols;
+            library.generateItems();
+            break;
+
+        case 100:
+            stream >> library.m_nextIndex;
+            library.m_nextIndex++;
+            stream >> paths_v100;
+            paths_v100_keys = paths_v100.keys();
+
+            foreach (qint16 index, paths_v100_keys) {
+                Symbol symbol;
+                symbol.setPath(paths_v100[index]);
+                library.m_symbols.insert(index, symbol);
+            }
+
+            library.generateItems();
+            break;
+
+        default:
+            throw InvalidFileVersion(version);
+            break;
         }
-    }
-    else
+    } else {
         throw InvalidFile();
+    }
 
     return stream;
 }

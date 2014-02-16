@@ -86,13 +86,15 @@ void SymbolListWidget::setIconSize(int size)
  */
 void SymbolListWidget::loadFromLibrary(SymbolLibrary *library)
 {
-    if (!library)
+    if (!library) {
         return;
+    }
 
     m_library = library;
 
-    foreach (qint16 index, library->indexes())
+    foreach (qint16 index, library->indexes()) {
         addSymbol(index, library->symbol(index));
+    }
 }
 
 
@@ -116,8 +118,7 @@ void SymbolListWidget::addSymbol(qint16 index, const Symbol &symbol)
  */
 void SymbolListWidget::removeSymbol(qint16 index)
 {
-    if (m_items.contains(index))
-    {
+    if (m_items.contains(index)) {
         delete m_items.take(index);
     }
 }
@@ -135,22 +136,27 @@ void SymbolListWidget::removeSymbol(qint16 index)
  */
 QListWidgetItem *SymbolListWidget::createItem(qint16 index)
 {
-    if (m_items.contains(index))
+    if (m_items.contains(index)) {
         return m_items.value(index);
+    }
+
     QListWidgetItem *item = new QListWidgetItem;
     item->setData(Qt::UserRole, index);
     m_items.insert(index, item);
     int i = index;
+
     while (++i < m_lastIndex)
-        if (m_items.contains(i))
+        if (m_items.contains(i)) {
             break;
-    if (i >= m_lastIndex)
-    {
+        }
+
+    if (i >= m_lastIndex) {
         addItem(item);
         m_lastIndex = index;
-    }
-    else
+    } else {
         insertItem(row(m_items[i]), item);
+    }
+
     return item;
 }
 
@@ -170,14 +176,15 @@ QIcon SymbolListWidget::createIcon(const Symbol &symbol, int size)
     QPainter p(&icon);
     p.setRenderHint(QPainter::Antialiasing, true);
     p.scale(size, size);
-    QBrush brush(symbol.filled()?Qt::SolidPattern:Qt::NoBrush);
+    QBrush brush(symbol.filled() ? Qt::SolidPattern : Qt::NoBrush);
     QPen pen;
-    if (!symbol.filled())
-    {
+
+    if (!symbol.filled()) {
         pen.setWidthF(symbol.lineWidth());
         pen.setCapStyle(symbol.capStyle());
         pen.setJoinStyle(symbol.joinStyle());
     }
+
     p.setBrush(brush);
     p.setPen(pen);
     p.drawPath(symbol.path());
@@ -219,7 +226,7 @@ QMimeData *SymbolListWidget::mimeData(const QList<QListWidgetItem *> items) cons
     QByteArray data;
     QDataStream stream(&data, QIODevice::WriteOnly);
 
-    foreach (QListWidgetItem *item, items) {
+    foreach (QListWidgetItem * item, items) {
         qint16 index = static_cast<qint16>(item->data(Qt::UserRole).toInt());
         Symbol symbol = m_library->symbol(index);
         stream << symbol;
@@ -257,6 +264,7 @@ bool SymbolListWidget::dropMimeData(int index, const QMimeData *mimeData, Qt::Dr
  */
 void SymbolListWidget::updateIcons()
 {
-    foreach (qint16 index, m_items.keys())
+    foreach (qint16 index, m_items.keys()) {
         m_items.value(index)->setIcon(createIcon(m_library->symbol(index), m_size));
+    }
 }

@@ -75,17 +75,17 @@
  *
  * The KApplication instance is then executed which begins the event loop allowing user interaction.
  */
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
     KAboutData aboutData("SymbolEditor",
-                "SymbolEditor",
-                ki18n("SymbolEditor"), "1.1.0",
-                ki18n("A cross stitch symbol editor."),
-                KAboutData::License_GPL_V2,
-                ki18n("(c)2011 Stephen Allewell"),
-                ki18n(""),
-                "http://kxstitch.sourceforge.net/kxstitch",
-                "kxstitch-bugs@mirramar.adsl24.co.uk");
+                         "SymbolEditor",
+                         ki18n("SymbolEditor"), "1.1.0",
+                         ki18n("A cross stitch symbol editor."),
+                         KAboutData::License_GPL_V2,
+                         ki18n("(c)2011 Stephen Allewell"),
+                         ki18n(""),
+                         "http://kxstitch.sourceforge.net/kxstitch",
+                         "kxstitch-bugs@mirramar.adsl24.co.uk");
     aboutData.addAuthor(ki18n("Stephen Allewell"), ki18n("Project Lead"), "stephen@mirramar.adsl24.co.uk");
 
     KCmdLineArgs::init(argc, argv, &aboutData);

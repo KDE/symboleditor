@@ -153,7 +153,7 @@ private:
     bool    m_snap;                                 /**< true if snap mode is enabled */
     bool    m_fill;                                 /**< true if fill mode is enabled */
 
-    QUndoStack	m_undoStack;                        /**< holds the commands that modify the editor contents allowing for undo */
+    QUndoStack  m_undoStack;                        /**< holds the commands that modify the editor contents allowing for undo */
 
     ToolMode    m_toolMode;                         /**< the current tool selected */
 

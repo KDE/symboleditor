@@ -59,7 +59,7 @@ enum IDs {MoveTo,
           IncreaseLineWidth,
           DecreaseLineWidth,
           DragAndDrop
-          };
+         };
 
 
 /**
@@ -351,13 +351,12 @@ UpdateSymbolCommand::~UpdateSymbolCommand()
  */
 void UpdateSymbolCommand::undo()
 {
-    if (m_symbol.path().isEmpty())
-    {
+    if (m_symbol.path().isEmpty()) {
         m_symbolLibrary->takeSymbol(m_index);
         m_index = 0;
-    }
-    else
+    } else {
         m_symbolLibrary->setSymbol(m_index, m_originalSymbol);
+    }
 }
 
 
@@ -403,8 +402,10 @@ ImportLibraryCommand::~ImportLibraryCommand()
  */
 void ImportLibraryCommand::undo()
 {
-    foreach (qint16 i, m_addedIndexes)
+    foreach (qint16 i, m_addedIndexes) {
         m_symbolLibrary->takeSymbol(i);
+    }
+
     m_addedIndexes.clear();
 }
 
@@ -415,8 +416,9 @@ void ImportLibraryCommand::undo()
  */
 void ImportLibraryCommand::redo()
 {
-    foreach (qint16 i, m_imported->indexes())
+    foreach (qint16 i, m_imported->indexes()) {
         m_addedIndexes.append(m_symbolLibrary->setSymbol(0, m_imported->symbol(i))); // gets a new index
+    }
 }
 
 
@@ -845,8 +847,10 @@ int IncreaseLineWidthCommand::id() const
  */
 bool IncreaseLineWidthCommand::mergeWith(const QUndoCommand *command)
 {
-    if (command->id() != id())
+    if (command->id() != id()) {
         return false;
+    }
+
     m_to += static_cast<const IncreaseLineWidthCommand *>(command)->m_to;
     return true;
 }
@@ -915,8 +919,10 @@ int DecreaseLineWidthCommand::id() const
  */
 bool DecreaseLineWidthCommand::mergeWith(const QUndoCommand *command)
 {
-    if (command->id() != id())
+    if (command->id() != id()) {
         return false;
+    }
+
     m_to -= static_cast<const DecreaseLineWidthCommand *>(command)->m_to;
     return true;
 }
@@ -948,7 +954,7 @@ DragAndDropCommand::DragAndDropCommand(SymbolLibrary *library, const QMimeData *
  */
 void DragAndDropCommand::redo()
 {
-    foreach (const Symbol &symbol, m_symbols) {
+    foreach (const Symbol & symbol, m_symbols) {
         m_indexes.append(m_library->setSymbol(0, symbol));
     }
 }
