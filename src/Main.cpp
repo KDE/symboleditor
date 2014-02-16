@@ -1,6 +1,6 @@
 /********************************************************************************
  * Copyright (C) 2011 by Stephen Allewell                                       *
- * stephen@mirramar.adsl24.co.uk                                                *
+ * sallewell@users.sourceforge.net                                              *
  *                                                                              *
  * This program is free software; you can redistribute it and/or modify         *
  * it under the terms of the GNU General Public License as published by         *
@@ -85,8 +85,8 @@ int main(int argc, char *argv[])
                          ki18n("(c)2011 Stephen Allewell"),
                          ki18n(""),
                          "http://kxstitch.sourceforge.net/kxstitch",
-                         "kxstitch-bugs@mirramar.adsl24.co.uk");
-    aboutData.addAuthor(ki18n("Stephen Allewell"), ki18n("Project Lead"), "stephen@mirramar.adsl24.co.uk");
+                         "sallewell@users.sourceforge.net");
+    aboutData.addAuthor(ki18n("Stephen Allewell"), ki18n("Project Lead"), "sallewell@users.sourceforge.net");
 
     KCmdLineArgs::init(argc, argv, &aboutData);
 
