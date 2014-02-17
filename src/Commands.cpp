@@ -351,7 +351,7 @@ UpdateSymbolCommand::~UpdateSymbolCommand()
  */
 void UpdateSymbolCommand::undo()
 {
-    if (m_symbol.path().isEmpty()) {
+    if (m_originalSymbol.path().isEmpty()) {
         m_symbolLibrary->takeSymbol(m_index);
         m_index = 0;
     } else {

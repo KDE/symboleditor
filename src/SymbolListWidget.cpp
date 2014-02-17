@@ -119,6 +119,7 @@ void SymbolListWidget::addSymbol(qint16 index, const Symbol &symbol)
 void SymbolListWidget::removeSymbol(qint16 index)
 {
     if (m_items.contains(index)) {
+        takeItem(index);
         delete m_items.take(index);
     }
 }
