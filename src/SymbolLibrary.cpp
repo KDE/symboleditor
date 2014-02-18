@@ -267,10 +267,20 @@ void SymbolLibrary::generateItems()
  */
 QDataStream &operator<<(QDataStream &stream, const SymbolLibrary &library)
 {
+    qint16 lastIndex = 0;
+
+    foreach (qint16 index, library.m_symbols.keys()) {
+        if (index > lastIndex) {
+            lastIndex = index;
+        }
+    }
+
+    lastIndex++;
+
     stream.writeRawData("KXStitchSymbols", 15);
     stream.setVersion(QDataStream::Qt_4_0);
     stream << library.version;
-    stream << library.m_nextIndex;
+    stream << lastIndex;
 
     if (stream.status() != QDataStream::Ok) {
         throw FailedWriteLibrary(stream.status());
