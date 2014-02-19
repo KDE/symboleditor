@@ -55,6 +55,12 @@
  * ellipse. As with the rectangle the points can be selected by clicking two points or clicking and dragging.
  * When dragging, a rubber band ellipse will be shown indicating the ellipse.
  *
+ * @subsection character Insert Character
+ * This will display a character selection dialog allowing selection of a character from any font to be inserted as a
+ * symbol. Double click the required character which will then be converted to a symbol format in the editor. Further changes
+ * can then be made to it as needed. This selection will replace any current symbol definition in the editor. The dialog
+ * will remain open, allowing a select, save, repeat work flow rapidly building up a library of symbols.
+ *
  * @subsection rotate_left Rotate Left
  * Rotate the symbol counter clockwise 90 degrees.
  *
@@ -124,7 +130,7 @@
  * the left mouse button and drag the point to its new location.
  *
  * @section editing_symbols Editing Symbols
- * Editing a symbol in the library can be done by double clicking the symbol in the library view. This will
+ * Editing a symbol in the library can be done by clicking the symbol in the library view. This will
  * transfer the symbol into the editor allowing it to be changed and saved. In this scenario there is a link
  * between the symbol being edited and the library, so saving does update the correct symbol. If you wish to
  * use this symbol as a basis for other symbols using rotation and flipping, use the File->Save Symbol as New
@@ -138,6 +144,8 @@
 #include <QAction>
 #include <QMouseEvent>
 #include <QPainter>
+
+#include <KCharSelect>
 
 #include <math.h>
 
@@ -163,7 +171,8 @@ const int pointsRequired[] = {1, 1, 3, 2, 2};   /**< The number of points requir
 Editor::Editor(QWidget *parent)
     :   QWidget(parent),
         m_size(gridElements*elementSize),
-        m_index(0)
+        m_index(0),
+        m_charSelect(0)
 {
     resize(m_size + 1, m_size + 1);
     setMinimumSize(size());
@@ -186,6 +195,7 @@ Editor::Editor(QWidget *parent)
  */
 Editor::~Editor()
 {
+    delete m_charSelect;
 }
 
 
@@ -495,6 +505,24 @@ void Editor::setLineWidth(double width)
 
 
 /**
+ * Set the painter path to the requested path updating the points lists and the view.
+ *
+ * @param path contains the new path
+ *
+ * @return the old path
+ */
+QPainterPath Editor::setPath(const QPainterPath &path)
+{
+    QPainterPath originalPath = m_painterPath;
+    m_painterPath = path;
+    deconstructPainterPath();
+    update();
+
+    return originalPath;
+}
+
+
+/**
  * Clear the editor to represent a blank symbol.
  * Delete the existing data and update the display.
  */
@@ -526,6 +554,8 @@ QUndoStack *Editor::undoStack()
  * Select the next tool.
  * Remove any points that may have been used in the last tool command but not yet committed.
  * Set the tool mode from the sending actions data.
+ * If the character selector tool is selected, display a KCharSelect widget to get a character to be
+ * inserted otherwise hide the KCharSelect widget.
  *
  * @param action a pointer to the action triggering the selection
  */
@@ -533,6 +563,41 @@ void Editor::selectTool(QAction *action)
 {
     m_activePoints.clear();
     m_toolMode = static_cast<Editor::ToolMode>(action->data().toInt());
+
+    if (m_toolMode == Editor::Character) {
+        if (m_charSelect == 0) {
+            m_charSelect = new KCharSelect(0, 0);
+            connect(m_charSelect, SIGNAL(charSelected(QChar)), this, SLOT(charSelected(QChar)));
+        }
+
+        m_charSelect->show();
+    } else if (m_charSelect) {
+        m_charSelect->hide();
+    }
+}
+
+
+/**
+ * Called when a character is selected from the KCharSelect widget. Create a QPainterPath object and
+ * make it available to the editor for insertion.
+ *
+ * @param char a QChar containing the character selected.
+ */
+void Editor::charSelected(const QChar &character)
+{
+    QPainterPath path;
+    QFont font = m_charSelect->currentFont();
+    path.addText(0.0, 0.0, font, QString(character));
+
+    // scale the path to fit the bounding rectangle to fit in a rectangle 0,0-1,1  maintaining
+    // aspect ratio.
+    QRectF boundingRect = path.boundingRect();
+
+    double scale = double(gridElements - 4) / double(std::max(boundingRect.width(), boundingRect.height()) * gridElements);
+    QTransform transform = QTransform::fromTranslate(-boundingRect.center().x(), -boundingRect.center().y()) * QTransform::fromScale(scale, scale) * QTransform::fromTranslate(0.5, 0.5);
+    path = transform.map(path);
+
+    m_undoStack.push(new AddCharacterCommand(this, path));
 }
 
 

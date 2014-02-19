@@ -504,5 +504,24 @@ private:
 };
 
 
+/**
+ * @brief Add a fonted character as a symbol.
+ *
+ * Allows a character to be added after selection from the KCharSelect dialog.
+ */
+class AddCharacterCommand : public QUndoCommand
+{
+public:
+    AddCharacterCommand(Editor *editor, const QPainterPath &path);
+
+    virtual void redo();
+    virtual void undo();
+
+private:
+    Editor          *m_editor;
+    QPainterPath    m_path;
+};
+
+
 #endif
 

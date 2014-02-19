@@ -41,6 +41,9 @@
  * Using the File->Import Library it is also possible to import symbols from another symbol file into the current
  * symbol library. These will then be appended to the current set of symbols.
  *
+ * The symbol library view also allows drag and drop of symbols between instances of the SymbolEditor, so if you
+ * want to copy a number of symbols without importing them all, this can be done on an individual basis.
+ *
  * File->Close will close the current library leaving a new empty library that new symbols can be added to.
  */
 

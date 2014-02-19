@@ -119,7 +119,7 @@
  * to the grid intersections if the snap option is turned on, otherwise they can be positioned anywhere.
  *
  * The symbol can be rotated clockwise and counter clockwise and also flipped vertically and horizontally. This allows
- * multiple symbols to be easily created based on the same design.
+ * multiple symbols to be easily created based on the same design. Remember to use the save symbol as new option for this.
  *
  * For full details of the tools see the @ref editor_tools.
  *
@@ -131,6 +131,7 @@
  * - @ref cubic_to
  * - @ref rectangle
  * - @ref ellipse
+ * - @ref character
  * - @ref rotate_left
  * - @ref rotate_right
  * - @ref flip_horizontal
@@ -904,6 +905,14 @@ void MainWindow::setupActions()
     action->setIcon(KIcon("draw-ellipse"));
     action->setCheckable(true);
     actions->addAction("ellipse", action);
+    actionGroup->addAction(action);
+
+    action = new KAction(this);
+    action->setText(i18n("Insert Character"));
+    action->setData(Editor::Character);
+    action->setIcon(KIcon("character-set"));
+    action->setCheckable(true);
+    actions->addAction("character", action);
     actionGroup->addAction(action);
 
     connect(actionGroup, SIGNAL(triggered(QAction*)), m_editor, SLOT(selectTool(QAction*)));

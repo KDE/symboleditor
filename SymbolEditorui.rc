@@ -13,6 +13,7 @@
         <Action name="cubicTo"/>
         <Action name="rectangle"/>
         <Action name="ellipse"/>
+        <Action name="character"/>
         <Action name="rotateLeft"/>
         <Action name="rotateRight"/>
         <Action name="flipHorizontal"/>
@@ -45,6 +46,7 @@
     <Action name="cubicTo"/>
     <Action name="rectangle"/>
     <Action name="ellipse"/>
+    <Action name="character"/>
     <Action name="rotateLeft"/>
     <Action name="rotateRight"/>
     <Action name="flipHorizontal"/>

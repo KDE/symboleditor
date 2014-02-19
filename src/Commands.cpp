@@ -971,3 +971,29 @@ void DragAndDropCommand::undo()
 
     m_indexes.clear();
 }
+
+
+/**
+ * Constructor.
+ *
+ * @param editor a pointer to the editor
+ * @param path the QPainterPath representing the character glyph
+ */
+AddCharacterCommand::AddCharacterCommand(Editor *editor, const QPainterPath &path)
+    :   QUndoCommand(i18n("Add Character")),
+        m_editor(editor),
+        m_path(path)
+{
+}
+
+
+void AddCharacterCommand::redo()
+{
+    m_path = m_editor->setPath(m_path);
+}
+
+
+void AddCharacterCommand::undo()
+{
+    m_path = m_editor->setPath(m_path);
+}

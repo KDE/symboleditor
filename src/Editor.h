@@ -34,6 +34,8 @@ class QMouseMoveEvent;
 class QMouseReleaseEvent;
 class QPaintEvent;
 
+class KCharSelect;
+
 
 /**
  * @brief Manages the editor window allowing user interaction with the various tools.
@@ -74,7 +76,7 @@ class Editor : public QWidget
     Q_OBJECT
 
 public:
-    enum ToolMode {MoveTo, LineTo, CubicTo, Rectangle, Ellipse};
+    enum ToolMode {MoveTo, LineTo, CubicTo, Rectangle, Ellipse, Character};
 
     explicit Editor(QWidget *parent = 0);
     ~Editor();
@@ -98,6 +100,7 @@ public:
     void setCapStyle(Qt::PenCapStyle capStyle);
     void setJoinStyle(Qt::PenJoinStyle joinStyle);
     void setLineWidth(double width);
+    QPainterPath setPath(const QPainterPath &path);
 
     void clear();
 
@@ -105,6 +108,7 @@ public:
 
 public slots:
     void selectTool(QAction *action);
+    void charSelected(const QChar &character);
     void enableSnap(bool enabled);
     void selectFilled(bool enabled);
     void selectFillRule(QAction *action);
@@ -180,6 +184,8 @@ private:
     QLineF              m_bottomEdge;               /**< represents the bottom edge of the editor from 0,1 to 1,1 */
     QLineF              m_leftEdge;                 /**< represents the left edge of the editor from 0,1 to 0,1 */
     QLineF              m_rightEdge;                /**< represents the right edge of the editor from 1,0 to 1,1 */
+
+    KCharSelect         *m_charSelect;              /**< pointer to KCharSelect dialog used to add characters to paths */
 };
 
 
