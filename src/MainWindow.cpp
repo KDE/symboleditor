@@ -184,6 +184,8 @@ MainWindow::MainWindow()
         m_item(0),
         m_menu(0)
 {
+    m_listWidget->loadFromLibrary(m_symbolLibrary);
+
     setObjectName("MainWindow#");
 
     KActionCollection *actions = actionCollection();
