@@ -148,6 +148,7 @@
 
 #include <KAction>
 #include <KActionCollection>
+#include <KConfigDialog>
 #include <KFileDialog>
 #include <KGlobalSettings>
 #include <KIO/NetAccess>
@@ -158,10 +159,15 @@
 #include <KTabWidget>
 #include <KUrl>
 
+#include "ConfigurationDialogs.h"
 #include "Editor.h"
 #include "Exceptions.h"
 #include "SymbolListWidget.h"
 #include "SymbolLibrary.h"
+
+#include "ui_EditorConfigPage.h"
+
+#include "SymbolEditor.h"
 
 
 /**
@@ -725,6 +731,27 @@ void MainWindow::deleteSymbol()
 
 
 /**
+ * Configure the application.
+ * Display the configuration dialog, creating it if necessary.
+ */
+void MainWindow::preferences()
+{
+    if (KConfigDialog::showDialog("preferences")) {
+        return;
+    }
+
+    KConfigDialog *dialog = new KConfigDialog(this, "preferences", Configuration::self());
+    dialog->setFaceType(KPageDialog::List);
+
+    dialog->addPage(new EditorConfigPage(0, "EditorConfigPage"), i18nc("The Editor config page", "Editor"), "preferences-desktop");
+
+    connect(dialog, SIGNAL(settingsChanged(QString)), m_editor, SLOT(readSettings()));
+
+    dialog->show();
+}
+
+
+/**
  * Set up the applications actions.
  * Create standard actions.
  * Create other actions, setting the icon and data as required.
@@ -953,6 +980,7 @@ void MainWindow::setupActions()
     actions->addAction("enableSnap", action);
 
     // Settings Menu
+    KStandardAction::preferences(this, SLOT(preferences()), actions);
 }
 
 

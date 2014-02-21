@@ -16,6 +16,7 @@ include_directories (${KDE4_INCLUDES} ${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURREN
 
 set (SymbolEditor_SRCS
     src/Commands.cpp
+    src/ConfigurationDialogs.cpp
     src/Editor.cpp
     src/Exceptions.cpp
     src/Main.cpp
@@ -27,7 +28,11 @@ set (SymbolEditor_SRCS
 
 add_subdirectory(icons)
 
-kde4_add_ui_files(SymbolEditor_SRCS)
+kde4_add_kcfg_files(SymbolEditor_SRCS SymbolEditor.kcfgc)
+
+kde4_add_ui_files(SymbolEditor_SRCS
+    ui/EditorConfigPage.ui
+)
 
 kde4_install_icons(${ICON_INSTALL_DIR})
 
@@ -39,6 +44,7 @@ set (CMAKE_CXX_FLAGS "-DQT_NO_COMPAT -DKDE_NO_COMPAT")
 
 install (TARGETS SymbolEditor DESTINATION ${BIN_INSTALL_DIR})
 install (FILES SymbolEditorui.rc DESTINATION ${DATA_INSTALL_DIR}/SymbolEditor)
+install (FILES SymbolEditor.kcfg DESTINATION ${KCFG_INSTALL_DIR})
 install (FILES SymbolEditor.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
 
 IF (SHARED_MIME_INFO_FOUND AND IS_DIRECTORY ${XDG_MIME_INSTALL_DIR})

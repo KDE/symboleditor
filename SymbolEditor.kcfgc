@@ -1,0 +1,7 @@
+File=SymbolEditor.kcfg
+ClassName=Configuration
+Singleton=true
+Mutators=true
+UseEnumTypes=true
+MemberVariables=public
+DefaultValueGetters=true

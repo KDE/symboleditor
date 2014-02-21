@@ -122,6 +122,8 @@ public slots:
     void flipHorizontal();
     void flipVertical();
 
+    void readSettings();
+
 signals:
     void message(const QString &text);
     void minLineWidth(bool reached);
@@ -186,6 +188,15 @@ private:
     QLineF              m_rightEdge;                /**< represents the right edge of the editor from 1,0 to 1,1 */
 
     KCharSelect         *m_charSelect;              /**< pointer to KCharSelect dialog used to add characters to paths */
+
+    int     m_gridElements;                         /**< The number of grid elements (Configuration::editor_GridElements) */
+    int     m_elementSize;                          /**< The size in pixels of an element (Configuration::editor_ElementSize) */
+    int     m_elementGrouping;                      /**< The number of cells in a group (Configuration::editor_ElementGroup) */
+    int     m_pointSize;                            /**< The size of a point in pixels (Configuration::editor_PointSize) */
+    double  m_snapThreshold;                        /**< The distance to check within the range of a point (Configuration::editor_SnapThreshold) */
+    int     m_borderSize;                           /**< The number of cell elements used for the border (Configuration::editor_BorderSize) */
+    QColor  m_preferredSizeColor;                   /**< The color of the preferred size square (Configuration::editor_PreferredSizeColor) */
+    QColor  m_guideLineColor;                       /**< The color of the guide lines (Configuration::editor_GuideLineColor) */
 };
 
 

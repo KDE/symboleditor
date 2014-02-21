@@ -149,20 +149,15 @@
 
 #include <math.h>
 
+#include "SymbolEditor.h"
 
-const int gridElements = 32;                    /**< The number of elements in the grid */
-const int elementSize = 16;                     /**< The size in pixels of an element */
-const int elementGroup = 8;                     /**< The number of elements in a group */
-const double pointSize = 9;                     /**< The size of a point */
-const double threshold = 0.02;                  /**< The range to check for point closeness */
+
 const int pointsRequired[] = {1, 1, 3, 2, 2};   /**< The number of points required for commands from Editor::ToolMode */
 
 
 /**
  * Construct the Editor.
  * The editor is a sub class of a QWidget and is added to a layout widget.
- * It is resized to accommodate a gridElements number of cells of width elementSize. An additional
- * 1 is added to allow for a right and bottom edge to be drawn.
  * The boundary edges of the symbol editor are defined in the range 0..1. These are used to intersect
  * the guidelines which are shown at the m_angles relative to existing points
  *
@@ -170,12 +165,10 @@ const int pointsRequired[] = {1, 1, 3, 2, 2};   /**< The number of points requir
  */
 Editor::Editor(QWidget *parent)
     :   QWidget(parent),
-        m_size(gridElements*elementSize),
         m_index(0),
         m_charSelect(0)
 {
-    resize(m_size + 1, m_size + 1);
-    setMinimumSize(size());
+    readSettings();
 
     setMouseTracking(true);
     setFocusPolicy(Qt::StrongFocus);
@@ -593,7 +586,7 @@ void Editor::charSelected(const QChar &character)
     // aspect ratio.
     QRectF boundingRect = path.boundingRect();
 
-    double scale = double(gridElements - 4) / double(std::max(boundingRect.width(), boundingRect.height()) * gridElements);
+    double scale = double(m_gridElements - m_borderSize - m_borderSize) / double(std::max(boundingRect.width(), boundingRect.height()) * m_gridElements);
     QTransform transform = QTransform::fromTranslate(-boundingRect.center().x(), -boundingRect.center().y()) * QTransform::fromScale(scale, scale) * QTransform::fromTranslate(0.5, 0.5);
     path = transform.map(path);
 
@@ -713,6 +706,28 @@ void Editor::flipHorizontal()
 void Editor::flipVertical()
 {
     m_undoStack.push(new FlipVerticalCommand(this));
+}
+
+
+/**
+ * Read the settings from the configuration file and apply them.
+ * The widget is resized to accommodate a gridElements number of cells of width elementSize. An
+ * additional 1 is added to allow for a right and bottom edge to be drawn.
+ */
+void Editor::readSettings()
+{
+    m_gridElements       = Configuration::editor_GridElements();
+    m_elementSize        = Configuration::editor_ElementSize();
+    m_elementGrouping    = Configuration::editor_ElementGrouping();
+    m_pointSize          = Configuration::editor_PointSize();
+    m_snapThreshold      = 1.0 / m_gridElements * Configuration::editor_SnapThreshold();
+    m_borderSize         = Configuration::editor_BorderSize();
+    m_preferredSizeColor = Configuration::editor_PreferredSizeColor();
+    m_guideLineColor     = Configuration::editor_GuideLineColor();
+
+    m_size = m_gridElements * m_elementSize;
+    resize(m_size + 1, m_size + 1);
+    setMinimumSize(size());
 }
 
 
@@ -897,29 +912,29 @@ void Editor::paintEvent(QPaintEvent *event)
     p.fillRect(event->rect(), Qt::white);
 
     // draw vertical grid
-    for (int x = 0 ; x < gridElements + 1 ; ++x) {
-        if (x % elementGroup) {
+    for (int x = 0 ; x < m_gridElements + 1 ; ++x) {
+        if (x % m_elementGrouping) {
             p.setPen(Qt::lightGray);
         } else {
             p.setPen(Qt::darkGray);
         }
 
-        p.drawLine(x * elementSize, 0, x * elementSize, m_size + 1);
+        p.drawLine(x * m_elementSize, 0, x * m_elementSize, m_size + 1);
     }
 
     // draw horizontal grid
-    for (int y = 0 ; y < gridElements + 1 ; ++y) {
-        if (y % elementGroup) {
+    for (int y = 0 ; y < m_gridElements + 1 ; ++y) {
+        if (y % m_elementGrouping) {
             p.setPen(Qt::lightGray);
         } else {
             p.setPen(Qt::darkGray);
         }
 
-        p.drawLine(0, y * elementSize, m_size + 1, y * elementSize);
+        p.drawLine(0, y * m_elementSize, m_size + 1, y * m_elementSize);
     }
 
     // define a rectangle for the points
-    QRect dot(0, 0, pointSize, pointSize);
+    QRect dot(0, 0, m_pointSize, m_pointSize);
 
     // create a dashed pen for use with curve references and a wide pen for the shape
     QPen dashedPen(Qt::DashLine);
@@ -996,9 +1011,9 @@ void Editor::paintEvent(QPaintEvent *event)
     }
 
     // draw a rectangle representing the preferred symbol size allowing for some white space
-    int border = elementSize * 2;
+    int border = m_elementSize * m_borderSize;
     QRect preferredSizeRect = QRect(0, 0, m_size, m_size).adjusted(border, border, -border, -border);
-    QColor preferredSizeColor(Qt::green);
+    QColor preferredSizeColor(m_preferredSizeColor);
     preferredSizeColor.setAlpha(128);
     p.setPen(preferredSizeColor);
     p.setBrush(Qt::NoBrush);
@@ -1019,10 +1034,10 @@ void Editor::paintEvent(QPaintEvent *event)
     p.drawPath(m_painterPath);
 
     // draw the guidelines
-    QColor red(Qt::red);
-    red.setAlpha(128);
-    QPen guidePen(red);
-    p.setPen(guidePen);
+    QColor guideLineColor(m_guideLineColor);
+    guideLineColor.setAlpha(128);
+    QPen guideLinePen(guideLineColor);
+    p.setPen(guideLinePen);
     p.setBrush(Qt::NoBrush);
     QRectF snapRect(0, 0, 0.03, 0.03);
 
@@ -1118,8 +1133,8 @@ QPair<bool, QPointF> Editor::snapToGrid(const QPoint &point) const
     QPair<bool, QPointF> snap(false, point);
 
     if (m_snap) {
-        double sx = round(static_cast<double>(point.x()) * gridElements / (m_size)) / gridElements;
-        double sy = round(static_cast<double>(point.y()) * gridElements / (m_size)) / gridElements;
+        double sx = round(static_cast<double>(point.x()) * m_gridElements / (m_size)) / m_gridElements;
+        double sy = round(static_cast<double>(point.y()) * m_gridElements / (m_size)) / m_gridElements;
         snap.first = true;
         snap.second = QPointF(sx, sy);
     }
@@ -1144,7 +1159,7 @@ QPair<bool, QPointF> Editor::snapToGuide(const QPointF &point) const
 
     if (m_snap) {
         foreach (const QPointF & p, m_snapPoints) {
-            if ((point - p).manhattanLength() < threshold) {
+            if ((point - p).manhattanLength() < m_snapThreshold) {
                 snap.first = true;
                 snap.second = p;
                 break;
@@ -1188,7 +1203,7 @@ bool Editor::node(const QPointF &point) const
     for (int i = 0 ; i < m_points.count() ; ++i) {
         QPointF distance = point - m_points[i];
 
-        if (distance.manhattanLength() < threshold) {
+        if (distance.manhattanLength() < m_snapThreshold) {
             found = true;
         }
     }
@@ -1196,7 +1211,7 @@ bool Editor::node(const QPointF &point) const
     for (int i = 0 ; i < m_activePoints.count() ; ++i) {
         QPointF distance = point - m_activePoints[i];
 
-        if (distance.manhattanLength() < threshold) {
+        if (distance.manhattanLength() < m_snapThreshold) {
             found = true;
         }
     }
@@ -1219,7 +1234,7 @@ QPair<bool, int> Editor::nodeUnderCursor(const QPointF &point) const
     for (int i = 0 ; i < m_points.count() ; ++i) {
         QPointF distance = point - m_points[i];
 
-        if (distance.manhattanLength() < threshold) {
+        if (distance.manhattanLength() < m_snapThreshold) {
             return QPair<bool, int>(true, i);
         }
     }
@@ -1227,7 +1242,7 @@ QPair<bool, int> Editor::nodeUnderCursor(const QPointF &point) const
     for (int i = 0 ; i < m_activePoints.count() ; ++i) {
         QPointF distance = point - m_activePoints[i];
 
-        if (distance.manhattanLength() < threshold) {
+        if (distance.manhattanLength() < m_snapThreshold) {
             return QPair<bool, int>(false, i);
         }
     }

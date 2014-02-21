@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+                http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+    <kcfgfile name="SymbolEditorrc"/>
+
+    <group name="editor">
+        <entry name="Editor_GridElements" type="Int">
+            <label>The number of elements in a grid.</label>
+            <default>32</default>
+        </entry>
+        <entry name="Editor_ElementSize" type="Int">
+            <label>The size in pixels of a grid element.</label>
+            <default>16</default>
+        </entry>
+        <entry name="Editor_ElementGrouping" type="Int">
+            <label>The number of elements in a group.</label>
+            <default>8</default>
+        </entry>
+        <entry name="Editor_PointSize" type="Int">
+            <label>The size of a point in pixels.</label>
+            <default>9</default>
+        </entry>
+        <entry name="Editor_SnapThreshold" type="Double">
+            <label>The distance to check within the range of a point.</label>
+            <default>0.2</default>
+        </entry>
+        <entry name="Editor_BorderSize" type="Int">
+            <label>The number of cell elements used for the border.</label>
+            <default>2</default>
+        </entry>
+        <entry name="Editor_PreferredSizeColor" type="Color">
+            <label>The color of the preferred size rectangle</label>
+            <default>#00FF00</default>
+        </entry>
+        <entry name="Editor_GuideLineColor" type="Color">
+            <label>The color of the guide lines</label>
+            <default>#FF0000</default>
+        </entry>
+    </group>
+</kcfg>

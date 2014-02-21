@@ -82,6 +82,9 @@ protected slots:
     void listWidgetContextMenuRequested(const QPoint &pos);
     void deleteSymbol();
 
+    // Settings menu
+    void preferences();
+
 private:
     bool editorClean();
     bool libraryClean();
