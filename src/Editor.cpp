@@ -1130,7 +1130,7 @@ QPointF Editor::snapPoint(const QPoint &point) const
  */
 QPair<bool, QPointF> Editor::snapToGrid(const QPoint &point) const
 {
-    QPair<bool, QPointF> snap(false, point);
+    QPair<bool, QPointF> snap(false, toSymbol(point));
 
     if (m_snap) {
         double sx = round(static_cast<double>(point.x()) * m_gridElements / (m_size)) / m_gridElements;
