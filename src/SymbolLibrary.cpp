@@ -51,7 +51,6 @@
 #include "SymbolLibrary.h"
 
 #include <QDataStream>
-#include <QListWidget>
 #include <QListWidgetItem>
 #include <QPainter>
 #include <QtAlgorithms>
@@ -64,7 +63,7 @@
 
 /**
  * Construct a SymbolLibrary.
- * Set the url to Untitled and the index to 1.
+ * Set the index to 1.
  * The index will be set when a file is loaded and will be incremented when new symbols
  * have been added. It will be saved with the file for the next time it is loaded.
  */
@@ -88,7 +87,6 @@ SymbolLibrary::~SymbolLibrary()
  * Clear the file of symbols.
  * Clears the undo stack, deletes all the QListWidgetItems and clears the symbol map.
  * The index is reset to 1.
- * The url is initialized to Untitled
  */
 void SymbolLibrary::clear()
 {
@@ -102,7 +100,6 @@ void SymbolLibrary::clear()
 
     m_symbols.clear();
     m_nextIndex = 1;
-    m_url = KUrl(i18n("Untitled"));
 }
 
 
@@ -171,28 +168,6 @@ qint16 SymbolLibrary::setSymbol(qint16 index, const Symbol &symbol)
     }
 
     return index;
-}
-
-
-/**
- * Get the url for the file.
- *
- * @return a reference to a KUrl having the url of the file
- */
-KUrl SymbolLibrary::url() const
-{
-    return m_url;
-}
-
-
-/**
- * Set the url for the file.
- *
- * @param url a const reference to a KUrl having the url of the file.
- */
-void SymbolLibrary::setUrl(const KUrl &url)
-{
-    m_url = url;
 }
 
 
@@ -296,7 +271,7 @@ QDataStream &operator<<(QDataStream &stream, const SymbolLibrary &library)
 
 /**
  * Stream in the file.
- * Initially clear the current contents and reset the url.
+ * Initially clear the current contents.
  * Symbol files are indicated with a magic string of KXStitchSymbols. The stream version is set
  * to maintain consistency with the streamed objects. Read and check the magic string. If this
  * is not a symbol file throw an exception.

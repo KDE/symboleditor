@@ -55,9 +55,6 @@ public:
     Symbol takeSymbol(qint16 index);
     qint16 setSymbol(qint16 index, const Symbol &symbol);
 
-    KUrl url() const;
-    void setUrl(const KUrl &url);
-
     QString name() const;
     void setName(const QString &name);
 
@@ -74,8 +71,6 @@ private:
     static const qint32 version = 101;              /**< stream version of this file */
 
     QUndoStack m_undoStack;                         /**< holds the commands that have made changes to this library */
-
-    KUrl    m_url;                                  /**< url of the file loaded, this may be Untitled */
 
     QString m_name;                                 /**< name of the symbol library */
 

@@ -192,6 +192,7 @@ MainWindow::MainWindow()
         m_menu(0)
 {
     m_listWidget->loadFromLibrary(m_symbolLibrary);
+    m_url = KUrl(i18n("Untitled"));
 
     setObjectName("MainWindow#");
 
@@ -386,7 +387,7 @@ void MainWindow::fileOpen(const KUrl &url)
 
                 try {
                     stream >> *m_symbolLibrary;
-                    m_symbolLibrary->setUrl(url);
+                    m_url = url;
                     KRecentFilesAction *action = static_cast<KRecentFilesAction *>(actionCollection()->action("file_open_recent"));
                     action->addUrl(url);
                     action->saveEntries(KConfigGroup(KGlobal::config(), "RecentFiles"));
@@ -423,12 +424,10 @@ void MainWindow::fileOpen(const KUrl &url)
  */
 void MainWindow::save()
 {
-    KUrl url = m_symbolLibrary->url();
-
-    if (url == KUrl(i18n("Untitled"))) {
+    if (m_url == KUrl(i18n("Untitled"))) {
         saveAs();
     } else {
-        QFile file(url.path());
+        QFile file(m_url.path());
 
         if (file.open(QIODevice::WriteOnly | QIODevice::Truncate)) {
             QDataStream stream(&file);
@@ -443,7 +442,7 @@ void MainWindow::save()
             file.close();
             m_symbolLibrary->undoStack()->setClean();
         } else {
-            KMessageBox::sorry(0, i18n("Failed to open the file %1\n%2", url.fileName(), file.errorString()));
+            KMessageBox::sorry(0, i18n("Failed to open the file %1\n%2", m_url.fileName(), file.errorString()));
         }
     }
 }
@@ -465,7 +464,7 @@ void MainWindow::saveAs()
             }
         }
 
-        m_symbolLibrary->setUrl(url);
+        m_url = url;
         save();
         KRecentFilesAction *action = static_cast<KRecentFilesAction *>(actionCollection()->action("file_open_recent"));
         action->addUrl(url);
@@ -580,6 +579,7 @@ void MainWindow::close()
     if (editorClean() && libraryClean()) {
         m_editor->clear();
         m_symbolLibrary->clear();
+        m_url = KUrl(i18n("Untitled"));
     }
 }
 
@@ -649,7 +649,7 @@ void MainWindow::redoTextChanged(const QString &text)
  */
 void MainWindow::cleanChanged(bool clean)
 {
-    QString tab = QString("%1 ").arg(m_symbolLibrary->url().fileName());
+    QString tab = QString("%1 ").arg(m_url.fileName());
 
     if (m_tabWidget->currentIndex() == 1) {
         tab += QString(i18nc("The Library tab title", "Library"));

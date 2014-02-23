@@ -21,13 +21,13 @@
 
 #include <QUndoGroup>
 
+#include <KUrl>
 #include <KXmlGuiWindow>
 
 
 class QListWidgetItem;
-class KTabWidget;
 
-class KUrl;
+class KTabWidget;
 
 class Editor;
 class Symbol;
@@ -90,6 +90,8 @@ private:
     bool libraryClean();
     void setupActions();
     void setActionsFromSymbol(const Symbol &symbol);
+
+    KUrl                m_url;          /**< url of the loaded library */
 
     KTabWidget          *m_tabWidget;   /**< pointer to the KTabWidget containing the editor and library tabs */
     Editor              *m_editor;      /**< pointer to the Editor */
