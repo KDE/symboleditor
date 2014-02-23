@@ -73,6 +73,9 @@
  * @subsection flip_vertical Flip Vertically
  * Flip the symbol vertically about an axis passing horizontally through the center of the grid.
  *
+ * @subsection scale_preferred Scale to Preferred Size
+ * Scale the existing symbol so that it fits within the preferred size square.
+ *
  * @subsection snap_grid Snap to Grid
  * The selection of points can either be snapped to the grid or can be freely placed depending on if
  * the snap option is toggled on or off.
@@ -706,6 +709,15 @@ void Editor::flipHorizontal()
 void Editor::flipVertical()
 {
     m_undoStack.push(new FlipVerticalCommand(this));
+}
+
+
+/**
+ * Scale the symbol to fit within the preferred size.
+ */
+void Editor::scalePreferred()
+{
+    m_undoStack.push(new ScalePreferredCommand(this, m_painterPath, m_gridElements, m_borderSize));
 }
 
 

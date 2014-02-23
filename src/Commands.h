@@ -316,6 +316,29 @@ private:
 
 
 /**
+ * @brief Scale to preferred size class.
+ *
+ * Implement scaling of the current symbol so that it fits within the preferred size rectangle.
+ * No changes are made to symbols that are already inside it.
+ */
+class ScalePreferredCommand : public QUndoCommand
+{
+public:
+    ScalePreferredCommand(Editor *editor, const QPainterPath &originlSymbol, int gridElements, int borderSize);
+    ~ScalePreferredCommand();
+
+    virtual void undo();
+    virtual void redo();
+
+private:
+    Editor          *m_editor;          /**< pointer to the editor */
+    QPainterPath    m_originalSymbol;   /**< original symbol path used for undo */
+    int             m_gridElements;     /**< the number of elements in a grid side */
+    int             m_borderSize;       /**< the number of elements in a border */
+};
+
+
+/**
  * @brief Change the fill state command class.
  *
  * Implement changing the fill state of the current symbol.

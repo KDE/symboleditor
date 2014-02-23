@@ -121,6 +121,7 @@ public slots:
     void rotateRight();
     void flipHorizontal();
     void flipVertical();
+    void scalePreferred();
 
     void readSettings();
 

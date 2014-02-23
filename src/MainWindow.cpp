@@ -136,6 +136,7 @@
  * - @ref rotate_right
  * - @ref flip_horizontal
  * - @ref flip_vertical
+ * - @ref scale_preferred
  * - @ref snap_grid
  */
 
@@ -973,6 +974,12 @@ void MainWindow::setupActions()
     actions->addAction("flipVertical", action);
 
     action = new KAction(this);
+    action->setText(i18n("Scale to Preferred Size"));
+    action->setIcon(KIcon("scale-preferred"));
+    connect(action, SIGNAL(triggered()), m_editor, SLOT(scalePreferred()));
+    actions->addAction("scalePreferred", action);
+
+    action = new KAction(this);
     action->setText(i18n("Enable Snap"));
     action->setIcon(KIcon("snap-to-grid"));
     action->setCheckable(true);
@@ -1034,4 +1041,3 @@ void MainWindow::setActionsFromSymbol(const Symbol &symbol)
     action("increaseLineWidth")->setDisabled(symbol.lineWidth() == 1.00);
     action("decreaseLineWidth")->setDisabled(symbol.lineWidth() == 0.01);
 }
-

@@ -579,6 +579,72 @@ void FlipVerticalCommand::redo()
 /**
  * Constructor
  *
+ * @param editor a pointer to the editor
+ * @param painterPath the current path to scale
+ * @param gridElements the number of elements along the grid side
+ * @param borderSize the number of elements required for the border
+ */
+ScalePreferredCommand::ScalePreferredCommand(Editor *editor, const QPainterPath &originalSymbol, int gridElements, int borderSize)
+    :   QUndoCommand(i18n("Scale to preferred size")),
+        m_editor(editor),
+        m_originalSymbol(originalSymbol),
+        m_gridElements(gridElements),
+        m_borderSize(borderSize)
+{
+}
+
+
+/**
+ * Destructor.
+ */
+ScalePreferredCommand::~ScalePreferredCommand()
+{
+}
+
+
+/**
+ * Undo the scale command. Restore the original path.
+ */
+void ScalePreferredCommand::undo()
+{
+    m_editor->setPath(m_originalSymbol);
+}
+
+
+/**
+ * Redo the scale command. Apply the scaled symbol.
+ */
+void ScalePreferredCommand::redo()
+{
+    double borderSize = double(m_borderSize) / double(m_gridElements);
+    double threshold = 0.01;
+    QRectF fullSize(0.0, 0.0, 1.0, 1.0);
+    QRectF preferredSize(borderSize, borderSize, 1.0 - borderSize - borderSize, 1.0 - borderSize - borderSize);
+
+    QPainterPath border;
+    border.addRect(fullSize);
+    border.addRect(preferredSize.adjusted(-threshold, -threshold, threshold, threshold));
+    border.setFillRule(Qt::OddEvenFill);
+
+    if (m_originalSymbol.intersects(border)) {
+        QRectF boundingRect = m_originalSymbol.boundingRect();
+        double leftOverlap = std::max(preferredSize.left() - boundingRect.left(), 0.0);
+        double topOverlap = std::max(preferredSize.top() - boundingRect.top(), 0.0);
+        double rightOverlap = std::max(boundingRect.right() - preferredSize.right(), 0.0);
+        double bottomOverlap = std::max(boundingRect.bottom() - preferredSize.bottom(), 0.0);
+        double overlap = std::max(std::max(leftOverlap, rightOverlap), std::max(topOverlap, bottomOverlap));
+        QRectF startingSize = preferredSize.adjusted(-overlap, -overlap, overlap, overlap);
+        double scale = preferredSize.width() / startingSize.width();
+        QTransform transform = QTransform::fromTranslate(-0.5, -0.5) * QTransform::fromScale(scale, scale) * QTransform::fromTranslate(0.5, 0.5);
+        QPainterPath scaledPath = transform.map(m_originalSymbol);
+        m_editor->setPath(scaledPath);
+    }
+}
+
+
+/**
+ * Constructor
+ *
  * @param editor a pointer to the Editor
  * @param from @c true if the currently filled, @c false otherwise
  * @param to @c true if changing to filled, @c false otherwise

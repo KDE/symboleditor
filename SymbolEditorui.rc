@@ -14,10 +14,13 @@
         <Action name="rectangle"/>
         <Action name="ellipse"/>
         <Action name="character"/>
+        <Separator/>
         <Action name="rotateLeft"/>
         <Action name="rotateRight"/>
         <Action name="flipHorizontal"/>
         <Action name="flipVertical"/>
+        <Action name="scalePreferred"/>
+        <Separator/>
         <Action name="enableSnap"/>
     </Menu>
     <Menu name="rendering"><text>&amp;Rendering</text>
@@ -47,10 +50,13 @@
     <Action name="rectangle"/>
     <Action name="ellipse"/>
     <Action name="character"/>
+    <Separator/>
     <Action name="rotateLeft"/>
     <Action name="rotateRight"/>
     <Action name="flipHorizontal"/>
     <Action name="flipVertical"/>
+    <Action name="scalePreferred"/>
+    <Separator/>
     <Action name="enableSnap"/>
 </ToolBar>
 <ToolBar name="RenderingToolbar" fullWidth="false"><text>Rendering Toolbar</text>
