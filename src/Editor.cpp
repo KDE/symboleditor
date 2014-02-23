@@ -147,8 +147,10 @@
 #include <QAction>
 #include <QMouseEvent>
 #include <QPainter>
+#include <QString>
 
 #include <KCharSelect>
+#include <KLocale>
 
 #include <math.h>
 
@@ -156,6 +158,39 @@
 
 
 const int pointsRequired[] = {1, 1, 3, 2, 2};   /**< The number of points required for commands from Editor::ToolMode */
+
+const QString statusMessages[][3] = {
+    {
+        I18N_NOOP("Select a new starting position."),
+        "",
+        ""
+    },
+    {
+        I18N_NOOP("Select the line end point."),
+        "",
+        ""
+    },
+    {
+        I18N_NOOP("Select the first control point."),
+        I18N_NOOP("Select the second control point."),
+        I18N_NOOP("Select the end point"),
+    },
+    {
+        I18N_NOOP("Select the first corner."),
+        I18N_NOOP("Select the second corner."),
+        ""
+    },
+    {
+        I18N_NOOP("Select the first corner of the bounding rectangle."),
+        I18N_NOOP("Select the second corner of the bounding rectangle."),
+        ""
+    },
+    {
+        I18N_NOOP("Double click a character to insert into the editor."),
+        "",
+        ""
+    }
+};
 
 
 /**
@@ -570,6 +605,8 @@ void Editor::selectTool(QAction *action)
     } else if (m_charSelect) {
         m_charSelect->hide();
     }
+
+    updateStatusMessage();
 }
 
 
@@ -901,6 +938,17 @@ void Editor::addPoint(const QPointF &point)
     }
 
     update();
+    updateStatusMessage();
+}
+
+
+/**
+ * Update the status message dependant on the command in use and the number of active points
+ * in the list.
+ */
+void Editor::updateStatusMessage()
+{
+    emit message(statusMessages[m_toolMode][m_activePoints.count()]);
 }
 
 

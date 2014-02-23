@@ -106,6 +106,8 @@ public:
 
     QUndoStack *undoStack();
 
+    void updateStatusMessage();
+
 public slots:
     void selectTool(QAction *action);
     void charSelected(const QChar &character);

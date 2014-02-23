@@ -232,8 +232,6 @@ MainWindow::MainWindow()
 
     setupGUI(KXmlGuiWindow::Default, "SymbolEditorui.rc");
 
-    m_tabWidget->setCurrentIndex(0);                        // select the editor
-    currentChanged(0);                                      // setting current index above doesn't trigger the signal
     actions->action("moveTo")->trigger();                   // select draw tool
     actions->action("enableSnap")->setChecked(true);        // enable snap
     actions->action("file_save")->setEnabled(false);        // nothing to save yet
@@ -241,6 +239,8 @@ MainWindow::MainWindow()
     actions->action("saveSymbolAsNew")->setEnabled(false);  // nothing to save yet
     actions->action("help_contents")->setVisible(false);    // hide the handbook action from the help menu
     setActionsFromSymbol(m_editor->symbol().second);        // set the actions that depend on the current empty symbol, i.e. the defaults
+
+    currentChanged(m_tabWidget->currentIndex());              // this should be the editor
 }
 
 
@@ -672,8 +672,10 @@ void MainWindow::currentChanged(int index)
 {
     if (index == 0) { // Editor
         m_undoGroup.setActiveStack(m_editor->undoStack());
+        m_editor->updateStatusMessage();
     } else if (index == 1) { // QListWidget
         m_undoGroup.setActiveStack(m_symbolLibrary->undoStack());
+        statusBar()->clearMessage();
     }
 }
 
