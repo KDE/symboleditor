@@ -28,6 +28,7 @@ set (SymbolEditor_SRCS
 )
 
 add_subdirectory(icons)
+add_subdirectory(po)
 
 kde4_add_kcfg_files(SymbolEditor_SRCS SymbolEditor.kcfgc)
 
