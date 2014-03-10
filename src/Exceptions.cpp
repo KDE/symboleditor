@@ -105,7 +105,7 @@ QString FailedReadLibrary::statusMessage() const
         return QString(i18n("Tried to read corrupted data"));
     }
 
-    return QString(i18n("Undefined status message status %1", m_status));
+    return QString(i18n("Undefined status message %1", m_status));
 }
 
 
@@ -143,7 +143,7 @@ QString FailedWriteLibrary::statusMessage() const
 
 #endif
 
-    return QString(i18n("Undefined status message status %1", m_status));
+    return QString(i18n("Undefined status message %1", m_status));
 }
 
 

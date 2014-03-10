@@ -206,8 +206,8 @@ MainWindow::MainWindow()
     m_listWidget->setIconSize(48);
     m_listWidget->setContextMenuPolicy(Qt::CustomContextMenu);
 
-    m_tabWidget->addTab(layoutWidget, "Editor");
-    m_tabWidget->addTab(m_listWidget, "Symbol Library");
+    m_tabWidget->addTab(layoutWidget, i18nc("The editor tab title", "Editor"));
+    m_tabWidget->addTab(m_listWidget, i18nc("The library tab title", "Library"));
 
     setCentralWidget(m_tabWidget);
 
@@ -746,7 +746,7 @@ void MainWindow::preferences()
     KConfigDialog *dialog = new KConfigDialog(this, "preferences", Configuration::self());
     dialog->setFaceType(KPageDialog::List);
 
-    dialog->addPage(new EditorConfigPage(0, "EditorConfigPage"), i18nc("The Editor config page", "Editor"), "preferences-desktop");
+    dialog->addPage(new EditorConfigPage(0, "EditorConfigPage"), i18nc("The Editor configuration page", "Editor"), "preferences-desktop");
 
     connect(dialog, SIGNAL(settingsChanged(QString)), m_editor, SLOT(readSettings()));
 
@@ -870,7 +870,7 @@ void MainWindow::setupActions()
 
     action = new KAction(this);
     action->setText(i18n("Bevel Join"));
-    action->setWhatsThis(i18n("The Bevel Join provides a bevelled corner between two lines.\n\nThis is only applicable to non-filled paths."));
+    action->setWhatsThis(i18n("The Bevel Join provides a beveled corner between two lines.\n\nThis is only applicable to non-filled paths."));
     action->setData(Qt::BevelJoin);
     action->setIcon(KIcon("bevel-join"));
     action->setCheckable(true);
@@ -917,7 +917,7 @@ void MainWindow::setupActions()
 
     action = new KAction(this);
     action->setText(i18n("Move To"));
-    action->setWhatsThis(i18n("Move the current point to a new position. This implicitly closes any existing subpath, starting a new one."));
+    action->setWhatsThis(i18n("Move the current point to a new position. This implicitly closes any existing sub path, starting a new one."));
     action->setData(Editor::MoveTo);
     action->setIcon(KIcon("go-jump"));
     action->setCheckable(true);
@@ -944,7 +944,7 @@ void MainWindow::setupActions()
 
     action = new KAction(this);
     action->setText(i18n("Rectangle"));
-    action->setWhatsThis(i18n("Add a rectangle as a separate subpath defined by two points representing the opposite corners."));
+    action->setWhatsThis(i18n("Add a rectangle as a separate sub path defined by two points representing the opposite corners."));
     action->setData(Editor::Rectangle);
     action->setIcon(KIcon("draw-rectangle"));
     action->setCheckable(true);
@@ -953,7 +953,7 @@ void MainWindow::setupActions()
 
     action = new KAction(this);
     action->setText(i18n("Ellipse"));
-    action->setWhatsThis(i18n("Add an ellipse as a separate subpath defined by a bounding rectangle represented by two opposite corners."));
+    action->setWhatsThis(i18n("Add an ellipse as a separate sub path defined by a bounding rectangle represented by two opposite corners."));
     action->setData(Editor::Ellipse);
     action->setIcon(KIcon("draw-ellipse"));
     action->setCheckable(true);
@@ -962,7 +962,7 @@ void MainWindow::setupActions()
 
     action = new KAction(this);
     action->setText(i18n("Insert Character"));
-    action->setWhatsThis(i18n("Allows selection of a character from any font to be inserted as a closed subpath. The inserted character will overwrite any existing path, but additional subpaths may be added to the character."));
+    action->setWhatsThis(i18n("Allows selection of a character from any font to be inserted as a closed sub path. The inserted character will overwrite any existing path, but additional sub paths may be added to the character."));
     action->setData(Editor::Character);
     action->setIcon(KIcon("character-set"));
     action->setCheckable(true);
@@ -973,14 +973,14 @@ void MainWindow::setupActions()
 
     action = new KAction(this);
     action->setText(i18n("Rotate Left"));
-    action->setWhatsThis(i18n("Rotate all the points of a path counter-clockwise 90 degrees around the centre of the editor."));
+    action->setWhatsThis(i18n("Rotate all the points of a path counter-clockwise 90 degrees around the center of the editor."));
     action->setIcon(KIcon("object-rotate-left"));
     connect(action, SIGNAL(triggered()), m_editor, SLOT(rotateLeft()));
     actions->addAction("rotateLeft", action);
 
     action = new KAction(this);
     action->setText(i18n("Rotate Right"));
-    action->setWhatsThis(i18n("Rotate all the points of a path clockwise 90 degrees around the centre point of the editor."));
+    action->setWhatsThis(i18n("Rotate all the points of a path clockwise 90 degrees around the center point of the editor."));
     action->setIcon(KIcon("object-rotate-right"));
     connect(action, SIGNAL(triggered()), m_editor, SLOT(rotateRight()));
     actions->addAction("rotateRight", action);

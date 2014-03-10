@@ -83,10 +83,12 @@ int main(int argc, char *argv[])
                          ki18n("A cross stitch symbol editor."),
                          KAboutData::License_GPL_V2,
                          ki18n("(c)2011 Stephen Allewell"),
-                         ki18n(""),
+                         KLocalizedString(),
                          "http://kxstitch.sourceforge.net/kxstitch",
                          "sallewell@users.sourceforge.net");
     aboutData.addAuthor(ki18n("Stephen Allewell"), ki18n("Project Lead"), "sallewell@users.sourceforge.net");
+    aboutData.setTranslator(ki18nc("NAME OF TRANSLATORS", "Your names"),
+                            ki18nc("EMAIL OF TRANSLATORS", "Your emails"));
 
     KCmdLineArgs::init(argc, argv, &aboutData);
 
