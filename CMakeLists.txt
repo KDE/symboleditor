@@ -4,6 +4,7 @@ project (SymbolEditor)
 
 find_package (KDE4 REQUIRED)
 find_package (Doxygen)
+find_package (SharedMimeInfo)
 
 if (DOXYGEN_FOUND)
     configure_file(${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile.in ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile @ONLY)
