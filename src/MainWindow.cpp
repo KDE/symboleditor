@@ -652,9 +652,9 @@ void MainWindow::cleanChanged(bool clean)
     QString tab = QString("%1 ").arg(m_url.fileName());
 
     if (m_tabWidget->currentIndex() == 1) {
-        tab += QString(i18nc("The Library tab title", "Library"));
+        tab += QString(i18nc("The library tab title", "Library"));
     } else {
-        tab += QString(i18nc("The Editor tab title", "Editor"));
+        tab += QString(i18nc("The editor tab title", "Editor"));
     }
 
     setCaption(tab, !clean);

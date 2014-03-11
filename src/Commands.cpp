@@ -69,7 +69,7 @@ enum IDs {MoveTo,
  * @param to a const reference to a QPointF representing the point to move to
  */
 MoveToCommand::MoveToCommand(Editor *editor, const QPointF &to)
-    :   QUndoCommand(i18n("Move to")),
+    :   QUndoCommand(i18n("Move To")),
         m_editor(editor),
         m_to(to)
 {
@@ -110,7 +110,7 @@ void MoveToCommand::redo()
  * @param to a const reference to a QPointF representing the point to draw to
  */
 LineToCommand::LineToCommand(Editor *editor, const QPointF &to)
-    :   QUndoCommand(i18n("Line to")),
+    :   QUndoCommand(i18n("Draw To")),
         m_editor(editor),
         m_to(to)
 {
@@ -153,7 +153,7 @@ void LineToCommand::redo()
  * @param to a const reference to a QPointF representing the end point of the curve
  */
 CubicToCommand::CubicToCommand(Editor *editor, const QPointF &control1, const QPointF &control2, const QPointF &to)
-    :   QUndoCommand(i18n("Cubic to")),
+    :   QUndoCommand(i18n("Cubic To")),
         m_editor(editor),
         m_control1(control1),
         m_control2(control2),
@@ -506,7 +506,7 @@ void RotateRightCommand::redo()
  * @param editor a pointer to the Editor
  */
 FlipHorizontalCommand::FlipHorizontalCommand(Editor *editor)
-    :   QUndoCommand(i18n("Flip Horizontally")),
+    :   QUndoCommand(i18n("Flip Horizontal")),
         m_editor(editor)
 {
 }
@@ -585,7 +585,7 @@ void FlipVerticalCommand::redo()
  * @param borderSize the number of elements required for the border
  */
 ScalePreferredCommand::ScalePreferredCommand(Editor *editor, const QPainterPath &originalSymbol, int gridElements, int borderSize)
-    :   QUndoCommand(i18n("Scale to preferred size")),
+    :   QUndoCommand(i18n("Scale to Preferred Size")),
         m_editor(editor),
         m_originalSymbol(originalSymbol),
         m_gridElements(gridElements),
