@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: sallewell@users.sourceforge.net\n"
-"POT-Creation-Date: 2014-03-11 17:43+0000\n"
+"POT-Creation-Date: 2014-03-14 00:47+0000\n"
 "PO-Revision-Date: 2014-03-11 17:10+0000\n"
 "Last-Translator: Stephen Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-i18n-doc@kde.org>\n"
@@ -16,60 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 1.5\n"
-
-#. i18n: file: ui/EditorConfigPage.ui:14
-#. i18n: ectx: property (windowTitle), widget (QWidget, EditorConfigPage)
-#: build/ui_EditorConfigPage.h:166 rc.cpp:39
-msgid "Editor Configuration Page"
-msgstr "Editor Configuration Page"
-
-#. i18n: file: ui/EditorConfigPage.ui:20
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: build/ui_EditorConfigPage.h:167 rc.cpp:42
-msgid "Grid elements"
-msgstr "Grid elements"
-
-#. i18n: file: ui/EditorConfigPage.ui:40
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: build/ui_EditorConfigPage.h:168 rc.cpp:45
-msgid "Element size"
-msgstr "Element size"
-
-#. i18n: file: ui/EditorConfigPage.ui:60
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: build/ui_EditorConfigPage.h:169 rc.cpp:48
-msgid "Element grouping"
-msgstr "Element grouping"
-
-#. i18n: file: ui/EditorConfigPage.ui:80
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: build/ui_EditorConfigPage.h:170 rc.cpp:51
-msgid "Point size"
-msgstr "Point size"
-
-#. i18n: file: ui/EditorConfigPage.ui:100
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: build/ui_EditorConfigPage.h:171 rc.cpp:54
-msgid "Snap threshold"
-msgstr "Snap threshold"
-
-#. i18n: file: ui/EditorConfigPage.ui:123
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: build/ui_EditorConfigPage.h:172 rc.cpp:57
-msgid "Border size"
-msgstr "Border size"
-
-#. i18n: file: ui/EditorConfigPage.ui:140
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: build/ui_EditorConfigPage.h:173 rc.cpp:60
-msgid "Preferred size box color"
-msgstr "Preferred size box colour"
-
-#. i18n: file: ui/EditorConfigPage.ui:158
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: build/ui_EditorConfigPage.h:174 rc.cpp:63
-msgid "Guide line color"
-msgstr "Guide line colour"
 
 #. i18n: file: SymbolEditor.kcfg:10
 #. i18n: ectx: label, entry (Editor_GridElements), group (editor)
@@ -142,6 +88,60 @@ msgstr "Tool Toolbar"
 #: rc.cpp:36
 msgid "Rendering Toolbar"
 msgstr "Rendering Toolbar"
+
+#. i18n: file: ui/EditorConfigPage.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, EditorConfigPage)
+#: rc.cpp:39
+msgid "Editor Configuration Page"
+msgstr "Editor Configuration Page"
+
+#. i18n: file: ui/EditorConfigPage.ui:20
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:42
+msgid "Grid elements"
+msgstr "Grid elements"
+
+#. i18n: file: ui/EditorConfigPage.ui:40
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:45
+msgid "Element size"
+msgstr "Element size"
+
+#. i18n: file: ui/EditorConfigPage.ui:60
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:48
+msgid "Element grouping"
+msgstr "Element grouping"
+
+#. i18n: file: ui/EditorConfigPage.ui:80
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: rc.cpp:51
+msgid "Point size"
+msgstr "Point size"
+
+#. i18n: file: ui/EditorConfigPage.ui:100
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: rc.cpp:54
+msgid "Snap threshold"
+msgstr "Snap threshold"
+
+#. i18n: file: ui/EditorConfigPage.ui:123
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: rc.cpp:57
+msgid "Border size"
+msgstr "Border size"
+
+#. i18n: file: ui/EditorConfigPage.ui:140
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: rc.cpp:60
+msgid "Preferred size box color"
+msgstr "Preferred size box colour"
+
+#. i18n: file: ui/EditorConfigPage.ui:158
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: rc.cpp:63
+msgid "Guide line color"
+msgstr "Guide line colour"
 
 #: src/Commands.cpp:72 src/MainWindow.cpp:919
 msgid "Move To"
@@ -713,29 +713,3 @@ msgstr "Enable Snap"
 #: src/MainWindow.cpp:1011
 msgid "Enable snapping of points to guide intersections or to the grid."
 msgstr "Enable snapping of points to guide intersections or to the grid."
-
-#~ msgid "Scale to preferred size"
-#~ msgstr "Scale to preferred size"
-
-#~ msgid "Move to"
-#~ msgstr "Move to"
-
-#~ msgid "Line to"
-#~ msgstr "Line to"
-
-#~ msgid "Cubic to"
-#~ msgstr "Cubic to"
-
-#~ msgid "Flip Horizontally"
-#~ msgstr "Flip Horizontally"
-
-#~ msgctxt "The Library tab title"
-#~ msgid "Library"
-#~ msgstr "Library"
-
-#~ msgctxt "The Editor tab title"
-#~ msgid "Editor"
-#~ msgstr "Editor"
-
-#~ msgid "Undefined status message status %1"
-#~ msgstr "Undefined status message status %1"
