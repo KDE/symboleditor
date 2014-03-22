@@ -37,6 +37,7 @@ kde4_add_ui_files(SymbolEditor_SRCS
 )
 
 kde4_install_icons(${ICON_INSTALL_DIR})
+kde4_update_iconcache()
 
 kde4_add_executable (SymbolEditor ${SymbolEditor_SRCS})
 
