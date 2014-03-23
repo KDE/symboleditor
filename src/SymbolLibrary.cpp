@@ -247,9 +247,12 @@ QDataStream &operator<<(QDataStream &stream, const SymbolLibrary &library)
 {
     qint16 lastIndex = 0;
 
-    foreach (qint16 index, library.m_symbols.keys()) {
-        if (index > lastIndex) {
-            lastIndex = index;
+    QMapIterator<qint16, Symbol> i(library.m_symbols);
+
+    while (i.hasNext()) {
+        i.next();
+        if (i.key() > lastIndex) {
+            lastIndex = i.key();
         }
     }
 

@@ -265,7 +265,10 @@ bool SymbolListWidget::dropMimeData(int index, const QMimeData *mimeData, Qt::Dr
  */
 void SymbolListWidget::updateIcons()
 {
-    foreach (qint16 index, m_items.keys()) {
-        m_items.value(index)->setIcon(createIcon(m_library->symbol(index), m_size));
+    QMapIterator<qint16, QListWidgetItem *> i(m_items);
+
+    while (i.hasNext()) {
+        i.next();
+        i.value()->setIcon(createIcon(m_library->symbol(i.key()), m_size));
     }
 }
