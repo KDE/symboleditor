@@ -1,0 +1,56 @@
+<?xml version = '1.0'?>
+    <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN" "dtd/kdex.dtd" [
+    <!ENTITY symboleditor '<application>SymbolEditor</application>'>
+    <!ENTITY kapp "&symboleditor;">
+    <!ENTITY % addindex "IGNORE">
+    <!ENTITY % English "INCLUDE">
+    <!ENTITY introduction SYSTEM "introduction.docbook">
+    <!ENTITY ui SYSTEM "ui.docbook">
+    <!ENTITY commands SYSTEM "commands.docbook">
+    <!ENTITY symbols SYSTEM "symbols.docbook">
+    <!ENTITY dialogs SYSTEM "dialogs.docbook">
+    <!ENTITY credits SYSTEM "credits.docbook">
+    ]>
+
+<book lang="&language;">
+    <bookinfo>
+        <title>The &kapp; Handbook</title>
+        <authorgroup>
+            <author>
+                <firstname>Stephen</firstname>
+                <othername>P.</othername>
+                <surname>Allewell</surname>
+                <affiliation><address><email>sallewell@users.sourceforge.net</email></address></affiliation>
+            </author>
+        </authorgroup>
+        <copyright>
+            <year>2012</year>
+            <holder>Stephen P. Allewell</holder>
+        </copyright>
+        <legalnotice>&FDLNotice;</legalnotice>
+        <date>23/3/2014</date>
+        <releaseinfo>V.1.4.0</releaseinfo>
+        <abstract>
+            <para>
+                &kapp; is an application to allow the creation and editing of symbol libraries for the KXStitch
+                application.
+            </para>
+        </abstract>
+        <keywordset>
+            <keyword>KDE</keyword>
+            <keyword>Stitching</keyword>
+            <keyword>Cross</keyword>
+            <keyword>Stitch</keyword>
+            <keyword>Symbol</keyword>
+        </keywordset>
+    </bookinfo>
+
+    &introduction;
+    &ui;
+    &symbols;
+    &commands;
+    &dialogs;
+    &credits;
+
+    &documentation.index;
+</book>

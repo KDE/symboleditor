@@ -1,0 +1,26 @@
+<chapter id="introduction" >
+    <title>Introduction</title>
+    <para>
+        &kapp; is used to create cross stitch symbols for the KXStitch application. Originally
+        KXStitch relied on standard character fonts to supply these symbols, but differences in user
+        languages and the quality of the fonts available along with the alignment of the characters
+        and the limited number available has driven the need to create a dedicated symbol set.
+    </para>
+    <para>
+        The symbol set will be stored in a file and several files can be created depending on the users
+        needs, for example having a Halloween symbol set for Halloween themed patterns.
+    </para>
+    <para>
+        Each of the files will contain a series of symbols which will be displayed in the symbol library
+        tab. Editing of existing symbols can be done by clicking the entry in the library which will
+        populate the editor with this symbol. Alternatively new symbols can be created and added to
+        the library.
+    </para>
+    <para>
+        Please report any problems or feature requests to the &kapp; SourceForge
+        mailing lists or forums.
+    </para>
+    <para>
+        <ulink url="http://sourceforge.net/projects/kxstitch/" >http://sourceforge.net/projects/kxstitch/</ulink>
+    </para>
+</chapter>

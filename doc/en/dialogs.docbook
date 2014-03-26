@@ -1,0 +1,13 @@
+<chapter id="Dialogs">
+    <title>Dialogs</title>
+
+    <sect1 id="PaletteManagerDialog" >
+        <title>The Palette Manager Dialog</title>
+        <para>
+            <screenshot><mediaobject><imageobject><imagedata fileref="configuration-dialog.png" format="PNG" /></imageobject></mediaobject></screenshot>
+        </para>
+        <para>
+            The configuration dialog allows a number of options to be set.
+        </para>
+    </sect1>
+</chapter>

@@ -1,0 +1,20 @@
+<chapter id="symbols" >
+    <title>Symbols</title>
+    <para>
+        Symbols are created as QPainterPath objects with additional information defining attributes
+        of the path. A QPainterPath is made up of sub paths such as rectangles, ellipses or chains
+        of lines and bezier curves. The paths may intersect each other forming complex shapes.
+    </para>
+    <para>
+        The symbol may be filled using either the winding option which will
+        fill the entire path, or the odd even option which fill alternate
+        sections of the path.
+    </para>
+    <para>
+        If the path is not filled, the outline will have a defined line width,
+        end cap type and line join type.
+    </para>
+    <para>
+        See the QPainterPath documentation for more detail.
+    </para>
+</chapter>

@@ -1,0 +1,317 @@
+<chapter id="commands" >
+    <title>Command Reference</title>
+
+    <sect1 id="menus" >
+        <title>&kapp; Menus</title>
+        <sect2>
+            <title>The File Menu</title>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term><menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo></shortcut><guimenuitem>New</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Creates a new library</action></simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>o</keycap></keycombo></shortcut><guimenuitem>Open</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Opens an existing library</action></simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>r</keycap></keycombo></shortcut><guimenuitem>Open Recent</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Open a recently used library</action></simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>s</keycap></keycombo></shortcut><guimenuitem>Save</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Saves the library</action></simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Save As</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Saves the library under a new name</action></simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Save Symbol</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Save the symbol being edited</action></simpara>
+                        <simpara>If the symbol being edited was selected from the library, saving will
+                            update that symbol. If it is a new symbol, it will be appended to the
+                            library and subsequent saves will append another new symbol to the library.
+                        </simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Save Symbol as New</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Save the symbol being edited as a new symbol</action></simpara>
+                        <simpara>When a symbol is saved as new it will be appended to the library regardless
+                            of it having originally been selected from the library for editing.
+                            Subsequent saves will append another new symbol to the library.
+                        </simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Import Library</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Import a library appending the contained symbols into the current library</action></simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>w</keycap></keycombo></shortcut><guimenuitem>Close</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Close the library</action></simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>q</keycap></keycombo></shortcut><guimenuitem>Quit</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Quits &kapp;</action></simpara></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title>The Edit Menu</title>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term><menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>z</keycap></keycombo></shortcut><guimenuitem>Undo</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Undo the last change</action></simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>Shift</keycap><keycap>z</keycap></keycombo></shortcut><guimenuitem>Redo</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Redo the last change undone</action></simpara></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title>The Rendering Menu and Toolbar</title>
+            <screenshot>
+                <screeninfo>Here is a screen shot of the rendering toolbar</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="renderer-toolbar.png" format="PNG" />
+                    </imageobject>
+                </mediaobject>
+                </screenshot>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Fill Path</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Enable filling of the path</action></simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Winding Fill</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Select the winding fill method</action></simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Odd Even Fill</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Select the odd even fill method</action></simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Flat Cap</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Select the flat cap line end type</action></simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Square Cap</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Select the square cap line end type</action></simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Round Cap</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Select the round cap line end type</action></simpara></listitem></varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Bevel Join</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Select the bevel line join type</action></simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Miter Join</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Select the miter line join type</action></simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Round Join</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Select the round line join type</action></simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Increase Line Width</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Increase the path line width</action></simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Decrease Line Width</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Decrease the path line width</action></simpara></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title>The Tools Menu and Toolbar</title>
+            <para>
+                A number of tools are available to aid the design of the symbols. The symbols are
+                composed of a series of sub paths and each sub path is composed of a move to the
+                start position (this defaults to 0,0 for new symbols) followed by lines and curves.
+                The curves are cubic splines having a start, an end and two control points defining
+                the curve. There are convenience tools to create rectangles and ellipses, but these
+                will be broken down into lines and curves.
+            </para>
+            <para>
+                All points created for the elements are moveable by dragging them to their new
+                position. All points can be snapped to the grid intersections if the snap option is
+                turned on, otherwise they can be positioned anywhere.
+            </para>
+            <para>
+                The symbol can be rotated clockwise and counter clockwise and also flipped vertically
+                and horizontally. This allows multiple symbols to be easily created based on the same
+                design. Remember to use the save symbol as new option for this.
+            </para>
+            <screenshot>
+                <screeninfo>Here is a screen shot of the tools toolbar</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="tool-toolbar.png" format="PNG" />
+                    </imageobject>
+                </mediaobject>
+                </screenshot>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Move To</guimenuitem></menuchoice></term>
+                        <listitem>
+                            <simpara><action>Move the starting position of the sub path</action></simpara>
+                            <simpara>If an existing sub path is being created, this will be closed and
+                                a new sub path started at the new position</simpara>
+                            </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Draw To</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Draw a line to the next selected point</action></simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Cubic To</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Draw a bezier curve using two control points and an end point</action></simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Rectangle</guimenuitem></menuchoice></term>
+                        <listitem>
+                            <simpara><action>Draw a rectangle between two opposite corners</action></simpara>
+                            <simpara>This closes any existing sub path and creates a new sub path
+                                consisting of the rectangle.</simpara>
+                        </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Ellipse</guimenuitem></menuchoice></term>
+                        <listitem>
+                            <simpara><action>Draw an ellipse between two opposite corners</action></simpara>
+                            <simpara>This closes any existing sub path and creates a new sub path
+                                consisting of the ellipse.</simpara>
+                        </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Insert Character</guimenuitem></menuchoice></term>
+                        <listitem>
+                            <simpara><action>Select a character from a font and insert it into the editor</action></simpara>
+                            <simpara>This will overwrite any existing paths</simpara>
+                            <screenshot>
+                                <screeninfo>Here is a screen shot of the character selector</screeninfo>
+                                <mediaobject>
+                                    <imageobject>
+                                        <imagedata fileref="charselect-dialog.png" format="PNG" />
+                                    </imageobject>
+                                </mediaobject>
+                            </screenshot>
+                            <simpara>The character selector dialog is the standard KDE dialog and allows
+                                selection of characters from any font. The size is not used as the
+                                character is scaled to fit within the preferred size guide.</simpara>
+                            <simpara>Double clicking a character will insert that character into the
+                                editor. The dialog will stay open so that another character could be
+                                inserted, although this will overwrite the first. This does allow an
+                                insert character, save, insert character, save workflow to quickly
+                                build up a library of symbols. Ensure that the symbol being edited is
+                                a new symbol and not one previously selected from the library, otherwise
+                                saving would keep overwriting the one in the library.</simpara>
+                        </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Rotate Left</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Rotate the whole symbol counter clockwise 90 degrees</action></simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Rotate Right</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Rotate the whole symbol clockwise 90 degrees</action></simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Flip Horizontal</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Flip the symbol across the vertical axis</action></simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Flip Vetical</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Flip the symbol across the horizontal axis</action></simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Scale to Preferred Size</guimenuitem></menuchoice></term>
+                        <listitem>
+                            <simpara><action>Scale the symbol to fit within the defined preferred size</action></simpara>
+                            <simpara>Note that this only affects the points; where a non filled symbol
+                                is created and a line width is defined, this may extend beyond the
+                                guide size.</simpara>
+                            </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Enable Snap</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Enable snapping of points to the grid</action></simpara></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title>The Settings Menu</title>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Toolbars Shown</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Select the toolbars to be shown</action></simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Show Statusbar</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Toggle visibility of the status bar</action></simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Configure Shortcuts</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Configure the applications shortcuts</action></simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Configure Toolbars</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Configure the applications tool bars</action></simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Configure SymbolEditor</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Configure the applications settings</action></simpara></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title>The Help Menu</title>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>&kapp; Handbook</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Display this help.</action></simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>What's This.</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Display help on a particular feature.</action></simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Report Bug.</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Fill out a bug report.</action></simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Switch Application Language</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Change the application language</action></simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>About &kapp;</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Display some information about &kapp;.</action></simpara></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>About KDE</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Display some information about KDE.</action></simpara></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+    </sect1>
+</chapter>

@@ -237,7 +237,6 @@ MainWindow::MainWindow()
     actions->action("file_save")->setEnabled(false);        // nothing to save yet
     actions->action("saveSymbol")->setEnabled(false);       // nothing to save yet
     actions->action("saveSymbolAsNew")->setEnabled(false);  // nothing to save yet
-    actions->action("help_contents")->setVisible(false);    // hide the handbook action from the help menu
     setActionsFromSymbol(m_editor->symbol().second);        // set the actions that depend on the current empty symbol, i.e. the defaults
 
     currentChanged(m_tabWidget->currentIndex());              // this should be the editor

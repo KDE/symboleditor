@@ -1,0 +1,20 @@
+<chapter id="credits" >
+    <title>Credits and License</title>
+    <para>&kapp;</para>
+    <para>Program copyright 2012 Stephen P. Allewell  <email>sallewell@users.sourceforge.net</email></para>
+    <para>
+        Contributors:
+        <itemizedlist>
+            <listitem>
+                <para>
+                    Translations provided by various contributors. See the translation file for details.
+                </para>
+            </listitem>
+        </itemizedlist>
+    </para>
+    <para>
+        Documentation copyright 2012 Stephen P. Allewell <email>sallewell@users.sourceforge.net</email>
+    </para>
+    &underFDL;
+    &underGPL;
+</chapter>
