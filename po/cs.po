@@ -1,0 +1,637 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# fri, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: SymbolEditor\n"
+"Report-Msgid-Bugs-To: sallewell@users.sourceforge.net\n"
+"POT-Creation-Date: 2014-03-14 00:47+0000\n"
+"PO-Revision-Date: 2014-04-05 19:54+0000\n"
+"Last-Translator: fri\n"
+"Language-Team: Czech (http://www.transifex.com/projects/p/symboleditor/language/cs/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: cs\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#. i18n: file: SymbolEditor.kcfg:10
+#. i18n: ectx: label, entry (Editor_GridElements), group (editor)
+#: rc.cpp:3 rc.cpp:3
+msgid "The number of elements in a grid."
+msgstr "Počet prvků ve mřížce."
+
+#. i18n: file: SymbolEditor.kcfg:14
+#. i18n: ectx: label, entry (Editor_ElementSize), group (editor)
+#: rc.cpp:6 rc.cpp:6
+msgid "The size in pixels of a grid element."
+msgstr "Velikost v pixelech prvku mřížky."
+
+#. i18n: file: SymbolEditor.kcfg:18
+#. i18n: ectx: label, entry (Editor_ElementGrouping), group (editor)
+#: rc.cpp:9 rc.cpp:9
+msgid "The number of elements in a group."
+msgstr "Počet prvků ve skupině."
+
+#. i18n: file: SymbolEditor.kcfg:22
+#. i18n: ectx: label, entry (Editor_PointSize), group (editor)
+#: rc.cpp:12 rc.cpp:12
+msgid "The size of a point in pixels."
+msgstr "Velikost bodu v pixelech."
+
+#. i18n: file: SymbolEditor.kcfg:26
+#. i18n: ectx: label, entry (Editor_SnapThreshold), group (editor)
+#: rc.cpp:15 rc.cpp:15
+msgid "The distance to check within the range of a point."
+msgstr "Vzdálenost ke kontrole uvnitř rozsahu bodu."
+
+#. i18n: file: SymbolEditor.kcfg:30
+#. i18n: ectx: label, entry (Editor_BorderSize), group (editor)
+#: rc.cpp:18 rc.cpp:18
+msgid "The number of cell elements used for the border."
+msgstr "Počet buněčných prvků použitých pro okraj."
+
+#. i18n: file: SymbolEditor.kcfg:34
+#. i18n: ectx: label, entry (Editor_PreferredSizeColor), group (editor)
+#: rc.cpp:21 rc.cpp:21
+msgid "The color of the preferred size rectangle"
+msgstr "Barva obdélníku upřednostňované velikosti"
+
+#. i18n: file: SymbolEditor.kcfg:38
+#. i18n: ectx: label, entry (Editor_GuideLineColor), group (editor)
+#: rc.cpp:24 rc.cpp:24
+msgid "The color of the guide lines"
+msgstr "Barva vodicích linek"
+
+#. i18n: file: SymbolEditorui.rc:10
+#. i18n: ectx: Menu (tools)
+#: rc.cpp:27 rc.cpp:27
+msgid "&Tools"
+msgstr "&Nástroje"
+
+#. i18n: file: SymbolEditorui.rc:26
+#. i18n: ectx: Menu (rendering)
+#: rc.cpp:30 rc.cpp:30
+msgid "&Rendering"
+msgstr "&Zpracování"
+
+#. i18n: file: SymbolEditorui.rc:46
+#. i18n: ectx: ToolBar (ToolsToolbar)
+#: rc.cpp:33 rc.cpp:33
+msgid "Tool Toolbar"
+msgstr "Nástrojový pruh pro nástroje"
+
+#. i18n: file: SymbolEditorui.rc:62
+#. i18n: ectx: ToolBar (RenderingToolbar)
+#: rc.cpp:36 rc.cpp:36
+msgid "Rendering Toolbar"
+msgstr "Nástrojový pruh pro zpracování"
+
+#. i18n: file: ui/EditorConfigPage.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, EditorConfigPage)
+#: rc.cpp:39 rc.cpp:39
+msgid "Editor Configuration Page"
+msgstr "Stránka s nastavením editoru"
+
+#. i18n: file: ui/EditorConfigPage.ui:20
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:42 rc.cpp:42
+msgid "Grid elements"
+msgstr "Prvky mřížky"
+
+#. i18n: file: ui/EditorConfigPage.ui:40
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:45 rc.cpp:45
+msgid "Element size"
+msgstr "Velikost prvku"
+
+#. i18n: file: ui/EditorConfigPage.ui:60
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:48 rc.cpp:48
+msgid "Element grouping"
+msgstr "Seskupení prvků"
+
+#. i18n: file: ui/EditorConfigPage.ui:80
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: rc.cpp:51 rc.cpp:51
+msgid "Point size"
+msgstr "Velikost bodu"
+
+#. i18n: file: ui/EditorConfigPage.ui:100
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: rc.cpp:54 rc.cpp:54
+msgid "Snap threshold"
+msgstr "Práh přichycení"
+
+#. i18n: file: ui/EditorConfigPage.ui:123
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: rc.cpp:57 rc.cpp:57
+msgid "Border size"
+msgstr "Velikost okraje"
+
+#. i18n: file: ui/EditorConfigPage.ui:140
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: rc.cpp:60 rc.cpp:60
+msgid "Preferred size box color"
+msgstr "Upřednostňovaná velikost barvy boxu"
+
+#. i18n: file: ui/EditorConfigPage.ui:158
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: rc.cpp:63 rc.cpp:63
+msgid "Guide line color"
+msgstr "Barva vodicí linky"
+
+#: src/Commands.cpp:72 src/MainWindow.cpp:919
+msgid "Move To"
+msgstr "Posunout do"
+
+#: src/Commands.cpp:113 src/MainWindow.cpp:928
+msgid "Draw To"
+msgstr "Kreslit do"
+
+#: src/Commands.cpp:156 src/MainWindow.cpp:937
+msgid "Cubic To"
+msgstr "Prostorový do"
+
+#: src/Commands.cpp:200
+msgid "Add Rectangle"
+msgstr "Přidat obdélník"
+
+#: src/Commands.cpp:243
+msgid "Add Ellipse"
+msgstr "Přidat elipsu"
+
+#: src/Commands.cpp:287
+msgid "Move point"
+msgstr "Posunout bod"
+
+#: src/Commands.cpp:332
+msgid "Update Symbol"
+msgstr "Aktualizovat symbol"
+
+#: src/Commands.cpp:382 src/MainWindow.cpp:779
+msgid "Import Library"
+msgstr "Zavést knihovnu"
+
+#: src/Commands.cpp:431 src/MainWindow.cpp:975
+msgid "Rotate Left"
+msgstr "Otočit vlevo"
+
+#: src/Commands.cpp:470 src/MainWindow.cpp:982
+msgid "Rotate Right"
+msgstr "Otočit vpravo"
+
+#: src/Commands.cpp:509 src/MainWindow.cpp:989
+msgid "Flip Horizontal"
+msgstr "Přetočit vodorovně"
+
+#: src/Commands.cpp:547 src/MainWindow.cpp:996
+msgid "Flip Vertical"
+msgstr "Přetočit svisle"
+
+#: src/Commands.cpp:588 src/MainWindow.cpp:1003
+msgid "Scale to Preferred Size"
+msgstr "Změnit velikost na upřednostňovanou velikost"
+
+#: src/Commands.cpp:653
+msgid "Change Fill State"
+msgstr "Změnit stav výplně"
+
+#: src/Commands.cpp:695
+msgid "Change Fill Rule"
+msgstr "Změnit pravidlo výplně"
+
+#: src/Commands.cpp:737
+msgid "Change Cap Style"
+msgstr "Změnit styl závěru"
+
+#: src/Commands.cpp:779
+msgid "Change Join Style"
+msgstr "Změnit styl spojení"
+
+#: src/Commands.cpp:820 src/MainWindow.cpp:719
+msgid "Delete Symbol"
+msgstr "Smazat symbol"
+
+#: src/Commands.cpp:861 src/MainWindow.cpp:901
+msgid "Increase Line Width"
+msgstr "Zvětšit šířku čáry"
+
+#: src/Commands.cpp:933 src/MainWindow.cpp:908
+msgid "Decrease Line Width"
+msgstr "Zmenšit šířku čáry"
+
+#: src/Commands.cpp:1004
+msgid "Add Symbols"
+msgstr "Přidat symboly"
+
+#: src/Commands.cpp:1049
+msgid "Add Character"
+msgstr "Přidat znak"
+
+#: src/Editor.cpp:164
+msgid "Select a new starting position."
+msgstr "Vybrat novou počáteční polohu."
+
+#: src/Editor.cpp:169
+msgid "Select the line end point."
+msgstr "Vybrat čáru a bod."
+
+#: src/Editor.cpp:174
+msgid "Select the first control point."
+msgstr "Vybrat první ovládací bod."
+
+#: src/Editor.cpp:175
+msgid "Select the second control point."
+msgstr "Vybrat druhý ovládací bod."
+
+#: src/Editor.cpp:176
+msgid "Select the end point"
+msgstr "Vybrat koncový bod."
+
+#: src/Editor.cpp:179
+msgid "Select the first corner."
+msgstr "Vybrat první roh."
+
+#: src/Editor.cpp:180
+msgid "Select the second corner."
+msgstr "Vybrat druhý roh."
+
+#: src/Editor.cpp:184
+msgid "Select the first corner of the bounding rectangle."
+msgstr "Vybrat první roh svazujícího obdélníku."
+
+#: src/Editor.cpp:185
+msgid "Select the second corner of the bounding rectangle."
+msgstr "Vybrat druhý roh svazujícího obdélníku."
+
+#: src/Editor.cpp:189
+msgid "Double click a character to insert into the editor."
+msgstr "Klepnout dvakrát na znak pro jeho vložení do editoru."
+
+#: src/Exceptions.cpp:101
+msgid "Tried to read past the end of the data"
+msgstr "Pokus o čtení za konec dat"
+
+#: src/Exceptions.cpp:105
+msgid "Tried to read corrupted data"
+msgstr "Pokus o čtení poškozených dat"
+
+#: src/Exceptions.cpp:108 src/Exceptions.cpp:146
+msgid "Undefined status message %1"
+msgstr "Neurčená stavová zpráva %1"
+
+#: src/Exceptions.cpp:141
+msgid "Failed to write to the device"
+msgstr "Nepodařilo se zapisovat na zařízení"
+
+#: src/Main.cpp:82
+msgid "SymbolEditor"
+msgstr "SymbolEditor"
+
+#: src/Main.cpp:83
+msgid "A cross stitch symbol editor."
+msgstr "Editor symbolů pro vyšívání křížkovým stehem."
+
+#: src/Main.cpp:85
+msgid "(c)2011 Stephen Allewell"
+msgstr "(c) 2011 Stephen Allewell"
+
+#: src/Main.cpp:89
+msgid "Stephen Allewell"
+msgstr "Stephen Allewell"
+
+#: src/Main.cpp:89
+msgid "Project Lead"
+msgstr "Vedoucí projektu"
+
+#: src/Main.cpp:90
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Pavel Fric"
+
+#: src/Main.cpp:91
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "fripohled.blogspot.cz"
+
+#: src/MainWindow.cpp:195 src/MainWindow.cpp:427 src/MainWindow.cpp:582
+msgid "Untitled"
+msgstr "Bez názvu"
+
+#: src/MainWindow.cpp:209 src/MainWindow.cpp:657
+msgctxt "The editor tab title"
+msgid "Editor"
+msgstr "Editor"
+
+#: src/MainWindow.cpp:210 src/MainWindow.cpp:655
+msgctxt "The library tab title"
+msgid "Library"
+msgstr "Knihovna"
+
+#: src/MainWindow.cpp:280
+msgid ""
+"Save changes to the symbol?\n"
+"Selecting No discards changes."
+msgstr "Uložit změny do symbolu?\nVybráním Ne dojde k zahození změn."
+
+#: src/MainWindow.cpp:313
+msgid ""
+"Save changes to the library?\n"
+"Selecting No discards changes."
+msgstr "Uložit změny do knihovny?\nVybráním Ne dojde k zahození změn."
+
+#: src/MainWindow.cpp:352 src/MainWindow.cpp:458 src/MainWindow.cpp:534
+msgid "*.sym|Cross Stitch Symbols"
+msgstr "Symboly pro křížkový steh *.sym|Cross"
+
+#: src/MainWindow.cpp:396 src/MainWindow.cpp:554
+msgid "This doesn't appear to be a valid symbol file"
+msgstr "Zdá se, že toto není platný soubor se symbolem"
+
+#: src/MainWindow.cpp:398 src/MainWindow.cpp:556
+msgid ""
+"Version %1 of the library file is not supported in this version of "
+"SymbolEditor"
+msgstr "Verze %1 souboru s knihovnou není podporována v této verzi SymbolEditoru"
+
+#: src/MainWindow.cpp:400
+msgid ""
+"Version %1 of the symbol is not supported in this version of SymbolEditor"
+msgstr "Verze %1 symbolu není podporována v této verzi SymbolEditoru"
+
+#: src/MainWindow.cpp:402
+msgid ""
+"Failed to read the library\n"
+"%1"
+msgstr "Nepodařilo se přečíst knihovnu\n%1"
+
+#: src/MainWindow.cpp:408 src/MainWindow.cpp:561
+msgid "Failed to open the file %1"
+msgstr "Nepodařilo se otevřít soubor %1"
+
+#: src/MainWindow.cpp:411 src/MainWindow.cpp:564
+msgid "Failed to download the file %1"
+msgstr "Nepodařilo se stáhnout soubor %1"
+
+#: src/MainWindow.cpp:414 src/MainWindow.cpp:567
+msgid "The url %1 is invalid"
+msgstr "Adresa (URL) %1 je neplatná"
+
+#: src/MainWindow.cpp:439
+msgid ""
+"Failed to write the library\n"
+"%1"
+msgstr "Nepodařilo se zapsat knihovnu\n%1"
+
+#: src/MainWindow.cpp:445
+msgid ""
+"Failed to open the file %1\n"
+"%2"
+msgstr "Nepodařilo se otevřít soubor %1\n%2"
+
+#: src/MainWindow.cpp:458
+msgid "Save As"
+msgstr "Uložit jako"
+
+#: src/MainWindow.cpp:462
+msgid ""
+"This file already exists\n"
+"Do you want to overwrite it?"
+msgstr "Tento soubor již existuje\nChcete jej přepsat?"
+
+#: src/MainWindow.cpp:628
+msgid "Undo %1"
+msgstr "Zpět %1"
+
+#: src/MainWindow.cpp:641
+msgid "Redo %1"
+msgstr "Znovu %1"
+
+#: src/MainWindow.cpp:749
+msgctxt "The Editor configuration page"
+msgid "Editor"
+msgstr "Editor"
+
+#: src/MainWindow.cpp:780
+msgid ""
+"Imports another library appending the symbols it contains to the current "
+"library."
+msgstr "Zavede jinou knihovnu a připojí v ní obsažené symboly k nynější knihovně."
+
+#: src/MainWindow.cpp:785
+msgid "Save Symbol"
+msgstr "Uložit symbol"
+
+#: src/MainWindow.cpp:786
+msgid ""
+"Save the symbol to the library. If this is a new symbol, subsequent saves "
+"will create additional symbols in the library. If the symbol was selected "
+"from the library to edit then saving will update that symbol in the library."
+msgstr "Uložit symbol do knihovny. Pokud je to nový symbol, pozdější uložení v knihovně vytvoří dodatečné symboly. Pokud byl symbol vybrán z knihovny k upravení, potom uložení onen symbol v knihovně zaktualizuje."
+
+#: src/MainWindow.cpp:792
+msgid "Save Symbol as New"
+msgstr "Uložit symbol jako nový"
+
+#: src/MainWindow.cpp:793
+msgid ""
+"Save the current symbol as a new one in the library. Subsequent saves will "
+"update the new symbol."
+msgstr "Uložit nynější symbol jako nový symbol v knihovně. Pozdější uložení nový symbol zaktualizuje."
+
+#: src/MainWindow.cpp:806
+msgid "Fill Path"
+msgstr "Cesta výplně"
+
+#: src/MainWindow.cpp:807
+msgid ""
+"Enable path filling. The path defines the closed boundary of the shape and "
+"the path is filled with the selected fill method."
+msgstr "Povolit vyplnění cesty. Cesta stanovuje uzavřené hranice tvaru a cesta je vyplněna zvoleným způsobem výplně."
+
+#: src/MainWindow.cpp:817
+msgid "Odd Even Fill"
+msgstr "Lichá a sudá výplň"
+
+#: src/MainWindow.cpp:818
+msgid "The Odd Even fill method will fill alternate areas of the symbol."
+msgstr "Lichý sudý způsob výplně vyplní protilehlé oblasti symbolu."
+
+#: src/MainWindow.cpp:826
+msgid "Winding Fill"
+msgstr "Klikatá výplň"
+
+#: src/MainWindow.cpp:827
+msgid "The Window fill method will fill the complete interior of the path."
+msgstr "Okenní způsob výplně úplně vyplní vnitřek cesty."
+
+#: src/MainWindow.cpp:840
+msgid "Flat Cap"
+msgstr "Plochý závěr"
+
+#: src/MainWindow.cpp:841
+msgid ""
+"The Flat Cap end type provides a square end that stops at the end point of the line.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr "Plochý závěr jako typ ukončení poskytuje čtvercový konec, který končí na koncovém bodu čáry.\n\nToto se dá použít jen na nevyplněné cesty."
+
+#: src/MainWindow.cpp:849
+msgid "Square Cap"
+msgstr "Čtvercový závěr"
+
+#: src/MainWindow.cpp:850
+msgid ""
+"The Square Cap end type provides a square end that projects beyond the end point of the line by half the line width.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr "Čtvercový závěr jako typ ukončení poskytuje čtvercový konec, který vyčnívá za koncový bod čáry o polovinu šířky čáry.\n\nToto se dá použít jen na nevyplněné cesty."
+
+#: src/MainWindow.cpp:858
+msgid "Round Cap"
+msgstr "Kulatý závěr"
+
+#: src/MainWindow.cpp:859
+msgid ""
+"The Round Cap end type provides a round end that projects beyond the end point of the line with a radius of half the line width.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr "Kulatý závěr jako typ ukončení poskytuje kulatý konec, který vyčnívá za koncový bod čáry. Jeho poloměrem je polovina šířky čáry.\n\nToto se dá použít jen na nevyplněné cesty."
+
+#: src/MainWindow.cpp:872
+msgid "Bevel Join"
+msgstr "Kosý spoj"
+
+#: src/MainWindow.cpp:873
+msgid ""
+"The Bevel Join provides a beveled corner between two lines.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr "Kosý spoj poskytuje zkosenou hranu mezi dvěma čarami.\n\nToto se dá použít jen na nevyplněné cesty."
+
+#: src/MainWindow.cpp:881
+msgid "Miter Join"
+msgstr "Spojení na pokos"
+
+#: src/MainWindow.cpp:882
+msgid ""
+"The Miter Join provides a mitered corner between two lines.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr "Pokosový spoj poskytuje hranu pokosem mezi dvěma čarami.\n\nToto se dá použít jen na nevyplněné cesty."
+
+#: src/MainWindow.cpp:890
+msgid "Round Join"
+msgstr "Kulatý spoj"
+
+#: src/MainWindow.cpp:891
+msgid ""
+"The Round Join provides a rounded corner between two lines using a radius of half the line width.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr "Kulatý spoj poskytuje zaoblenou hranu mezi dvěma čarami. Jako poloměr spoje se používá polovina šířky čáry.\n\nToto se dá použít jen na nevyplněné cesty."
+
+#: src/MainWindow.cpp:902
+msgid ""
+"Increases the line width.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr "Zmenší šířku čáry.\n\nToto se dá použít jen na nevyplněné cesty."
+
+#: src/MainWindow.cpp:909
+msgid ""
+"Decreases the line width.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr "Zvětší šířku čáry.\n\nToto se dá použít jen na nevyplněné cesty."
+
+#: src/MainWindow.cpp:920
+msgid ""
+"Move the current point to a new position. This implicitly closes any "
+"existing sub path, starting a new one."
+msgstr "Přesunout nynější bod do nového umístění. Tím dojde k zavření všech stávajících podcest, a začne se nová."
+
+#: src/MainWindow.cpp:929
+msgid ""
+"Add a straight line from the current position to a defined end point. The "
+"end point becomes the new current position."
+msgstr "Přidat přímou čáru z nynější polohy ke stanovenému koncovému bodu. Koncový bod se stane novou nynější polohou."
+
+#: src/MainWindow.cpp:938
+msgid ""
+"Add a cubic bezier curve from the current position using two control points "
+"and an end point. The end point becomes the new current position."
+msgstr "Přidat kubickou bézierovu křivku z nynější polohy pomocí dvou ovládacích bodů a jednoho koncového bodu. Koncový bod se stane novou nynější polohou."
+
+#: src/MainWindow.cpp:946
+msgid "Rectangle"
+msgstr "Obdélník"
+
+#: src/MainWindow.cpp:947
+msgid ""
+"Add a rectangle as a separate sub path defined by two points representing "
+"the opposite corners."
+msgstr "Přidat obdélník jako samostatnou podcestu vymezenou pomocí dvou bodů představujících protější rohy."
+
+#: src/MainWindow.cpp:955
+msgid "Ellipse"
+msgstr "Elipsa"
+
+#: src/MainWindow.cpp:956
+msgid ""
+"Add an ellipse as a separate sub path defined by a bounding rectangle "
+"represented by two opposite corners."
+msgstr "Přidat elipsu jako samostatnou podcestu vymezenou hraničním obdélníkem představovaným dvěma protějšími rohy."
+
+#: src/MainWindow.cpp:964
+msgid "Insert Character"
+msgstr "Vložit znak"
+
+#: src/MainWindow.cpp:965
+msgid ""
+"Allows selection of a character from any font to be inserted as a closed sub"
+" path. The inserted character will overwrite any existing path, but "
+"additional sub paths may be added to the character."
+msgstr "Umožňuje výběr znaku z jakéhokoli písma pro jeho vložení jako uzavřené podcesty. Vložený znak přepíše všechny stávající cesty, ale dodatečné podcesty mohou být ke znaku přidány."
+
+#: src/MainWindow.cpp:976
+msgid ""
+"Rotate all the points of a path counter-clockwise 90 degrees around the "
+"center of the editor."
+msgstr "Otočit všechny body cesty proti směru hodinových ručiček o 90 stupňů okolo středu editoru."
+
+#: src/MainWindow.cpp:983
+msgid ""
+"Rotate all the points of a path clockwise 90 degrees around the center point"
+" of the editor."
+msgstr "Otočit všechny body cesty po směru hodinových ručiček o 90 stupňů okolo středu editoru."
+
+#: src/MainWindow.cpp:990
+msgid ""
+"Flip all the points of the path horizontally about the vertical center of "
+"the editor."
+msgstr "Převrátit všechny body cesty vodorovně okolo svislého středu editoru."
+
+#: src/MainWindow.cpp:997
+msgid ""
+"Flip all the points of the path vertically about the horizontal center of "
+"the editor."
+msgstr "Převrátit všechny body cesty svisle okolo vodorovného středu editoru."
+
+#: src/MainWindow.cpp:1004
+msgid ""
+"Scale the current symbol so that it fits within the preferred size of a "
+"symbol."
+msgstr "Změnit velikost nynějšího symbolu, takže se přizpůsobí upřednostňované velikosti symbolu."
+
+#: src/MainWindow.cpp:1010
+msgid "Enable Snap"
+msgstr "Povolit přichycení"
+
+#: src/MainWindow.cpp:1011
+msgid "Enable snapping of points to guide intersections or to the grid."
+msgstr "Povolit přichytávání bodů k průsečíkům vodicích linek nebo ke mřížce."
