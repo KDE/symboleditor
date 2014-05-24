@@ -823,7 +823,7 @@ void MainWindow::setupActions()
 
     action = new KAction(this);
     action->setText(i18n("Winding Fill"));
-    action->setWhatsThis(i18n("The Window fill method will fill the complete interior of the path."));
+    action->setWhatsThis(i18n("The Winding fill method will fill the complete interior of the path."));
     action->setData(Qt::WindingFill);
     action->setIcon(KIcon("winding-fill"));
     action->setCheckable(true);
