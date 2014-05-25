@@ -234,7 +234,7 @@
                         <listitem><simpara><action>Flip the symbol across the vertical axis</action></simpara></listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term><menuchoice><guimenuitem>Flip Vetical</guimenuitem></menuchoice></term>
+                        <term><menuchoice><guimenuitem>Flip Vertical</guimenuitem></menuchoice></term>
                         <listitem><simpara><action>Flip the symbol across the horizontal axis</action></simpara></listitem>
                     </varlistentry>
                     <varlistentry>
