@@ -53,7 +53,7 @@
                 It is possible to open several instances of the SymbolEditor application and copy
                 symbols from one library to another using drag and drop. Ensure that both library
                 windows are visible, then click and drag the required symbol from one library window
-                to the other. The symbol will then be appended to the target libary.
+                to the other. The symbol will then be appended to the target library.
             </para>
         </sect2>
     </sect1>
