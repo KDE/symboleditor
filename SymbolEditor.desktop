@@ -3,6 +3,7 @@
 Type=Application
 Version=1.0
 Name=SymbolEditor
+Name[cs]=SymbolEditor
 Name[nl]=SymbolEditor
 Name[pl]=EdytorSymboli
 Name[pt]=Editor de Símbolos
@@ -12,6 +13,7 @@ Name[sv]=Symboleditor
 Name[uk]=SymbolEditor
 Name[x-test]=xxSymbolEditorxx
 GenericName=Cross Stitch Symbol Editor
+GenericName[cs]=Editor symbolů pro vyšívání křížkovým stehem
 GenericName[nl]=Kruissteeksymboolbewerker
 GenericName[pl]=Edytor symboli Cross Stitch
 GenericName[pt]=Editor de Símbolos em Ponto de Cruz
