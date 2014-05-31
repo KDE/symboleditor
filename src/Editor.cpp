@@ -789,17 +789,17 @@ void Editor::readSettings()
  */
 void Editor::mousePressEvent(QMouseEvent *event)
 {
-    QPointF p = snapPoint(event->pos());
+    QPoint p = event->pos();
 
     if (event->buttons() & Qt::LeftButton) {
-        m_start = m_tracking = p;
+        m_start = m_tracking = snapPoint(p);
         m_rubberBand = QRectF();
 
-        if (node(p)) {
+        if (node(toSymbol(p))) {
             m_dragging = true;
-            m_dragPointIndex = nodeUnderCursor(p);
+            m_dragPointIndex = nodeUnderCursor(toSymbol(p));
         } else {
-            addPoint(p);
+            addPoint(m_start);
         }
     }
 
@@ -830,18 +830,18 @@ void Editor::mouseMoveEvent(QMouseEvent *event)
         update();
     }
 
-    QPointF p = snapPoint(event->pos());
+    QPoint p = event->pos();
 
     if (event->buttons() & Qt::LeftButton) {
-        if (m_tracking != p) {
-            m_tracking = p;
+        if (m_tracking != snapPoint(p)) {
+            m_tracking = snapPoint(p);
 
             if (m_dragging) {
                 if (m_dragPointIndex.first) {
-                    m_points[m_dragPointIndex.second] = p;
+                    m_points[m_dragPointIndex.second] = m_tracking;
                     constructPainterPath();
                 } else {
-                    m_activePoints[m_dragPointIndex.second] = p;
+                    m_activePoints[m_dragPointIndex.second] = m_tracking;
                 }
             } else if (m_toolMode == Rectangle || m_toolMode == Ellipse) {
                 m_rubberBand = QRectF(m_start, m_tracking).normalized();
@@ -850,14 +850,14 @@ void Editor::mouseMoveEvent(QMouseEvent *event)
             update();
         }
     } else {
-        if (node(p)) {
+        if (node(toSymbol(p))) {
             setCursor(Qt::SizeAllCursor);
         } else {
             setCursor(Qt::ArrowCursor);
         }
     }
 
-    if (constructGuides(p)) {
+    if (constructGuides(toSymbol(p))) {
         update();
     }
 }
