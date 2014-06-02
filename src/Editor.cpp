@@ -216,7 +216,7 @@ Editor::Editor(QWidget *parent)
     m_leftEdge = QLineF(0.0, 0.0, 0.0, 1.0);
     m_rightEdge = QLineF(1.0, 0, 1.0, 1.0);
 
-    m_angles << 0 << 45 << 90 << 135 << 180 << 225 << 270 << 315;
+    m_angles << 0 << 15 << 30 << 45 << 60 << 75 << 90 << 105 << 120 << 135 << 150 << 165;
 }
 
 
@@ -824,12 +824,6 @@ void Editor::mousePressEvent(QMouseEvent *event)
  */
 void Editor::mouseMoveEvent(QMouseEvent *event)
 {
-    if (!m_guideLines.isEmpty()) {
-        m_guideLines.clear();
-        m_guideCircles.clear();
-        update();
-    }
-
     QPoint p = event->pos();
 
     if (event->buttons() & Qt::LeftButton) {
@@ -857,9 +851,8 @@ void Editor::mouseMoveEvent(QMouseEvent *event)
         }
     }
 
-    if (constructGuides(toSymbol(p))) {
-        update();
-    }
+    constructGuides(toSymbol(p));
+    update();
 }
 
 
@@ -1383,82 +1376,156 @@ void Editor::constructPainterPath()
 
 
 /**
- * Construct guides for the point relative to the other points.
- * Iterate through points in m_points and m_active points passing them to the
- * constructLineGuides and constructCircleGuides with the new point to create
- * guide lines conforming with the requirements for each.
+ * Construct guides for the cursor position point being tested relative to the other points.
+ * Iterate through points in m_points and m_active points projecting them out in the directions
+ * being tested to determine if they intersect any existing guide lines at a point near to the
+ * cursor position. If found they are added to the list of relevant lines and the snap point of the
+ * intersection is added to snap points.
+ * A list of circles is created where the radius to the point is similar to the test point. Intersection
+ * points are calculated for the projected lines and if these are close to the cursor position they
+ * are added to the snap points along with the circles and lines.
  *
- * @param to a const reference to a QPointF representing the new point position
- *
- * @return true if guides created, false otherwise.  Guides will be in m_guideLines and m_guideCircles
+ * @param to a const reference to a QPointF representing the cursor position
  */
-bool Editor::constructGuides(const QPointF &to)
+void Editor::constructGuides(const QPointF &to)
 {
-    foreach (const QPointF & from, m_points) {
-        constructLineGuides(from, to);
-        constructCircleGuides(from, to);
-    }
+    m_guideLines.clear();
+    m_guideCircles.clear();
+    m_snapPoints.clear();
 
-    foreach (const QPointF & from, m_activePoints) {
-        constructLineGuides(from, to);
-        constructCircleGuides(from, to);
-    }
+    QList<QPointF> points;
+    points << m_points << m_activePoints;   // construct list of all points on screen
 
-    return !m_guideLines.isEmpty();
+    QList<double> guideCircles;             // local list of circles, used for filtering
+    QList<QLineF> guideLines;               // local list of lines, used for filtering
+
+    double radiusTo = sqrt(pow(0.5 - to.x(), 2) + pow(0.5 - to.y(), 2));
+
+    foreach (const QPointF &from, points) {
+        if ((from - to).manhattanLength() < m_snapThreshold * 2) {
+            continue;    // cursor close to existing point so ignore it
+        }
+
+        double radiusFrom = sqrt(pow(0.5 - from.x(), 2) + pow(0.5 - from.y(), 2));
+
+        if (fabs(radiusTo - radiusFrom) < m_snapThreshold) {
+            guideCircles.append(radiusFrom);
+        }
+
+        // construct line guides
+        QLineF guideLine(from, from + QPointF(1.0, 0.0));
+
+        foreach (double angle, m_angles) {
+            guideLine.setAngle(angle);
+            QLineF projectedGuideLine = projected(guideLine);
+
+            QPointF intersection;
+
+            foreach (const QLineF &line, guideLines) {
+                if (projectedGuideLine.intersect(line, &intersection)) {
+                    if (((to - intersection).manhattanLength() < m_snapThreshold)) {
+                        addGuideLine(line);
+                        addGuideLine(projectedGuideLine);
+                        addSnapPoint(intersection);
+                    }
+                }
+            }
+
+            guideLines.append(projectedGuideLine);
+        }
+
+        // construct circle guides
+        foreach (double radius, guideCircles) {
+            foreach (const QLineF &line, guideLines) {
+                double ax = line.x1();
+                double ay = line.y1();
+                double bx = line.x2();
+                double by = line.y2();
+                double cx = 0.5;
+                double cy = 0.5;
+
+                double lab = sqrt(pow(bx - ax, 2.0) + pow(by - ay, 2.0));
+                double dx = (bx - ax) / lab;
+                double dy = (by - ay) / lab;
+
+                double t = dx * (cx - ax) + dy * (cy - ay);
+
+                double ex = t * dx + ax;
+                double ey = t * dy + ay;
+
+                double lec = sqrt(pow(ex - cx, 2.0) + pow(ey - cy, 2.0));
+
+                if (lec < radius) {
+                    double dt = sqrt(pow(radius, 2.0) - pow(lec, 2.0));
+
+                    // first intersection
+                    double fx = (t - dt) * dx + ax;
+                    double fy = (t - dt) * dy + ay;
+
+                    if ((QPointF(fx, fy) - to).manhattanLength() < m_snapThreshold) {
+                        addGuideCircle(radius);
+                        addGuideLine(line);
+                        addSnapPoint(QPointF(fx, fy));
+                    }
+
+                    // second intersection
+                    double gx = (t + dt) * dx + ax;
+                    double gy = (t + dt) * dy + ay;
+
+                    if ((QPointF(gx, gy) - to).manhattanLength() < m_snapThreshold) {
+                        addGuideCircle(radius);
+                        addGuideLine(line);
+                        addSnapPoint(QPointF(gx, gy));
+                    }
+                } else if (lec == radius) {
+                    // intersection is ex, ey
+                    if ((QPointF(ex, ey) - to).manhattanLength() < m_snapThreshold) {
+                        addGuideCircle(radius);
+                        addGuideLine(line);
+                        addSnapPoint(QPointF(ex, ey));
+                    }
+                }
+            }
+        }
+    }
 }
 
 
 /**
- * Construct line guides for the given point.
- * The angle formed by the line from-to is tested against the allowed angles.
- * If the angle is acceptable a new QLineF is created projected to the edges of
- * the grid.
+ * Add a guide line to m_guideLines after checking it doesn't exist yet
  *
- * @param from a const reference to a QPointF representing the point to test, from m_points or m_activePoints
- * @param to a const reference to a QPointF representing the cursor position
+ * @param line a const reference to a QLineF representing the reference line
  */
-void Editor::constructLineGuides(const QPointF &from, const QPointF &to)
+void Editor::addGuideLine(const QLineF &line)
 {
-    if (from != to) {
-        QLineF line(from, to);
-
-        if (m_angles.contains(line.angle())) {
-            m_guideLines.append(projected(line));
-        }
+    if (!m_guideLines.contains(line)) {
+        m_guideLines.append(line);
     }
 }
 
 
 /**
- * Construct circular guides for the given point.
- * Calculate the possible intersection points where point p would be if it was mirrored
- * across the vertical and horizontal center lines, this would be comparable to it being
- * on a circle whose center is at the grid center.
- * There are special cases where the point is on the center line. These mirrored points will
- * not be included as they are the same as the new one.
+ * Add a guide circle to m_guideCircles after checking it doesn't exist yet
  *
- * @param from a const reference to a QPointF representing the point to test, from m_points or m_activePoints
- * @param to a const reference to a QPointF representing the cursor position
+ * @param radius a double representing the circle at center (0.5, 0.5)
  */
-void Editor::constructCircleGuides(const QPointF &from, const QPointF &to)
+void Editor::addGuideCircle(double radius)
 {
-    QVector<QPointF> intersections;
-    intersections << QPointF(1.0 - from.x(), from.y()) << QPointF(from.x(), 1.0 - from.y()) << QPointF(1.0 - from.x(), 1.0 - from.y());
-    bool circles = false;
-
-    foreach (const QPointF & i, intersections) {
-        if (i == from) { // point is on center line
-            break;
-        }
-
-        if (i == to) {
-            m_guideLines.append(projected(QLineF(i, to)));
-            circles = true;
-        }
+    if (!m_guideCircles.contains(radius)) {
+        m_guideCircles.append(radius);
     }
+}
 
-    if (circles) {
-        m_guideCircles.append(sqrt(pow(0.5 - to.x(), 2) + pow(0.5 - to.y(), 2)));
+
+/**
+ * Add a snap point to m_snapPoints after checking it doesn't exist yet
+ *
+ * @param point a const reference to a QPointF representing the snap position
+ */
+void Editor::addSnapPoint(const QPointF &point)
+{
+    if (!m_snapPoints.contains(point)) {
+        m_snapPoints.append(point);
     }
 }
 
@@ -1468,8 +1535,6 @@ void Editor::constructCircleGuides(const QPointF &from, const QPointF &to)
  * Calculate the points where the projected line would intersect the edges.
  * Check which edges get intersected within the coordinate 0..1 which will determine
  * which points are required to construct the projected line.
- * A special case occurs when the line is a diagonal passing through the corners as it
- * intersects all sides within the coordinate range 0..1
  *
  * @param line a const reference to a QLineF
  *
@@ -1492,30 +1557,9 @@ QLineF Editor::projected(const QLineF &line) const
     l = line.intersect(m_leftEdge, &intersectLeft);
     r = line.intersect(m_rightEdge, &intersectRight);
 
-    if (t == 0) {      // horizontal line
+    if (t == QLineF::NoIntersection) {      // horizontal line
         return QLineF(intersectLeft, intersectRight);
     }
 
-    if (l == 0) {      // vertical line
-        return QLineF(intersectTop, intersectBottom);
-    }
-
-    if (intersectTop == QPointF(0.0, 0.0) || intersectTop == QPointF(1.0, 0.0)) { // diagonal line at the corners
-        return QLineF(intersectTop, intersectBottom);
-    }
-
-    if (intersectTop.x() > 0.0 && intersectTop.x() < 1.0) {
-        if (intersectLeft.y() > 0.0 && intersectLeft.y() < 1.0) {
-            return QLineF(intersectTop, intersectLeft);
-        } else {
-            return QLineF(intersectTop, intersectRight);
-        }
-    } else {
-        if (intersectLeft.y() > 0.0 && intersectLeft.y() < 1.0) {
-            return QLineF(intersectBottom, intersectLeft);
-        } else {
-            return QLineF(intersectBottom, intersectRight);
-        }
-    }
+    return QLineF(intersectTop, intersectBottom);
 }
-

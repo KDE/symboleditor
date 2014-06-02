@@ -152,9 +152,10 @@ private:
     QPair<bool, int> nodeUnderCursor(const QPointF &point) const;
     void deconstructPainterPath();
     void constructPainterPath();
-    bool constructGuides(const QPointF &to);
-    void constructLineGuides(const QPointF &from, const QPointF &to);
-    void constructCircleGuides(const QPointF &from, const QPointF &to);
+    void constructGuides(const QPointF &to);
+    void addGuideLine(const QLineF &line);
+    void addGuideCircle(double radius);
+    void addSnapPoint(const QPointF &point);
     QLineF projected(const QLineF &line) const;
 
     int     m_size;                                 /**< the overall size of the editor */
