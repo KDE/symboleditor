@@ -198,15 +198,10 @@ MainWindow::MainWindow()
 
     KActionCollection *actions = actionCollection();
 
-    QVBoxLayout *editorLayout = new QVBoxLayout;
-    editorLayout->addWidget(m_editor, 0, Qt::AlignCenter);
-    QWidget *layoutWidget = new QWidget;
-    layoutWidget->setLayout(editorLayout);
-
     m_listWidget->setIconSize(48);
     m_listWidget->setContextMenuPolicy(Qt::CustomContextMenu);
 
-    m_tabWidget->addTab(layoutWidget, i18nc("The editor tab title", "Editor"));
+    m_tabWidget->addTab(m_editor, i18nc("The editor tab title", "Editor"));
     m_tabWidget->addTab(m_listWidget, i18nc("The library tab title", "Library"));
 
     setCentralWidget(m_tabWidget);

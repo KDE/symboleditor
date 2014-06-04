@@ -774,9 +774,8 @@ void Editor::readSettings()
     m_preferredSizeColor = Configuration::editor_PreferredSizeColor();
     m_guideLineColor     = Configuration::editor_GuideLineColor();
 
-    m_size = m_gridElements * m_elementSize;
-    resize(m_size + 1, m_size + 1);
-    setMinimumSize(size());
+    int minimumSize = m_elementSize * m_gridElements + 1;
+    setMinimumSize(minimumSize, minimumSize);
 }
 
 
@@ -942,6 +941,27 @@ void Editor::addPoint(const QPointF &point)
 void Editor::updateStatusMessage()
 {
     emit message(statusMessages[m_toolMode][m_activePoints.count()]);
+}
+
+
+/**
+ * Read settings and set the element size based on the size of the editor window
+ *
+ * @param event a pointer to the QResizeEvent
+ */
+void Editor::resizeEvent(QResizeEvent *event)
+{
+    QSize requestedSize = event->size();
+
+    int requestedWidth = requestedSize.width();
+    int requestedHeight = requestedSize.height();
+    int side = std::min(requestedWidth, requestedHeight);
+
+    m_elementSize = side / m_gridElements;
+    m_size = m_elementSize * m_gridElements;
+
+    resize(m_size, m_size);
+    move((requestedWidth - m_size) / 2, (requestedHeight - m_size) / 2);
 }
 
 
