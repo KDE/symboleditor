@@ -810,8 +810,8 @@ void Editor::mousePressEvent(QMouseEvent *event)
  * Process the mouse move event. Effective for the left mouse button pressed.
  * Clear any currently defined guides.
  * If dragging a point, update the points position and update the view, otherwise
- * if the toolmode is for a rectangle or an ellipse initialise the rubber band
- * rectange and update the view.
+ * if the toolmode is for a rectangle or an ellipse initialize the rubber band
+ * rectangle and update the view.
  * If the left button is not pressed, test if the cursor is over an existing point
  * and if it is change the cursor to a SizeAllCursor to indicate it can be moved,
  * otherwise reset it to an ArrowCursor.
@@ -935,7 +935,7 @@ void Editor::addPoint(const QPointF &point)
 
 
 /**
- * Update the status message dependant on the command in use and the number of active points
+ * Update the status message dependent on the command in use and the number of active points
  * in the list.
  */
 void Editor::updateStatusMessage()
@@ -971,7 +971,7 @@ void Editor::resizeEvent(QResizeEvent *event)
  * For each element of the current path the control points are drawn with suitable lines
  * joining them, for example for a cubic curve, a curve is drawn, but the control points
  * are joined with dashed lines.
- * A complete path is constructed and painted in a light colour with transparency to show
+ * A complete path is constructed and painted in a light color with transparency to show
  * the current symbol shape.
  *
  * @param event a pointer to a QPaintEvent
@@ -1352,7 +1352,7 @@ void Editor::deconstructPainterPath()
 
 /**
  * Construct a QPainterPath from the commands and points.
- * Initialise an empty QPainterPath.
+ * Initialize an empty QPainterPath.
  * Iterate all elements stored in m_elements and add them to the path.
  */
 void Editor::constructPainterPath()
