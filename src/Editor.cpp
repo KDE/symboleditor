@@ -768,7 +768,7 @@ void Editor::readSettings()
     m_gridElements       = Configuration::editor_GridElements();
     m_elementSize        = Configuration::editor_ElementSize();
     m_elementGrouping    = Configuration::editor_ElementGrouping();
-    m_pointSize          = Configuration::editor_PointSize();
+    m_pointSize          = static_cast<double>(Configuration::editor_PointSize()) / 500;
     m_snapThreshold      = 1.0 / m_gridElements * Configuration::editor_SnapThreshold();
     m_borderSize         = Configuration::editor_BorderSize();
     m_preferredSizeColor = Configuration::editor_PreferredSizeColor();
@@ -973,7 +973,6 @@ void Editor::resizeEvent(QResizeEvent *event)
  * are joined with dashed lines.
  * A complete path is constructed and painted in a light colour with transparency to show
  * the current symbol shape.
- * TODO scale the painter earlier to avoid the use of toScreen.
  *
  * @param event a pointer to a QPaintEvent
  */
@@ -984,30 +983,41 @@ void Editor::paintEvent(QPaintEvent *event)
     p.setRenderHint(QPainter::Antialiasing, true);
     p.fillRect(event->rect(), Qt::white);
 
+    // scale the painter to suit the number of elements in the grid
+    p.setWindow(0, 0, m_gridElements, m_gridElements);
+
     // draw vertical grid
-    for (int x = 0 ; x < m_gridElements + 1 ; ++x) {
+    for (int x = 0 ; x <= m_gridElements ; ++x) {
         if (x % m_elementGrouping) {
             p.setPen(Qt::lightGray);
         } else {
             p.setPen(Qt::darkGray);
         }
 
-        p.drawLine(x * m_elementSize, 0, x * m_elementSize, m_size + 1);
+        p.drawLine(x, 0, x, m_gridElements);
     }
 
     // draw horizontal grid
-    for (int y = 0 ; y < m_gridElements + 1 ; ++y) {
+    for (int y = 0 ; y <= m_gridElements ; ++y) {
         if (y % m_elementGrouping) {
             p.setPen(Qt::lightGray);
         } else {
             p.setPen(Qt::darkGray);
         }
 
-        p.drawLine(0, y * m_elementSize, m_size + 1, y * m_elementSize);
+        p.drawLine(0, y, m_gridElements, y);
     }
 
+    // draw a rectangle representing the preferred symbol size allowing for some white space
+    QRectF preferredSizeRect = QRectF(0, 0, m_gridElements, m_gridElements).adjusted(m_borderSize, m_borderSize, -m_borderSize, -m_borderSize);
+    QColor preferredSizeColor(m_preferredSizeColor);
+    preferredSizeColor.setAlpha(128);
+    p.setPen(preferredSizeColor);
+    p.setBrush(Qt::NoBrush);
+    p.drawRect(preferredSizeRect);
+
     // define a rectangle for the points
-    QRect dot(0, 0, m_pointSize, m_pointSize);
+    QRectF dot(0, 0, m_pointSize, m_pointSize);
 
     // create a dashed pen for use with curve references and a wide pen for the shape
     QPen dashedPen(Qt::DashLine);
@@ -1015,14 +1025,17 @@ void Editor::paintEvent(QPaintEvent *event)
     // draw all the points as a circle
     p.setBrush(Qt::SolidPattern);
 
+    // scale the painter to draw the points and symbols
+    p.setWindow(0, 0, 1, 1);
+
     for (int i = 0 ; i < m_points.count() ; ++i) {
-        QPoint s = toScreen(m_points.at(i));
+        QPointF s = m_points.at(i);
         dot.moveCenter(s);
         p.drawEllipse(dot);
     }
 
     for (int i = 0 ; i < m_activePoints.count() ; ++i) {
-        QPoint s = toScreen(m_activePoints.at(i));
+        QPointF s = m_activePoints.at(i);
         dot.moveCenter(s);
         p.drawEllipse(dot);
     }
@@ -1030,10 +1043,10 @@ void Editor::paintEvent(QPaintEvent *event)
     // iterate through the elements and for each curve element draw the reference lines with a dashed pen
     for (int i = 0, j = 0 ; i < m_elements.count() ; ++i) {
         QPainterPath::ElementType element = m_elements[i];
-        QPoint s;
-        QPoint e;
-        QPoint c1;
-        QPoint c2;
+        QPointF s;
+        QPointF e;
+        QPointF c1;
+        QPointF c2;
 
         switch (element) {
         case QPainterPath::MoveToElement:
@@ -1048,10 +1061,10 @@ void Editor::paintEvent(QPaintEvent *event)
 
         case QPainterPath::CurveToElement:
             p.setPen(dashedPen);
-            s = toScreen(m_points.at(j - 1));
-            c1 = toScreen(m_points.at(j++));
-            c2 = toScreen(m_points.at(j++));
-            e = toScreen(m_points.at(j++));
+            s = m_points.at(j - 1);
+            c1 = m_points.at(j++);
+            c2 = m_points.at(j++);
+            e = m_points.at(j++);
             p.drawLine(s, c1);
             p.drawLine(c1, c2);
             p.drawLine(c2, e);
@@ -1059,41 +1072,33 @@ void Editor::paintEvent(QPaintEvent *event)
         }
     }
 
+
     // draw the rubber band rectangle or the active points for the current command
     if (m_rubberBand.isValid()) {
+        p.setPen(Qt::black);
         p.setBrush(Qt::NoBrush);
 
         if (m_toolMode == Rectangle) {
-            p.drawRect(QRect(toScreen(m_rubberBand.topLeft()), toScreen(m_rubberBand.bottomRight())));
+            p.drawRect(m_rubberBand);
         } else {
-            p.drawEllipse(QRect(toScreen(m_rubberBand.topLeft()), toScreen(m_rubberBand.bottomRight())));
+            p.drawEllipse(m_rubberBand);
         }
     } else if (m_activePoints.count() && m_toolMode != Rectangle && m_toolMode != Ellipse) {
         p.setPen(dashedPen);
-        QPoint s;
+        QPointF s;
 
         if (m_points.count()) {
-            s = toScreen(m_points.last());
+            s = m_points.last();
         }
 
         for (int i = 0 ; i < m_activePoints.count() ; ++i) {
-            QPoint e = toScreen(m_activePoints[i]);
+            QPointF e = m_activePoints[i];
             p.drawLine(s, e);
             s = e;
         }
     }
 
-    // draw a rectangle representing the preferred symbol size allowing for some white space
-    int border = m_elementSize * m_borderSize;
-    QRect preferredSizeRect = QRect(0, 0, m_size, m_size).adjusted(border, border, -border, -border);
-    QColor preferredSizeColor(m_preferredSizeColor);
-    preferredSizeColor.setAlpha(128);
-    p.setPen(preferredSizeColor);
-    p.setBrush(Qt::NoBrush);
-    p.drawRect(preferredSizeRect);
-
     // scale the painter and draw the path
-    p.scale(m_size, m_size);
     QColor c(Qt::black);
     c.setAlpha(128);
     QPen pathPen(c);
@@ -1241,23 +1246,6 @@ QPair<bool, QPointF> Editor::snapToGuide(const QPointF &point) const
     }
 
     return snap;
-}
-
-
-/**
- * Convert a symbol point to a screen point.
- * The symbol point will be a QPointF in the range 0..1 and will be converted to a value
- * representing the position in the editor.
- *
- * @param point a const reference to a QPointF
- *
- * @return a QPoint representing the screen position in the editor
- */
-QPoint Editor::toScreen(const QPointF &point) const
-{
-    int sx = floor(point.x() * m_size);
-    int sy = floor(point.y() * m_size);
-    return QPoint(sx, sy);
 }
 
 

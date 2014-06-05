@@ -148,7 +148,6 @@ private:
     QPair<bool, QPointF> snapToGrid(const QPoint &point) const;
     QPair<bool, QPointF> snapToGuide(const QPointF &point) const;
     QPointF toSymbol(const QPoint &point) const;
-    QPoint toScreen(const QPointF &point) const;
     bool node(const QPointF &point) const;
     QPair<bool, int> nodeUnderCursor(const QPointF &point) const;
     void deconstructPainterPath();
@@ -197,7 +196,7 @@ private:
     int     m_gridElements;                         /**< The number of grid elements (Configuration::editor_GridElements) */
     int     m_elementSize;                          /**< The size in pixels of an element (Configuration::editor_ElementSize) */
     int     m_elementGrouping;                      /**< The number of cells in a group (Configuration::editor_ElementGroup) */
-    int     m_pointSize;                            /**< The size of a point in pixels (Configuration::editor_PointSize) */
+    double  m_pointSize;                            /**< The size of a point in pixels (Configuration::editor_PointSize) */
     double  m_snapThreshold;                        /**< The distance to check within the range of a point (Configuration::editor_SnapThreshold) */
     int     m_borderSize;                           /**< The number of cell elements used for the border (Configuration::editor_BorderSize) */
     QColor  m_preferredSizeColor;                   /**< The color of the preferred size square (Configuration::editor_PreferredSizeColor) */
