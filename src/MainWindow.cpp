@@ -643,12 +643,12 @@ void MainWindow::redoTextChanged(const QString &text)
  */
 void MainWindow::cleanChanged(bool clean)
 {
-    QString tab = QString("%1 ").arg(m_url.fileName());
+    QString tab;
 
     if (m_tabWidget->currentIndex() == 1) {
-        tab += QString(i18nc("The library tab title", "Library"));
+        tab = QString(i18nc("The library tab title %1 is the file name", "%1 Library", m_url.fileName()));
     } else {
-        tab += QString(i18nc("The editor tab title", "Editor"));
+        tab = QString(i18nc("The editor tab title %1 is the file name", "%1 Editor", m_url.fileName()));
     }
 
     setCaption(tab, !clean);
