@@ -789,6 +789,7 @@ void Editor::readSettings()
 void Editor::mousePressEvent(QMouseEvent *event)
 {
     QPoint p = event->pos();
+    m_dragging = false;
 
     if (event->buttons() & Qt::LeftButton) {
         m_start = m_tracking = snapPoint(p);
