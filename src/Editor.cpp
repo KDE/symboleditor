@@ -646,6 +646,17 @@ void Editor::enableSnap(bool enabled)
 
 
 /**
+ * Switch the generation of guides on or off.
+ *
+ * @param enabled true if on, false otherwise
+ */
+void Editor::enableGuides(bool enabled)
+{
+    m_guides = enabled;
+}
+
+
+/**
  * Switch the fill mode on or off.
  *
  * @param filled true if on, false otherwise
@@ -852,6 +863,7 @@ void Editor::mouseMoveEvent(QMouseEvent *event)
     }
 
     constructGuides(toSymbol(p));
+
     update();
 }
 
@@ -1401,6 +1413,10 @@ void Editor::constructGuides(const QPointF &to)
     m_guideLines.clear();
     m_guideCircles.clear();
     m_snapPoints.clear();
+
+    if (!m_guides) {
+        return;
+    }
 
     QList<QPointF> points;
     points << m_points << m_activePoints;   // construct list of all points on screen

@@ -229,6 +229,7 @@ MainWindow::MainWindow()
 
     actions->action("moveTo")->trigger();                   // select draw tool
     actions->action("enableSnap")->setChecked(true);        // enable snap
+    actions->action("enableGuides")->setChecked(true);      // enable creation of guides
     actions->action("file_save")->setEnabled(false);        // nothing to save yet
     actions->action("saveSymbol")->setEnabled(false);       // nothing to save yet
     actions->action("saveSymbolAsNew")->setEnabled(false);  // nothing to save yet
@@ -1007,6 +1008,14 @@ void MainWindow::setupActions()
     action->setCheckable(true);
     connect(action, SIGNAL(toggled(bool)), m_editor, SLOT(enableSnap(bool)));
     actions->addAction("enableSnap", action);
+
+    action = new KAction(this);
+    action->setText(i18n("Enable Guides"));
+    action->setWhatsThis(i18n("Enable the generation of quide intersections."));
+    action->setIcon(KIcon("snap-guides"));
+    action->setCheckable(true);
+    connect(action, SIGNAL(toggled(bool)), m_editor, SLOT(enableGuides(bool)));
+    actions->addAction("enableGuides", action);
 
     // Settings Menu
     KStandardAction::preferences(this, SLOT(preferences()), actions);

@@ -22,6 +22,7 @@
         <Action name="scalePreferred"/>
         <Separator/>
         <Action name="enableSnap"/>
+        <Action name="enableGuides"/>
     </Menu>
     <Menu name="rendering"><text>&amp;Rendering</text>
         <Action name="fillPath"/>
@@ -58,6 +59,7 @@
     <Action name="scalePreferred"/>
     <Separator/>
     <Action name="enableSnap"/>
+    <Action name="enableGuides"/>
 </ToolBar>
 <ToolBar name="RenderingToolbar" fullWidth="false"><text>Rendering Toolbar</text>
     <Action name="fillPath"/>

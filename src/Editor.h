@@ -112,6 +112,7 @@ public slots:
     void selectTool(QAction *action);
     void charSelected(const QChar &character);
     void enableSnap(bool enabled);
+    void enableGuides(bool enabled);
     void selectFilled(bool enabled);
     void selectFillRule(QAction *action);
     void selectCapStyle(QAction *action);
@@ -162,6 +163,7 @@ private:
 
     bool    m_snap;                                 /**< true if snap mode is enabled */
     bool    m_fill;                                 /**< true if fill mode is enabled */
+    bool    m_guides;                               /**< true if generating guides is enabled */
 
     QUndoStack  m_undoStack;                        /**< holds the commands that modify the editor contents allowing for undo */
 
