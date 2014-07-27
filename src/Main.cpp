@@ -82,7 +82,7 @@ int main(int argc, char *argv[])
                          ki18n("SymbolEditor"), "1.4.0",
                          ki18n("A cross stitch symbol editor."),
                          KAboutData::License_GPL_V2,
-                         ki18n("(c)2011 Stephen Allewell"),
+                         ki18n("(c)2011-2014 Stephen Allewell"),
                          KLocalizedString(),
                          "http://userbase.kde.org/SymbolEditor");
     aboutData.addAuthor(ki18n("Stephen Allewell"), ki18n("Project Lead"), "steve.allewell@gmail.com");
