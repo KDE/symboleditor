@@ -66,8 +66,8 @@ class KCharSelect;
  * Tools are available to rotate or flip the symbol which adjusts the points positions and
  * reconstructs the QPainterPath.
  *
- * Guide lines and circles will be displayed if the current position of the mouse on the
- * editor aligns with an existing point either horizontally, vertically or at a specified
+ * Guide lines and circles can be displayed if the current position of the mouse on the
+ * editor aligns with an existing point either horizontally, vertically or at a pre-defined
  * angle, or if the point lies on the same circle as the original where its origin is at
  * the center of the grid.
  */

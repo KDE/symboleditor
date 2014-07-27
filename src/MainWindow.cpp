@@ -138,6 +138,7 @@
  * - @ref flip_vertical
  * - @ref scale_preferred
  * - @ref snap_grid
+ * - @ref guide_lines
  */
 
 

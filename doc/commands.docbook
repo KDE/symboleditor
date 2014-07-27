@@ -250,6 +250,10 @@
                         <term><menuchoice><guimenuitem>Enable Snap</guimenuitem></menuchoice></term>
                         <listitem><simpara><action>Enable snapping of points to the grid</action></simpara></listitem>
                     </varlistentry>
+                    <varlistentry>
+                        <term><menuchoice><guimenuitem>Guide Lines</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Enable the generation of guide lines</action></simpara></listitem>
+                    </varlistentry>
                 </variablelist>
             </para>
         </sect2>

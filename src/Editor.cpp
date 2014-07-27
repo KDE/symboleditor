@@ -29,8 +29,11 @@
  * around the symbol when it will be rendered in a pattern.
  *
  * When placing points, guide lines will be shown when the cursor is at a position that aligns with other
- * points either horizontally, vertically or at a 45 degree angle. The circle guides are created if the cursor
+ * points either horizontally, vertically or at a range of predefined angles. The circle guides are created if the cursor
  * is at a position that aligns with another point on a circle where the center is at the center of the grid.
+ * When a symbol shape is made up of a large number of points, the number of guide lines generated can be significant.
+ * If these become a problem then the generation of the guide lines can be turned off completely or an option is
+ * available in the configuration dialog to simplify the range of angles tested.
  *
  * @section editor_tools Editor Tools
  *
@@ -79,6 +82,11 @@
  * @subsection snap_grid Snap to Grid
  * The selection of points can either be snapped to the grid or can be freely placed depending on if
  * the snap option is toggled on or off.
+ *
+ * @subsection guide_lines Enable Guide Lines
+ * The generation of guide lines can be toggled on or off. As the number of points in a symbol increases
+ * the number of guide lines that can be created can become significant at which point they become less
+ * useful.
  *
  * @section path_rendering Path Rendering
  *
@@ -1411,6 +1419,7 @@ void Editor::constructPainterPath()
  * A list of circles is created where the radius to the point is similar to the test point. Intersection
  * points are calculated for the projected lines and if these are close to the cursor position they
  * are added to the snap points along with the circles and lines.
+ * If the generation of guide lines is turned off, the existing guides are cleared on no more are created.
  *
  * @param to a const reference to a QPointF representing the cursor position
  */
