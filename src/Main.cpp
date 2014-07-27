@@ -79,7 +79,7 @@ int main(int argc, char *argv[])
 {
     KAboutData aboutData("SymbolEditor",
                          "SymbolEditor",
-                         ki18n("SymbolEditor"), "1.4.0",
+                         ki18n("SymbolEditor"), "1.5.0",
                          ki18n("A cross stitch symbol editor."),
                          KAboutData::License_GPL_V2,
                          ki18n("(c)2011-2014 Stephen Allewell"),
