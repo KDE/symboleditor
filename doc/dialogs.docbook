@@ -1,8 +1,8 @@
 <chapter id="Dialogs">
     <title>Dialogs</title>
 
-    <sect1 id="PaletteManagerDialog" >
-        <title>The Palette Manager Dialog</title>
+    <sect1 id="ConfigurationDialog" >
+        <title>The Configuration Dialog</title>
         <para>
             <screenshot><mediaobject><imageobject><imagedata fileref="configuration-dialog.png" format="PNG" /></imageobject></mediaobject></screenshot>
         </para>
