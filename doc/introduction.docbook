@@ -17,10 +17,11 @@
         the library.
     </para>
     <para>
-        Please report any problems or feature requests to the &kapp; SourceForge
-        mailing lists or forums.
+        Please report any problems or feature requests to the &kapp; KDE mailing list symboleditor@kde.org,
+        you can subscribe <ulink url="http://mail.kde.org/mailman/listinfo/symboleditor">here</ulink> or
+        the KDE bug tracking system at <ulink url="http://bugs.kde.org/">http://bugs.kde.org/</ulink>.
     </para>
     <para>
-        <ulink url="http://sourceforge.net/projects/kxstitch/" >http://sourceforge.net/projects/kxstitch/</ulink>
+        The SymbolEditor home page is at <ulink url="http://userbase.kde.org/SymbolEditor">http://userbase.kde.org/SymbolEditor</ulink>
     </para>
 </chapter>
