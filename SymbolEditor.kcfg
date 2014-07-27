@@ -38,5 +38,9 @@
             <label>The color of the guide lines</label>
             <default>#FF0000</default>
         </entry>
+        <entry name="Editor_SimplifiedGuideLines" type="Bool">
+            <label>Whether to use a simplified range of angles to test</label>
+            <default>false</default>
+        </entry>
     </group>
 </kcfg>

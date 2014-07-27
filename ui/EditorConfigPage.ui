@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>251</width>
-    <height>214</height>
+    <width>260</width>
+    <height>239</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -167,6 +167,13 @@
        <green>0</green>
        <blue>0</blue>
       </color>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0">
+    <widget class="QCheckBox" name="kcfg_Editor_SimplifiedGuideLines">
+     <property name="text">
+      <string>Simplified guide lines</string>
      </property>
     </widget>
    </item>

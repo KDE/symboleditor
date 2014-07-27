@@ -215,8 +215,6 @@ Editor::Editor(QWidget *parent)
     m_bottomEdge = QLineF(0.0, 1.0, 1.0, 1.0);
     m_leftEdge = QLineF(0.0, 0.0, 0.0, 1.0);
     m_rightEdge = QLineF(1.0, 0, 1.0, 1.0);
-
-    m_angles << 0 << 15 << 30 << 45 << 60 << 75 << 90 << 105 << 120 << 135 << 150 << 165;
 }
 
 
@@ -784,6 +782,14 @@ void Editor::readSettings()
     m_borderSize         = Configuration::editor_BorderSize();
     m_preferredSizeColor = Configuration::editor_PreferredSizeColor();
     m_guideLineColor     = Configuration::editor_GuideLineColor();
+
+    m_angles.clear();
+
+    if (Configuration::editor_SimplifiedGuideLines()) {
+        m_angles << 0 << 45 << 90 << 135;
+    } else {
+        m_angles << 0 << 15 << 30 << 45 << 60 << 75 << 90 << 105 << 120 << 135 << 150 << 165;
+    }
 
     int minimumSize = m_elementSize * m_gridElements + 1;
     setMinimumSize(minimumSize, minimumSize);
