@@ -1013,7 +1013,7 @@ void MainWindow::setupActions()
 
     action = new KAction(this);
     action->setText(i18n("Enable Guides"));
-    action->setWhatsThis(i18n("Enable the generation of quide intersections."));
+    action->setWhatsThis(i18n("Enable the generation of guide intersections."));
     action->setIcon(KIcon("snap-guides"));
     action->setCheckable(true);
     connect(action, SIGNAL(toggled(bool)), m_editor, SLOT(enableGuides(bool)));
