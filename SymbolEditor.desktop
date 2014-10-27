@@ -60,4 +60,4 @@ Exec=SymbolEditor -caption %c %i %U
 Terminal=false
 MimeType=application/SymbolEditor;
 Categories=Qt;KDE;Graphics;2DGraphics;RasterGraphics;
-
+X-DocPath=SymbolEditor/index.html
