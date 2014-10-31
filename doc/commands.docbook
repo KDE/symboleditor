@@ -8,23 +8,23 @@
             <para>
                 <variablelist>
                     <varlistentry>
-                        <term><menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo></shortcut><guimenuitem>New</guimenuitem></menuchoice></term>
+                        <term><menuchoice><shortcut><keycombo>&Ctrl;<keycap>N</keycap></keycombo></shortcut><guimenuitem>New</guimenuitem></menuchoice></term>
                         <listitem><simpara><action>Creates a new library</action></simpara></listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term><menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>o</keycap></keycombo></shortcut><guimenuitem>Open</guimenuitem></menuchoice></term>
+                        <term><menuchoice><shortcut><keycombo>&Ctrl;<keycap>O</keycap></keycombo></shortcut><guimenuitem>Open</guimenuitem></menuchoice></term>
                         <listitem><simpara><action>Opens an existing library</action></simpara></listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term><menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>r</keycap></keycombo></shortcut><guimenuitem>Open Recent</guimenuitem></menuchoice></term>
+                        <term><menuchoice><guimenuitem>Open Recent</guimenuitem></menuchoice></term>
                         <listitem><simpara><action>Open a recently used library</action></simpara></listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term><menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>s</keycap></keycombo></shortcut><guimenuitem>Save</guimenuitem></menuchoice></term>
+                        <term><menuchoice><shortcut><keycombo>&Ctrl;<keycap>S</keycap></keycombo></shortcut><guimenuitem>Save</guimenuitem></menuchoice></term>
                         <listitem><simpara><action>Saves the library</action></simpara></listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term><menuchoice><guimenuitem>Save As</guimenuitem></menuchoice></term>
+                        <term><menuchoice><shortcut><keycombo>&Ctrl;&Shift;<keycap>S</keycap></keycombo></shortcut><guimenuitem>Save As</guimenuitem></menuchoice></term>
                         <listitem><simpara><action>Saves the library under a new name</action></simpara></listitem>
                     </varlistentry>
                     <varlistentry>
@@ -48,11 +48,11 @@
                         <listitem><simpara><action>Import a library appending the contained symbols into the current library</action></simpara></listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term><menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>w</keycap></keycombo></shortcut><guimenuitem>Close</guimenuitem></menuchoice></term>
+                        <term><menuchoice><shortcut><keycombo>&Ctrl;<keycap>W</keycap></keycombo></shortcut><guimenuitem>Close</guimenuitem></menuchoice></term>
                         <listitem><simpara><action>Close the library</action></simpara></listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term><menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>q</keycap></keycombo></shortcut><guimenuitem>Quit</guimenuitem></menuchoice></term>
+                        <term><menuchoice><shortcut><keycombo>&Ctrl;<keycap>Q</keycap></keycombo></shortcut><guimenuitem>Quit</guimenuitem></menuchoice></term>
                         <listitem><simpara><action>Quits &kapp;</action></simpara></listitem>
                     </varlistentry>
                 </variablelist>
@@ -61,17 +61,8 @@
 
         <sect2>
             <title>The Edit Menu</title>
-            <para>
-                <variablelist>
-                    <varlistentry>
-                        <term><menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>z</keycap></keycombo></shortcut><guimenuitem>Undo</guimenuitem></menuchoice></term>
-                        <listitem><simpara><action>Undo the last change</action></simpara></listitem>
-                    </varlistentry>
-                    <varlistentry>
-                        <term><menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>Shift</keycap><keycap>z</keycap></keycombo></shortcut><guimenuitem>Redo</guimenuitem></menuchoice></term>
-                        <listitem><simpara><action>Redo the last change undone</action></simpara></listitem>
-                    </varlistentry>
-                </variablelist>
+            <para>&kapp; has the common &kde; <guimenu>Edit</guimenu> menu items, for more information read the sections about the 
+            <ulink url="help:/fundamentals/ui.html#menus-edit">Edit Menu</ulink> of the &kde; Fundamentals.
             </para>
         </sect2>
 
@@ -259,62 +250,10 @@
         </sect2>
 
         <sect2>
-            <title>The Settings Menu</title>
-            <para>
-                <variablelist>
-                    <varlistentry>
-                        <term><menuchoice><guimenuitem>Toolbars Shown</guimenuitem></menuchoice></term>
-                        <listitem><simpara><action>Select the toolbars to be shown</action></simpara></listitem>
-                    </varlistentry>
-                    <varlistentry>
-                        <term><menuchoice><guimenuitem>Show Statusbar</guimenuitem></menuchoice></term>
-                        <listitem><simpara><action>Toggle visibility of the status bar</action></simpara></listitem>
-                    </varlistentry>
-                    <varlistentry>
-                        <term><menuchoice><guimenuitem>Configure Shortcuts</guimenuitem></menuchoice></term>
-                        <listitem><simpara><action>Configure the applications shortcuts</action></simpara></listitem>
-                    </varlistentry>
-                    <varlistentry>
-                        <term><menuchoice><guimenuitem>Configure Toolbars</guimenuitem></menuchoice></term>
-                        <listitem><simpara><action>Configure the applications tool bars</action></simpara></listitem>
-                    </varlistentry>
-                    <varlistentry>
-                        <term><menuchoice><guimenuitem>Configure SymbolEditor</guimenuitem></menuchoice></term>
-                        <listitem><simpara><action>Configure the applications settings</action></simpara></listitem>
-                    </varlistentry>
-                </variablelist>
-            </para>
-        </sect2>
-
-        <sect2>
-            <title>The Help Menu</title>
-            <para>
-                <variablelist>
-                    <varlistentry>
-                        <term><menuchoice><guimenuitem>&kapp; Handbook</guimenuitem></menuchoice></term>
-                        <listitem><simpara><action>Display this help.</action></simpara></listitem>
-                    </varlistentry>
-                    <varlistentry>
-                        <term><menuchoice><guimenuitem>What's This.</guimenuitem></menuchoice></term>
-                        <listitem><simpara><action>Display help on a particular feature.</action></simpara></listitem>
-                    </varlistentry>
-                    <varlistentry>
-                        <term><menuchoice><guimenuitem>Report Bug.</guimenuitem></menuchoice></term>
-                        <listitem><simpara><action>Fill out a bug report.</action></simpara></listitem>
-                    </varlistentry>
-                    <varlistentry>
-                        <term><menuchoice><guimenuitem>Switch Application Language</guimenuitem></menuchoice></term>
-                        <listitem><simpara><action>Change the application language</action></simpara></listitem>
-                    </varlistentry>
-                    <varlistentry>
-                        <term><menuchoice><guimenuitem>About &kapp;</guimenuitem></menuchoice></term>
-                        <listitem><simpara><action>Display some information about &kapp;.</action></simpara></listitem>
-                    </varlistentry>
-                    <varlistentry>
-                        <term><menuchoice><guimenuitem>About KDE</guimenuitem></menuchoice></term>
-                        <listitem><simpara><action>Display some information about KDE.</action></simpara></listitem>
-                    </varlistentry>
-                </variablelist>
+            <title>The Settings and Help Menu</title>
+            <para>&kapp; has the common &kde; <guimenu>Settings</guimenu> and <guimenu>Help</guimenu>
+            menu items, for more information read the sections about the <ulink url="help:/fundamentals/ui.html#menus-settings">Settings 
+            Menu</ulink> and <ulink url="help:/fundamentals/ui.html#menus-help">Help Menu</ulink> of the &kde; Fundamentals.
             </para>
         </sect2>
     </sect1>
