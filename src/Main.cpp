@@ -56,10 +56,12 @@
  */
 
 
-#include <KAboutData>
-#include <KApplication>
-#include <KCmdLineArgs>
+#include <QApplication>
+#include <QCommandLineParser>
+#include <QUrl>
 
+#include <KAboutData>
+#include <KLocalizedString>
 
 #include "MainWindow.h"
 
@@ -68,30 +70,46 @@
  * The main function creates an instance of a KAboutData object and populates it with any information necessary
  * for the application.
  *
- * A KCmdLineArgs object is created to manage any arguments passed on the command line. At this time these are not
+ * A QCommandLineParser object is created to manage any arguments passed on the command line. At this time these are not
  * used.
  *
- * A KApplication object is created to manage the application and a new MainWindow is created and shown on the desktop.
+ * A QApplication object is created to manage the application and a new MainWindow is created and shown on the desktop.
  *
- * The KApplication instance is then executed which begins the event loop allowing user interaction.
+ * The QApplication instance is then executed which begins the event loop allowing user interaction.
  */
 int main(int argc, char *argv[])
 {
-    KAboutData aboutData("SymbolEditor",
-                         "SymbolEditor",
-                         ki18n("SymbolEditor"), "1.99.0",
-                         ki18n("A cross stitch symbol editor."),
-                         KAboutData::License_GPL_V2,
-                         ki18n("(c)2011-2014 Stephen Allewell"),
-                         KLocalizedString(),
-                         "http://userbase.kde.org/SymbolEditor");
-    aboutData.addAuthor(ki18n("Stephen Allewell"), ki18n("Project Lead"), "steve.allewell@gmail.com");
-    aboutData.setTranslator(ki18nc("NAME OF TRANSLATORS", "Your names"),
-                            ki18nc("EMAIL OF TRANSLATORS", "Your emails"));
+    QApplication app(argc, argv);
 
-    KCmdLineArgs::init(argc, argv, &aboutData);
+    KAboutData aboutData(QStringLiteral("SymbolEditor"),                    // component name
+                         QString(i18n("SymbolEditor")),                     // display name
+                         QStringLiteral("1.99.0"),                          // version
+                         i18n("A cross stitch symbol editor."),             // short description
+                         KAboutLicense::GPL_V2,                             // license
+                         i18n("(c)2011-2014 Stephen Allewell"),             // copyright
+                         QStringLiteral(),                                  // other text
+                         QString("http://userbase.kde.org/SymbolEditor")    // home page
+                         // bug address defaults to submit@bugs.kde.org
+               );
 
-    KApplication app;
+    aboutData.addAuthor(QStringLiteral("Stephen Allewell"), i18n("Project Lead"), QStringLiteral("steve.allewell@gmail.com"));
+    aboutData.setTranslator(i18nc("NAME OF TRANSLATORS", "Your names"), i18nc("EMAIL OF TRANSLATORS", "Your emails"));
+
+    KAboutData::setApplicationData(aboutData);
+
+    app.setApplicationName(aboutData.componentName());
+    app.setApplicationDisplayName(aboutData.displayName());
+    app.setWindowIcon(QIcon::fromTheme("SymbolEditor"));
+    app.setOrganizationDomain(aboutData.organizationDomain());
+    app.setApplicationVersion(aboutData.version());
+
+    QCommandLineParser parser;
+    aboutData.setupCommandLine(&parser);
+    parser.setApplicationDescription(aboutData.shortDescription());
+    parser.addHelpOption();
+    parser.addVersionOption();
+
+    parser.process(app);
 
     MainWindow *mainWindow = new MainWindow();
     mainWindow->show();
