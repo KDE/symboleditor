@@ -145,6 +145,7 @@
 #include "MainWindow.h"
 
 #include <QAction>
+#include <QIcon>
 #include <QVBoxLayout>
 #include <QListWidgetItem>
 #include <QMenu>
@@ -781,7 +782,7 @@ void MainWindow::setupActions()
     action = new QAction(this);
     action->setText(i18n("Save Symbol"));
     action->setWhatsThis(i18n("Save the symbol to the library. If this is a new symbol, subsequent saves will create additional symbols in the library. If the symbol was selected from the library to edit then saving will update that symbol in the library."));
-    action->setIcon(KIcon("save-symbol"));
+    action->setIcon(QIcon::fromTheme("save-symbol"));
     connect(action, SIGNAL(triggered()), this, SLOT(saveSymbol()));
     actions->addAction("saveSymbol", action);
 
@@ -802,7 +803,7 @@ void MainWindow::setupActions()
     action = new QAction(this);
     action->setText(i18n("Fill Path"));
     action->setWhatsThis(i18n("Enable path filling. The path defines the closed boundary of the shape and the path is filled with the selected fill method."));
-    action->setIcon(KIcon("rating"));
+    action->setIcon(QIcon::fromTheme("rating"));
     action->setCheckable(true);
     connect(action, SIGNAL(triggered(bool)), m_editor, SLOT(selectFilled(bool)));
     actions->addAction("fillPath", action);
@@ -814,7 +815,7 @@ void MainWindow::setupActions()
     action->setText(i18n("Odd Even Fill"));
     action->setWhatsThis(i18n("The Odd Even fill method will fill alternate areas of the symbol."));
     action->setData(Qt::OddEvenFill);
-    action->setIcon(KIcon("odd-even-fill"));
+    action->setIcon(QIcon::fromTheme("odd-even-fill"));
     action->setCheckable(true);
     actions->addAction("oddEvenFill", action);
     actionGroup->addAction(action);
@@ -823,7 +824,7 @@ void MainWindow::setupActions()
     action->setText(i18n("Winding Fill"));
     action->setWhatsThis(i18n("The Winding fill method will fill the complete interior of the path."));
     action->setData(Qt::WindingFill);
-    action->setIcon(KIcon("winding-fill"));
+    action->setIcon(QIcon::fromTheme("winding-fill"));
     action->setCheckable(true);
     actions->addAction("windingFill", action);
     actionGroup->addAction(action);
@@ -837,7 +838,7 @@ void MainWindow::setupActions()
     action->setText(i18n("Flat Cap"));
     action->setWhatsThis(i18n("The Flat Cap end type provides a square end that stops at the end point of the line.\n\nThis is only applicable to non-filled paths."));
     action->setData(Qt::FlatCap);
-    action->setIcon(KIcon("flat-cap"));
+    action->setIcon(QIcon::fromTheme("flat-cap"));
     action->setCheckable(true);
     actions->addAction("flatCap", action);
     actionGroup->addAction(action);
@@ -846,7 +847,7 @@ void MainWindow::setupActions()
     action->setText(i18n("Square Cap"));
     action->setWhatsThis(i18n("The Square Cap end type provides a square end that projects beyond the end point of the line by half the line width.\n\nThis is only applicable to non-filled paths."));
     action->setData(Qt::SquareCap);
-    action->setIcon(KIcon("square-cap"));
+    action->setIcon(QIcon::fromTheme("square-cap"));
     action->setCheckable(true);
     actions->addAction("squareCap", action);
     actionGroup->addAction(action);
@@ -855,7 +856,7 @@ void MainWindow::setupActions()
     action->setText(i18n("Round Cap"));
     action->setWhatsThis(i18n("The Round Cap end type provides a round end that projects beyond the end point of the line with a radius of half the line width.\n\nThis is only applicable to non-filled paths."));
     action->setData(Qt::RoundCap);
-    action->setIcon(KIcon("round-cap"));
+    action->setIcon(QIcon::fromTheme("round-cap"));
     action->setCheckable(true);
     actions->addAction("roundCap", action);
     actionGroup->addAction(action);
@@ -869,7 +870,7 @@ void MainWindow::setupActions()
     action->setText(i18n("Bevel Join"));
     action->setWhatsThis(i18n("The Bevel Join provides a beveled corner between two lines.\n\nThis is only applicable to non-filled paths."));
     action->setData(Qt::BevelJoin);
-    action->setIcon(KIcon("bevel-join"));
+    action->setIcon(QIcon::fromTheme("bevel-join"));
     action->setCheckable(true);
     actions->addAction("bevelJoin", action);
     actionGroup->addAction(action);
@@ -878,7 +879,7 @@ void MainWindow::setupActions()
     action->setText(i18n("Miter Join"));
     action->setWhatsThis(i18n("The Miter Join provides a mitered corner between two lines.\n\nThis is only applicable to non-filled paths."));
     action->setData(Qt::MiterJoin);
-    action->setIcon(KIcon("miter-join"));
+    action->setIcon(QIcon::fromTheme("miter-join"));
     action->setCheckable(true);
     actions->addAction("miterJoin", action);
     actionGroup->addAction(action);
@@ -887,7 +888,7 @@ void MainWindow::setupActions()
     action->setText(i18n("Round Join"));
     action->setWhatsThis(i18n("The Round Join provides a rounded corner between two lines using a radius of half the line width.\n\nThis is only applicable to non-filled paths."));
     action->setData(Qt::RoundJoin);
-    action->setIcon(KIcon("round-join"));
+    action->setIcon(QIcon::fromTheme("round-join"));
     action->setCheckable(true);
     actions->addAction("roundJoin", action);
     actionGroup->addAction(action);
@@ -897,14 +898,14 @@ void MainWindow::setupActions()
     action = new QAction(this);
     action->setText(i18n("Increase Line Width"));
     action->setWhatsThis(i18n("Increases the line width.\n\nThis is only applicable to non-filled paths."));
-    action->setIcon(KIcon("increase-line-width"));
+    action->setIcon(QIcon::fromTheme("increase-line-width"));
     connect(action, SIGNAL(triggered()), m_editor, SLOT(increaseLineWidth()));
     actions->addAction("increaseLineWidth", action);
 
     action = new QAction(this);
     action->setText(i18n("Decrease Line Width"));
     action->setWhatsThis(i18n("Decreases the line width.\n\nThis is only applicable to non-filled paths."));
-    action->setIcon(KIcon("decrease-line-width"));
+    action->setIcon(QIcon::fromTheme("decrease-line-width"));
     connect(action, SIGNAL(triggered()), m_editor, SLOT(decreaseLineWidth()));
     actions->addAction("decreaseLineWidth", action);
 
@@ -916,7 +917,7 @@ void MainWindow::setupActions()
     action->setText(i18n("Move To"));
     action->setWhatsThis(i18n("Move the current point to a new position. This implicitly closes any existing sub path, starting a new one."));
     action->setData(Editor::MoveTo);
-    action->setIcon(KIcon("go-jump"));
+    action->setIcon(QIcon::fromTheme("go-jump"));
     action->setCheckable(true);
     actions->addAction("moveTo", action);
     actionGroup->addAction(action);
@@ -925,7 +926,7 @@ void MainWindow::setupActions()
     action->setText(i18n("Draw To"));
     action->setWhatsThis(i18n("Add a straight line from the current position to a defined end point. The end point becomes the new current position."));
     action->setData(Editor::LineTo);
-    action->setIcon(KIcon("draw-line"));
+    action->setIcon(QIcon::fromTheme("draw-line"));
     action->setCheckable(true);
     actions->addAction("lineTo", action);
     actionGroup->addAction(action);
@@ -934,7 +935,7 @@ void MainWindow::setupActions()
     action->setText(i18n("Cubic To"));
     action->setWhatsThis(i18n("Add a cubic bezier curve from the current position using two control points and an end point. The end point becomes the new current position."));
     action->setData(Editor::CubicTo);
-    action->setIcon(KIcon("draw-bezier-curves"));
+    action->setIcon(QIcon::fromTheme("draw-bezier-curves"));
     action->setCheckable(true);
     actions->addAction("cubicTo", action);
     actionGroup->addAction(action);
@@ -943,7 +944,7 @@ void MainWindow::setupActions()
     action->setText(i18n("Rectangle"));
     action->setWhatsThis(i18n("Add a rectangle as a separate sub path defined by two points representing the opposite corners."));
     action->setData(Editor::Rectangle);
-    action->setIcon(KIcon("draw-rectangle"));
+    action->setIcon(QIcon::fromTheme("draw-rectangle"));
     action->setCheckable(true);
     actions->addAction("rectangle", action);
     actionGroup->addAction(action);
@@ -952,7 +953,7 @@ void MainWindow::setupActions()
     action->setText(i18n("Ellipse"));
     action->setWhatsThis(i18n("Add an ellipse as a separate sub path defined by a bounding rectangle represented by two opposite corners."));
     action->setData(Editor::Ellipse);
-    action->setIcon(KIcon("draw-ellipse"));
+    action->setIcon(QIcon::fromTheme("draw-ellipse"));
     action->setCheckable(true);
     actions->addAction("ellipse", action);
     actionGroup->addAction(action);
@@ -961,7 +962,7 @@ void MainWindow::setupActions()
     action->setText(i18n("Insert Character"));
     action->setWhatsThis(i18n("Allows selection of a character from any font to be inserted as a closed sub path. The inserted character will overwrite any existing path, but additional sub paths may be added to the character."));
     action->setData(Editor::Character);
-    action->setIcon(KIcon("character-set"));
+    action->setIcon(QIcon::fromTheme("character-set"));
     action->setCheckable(true);
     actions->addAction("character", action);
     actionGroup->addAction(action);
@@ -971,42 +972,42 @@ void MainWindow::setupActions()
     action = new QAction(this);
     action->setText(i18n("Rotate Left"));
     action->setWhatsThis(i18n("Rotate all the points of a path counter-clockwise 90 degrees around the center of the editor."));
-    action->setIcon(KIcon("object-rotate-left"));
+    action->setIcon(QIcon::fromTheme("object-rotate-left"));
     connect(action, SIGNAL(triggered()), m_editor, SLOT(rotateLeft()));
     actions->addAction("rotateLeft", action);
 
     action = new QAction(this);
     action->setText(i18n("Rotate Right"));
     action->setWhatsThis(i18n("Rotate all the points of a path clockwise 90 degrees around the center point of the editor."));
-    action->setIcon(KIcon("object-rotate-right"));
+    action->setIcon(QIcon::fromTheme("object-rotate-right"));
     connect(action, SIGNAL(triggered()), m_editor, SLOT(rotateRight()));
     actions->addAction("rotateRight", action);
 
     action = new QAction(this);
     action->setText(i18n("Flip Horizontal"));
     action->setWhatsThis(i18n("Flip all the points of the path horizontally about the vertical center of the editor."));
-    action->setIcon(KIcon("object-flip-horizontal"));
+    action->setIcon(QIcon::fromTheme("object-flip-horizontal"));
     connect(action, SIGNAL(triggered()), m_editor, SLOT(flipHorizontal()));
     actions->addAction("flipHorizontal", action);
 
     action = new QAction(this);
     action->setText(i18n("Flip Vertical"));
     action->setWhatsThis(i18n("Flip all the points of the path vertically about the horizontal center of the editor."));
-    action->setIcon(KIcon("object-flip-vertical"));
+    action->setIcon(QIcon::fromTheme("object-flip-vertical"));
     connect(action, SIGNAL(triggered()), m_editor, SLOT(flipVertical()));
     actions->addAction("flipVertical", action);
 
     action = new QAction(this);
     action->setText(i18n("Scale to Preferred Size"));
     action->setWhatsThis(i18n("Scale the current symbol so that it fits within the preferred size of a symbol."));
-    action->setIcon(KIcon("scale-preferred"));
+    action->setIcon(QIcon::fromTheme("scale-preferred"));
     connect(action, SIGNAL(triggered()), m_editor, SLOT(scalePreferred()));
     actions->addAction("scalePreferred", action);
 
     action = new QAction(this);
     action->setText(i18n("Enable Snap"));
     action->setWhatsThis(i18n("Enable snapping of points to guide intersections or to the grid."));
-    action->setIcon(KIcon("snap-to-grid"));
+    action->setIcon(QIcon::fromTheme("snap-to-grid"));
     action->setCheckable(true);
     connect(action, SIGNAL(toggled(bool)), m_editor, SLOT(enableSnap(bool)));
     actions->addAction("enableSnap", action);
@@ -1014,7 +1015,7 @@ void MainWindow::setupActions()
     action = new QAction(this);
     action->setText(i18n("Enable Guides"));
     action->setWhatsThis(i18n("Enable the generation of guide intersections."));
-    action->setIcon(KIcon("snap-guides"));
+    action->setIcon(QIcon::fromTheme("snap-guides"));
     action->setCheckable(true);
     connect(action, SIGNAL(toggled(bool)), m_editor, SLOT(enableGuides(bool)));
     actions->addAction("enableGuides", action);
