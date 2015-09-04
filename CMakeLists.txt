@@ -58,7 +58,7 @@ qt5_wrap_ui (SymbolEditor_SRCS
     ui/EditorConfigPage.ui
 )
 
-ecm_install_icons (ICONS 32-apps-symboleditor.png DESTINATION ${ICON_INSTALL_DIR})
+ecm_install_icons (ICONS sc-apps-SymbolEditor.svgz DESTINATION ${ICON_INSTALL_DIR})
 
 add_executable (SymbolEditor ${SymbolEditor_SRCS})
 
