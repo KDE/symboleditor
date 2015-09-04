@@ -22,6 +22,7 @@ find_package (KF5 REQUIRED COMPONENTS
     Config
     I18n
     KIO
+    WidgetsAddons
     XmlGui
 )
 
@@ -68,6 +69,7 @@ target_link_libraries (SymbolEditor
     KF5::Config
     KF5::I18n
     KF5::KIO
+    KF5::WidgetsAddons
     KF5::XmlGui
 )
 
