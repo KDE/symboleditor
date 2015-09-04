@@ -144,11 +144,11 @@
 
 #include "MainWindow.h"
 
+#include <QAction>
 #include <QVBoxLayout>
 #include <QListWidgetItem>
 #include <QMenu>
 
-#include <KAction>
 #include <KActionCollection>
 #include <KConfigDialog>
 #include <KFileDialog>
@@ -756,11 +756,11 @@ void MainWindow::preferences()
  * Create standard actions.
  * Create other actions, setting the icon and data as required.
  * Several actions are added to groups which are set as exclusive.
- * All actions are added to the applications KActionCollection.
+ * All actions are added to the applications QActionCollection.
  */
 void MainWindow::setupActions()
 {
-    KAction *action;
+    QAction *action;
     QActionGroup *actionGroup;
 
     KActionCollection *actions = actionCollection();
@@ -772,20 +772,20 @@ void MainWindow::setupActions()
     KStandardAction::save(this, SLOT(save()), actions);
     KStandardAction::saveAs(this, SLOT(saveAs()), actions);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Import Library"));
     action->setWhatsThis(i18n("Imports another library appending the symbols it contains to the current library."));
     connect(action, SIGNAL(triggered()), this, SLOT(importLibrary()));
     actions->addAction("importLibrary", action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Save Symbol"));
     action->setWhatsThis(i18n("Save the symbol to the library. If this is a new symbol, subsequent saves will create additional symbols in the library. If the symbol was selected from the library to edit then saving will update that symbol in the library."));
     action->setIcon(KIcon("save-symbol"));
     connect(action, SIGNAL(triggered()), this, SLOT(saveSymbol()));
     actions->addAction("saveSymbol", action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Save Symbol as New"));
     action->setWhatsThis(i18n("Save the current symbol as a new one in the library. Subsequent saves will update the new symbol."));
     connect(action, SIGNAL(triggered()), this, SLOT(saveSymbolAsNew()));
@@ -799,7 +799,7 @@ void MainWindow::setupActions()
     KStandardAction::redo(this, SLOT(redo()), actions);
 
     // Rendering menu
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Fill Path"));
     action->setWhatsThis(i18n("Enable path filling. The path defines the closed boundary of the shape and the path is filled with the selected fill method."));
     action->setIcon(KIcon("rating"));
@@ -810,7 +810,7 @@ void MainWindow::setupActions()
     actionGroup = new QActionGroup(this);
     actionGroup->setExclusive(true);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Odd Even Fill"));
     action->setWhatsThis(i18n("The Odd Even fill method will fill alternate areas of the symbol."));
     action->setData(Qt::OddEvenFill);
@@ -819,7 +819,7 @@ void MainWindow::setupActions()
     actions->addAction("oddEvenFill", action);
     actionGroup->addAction(action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Winding Fill"));
     action->setWhatsThis(i18n("The Winding fill method will fill the complete interior of the path."));
     action->setData(Qt::WindingFill);
@@ -833,7 +833,7 @@ void MainWindow::setupActions()
     actionGroup = new QActionGroup(this);
     actionGroup->setExclusive(true);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Flat Cap"));
     action->setWhatsThis(i18n("The Flat Cap end type provides a square end that stops at the end point of the line.\n\nThis is only applicable to non-filled paths."));
     action->setData(Qt::FlatCap);
@@ -842,7 +842,7 @@ void MainWindow::setupActions()
     actions->addAction("flatCap", action);
     actionGroup->addAction(action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Square Cap"));
     action->setWhatsThis(i18n("The Square Cap end type provides a square end that projects beyond the end point of the line by half the line width.\n\nThis is only applicable to non-filled paths."));
     action->setData(Qt::SquareCap);
@@ -851,7 +851,7 @@ void MainWindow::setupActions()
     actions->addAction("squareCap", action);
     actionGroup->addAction(action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Round Cap"));
     action->setWhatsThis(i18n("The Round Cap end type provides a round end that projects beyond the end point of the line with a radius of half the line width.\n\nThis is only applicable to non-filled paths."));
     action->setData(Qt::RoundCap);
@@ -865,7 +865,7 @@ void MainWindow::setupActions()
     actionGroup = new QActionGroup(this);
     actionGroup->setExclusive(true);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Bevel Join"));
     action->setWhatsThis(i18n("The Bevel Join provides a beveled corner between two lines.\n\nThis is only applicable to non-filled paths."));
     action->setData(Qt::BevelJoin);
@@ -874,7 +874,7 @@ void MainWindow::setupActions()
     actions->addAction("bevelJoin", action);
     actionGroup->addAction(action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Miter Join"));
     action->setWhatsThis(i18n("The Miter Join provides a mitered corner between two lines.\n\nThis is only applicable to non-filled paths."));
     action->setData(Qt::MiterJoin);
@@ -883,7 +883,7 @@ void MainWindow::setupActions()
     actions->addAction("miterJoin", action);
     actionGroup->addAction(action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Round Join"));
     action->setWhatsThis(i18n("The Round Join provides a rounded corner between two lines using a radius of half the line width.\n\nThis is only applicable to non-filled paths."));
     action->setData(Qt::RoundJoin);
@@ -894,14 +894,14 @@ void MainWindow::setupActions()
 
     connect(actionGroup, SIGNAL(triggered(QAction*)), m_editor, SLOT(selectJoinStyle(QAction*)));
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Increase Line Width"));
     action->setWhatsThis(i18n("Increases the line width.\n\nThis is only applicable to non-filled paths."));
     action->setIcon(KIcon("increase-line-width"));
     connect(action, SIGNAL(triggered()), m_editor, SLOT(increaseLineWidth()));
     actions->addAction("increaseLineWidth", action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Decrease Line Width"));
     action->setWhatsThis(i18n("Decreases the line width.\n\nThis is only applicable to non-filled paths."));
     action->setIcon(KIcon("decrease-line-width"));
@@ -912,7 +912,7 @@ void MainWindow::setupActions()
     actionGroup = new QActionGroup(this);
     actionGroup->setExclusive(true);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Move To"));
     action->setWhatsThis(i18n("Move the current point to a new position. This implicitly closes any existing sub path, starting a new one."));
     action->setData(Editor::MoveTo);
@@ -921,7 +921,7 @@ void MainWindow::setupActions()
     actions->addAction("moveTo", action);
     actionGroup->addAction(action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Draw To"));
     action->setWhatsThis(i18n("Add a straight line from the current position to a defined end point. The end point becomes the new current position."));
     action->setData(Editor::LineTo);
@@ -930,7 +930,7 @@ void MainWindow::setupActions()
     actions->addAction("lineTo", action);
     actionGroup->addAction(action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Cubic To"));
     action->setWhatsThis(i18n("Add a cubic bezier curve from the current position using two control points and an end point. The end point becomes the new current position."));
     action->setData(Editor::CubicTo);
@@ -939,7 +939,7 @@ void MainWindow::setupActions()
     actions->addAction("cubicTo", action);
     actionGroup->addAction(action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Rectangle"));
     action->setWhatsThis(i18n("Add a rectangle as a separate sub path defined by two points representing the opposite corners."));
     action->setData(Editor::Rectangle);
@@ -948,7 +948,7 @@ void MainWindow::setupActions()
     actions->addAction("rectangle", action);
     actionGroup->addAction(action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Ellipse"));
     action->setWhatsThis(i18n("Add an ellipse as a separate sub path defined by a bounding rectangle represented by two opposite corners."));
     action->setData(Editor::Ellipse);
@@ -957,7 +957,7 @@ void MainWindow::setupActions()
     actions->addAction("ellipse", action);
     actionGroup->addAction(action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Insert Character"));
     action->setWhatsThis(i18n("Allows selection of a character from any font to be inserted as a closed sub path. The inserted character will overwrite any existing path, but additional sub paths may be added to the character."));
     action->setData(Editor::Character);
@@ -968,42 +968,42 @@ void MainWindow::setupActions()
 
     connect(actionGroup, SIGNAL(triggered(QAction*)), m_editor, SLOT(selectTool(QAction*)));
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Rotate Left"));
     action->setWhatsThis(i18n("Rotate all the points of a path counter-clockwise 90 degrees around the center of the editor."));
     action->setIcon(KIcon("object-rotate-left"));
     connect(action, SIGNAL(triggered()), m_editor, SLOT(rotateLeft()));
     actions->addAction("rotateLeft", action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Rotate Right"));
     action->setWhatsThis(i18n("Rotate all the points of a path clockwise 90 degrees around the center point of the editor."));
     action->setIcon(KIcon("object-rotate-right"));
     connect(action, SIGNAL(triggered()), m_editor, SLOT(rotateRight()));
     actions->addAction("rotateRight", action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Flip Horizontal"));
     action->setWhatsThis(i18n("Flip all the points of the path horizontally about the vertical center of the editor."));
     action->setIcon(KIcon("object-flip-horizontal"));
     connect(action, SIGNAL(triggered()), m_editor, SLOT(flipHorizontal()));
     actions->addAction("flipHorizontal", action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Flip Vertical"));
     action->setWhatsThis(i18n("Flip all the points of the path vertically about the horizontal center of the editor."));
     action->setIcon(KIcon("object-flip-vertical"));
     connect(action, SIGNAL(triggered()), m_editor, SLOT(flipVertical()));
     actions->addAction("flipVertical", action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Scale to Preferred Size"));
     action->setWhatsThis(i18n("Scale the current symbol so that it fits within the preferred size of a symbol."));
     action->setIcon(KIcon("scale-preferred"));
     connect(action, SIGNAL(triggered()), m_editor, SLOT(scalePreferred()));
     actions->addAction("scalePreferred", action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Enable Snap"));
     action->setWhatsThis(i18n("Enable snapping of points to guide intersections or to the grid."));
     action->setIcon(KIcon("snap-to-grid"));
@@ -1011,7 +1011,7 @@ void MainWindow::setupActions()
     connect(action, SIGNAL(toggled(bool)), m_editor, SLOT(enableSnap(bool)));
     actions->addAction("enableSnap", action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Enable Guides"));
     action->setWhatsThis(i18n("Enable the generation of guide intersections."));
     action->setIcon(KIcon("snap-guides"));
