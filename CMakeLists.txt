@@ -66,9 +66,9 @@ add_executable (SymbolEditor ${SymbolEditor_SRCS})
 target_link_libraries (SymbolEditor
     Qt5::Core
     Qt5::Widgets
-    KF5::Config
+    KF5::ConfigGui
     KF5::I18n
-    KF5::KIO
+    KF5::KIOFileWidgets
     KF5::WidgetsAddons
     KF5::XmlGui
 )
