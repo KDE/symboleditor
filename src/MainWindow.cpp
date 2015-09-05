@@ -155,7 +155,7 @@
 #include <KFileDialog>
 #include <KGlobalSettings>
 #include <KIO/NetAccess>
-#include <KLocale>
+#include <KLocalizedString>
 #include <KMessageBox>
 #include <KRecentFilesAction>
 #include <KStatusBar>

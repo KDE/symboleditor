@@ -33,7 +33,7 @@
 #include <QPainterPath>
 #include <QMimeData>
 
-#include <KLocale>
+#include <KLocalizedString>
 
 #include "Editor.h"
 #include "SymbolLibrary.h"

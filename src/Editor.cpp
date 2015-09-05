@@ -158,7 +158,7 @@
 #include <QString>
 
 #include <KCharSelect>
-#include <KLocale>
+#include <KLocalizedString>
 
 #include <math.h>
 
