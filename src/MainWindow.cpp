@@ -152,11 +152,13 @@
 #include <QMenu>
 #include <QStatusBar>
 #include <QTabWidget>
+#include <QTemporaryFile>
 
 #include <KActionCollection>
 #include <KConfigDialog>
 #include <KConfigGroup>
-#include <KIO/NetAccess>
+#include <KIO/FileCopyJob>
+#include <KIO/StatJob>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KRecentFilesAction>
@@ -373,13 +375,13 @@ void MainWindow::fileOpen(const QUrl &url)
     m_editor->clear();
 
     if (url.isValid()) {
-        QString src;
+        QTemporaryFile tmpFile;
 
-        if (KIO::NetAccess::download(url, src, 0)) {
-            QFile file(src);
+        if (tmpFile.open()) {
+            KIO::FileCopyJob *job = KIO::file_copy(url, QUrl::fromLocalFile(tmpFile.fileName()), -1, KIO::Overwrite);
 
-            if (file.open(QIODevice::ReadOnly)) {
-                QDataStream stream(&file);
+            if (job->exec()) {
+                QDataStream stream(&tmpFile);
 
                 try {
                     stream >> *m_symbolLibrary;
@@ -398,13 +400,11 @@ void MainWindow::fileOpen(const QUrl &url)
                     KMessageBox::sorry(0, i18n("Failed to read the library\n%1", e.statusMessage()));
                     m_symbolLibrary->clear();
                 }
-
-                file.close();
             } else {
-                KMessageBox::sorry(0, i18n("Failed to open the file %1", url.fileName()));
+                KMessageBox::sorry(0, job->errorString());
             }
         } else {
-            KMessageBox::sorry(0, i18n("Failed to download the file %1", url.fileName()));
+            KMessageBox::sorry(0, tmpFile.errorString());
         }
     } else {
         KMessageBox::sorry(0, i18n("The url %1 is invalid", url.fileName()));
@@ -454,7 +454,9 @@ void MainWindow::saveAs()
     QUrl url = QFileDialog::getSaveFileUrl(this, i18n("Save As..."), QUrl::fromLocalFile(QDir::homePath()), i18n("Cross Stitch Symbols (*.sym)"));
 
     if (url.isValid()) {
-        if (KIO::NetAccess::exists(url, false, 0)) {
+        KIO::StatJob *statJob = KIO::stat(url, KIO::StatJob::DestinationSide, 0);
+
+        if (statJob->exec()) {
             if (KMessageBox::warningYesNo(this, i18n("This file already exists\nDo you want to overwrite it?")) == KMessageBox::No) {
                 return;
             }
@@ -534,14 +536,14 @@ void MainWindow::importLibrary()
     }
 
     if (url.isValid()) {
-        QString src;
+        QTemporaryFile tmpFile;
 
-        if (KIO::NetAccess::download(url, src, 0)) {
-            QFile file(src);
+        if (tmpFile.open()) {
+            KIO::FileCopyJob *job = KIO::file_copy(url, QUrl::fromLocalFile(tmpFile.fileName()), -1, KIO::Overwrite);
 
-            if (file.open(QIODevice::ReadOnly)) {
+            if (job->exec()) {
                 SymbolLibrary *lib = new SymbolLibrary;
-                QDataStream stream(&file);
+                QDataStream stream(&tmpFile);
 
                 try {
                     stream >> *lib;
@@ -551,13 +553,11 @@ void MainWindow::importLibrary()
                 } catch (const InvalidFileVersion &e) {
                     KMessageBox::sorry(0, i18n("Version %1 of the library file is not supported in this version of SymbolEditor", e.version));
                 }
-
-                file.close();
             } else {
-                KMessageBox::sorry(0, i18n("Failed to open the file %1", url.fileName()));
+                KMessageBox::sorry(0, job->errorString());
             }
         } else {
-            KMessageBox::sorry(0, i18n("Failed to download the file %1", url.fileName()));
+            KMessageBox::sorry(0, tmpFile.errorString());
         }
     } else {
         KMessageBox::sorry(0, i18n("The url %1 is invalid", url.fileName()));
