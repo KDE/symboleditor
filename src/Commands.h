@@ -25,6 +25,8 @@
 #include "SymbolLibrary.h"
 
 
+class QMimeData;
+
 class Editor;
 
 
