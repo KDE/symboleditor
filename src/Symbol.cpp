@@ -164,6 +164,38 @@ void Symbol::setJoinStyle(Qt::PenJoinStyle joinStyle)
 
 
 /**
+ * Get a pen based on the parameters of the symbol.
+ *
+ * @return a black QPen with the symbols width and end styles
+ */
+QPen Symbol::pen() const
+{
+    QPen p;
+
+    if (!m_filled) {
+        p.setWidthF(m_lineWidth);
+        p.setCapStyle(m_capStyle);
+        p.setJoinStyle(m_joinStyle);
+    } else {
+        p.setCosmetic(true);
+    }
+
+    return p;
+}
+
+
+/**
+ * Get a brush based on the parameters of the symbol.
+ *
+ * @return a black brush based on the filled state of the symbol
+ */
+QBrush Symbol::brush() const
+{
+    return QBrush(m_filled ? Qt::SolidPattern : Qt::NoBrush);
+}
+
+
+/**
  * Stream out a Symbol.
  *
  * @param stream a reference to the QDataStream to write to

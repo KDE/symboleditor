@@ -18,8 +18,9 @@
 #ifndef Symbol_H
 #define Symbol_H
 
-
+#include <QBrush>
 #include <QPainterPath>
+#include <QPen>
 
 
 /**
@@ -47,6 +48,9 @@ public:
     void setLineWidth(qreal width);
     void setCapStyle(Qt::PenCapStyle penCapStyle);
     void setJoinStyle(Qt::PenJoinStyle penJoinStyle);
+
+    QPen pen() const;
+    QBrush brush() const;
 
     friend QDataStream &operator<<(QDataStream &stream, const Symbol &symbol);
     friend QDataStream &operator>>(QDataStream &stream, Symbol &symbol);
