@@ -743,7 +743,7 @@ void MainWindow::preferences()
     dialog->setFaceType(KPageDialog::List);
 
     dialog->addPage(new EditorConfigPage(0, "EditorConfigPage"), i18nc("The Editor configuration page", "Editor"), "preferences-desktop");
-    dialog->setHelp("ConfigurationDialog");
+//    dialog->setHelp("ConfigurationDialog");
 
     connect(dialog, SIGNAL(settingsChanged(QString)), m_editor, SLOT(readSettings()));
 
