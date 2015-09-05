@@ -150,6 +150,7 @@
 #include <QVBoxLayout>
 #include <QListWidgetItem>
 #include <QMenu>
+#include <QStatusBar>
 
 #include <KActionCollection>
 #include <KConfigDialog>
@@ -158,7 +159,6 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KRecentFilesAction>
-#include <KStatusBar>
 #include <KTabWidget>
 
 #include "ConfigurationDialogs.h"
