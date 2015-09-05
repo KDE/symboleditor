@@ -11,6 +11,8 @@ include (KDECompilerSettings)
 include (ECMInstallIcons)
 include (FeatureSummary)
 
+kde_enable_exceptions ()
+
 find_package (Qt5 CONFIG REQUIRED
     Core
     Widgets
