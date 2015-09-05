@@ -145,6 +145,7 @@
 #include "MainWindow.h"
 
 #include <QAction>
+#include <QFileDialog>
 #include <QIcon>
 #include <QVBoxLayout>
 #include <QListWidgetItem>
@@ -152,7 +153,6 @@
 
 #include <KActionCollection>
 #include <KConfigDialog>
-#include <KFileDialog>
 #include <KGlobalSettings>
 #include <KIO/NetAccess>
 #include <KLocalizedString>
@@ -341,11 +341,11 @@ bool MainWindow::queryExit()
 
 /**
  * Open a file.
- * Use the KFileDialog::getOpenUrl to get a QUrl to open which is then passed to filOpen(const QUrl &).
+ * Use the QFileDialog::getOpenFileUrl to get a QUrl to open which is then passed to filOpen(const QUrl &).
  */
 void MainWindow::fileOpen()
 {
-    QUrl url = KFileDialog::getOpenUrl(QUrl("kfiledialog:///"), i18n("*.sym|Cross Stitch Symbols"), this);
+    QUrl url = QFileDialog::getOpenFileUrl(this, i18n("Open file"), QUrl::fromLocalFile(QDir::homePath()), i18n("Cross Stitch Symbols (*.sym)"));
 
     if (!url.isEmpty()) {
         fileOpen(url);
@@ -451,7 +451,7 @@ void MainWindow::save()
  */
 void MainWindow::saveAs()
 {
-    QUrl url = KFileDialog::getSaveUrl(QString("::%1").arg(KGlobalSettings::documentPath()), i18n("*.sym|Cross Stitch Symbols"), this, i18n("Save As"));
+    QUrl url = QFileDialog::getSaveFileUrl(this, i18n("Save As..."), QUrl::fromLocalFile(QDir::homePath()), i18n("Cross Stitch Symbols (*.sym)"));
 
     if (url.isValid()) {
         if (KIO::NetAccess::exists(url, false, 0)) {
@@ -527,7 +527,7 @@ void MainWindow::saveSymbolAsNew()
  */
 void MainWindow::importLibrary()
 {
-    QUrl url = KFileDialog::getOpenUrl(QUrl("kfiledialog:///"), i18n("*.sym|Cross Stitch Symbols"), this);
+    QUrl url = QFileDialog::getOpenFileUrl(this, i18n("Import library"), QUrl::fromLocalFile(QDir::homePath()), i18n("Cross Stitch Symbols (*.sym)"));
 
     if (url.isEmpty()) {
         return;
