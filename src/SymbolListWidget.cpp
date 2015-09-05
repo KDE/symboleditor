@@ -177,17 +177,9 @@ QIcon SymbolListWidget::createIcon(const Symbol &symbol, int size)
     QPainter p(&icon);
     p.setRenderHint(QPainter::Antialiasing, true);
     p.scale(size, size);
-    QBrush brush(symbol.filled() ? Qt::SolidPattern : Qt::NoBrush);
-    QPen pen;
 
-    if (!symbol.filled()) {
-        pen.setWidthF(symbol.lineWidth());
-        pen.setCapStyle(symbol.capStyle());
-        pen.setJoinStyle(symbol.joinStyle());
-    }
-
-    p.setBrush(brush);
-    p.setPen(pen);
+    p.setBrush(symbol.brush());
+    p.setPen(symbol.pen());
     p.drawPath(symbol.path());
     p.end();
     return QIcon(icon);
