@@ -802,7 +802,7 @@ void MainWindow::setupActions()
     action = new QAction(this);
     action->setText(i18n("Fill Path"));
     action->setWhatsThis(i18n("Enable path filling. The path defines the closed boundary of the shape and the path is filled with the selected fill method."));
-    action->setIcon(QIcon::fromTheme("rating"));
+    action->setIcon(QIcon::fromTheme("format-fill-color"));
     action->setCheckable(true);
     connect(action, SIGNAL(triggered(bool)), m_editor, SLOT(selectFilled(bool)));
     actions->addAction("fillPath", action);
@@ -837,7 +837,7 @@ void MainWindow::setupActions()
     action->setText(i18n("Flat Cap"));
     action->setWhatsThis(i18n("The Flat Cap end type provides a square end that stops at the end point of the line.\n\nThis is only applicable to non-filled paths."));
     action->setData(Qt::FlatCap);
-    action->setIcon(QIcon::fromTheme("flat-cap"));
+    action->setIcon(QIcon::fromTheme("stroke-cap-butt"));
     action->setCheckable(true);
     actions->addAction("flatCap", action);
     actionGroup->addAction(action);
@@ -846,7 +846,7 @@ void MainWindow::setupActions()
     action->setText(i18n("Square Cap"));
     action->setWhatsThis(i18n("The Square Cap end type provides a square end that projects beyond the end point of the line by half the line width.\n\nThis is only applicable to non-filled paths."));
     action->setData(Qt::SquareCap);
-    action->setIcon(QIcon::fromTheme("square-cap"));
+    action->setIcon(QIcon::fromTheme("stroke-cap-square"));
     action->setCheckable(true);
     actions->addAction("squareCap", action);
     actionGroup->addAction(action);
@@ -855,7 +855,7 @@ void MainWindow::setupActions()
     action->setText(i18n("Round Cap"));
     action->setWhatsThis(i18n("The Round Cap end type provides a round end that projects beyond the end point of the line with a radius of half the line width.\n\nThis is only applicable to non-filled paths."));
     action->setData(Qt::RoundCap);
-    action->setIcon(QIcon::fromTheme("round-cap"));
+    action->setIcon(QIcon::fromTheme("stroke-cap-round"));
     action->setCheckable(true);
     actions->addAction("roundCap", action);
     actionGroup->addAction(action);
@@ -869,7 +869,7 @@ void MainWindow::setupActions()
     action->setText(i18n("Bevel Join"));
     action->setWhatsThis(i18n("The Bevel Join provides a beveled corner between two lines.\n\nThis is only applicable to non-filled paths."));
     action->setData(Qt::BevelJoin);
-    action->setIcon(QIcon::fromTheme("bevel-join"));
+    action->setIcon(QIcon::fromTheme("stroke-join-bevel"));
     action->setCheckable(true);
     actions->addAction("bevelJoin", action);
     actionGroup->addAction(action);
@@ -878,7 +878,7 @@ void MainWindow::setupActions()
     action->setText(i18n("Miter Join"));
     action->setWhatsThis(i18n("The Miter Join provides a mitered corner between two lines.\n\nThis is only applicable to non-filled paths."));
     action->setData(Qt::MiterJoin);
-    action->setIcon(QIcon::fromTheme("miter-join"));
+    action->setIcon(QIcon::fromTheme("stroke-join-miter"));
     action->setCheckable(true);
     actions->addAction("miterJoin", action);
     actionGroup->addAction(action);
@@ -887,7 +887,7 @@ void MainWindow::setupActions()
     action->setText(i18n("Round Join"));
     action->setWhatsThis(i18n("The Round Join provides a rounded corner between two lines using a radius of half the line width.\n\nThis is only applicable to non-filled paths."));
     action->setData(Qt::RoundJoin);
-    action->setIcon(QIcon::fromTheme("round-join"));
+    action->setIcon(QIcon::fromTheme("stroke-join-round"));
     action->setCheckable(true);
     actions->addAction("roundJoin", action);
     actionGroup->addAction(action);
@@ -961,7 +961,7 @@ void MainWindow::setupActions()
     action->setText(i18n("Insert Character"));
     action->setWhatsThis(i18n("Allows selection of a character from any font to be inserted as a closed sub path. The inserted character will overwrite any existing path, but additional sub paths may be added to the character."));
     action->setData(Editor::Character);
-    action->setIcon(QIcon::fromTheme("character-set"));
+    action->setIcon(QIcon::fromTheme("insert-text"));
     action->setCheckable(true);
     actions->addAction("character", action);
     actionGroup->addAction(action);
@@ -1006,7 +1006,7 @@ void MainWindow::setupActions()
     action = new QAction(this);
     action->setText(i18n("Enable Snap"));
     action->setWhatsThis(i18n("Enable snapping of points to guide intersections or to the grid."));
-    action->setIcon(QIcon::fromTheme("snap-to-grid"));
+    action->setIcon(QIcon::fromTheme("snap-orthogonal"));
     action->setCheckable(true);
     connect(action, SIGNAL(toggled(bool)), m_editor, SLOT(enableSnap(bool)));
     actions->addAction("enableSnap", action);
@@ -1014,7 +1014,7 @@ void MainWindow::setupActions()
     action = new QAction(this);
     action->setText(i18n("Enable Guides"));
     action->setWhatsThis(i18n("Enable the generation of guide intersections."));
-    action->setIcon(QIcon::fromTheme("snap-guides"));
+    action->setIcon(QIcon::fromTheme("snap-intersection"));
     action->setCheckable(true);
     connect(action, SIGNAL(toggled(bool)), m_editor, SLOT(enableGuides(bool)));
     actions->addAction("enableGuides", action);
