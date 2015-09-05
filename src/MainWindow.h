@@ -24,10 +24,9 @@
 
 #include <KXmlGuiWindow>
 
-
 class QListWidgetItem;
 
-class KTabWidget;
+class QTabWidget;
 
 class Editor;
 class Symbol;
@@ -93,7 +92,7 @@ private:
 
     QUrl                m_url;          /**< url of the loaded library */
 
-    KTabWidget          *m_tabWidget;   /**< pointer to the KTabWidget containing the editor and library tabs */
+    QTabWidget          *m_tabWidget;   /**< pointer to the QTabWidget containing the editor and library tabs */
     Editor              *m_editor;      /**< pointer to the Editor */
     SymbolListWidget    *m_listWidget;  /**< pointer to the SymbolListWidget containing icons for the library symbols */
 

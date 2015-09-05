@@ -151,6 +151,7 @@
 #include <QListWidgetItem>
 #include <QMenu>
 #include <QStatusBar>
+#include <QTabWidget>
 
 #include <KActionCollection>
 #include <KConfigDialog>
@@ -159,7 +160,6 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KRecentFilesAction>
-#include <KTabWidget>
 
 #include "ConfigurationDialogs.h"
 #include "Editor.h"
@@ -185,7 +185,7 @@
  * Other actions are initialised from the current Editor symbol.
  */
 MainWindow::MainWindow()
-    :   m_tabWidget(new KTabWidget(this)),
+    :   m_tabWidget(new QTabWidget(this)),
         m_editor(new Editor),
         m_listWidget(new SymbolListWidget(m_tabWidget)),
         m_symbolLibrary(new SymbolLibrary(m_listWidget)),
