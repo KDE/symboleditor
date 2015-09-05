@@ -225,7 +225,7 @@ MainWindow::MainWindow()
     connect(m_editor->undoStack(), SIGNAL(cleanChanged(bool)), actions->action("saveSymbol"), SLOT(setDisabled(bool)));
     connect(m_editor->undoStack(), SIGNAL(cleanChanged(bool)), actions->action("saveSymbolAsNew"), SLOT(setDisabled(bool)));
     connect(m_symbolLibrary->undoStack(), SIGNAL(cleanChanged(bool)), actions->action("file_save"), SLOT(setDisabled(bool)));
-    connect(m_listWidget, SIGNAL(executed(QListWidgetItem*)), this, SLOT(itemSelected(QListWidgetItem*)));
+    connect(m_listWidget, SIGNAL(itemClicked(QListWidgetItem*)), this, SLOT(itemSelected(QListWidgetItem*)));
     connect(m_listWidget, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(listWidgetContextMenuRequested(QPoint)));
 
     setupGUI(KXmlGuiWindow::Default, "SymbolEditorui.rc");
