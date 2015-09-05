@@ -23,8 +23,6 @@
 #include <QPainterPath>
 #include <QUndoStack>
 
-#include <KUrl>
-
 #include "Symbol.h"
 
 

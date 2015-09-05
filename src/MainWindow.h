@@ -20,8 +20,8 @@
 
 
 #include <QUndoGroup>
+#include <QUrl>
 
-#include <KUrl>
 #include <KXmlGuiWindow>
 
 
@@ -60,7 +60,7 @@ protected:
 protected slots:
     // File menu
     void fileOpen();
-    void fileOpen(const KUrl &url);
+    void fileOpen(const QUrl &url);
     void save();
     void saveAs();
     void newSymbol();
@@ -91,7 +91,7 @@ private:
     void setupActions();
     void setActionsFromSymbol(const Symbol &symbol);
 
-    KUrl                m_url;          /**< url of the loaded library */
+    QUrl                m_url;          /**< url of the loaded library */
 
     KTabWidget          *m_tabWidget;   /**< pointer to the KTabWidget containing the editor and library tabs */
     Editor              *m_editor;      /**< pointer to the Editor */

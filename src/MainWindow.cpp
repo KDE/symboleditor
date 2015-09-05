@@ -160,7 +160,6 @@
 #include <KRecentFilesAction>
 #include <KStatusBar>
 #include <KTabWidget>
-#include <KUrl>
 
 #include "ConfigurationDialogs.h"
 #include "Editor.h"
@@ -194,7 +193,7 @@ MainWindow::MainWindow()
         m_menu(0)
 {
     m_listWidget->loadFromLibrary(m_symbolLibrary);
-    m_url = KUrl(i18n("Untitled"));
+    m_url = QUrl(i18n("Untitled"));
 
     setObjectName("MainWindow#");
 
@@ -342,11 +341,11 @@ bool MainWindow::queryExit()
 
 /**
  * Open a file.
- * Use the KFileDialog::getOpenUrl to get a KUrl to open which is then passed to filOpen(const KURl &).
+ * Use the KFileDialog::getOpenUrl to get a QUrl to open which is then passed to filOpen(const QUrl &).
  */
 void MainWindow::fileOpen()
 {
-    KUrl url = KFileDialog::getOpenUrl(KUrl("kfiledialog:///"), i18n("*.sym|Cross Stitch Symbols"), this);
+    QUrl url = KFileDialog::getOpenUrl(QUrl("kfiledialog:///"), i18n("*.sym|Cross Stitch Symbols"), this);
 
     if (!url.isEmpty()) {
         fileOpen(url);
@@ -364,7 +363,7 @@ void MainWindow::fileOpen()
  * writing to a corrupt file or to a file that isn't a symbol file. The url is added to the recent file
  * list.
  */
-void MainWindow::fileOpen(const KUrl &url)
+void MainWindow::fileOpen(const QUrl &url)
 {
     if (!editorClean() || !libraryClean()) {
         return;
@@ -421,7 +420,7 @@ void MainWindow::fileOpen(const KUrl &url)
  */
 void MainWindow::save()
 {
-    if (m_url == KUrl(i18n("Untitled"))) {
+    if (m_url == QUrl(i18n("Untitled"))) {
         saveAs();
     } else {
         QFile file(m_url.path());
@@ -452,7 +451,7 @@ void MainWindow::save()
  */
 void MainWindow::saveAs()
 {
-    KUrl url = KFileDialog::getSaveUrl(QString("::%1").arg(KGlobalSettings::documentPath()), i18n("*.sym|Cross Stitch Symbols"), this, i18n("Save As"));
+    QUrl url = KFileDialog::getSaveUrl(QString("::%1").arg(KGlobalSettings::documentPath()), i18n("*.sym|Cross Stitch Symbols"), this, i18n("Save As"));
 
     if (url.isValid()) {
         if (KIO::NetAccess::exists(url, false, 0)) {
@@ -528,7 +527,7 @@ void MainWindow::saveSymbolAsNew()
  */
 void MainWindow::importLibrary()
 {
-    KUrl url = KFileDialog::getOpenUrl(KUrl("kfiledialog:///"), i18n("*.sym|Cross Stitch Symbols"), this);
+    QUrl url = KFileDialog::getOpenUrl(QUrl("kfiledialog:///"), i18n("*.sym|Cross Stitch Symbols"), this);
 
     if (url.isEmpty()) {
         return;
@@ -576,7 +575,7 @@ void MainWindow::close()
     if (editorClean() && libraryClean()) {
         m_editor->clear();
         m_symbolLibrary->clear();
-        m_url = KUrl(i18n("Untitled"));
+        m_url = QUrl(i18n("Untitled"));
     }
 }
 
@@ -769,7 +768,7 @@ void MainWindow::setupActions()
     // File menu
     KStandardAction::open(this, SLOT(fileOpen()), actions);
     KStandardAction::openNew(this, SLOT(newSymbol()), actions);
-    KStandardAction::openRecent(this, SLOT(fileOpen(KUrl)), actions)->loadEntries(KConfigGroup(KGlobal::config(), "RecentFiles"));
+    KStandardAction::openRecent(this, SLOT(fileOpen(QUrl)), actions)->loadEntries(KConfigGroup(KGlobal::config(), "RecentFiles"));
     KStandardAction::save(this, SLOT(save()), actions);
     KStandardAction::saveAs(this, SLOT(saveAs()), actions);
 
