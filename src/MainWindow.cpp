@@ -153,7 +153,7 @@
 
 #include <KActionCollection>
 #include <KConfigDialog>
-#include <KGlobalSettings>
+#include <KConfigGroup>
 #include <KIO/NetAccess>
 #include <KLocalizedString>
 #include <KMessageBox>
@@ -386,7 +386,7 @@ void MainWindow::fileOpen(const QUrl &url)
                     m_url = url;
                     KRecentFilesAction *action = static_cast<KRecentFilesAction *>(actionCollection()->action("file_open_recent"));
                     action->addUrl(url);
-                    action->saveEntries(KConfigGroup(KGlobal::config(), "RecentFiles"));
+                    action->saveEntries(KConfigGroup(KSharedConfig::openConfig(), "RecentFiles"));
                     m_tabWidget->setCurrentIndex(1);
                 } catch (const InvalidFile &e) {
                     KMessageBox::sorry(0, i18n("This doesn't appear to be a valid symbol file"));
@@ -464,7 +464,7 @@ void MainWindow::saveAs()
         save();
         KRecentFilesAction *action = static_cast<KRecentFilesAction *>(actionCollection()->action("file_open_recent"));
         action->addUrl(url);
-        action->saveEntries(KConfigGroup(KGlobal::config(), "RecentFiles"));
+        action->saveEntries(KConfigGroup(KSharedConfig::openConfig(), "RecentFiles"));
     }
 }
 
@@ -768,7 +768,7 @@ void MainWindow::setupActions()
     // File menu
     KStandardAction::open(this, SLOT(fileOpen()), actions);
     KStandardAction::openNew(this, SLOT(newSymbol()), actions);
-    KStandardAction::openRecent(this, SLOT(fileOpen(QUrl)), actions)->loadEntries(KConfigGroup(KGlobal::config(), "RecentFiles"));
+    KStandardAction::openRecent(this, SLOT(fileOpen(QUrl)), actions)->loadEntries(KConfigGroup(KSharedConfig::openConfig(), "RecentFiles"));
     KStandardAction::save(this, SLOT(save()), actions);
     KStandardAction::saveAs(this, SLOT(saveAs()), actions);
 
