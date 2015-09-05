@@ -781,7 +781,7 @@ void MainWindow::setupActions()
     action = new QAction(this);
     action->setText(i18n("Save Symbol"));
     action->setWhatsThis(i18n("Save the symbol to the library. If this is a new symbol, subsequent saves will create additional symbols in the library. If the symbol was selected from the library to edit then saving will update that symbol in the library."));
-    action->setIcon(QIcon::fromTheme("save-symbol"));
+    action->setIcon(QIcon::fromTheme("symboleditor-save-symbol"));
     connect(action, SIGNAL(triggered()), this, SLOT(saveSymbol()));
     actions->addAction("saveSymbol", action);
 
@@ -814,7 +814,7 @@ void MainWindow::setupActions()
     action->setText(i18n("Odd Even Fill"));
     action->setWhatsThis(i18n("The Odd Even fill method will fill alternate areas of the symbol."));
     action->setData(Qt::OddEvenFill);
-    action->setIcon(QIcon::fromTheme("odd-even-fill"));
+    action->setIcon(QIcon::fromTheme("symboleditor-odd-even-fill"));
     action->setCheckable(true);
     actions->addAction("oddEvenFill", action);
     actionGroup->addAction(action);
@@ -823,7 +823,7 @@ void MainWindow::setupActions()
     action->setText(i18n("Winding Fill"));
     action->setWhatsThis(i18n("The Winding fill method will fill the complete interior of the path."));
     action->setData(Qt::WindingFill);
-    action->setIcon(QIcon::fromTheme("winding-fill"));
+    action->setIcon(QIcon::fromTheme("symboleditor-winding-fill"));
     action->setCheckable(true);
     actions->addAction("windingFill", action);
     actionGroup->addAction(action);
@@ -897,14 +897,14 @@ void MainWindow::setupActions()
     action = new QAction(this);
     action->setText(i18n("Increase Line Width"));
     action->setWhatsThis(i18n("Increases the line width.\n\nThis is only applicable to non-filled paths."));
-    action->setIcon(QIcon::fromTheme("increase-line-width"));
+    action->setIcon(QIcon::fromTheme("symboleditor-increase-line-width"));
     connect(action, SIGNAL(triggered()), m_editor, SLOT(increaseLineWidth()));
     actions->addAction("increaseLineWidth", action);
 
     action = new QAction(this);
     action->setText(i18n("Decrease Line Width"));
     action->setWhatsThis(i18n("Decreases the line width.\n\nThis is only applicable to non-filled paths."));
-    action->setIcon(QIcon::fromTheme("decrease-line-width"));
+    action->setIcon(QIcon::fromTheme("symboleditor-decrease-line-width"));
     connect(action, SIGNAL(triggered()), m_editor, SLOT(decreaseLineWidth()));
     actions->addAction("decreaseLineWidth", action);
 
@@ -999,7 +999,7 @@ void MainWindow::setupActions()
     action = new QAction(this);
     action->setText(i18n("Scale to Preferred Size"));
     action->setWhatsThis(i18n("Scale the current symbol so that it fits within the preferred size of a symbol."));
-    action->setIcon(QIcon::fromTheme("scale-preferred"));
+    action->setIcon(QIcon::fromTheme("symboleditor-scale-preferred"));
     connect(action, SIGNAL(triggered()), m_editor, SLOT(scalePreferred()));
     actions->addAction("scalePreferred", action);
 
