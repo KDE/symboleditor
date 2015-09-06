@@ -83,7 +83,7 @@ add_definitions (
 install (TARGETS SymbolEditor DESTINATION ${BIN_INSTALL_DIR})
 install (FILES SymbolEditorui.rc DESTINATION ${KXMLGUI_INSTALL_DIR}/SymbolEditor)
 install (FILES SymbolEditor.kcfg DESTINATION ${KCFG_INSTALL_DIR})
-install (FILES SymbolEditor.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
+install (FILES org.kde.SymbolEditor.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
 
 IF (SHARED_MIME_INFO_FOUND AND IS_DIRECTORY ${XDG_MIME_INSTALL_DIR})
     install (FILES SymbolEditor.xml DESTINATION ${XDG_MIME_INSTALL_DIR})
