@@ -31,8 +31,10 @@
 
 #include "SymbolListWidget.h"
 
+#include <QApplication>
 #include <QMimeData>
 #include <QPainter>
+#include <QPalette>
 #include <QPen>
 
 #include "Commands.h"
@@ -172,16 +174,26 @@ QListWidgetItem *SymbolListWidget::createItem(qint16 index)
  */
 QIcon SymbolListWidget::createIcon(const Symbol &symbol, int size)
 {
+    QPalette pal = QApplication::palette();
+
     QPixmap icon(size, size);
-    icon.fill(Qt::white);
+    icon.fill(Qt::transparent);
+
     QPainter p(&icon);
     p.setRenderHint(QPainter::Antialiasing, true);
     p.scale(size, size);
 
-    p.setBrush(symbol.brush());
-    p.setPen(symbol.pen());
+    QBrush brush = symbol.brush();
+    QPen pen = symbol.pen();
+
+    brush.setColor(pal.color(QPalette::WindowText));
+    pen.setColor(pal.color(QPalette::WindowText));
+
+    p.setBrush(brush);
+    p.setPen(pen);
     p.drawPath(symbol.path());
     p.end();
+
     return QIcon(icon);
 }
 
@@ -249,6 +261,26 @@ bool SymbolListWidget::dropMimeData(int index, const QMimeData *mimeData, Qt::Dr
     }
 
     return false;
+}
+
+
+/**
+ * Intercept the events system to discover if the theme has changed, this should invoke
+ * an update to the icons used to display the correct colors.
+ *
+ * @param e a pointer to the events
+ *
+ * @return @c true if the event was accepted, @c false otherwise
+ */
+bool SymbolListWidget::event(QEvent *e)
+{
+    bool accepted = QListWidget::event(e);
+
+    if (e->type() == QEvent::PaletteChange) {
+        updateIcons();
+    }
+
+    return accepted;
 }
 
 

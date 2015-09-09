@@ -58,6 +58,7 @@ protected:
     virtual Qt::DropActions supportedDropActions() const;
     virtual QMimeData *mimeData(const QList<QListWidgetItem *> items) const;
     virtual bool dropMimeData(int index, const QMimeData *mimeData, Qt::DropAction action);
+    virtual bool event(QEvent *e);
 
 private:
     QListWidgetItem *createItem(qint16 index);
