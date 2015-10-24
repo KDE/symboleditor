@@ -84,6 +84,10 @@ add_definitions (
     -DKDE_NO_COMPAT
 )
 
+if (SILENCE_DEPRECATED)
+    add_definitions( -Wno-deprecated-declarations )
+endif (SILENCE_DEPRECATED)
+
 install (TARGETS SymbolEditor DESTINATION ${BIN_INSTALL_DIR})
 install (FILES SymbolEditorui.rc DESTINATION ${KXMLGUI_INSTALL_DIR}/SymbolEditor)
 install (FILES SymbolEditor.kcfg DESTINATION ${KCFG_INSTALL_DIR})
