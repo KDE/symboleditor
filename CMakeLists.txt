@@ -1,19 +1,48 @@
-cmake_minimum_required(VERSION 2.8.9)
+cmake_minimum_required (VERSION 2.8.12)
+
+if (POLICY CMP0063)
+    cmake_policy(SET CMP0063 NEW)
+endif (POLICY CMP0063)
 
 project (SymbolEditor)
 
-find_package (KDE4 REQUIRED)
+find_package (ECM REQUIRED NO_MODULE)
+set (CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
+
+include (KDEInstallDirs)
+include (KDECMakeSettings)
+include (KDECompilerSettings)
+include (ECMInstallIcons)
+include (FeatureSummary)
+
+kde_enable_exceptions ()
+
+find_package (Qt5 CONFIG REQUIRED
+    Core
+    Widgets
+)
+
+find_package (KF5DocTools)
+
+find_package (KF5 REQUIRED COMPONENTS
+    Config
+    I18n
+    KIO
+    WidgetsAddons
+    XmlGui
+)
+
 find_package (Doxygen)
 find_package (SharedMimeInfo)
 
 if (DOXYGEN_FOUND)
-    configure_file(${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile.in ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile @ONLY)
+    configure_file (${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile.in ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile @ONLY)
     add_custom_target (doc ${DOXYGEN_EXECUTABLE} ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile
-        WORKING_DIRECTORY ${CMAKE_CURENT_BINARY_DIR}
-        COMMENT "Generating API documentation with Doxygen" VERBATIM)
+                       WORKING_DIRECTORY ${CMAKE_CURENT_BINARY_DIR}
+                       COMMENT "Generating API documentation with Doxygen" VERBATIM)
 endif (DOXYGEN_FOUND)
 
-include_directories (${KDE4_INCLUDES} ${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR})
+include_directories (BEFORE ${CMAKE_CURENT_BINARY_DIR})
 
 set (SymbolEditor_SRCS
     src/Commands.cpp
@@ -27,30 +56,46 @@ set (SymbolEditor_SRCS
     src/SymbolListWidget.cpp
 )
 
-add_subdirectory(icons)
-add_subdirectory(doc)
+add_subdirectory (icons)
+add_subdirectory (doc)
 
-kde4_add_kcfg_files(SymbolEditor_SRCS SymbolEditor.kcfgc)
+kconfig_add_kcfg_files (SymbolEditor_SRCS SymbolEditor.kcfgc)
 
-kde4_add_ui_files(SymbolEditor_SRCS
+qt5_wrap_ui (SymbolEditor_SRCS
     ui/EditorConfigPage.ui
 )
 
-kde4_install_icons(${ICON_INSTALL_DIR})
-kde4_update_iconcache()
+ecm_install_icons (ICONS sc-apps-SymbolEditor.svgz DESTINATION ${ICON_INSTALL_DIR})
 
-kde4_add_executable (SymbolEditor ${SymbolEditor_SRCS})
+add_executable (SymbolEditor ${SymbolEditor_SRCS})
 
-target_link_libraries (SymbolEditor ${KDE4_KDEUI_LIBS} ${KDE4_KIO_LIBS})
+target_link_libraries (SymbolEditor
+    Qt5::Core
+    Qt5::Widgets
+    KF5::ConfigGui
+    KF5::I18n
+    KF5::KIOFileWidgets
+    KF5::WidgetsAddons
+    KF5::XmlGui
+)
 
-set (CMAKE_CXX_FLAGS "-DQT_NO_COMPAT -DKDE_NO_COMPAT")
+add_definitions (
+    -DQT_NO_COMPAT
+    -DKDE_NO_COMPAT
+)
+
+if (SILENCE_DEPRECATED)
+    add_definitions( -Wno-deprecated-declarations )
+endif (SILENCE_DEPRECATED)
 
 install (TARGETS SymbolEditor DESTINATION ${BIN_INSTALL_DIR})
-install (FILES SymbolEditorui.rc DESTINATION ${DATA_INSTALL_DIR}/SymbolEditor)
+install (FILES SymbolEditorui.rc DESTINATION ${KXMLGUI_INSTALL_DIR}/SymbolEditor)
 install (FILES SymbolEditor.kcfg DESTINATION ${KCFG_INSTALL_DIR})
-install (FILES SymbolEditor.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
+install (FILES org.kde.SymbolEditor.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
 
 IF (SHARED_MIME_INFO_FOUND AND IS_DIRECTORY ${XDG_MIME_INSTALL_DIR})
     install (FILES SymbolEditor.xml DESTINATION ${XDG_MIME_INSTALL_DIR})
     update_xdg_mimetypes (${XDG_MIME_INSTALL_DIR})
-ENDIF(SHARED_MIME_INFO_FOUND AND IS_DIRECTORY ${XDG_MIME_INSTALL_DIR})
+ENDIF (SHARED_MIME_INFO_FOUND AND IS_DIRECTORY ${XDG_MIME_INSTALL_DIR})
+
+feature_summary (WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)

@@ -22,7 +22,7 @@
     </widget>
    </item>
    <item row="0" column="1">
-    <widget class="KIntSpinBox" name="kcfg_Editor_GridElements">
+    <widget class="QSpinBox" name="kcfg_Editor_GridElements">
      <property name="minimum">
       <number>8</number>
      </property>
@@ -42,7 +42,7 @@
     </widget>
    </item>
    <item row="1" column="1">
-    <widget class="KIntSpinBox" name="kcfg_Editor_ElementSize">
+    <widget class="QSpinBox" name="kcfg_Editor_ElementSize">
      <property name="minimum">
       <number>4</number>
      </property>
@@ -62,7 +62,7 @@
     </widget>
    </item>
    <item row="2" column="1">
-    <widget class="KIntSpinBox" name="kcfg_Editor_ElementGrouping">
+    <widget class="QSpinBox" name="kcfg_Editor_ElementGrouping">
      <property name="minimum">
       <number>2</number>
      </property>
@@ -82,7 +82,7 @@
     </widget>
    </item>
    <item row="3" column="1">
-    <widget class="KIntSpinBox" name="kcfg_Editor_PointSize">
+    <widget class="QSpinBox" name="kcfg_Editor_PointSize">
      <property name="minimum">
       <number>1</number>
      </property>
@@ -125,7 +125,7 @@
     </widget>
    </item>
    <item row="5" column="1">
-    <widget class="KIntSpinBox" name="kcfg_Editor_BorderSize">
+    <widget class="QSpinBox" name="kcfg_Editor_BorderSize">
      <property name="maximum">
       <number>50</number>
      </property>
@@ -184,11 +184,6 @@
    <class>KColorCombo</class>
    <extends>QComboBox</extends>
    <header>kcolorcombo.h</header>
-  </customwidget>
-  <customwidget>
-   <class>KIntSpinBox</class>
-   <extends>QSpinBox</extends>
-   <header>knuminput.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

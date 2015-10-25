@@ -1,5 +1,5 @@
 /********************************************************************************
- * Copyright (C) 2012-2014 by Stephen Allewell                                  *
+ * Copyright (C) 2012-2015 by Stephen Allewell                                  *
  * steve.allewell@gmail.com                                                     *
  *                                                                              *
  * This program is free software; you can redistribute it and/or modify         *
@@ -19,7 +19,7 @@
 #define SymbolListWidget_H
 
 
-#include <KListWidget>
+#include <QListWidget>
 
 
 class QMimeData;
@@ -29,9 +29,9 @@ class Symbol;
 
 
 /**
- * @brief An extension to the KListWidget to view and select Symbols.
+ * @brief An extension to the QListWidget to view and select Symbols.
  *
- * This widget is an extension to the KListWidget that can be populated from
+ * This widget is an extension to the QListWidget that can be populated from
  * a SymbolLibrary to display the contained Symbols and allow selection of one
  * of the Symbols for further processing.
  *
@@ -40,7 +40,7 @@ class Symbol;
  *
  * Symbols can be removed by their index value.
  */
-class SymbolListWidget : public KListWidget
+class SymbolListWidget : public QListWidget
 {
 public:
     explicit SymbolListWidget(QWidget *parent);
@@ -58,6 +58,7 @@ protected:
     virtual Qt::DropActions supportedDropActions() const;
     virtual QMimeData *mimeData(const QList<QListWidgetItem *> items) const;
     virtual bool dropMimeData(int index, const QMimeData *mimeData, Qt::DropAction action);
+    virtual bool event(QEvent *e);
 
 private:
     QListWidgetItem *createItem(qint16 index);

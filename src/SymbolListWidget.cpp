@@ -1,5 +1,5 @@
 /********************************************************************************
- * Copyright (C) 2012-2014 by Stephen Allewell                                  *
+ * Copyright (C) 2012-2015 by Stephen Allewell                                  *
  * steve.allewell@gmail.com                                                     *
  *                                                                              *
  * This program is free software; you can redistribute it and/or modify         *
@@ -17,7 +17,7 @@
 
 /**
  * @page library_list_widget SymbolListWidget
- * This class implements an extension to the KListWidget class that provides population of the widget
+ * This class implements an extension to the QListWidget class that provides population of the widget
  * with the contents of a SymbolLibrary. For each Symbol in the library a QListWidgetItem is created
  * with a data item representing the Symbol identifier in the library and an icon at a given size that
  * is generated from the Symbol path.
@@ -31,8 +31,10 @@
 
 #include "SymbolListWidget.h"
 
+#include <QApplication>
 #include <QMimeData>
 #include <QPainter>
+#include <QPalette>
 #include <QPen>
 
 #include "Commands.h"
@@ -44,7 +46,7 @@
  * Constructor.
  */
 SymbolListWidget::SymbolListWidget(QWidget *parent)
-    :   KListWidget(parent),
+    :   QListWidget(parent),
         m_library(0),
         m_lastIndex(0)
 {
@@ -65,21 +67,21 @@ SymbolListWidget::~SymbolListWidget()
 /**
  * Set the size of the icons to be used.
  * The base QListWidget has the icon size and grid size set to this value.
- * If there are existing items in the KListWidget, they are updated with new icons.
+ * If there are existing items in the QListWidget, they are updated with new icons.
  *
  * @param size the size in pixels
  */
 void SymbolListWidget::setIconSize(int size)
 {
     m_size = size;
-    KListWidget::setIconSize(QSize(m_size, m_size));
+    QListWidget::setIconSize(QSize(m_size, m_size));
     setGridSize(QSize(m_size, m_size));
     updateIcons();
 }
 
 
 /**
- * Populate the KListWidget with the QListWidgetItems for each Symbol in the SymbolLibrary.
+ * Populate the QListWidget with the QListWidgetItems for each Symbol in the SymbolLibrary.
  * An icon is created for each Symbol.
  *
  * @param library a pointer to the SymbolLibrary containing the Symbols
@@ -126,8 +128,8 @@ void SymbolListWidget::removeSymbol(qint16 index)
 
 
 /**
- * If an item for the index currently exists return it otherwised create
- * an item to be inserted into the KListWidget.
+ * If an item for the index currently exists return it otherwise create
+ * an item to be inserted into the QListWidget.
  * The item created has a data entry added representing the index.
  * The items are inserted so that the Symbols are sorted by their index.
  *
@@ -172,24 +174,26 @@ QListWidgetItem *SymbolListWidget::createItem(qint16 index)
  */
 QIcon SymbolListWidget::createIcon(const Symbol &symbol, int size)
 {
+    QPalette pal = QApplication::palette();
+
     QPixmap icon(size, size);
-    icon.fill(Qt::white);
+    icon.fill(Qt::transparent);
+
     QPainter p(&icon);
     p.setRenderHint(QPainter::Antialiasing, true);
     p.scale(size, size);
-    QBrush brush(symbol.filled() ? Qt::SolidPattern : Qt::NoBrush);
-    QPen pen;
 
-    if (!symbol.filled()) {
-        pen.setWidthF(symbol.lineWidth());
-        pen.setCapStyle(symbol.capStyle());
-        pen.setJoinStyle(symbol.joinStyle());
-    }
+    QBrush brush = symbol.brush();
+    QPen pen = symbol.pen();
+
+    brush.setColor(pal.color(QPalette::WindowText));
+    pen.setColor(pal.color(QPalette::WindowText));
 
     p.setBrush(brush);
     p.setPen(pen);
     p.drawPath(symbol.path());
     p.end();
+
     return QIcon(icon);
 }
 
@@ -214,7 +218,7 @@ Qt::DropActions SymbolListWidget::supportedDropActions() const
 
 
 /**
- * Called when dragging items from one KListWidget to another to provide the serialised data.
+ * Called when dragging items from one QListWidget to another to provide the serialised data.
  *
  * @param items a QList of pointers to the QListWidgetItems to provide data for
  *
@@ -239,7 +243,7 @@ QMimeData *SymbolListWidget::mimeData(const QList<QListWidgetItem *> items) cons
 
 
 /**
- * Called when KListWidgetItems are dragged from one KListWidget to another.
+ * Called when QListWidgetItems are dragged from one QListWidget to another.
  *
  * @param index the position index of the dropped item
  * @param mimeData a pointer to the serialised data from the source
@@ -249,6 +253,7 @@ QMimeData *SymbolListWidget::mimeData(const QList<QListWidgetItem *> items) cons
  */
 bool SymbolListWidget::dropMimeData(int index, const QMimeData *mimeData, Qt::DropAction action)
 {
+    Q_UNUSED(index);
     Q_UNUSED(action);
 
     if (mimeData->hasFormat("application/kxstitchsymbol")) {
@@ -257,6 +262,26 @@ bool SymbolListWidget::dropMimeData(int index, const QMimeData *mimeData, Qt::Dr
     }
 
     return false;
+}
+
+
+/**
+ * Intercept the events system to discover if the theme has changed, this should invoke
+ * an update to the icons used to display the correct colors.
+ *
+ * @param e a pointer to the events
+ *
+ * @return @c true if the event was accepted, @c false otherwise
+ */
+bool SymbolListWidget::event(QEvent *e)
+{
+    bool accepted = QListWidget::event(e);
+
+    if (e->type() == QEvent::PaletteChange) {
+        updateIcons();
+    }
+
+    return accepted;
 }
 
 

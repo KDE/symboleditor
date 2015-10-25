@@ -1,5 +1,5 @@
 /********************************************************************************
- * Copyright (C) 2011-2014 by Stephen Allewell                                  *
+ * Copyright (C) 2011-2015 by Stephen Allewell                                  *
  * steve.allewell@gmail.com                                                     *
  *                                                                              *
  * This program is free software; you can redistribute it and/or modify         *
@@ -20,14 +20,13 @@
 
 
 #include <QUndoGroup>
+#include <QUrl>
 
-#include <KUrl>
 #include <KXmlGuiWindow>
-
 
 class QListWidgetItem;
 
-class KTabWidget;
+class QTabWidget;
 
 class Editor;
 class Symbol;
@@ -60,7 +59,7 @@ protected:
 protected slots:
     // File menu
     void fileOpen();
-    void fileOpen(const KUrl &url);
+    void fileOpen(const QUrl &url);
     void save();
     void saveAs();
     void newSymbol();
@@ -91,9 +90,9 @@ private:
     void setupActions();
     void setActionsFromSymbol(const Symbol &symbol);
 
-    KUrl                m_url;          /**< url of the loaded library */
+    QUrl                m_url;          /**< url of the loaded library */
 
-    KTabWidget          *m_tabWidget;   /**< pointer to the KTabWidget containing the editor and library tabs */
+    QTabWidget          *m_tabWidget;   /**< pointer to the QTabWidget containing the editor and library tabs */
     Editor              *m_editor;      /**< pointer to the Editor */
     SymbolListWidget    *m_listWidget;  /**< pointer to the SymbolListWidget containing icons for the library symbols */
 

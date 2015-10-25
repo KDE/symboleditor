@@ -1,5 +1,5 @@
 /********************************************************************************
- * Copyright (C) 2011-2014 by Stephen Allewell                                  *
+ * Copyright (C) 2011-2015 by Stephen Allewell                                  *
  * steve.allewell@gmail.com                                                     *
  *                                                                              *
  * This program is free software; you can redistribute it and/or modify         *
@@ -22,8 +22,6 @@
 #include <QMap>
 #include <QPainterPath>
 #include <QUndoStack>
-
-#include <KUrl>
 
 #include "Symbol.h"
 

@@ -1,5 +1,5 @@
 /********************************************************************************
- * Copyright (C) 2011-2014 by Stephen Allewell                                  *
+ * Copyright (C) 2011-2015 by Stephen Allewell                                  *
  * steve.allewell@gmail.com                                                     *
  *                                                                              *
  * This program is free software; you can redistribute it and/or modify         *
@@ -160,6 +160,38 @@ void Symbol::setCapStyle(Qt::PenCapStyle capStyle)
 void Symbol::setJoinStyle(Qt::PenJoinStyle joinStyle)
 {
     m_joinStyle = joinStyle;
+}
+
+
+/**
+ * Get a pen based on the parameters of the symbol.
+ *
+ * @return a black QPen with the symbols width and end styles
+ */
+QPen Symbol::pen() const
+{
+    QPen p;
+
+    if (!m_filled) {
+        p.setWidthF(m_lineWidth);
+        p.setCapStyle(m_capStyle);
+        p.setJoinStyle(m_joinStyle);
+    } else {
+        p.setCosmetic(true);
+    }
+
+    return p;
+}
+
+
+/**
+ * Get a brush based on the parameters of the symbol.
+ *
+ * @return a black brush based on the filled state of the symbol
+ */
+QBrush Symbol::brush() const
+{
+    return QBrush(m_filled ? Qt::SolidPattern : Qt::NoBrush);
 }
 
 

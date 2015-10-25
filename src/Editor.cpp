@@ -1,5 +1,5 @@
 /********************************************************************************
- * Copyright (C) 2011-2014 by Stephen Allewell                                  *
+ * Copyright (C) 2011-2015 by Stephen Allewell                                  *
  * steve.allewell@gmail.com                                                     *
  *                                                                              *
  * This program is free software; you can redistribute it and/or modify         *
@@ -158,7 +158,7 @@
 #include <QString>
 
 #include <KCharSelect>
-#include <KLocale>
+#include <KLocalizedString>
 
 #include <math.h>
 
@@ -951,6 +951,9 @@ void Editor::addPoint(const QPointF &point)
         case Ellipse:
             m_undoStack.push(new EllipseCommand(this, m_activePoints.at(0), m_activePoints.at(1)));
             break;
+
+        case Character: // Insertion of characters does not require points
+            break;
         }
 
         m_activePoints.clear();
@@ -1010,15 +1013,21 @@ void Editor::paintEvent(QPaintEvent *event)
     p.setRenderHint(QPainter::Antialiasing, true);
     p.fillRect(event->rect(), Qt::white);
 
+    QPen lightGray(Qt::lightGray);
+    lightGray.setCosmetic(true);
+
+    QPen darkGray(Qt::darkGray);
+    darkGray.setCosmetic(true);
+
     // scale the painter to suit the number of elements in the grid
     p.setWindow(0, 0, m_gridElements, m_gridElements);
 
     // draw vertical grid
     for (int x = 0 ; x <= m_gridElements ; ++x) {
         if (x % m_elementGrouping) {
-            p.setPen(Qt::lightGray);
+            p.setPen(lightGray);
         } else {
-            p.setPen(Qt::darkGray);
+            p.setPen(darkGray);
         }
 
         p.drawLine(x, 0, x, m_gridElements);
@@ -1027,9 +1036,9 @@ void Editor::paintEvent(QPaintEvent *event)
     // draw horizontal grid
     for (int y = 0 ; y <= m_gridElements ; ++y) {
         if (y % m_elementGrouping) {
-            p.setPen(Qt::lightGray);
+            p.setPen(lightGray);
         } else {
-            p.setPen(Qt::darkGray);
+            p.setPen(darkGray);
         }
 
         p.drawLine(0, y, m_gridElements, y);
@@ -1037,9 +1046,14 @@ void Editor::paintEvent(QPaintEvent *event)
 
     // draw a rectangle representing the preferred symbol size allowing for some white space
     QRectF preferredSizeRect = QRectF(0, 0, m_gridElements, m_gridElements).adjusted(m_borderSize, m_borderSize, -m_borderSize, -m_borderSize);
+
     QColor preferredSizeColor(m_preferredSizeColor);
     preferredSizeColor.setAlpha(128);
-    p.setPen(preferredSizeColor);
+
+    QPen preferredSizeColorPen(preferredSizeColor);
+    preferredSizeColorPen.setCosmetic(true);
+
+    p.setPen(preferredSizeColorPen);
     p.setBrush(Qt::NoBrush);
     p.drawRect(preferredSizeRect);
 
@@ -1048,6 +1062,7 @@ void Editor::paintEvent(QPaintEvent *event)
 
     // create a dashed pen for use with curve references and a wide pen for the shape
     QPen dashedPen(Qt::DashLine);
+    dashedPen.setCosmetic(true);
 
     // draw all the points as a circle
     p.setBrush(Qt::SolidPattern);
@@ -1096,13 +1111,18 @@ void Editor::paintEvent(QPaintEvent *event)
             p.drawLine(c1, c2);
             p.drawLine(c2, e);
             break;
+
+        case QPainterPath::CurveToDataElement: // this is only used within the constructed QPainterPath
+            break;
         }
     }
 
 
     // draw the rubber band rectangle or the active points for the current command
     if (m_rubberBand.isValid()) {
-        p.setPen(Qt::black);
+        QPen blackPen(Qt::black);
+        blackPen.setCosmetic(true);
+        p.setPen(blackPen);
         p.setBrush(Qt::NoBrush);
 
         if (m_toolMode == Rectangle) {
@@ -1128,20 +1148,23 @@ void Editor::paintEvent(QPaintEvent *event)
     // scale the painter and draw the path
     QColor c(Qt::black);
     c.setAlpha(128);
-    QPen pathPen(c);
-    pathPen.setWidthF(m_symbol.filled() ? 0.0 : m_symbol.lineWidth());
-    pathPen.setCapStyle(m_symbol.capStyle());
-    pathPen.setJoinStyle(m_symbol.joinStyle());
+    QPen pathPen(m_symbol.pen());
+    pathPen.setColor(c);
     p.setPen(pathPen);
-    QBrush pathFill(m_symbol.filled() ? Qt::SolidPattern : Qt::NoBrush);
+
+    QBrush pathFill(m_symbol.brush());
     pathFill.setColor(c);
     p.setBrush(pathFill);
+
     p.drawPath(m_painterPath);
 
     // draw the guidelines
     QColor guideLineColor(m_guideLineColor);
     guideLineColor.setAlpha(128);
+
     QPen guideLinePen(guideLineColor);
+    guideLinePen.setCosmetic(true);
+
     p.setPen(guideLinePen);
     p.setBrush(Qt::NoBrush);
     QRectF snapRect(0, 0, 0.03, 0.03);
@@ -1402,6 +1425,9 @@ void Editor::constructPainterPath()
             path.cubicTo(m_points[j], m_points[j + 1], m_points[j + 2]);
             j += 3;
             break;
+
+        case QPainterPath::CurveToDataElement: // this only appears within the QPainterPath
+            break;
         }
     }
 
@@ -1587,15 +1613,10 @@ QLineF Editor::projected(const QLineF &line) const
     QPointF intersectLeft;
     QPointF intersectRight;
 
-    QLineF::IntersectType t;
-    QLineF::IntersectType b;
-    QLineF::IntersectType l;
-    QLineF::IntersectType r;
-
-    t = line.intersect(m_topEdge, &intersectTop);
-    b = line.intersect(m_bottomEdge, &intersectBottom);
-    l = line.intersect(m_leftEdge, &intersectLeft);
-    r = line.intersect(m_rightEdge, &intersectRight);
+    QLineF::IntersectType t = line.intersect(m_topEdge, &intersectTop);;
+    line.intersect(m_bottomEdge, &intersectBottom);
+    line.intersect(m_leftEdge, &intersectLeft);
+    line.intersect(m_rightEdge, &intersectRight);
 
     if (t == QLineF::NoIntersection) {      // horizontal line
         return QLineF(intersectLeft, intersectRight);

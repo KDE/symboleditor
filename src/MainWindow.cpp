@@ -1,5 +1,5 @@
 /********************************************************************************
- * Copyright (C) 2011-2014 by Stephen Allewell                                  *
+ * Copyright (C) 2011-2015 by Stephen Allewell                                  *
  * steve.allewell@gmail.com                                                     *
  *                                                                              *
  * This program is free software; you can redistribute it and/or modify         *
@@ -144,22 +144,24 @@
 
 #include "MainWindow.h"
 
+#include <QAction>
+#include <QFileDialog>
+#include <QIcon>
 #include <QVBoxLayout>
 #include <QListWidgetItem>
 #include <QMenu>
+#include <QStatusBar>
+#include <QTabWidget>
+#include <QTemporaryFile>
 
-#include <KAction>
 #include <KActionCollection>
 #include <KConfigDialog>
-#include <KFileDialog>
-#include <KGlobalSettings>
-#include <KIO/NetAccess>
-#include <KLocale>
+#include <KConfigGroup>
+#include <KIO/FileCopyJob>
+#include <KIO/StatJob>
+#include <KLocalizedString>
 #include <KMessageBox>
 #include <KRecentFilesAction>
-#include <KStatusBar>
-#include <KTabWidget>
-#include <KUrl>
 
 #include "ConfigurationDialogs.h"
 #include "Editor.h"
@@ -185,7 +187,7 @@
  * Other actions are initialised from the current Editor symbol.
  */
 MainWindow::MainWindow()
-    :   m_tabWidget(new KTabWidget(this)),
+    :   m_tabWidget(new QTabWidget(this)),
         m_editor(new Editor),
         m_listWidget(new SymbolListWidget(m_tabWidget)),
         m_symbolLibrary(new SymbolLibrary(m_listWidget)),
@@ -193,7 +195,7 @@ MainWindow::MainWindow()
         m_menu(0)
 {
     m_listWidget->loadFromLibrary(m_symbolLibrary);
-    m_url = KUrl(i18n("Untitled"));
+    m_url = QUrl(i18n("Untitled"));
 
     setObjectName("MainWindow#");
 
@@ -223,7 +225,7 @@ MainWindow::MainWindow()
     connect(m_editor->undoStack(), SIGNAL(cleanChanged(bool)), actions->action("saveSymbol"), SLOT(setDisabled(bool)));
     connect(m_editor->undoStack(), SIGNAL(cleanChanged(bool)), actions->action("saveSymbolAsNew"), SLOT(setDisabled(bool)));
     connect(m_symbolLibrary->undoStack(), SIGNAL(cleanChanged(bool)), actions->action("file_save"), SLOT(setDisabled(bool)));
-    connect(m_listWidget, SIGNAL(executed(QListWidgetItem*)), this, SLOT(itemSelected(QListWidgetItem*)));
+    connect(m_listWidget, SIGNAL(itemClicked(QListWidgetItem*)), this, SLOT(itemSelected(QListWidgetItem*)));
     connect(m_listWidget, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(listWidgetContextMenuRequested(QPoint)));
 
     setupGUI(KXmlGuiWindow::Default, "SymbolEditorui.rc");
@@ -341,11 +343,11 @@ bool MainWindow::queryExit()
 
 /**
  * Open a file.
- * Use the KFileDialog::getOpenUrl to get a KUrl to open which is then passed to filOpen(const KURl &).
+ * Use the QFileDialog::getOpenFileUrl to get a QUrl to open which is then passed to filOpen(const QUrl &).
  */
 void MainWindow::fileOpen()
 {
-    KUrl url = KFileDialog::getOpenUrl(KUrl("kfiledialog:///"), i18n("*.sym|Cross Stitch Symbols"), this);
+    QUrl url = QFileDialog::getOpenFileUrl(this, i18n("Open file"), QUrl::fromLocalFile(QDir::homePath()), i18n("Cross Stitch Symbols (*.sym)"));
 
     if (!url.isEmpty()) {
         fileOpen(url);
@@ -363,7 +365,7 @@ void MainWindow::fileOpen()
  * writing to a corrupt file or to a file that isn't a symbol file. The url is added to the recent file
  * list.
  */
-void MainWindow::fileOpen(const KUrl &url)
+void MainWindow::fileOpen(const QUrl &url)
 {
     if (!editorClean() || !libraryClean()) {
         return;
@@ -373,20 +375,20 @@ void MainWindow::fileOpen(const KUrl &url)
     m_editor->clear();
 
     if (url.isValid()) {
-        QString src;
+        QTemporaryFile tmpFile;
 
-        if (KIO::NetAccess::download(url, src, 0)) {
-            QFile file(src);
+        if (tmpFile.open()) {
+            KIO::FileCopyJob *job = KIO::file_copy(url, QUrl::fromLocalFile(tmpFile.fileName()), -1, KIO::Overwrite);
 
-            if (file.open(QIODevice::ReadOnly)) {
-                QDataStream stream(&file);
+            if (job->exec()) {
+                QDataStream stream(&tmpFile);
 
                 try {
                     stream >> *m_symbolLibrary;
                     m_url = url;
                     KRecentFilesAction *action = static_cast<KRecentFilesAction *>(actionCollection()->action("file_open_recent"));
                     action->addUrl(url);
-                    action->saveEntries(KConfigGroup(KGlobal::config(), "RecentFiles"));
+                    action->saveEntries(KConfigGroup(KSharedConfig::openConfig(), "RecentFiles"));
                     m_tabWidget->setCurrentIndex(1);
                 } catch (const InvalidFile &e) {
                     KMessageBox::sorry(0, i18n("This doesn't appear to be a valid symbol file"));
@@ -398,13 +400,11 @@ void MainWindow::fileOpen(const KUrl &url)
                     KMessageBox::sorry(0, i18n("Failed to read the library\n%1", e.statusMessage()));
                     m_symbolLibrary->clear();
                 }
-
-                file.close();
             } else {
-                KMessageBox::sorry(0, i18n("Failed to open the file %1", url.fileName()));
+                KMessageBox::sorry(0, job->errorString());
             }
         } else {
-            KMessageBox::sorry(0, i18n("Failed to download the file %1", url.fileName()));
+            KMessageBox::sorry(0, tmpFile.errorString());
         }
     } else {
         KMessageBox::sorry(0, i18n("The url %1 is invalid", url.fileName()));
@@ -420,7 +420,7 @@ void MainWindow::fileOpen(const KUrl &url)
  */
 void MainWindow::save()
 {
-    if (m_url == KUrl(i18n("Untitled"))) {
+    if (m_url == QUrl(i18n("Untitled"))) {
         saveAs();
     } else {
         QFile file(m_url.path());
@@ -451,10 +451,12 @@ void MainWindow::save()
  */
 void MainWindow::saveAs()
 {
-    KUrl url = KFileDialog::getSaveUrl(QString("::%1").arg(KGlobalSettings::documentPath()), i18n("*.sym|Cross Stitch Symbols"), this, i18n("Save As"));
+    QUrl url = QFileDialog::getSaveFileUrl(this, i18n("Save As..."), QUrl::fromLocalFile(QDir::homePath()), i18n("Cross Stitch Symbols (*.sym)"));
 
     if (url.isValid()) {
-        if (KIO::NetAccess::exists(url, false, 0)) {
+        KIO::StatJob *statJob = KIO::stat(url, KIO::StatJob::DestinationSide, 0);
+
+        if (statJob->exec()) {
             if (KMessageBox::warningYesNo(this, i18n("This file already exists\nDo you want to overwrite it?")) == KMessageBox::No) {
                 return;
             }
@@ -464,7 +466,7 @@ void MainWindow::saveAs()
         save();
         KRecentFilesAction *action = static_cast<KRecentFilesAction *>(actionCollection()->action("file_open_recent"));
         action->addUrl(url);
-        action->saveEntries(KConfigGroup(KGlobal::config(), "RecentFiles"));
+        action->saveEntries(KConfigGroup(KSharedConfig::openConfig(), "RecentFiles"));
     }
 }
 
@@ -527,21 +529,21 @@ void MainWindow::saveSymbolAsNew()
  */
 void MainWindow::importLibrary()
 {
-    KUrl url = KFileDialog::getOpenUrl(KUrl("kfiledialog:///"), i18n("*.sym|Cross Stitch Symbols"), this);
+    QUrl url = QFileDialog::getOpenFileUrl(this, i18n("Import library"), QUrl::fromLocalFile(QDir::homePath()), i18n("Cross Stitch Symbols (*.sym)"));
 
     if (url.isEmpty()) {
         return;
     }
 
     if (url.isValid()) {
-        QString src;
+        QTemporaryFile tmpFile;
 
-        if (KIO::NetAccess::download(url, src, 0)) {
-            QFile file(src);
+        if (tmpFile.open()) {
+            KIO::FileCopyJob *job = KIO::file_copy(url, QUrl::fromLocalFile(tmpFile.fileName()), -1, KIO::Overwrite);
 
-            if (file.open(QIODevice::ReadOnly)) {
+            if (job->exec()) {
                 SymbolLibrary *lib = new SymbolLibrary;
-                QDataStream stream(&file);
+                QDataStream stream(&tmpFile);
 
                 try {
                     stream >> *lib;
@@ -551,13 +553,11 @@ void MainWindow::importLibrary()
                 } catch (const InvalidFileVersion &e) {
                     KMessageBox::sorry(0, i18n("Version %1 of the library file is not supported in this version of SymbolEditor", e.version));
                 }
-
-                file.close();
             } else {
-                KMessageBox::sorry(0, i18n("Failed to open the file %1", url.fileName()));
+                KMessageBox::sorry(0, job->errorString());
             }
         } else {
-            KMessageBox::sorry(0, i18n("Failed to download the file %1", url.fileName()));
+            KMessageBox::sorry(0, tmpFile.errorString());
         }
     } else {
         KMessageBox::sorry(0, i18n("The url %1 is invalid", url.fileName()));
@@ -575,7 +575,7 @@ void MainWindow::close()
     if (editorClean() && libraryClean()) {
         m_editor->clear();
         m_symbolLibrary->clear();
-        m_url = KUrl(i18n("Untitled"));
+        m_url = QUrl(i18n("Untitled"));
     }
 }
 
@@ -709,7 +709,7 @@ void MainWindow::itemSelected(QListWidgetItem *item)
  */
 void MainWindow::listWidgetContextMenuRequested(const QPoint &pos)
 {
-    if (m_item = m_listWidget->itemAt(pos)) {
+    if ((m_item = m_listWidget->itemAt(pos))) {
         if (!m_menu) {
             m_menu = new QMenu;
             m_menu->addAction(i18n("Delete Symbol"), this, SLOT(deleteSymbol()));
@@ -743,7 +743,7 @@ void MainWindow::preferences()
     dialog->setFaceType(KPageDialog::List);
 
     dialog->addPage(new EditorConfigPage(0, "EditorConfigPage"), i18nc("The Editor configuration page", "Editor"), "preferences-desktop");
-    dialog->setHelp("ConfigurationDialog");
+//    dialog->setHelp("ConfigurationDialog");
 
     connect(dialog, SIGNAL(settingsChanged(QString)), m_editor, SLOT(readSettings()));
 
@@ -756,11 +756,11 @@ void MainWindow::preferences()
  * Create standard actions.
  * Create other actions, setting the icon and data as required.
  * Several actions are added to groups which are set as exclusive.
- * All actions are added to the applications KActionCollection.
+ * All actions are added to the applications QActionCollection.
  */
 void MainWindow::setupActions()
 {
-    KAction *action;
+    QAction *action;
     QActionGroup *actionGroup;
 
     KActionCollection *actions = actionCollection();
@@ -768,24 +768,24 @@ void MainWindow::setupActions()
     // File menu
     KStandardAction::open(this, SLOT(fileOpen()), actions);
     KStandardAction::openNew(this, SLOT(newSymbol()), actions);
-    KStandardAction::openRecent(this, SLOT(fileOpen(KUrl)), actions)->loadEntries(KConfigGroup(KGlobal::config(), "RecentFiles"));
+    KStandardAction::openRecent(this, SLOT(fileOpen(QUrl)), actions)->loadEntries(KConfigGroup(KSharedConfig::openConfig(), "RecentFiles"));
     KStandardAction::save(this, SLOT(save()), actions);
     KStandardAction::saveAs(this, SLOT(saveAs()), actions);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Import Library"));
     action->setWhatsThis(i18n("Imports another library appending the symbols it contains to the current library."));
     connect(action, SIGNAL(triggered()), this, SLOT(importLibrary()));
     actions->addAction("importLibrary", action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Save Symbol"));
     action->setWhatsThis(i18n("Save the symbol to the library. If this is a new symbol, subsequent saves will create additional symbols in the library. If the symbol was selected from the library to edit then saving will update that symbol in the library."));
-    action->setIcon(KIcon("save-symbol"));
+    action->setIcon(QIcon::fromTheme("symboleditor-save-symbol"));
     connect(action, SIGNAL(triggered()), this, SLOT(saveSymbol()));
     actions->addAction("saveSymbol", action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Save Symbol as New"));
     action->setWhatsThis(i18n("Save the current symbol as a new one in the library. Subsequent saves will update the new symbol."));
     connect(action, SIGNAL(triggered()), this, SLOT(saveSymbolAsNew()));
@@ -799,10 +799,10 @@ void MainWindow::setupActions()
     KStandardAction::redo(this, SLOT(redo()), actions);
 
     // Rendering menu
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Fill Path"));
     action->setWhatsThis(i18n("Enable path filling. The path defines the closed boundary of the shape and the path is filled with the selected fill method."));
-    action->setIcon(KIcon("rating"));
+    action->setIcon(QIcon::fromTheme("format-fill-color"));
     action->setCheckable(true);
     connect(action, SIGNAL(triggered(bool)), m_editor, SLOT(selectFilled(bool)));
     actions->addAction("fillPath", action);
@@ -810,20 +810,20 @@ void MainWindow::setupActions()
     actionGroup = new QActionGroup(this);
     actionGroup->setExclusive(true);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Odd Even Fill"));
     action->setWhatsThis(i18n("The Odd Even fill method will fill alternate areas of the symbol."));
     action->setData(Qt::OddEvenFill);
-    action->setIcon(KIcon("odd-even-fill"));
+    action->setIcon(QIcon::fromTheme("symboleditor-odd-even-fill"));
     action->setCheckable(true);
     actions->addAction("oddEvenFill", action);
     actionGroup->addAction(action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Winding Fill"));
     action->setWhatsThis(i18n("The Winding fill method will fill the complete interior of the path."));
     action->setData(Qt::WindingFill);
-    action->setIcon(KIcon("winding-fill"));
+    action->setIcon(QIcon::fromTheme("symboleditor-winding-fill"));
     action->setCheckable(true);
     actions->addAction("windingFill", action);
     actionGroup->addAction(action);
@@ -833,29 +833,29 @@ void MainWindow::setupActions()
     actionGroup = new QActionGroup(this);
     actionGroup->setExclusive(true);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Flat Cap"));
     action->setWhatsThis(i18n("The Flat Cap end type provides a square end that stops at the end point of the line.\n\nThis is only applicable to non-filled paths."));
     action->setData(Qt::FlatCap);
-    action->setIcon(KIcon("flat-cap"));
+    action->setIcon(QIcon::fromTheme("stroke-cap-butt"));
     action->setCheckable(true);
     actions->addAction("flatCap", action);
     actionGroup->addAction(action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Square Cap"));
     action->setWhatsThis(i18n("The Square Cap end type provides a square end that projects beyond the end point of the line by half the line width.\n\nThis is only applicable to non-filled paths."));
     action->setData(Qt::SquareCap);
-    action->setIcon(KIcon("square-cap"));
+    action->setIcon(QIcon::fromTheme("stroke-cap-square"));
     action->setCheckable(true);
     actions->addAction("squareCap", action);
     actionGroup->addAction(action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Round Cap"));
     action->setWhatsThis(i18n("The Round Cap end type provides a round end that projects beyond the end point of the line with a radius of half the line width.\n\nThis is only applicable to non-filled paths."));
     action->setData(Qt::RoundCap);
-    action->setIcon(KIcon("round-cap"));
+    action->setIcon(QIcon::fromTheme("stroke-cap-round"));
     action->setCheckable(true);
     actions->addAction("roundCap", action);
     actionGroup->addAction(action);
@@ -865,46 +865,46 @@ void MainWindow::setupActions()
     actionGroup = new QActionGroup(this);
     actionGroup->setExclusive(true);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Bevel Join"));
     action->setWhatsThis(i18n("The Bevel Join provides a beveled corner between two lines.\n\nThis is only applicable to non-filled paths."));
     action->setData(Qt::BevelJoin);
-    action->setIcon(KIcon("bevel-join"));
+    action->setIcon(QIcon::fromTheme("stroke-join-bevel"));
     action->setCheckable(true);
     actions->addAction("bevelJoin", action);
     actionGroup->addAction(action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Miter Join"));
     action->setWhatsThis(i18n("The Miter Join provides a mitered corner between two lines.\n\nThis is only applicable to non-filled paths."));
     action->setData(Qt::MiterJoin);
-    action->setIcon(KIcon("miter-join"));
+    action->setIcon(QIcon::fromTheme("stroke-join-miter"));
     action->setCheckable(true);
     actions->addAction("miterJoin", action);
     actionGroup->addAction(action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Round Join"));
     action->setWhatsThis(i18n("The Round Join provides a rounded corner between two lines using a radius of half the line width.\n\nThis is only applicable to non-filled paths."));
     action->setData(Qt::RoundJoin);
-    action->setIcon(KIcon("round-join"));
+    action->setIcon(QIcon::fromTheme("stroke-join-round"));
     action->setCheckable(true);
     actions->addAction("roundJoin", action);
     actionGroup->addAction(action);
 
     connect(actionGroup, SIGNAL(triggered(QAction*)), m_editor, SLOT(selectJoinStyle(QAction*)));
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Increase Line Width"));
     action->setWhatsThis(i18n("Increases the line width.\n\nThis is only applicable to non-filled paths."));
-    action->setIcon(KIcon("increase-line-width"));
+    action->setIcon(QIcon::fromTheme("symboleditor-increase-line-width"));
     connect(action, SIGNAL(triggered()), m_editor, SLOT(increaseLineWidth()));
     actions->addAction("increaseLineWidth", action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Decrease Line Width"));
     action->setWhatsThis(i18n("Decreases the line width.\n\nThis is only applicable to non-filled paths."));
-    action->setIcon(KIcon("decrease-line-width"));
+    action->setIcon(QIcon::fromTheme("symboleditor-decrease-line-width"));
     connect(action, SIGNAL(triggered()), m_editor, SLOT(decreaseLineWidth()));
     actions->addAction("decreaseLineWidth", action);
 
@@ -912,109 +912,109 @@ void MainWindow::setupActions()
     actionGroup = new QActionGroup(this);
     actionGroup->setExclusive(true);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Move To"));
     action->setWhatsThis(i18n("Move the current point to a new position. This implicitly closes any existing sub path, starting a new one."));
     action->setData(Editor::MoveTo);
-    action->setIcon(KIcon("go-jump"));
+    action->setIcon(QIcon::fromTheme("go-jump"));
     action->setCheckable(true);
     actions->addAction("moveTo", action);
     actionGroup->addAction(action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Draw To"));
     action->setWhatsThis(i18n("Add a straight line from the current position to a defined end point. The end point becomes the new current position."));
     action->setData(Editor::LineTo);
-    action->setIcon(KIcon("draw-line"));
+    action->setIcon(QIcon::fromTheme("draw-line"));
     action->setCheckable(true);
     actions->addAction("lineTo", action);
     actionGroup->addAction(action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Cubic To"));
     action->setWhatsThis(i18n("Add a cubic bezier curve from the current position using two control points and an end point. The end point becomes the new current position."));
     action->setData(Editor::CubicTo);
-    action->setIcon(KIcon("draw-bezier-curves"));
+    action->setIcon(QIcon::fromTheme("draw-bezier-curves"));
     action->setCheckable(true);
     actions->addAction("cubicTo", action);
     actionGroup->addAction(action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Rectangle"));
     action->setWhatsThis(i18n("Add a rectangle as a separate sub path defined by two points representing the opposite corners."));
     action->setData(Editor::Rectangle);
-    action->setIcon(KIcon("draw-rectangle"));
+    action->setIcon(QIcon::fromTheme("draw-rectangle"));
     action->setCheckable(true);
     actions->addAction("rectangle", action);
     actionGroup->addAction(action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Ellipse"));
     action->setWhatsThis(i18n("Add an ellipse as a separate sub path defined by a bounding rectangle represented by two opposite corners."));
     action->setData(Editor::Ellipse);
-    action->setIcon(KIcon("draw-ellipse"));
+    action->setIcon(QIcon::fromTheme("draw-ellipse"));
     action->setCheckable(true);
     actions->addAction("ellipse", action);
     actionGroup->addAction(action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Insert Character"));
     action->setWhatsThis(i18n("Allows selection of a character from any font to be inserted as a closed sub path. The inserted character will overwrite any existing path, but additional sub paths may be added to the character."));
     action->setData(Editor::Character);
-    action->setIcon(KIcon("character-set"));
+    action->setIcon(QIcon::fromTheme("insert-text"));
     action->setCheckable(true);
     actions->addAction("character", action);
     actionGroup->addAction(action);
 
     connect(actionGroup, SIGNAL(triggered(QAction*)), m_editor, SLOT(selectTool(QAction*)));
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Rotate Left"));
     action->setWhatsThis(i18n("Rotate all the points of a path counter-clockwise 90 degrees around the center of the editor."));
-    action->setIcon(KIcon("object-rotate-left"));
+    action->setIcon(QIcon::fromTheme("object-rotate-left"));
     connect(action, SIGNAL(triggered()), m_editor, SLOT(rotateLeft()));
     actions->addAction("rotateLeft", action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Rotate Right"));
     action->setWhatsThis(i18n("Rotate all the points of a path clockwise 90 degrees around the center point of the editor."));
-    action->setIcon(KIcon("object-rotate-right"));
+    action->setIcon(QIcon::fromTheme("object-rotate-right"));
     connect(action, SIGNAL(triggered()), m_editor, SLOT(rotateRight()));
     actions->addAction("rotateRight", action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Flip Horizontal"));
     action->setWhatsThis(i18n("Flip all the points of the path horizontally about the vertical center of the editor."));
-    action->setIcon(KIcon("object-flip-horizontal"));
+    action->setIcon(QIcon::fromTheme("object-flip-horizontal"));
     connect(action, SIGNAL(triggered()), m_editor, SLOT(flipHorizontal()));
     actions->addAction("flipHorizontal", action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Flip Vertical"));
     action->setWhatsThis(i18n("Flip all the points of the path vertically about the horizontal center of the editor."));
-    action->setIcon(KIcon("object-flip-vertical"));
+    action->setIcon(QIcon::fromTheme("object-flip-vertical"));
     connect(action, SIGNAL(triggered()), m_editor, SLOT(flipVertical()));
     actions->addAction("flipVertical", action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Scale to Preferred Size"));
     action->setWhatsThis(i18n("Scale the current symbol so that it fits within the preferred size of a symbol."));
-    action->setIcon(KIcon("scale-preferred"));
+    action->setIcon(QIcon::fromTheme("symboleditor-scale-preferred"));
     connect(action, SIGNAL(triggered()), m_editor, SLOT(scalePreferred()));
     actions->addAction("scalePreferred", action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Enable Snap"));
     action->setWhatsThis(i18n("Enable snapping of points to guide intersections or to the grid."));
-    action->setIcon(KIcon("snap-to-grid"));
+    action->setIcon(QIcon::fromTheme("snap-orthogonal"));
     action->setCheckable(true);
     connect(action, SIGNAL(toggled(bool)), m_editor, SLOT(enableSnap(bool)));
     actions->addAction("enableSnap", action);
 
-    action = new KAction(this);
+    action = new QAction(this);
     action->setText(i18n("Enable Guides"));
     action->setWhatsThis(i18n("Enable the generation of guide intersections."));
-    action->setIcon(KIcon("snap-guides"));
+    action->setIcon(QIcon::fromTheme("snap-intersection"));
     action->setCheckable(true);
     connect(action, SIGNAL(toggled(bool)), m_editor, SLOT(enableGuides(bool)));
     actions->addAction("enableGuides", action);
@@ -1055,6 +1055,9 @@ void MainWindow::setActionsFromSymbol(const Symbol &symbol)
     case Qt::RoundCap:
         action("roundCap")->setChecked(true);
         break;
+
+    case Qt::MPenCapStyle: // this is a combination of the Qt::FlatCap, Qt::SquareCap and Qt::RoundCap
+        break;
     }
 
     switch (symbol.joinStyle()) {
@@ -1063,11 +1066,15 @@ void MainWindow::setActionsFromSymbol(const Symbol &symbol)
         break;
 
     case Qt::MiterJoin:
+    case Qt::SvgMiterJoin:
         action("miterJoin")->setChecked(true);
         break;
 
     case Qt::RoundJoin:
         action("roundJoin")->setChecked(true);
+        break;
+
+    case Qt::MPenJoinStyle: // this is a combination of Qt::BevelJoin, Qt::MiterJoin, Qt::SvgMiterJoin and Qt::RoundJoin
         break;
     }
 

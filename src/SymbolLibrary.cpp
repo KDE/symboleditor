@@ -1,5 +1,5 @@
 /********************************************************************************
- * Copyright (C) 2011-2014 by Stephen Allewell                                  *
+ * Copyright (C) 2011-2015 by Stephen Allewell                                  *
  * steve.allewell@gmail.com                                                     *
  *                                                                              *
  * This program is free software; you can redistribute it and/or modify         *
@@ -55,7 +55,7 @@
 #include <QPainter>
 #include <QtAlgorithms>
 
-#include <KLocale>
+#include <KLocalizedString>
 
 #include "Exceptions.h"
 #include "SymbolListWidget.h"
@@ -297,7 +297,6 @@ QDataStream &operator>>(QDataStream &stream, SymbolLibrary &library)
     if (strncmp(magic, "KXStitchSymbols", 15) == 0) {
         stream.setVersion(QDataStream::Qt_4_0);
         qint32 version;
-        qint16 nextIndex;
         QMap<qint16, QPainterPath> paths_v100;
         QList<qint16> paths_v100_keys;
         stream >> version;
