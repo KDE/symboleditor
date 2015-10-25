@@ -1613,15 +1613,10 @@ QLineF Editor::projected(const QLineF &line) const
     QPointF intersectLeft;
     QPointF intersectRight;
 
-    QLineF::IntersectType t;
-    QLineF::IntersectType b;
-    QLineF::IntersectType l;
-    QLineF::IntersectType r;
-
-    t = line.intersect(m_topEdge, &intersectTop);
-    b = line.intersect(m_bottomEdge, &intersectBottom);
-    l = line.intersect(m_leftEdge, &intersectLeft);
-    r = line.intersect(m_rightEdge, &intersectRight);
+    QLineF::IntersectType t = line.intersect(m_topEdge, &intersectTop);;
+    line.intersect(m_bottomEdge, &intersectBottom);
+    line.intersect(m_leftEdge, &intersectLeft);
+    line.intersect(m_rightEdge, &intersectRight);
 
     if (t == QLineF::NoIntersection) {      // horizontal line
         return QLineF(intersectLeft, intersectRight);
