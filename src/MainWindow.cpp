@@ -1055,6 +1055,9 @@ void MainWindow::setActionsFromSymbol(const Symbol &symbol)
     case Qt::RoundCap:
         action("roundCap")->setChecked(true);
         break;
+
+    case Qt::MPenCapStyle: // this is a combination of the Qt::FlatCap, Qt::SquareCap and Qt::RoundCap
+        break;
     }
 
     switch (symbol.joinStyle()) {
@@ -1063,11 +1066,15 @@ void MainWindow::setActionsFromSymbol(const Symbol &symbol)
         break;
 
     case Qt::MiterJoin:
+    case Qt::SvgMiterJoin:
         action("miterJoin")->setChecked(true);
         break;
 
     case Qt::RoundJoin:
         action("roundJoin")->setChecked(true);
+        break;
+
+    case Qt::MPenJoinStyle: // this is a combination of Qt::BevelJoin, Qt::MiterJoin, Qt::SvgMiterJoin and Qt::RoundJoin
         break;
     }
 

@@ -951,6 +951,9 @@ void Editor::addPoint(const QPointF &point)
         case Ellipse:
             m_undoStack.push(new EllipseCommand(this, m_activePoints.at(0), m_activePoints.at(1)));
             break;
+
+        case Character: // Insertion of characters does not require points
+            break;
         }
 
         m_activePoints.clear();
@@ -1107,6 +1110,9 @@ void Editor::paintEvent(QPaintEvent *event)
             p.drawLine(s, c1);
             p.drawLine(c1, c2);
             p.drawLine(c2, e);
+            break;
+
+        case QPainterPath::CurveToDataElement: // this is only used within the constructed QPainterPath
             break;
         }
     }
@@ -1418,6 +1424,9 @@ void Editor::constructPainterPath()
         case QPainterPath::CurveToElement:
             path.cubicTo(m_points[j], m_points[j + 1], m_points[j + 2]);
             j += 3;
+            break;
+
+        case QPainterPath::CurveToDataElement: // this only appears within the QPainterPath
             break;
         }
     }
