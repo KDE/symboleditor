@@ -297,7 +297,6 @@ QDataStream &operator>>(QDataStream &stream, SymbolLibrary &library)
     if (strncmp(magic, "KXStitchSymbols", 15) == 0) {
         stream.setVersion(QDataStream::Qt_4_0);
         qint32 version;
-        qint16 nextIndex;
         QMap<qint16, QPainterPath> paths_v100;
         QList<qint16> paths_v100_keys;
         stream >> version;
