@@ -83,7 +83,7 @@ int main(int argc, char *argv[])
 
     KAboutData aboutData(QStringLiteral("SymbolEditor"),                    // component name
                          QString(i18n("SymbolEditor")),                     // display name
-                         QStringLiteral("1.99.0"),                          // version
+                         QStringLiteral("2.0.0"),                          // version
                          i18n("A cross stitch symbol editor."),             // short description
                          KAboutLicense::GPL_V2,                             // license
                          i18n("(c)2011-2015 Stephen Allewell"),             // copyright
