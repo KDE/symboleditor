@@ -709,7 +709,7 @@ void MainWindow::itemSelected(QListWidgetItem *item)
  */
 void MainWindow::listWidgetContextMenuRequested(const QPoint &pos)
 {
-    if (m_item = m_listWidget->itemAt(pos)) {
+    if ((m_item = m_listWidget->itemAt(pos))) {
         if (!m_menu) {
             m_menu = new QMenu;
             m_menu->addAction(i18n("Delete Symbol"), this, SLOT(deleteSymbol()));
