@@ -253,6 +253,7 @@ QMimeData *SymbolListWidget::mimeData(const QList<QListWidgetItem *> items) cons
  */
 bool SymbolListWidget::dropMimeData(int index, const QMimeData *mimeData, Qt::DropAction action)
 {
+    Q_UNUSED(index);
     Q_UNUSED(action);
 
     if (mimeData->hasFormat("application/kxstitchsymbol")) {
