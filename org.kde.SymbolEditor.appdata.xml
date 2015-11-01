@@ -1,0 +1,31 @@
++<?xml version="1.0" encoding="utf-8"?>
++<component type="desktop">
++  <id>org.kde.SymbolEditor.desktop</id>
++  <metadata_license>GFDL-1.2-without-invariant</metadata_license>
++  <name>SymbolEditor</name>
++  <summary>A cross stitch symbol editor</summary>
++  <description>
++    <p>SymbolEditor is a program that can create libraries of QPainterPath objects with hints on how to render them. It was originally designed to create symbol libraries for the KXStitch application, but other applications using similar functionality could also make use of them. There are a number of tools to aid the designing of symbols, including lines, bezier curves, rectangle and ellipse. Text characters can be selected from any font and the symbols can be mirrored or rotated. Symbols can be filled or unfilled, the line end type and joining style can be changed and the line thickness can be varied.</p>
++    <p>Features:</p>
++    <ul>
++      <li>Creation of multiple libraries</li>
++      <li>Filled and unfilled symbols</li>
++      <li>Variable line widths, end types and join types</li>
++      <li>Drag and drop from one library to another</li>
++      <li>Symbol creation from characters</li>
++    </ul>
++  </description>
++  <url type="homepage">https://userbase.kde.org/Special:myLanguage/SymbolEditor</url>
++  <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=SymbolEditor</url>
++  <url type="help">http://docs.kde.org/development/en/extragear-graphics/SymbolEditor/index.html</url>
++  <screenshots>
++    <screenshot type="default">
++      <image>https://userbase.kde.org/images.userbase/2/29/SymbolEditor.png</image>
++    </screenshot>
++  </screenshots>
++  <project_group>KDE</project_group>
++  <provides>
++    <binary>SymbolEditor</binary>
++  </provides>
++</component>
+
