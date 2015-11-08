@@ -81,6 +81,8 @@ int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
 
+    KLocalizedString::setApplicationDomain("SymbolEditor");
+
     KAboutData aboutData(QStringLiteral("SymbolEditor"),                    // component name
                          QString(i18n("SymbolEditor")),                     // display name
                          QStringLiteral("2.0.0"),                          // version

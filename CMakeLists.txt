@@ -56,6 +56,9 @@ set (SymbolEditor_SRCS
     src/SymbolListWidget.cpp
 )
 
+file (GLOB SymbolEditor_UI ${CMAKE_CURRENT_SOURCE_DIR}/ui/*.ui)
+ki18n_wrap_ui (SymbolEditor_SRCS ${SymbolEditor_UI})
+
 add_subdirectory (icons)
 add_subdirectory (doc)
 
@@ -83,6 +86,8 @@ add_definitions (
     -DQT_NO_COMPAT
     -DKDE_NO_COMPAT
 )
+
+add_definitions (-DTRANSLATION_DOMAIN="SymbolEditor")
 
 if (SILENCE_DEPRECATED)
     add_definitions( -Wno-deprecated-declarations )
