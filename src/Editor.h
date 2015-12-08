@@ -78,7 +78,7 @@ class Editor : public QWidget
 public:
     enum ToolMode {MoveTo, LineTo, CubicTo, Rectangle, Ellipse, Character};
 
-    explicit Editor(QWidget *parent = 0);
+    explicit Editor(QWidget *parent = nullptr);
     ~Editor();
 
     QPair<qint16, Symbol> symbol();

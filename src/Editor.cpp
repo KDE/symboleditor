@@ -212,7 +212,7 @@ const QString statusMessages[][3] = {
 Editor::Editor(QWidget *parent)
     :   QWidget(parent),
         m_index(0),
-        m_charSelect(0)
+        m_charSelect(nullptr)
 {
     readSettings();
 
@@ -602,7 +602,7 @@ void Editor::selectTool(QAction *action)
     m_toolMode = static_cast<Editor::ToolMode>(action->data().toInt());
 
     if (m_toolMode == Editor::Character) {
-        if (m_charSelect == 0) {
+        if (m_charSelect == nullptr) {
             m_charSelect = new KCharSelect(0, 0);
             connect(m_charSelect, SIGNAL(charSelected(QChar)), this, SLOT(charSelected(QChar)));
         }

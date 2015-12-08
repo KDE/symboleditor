@@ -191,8 +191,8 @@ MainWindow::MainWindow()
         m_editor(new Editor),
         m_listWidget(new SymbolListWidget(m_tabWidget)),
         m_symbolLibrary(new SymbolLibrary(m_listWidget)),
-        m_item(0),
-        m_menu(0)
+        m_item(nullptr),
+        m_menu(nullptr)
 {
     m_listWidget->loadFromLibrary(m_symbolLibrary);
     m_url = QUrl(i18n("Untitled"));
@@ -391,23 +391,23 @@ void MainWindow::fileOpen(const QUrl &url)
                     action->saveEntries(KConfigGroup(KSharedConfig::openConfig(), "RecentFiles"));
                     m_tabWidget->setCurrentIndex(1);
                 } catch (const InvalidFile &e) {
-                    KMessageBox::sorry(0, i18n("This doesn't appear to be a valid symbol file"));
+                    KMessageBox::sorry(nullptr, i18n("This doesn't appear to be a valid symbol file"));
                 } catch (const InvalidFileVersion &e) {
-                    KMessageBox::sorry(0, i18n("Version %1 of the library file is not supported in this version of SymbolEditor", e.version));
+                    KMessageBox::sorry(nullptr, i18n("Version %1 of the library file is not supported in this version of SymbolEditor", e.version));
                 } catch (const InvalidSymbolVersion &e) {
-                    KMessageBox::sorry(0, i18n("Version %1 of the symbol is not supported in this version of SymbolEditor", e.version));
+                    KMessageBox::sorry(nullptr, i18n("Version %1 of the symbol is not supported in this version of SymbolEditor", e.version));
                 } catch (const FailedReadLibrary &e) {
-                    KMessageBox::sorry(0, i18n("Failed to read the library\n%1", e.statusMessage()));
+                    KMessageBox::sorry(nullptr, i18n("Failed to read the library\n%1", e.statusMessage()));
                     m_symbolLibrary->clear();
                 }
             } else {
-                KMessageBox::sorry(0, job->errorString());
+                KMessageBox::sorry(nullptr, job->errorString());
             }
         } else {
-            KMessageBox::sorry(0, tmpFile.errorString());
+            KMessageBox::sorry(nullptr, tmpFile.errorString());
         }
     } else {
-        KMessageBox::sorry(0, i18n("The url %1 is invalid", url.fileName()));
+        KMessageBox::sorry(nullptr, i18n("The url %1 is invalid", url.fileName()));
     }
 }
 
@@ -432,13 +432,13 @@ void MainWindow::save()
             try {
                 stream << *m_symbolLibrary;
             } catch (const FailedWriteLibrary &e) {
-                KMessageBox::sorry(0, i18n("Failed to write the library\n%1", e.statusMessage()));
+                KMessageBox::sorry(nullptr, i18n("Failed to write the library\n%1", e.statusMessage()));
             }
 
             file.close();
             m_symbolLibrary->undoStack()->setClean();
         } else {
-            KMessageBox::sorry(0, i18n("Failed to open the file %1\n%2", m_url.fileName(), file.errorString()));
+            KMessageBox::sorry(nullptr, i18n("Failed to open the file %1\n%2", m_url.fileName(), file.errorString()));
         }
     }
 }
@@ -549,18 +549,18 @@ void MainWindow::importLibrary()
                     stream >> *lib;
                     m_symbolLibrary->undoStack()->push(new ImportLibraryCommand(m_symbolLibrary, lib));
                 } catch (const InvalidFile &e) {
-                    KMessageBox::sorry(0, i18n("This doesn't appear to be a valid symbol file"));
+                    KMessageBox::sorry(nullptr, i18n("This doesn't appear to be a valid symbol file"));
                 } catch (const InvalidFileVersion &e) {
-                    KMessageBox::sorry(0, i18n("Version %1 of the library file is not supported in this version of SymbolEditor", e.version));
+                    KMessageBox::sorry(nullptr, i18n("Version %1 of the library file is not supported in this version of SymbolEditor", e.version));
                 }
             } else {
-                KMessageBox::sorry(0, job->errorString());
+                KMessageBox::sorry(nullptr, job->errorString());
             }
         } else {
-            KMessageBox::sorry(0, tmpFile.errorString());
+            KMessageBox::sorry(nullptr, tmpFile.errorString());
         }
     } else {
-        KMessageBox::sorry(0, i18n("The url %1 is invalid", url.fileName()));
+        KMessageBox::sorry(nullptr, i18n("The url %1 is invalid", url.fileName()));
     }
 }
 
@@ -742,7 +742,7 @@ void MainWindow::preferences()
     KConfigDialog *dialog = new KConfigDialog(this, "preferences", Configuration::self());
     dialog->setFaceType(KPageDialog::List);
 
-    dialog->addPage(new EditorConfigPage(0, "EditorConfigPage"), i18nc("The Editor configuration page", "Editor"), "preferences-desktop");
+    dialog->addPage(new EditorConfigPage(nullptr, "EditorConfigPage"), i18nc("The Editor configuration page", "Editor"), "preferences-desktop");
 //    dialog->setHelp("ConfigurationDialog");
 
     connect(dialog, SIGNAL(settingsChanged(QString)), m_editor, SLOT(readSettings()));
