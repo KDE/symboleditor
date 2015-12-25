@@ -228,7 +228,6 @@ Editor::Editor(QWidget *parent)
 
 /**
  * Destructor for the Editor.
- * No additional destruction is required here.
  */
 Editor::~Editor()
 {
