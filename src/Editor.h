@@ -79,7 +79,7 @@ public:
     enum ToolMode {MoveTo, LineTo, CubicTo, Rectangle, Ellipse, Character};
 
     explicit Editor(QWidget *parent = nullptr);
-    ~Editor();
+    virtual ~Editor();
 
     QPair<qint16, Symbol> symbol();
     void setSymbol(const QPair<qint16, Symbol> &pair);
@@ -134,14 +134,14 @@ signals:
     void maxLineWidth(bool reached);
 
 protected:
-    void mousePressEvent(QMouseEvent *event);
-    void mouseMoveEvent(QMouseEvent *event);
-    void mouseReleaseEvent(QMouseEvent *event);
+    virtual void mousePressEvent(QMouseEvent *event) Q_DECL_OVERRIDE;
+    virtual void mouseMoveEvent(QMouseEvent *event) Q_DECL_OVERRIDE;
+    virtual void mouseReleaseEvent(QMouseEvent *event) Q_DECL_OVERRIDE;
 
-    void resizeEvent(QResizeEvent *event);
-    void paintEvent(QPaintEvent *event);
+    virtual void resizeEvent(QResizeEvent *event) Q_DECL_OVERRIDE;
+    virtual void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
 
-    void keyPressEvent(QKeyEvent *event);
+    virtual void keyPressEvent(QKeyEvent *event) Q_DECL_OVERRIDE;
 
 private:
     void addPoint(const QPointF &point);

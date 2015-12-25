@@ -331,17 +331,6 @@ bool MainWindow::libraryClean()
 
 
 /**
- * Test if it is ok to close the application.
- *
- * @return return true since queryClose has already been called
- */
-bool MainWindow::queryExit()
-{
-    return true;
-}
-
-
-/**
  * Open a file.
  * Use the QFileDialog::getOpenFileUrl to get a QUrl to open which is then passed to filOpen(const QUrl &).
  */

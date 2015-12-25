@@ -35,7 +35,6 @@ class Symbol
 {
 public:
     Symbol();
-    ~Symbol();
 
     QPainterPath path() const;
     bool filled() const;

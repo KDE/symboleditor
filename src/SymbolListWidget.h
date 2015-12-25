@@ -44,7 +44,7 @@ class SymbolListWidget : public QListWidget
 {
 public:
     explicit SymbolListWidget(QWidget *parent);
-    ~SymbolListWidget();
+    ~SymbolListWidget() = default;
 
     void setIconSize(int size);
     void loadFromLibrary(SymbolLibrary *library);
@@ -54,11 +54,11 @@ public:
     static QIcon createIcon(const Symbol &symbol, int size);
 
 protected:
-    virtual QStringList mimeTypes() const;
-    virtual Qt::DropActions supportedDropActions() const;
-    virtual QMimeData *mimeData(const QList<QListWidgetItem *> items) const;
-    virtual bool dropMimeData(int index, const QMimeData *mimeData, Qt::DropAction action);
-    virtual bool event(QEvent *e);
+    virtual QStringList mimeTypes() const Q_DECL_OVERRIDE;
+    virtual Qt::DropActions supportedDropActions() const Q_DECL_OVERRIDE;
+    virtual QMimeData *mimeData(const QList<QListWidgetItem *> items) const Q_DECL_OVERRIDE;
+    virtual bool dropMimeData(int index, const QMimeData *mimeData, Qt::DropAction action) Q_DECL_OVERRIDE;
+    virtual bool event(QEvent *e) Q_DECL_OVERRIDE;
 
 private:
     QListWidgetItem *createItem(qint16 index);

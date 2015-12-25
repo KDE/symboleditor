@@ -53,8 +53,7 @@ public:
     ~MainWindow();
 
 protected:
-    virtual bool queryClose();
-    virtual bool queryExit();
+    virtual bool queryClose() Q_DECL_OVERRIDE;
 
 protected slots:
     // File menu

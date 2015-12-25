@@ -77,14 +77,6 @@ MoveToCommand::MoveToCommand(Editor *editor, const QPointF &to)
 
 
 /**
- * Destructor
- */
-MoveToCommand::~MoveToCommand()
-{
-}
-
-
-/**
  * Undo the move to command. Restores the path saved during redo.
  */
 void MoveToCommand::undo()
@@ -113,14 +105,6 @@ LineToCommand::LineToCommand(Editor *editor, const QPointF &to)
     :   QUndoCommand(i18n("Draw To")),
         m_editor(editor),
         m_to(to)
-{
-}
-
-
-/**
- * Destructor
- */
-LineToCommand::~LineToCommand()
 {
 }
 
@@ -163,14 +147,6 @@ CubicToCommand::CubicToCommand(Editor *editor, const QPointF &control1, const QP
 
 
 /**
- * Destructor
- */
-CubicToCommand::~CubicToCommand()
-{
-}
-
-
-/**
  * Undo the cubic command. Restore the path saved during redo.
  */
 void CubicToCommand::undo()
@@ -206,14 +182,6 @@ RectangleCommand::RectangleCommand(Editor *editor, const QPointF &from, const QP
 
 
 /**
- * Destructor
- */
-RectangleCommand::~RectangleCommand()
-{
-}
-
-
-/**
  * Undo the rectangle command. Restore the path saved during redo.
  */
 void RectangleCommand::undo()
@@ -244,14 +212,6 @@ EllipseCommand::EllipseCommand(Editor *editor, const QPointF &from, const QPoint
         m_editor(editor),
         m_from(from),
         m_to(to)
-{
-}
-
-
-/**
- * Destructor
- */
-EllipseCommand::~EllipseCommand()
 {
 }
 
@@ -294,14 +254,6 @@ MovePointCommand::MovePointCommand(Editor *editor, int index, const QPointF &fro
 
 
 /**
- * Destructor
- */
-MovePointCommand::~MovePointCommand()
-{
-}
-
-
-/**
  * Undo the move point command. Call the Editor::movePoint function to move the
  * indexed point to its original from position.
  */
@@ -333,14 +285,6 @@ UpdateSymbolCommand::UpdateSymbolCommand(SymbolLibrary *library, qint16 index, c
         m_symbolLibrary(library),
         m_index(index),
         m_symbol(symbol)
-{
-}
-
-
-/**
- * Destructor
- */
-UpdateSymbolCommand::~UpdateSymbolCommand()
 {
 }
 
@@ -435,14 +379,6 @@ RotateLeftCommand::RotateLeftCommand(Editor *editor)
 
 
 /**
- * Destructor
- */
-RotateLeftCommand::~RotateLeftCommand()
-{
-}
-
-
-/**
  * Undo the rotate left command. Call the Editor::rotatePointRight function to reverse
  * the rotate left.
  */
@@ -469,14 +405,6 @@ void RotateLeftCommand::redo()
 RotateRightCommand::RotateRightCommand(Editor *editor)
     :   QUndoCommand(i18n("Rotate Right")),
         m_editor(editor)
-{
-}
-
-
-/**
- * Destructor
- */
-RotateRightCommand::~RotateRightCommand()
 {
 }
 
@@ -513,14 +441,6 @@ FlipHorizontalCommand::FlipHorizontalCommand(Editor *editor)
 
 
 /**
- * Destructor
- */
-FlipHorizontalCommand::~FlipHorizontalCommand()
-{
-}
-
-
-/**
  * Undo the flip horizontal command. Call the Editor::flipPointsHorizontal to flip the points.
  */
 void FlipHorizontalCommand::undo()
@@ -546,14 +466,6 @@ void FlipHorizontalCommand::redo()
 FlipVerticalCommand::FlipVerticalCommand(Editor *editor)
     :   QUndoCommand(i18n("Flip Vertical")),
         m_editor(editor)
-{
-}
-
-
-/**
- * Destructor
- */
-FlipVerticalCommand::~FlipVerticalCommand()
 {
 }
 
@@ -590,14 +502,6 @@ ScalePreferredCommand::ScalePreferredCommand(Editor *editor, const QPainterPath 
         m_originalSymbol(originalSymbol),
         m_gridElements(gridElements),
         m_borderSize(borderSize)
-{
-}
-
-
-/**
- * Destructor.
- */
-ScalePreferredCommand::~ScalePreferredCommand()
 {
 }
 
@@ -659,14 +563,6 @@ ChangeFilledCommand::ChangeFilledCommand(Editor *editor, bool from, bool to)
 
 
 /**
- * Destructor
- */
-ChangeFilledCommand::~ChangeFilledCommand()
-{
-}
-
-
-/**
  * Undo the change fill state command. Call the Editor::setFilled function to set the original value
  */
 void ChangeFilledCommand::undo()
@@ -696,14 +592,6 @@ ChangeFillRuleCommand::ChangeFillRuleCommand(Editor *editor, Qt::FillRule from, 
         m_editor(editor),
         m_from(from),
         m_to(to)
-{
-}
-
-
-/**
- * Destructor
- */
-ChangeFillRuleCommand::~ChangeFillRuleCommand()
 {
 }
 
@@ -743,14 +631,6 @@ ChangeCapStyleCommand::ChangeCapStyleCommand(Editor *editor, Qt::PenCapStyle fro
 
 
 /**
- * Destructor
- */
-ChangeCapStyleCommand::~ChangeCapStyleCommand()
-{
-}
-
-
-/**
  * Undo the change pen cap style command.
  */
 void ChangeCapStyleCommand::undo()
@@ -780,14 +660,6 @@ ChangeJoinStyleCommand::ChangeJoinStyleCommand(Editor *editor, Qt::PenJoinStyle 
         m_editor(editor),
         m_from(from),
         m_to(to)
-{
-}
-
-
-/**
- * Destructor
- */
-ChangeJoinStyleCommand::~ChangeJoinStyleCommand()
 {
 }
 
@@ -825,14 +697,6 @@ DeleteSymbolCommand::DeleteSymbolCommand(SymbolLibrary *library, qint16 index)
 
 
 /**
- * Destructor
- */
-DeleteSymbolCommand::~DeleteSymbolCommand()
-{
-}
-
-
-/**
  * Undo deleting the Symbol restoring it from the saved one.
  */
 void DeleteSymbolCommand::undo()
@@ -862,14 +726,6 @@ IncreaseLineWidthCommand::IncreaseLineWidthCommand(Editor *editor, qreal from, q
         m_editor(editor),
         m_from(from),
         m_to(to)
-{
-}
-
-
-/**
- * Destructor
- */
-IncreaseLineWidthCommand::~IncreaseLineWidthCommand()
 {
 }
 
@@ -934,14 +790,6 @@ DecreaseLineWidthCommand::DecreaseLineWidthCommand(Editor *editor, qreal from, q
         m_editor(editor),
         m_from(from),
         m_to(to)
-{
-}
-
-
-/**
- * Destructor
- */
-DecreaseLineWidthCommand::~DecreaseLineWidthCommand()
 {
 }
 

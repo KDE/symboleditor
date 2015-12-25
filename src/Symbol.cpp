@@ -46,14 +46,6 @@ Symbol::Symbol()
 
 
 /**
- * Destructor
- */
-Symbol::~Symbol()
-{
-}
-
-
-/**
  * Get the QPainterPath for the symbol. The path also incorporates the path fill mode.
  *
  * @return a QPainterPath

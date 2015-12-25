@@ -38,35 +38,11 @@
 
 /**
  * Constructor
- */
-InvalidFile::InvalidFile()
-{
-}
-
-
-/**
- * Destructor
- */
-InvalidFile::~InvalidFile()
-{
-}
-
-
-/**
- * Constructor
  *
  * @param v the version of the file that was being read
  */
 InvalidFileVersion::InvalidFileVersion(qint32 v)
     :   version(v)
-{
-}
-
-
-/**
- * Destructor
- */
-InvalidFileVersion::~InvalidFileVersion()
 {
 }
 
@@ -78,14 +54,6 @@ InvalidFileVersion::~InvalidFileVersion()
  */
 FailedReadLibrary::FailedReadLibrary(QDataStream::Status status)
     :   m_status(status)
-{
-}
-
-
-/**
- * Destructor
- */
-FailedReadLibrary::~FailedReadLibrary()
 {
 }
 
@@ -121,14 +89,6 @@ FailedWriteLibrary::FailedWriteLibrary(QDataStream::Status status)
 
 
 /**
- * Destructor
- */
-FailedWriteLibrary::~FailedWriteLibrary()
-{
-}
-
-
-/**
  * Get the status message of the QDataStream::Status
  *
  * @return a QString containing the stream status
@@ -154,13 +114,5 @@ QString FailedWriteLibrary::statusMessage() const
  */
 InvalidSymbolVersion::InvalidSymbolVersion(qint32 v)
     :   version(v)
-{
-}
-
-
-/**
- * Destructor
- */
-InvalidSymbolVersion::~InvalidSymbolVersion()
 {
 }

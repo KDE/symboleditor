@@ -43,10 +43,10 @@ class MoveToCommand : public QUndoCommand
 {
 public:
     MoveToCommand(Editor *editor, const QPointF &to);
-    virtual ~MoveToCommand();
+    virtual ~MoveToCommand() = default;
 
-    virtual void undo();
-    virtual void redo();
+    virtual void undo() Q_DECL_OVERRIDE;
+    virtual void redo() Q_DECL_OVERRIDE;
 
 private:
     Editor          *m_editor;  /**< pointer to the editor */
@@ -67,10 +67,10 @@ class LineToCommand : public QUndoCommand
 {
 public:
     LineToCommand(Editor *editor, const QPointF &to);
-    virtual ~LineToCommand();
+    virtual ~LineToCommand() = default;
 
-    virtual void undo();
-    virtual void redo();
+    virtual void undo() Q_DECL_OVERRIDE;
+    virtual void redo() Q_DECL_OVERRIDE;
 
 private:
     Editor          *m_editor;  /**< pointer to the editor */
@@ -91,10 +91,10 @@ class CubicToCommand : public QUndoCommand
 {
 public:
     CubicToCommand(Editor *editor, const QPointF &control1, const QPointF &control2, const QPointF &to);
-    virtual ~CubicToCommand();
+    virtual ~CubicToCommand() = default;
 
-    virtual void undo();
-    virtual void redo();
+    virtual void undo() Q_DECL_OVERRIDE;
+    virtual void redo() Q_DECL_OVERRIDE;
 
 private:
     Editor          *m_editor;  /**< pointer to the editor */
@@ -118,10 +118,10 @@ class RectangleCommand : public  QUndoCommand
 {
 public:
     RectangleCommand(Editor *editor, const QPointF &from, const QPointF &to);
-    virtual ~RectangleCommand();
+    virtual ~RectangleCommand() = default;
 
-    virtual void undo();
-    virtual void redo();
+    virtual void undo() Q_DECL_OVERRIDE;
+    virtual void redo() Q_DECL_OVERRIDE;
 
 private:
     Editor          *m_editor;  /**< pointer to the editor */
@@ -144,10 +144,10 @@ class EllipseCommand : public QUndoCommand
 {
 public:
     EllipseCommand(Editor *editor, const QPointF &from, const QPointF &to);
-    virtual ~EllipseCommand();
+    virtual ~EllipseCommand() = default;
 
-    virtual void undo();
-    virtual void redo();
+    virtual void undo() Q_DECL_OVERRIDE;
+    virtual void redo() Q_DECL_OVERRIDE;
 
 private:
     Editor          *m_editor;  /**< pointer to the editor */
@@ -169,10 +169,10 @@ class MovePointCommand : public QUndoCommand
 {
 public:
     MovePointCommand(Editor *editor, int index, const QPointF &from, const QPointF &to);
-    virtual ~MovePointCommand();
+    virtual ~MovePointCommand() = default;
 
-    virtual void undo();
-    virtual void redo();
+    virtual void undo() Q_DECL_OVERRIDE;
+    virtual void redo() Q_DECL_OVERRIDE;
 
 private:
     Editor          *m_editor;  /**< pointer to the editor */
@@ -194,10 +194,10 @@ class UpdateSymbolCommand : public QUndoCommand
 {
 public:
     UpdateSymbolCommand(SymbolLibrary *library, qint16 index, const Symbol &symbol);
-    virtual ~UpdateSymbolCommand();
+    virtual ~UpdateSymbolCommand() = default;
 
-    virtual void undo();
-    virtual void redo();
+    virtual void undo() Q_DECL_OVERRIDE;
+    virtual void redo() Q_DECL_OVERRIDE;
 
 private:
     SymbolLibrary   *m_symbolLibrary;   /**< pointer to the symbol library */
@@ -242,10 +242,10 @@ class RotateLeftCommand : public QUndoCommand
 {
 public:
     explicit RotateLeftCommand(Editor *editor);
-    ~RotateLeftCommand();
+    virtual ~RotateLeftCommand() = default;
 
-    virtual void undo();
-    virtual void redo();
+    virtual void undo() Q_DECL_OVERRIDE;
+    virtual void redo() Q_DECL_OVERRIDE;
 
 private:
     Editor  *m_editor;                  /**< pointer to the editor */
@@ -263,10 +263,10 @@ class RotateRightCommand : public QUndoCommand
 {
 public:
     explicit RotateRightCommand(Editor *editor);
-    ~RotateRightCommand();
+    virtual ~RotateRightCommand() = default;
 
-    virtual void undo();
-    virtual void redo();
+    virtual void undo() Q_DECL_OVERRIDE;
+    virtual void redo() Q_DECL_OVERRIDE;
 
 private:
     Editor  *m_editor;                  /**< pointer to the editor */
@@ -285,10 +285,10 @@ class FlipHorizontalCommand : public QUndoCommand
 {
 public:
     explicit FlipHorizontalCommand(Editor *editor);
-    ~FlipHorizontalCommand();
+    virtual ~FlipHorizontalCommand() = default;
 
-    virtual void undo();
-    virtual void redo();
+    virtual void undo() Q_DECL_OVERRIDE;
+    virtual void redo() Q_DECL_OVERRIDE;
 
 private:
     Editor  *m_editor;                  /**< pointer to the editor */
@@ -307,10 +307,10 @@ class FlipVerticalCommand : public QUndoCommand
 {
 public:
     explicit FlipVerticalCommand(Editor *editor);
-    ~FlipVerticalCommand();
+    virtual ~FlipVerticalCommand() = default;
 
-    virtual void undo();
-    virtual void redo();
+    virtual void undo() Q_DECL_OVERRIDE;
+    virtual void redo() Q_DECL_OVERRIDE;
 
 private:
     Editor  *m_editor;                  /**< pointer to the editor */
@@ -327,10 +327,10 @@ class ScalePreferredCommand : public QUndoCommand
 {
 public:
     ScalePreferredCommand(Editor *editor, const QPainterPath &originlSymbol, int gridElements, int borderSize);
-    ~ScalePreferredCommand();
+    virtual ~ScalePreferredCommand() = default;
 
-    virtual void undo();
-    virtual void redo();
+    virtual void undo() Q_DECL_OVERRIDE;
+    virtual void redo() Q_DECL_OVERRIDE;
 
 private:
     Editor          *m_editor;          /**< pointer to the editor */
@@ -351,10 +351,10 @@ class ChangeFilledCommand : public QUndoCommand
 {
 public:
     ChangeFilledCommand(Editor *editor, bool from, bool to);
-    virtual ~ChangeFilledCommand();
+    virtual ~ChangeFilledCommand() = default;
 
-    virtual void undo();
-    virtual void redo();
+    virtual void undo() Q_DECL_OVERRIDE;
+    virtual void redo() Q_DECL_OVERRIDE;
 
 private:
     Editor  *m_editor;                  /**< pointer to the editor */
@@ -374,10 +374,10 @@ class ChangeFillRuleCommand : public QUndoCommand
 {
 public:
     ChangeFillRuleCommand(Editor *editor, Qt::FillRule from, Qt::FillRule to);
-    virtual ~ChangeFillRuleCommand();
+    virtual ~ChangeFillRuleCommand() = default;
 
-    virtual void undo();
-    virtual void redo();
+    virtual void undo() Q_DECL_OVERRIDE;
+    virtual void redo() Q_DECL_OVERRIDE;
 
 private:
     Editor          *m_editor;          /**< pointer to the Editor */
@@ -397,10 +397,10 @@ class ChangeCapStyleCommand : public QUndoCommand
 {
 public:
     ChangeCapStyleCommand(Editor *editor, Qt::PenCapStyle from, Qt::PenCapStyle to);
-    virtual ~ChangeCapStyleCommand();
+    virtual ~ChangeCapStyleCommand() = default;
 
-    virtual void undo();
-    virtual void redo();
+    virtual void undo() Q_DECL_OVERRIDE;
+    virtual void redo() Q_DECL_OVERRIDE;
 
 private:
     Editor          *m_editor;          /**< pointer to the Editor */
@@ -420,10 +420,10 @@ class ChangeJoinStyleCommand : public QUndoCommand
 {
 public:
     ChangeJoinStyleCommand(Editor *editor, Qt::PenJoinStyle from, Qt::PenJoinStyle to);
-    virtual ~ChangeJoinStyleCommand();
+    virtual ~ChangeJoinStyleCommand() = default;
 
-    virtual void undo();
-    virtual void redo();
+    virtual void undo() Q_DECL_OVERRIDE;
+    virtual void redo() Q_DECL_OVERRIDE;
 
 private:
     Editor              *m_editor;      /**< pointer to the Editor */
@@ -443,10 +443,10 @@ class DeleteSymbolCommand : public QUndoCommand
 {
 public:
     DeleteSymbolCommand(SymbolLibrary *library, qint16 index);
-    virtual ~DeleteSymbolCommand();
+    virtual ~DeleteSymbolCommand() = default;
 
-    virtual void undo();
-    virtual void redo();
+    virtual void undo() Q_DECL_OVERRIDE;
+    virtual void redo() Q_DECL_OVERRIDE;
 
 private:
     SymbolLibrary   *m_symbolLibrary;   /**< pointer to the SymbolLibrary */
@@ -467,13 +467,13 @@ class IncreaseLineWidthCommand : public QUndoCommand
 {
 public:
     IncreaseLineWidthCommand(Editor *editor, qreal from, qreal to);
-    virtual ~IncreaseLineWidthCommand();
+    virtual ~IncreaseLineWidthCommand() = default;
 
-    virtual void redo();
-    virtual void undo();
+    virtual void redo() Q_DECL_OVERRIDE;
+    virtual void undo() Q_DECL_OVERRIDE;
 
-    virtual int id() const;
-    virtual bool mergeWith(const QUndoCommand *command);
+    virtual int id() const Q_DECL_OVERRIDE;
+    virtual bool mergeWith(const QUndoCommand *command) Q_DECL_OVERRIDE;
 
 private:
     Editor      *m_editor;              /**< pointer to the Editor */
@@ -494,13 +494,13 @@ class DecreaseLineWidthCommand : public QUndoCommand
 {
 public:
     DecreaseLineWidthCommand(Editor *editor, qreal from, qreal to);
-    virtual ~DecreaseLineWidthCommand();
+    virtual ~DecreaseLineWidthCommand() = default;
 
-    virtual void redo();
-    virtual void undo();
+    virtual void redo() Q_DECL_OVERRIDE;
+    virtual void undo() Q_DECL_OVERRIDE;
 
-    virtual int id() const;
-    virtual bool mergeWith(const QUndoCommand *command);
+    virtual int id() const Q_DECL_OVERRIDE;
+    virtual bool mergeWith(const QUndoCommand *command) Q_DECL_OVERRIDE;
 
 private:
     Editor      *m_editor;              /**< pointer to the Editor */
@@ -519,8 +519,8 @@ class DragAndDropCommand : public QUndoCommand
 public:
     DragAndDropCommand(SymbolLibrary *library, const QMimeData *mimeData);
 
-    virtual void redo();
-    virtual void undo();
+    virtual void redo() Q_DECL_OVERRIDE;
+    virtual void undo() Q_DECL_OVERRIDE;
 
 private:
     SymbolLibrary   *m_library;
@@ -539,8 +539,8 @@ class AddCharacterCommand : public QUndoCommand
 public:
     AddCharacterCommand(Editor *editor, const QPainterPath &path);
 
-    virtual void redo();
-    virtual void undo();
+    virtual void redo() Q_DECL_OVERRIDE;
+    virtual void undo() Q_DECL_OVERRIDE;
 
 private:
     Editor          *m_editor;
