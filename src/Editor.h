@@ -29,9 +29,6 @@
 #include "Commands.h"
 
 
-class QMousePressEvent;
-class QMouseMoveEvent;
-class QMouseReleaseEvent;
 class QPaintEvent;
 
 class KCharSelect;
