@@ -90,7 +90,7 @@ int main(int argc, char *argv[])
                          KAboutLicense::GPL_V2,                             // license
                          i18n("(c)2011-2015 Stephen Allewell"),             // copyright
                          QString(),                                         // other text
-                         QString("http://userbase.kde.org/SymbolEditor")    // home page
+                         QStringLiteral("http://userbase.kde.org/SymbolEditor")    // home page
                          // bug address defaults to submit@bugs.kde.org
                );
 
@@ -101,7 +101,7 @@ int main(int argc, char *argv[])
 
     app.setApplicationName(aboutData.componentName());
     app.setApplicationDisplayName(aboutData.displayName());
-    app.setWindowIcon(QIcon::fromTheme("SymbolEditor"));
+    app.setWindowIcon(QIcon::fromTheme(QStringLiteral("SymbolEditor")));
     app.setOrganizationDomain(aboutData.organizationDomain());
     app.setApplicationVersion(aboutData.version());
 

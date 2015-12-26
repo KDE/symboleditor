@@ -198,7 +198,7 @@ QIcon SymbolListWidget::createIcon(const Symbol &symbol, int size)
 QStringList SymbolListWidget::mimeTypes() const
 {
     QStringList mimetypes;
-    mimetypes.append("application/kxstitchsymbol");
+    mimetypes.append(QStringLiteral("application/kxstitchsymbol"));
     return mimetypes;
 }
 
@@ -229,7 +229,7 @@ QMimeData *SymbolListWidget::mimeData(const QList<QListWidgetItem *> items) cons
         stream << symbol;
     }
 
-    mimeData->setData("application/kxstitchsymbol", data);
+    mimeData->setData(QStringLiteral("application/kxstitchsymbol"), data);
     return mimeData;
 }
 
@@ -248,7 +248,7 @@ bool SymbolListWidget::dropMimeData(int index, const QMimeData *mimeData, Qt::Dr
     Q_UNUSED(index);
     Q_UNUSED(action);
 
-    if (mimeData->hasFormat("application/kxstitchsymbol")) {
+    if (mimeData->hasFormat(QStringLiteral("application/kxstitchsymbol"))) {
         m_library->undoStack()->push(new DragAndDropCommand(m_library, mimeData));
         return true;
     }

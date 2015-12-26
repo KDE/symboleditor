@@ -852,7 +852,7 @@ DragAndDropCommand::DragAndDropCommand(SymbolLibrary *library, const QMimeData *
     :   QUndoCommand(i18n("Add Symbols")),
         m_library(library)
 {
-    QByteArray data = mimeData->data("application/kxstitchsymbol");
+    QByteArray data = mimeData->data(QStringLiteral("application/kxstitchsymbol"));
     QDataStream stream(&data, QIODevice::ReadOnly);
 
     while (!stream.atEnd()) {

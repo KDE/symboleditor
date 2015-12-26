@@ -30,7 +30,7 @@
  * @param parent a pointer to the parent QWidget
  * @param name the name of this widget
  */
-EditorConfigPage::EditorConfigPage(QWidget *parent, const char *name)
+EditorConfigPage::EditorConfigPage(QWidget *parent, const QString &name)
     :   QWidget(parent)
 {
     setObjectName(name);

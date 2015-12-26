@@ -30,7 +30,7 @@ class EditorConfigPage : public QWidget, public Ui::EditorConfigPage
     Q_OBJECT
 
 public:
-    explicit EditorConfigPage(QWidget *parent = nullptr, const char *name = nullptr);
+    explicit EditorConfigPage(QWidget *parent, const QString &name);
 };
 
 
