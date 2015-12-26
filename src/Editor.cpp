@@ -167,7 +167,7 @@
 
 const int pointsRequired[] = {1, 1, 3, 2, 2};   /**< The number of points required for commands from Editor::ToolMode */
 
-const QString statusMessages[][3] = {
+const char *statusMessages[][3] = {
     {
         I18N_NOOP("Select a new starting position."),
         "",
@@ -969,7 +969,7 @@ void Editor::addPoint(const QPointF &point)
  */
 void Editor::updateStatusMessage()
 {
-    emit message(statusMessages[m_toolMode][m_activePoints.count()]);
+    emit message(i18n(statusMessages[m_toolMode][m_activePoints.count()]));
 }
 
 
