@@ -5,6 +5,7 @@
   <name>SymbolEditor</name>
   <name xml:lang="ca">SymbolEditor</name>
   <name xml:lang="ca-valencia">SymbolEditor</name>
+  <name xml:lang="cs">SymbolEditor</name>
   <name xml:lang="de">SymbolEditor</name>
   <name xml:lang="en-GB">SymbolEditor</name>
   <name xml:lang="es">SymbolEditor</name>
@@ -21,6 +22,7 @@
   <summary>A cross stitch symbol editor</summary>
   <summary xml:lang="ca">Editor de símbols de punt de creu</summary>
   <summary xml:lang="ca-valencia">Editor de símbols de punt de creu</summary>
+  <summary xml:lang="cs">Editor symbolů pro vyšívání křížkovým stehem</summary>
   <summary xml:lang="de">Ein Kreuzstich-Symboleditor</summary>
   <summary xml:lang="en-GB">A cross stitch symbol editor</summary>
   <summary xml:lang="es">Un editor de símbolos de punto de cruz</summary>
@@ -51,6 +53,7 @@
     <p xml:lang="ast">Carauterístiques:</p>
     <p xml:lang="ca">Característiques:</p>
     <p xml:lang="ca-valencia">Característiques:</p>
+    <p xml:lang="cs">Vlastnosti:</p>
     <p xml:lang="de">Funktionen:</p>
     <p xml:lang="en-GB">Features:</p>
     <p xml:lang="es">Funciones:</p>
@@ -145,6 +148,7 @@
     <binary>SymbolEditor</binary>
     <binary xml:lang="ca">SymbolEditor</binary>
     <binary xml:lang="ca-valencia">SymbolEditor</binary>
+    <binary xml:lang="cs">SymbolEditor</binary>
     <binary xml:lang="de">SymbolEditor</binary>
     <binary xml:lang="en-GB">SymbolEditor</binary>
     <binary xml:lang="es">SymbolEditor</binary>
