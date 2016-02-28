@@ -69,6 +69,7 @@
     <p xml:lang="zh-CN">功能：</p>
     <ul>
       <li>Creation of multiple libraries</li>
+      <li xml:lang="ast">Creación del múltiples biblioteques</li>
       <li xml:lang="ca">Creació de múltiples biblioteques</li>
       <li xml:lang="ca-valencia">Creació de múltiples biblioteques</li>
       <li xml:lang="en-GB">Creation of multiple libraries</li>
@@ -121,6 +122,7 @@
       <li xml:lang="uk">Перетягування зі скиданням з однієї бібліотеки до іншої бібліотеки.</li>
       <li xml:lang="x-test">xxDrag and drop from one library to anotherxx</li>
       <li>Symbol creation from characters</li>
+      <li xml:lang="ast">Creación de símbolos pa carauteres</li>
       <li xml:lang="ca">Creació de símbols des de caràcters</li>
       <li xml:lang="ca-valencia">Creació de símbols des de caràcters</li>
       <li xml:lang="en-GB">Symbol creation from characters</li>
