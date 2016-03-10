@@ -60,7 +60,10 @@ file (GLOB SymbolEditor_UI ${CMAKE_CURRENT_SOURCE_DIR}/ui/*.ui)
 ki18n_wrap_ui (SymbolEditor_SRCS ${SymbolEditor_UI})
 
 add_subdirectory (icons)
-add_subdirectory (doc)
+
+if (KF5DocTools_FOUND)
+    add_subdirectory (doc)
+endif (KF5DocTools_FOUND)
 
 kconfig_add_kcfg_files (SymbolEditor_SRCS SymbolEditor.kcfgc)
 
