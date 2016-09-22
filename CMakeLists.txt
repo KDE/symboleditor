@@ -64,10 +64,6 @@ add_subdirectory (doc)
 
 kconfig_add_kcfg_files (SymbolEditor_SRCS SymbolEditor.kcfgc)
 
-qt5_wrap_ui (SymbolEditor_SRCS
-    ui/EditorConfigPage.ui
-)
-
 ecm_install_icons (ICONS sc-apps-SymbolEditor.svgz DESTINATION ${ICON_INSTALL_DIR})
 
 add_executable (SymbolEditor ${SymbolEditor_SRCS})
@@ -88,8 +84,6 @@ add_definitions (
     -DQT_NO_CAST_TO_ASCII
     -DKDE_NO_COMPAT
 )
-
-add_definitions (-DTRANSLATION_DOMAIN="SymbolEditor")
 
 if (SILENCE_DEPRECATED)
     add_definitions( -Wno-deprecated-declarations )
