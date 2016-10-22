@@ -12,6 +12,7 @@
   <name xml:lang="gl">SymbolEditor</name>
   <name xml:lang="it">SymbolEditor</name>
   <name xml:lang="nl">SymbolEditor</name>
+  <name xml:lang="nn">SymbolEditor</name>
   <name xml:lang="pl">EdytorSymboli</name>
   <name xml:lang="pt">Editor de Símbolos</name>
   <name xml:lang="pt-BR">Editor de Símbolos</name>
@@ -30,6 +31,7 @@
   <summary xml:lang="gl">Un editor de símbolos de cruz en punta.</summary>
   <summary xml:lang="it">Un editor di simboli punto croce</summary>
   <summary xml:lang="nl">Een kruissteeksymboolbewerker</summary>
+  <summary xml:lang="nn">Redigeringsprogram for krossting</summary>
   <summary xml:lang="pl">Edytor symboli Cross Stitch.</summary>
   <summary xml:lang="pt">Um editor de símbolos de pontos de cruz</summary>
   <summary xml:lang="pt-BR">Um editor de símbolos em ponto cruz</summary>
@@ -63,6 +65,7 @@
     <p xml:lang="gl">Funcionalidades:</p>
     <p xml:lang="it">Funzionalità:</p>
     <p xml:lang="nl">Kenmerken:</p>
+    <p xml:lang="nn">Funksjonar:</p>
     <p xml:lang="pl">Możliwości:</p>
     <p xml:lang="pt">Funcionalidades:</p>
     <p xml:lang="pt-BR">Funcionalidades:</p>
@@ -81,6 +84,7 @@
       <li xml:lang="gl">Creación de varias bibliotecas.</li>
       <li xml:lang="it">Creazione di librerie multiple</li>
       <li xml:lang="nl">Maken van meerdere bibliotheken</li>
+      <li xml:lang="nn">Kan laga fleire symbolbibliotek</li>
       <li xml:lang="pl">Tworzenie wielu bibliotek</li>
       <li xml:lang="pt">Criação de diversas bibliotecas</li>
       <li xml:lang="pt-BR">Criação de diversas bibliotecas</li>
@@ -95,6 +99,7 @@
       <li xml:lang="gl">Símbolos con e sen recheo.</li>
       <li xml:lang="it">Simboli riempiti e svuotati</li>
       <li xml:lang="nl">Gevulde en niet gevulde symbolen</li>
+      <li xml:lang="nn">Fylde og tomme symbol</li>
       <li xml:lang="pl">Symbole z wypełnieniem i bez</li>
       <li xml:lang="pt">Símbolos preenchidos e não preenchidos</li>
       <li xml:lang="pt-BR">Símbolos preenchidos e não preenchidos</li>
@@ -109,6 +114,7 @@
       <li xml:lang="gl">Anchura de liña variábel, tipos de vértice e de unión.</li>
       <li xml:lang="it">Linee a larghezza variabile, tipi di fine e di unione</li>
       <li xml:lang="nl">Variabele lijnbreedte, eindsoorten en samenvoegsoorten</li>
+      <li xml:lang="nn">Ulike breidder og hjørne- og endestilar for linjer</li>
       <li xml:lang="pl">Zmienne szerokości linii, rodzaje zakończeń i połączeń</li>
       <li xml:lang="pt">Espessuras de linhas, tipos de extremidades e junções variáveis</li>
       <li xml:lang="pt-BR">Espessuras de linhas, tipos de extremidades e junções variáveis</li>
@@ -123,6 +129,7 @@
       <li xml:lang="gl">Arrastrar e soltar dunha biblioteca a outra.</li>
       <li xml:lang="it">Trascina da una libreria ad un'altra</li>
       <li xml:lang="nl">Verslepen en loslaten uit de ene bibliotheek naar een andere</li>
+      <li xml:lang="nn">Dra og slepp mellom bibliotek</li>
       <li xml:lang="pl">Przeciąganie i upuszczanie z jednej biblioteki do innej</li>
       <li xml:lang="pt">Arrastar e largar de uma biblioteca para outra</li>
       <li xml:lang="pt-BR">Arrastar e soltar de uma biblioteca para outra</li>
@@ -138,6 +145,7 @@
       <li xml:lang="gl">Creación de símbolos a partir de caracteres.</li>
       <li xml:lang="it">Creazione di simboli da caratteri</li>
       <li xml:lang="nl">Maken van symbolen uit tekens</li>
+      <li xml:lang="nn">Symbollaging basert på teikn</li>
       <li xml:lang="pl">Tworzenie symboli ze znaków</li>
       <li xml:lang="pt">Criação de símbolos a partir de caracteres</li>
       <li xml:lang="pt-BR">Criação de símbolos a partir de caracteres</li>
@@ -166,6 +174,7 @@
     <binary xml:lang="gl">SymbolEditor</binary>
     <binary xml:lang="it">SymbolEditor</binary>
     <binary xml:lang="nl">SymbolEditor</binary>
+    <binary xml:lang="nn">SymbolEditor</binary>
     <binary xml:lang="pl">EdytorSymboli</binary>
     <binary xml:lang="pt">Editor de Símbolos</binary>
     <binary xml:lang="pt-BR">Editor de Símbolos</binary>
