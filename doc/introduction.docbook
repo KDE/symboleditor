@@ -1,8 +1,8 @@
 <chapter id="introduction" >
     <title>Introduction</title>
     <para>
-        &kapp; is used to create cross stitch symbols for the KXStitch application. Originally
-        KXStitch relied on standard character fonts to supply these symbols, but differences in user
+        &symboleditor; is used to create cross stitch symbols for the &kxstitch; application. Originally
+        &kxstitch; relied on standard character fonts to supply these symbols, but differences in user
         languages and the quality of the fonts available along with the alignment of the characters
         and the limited number available has driven the need to create a dedicated symbol set.
     </para>
@@ -17,7 +17,7 @@
         the library.
     </para>
     <para>
-        Please report any problems or feature requests to the &kapp; KDE mailing list symboleditor@kde.org,
+        Please report any problems or feature requests to the &symboleditor; KDE mailing list symboleditor@kde.org,
         you can subscribe <ulink url="http://mail.kde.org/mailman/listinfo/symboleditor">here</ulink> or
         the KDE bug tracking system at <ulink url="http://bugs.kde.org/">http://bugs.kde.org/</ulink>.
     </para>

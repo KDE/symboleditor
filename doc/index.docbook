@@ -1,7 +1,7 @@
 <?xml version = '1.0'?>
     <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
     <!ENTITY symboleditor '<application>SymbolEditor</application>'>
-    <!ENTITY kapp "&symboleditor;">
+    <!ENTITY kxstitch '<application>KXStitch</application>'>
     <!ENTITY % addindex "IGNORE">
     <!ENTITY % English "INCLUDE">
     <!ENTITY introduction SYSTEM "introduction.docbook">
@@ -14,7 +14,7 @@
 
 <book lang="&language;">
     <bookinfo>
-        <title>The &kapp; Handbook</title>
+        <title>The &symboleditor; Handbook</title>
         <authorgroup>
             <author>
                 <firstname>Stephen</firstname>
@@ -29,11 +29,11 @@
             <holder>Stephen P. Allewell</holder>
         </copyright>
         <legalnotice>&FDLNotice;</legalnotice>
-        <date>27/07/2015</date>
-        <releaseinfo>V.2.0.0</releaseinfo>
+        <date>2016-12-01</date>
+        <releaseinfo>SymbolEditor 2.0.0</releaseinfo>
         <abstract>
             <para>
-                &kapp; is an application to allow the creation and editing of symbol libraries for the KXStitch
+                &symboleditor; is an application to allow the creation and editing of symbol libraries for the &kxstitch;
                 application.
             </para>
         </abstract>

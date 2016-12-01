@@ -2,7 +2,7 @@
     <title>Command Reference</title>
 
     <sect1 id="menus" >
-        <title>&kapp; Menus</title>
+        <title>&symboleditor; Menus</title>
         <sect2>
             <title>The File Menu</title>
             <para>
@@ -53,7 +53,7 @@
                     </varlistentry>
                     <varlistentry>
                         <term><menuchoice><shortcut><keycombo>&Ctrl;<keycap>Q</keycap></keycombo></shortcut><guimenuitem>Quit</guimenuitem></menuchoice></term>
-                        <listitem><simpara><action>Quits &kapp;</action></simpara></listitem>
+                        <listitem><simpara><action>Quits &symboleditor;</action></simpara></listitem>
                     </varlistentry>
                 </variablelist>
             </para>
@@ -61,7 +61,7 @@
 
         <sect2>
             <title>The Edit Menu</title>
-            <para>&kapp; has the common &kde; <guimenu>Edit</guimenu> menu items, for more information read the sections about the 
+            <para>&symboleditor; has the common &kde; <guimenu>Edit</guimenu> menu items, for more information read the sections about the 
             <ulink url="help:/fundamentals/ui.html#menus-edit">Edit Menu</ulink> of the &kde; Fundamentals.
             </para>
         </sect2>
@@ -251,7 +251,7 @@
 
         <sect2>
             <title>The Settings and Help Menu</title>
-            <para>&kapp; has the common &kde; <guimenu>Settings</guimenu> and <guimenu>Help</guimenu>
+            <para>&symboleditor; has the common &kde; <guimenu>Settings</guimenu> and <guimenu>Help</guimenu>
             menu items, for more information read the sections about the <ulink url="help:/fundamentals/ui.html#menus-settings">Settings 
             Menu</ulink> and <ulink url="help:/fundamentals/ui.html#menus-help">Help Menu</ulink> of the &kde; Fundamentals.
             </para>
