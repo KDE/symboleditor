@@ -10,6 +10,7 @@
   <name xml:lang="de">SymbolEditor</name>
   <name xml:lang="en-GB">SymbolEditor</name>
   <name xml:lang="es">SymbolEditor</name>
+  <name xml:lang="fr">SymbolEditor</name>
   <name xml:lang="gl">SymbolEditor</name>
   <name xml:lang="it">SymbolEditor</name>
   <name xml:lang="nl">SymbolEditor</name>
@@ -66,6 +67,7 @@
     <p xml:lang="de">Funktionen:</p>
     <p xml:lang="en-GB">Features:</p>
     <p xml:lang="es">Funciones:</p>
+    <p xml:lang="fr">Fonctionnalités :</p>
     <p xml:lang="gl">Funcionalidades:</p>
     <p xml:lang="it">Funzionalità:</p>
     <p xml:lang="nl">Kenmerken:</p>
@@ -181,6 +183,7 @@
     <binary xml:lang="de">SymbolEditor</binary>
     <binary xml:lang="en-GB">SymbolEditor</binary>
     <binary xml:lang="es">SymbolEditor</binary>
+    <binary xml:lang="fr">SymbolEditor</binary>
     <binary xml:lang="gl">SymbolEditor</binary>
     <binary xml:lang="it">SymbolEditor</binary>
     <binary xml:lang="nl">SymbolEditor</binary>
