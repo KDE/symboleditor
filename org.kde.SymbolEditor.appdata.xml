@@ -25,8 +25,8 @@
   <name xml:lang="x-test">xxSymbolEditorxx</name>
   <name xml:lang="zh-CN">符号编辑器</name>
   <summary>A cross stitch symbol editor</summary>
-  <summary xml:lang="ca">Editor de símbols de punt de creu</summary>
-  <summary xml:lang="ca-valencia">Editor de símbols de punt de creu</summary>
+  <summary xml:lang="ca">Un editor de símbols de punt de creu</summary>
+  <summary xml:lang="ca-valencia">Un editor de símbols de punt de creu</summary>
   <summary xml:lang="cs">Editor symbolů pro vyšívání křížkovým stehem</summary>
   <summary xml:lang="de">Ein Kreuzstich-Symboleditor</summary>
   <summary xml:lang="en-GB">A cross stitch symbol editor</summary>
