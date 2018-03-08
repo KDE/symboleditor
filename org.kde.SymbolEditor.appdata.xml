@@ -171,7 +171,7 @@
   <url type="help">http://docs.kde.org/development/en/extragear-graphics/SymbolEditor/index.html</url>
   <screenshots>
     <screenshot type="default">
-      <image>https://userbase.kde.org/images.userbase/2/29/SymbolEditor.png</image>
+	    <image>https://cdn.kde.org/screenshots/symboleditor/symboleditor.png</image>
     </screenshot>
   </screenshots>
   <project_group>KDE</project_group>
