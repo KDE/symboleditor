@@ -31,6 +31,7 @@
   <summary xml:lang="de">Ein Kreuzstich-Symboleditor</summary>
   <summary xml:lang="en-GB">A cross stitch symbol editor</summary>
   <summary xml:lang="es">Un editor de símbolos de punto de cruz</summary>
+  <summary xml:lang="fr">Un éditeur de symbole au point de croix</summary>
   <summary xml:lang="gl">Un editor de símbolos de cruz en punta</summary>
   <summary xml:lang="it">Un editor di simboli punto croce</summary>
   <summary xml:lang="nl">Een kruissteeksymboolbewerker</summary>
@@ -88,6 +89,7 @@
       <li xml:lang="ca-valencia">Creació de múltiples biblioteques</li>
       <li xml:lang="en-GB">Creation of multiple libraries</li>
       <li xml:lang="es">Creación de bibliotecas múltiples</li>
+      <li xml:lang="fr">Création de plusieurs bibliothèques</li>
       <li xml:lang="gl">Creación de varias bibliotecas.</li>
       <li xml:lang="it">Creazione di librerie multiple</li>
       <li xml:lang="nl">Maken van meerdere bibliotheken</li>
@@ -153,6 +155,7 @@
       <li xml:lang="ca-valencia">Creació de símbols des de caràcters</li>
       <li xml:lang="en-GB">Symbol creation from characters</li>
       <li xml:lang="es">Creación de símbolos a partir de caracteres</li>
+      <li xml:lang="fr">Création de symboles à partir de caractères</li>
       <li xml:lang="gl">Creación de símbolos a partir de caracteres.</li>
       <li xml:lang="it">Creazione di simboli da caratteri</li>
       <li xml:lang="nl">Maken van symbolen uit tekens</li>
