@@ -3,7 +3,6 @@
   <id>org.kde.SymbolEditor.desktop</id>
   <metadata_license>GFDL-1.2-without-invariant</metadata_license>
   <name>SymbolEditor</name>
-  <name xml:lang="ast">SymbolEditor</name>
   <name xml:lang="ca">SymbolEditor</name>
   <name xml:lang="ca-valencia">SymbolEditor</name>
   <name xml:lang="cs">SymbolEditor</name>
@@ -180,7 +179,6 @@
   <project_group>KDE</project_group>
   <provides>
     <binary>SymbolEditor</binary>
-    <binary xml:lang="ast">SymbolEditor</binary>
     <binary xml:lang="ca">SymbolEditor</binary>
     <binary xml:lang="ca-valencia">SymbolEditor</binary>
     <binary xml:lang="cs">SymbolEditor</binary>
