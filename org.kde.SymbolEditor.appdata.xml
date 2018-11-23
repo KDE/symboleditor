@@ -86,6 +86,7 @@
       <li>Creation of multiple libraries</li>
       <li xml:lang="ca">Creació de múltiples biblioteques</li>
       <li xml:lang="ca-valencia">Creació de múltiples biblioteques</li>
+      <li xml:lang="de">Erstellung mehrerer Bibliotheken</li>
       <li xml:lang="en-GB">Creation of multiple libraries</li>
       <li xml:lang="es">Creación de bibliotecas múltiples</li>
       <li xml:lang="fr">Création de plusieurs bibliothèques</li>
@@ -103,6 +104,7 @@
       <li>Filled and unfilled symbols</li>
       <li xml:lang="ca">Símbols farcits i no farcits</li>
       <li xml:lang="ca-valencia">Símbols farcits i no farcits</li>
+      <li xml:lang="de">Gefüllte und ungefüllte Symbole</li>
       <li xml:lang="en-GB">Filled and unfilled symbols</li>
       <li xml:lang="es">Símbolos rellenos y sin rellenar</li>
       <li xml:lang="gl">Símbolos enchidos e sen encher.</li>
@@ -152,6 +154,7 @@
       <li>Symbol creation from characters</li>
       <li xml:lang="ca">Creació de símbols des de caràcters</li>
       <li xml:lang="ca-valencia">Creació de símbols des de caràcters</li>
+      <li xml:lang="de">Symbol-Erstellung aus Zeichen</li>
       <li xml:lang="en-GB">Symbol creation from characters</li>
       <li xml:lang="es">Creación de símbolos a partir de caracteres</li>
       <li xml:lang="fr">Création de symboles à partir de caractères</li>
