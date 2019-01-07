@@ -9,6 +9,7 @@
   <name xml:lang="de">SymbolEditor</name>
   <name xml:lang="en-GB">SymbolEditor</name>
   <name xml:lang="es">SymbolEditor</name>
+  <name xml:lang="fi">SymbolEditor</name>
   <name xml:lang="fr">SymbolEditor</name>
   <name xml:lang="gl">SymbolEditor</name>
   <name xml:lang="id">SymbolEditor</name>
@@ -31,6 +32,7 @@
   <summary xml:lang="de">Ein Kreuzstich-Symboleditor</summary>
   <summary xml:lang="en-GB">A cross stitch symbol editor</summary>
   <summary xml:lang="es">Un editor de símbolos de punto de cruz</summary>
+  <summary xml:lang="fi">Ristipistosymbolimuokkain</summary>
   <summary xml:lang="fr">Un éditeur de symbole au point de croix</summary>
   <summary xml:lang="gl">Un editor de símbolos de cruz en punta</summary>
   <summary xml:lang="id">Sebuah editor simbol kristik (cross stitch)</summary>
@@ -51,6 +53,7 @@
     <p xml:lang="ca-valencia">El SymbolEditor és un programa que pot crear biblioteques d'objectes QPainterPath amb consells quant a representar-los. Originalment va ser dissenyada per crear biblioteques de símbols per a l'aplicació KXStitch, però altres aplicacions que usin funcionalitats similars també en poden fer ús. Hi ha diverses eines per ajudar a dissenyar els símbols, incloent-hi línies, corbes de bezier, rectangles i el·lipses. Els caràcters de text es poden seleccionar des de qualsevol tipus de lletra i els símbols es poden emmirallar o girar. Els símbols es poden farcir o no farcir, el tipus de final de línia i l'estil d'unió es poden canviar i es pot variar el gruix de les línies.</p>
     <p xml:lang="en-GB">SymbolEditor is a program that can create libraries of QPainterPath objects with hints on how to render them. It was originally designed to create symbol libraries for the KXStitch application, but other applications using similar functionality could also make use of them. There are a number of tools to aid the designing of symbols, including lines, bezier curves, rectangle and ellipse. Text characters can be selected from any font and the symbols can be mirrored or rotated. Symbols can be filled or unfilled, the line end type and joining style can be changed and the line thickness can be varied.</p>
     <p xml:lang="es">SymbolEditor es un programa que puede crear bibliotecas de objetos de QPainterPath que sugiere cómo se muestran. Originalmente se diseñó para crear bibliotecas de símbolos para la aplicación KXStitch, pero también la pueden usar otras aplicaciones de funcionalidad similar. Existen diversas herramientas para ayudar a crear símbolos, que incluyen líneas, curvas de bezier, rectángulos y elipses. Puede seleccionar caracteres de texto de cualquier tipo de letra y los símbolos se pueden reflejar y rotar. Puede crear símbolos rellenos o sin rellenar, cambiar los remates y las juntas, y variar el grosor de líneas.</p>
+    <p xml:lang="fi">SymbolEditor on ohjelma, jolla luoda QPainterPath-olioita vihjein niiden hahmontamisesta. Se suunniteltiin alkuaan KXStitch-sovelluksen symbolikirjastojen luomiseen, mutta myös muut samanlaiset ohjelmat voivat hyötyä siitä. Symbolien suunnitteluun on joukko työkaluja kuten viiva, bezierkäyrä, nelikulmio ja ellipsi. Tekstimerkit voi valita mistä vain fontista, ja symboleja voi peilata ja kiertää. Symbolit voivat olla täytettyjä tai ääriviivasymboleja, viivan pääte- ja liitostyyppiä voi vaihtaa ja viivan paksuutta vaihdella.</p>
     <p xml:lang="gl">SymbolEditor é un programa que pode crear bibliotecas de obxectos QPainterPath con información sobre como renderizalos. Deseñouse orixinalmente para crear bibliotecas de símbolos para o aplicativo KXStitch, pero outros programas cunha funcionalidade similar poderían tamén usar ditas bibliotecas. Hai un bo número de ferramentas para axudar no deseño dos símbolos, como liñas, curvas bezier, rectángulos e elipses. Poden seleccionarse caracteres de texto de calquera tipo de letra, e os símbolos poden repetirse sobre un eixo (efecto espello) ou rotarse. Os símbolos poden encherse opcionalmente, pode cambiarse o estilo do final das liñas e os nodos de unión entre liñas, e pode cambiarse a anchura das liñas, combinando distintos valores en distintas liñas.</p>
     <p xml:lang="id">SymbolEditor adalah sebuah program yang bisa menciptakan pustaka objek QPainterPath dengan petunjuk pada bagaimana cara merendernya. Yang mana didesain secara original untuk menciptakan pustaka simbol buat aplikasi KXStitch. Namun aplikasi lain menggunakan fungsionalitas mirip yang juga menggunakannya. Ada beberapa alat yang dapat membantu mendesain simbol, termasuk garis, kurva bezier, persegi, dan jorong. Karakter teks dapat dipilih dari fon apapun dan simbol dapat dicerminkan atau diputar. Simbol dapat terisi atau takterisi, tipe ujung garis dan gaya penggabungan bisa diubah dan tutul baris bisa divariasi.</p>
     <p xml:lang="it">SymbolEditor è un programma che può creare librerie di oggetti QPainterPath con suggerimenti su come renderizzarli. Era stato originariamente progettato per creare librerie di simboli per KXStitch, ma può essere usato anche da altre applicazioni che fanno uso di funzionalità simili. Ci sono una serie di strumenti per aiutare nel disegno di simboli, incluse linee, curve di Bezier, rettangoli ed ellissi. I caratteri di testo possono essere selezionati da qualsiasi font, e i simboli possono essere rispecchiati e ruotati. I simboli possono essere riempiti o svuotati, i tipi di fine linea e gli stili di unione possono essere cambiati, e lo spessore della linea può essere variato.</p>
@@ -70,6 +73,7 @@
     <p xml:lang="de">Funktionen:</p>
     <p xml:lang="en-GB">Features:</p>
     <p xml:lang="es">Funciones:</p>
+    <p xml:lang="fi">Ominaisuuksia:</p>
     <p xml:lang="fr">Fonctionnalités :</p>
     <p xml:lang="gl">Funcionalidades:</p>
     <p xml:lang="id">Fitur:</p>
@@ -93,6 +97,7 @@
       <li xml:lang="de">Erstellung mehrerer Bibliotheken</li>
       <li xml:lang="en-GB">Creation of multiple libraries</li>
       <li xml:lang="es">Creación de bibliotecas múltiples</li>
+      <li xml:lang="fi">Useamman kirjaston luonti</li>
       <li xml:lang="fr">Création de plusieurs bibliothèques</li>
       <li xml:lang="gl">Creación de varias bibliotecas.</li>
       <li xml:lang="id">Penciptaan pustaka yang multipel</li>
@@ -112,6 +117,7 @@
       <li xml:lang="de">Gefüllte und ungefüllte Symbole</li>
       <li xml:lang="en-GB">Filled and unfilled symbols</li>
       <li xml:lang="es">Símbolos rellenos y sin rellenar</li>
+      <li xml:lang="fi">Täytetyt tai ääriviivasymbolit</li>
       <li xml:lang="gl">Símbolos enchidos e sen encher.</li>
       <li xml:lang="id">Simbol-simbol terisi dan takterisi</li>
       <li xml:lang="it">Simboli riempiti e svuotati</li>
@@ -129,6 +135,7 @@
       <li xml:lang="ca-valencia">Amplades de línia, tipus de final i tipus d'unió variables</li>
       <li xml:lang="en-GB">Variable line widths, end types and join types</li>
       <li xml:lang="es">Anchos de línea, remates y juntas variables</li>
+      <li xml:lang="fi">Vaihtelevan viivan paksuudet sekä pääte- ja liitostyypit</li>
       <li xml:lang="gl">Anchura de liña variábel, tipos de vértice e de unión.</li>
       <li xml:lang="id">Lebar garis variabel, tipe ujung dan tipe gabung</li>
       <li xml:lang="it">Linee a larghezza variabile, tipi di fine e di unione</li>
@@ -147,6 +154,7 @@
       <li xml:lang="de">Ziehen und Ablegen (Drag and Drop) zwischen Bibliotheken</li>
       <li xml:lang="en-GB">Drag and drop from one library to another</li>
       <li xml:lang="es">Arrastrar y soltar de una biblioteca a otra</li>
+      <li xml:lang="fi">Vedä ja pudota kirjastosta toiseen</li>
       <li xml:lang="gl">Arrastrar e soltar dunha biblioteca a outra.</li>
       <li xml:lang="id">Seret dan taruh dari salahsatu pustaka ke lainnya</li>
       <li xml:lang="it">Trascina da una libreria ad un'altra</li>
@@ -165,6 +173,7 @@
       <li xml:lang="de">Symbol-Erstellung aus Zeichen</li>
       <li xml:lang="en-GB">Symbol creation from characters</li>
       <li xml:lang="es">Creación de símbolos a partir de caracteres</li>
+      <li xml:lang="fi">Symbolin luonti merkeistä</li>
       <li xml:lang="fr">Création de symboles à partir de caractères</li>
       <li xml:lang="gl">Creación de símbolos a partir de caracteres.</li>
       <li xml:lang="id">Penciptaan simbol dari karakter</li>
@@ -197,6 +206,7 @@
     <binary xml:lang="de">SymbolEditor</binary>
     <binary xml:lang="en-GB">SymbolEditor</binary>
     <binary xml:lang="es">SymbolEditor</binary>
+    <binary xml:lang="fi">SymbolEditor</binary>
     <binary xml:lang="fr">SymbolEditor</binary>
     <binary xml:lang="gl">SymbolEditor</binary>
     <binary xml:lang="id">SymbolEditor</binary>
