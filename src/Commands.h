@@ -221,8 +221,8 @@ public:
     ImportLibraryCommand(SymbolLibrary *library, SymbolLibrary *imported);
     virtual ~ImportLibraryCommand();
 
-    virtual void undo();
-    virtual void redo();
+    virtual void undo() Q_DECL_OVERRIDE;
+    virtual void redo() Q_DECL_OVERRIDE;
 
 private:
     SymbolLibrary   *m_symbolLibrary;   /**< pointer to the symbol library */
