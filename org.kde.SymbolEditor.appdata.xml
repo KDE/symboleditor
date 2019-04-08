@@ -200,27 +200,5 @@
   <project_group>KDE</project_group>
   <provides>
     <binary>SymbolEditor</binary>
-    <binary xml:lang="ca">SymbolEditor</binary>
-    <binary xml:lang="ca-valencia">SymbolEditor</binary>
-    <binary xml:lang="cs">SymbolEditor</binary>
-    <binary xml:lang="de">SymbolEditor</binary>
-    <binary xml:lang="en-GB">SymbolEditor</binary>
-    <binary xml:lang="es">SymbolEditor</binary>
-    <binary xml:lang="fi">SymbolEditor</binary>
-    <binary xml:lang="fr">SymbolEditor</binary>
-    <binary xml:lang="gl">SymbolEditor</binary>
-    <binary xml:lang="id">SymbolEditor</binary>
-    <binary xml:lang="it">SymbolEditor</binary>
-    <binary xml:lang="nl">SymbolEditor</binary>
-    <binary xml:lang="nn">SymbolEditor</binary>
-    <binary xml:lang="pl">EdytorSymboli</binary>
-    <binary xml:lang="pt">Editor de Símbolos</binary>
-    <binary xml:lang="pt-BR">Editor de Símbolos</binary>
-    <binary xml:lang="sk">SymbolEditor</binary>
-    <binary xml:lang="sv">Symboleditor</binary>
-    <binary xml:lang="tr">SymbolEditor</binary>
-    <binary xml:lang="uk">SymbolEditor</binary>
-    <binary xml:lang="x-test">xxSymbolEditorxx</binary>
-    <binary xml:lang="zh-CN">符号编辑器</binary>
   </provides>
 </component>
