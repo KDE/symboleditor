@@ -69,7 +69,7 @@ endif (KF5DocTools_FOUND)
 
 kconfig_add_kcfg_files (SymbolEditor_SRCS SymbolEditor.kcfgc)
 
-ecm_install_icons (ICONS sc-apps-SymbolEditor.svgz DESTINATION ${ICON_INSTALL_DIR})
+ecm_install_icons (ICONS sc-apps-symboleditor.svgz DESTINATION ${ICON_INSTALL_DIR})
 
 add_executable (SymbolEditor ${SymbolEditor_SRCS})
 
