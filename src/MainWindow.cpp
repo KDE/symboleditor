@@ -367,27 +367,35 @@ void MainWindow::fileOpen(const QUrl &url)
         QTemporaryFile tmpFile;
 
         if (tmpFile.open()) {
+            tmpFile.close();
+
             KIO::FileCopyJob *job = KIO::file_copy(url, QUrl::fromLocalFile(tmpFile.fileName()), -1, KIO::Overwrite);
 
             if (job->exec()) {
-                QDataStream stream(&tmpFile);
+                QFile reader(tmpFile.fileName());
 
-                try {
-                    stream >> *m_symbolLibrary;
-                    m_url = url;
-                    KRecentFilesAction *action = static_cast<KRecentFilesAction *>(actionCollection()->action(QStringLiteral("file_open_recent")));
-                    action->addUrl(url);
-                    action->saveEntries(KConfigGroup(KSharedConfig::openConfig(), QStringLiteral("RecentFiles")));
-                    m_tabWidget->setCurrentIndex(1);
-                } catch (const InvalidFile &e) {
-                    KMessageBox::sorry(nullptr, i18n("This doesn't appear to be a valid symbol file"));
-                } catch (const InvalidFileVersion &e) {
-                    KMessageBox::sorry(nullptr, i18n("Version %1 of the library file is not supported in this version of SymbolEditor", e.version));
-                } catch (const InvalidSymbolVersion &e) {
-                    KMessageBox::sorry(nullptr, i18n("Version %1 of the symbol is not supported in this version of SymbolEditor", e.version));
-                } catch (const FailedReadLibrary &e) {
-                    KMessageBox::sorry(nullptr, i18n("Failed to read the library\n%1", e.statusMessage()));
-                    m_symbolLibrary->clear();
+                if (reader.open(QIODevice::ReadOnly)) {
+                    QDataStream stream(&reader);
+
+                    try {
+                        stream >> *m_symbolLibrary;
+                        m_url = url;
+                        KRecentFilesAction *action = static_cast<KRecentFilesAction *>(actionCollection()->action(QStringLiteral("file_open_recent")));
+                        action->addUrl(url);
+                        action->saveEntries(KConfigGroup(KSharedConfig::openConfig(), QStringLiteral("RecentFiles")));
+                        m_tabWidget->setCurrentIndex(1);
+                    } catch (const InvalidFile &e) {
+                        KMessageBox::sorry(nullptr, i18n("This doesn't appear to be a valid symbol file"));
+                    } catch (const InvalidFileVersion &e) {
+                        KMessageBox::sorry(nullptr, i18n("Version %1 of the library file is not supported in this version of SymbolEditor", e.version));
+                    } catch (const InvalidSymbolVersion &e) {
+                        KMessageBox::sorry(nullptr, i18n("Version %1 of the symbol is not supported in this version of SymbolEditor", e.version));
+                    } catch (const FailedReadLibrary &e) {
+                        KMessageBox::sorry(nullptr, i18n("Failed to read the library\n%1", e.statusMessage()));
+                        m_symbolLibrary->clear();
+                    }
+                } else {
+                    KMessageBox::error(nullptr, reader.errorString());
                 }
             } else {
                 KMessageBox::sorry(nullptr, job->errorString());
