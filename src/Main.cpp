@@ -85,10 +85,10 @@ int main(int argc, char *argv[])
 
     KAboutData aboutData(QStringLiteral("SymbolEditor"),                    // component name
                          QString(i18n("SymbolEditor")),                     // display name
-                         QStringLiteral("2.0.0"),                          // version
+                         QStringLiteral("2.1.0"),                          // version
                          i18n("A cross stitch symbol editor."),             // short description
                          KAboutLicense::GPL_V2,                             // license
-                         i18n("(c)2011-2015 Stephen Allewell"),             // copyright
+                         i18n("(c)2011-2019 Stephen Allewell"),             // copyright
                          QString(),                                         // other text
                          QStringLiteral("http://userbase.kde.org/SymbolEditor")    // home page
                          // bug address defaults to submit@bugs.kde.org
