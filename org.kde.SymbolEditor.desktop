@@ -3,6 +3,7 @@
 Type=Application
 Version=1.0
 Name=SymbolEditor
+Name[ast]=SymbolEditor
 Name[bs]=SymbolEditor
 Name[ca]=SymbolEditor
 Name[ca@valencia]=SymbolEditor
@@ -25,7 +26,6 @@ Name[nn]=SymbolEditor
 Name[pl]=EdytorSymboli
 Name[pt]=Editor de Símbolos
 Name[pt_BR]=Editor de símbolos
-Name[ru]=SymbolEditor
 Name[sk]=SymbolEditor
 Name[sv]=Symboleditor
 Name[tr]=SymbolEditor
