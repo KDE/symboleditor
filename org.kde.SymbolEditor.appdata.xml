@@ -62,6 +62,7 @@
     <p xml:lang="pl">EdytorSymboli jest programem do tworzenia bibliotek obiektów QPainterPath z informacjami o sposobie ich wyświetlania. Pierwotnie miał to być program do tworzenia bibliotek symboli dla KXStitch, lecz inne aplikacje potrzebujące podobnej funkcjonalności także mogą go używać. Wspomaganie tworzenia symboli odbywa się poprzez liczne narzędzia takie jak: linie, krzywe sklejane, prostokąty i elipsy. Można wybierać znaki tekstowe oraz symbole z dowolnej czcionki. Następnie można je odbić lustrzenie lub obrócić. Symbole mogą być z wypełnieniem lub nie, można określić rodzaj zakończenia, a także połączenia. Można zmieniać szerokość linii.</p>
     <p xml:lang="pt">O Editor de Símbolos é um programa que poderá criar bibliotecas de objectos QPainterPath com sugestões de desenho dos mesmos. Foi originalmente desenhado para criar bibliotecas de símbolos para a aplicação KXStitch, mas outras aplicações que usem uma funcionalidade semelhante também poderão tirar partido delas. Existe um conjunto de ferramentas para ajudar no desenho dos símbolos, incluindo linhas, curvas Bézier, rectângulos e elipses. Os caracteres de texto poderão ser seleccionados a partir de qualquer tipo de letra e os símbolos poderão ser invertidos ou rodados. Os símbolos poderão também ser preenchidos ou não, poder-se-á modificar o tipo de extremidades e das junções e a espessura das linhas.</p>
     <p xml:lang="pt-BR">O Editor de Símbolos é um programa que permite criar bibliotecas de objetos QPainterPath com sugestões de como desenhá-los. Foi originalmente projetado para criar bibliotecas de símbolos para o aplicativo KXStitch, mas outros aplicativos que usem uma funcionalidade semelhante também poderão usá-lo. Existe um conjunto de ferramentas para ajudar no desenho de símbolos, incluindo linhas, curvas Bézier, retângulos e elipses. Os caracteres de texto podem ser selecionados a partir de qualquer fonte e os símbolos poderão ser invertidos ou rotacionados. Os símbolos também podem ser preenchidos ou não, e o tipo de extremidade, junções e a espessura das linhas podem ser modificados.</p>
+    <p xml:lang="sk">SymbolEditor je program, ktorý dokáže vytvárať knižnice objektov QPainterPaths radami, ako ich vykresliť. Pôvodne bol navrhnutý na vytvorenieknižnice symbolov pre aplikáciu KXStitch, ale iné aplikácie využívajúcepodobné funkcie by ich mohli využiť. Existuje niekoľkonástroje na pomoc pri navrhovaní symbolov vrátane čiar, Bézierových kriviek,obdĺžnikov a elíps. Textové znaky je možné vybrať z ľubovoľného písma asymboly sa môžu zrkadliť alebo otáčať. Symboly môžu byť vyplnené alebo nevyplnené,typ konca čiary a štýl spájania sa môžu meniť a hrúbka čiary môže byťpestrá.</p>
     <p xml:lang="sv">Symboleditor är ett program som kan skapa bibliotek av QPainterPath-objekt med tips om hur de ska återges. Det konstruerades ursprungligen för att skapa symbolbibliotek för programmet KXStitch, men andra program som använder liknande funktionalitet skulle också kunna använda sig av dem. Det finns ett antal verktyg för att hjälpa till att skapa symboler, inklusive linjer, Bezier-kurvor, rektanglar och ellipser. Texttecken kan väljas från godtyckligt teckensnitt, linjeändar och sammanfogningsstil kan ändras, och linjebredden kan varieras.</p>
     <p xml:lang="tr">SymbolEditor, nasıl gerçekleneceğine dair ipucu içeren QPainterPath nesneleri kitaplıkları oluşturabilen bir programdır. Aslında KXStitch uygulaması için sembol kitaplıkları oluşturmak için tasarlanmıştı fakat benzer özellikteki diğer uygulamalar da kullanabilir. Sembol tasarlamak için çizgi, bezier eğrisi, dikdörtgen ve elipsi de içeren bir takım araçlar vardır. Herhangi bir yazı tipiden metin karakterler ve sembolller döndürülebilir ya da aynalanabilir. Semboller doldurulabilir ya da doldurulmayabilir, çizgi bitiş türü ve birleştirme biçem değiştirilebilir ve çizgi kalınlığı değişken olabilir.</p>
     <p xml:lang="uk">SymbolEditor — програма для створення бібліотек об’єктів QPainterPath з інструкціями щодо їхнього показу. Програма створювалася для редагування бібліотек позначок програми KXStitch, втім, нею можна скористатися для редагування бібліотек позначок будь-якої іншої програми із подібними функціональними можливостями. Для створення позначок у програмі передбачено декілька інструментів, зокрема інструмент малювання прямих ліній, інструмент малювання кривих Безьє, інструмент малювання прямокутників та інструмент малювання еліпсів. Можна вибрати символи з будь-якого шрифту, обертати та віддзеркалювати створені позначки. Можна створювати заповнені і незаповнені контури, вибирати тип кінчика лінії та тип з’єднання ліній, а також змінювати товщину ліній.</p>
@@ -107,6 +108,7 @@
       <li xml:lang="pl">Tworzenie wielu bibliotek</li>
       <li xml:lang="pt">Criação de diversas bibliotecas</li>
       <li xml:lang="pt-BR">Criação de diversas bibliotecas</li>
+      <li xml:lang="sk">Vytváranie viacerých knižníc</li>
       <li xml:lang="sv">Kan skapa flera bibliotek</li>
       <li xml:lang="tr">Çoklu kitaplık oluşumu</li>
       <li xml:lang="uk">Створення набору бібліотек.</li>
@@ -126,6 +128,7 @@
       <li xml:lang="pl">Symbole z wypełnieniem i bez</li>
       <li xml:lang="pt">Símbolos preenchidos e não preenchidos</li>
       <li xml:lang="pt-BR">Símbolos preenchidos e não preenchidos</li>
+      <li xml:lang="sk">Vyplnené a nevyplnené symboly</li>
       <li xml:lang="sv">Ifyllda och ihåliga symboler</li>
       <li xml:lang="tr">Doldurulmuş ve doldurulmamış semboller</li>
       <li xml:lang="uk">Створення заповнених і незаповнених позначок.</li>
@@ -144,6 +147,7 @@
       <li xml:lang="pl">Zmienne szerokości linii, rodzaje zakończeń i połączeń</li>
       <li xml:lang="pt">Espessuras de linhas, tipos de extremidades e junções variáveis</li>
       <li xml:lang="pt-BR">Espessuras de linhas, tipos de extremidades e junções variáveis</li>
+      <li xml:lang="sk">Premenlivá šírka čiar, koncové typy a typy pripojení</li>
       <li xml:lang="sv">Variabla linjebredder, ändtyper och sammanfogningstyper</li>
       <li xml:lang="tr">Değişken çizgi genişliği, bitiş türleri ve birleştirme türleri</li>
       <li xml:lang="uk">Різна товщина ліній, різні типи кінців та різні типи з’єднання.</li>
@@ -163,6 +167,7 @@
       <li xml:lang="pl">Przeciąganie i upuszczanie z jednej biblioteki do innej</li>
       <li xml:lang="pt">Arrastar e largar de uma biblioteca para outra</li>
       <li xml:lang="pt-BR">Arrastar e soltar de uma biblioteca para outra</li>
+      <li xml:lang="sk">Drag and drop z jednej knižnice do inej</li>
       <li xml:lang="sv">Dra och släpp från ett bibliotek till ett annat</li>
       <li xml:lang="tr">Bir kitaplıktan diğerine sürükle ve bırak</li>
       <li xml:lang="uk">Перетягування зі скиданням з однієї бібліотеки до іншої бібліотеки.</li>
@@ -183,6 +188,7 @@
       <li xml:lang="pl">Tworzenie symboli ze znaków</li>
       <li xml:lang="pt">Criação de símbolos a partir de caracteres</li>
       <li xml:lang="pt-BR">Criação de símbolos a partir de caracteres</li>
+      <li xml:lang="sk">Vytvorenie symbolov zo znakov</li>
       <li xml:lang="sv">Symboler kan skapas från tecken</li>
       <li xml:lang="tr">Karakterlerden sembol oluşturma</li>
       <li xml:lang="uk">Створення позначок із символів.</li>
