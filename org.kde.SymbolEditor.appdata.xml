@@ -10,6 +10,7 @@
   <name xml:lang="en-GB">SymbolEditor</name>
   <name xml:lang="es">SymbolEditor</name>
   <name xml:lang="et">Sümbolite redaktor</name>
+  <name xml:lang="eu">Ikur Editorea</name>
   <name xml:lang="fi">SymbolEditor</name>
   <name xml:lang="fr">SymbolEditor</name>
   <name xml:lang="gl">SymbolEditor</name>
@@ -35,6 +36,7 @@
   <summary xml:lang="en-GB">A cross stitch symbol editor</summary>
   <summary xml:lang="es">Un editor de símbolos de punto de cruz</summary>
   <summary xml:lang="et">Tikkimispistete sümbolite redaktor</summary>
+  <summary xml:lang="eu">Gurutze-puntuko ikurren editore bat</summary>
   <summary xml:lang="fi">Ristipistosymbolimuokkain</summary>
   <summary xml:lang="fr">Un éditeur de symbole au point de croix</summary>
   <summary xml:lang="gl">Un editor de símbolos de cruz en punta</summary>
@@ -58,6 +60,7 @@
     <p xml:lang="en-GB">SymbolEditor is a program that can create libraries of QPainterPath objects with hints on how to render them. It was originally designed to create symbol libraries for the KXStitch application, but other applications using similar functionality could also make use of them. There are a number of tools to aid the designing of symbols, including lines, bezier curves, rectangle and ellipse. Text characters can be selected from any font and the symbols can be mirrored or rotated. Symbols can be filled or unfilled, the line end type and joining style can be changed and the line thickness can be varied.</p>
     <p xml:lang="es">SymbolEditor es un programa que puede crear bibliotecas de objetos de QPainterPath que sugiere cómo se muestran. Originalmente se diseñó para crear bibliotecas de símbolos para la aplicación KXStitch, pero también la pueden usar otras aplicaciones de funcionalidad similar. Existen diversas herramientas para ayudar a crear símbolos, que incluyen líneas, curvas de bezier, rectángulos y elipses. Puede seleccionar caracteres de texto de cualquier tipo de letra y los símbolos se pueden reflejar y rotar. Puede crear símbolos rellenos o sin rellenar, cambiar los remates y las juntas, y variar el grosor de líneas.</p>
     <p xml:lang="et">Sümbolite redaktor on rakendus QPainterPath'i objektide teekide loomiseks koos vihjetega, kuidas neid renderdada. Algupäraselt oli see mõeldud rakendusele KXStitch sümboliteekide loomiseks, kuid seda võivad edukalt kasutada ka teised sarnase funktsionaalsusega rakendused. Sümbolite loomisel on abiks hulk tööriistu, sealhulgas sirgjooned, Bezier kõverad, ristkülikud ja ellipsid. Tekstimärke võib valida mis tahes fondist ning sümboleid võib peegeldada või pöörata. Sümbolid võivad olla täidetud või täitmata, joonetipu tüüpi ja ühendusestiili saab muuta, samuti võib varieerida joone jämedust.</p>
+    <p xml:lang="eu">SymbolEditor, ikur editorea, QPainterPath objektuen liburutegiak, haiek errendatzeko argibideekin, sor ditzakeen programa bat da. Jatorrian KXStitch aplikaziorako ikur-liburutegiak sortzeko diseinatu zen, baino antzeko funtzioak erabiltzen dituzten beste aplikazio batzuek ere erabil dezakete. Ikurrak diseinatzen laguntzeko tresna batzuk daude, hala nola bezier-kurbak, laukizuzena eta elipsea. Testu-karaktereak edozein letra-tipotatik hauta daitezke eta ikurrak ispilatu edo biratu daitezke. Ikurrak beteta edo bete gabe izan daitezke, lerroaren errematea eta lotura-estiloa alda daitezke baita lerroaren lodiera ere.</p>
     <p xml:lang="fi">SymbolEditor on ohjelma, jolla luoda QPainterPath-olioita vihjein niiden hahmontamisesta. Se suunniteltiin alkuaan KXStitch-sovelluksen symbolikirjastojen luomiseen, mutta myös muut samanlaiset ohjelmat voivat hyötyä siitä. Symbolien suunnitteluun on joukko työkaluja kuten viiva, bezierkäyrä, nelikulmio ja ellipsi. Tekstimerkit voi valita mistä vain fontista, ja symboleja voi peilata ja kiertää. Symbolit voivat olla täytettyjä tai ääriviivasymboleja, viivan pääte- ja liitostyyppiä voi vaihtaa ja viivan paksuutta vaihdella.</p>
     <p xml:lang="gl">SymbolEditor é un programa que pode crear bibliotecas de obxectos QPainterPath con información sobre como renderizalos. Deseñouse orixinalmente para crear bibliotecas de símbolos para a aplicación KXStitch, pero outros programas cunha funcionalidade similar poderían tamén usar ditas bibliotecas. Hai un bo número de ferramentas para axudar no deseño dos símbolos, como liñas, curvas bezier, rectángulos e elipses. Poden seleccionarse caracteres de texto de calquera tipo de letra, e os símbolos poden repetirse sobre un eixo (efecto espello) ou rotarse. Os símbolos poden encherse opcionalmente, pode cambiarse o estilo do final das liñas e os nodos de unión entre liñas, e pode cambiarse a anchura das liñas, combinando distintos valores en distintas liñas.</p>
     <p xml:lang="id">SymbolEditor adalah sebuah program yang bisa menciptakan pustaka objek QPainterPath dengan petunjuk pada bagaimana cara merendernya. Yang mana didesain secara original untuk menciptakan pustaka simbol buat aplikasi KXStitch. Namun aplikasi lain menggunakan fungsionalitas mirip yang juga menggunakannya. Ada beberapa alat yang dapat membantu mendesain simbol, termasuk garis, kurva bezier, persegi, dan jorong. Karakter teks dapat dipilih dari font apapun dan simbol dapat dicerminkan atau dirotasikan. Simbol dapat terisi atau takterisi, tipe ujung garis dan gaya penggabungan bisa diubah dan tutul baris bisa divariasi.</p>
@@ -80,6 +83,7 @@
     <p xml:lang="en-GB">Features:</p>
     <p xml:lang="es">Funciones:</p>
     <p xml:lang="et">Omadused:</p>
+    <p xml:lang="eu">Ezaugarriak:</p>
     <p xml:lang="fi">Ominaisuuksia:</p>
     <p xml:lang="fr">Fonctionnalités :</p>
     <p xml:lang="gl">Funcionalidades:</p>
@@ -106,6 +110,7 @@
       <li xml:lang="en-GB">Creation of multiple libraries</li>
       <li xml:lang="es">Creación de bibliotecas múltiples</li>
       <li xml:lang="et">Mitme teegi loomine</li>
+      <li xml:lang="eu">Liburutegi ugari sortzea</li>
       <li xml:lang="fi">Useamman kirjaston luonti</li>
       <li xml:lang="fr">Création de plusieurs bibliothèques</li>
       <li xml:lang="gl">Creación de varias bibliotecas.</li>
@@ -128,6 +133,7 @@
       <li xml:lang="en-GB">Filled and unfilled symbols</li>
       <li xml:lang="es">Símbolos rellenos y sin rellenar</li>
       <li xml:lang="et">Täidetud ja täitmata sümbolid</li>
+      <li xml:lang="eu">Sinbolo beteak eta betegarririk gabeak</li>
       <li xml:lang="fi">Täytetyt tai ääriviivasymbolit</li>
       <li xml:lang="gl">Símbolos enchidos e sen encher.</li>
       <li xml:lang="id">Simbol-simbol terisi dan takterisi</li>
@@ -148,6 +154,7 @@
       <li xml:lang="en-GB">Variable line widths, end types and join types</li>
       <li xml:lang="es">Anchos de línea, remates y juntas variables</li>
       <li xml:lang="et">Arvukalt joonepikkusi, tiputüüpe ja ühendusetüüpe</li>
+      <li xml:lang="eu">Lerro zabalera, erremate mota eta lotura mota aldakorrak</li>
       <li xml:lang="fi">Vaihtelevan viivan paksuudet sekä pääte- ja liitostyypit</li>
       <li xml:lang="gl">Anchura de liña variábel, tipos de vértice e de unión.</li>
       <li xml:lang="id">Lebar garis variabel, tipe ujung dan tipe gabung</li>
@@ -169,6 +176,7 @@
       <li xml:lang="en-GB">Drag and drop from one library to another</li>
       <li xml:lang="es">Arrastrar y soltar de una biblioteca a otra</li>
       <li xml:lang="et">Ühest teegist teise lohistamine</li>
+      <li xml:lang="eu">Arrastatu eta jaregin liburutegi batetik bestera.</li>
       <li xml:lang="fi">Vedä ja pudota kirjastosta toiseen</li>
       <li xml:lang="gl">Arrastrar e soltar dunha biblioteca a outra.</li>
       <li xml:lang="id">Seret dan taruh dari salahsatu pustaka ke lainnya</li>
@@ -190,6 +198,7 @@
       <li xml:lang="en-GB">Symbol creation from characters</li>
       <li xml:lang="es">Creación de símbolos a partir de caracteres</li>
       <li xml:lang="et">Sümboli loomine märgi põhjal</li>
+      <li xml:lang="eu">Karaktereen ikurrak sortzea</li>
       <li xml:lang="fi">Symbolin luonti merkeistä</li>
       <li xml:lang="fr">Création de symboles à partir de caractères</li>
       <li xml:lang="gl">Creación de símbolos a partir de caracteres.</li>
