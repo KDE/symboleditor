@@ -220,7 +220,7 @@
   </description>
   <url type="homepage">https://userbase.kde.org/Special:myLanguage/SymbolEditor</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=SymbolEditor</url>
-  <url type="help">http://docs.kde.org/development/en/extragear-graphics/SymbolEditor/index.html</url>
+  <url type="help">http://docs.kde.org/?application=SymbolEditor</url>
   <screenshots>
     <screenshot type="default">
       <image>https://cdn.kde.org/screenshots/symboleditor/symboleditor.png</image>
