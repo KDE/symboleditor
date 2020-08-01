@@ -25,12 +25,12 @@
             <!-- TRANS:ROLES_OF_TRANSLATORS -->
         </authorgroup>
         <copyright>
-            <year>2012-2015</year>
+            <year>2012-2019</year>
             <holder>Stephen P. Allewell</holder>
         </copyright>
         <legalnotice>&FDLNotice;</legalnotice>
-        <date>2016-12-01</date>
-        <releaseinfo>SymbolEditor 2.0.0</releaseinfo>
+        <date>2019-06-19</date>
+        <releaseinfo>SymbolEditor 2.1.0</releaseinfo>
         <abstract>
             <para>
                 &symboleditor; is an application to allow the creation and editing of symbol libraries for the &kxstitch;
