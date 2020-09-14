@@ -22,6 +22,7 @@
   <name xml:lang="pl">EdytorSymboli</name>
   <name xml:lang="pt">Editor de Símbolos</name>
   <name xml:lang="pt-BR">Editor de Símbolos</name>
+  <name xml:lang="ro">SymbolEditor</name>
   <name xml:lang="sk">SymbolEditor</name>
   <name xml:lang="sl">SymbolEditor</name>
   <name xml:lang="sv">Symboleditor</name>
@@ -99,6 +100,7 @@
     <p xml:lang="pl">Możliwości:</p>
     <p xml:lang="pt">Funcionalidades:</p>
     <p xml:lang="pt-BR">Funcionalidades:</p>
+    <p xml:lang="ro">Caracteristici:</p>
     <p xml:lang="ru">Возможности:</p>
     <p xml:lang="sk">Funkcie:</p>
     <p xml:lang="sl">Zmožnosti:</p>
@@ -127,6 +129,7 @@
       <li xml:lang="pl">Tworzenie wielu bibliotek</li>
       <li xml:lang="pt">Criação de diversas bibliotecas</li>
       <li xml:lang="pt-BR">Criação de diversas bibliotecas</li>
+      <li xml:lang="ro">Crearea bibliotecilor multiple</li>
       <li xml:lang="sl">Ustvarjanje več knjižnic</li>
       <li xml:lang="sv">Kan skapa flera bibliotek</li>
       <li xml:lang="tr">Çoklu kitaplık oluşumu</li>
@@ -222,6 +225,7 @@
       <li xml:lang="pl">Tworzenie symboli ze znaków</li>
       <li xml:lang="pt">Criação de símbolos a partir de caracteres</li>
       <li xml:lang="pt-BR">Criação de símbolos a partir de caracteres</li>
+      <li xml:lang="ro">Crearea simbolurilor din caractere</li>
       <li xml:lang="sl">Ustvarjanje simbolov iz znakov</li>
       <li xml:lang="sv">Symboler kan skapas från tecken</li>
       <li xml:lang="tr">Karakterlerden sembol oluşturma</li>
