@@ -15,6 +15,7 @@
   <name xml:lang="fi">SymbolEditor</name>
   <name xml:lang="fr">SymbolEditor</name>
   <name xml:lang="gl">SymbolEditor</name>
+  <name xml:lang="ia">SymbolEditor (Editor se symbolos)</name>
   <name xml:lang="id">SymbolEditor</name>
   <name xml:lang="it">SymbolEditor</name>
   <name xml:lang="ko">SymbolEditor</name>
@@ -91,6 +92,7 @@
     <p xml:lang="fi">Ominaisuuksia:</p>
     <p xml:lang="fr">Fonctionnalités :</p>
     <p xml:lang="gl">Funcionalidades:</p>
+    <p xml:lang="ia">Characteristicas:</p>
     <p xml:lang="id">Fitur:</p>
     <p xml:lang="it">Funzionalità:</p>
     <p xml:lang="ko">기능:</p>
