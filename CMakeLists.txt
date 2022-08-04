@@ -69,7 +69,7 @@ endif (KF5DocTools_FOUND)
 
 kconfig_add_kcfg_files (SymbolEditor_SRCS SymbolEditor.kcfgc)
 
-ecm_install_icons (ICONS sc-apps-symboleditor.svgz DESTINATION ${ICON_INSTALL_DIR})
+ecm_install_icons (ICONS sc-apps-symboleditor.svgz DESTINATION ${KDE_INSTALL_ICONDIR})
 
 add_executable (SymbolEditor ${SymbolEditor_SRCS})
 
@@ -94,15 +94,15 @@ if (SILENCE_DEPRECATED)
     add_definitions( -Wno-deprecated-declarations )
 endif (SILENCE_DEPRECATED)
 
-install (TARGETS SymbolEditor DESTINATION ${BIN_INSTALL_DIR})
-install (FILES SymbolEditorui.rc DESTINATION ${KXMLGUI_INSTALL_DIR}/SymbolEditor)
-install (FILES SymbolEditor.kcfg DESTINATION ${KCFG_INSTALL_DIR})
-install (FILES org.kde.SymbolEditor.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
+install (TARGETS SymbolEditor DESTINATION ${KDE_INSTALL_BINDIR})
+install (FILES SymbolEditorui.rc DESTINATION ${KDE_INSTALL_KXMLGUI5DIR}/SymbolEditor)
+install (FILES SymbolEditor.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
+install (FILES org.kde.SymbolEditor.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install (FILES org.kde.SymbolEditor.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
-IF (SHARED_MIME_INFO_FOUND AND IS_DIRECTORY ${XDG_MIME_INSTALL_DIR})
-    install (FILES SymbolEditor.xml DESTINATION ${XDG_MIME_INSTALL_DIR})
-    update_xdg_mimetypes (${XDG_MIME_INSTALL_DIR})
-ENDIF (SHARED_MIME_INFO_FOUND AND IS_DIRECTORY ${XDG_MIME_INSTALL_DIR})
+IF (SHARED_MIME_INFO_FOUND AND IS_DIRECTORY ${KDE_INSTALL_MIMEDIR})
+    install (FILES SymbolEditor.xml DESTINATION ${KDE_INSTALL_MIMEDIR})
+    update_xdg_mimetypes (${KDE_INSTALL_MIMEDIR})
+ENDIF (SHARED_MIME_INFO_FOUND AND IS_DIRECTORY ${KDE_INSTALL_MIMEDIR})
 
 feature_summary (WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)

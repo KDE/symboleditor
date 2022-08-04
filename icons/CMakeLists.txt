@@ -5,6 +5,6 @@ ECM_INSTALL_ICONS(ICONS
     22-actions-symboleditor-save-symbol.png
     22-actions-symboleditor-scale-preferred.png
     22-actions-symboleditor-winding-fill.png
-    DESTINATION ${ICON_INSTALL_DIR}
+    DESTINATION ${KDE_INSTALL_ICONDIR}
     THEME hicolor
 )
