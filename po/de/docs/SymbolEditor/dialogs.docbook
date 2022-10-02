@@ -1,0 +1,19 @@
+<chapter id="Dialogs">
+    <title
+>Dialoge</title>
+
+    <sect1 id="ConfigurationDialog">
+        <title
+>Der Einrichtungsdialog</title>
+        <para>
+            <screenshot
+><mediaobject
+><imageobject
+><imagedata fileref="configuration-dialog.png" format="PNG"/></imageobject
+></mediaobject
+></screenshot>
+        </para>
+        <para
+>Im Einrichtungsdialog können eine Reihe von Optionen eingestellt werden. </para>
+    </sect1>
+</chapter>

@@ -1,0 +1,56 @@
+<chapter id="using-symboleditor">
+    <title
+>De gebruikersinterface</title>
+
+    <sect1 id="face-screenshot">
+        <title
+>Het hoofdvenster van &symboleditor;</title>
+        <para
+>Het hoofdvenster bestaat uit een widget met tabbladen met de symbool-editor en een weergave van de bibliotheek. Er is een menubalk en er zijn verschillende werkbalken met standaard acties, hulpmiddelen voor bewerking en opties voor weergave. De statusbalk geeft prompts voor gebruik van de verschillende hulpmiddelen. </para>
+        <sect2 id="editor-window">
+            <title
+>Het venster Bewerken</title>
+            <para>
+                <screenshot>
+                    <screeninfo
+>Hier is een schermafbeelding van het bewerkingsvenster van &symboleditor;</screeninfo>
+                    <mediaobject
+><imageobject
+><imagedata fileref="mainwindow-editor.png" format="PNG"/></imageobject
+></mediaobject>
+                </screenshot>
+            </para>
+            <para
+>Het bewerkingsvenster biedt het bewerken van een symbool met de beschikbare hulpmiddelen. Het bestaat uit een raster met magnetische punten en toont een vak met de voorkeurgrootte en biedt daarmee symbolen te maken met een consistente grootte. De grootte van het raster, het aantal elementen en het vak met de voorkeurgrootte zijn allen in te stellen. </para>
+            <para
+>De bewerker biedt rasterlijnen voor plaatsing van punten relatief tot bestaande punten. De rasterlijnen zijn geplaatst op de horizontale, verticale en diagonale vectoren vanaf een bestaand punt en ook op een ronde referentie rond het centrum van het raster. </para>
+            <screenshot>
+                <screeninfo
+>Hier is een schermafbeelding van de handleiding voor bewerkers</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="editor-guides.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </sect2>
+        <sect2 id="library-window">
+            <title
+>Bibliotheekvenster</title>
+            <para>
+                <screenshot>
+                    <screeninfo
+>Hier is een schermafbeelding van het bibliotheekvenster van &symboleditor;</screeninfo>
+                    <mediaobject
+><imageobject
+><imagedata fileref="mainwindow-library.png" format="PNG"/></imageobject
+></mediaobject>
+                </screenshot>
+            </para>
+            <para
+>Het bibliotheekvenster toont voorstellingen van de symbolen in de bibliotheek. Het symbool dat nu wordt bewerkt wordt geaccentueerd getoond. Een symbool selecteren zal het openen in de bewerker zodat het gewijzigd kan worden. </para>
+            <para
+>Het is mogelijk verschillende exemplaren van de toepassing SymbolEditor te openen en symbolen te kopiëren van de ene bibliotheek naar de ander met slepen en loslaten. Ga na dat beide bibliotheekvensters zichtbaar zijn, klik dan sleep het gewenste symbool uit het ene bibliotheekvenster naar het ander. Het symbool zal dan worden toegevoegd aan de doelbibliotheek. </para>
+        </sect2>
+    </sect1>
+</chapter>

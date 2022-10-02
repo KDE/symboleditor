@@ -1,0 +1,19 @@
+<chapter id="Dialogs">
+    <title
+>Діалогові вікна</title>
+
+    <sect1 id="ConfigurationDialog">
+        <title
+>Діалогове вікно налаштовування</title>
+        <para>
+            <screenshot
+><mediaobject
+><imageobject
+><imagedata fileref="configuration-dialog.png" format="PNG"/></imageobject
+></mediaobject
+></screenshot>
+        </para>
+        <para
+>За допомогою цього діалогового вікна налаштування можна визначити ряд параметрів. </para>
+    </sect1>
+</chapter>

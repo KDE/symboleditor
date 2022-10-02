@@ -1,0 +1,852 @@
+# Translation for SymbolEditor.po to Euskara/Basque (eu).
+# Copyright (C) 2019-2020, This file is copyright:
+# This file is distributed under the same license as the symboleditor package.
+# KDE euskaratzeko proiektuko arduraduna <xalba@euskalnet.net>.
+#
+# Translators:
+# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2019, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: symboleditor\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-08-02 02:13+0200\n"
+"PO-Revision-Date: 2020-08-17 21:31+0200\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 20.08.0\n"
+
+#: src/Commands.cpp:72 src/MainWindow.cpp:913
+#, kde-format
+msgid "Move To"
+msgstr "Eraman hona"
+
+#: src/Commands.cpp:105 src/MainWindow.cpp:922
+#, kde-format
+msgid "Draw To"
+msgstr "Marraztu hemen"
+
+#: src/Commands.cpp:140 src/MainWindow.cpp:931
+#, kde-format
+msgid "Cubic To"
+msgstr "Kubikoa hona"
+
+#: src/Commands.cpp:176
+#, kde-format
+msgid "Add Rectangle"
+msgstr "Gehitu laukizuzena"
+
+#: src/Commands.cpp:211
+#, kde-format
+msgid "Add Ellipse"
+msgstr "Gehitu elipsea"
+
+#: src/Commands.cpp:247
+#, kde-format
+msgid "Move point"
+msgstr "Eraman puntua"
+
+#: src/Commands.cpp:284
+#, kde-format
+msgid "Update Symbol"
+msgstr "Eguneratu ikurra"
+
+#: src/Commands.cpp:326 src/MainWindow.cpp:773
+#, kde-format
+msgid "Import Library"
+msgstr "Inportatu liburutegia"
+
+#: src/Commands.cpp:375 src/MainWindow.cpp:969
+#, kde-format
+msgid "Rotate Left"
+msgstr "Biratu ezkerrera"
+
+#: src/Commands.cpp:406 src/MainWindow.cpp:976
+#, kde-format
+msgid "Rotate Right"
+msgstr "Biratu eskuinera"
+
+#: src/Commands.cpp:437 src/MainWindow.cpp:983
+#, kde-format
+msgid "Flip Horizontal"
+msgstr "Alderanztu horizontalki"
+
+#: src/Commands.cpp:467 src/MainWindow.cpp:990
+#, kde-format
+msgid "Flip Vertical"
+msgstr "Alderanztu bertikalki"
+
+#: src/Commands.cpp:500 src/MainWindow.cpp:997
+#, kde-format
+msgid "Scale to Preferred Size"
+msgstr "Eskalatu hobetsitako neurrira"
+
+#: src/Commands.cpp:557
+#, kde-format
+msgid "Change Fill State"
+msgstr "Aldatu betetzeko egoera"
+
+#: src/Commands.cpp:591
+#, kde-format
+msgid "Change Fill Rule"
+msgstr "Aldatu betetzeko araua"
+
+#: src/Commands.cpp:625
+#, kde-format
+msgid "Change Cap Style"
+msgstr "Aldatu muturraren estiloa"
+
+#: src/Commands.cpp:659
+#, kde-format
+msgid "Change Join Style"
+msgstr "Aldatu lotura estiloa"
+
+#: src/Commands.cpp:692 src/MainWindow.cpp:712
+#, kde-format
+msgid "Delete Symbol"
+msgstr "Ezabatu ikurra"
+
+#: src/Commands.cpp:725 src/MainWindow.cpp:895
+#, kde-format
+msgid "Increase Line Width"
+msgstr "Loditu lerroa"
+
+#: src/Commands.cpp:789 src/MainWindow.cpp:902
+#, kde-format
+msgid "Decrease Line Width"
+msgstr "Mehetu lerroa"
+
+#: src/Commands.cpp:852
+#, kde-format
+msgid "Add Symbols"
+msgstr "Gehitu ikurrak"
+
+#: src/Commands.cpp:897
+#, kde-format
+msgid "Add Character"
+msgstr "Gehitu karakterea"
+
+#: src/Editor.cpp:172
+#, kde-format
+msgid "Select a new starting position."
+msgstr "Hautatu hasteko kokaleku berri bat."
+
+#: src/Editor.cpp:177
+#, kde-format
+msgid "Select the line end point."
+msgstr "Hautatu lerroaren amaierako puntua."
+
+#: src/Editor.cpp:182
+#, kde-format
+msgid "Select the first control point."
+msgstr "Hautatu lehen kontrol puntua."
+
+#: src/Editor.cpp:183
+#, kde-format
+msgid "Select the second control point."
+msgstr "Hautatu bigarren kontrol puntua."
+
+#: src/Editor.cpp:184
+#, kde-format
+msgid "Select the end point"
+msgstr "Hautatu amaierako puntua"
+
+#: src/Editor.cpp:187
+#, kde-format
+msgid "Select the first corner."
+msgstr "Hautatu lehen izkina."
+
+#: src/Editor.cpp:188
+#, kde-format
+msgid "Select the second corner."
+msgstr "Hautatu bigarren izkina."
+
+#: src/Editor.cpp:192
+#, kde-format
+msgid "Select the first corner of the bounding rectangle."
+msgstr "Hautatu laukizuzen mugatzailearen lehen izkina."
+
+#: src/Editor.cpp:193
+#, kde-format
+msgid "Select the second corner of the bounding rectangle."
+msgstr "Hautatu laukizuzen mugatzailearen bigarren izkina."
+
+#: src/Editor.cpp:197
+#, kde-format
+msgid "Double click a character to insert into the editor."
+msgstr "Egin klik bikoitza karaktere bati hura editorean txertatzeko."
+
+#: src/Exceptions.cpp:69
+#, kde-format
+msgid "Tried to read past the end of the data"
+msgstr "Datuen amaiera gaindituta irakurtzen saiatu da"
+
+#: src/Exceptions.cpp:73
+#, kde-format
+msgid "Tried to read corrupted data"
+msgstr "Hondatutako datuak irakurtzen saiatu da"
+
+#: src/Exceptions.cpp:76 src/Exceptions.cpp:106
+#, kde-format
+msgid "Undefined status message %1"
+msgstr "Egoera mezu definitu gabea %1"
+
+#: src/Exceptions.cpp:101
+#, kde-format
+msgid "Failed to write to the device"
+msgstr "Huts egin du gailura idaztea"
+
+#: src/Main.cpp:87
+#, kde-format
+msgid "SymbolEditor"
+msgstr "Ikur Editorea"
+
+#: src/Main.cpp:89
+#, kde-format
+msgid "A cross stitch symbol editor."
+msgstr "Gurutze-puntu ikur editore bat."
+
+#: src/Main.cpp:91
+#, kde-format
+msgid "(c)2011-2019 Stephen Allewell"
+msgstr "(c)2011-2019 Stephen Allewell"
+
+#: src/Main.cpp:97
+#, kde-format
+msgid "Project Lead"
+msgstr "Proiektu-burua"
+
+#: src/Main.cpp:98
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Iñigo Salvador Azurmendi"
+
+#: src/Main.cpp:98
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "xalba@euskalnet.net"
+
+#: src/MainWindow.cpp:198 src/MainWindow.cpp:420 src/MainWindow.cpp:575
+#, kde-format
+msgid "Untitled"
+msgstr "Izengabea"
+
+#: src/MainWindow.cpp:207
+#, kde-format
+msgctxt "The editor tab title"
+msgid "Editor"
+msgstr "Editorea"
+
+#: src/MainWindow.cpp:208
+#, kde-format
+msgctxt "The library tab title"
+msgid "Library"
+msgstr "Liburutegia"
+
+#: src/MainWindow.cpp:278
+#, kde-format
+msgid ""
+"Save changes to the symbol?\n"
+"Selecting No discards changes."
+msgstr ""
+"Gorde ikurrari egindako aldaketak?\n"
+"Ez hautatzea aldaketak baztertzen ditu."
+
+#: src/MainWindow.cpp:311
+#, kde-format
+msgid ""
+"Save changes to the library?\n"
+"Selecting No discards changes."
+msgstr ""
+"Gorde liburutegiari egindako aldaketak?\n"
+"Ez hautatzea aldaketak baztertzen ditu."
+
+#: src/MainWindow.cpp:339
+#, kde-format
+msgid "Open file"
+msgstr "Ireki fitxategia"
+
+#: src/MainWindow.cpp:339 src/MainWindow.cpp:451 src/MainWindow.cpp:529
+#, kde-format
+msgid "Cross Stitch Symbols (*.sym)"
+msgstr "Gurutze-puntu ikurrak (*.sym)"
+
+#: src/MainWindow.cpp:388 src/MainWindow.cpp:549
+#, kde-format
+msgid "This doesn't appear to be a valid symbol file"
+msgstr "Ematen du hau ez dela ikur fitxategi balioduna"
+
+#: src/MainWindow.cpp:390 src/MainWindow.cpp:551
+#, kde-format
+msgid ""
+"Version %1 of the library file is not supported in this version of "
+"SymbolEditor"
+msgstr ""
+"Liburutegi fitxategiaren %1 bertsioa ez du onartzen Ikur Editorearen bertsio "
+"honek"
+
+#: src/MainWindow.cpp:392
+#, kde-format
+msgid ""
+"Version %1 of the symbol is not supported in this version of SymbolEditor"
+msgstr "Ikurraren %1 bertsioa ez du onartzen Ikur Editorearen bertsio honek"
+
+#: src/MainWindow.cpp:394
+#, kde-format
+msgid ""
+"Failed to read the library\n"
+"%1"
+msgstr ""
+"Huts egin du liburutegia irakurtzea\n"
+"%1"
+
+#: src/MainWindow.cpp:407 src/MainWindow.cpp:560
+#, kde-format
+msgid "The url %1 is invalid"
+msgstr "%1 url baliogabea da"
+
+#: src/MainWindow.cpp:432
+#, kde-format
+msgid ""
+"Failed to write the library\n"
+"%1"
+msgstr ""
+"Huts egin du liburutegia idaztea\n"
+"%1"
+
+#: src/MainWindow.cpp:438
+#, kde-format
+msgid ""
+"Failed to open the file %1\n"
+"%2"
+msgstr ""
+"Huts egin du %1 fitxategia irekitzea\n"
+"%2"
+
+#: src/MainWindow.cpp:451
+#, kde-format
+msgid "Save As..."
+msgstr "Gorde honela..."
+
+#: src/MainWindow.cpp:457
+#, kde-format
+msgid ""
+"This file already exists\n"
+"Do you want to overwrite it?"
+msgstr ""
+"Fitxategi hau lehendik ere badago\n"
+"Gainidatzi nahi duzu?"
+
+#: src/MainWindow.cpp:529
+#, kde-format
+msgid "Import library"
+msgstr "Inportatu liburutegia"
+
+#: src/MainWindow.cpp:621
+#, kde-format
+msgid "Undo %1"
+msgstr "Desegin %1"
+
+#: src/MainWindow.cpp:634
+#, kde-format
+msgid "Redo %1"
+msgstr "Berregin %1"
+
+#: src/MainWindow.cpp:648
+#, kde-format
+msgctxt "The library tab title %1 is the file name"
+msgid "%1 Library"
+msgstr "%1 liburutegia"
+
+#: src/MainWindow.cpp:650
+#, kde-format
+msgctxt "The editor tab title %1 is the file name"
+msgid "%1 Editor"
+msgstr "%1 editorea"
+
+#: src/MainWindow.cpp:742
+#, kde-format
+msgctxt "The Editor configuration page"
+msgid "Editor"
+msgstr "Editorea"
+
+#: src/MainWindow.cpp:774
+#, kde-format
+msgid ""
+"Imports another library appending the symbols it contains to the current "
+"library."
+msgstr ""
+"Beste liburutegi bat inportatzen du hark dituen ikurrak uneko liburutegira "
+"erantsiz."
+
+#: src/MainWindow.cpp:779
+#, kde-format
+msgid "Save Symbol"
+msgstr "Gorde ikurra"
+
+#: src/MainWindow.cpp:780
+#, kde-format
+msgid ""
+"Save the symbol to the library. If this is a new symbol, subsequent saves "
+"will create additional symbols in the library. If the symbol was selected "
+"from the library to edit then saving will update that symbol in the library."
+msgstr ""
+"Gorde ikurra liburutegian. Hau ikur berri bat bada, osteko gordetze "
+"bakoitzean liburutegian ikur gehigarriak sortuko ditu. Ikurra liburutegitik "
+"editatzeko hautatu bazen hura gordetzea liburutegian eguneratuko du."
+
+#: src/MainWindow.cpp:786
+#, kde-format
+msgid "Save Symbol as New"
+msgstr "Gorde ikurra berri gisa"
+
+#: src/MainWindow.cpp:787
+#, kde-format
+msgid ""
+"Save the current symbol as a new one in the library. Subsequent saves will "
+"update the new symbol."
+msgstr ""
+"Gorde uneko ikurra berri gisa liburutegian. Osteko gordetze bakoitzean "
+"liburutegian ikur berria eguneratuko du."
+
+#: src/MainWindow.cpp:800
+#, kde-format
+msgid "Fill Path"
+msgstr "Bete bidea"
+
+#: src/MainWindow.cpp:801
+#, kde-format
+msgid ""
+"Enable path filling. The path defines the closed boundary of the shape and "
+"the path is filled with the selected fill method."
+msgstr ""
+"Gaitu bidea betetzea. Bideak definitzen du formaren muga itxia eta bidea "
+"hautatutako betetzeko metodoa erabiliz betetzen da."
+
+#: src/MainWindow.cpp:811
+#, kde-format
+msgid "Odd Even Fill"
+msgstr "Betetze txandakatua"
+
+#: src/MainWindow.cpp:812
+#, kde-format
+msgid "The Odd Even fill method will fill alternate areas of the symbol."
+msgstr ""
+"«Betetze txandakatua» metodoak ikurraren eskualde txandakatuak beteko ditu."
+
+#: src/MainWindow.cpp:820
+#, kde-format
+msgid "Winding Fill"
+msgstr "Betetze bihurria"
+
+#: src/MainWindow.cpp:821
+#, kde-format
+msgid "The Winding fill method will fill the complete interior of the path."
+msgstr "«Betetze bihurria» metodoa bide baten barrualde osoa beteko du."
+
+#: src/MainWindow.cpp:834
+#, kde-format
+msgid "Flat Cap"
+msgstr "Mutur laua"
+
+#: src/MainWindow.cpp:835
+#, kde-format
+msgid ""
+"The Flat Cap end type provides a square end that stops at the end point of "
+"the line.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr ""
+"«Mutur laua» mutur motak lerroaren amaierako puntuan mutur karratu bat "
+"eskaintzen du.\n"
+"\n"
+"Soilik betegarririk gabeko bideei dagokie."
+
+#: src/MainWindow.cpp:843
+#, kde-format
+msgid "Square Cap"
+msgstr "Mutur karratua"
+
+#: src/MainWindow.cpp:844
+#, kde-format
+msgid ""
+"The Square Cap end type provides a square end that projects beyond the end "
+"point of the line by half the line width.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr ""
+"«Mutur karratua» mutur motak lerroaren amaierako puntutik lerro zabaleraren "
+"erdia haratago proiektatzen den mutur karratu bat eskaintzen du.\n"
+"\n"
+"Soilik betegarririk gabeko bideei dagokie."
+
+#: src/MainWindow.cpp:852
+#, kde-format
+msgid "Round Cap"
+msgstr "Mutur biribila"
+
+#: src/MainWindow.cpp:853
+#, kde-format
+msgid ""
+"The Round Cap end type provides a round end that projects beyond the end "
+"point of the line with a radius of half the line width.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr ""
+"«Mutur biribila» mutur motak lerroaren amaierako puntutik haratago lerro "
+"zabalera erdiko erradioarekin proiektatzen den mutur biribil bat eskaintzen "
+"du.\n"
+"\n"
+"Soilik betegarririk gabeko bideei dagokie."
+
+#: src/MainWindow.cpp:866
+#, kde-format
+msgid "Bevel Join"
+msgstr "Juntura alakatua"
+
+#: src/MainWindow.cpp:867
+#, kde-format
+msgid ""
+"The Bevel Join provides a beveled corner between two lines.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr ""
+"«Juntura alakatua»k bi lerroren arteko ertz alakatua eskaintzen du.\n"
+"\n"
+"Soilik betegarririk gabeko bideei dagokie."
+
+#: src/MainWindow.cpp:875
+#, kde-format
+msgid "Miter Join"
+msgstr "Juntura angeluzuzena"
+
+#: src/MainWindow.cpp:876
+#, kde-format
+msgid ""
+"The Miter Join provides a mitered corner between two lines.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr ""
+"«Juntura angeluzuzena»k bi lerroren arteko angelu zuzena duen ertza "
+"eskaintzen du.\n"
+"\n"
+"Soilik betegarririk gabeko bideei dagokie."
+
+#: src/MainWindow.cpp:884
+#, kde-format
+msgid "Round Join"
+msgstr "Juntura biribila"
+
+#: src/MainWindow.cpp:885
+#, kde-format
+msgid ""
+"The Round Join provides a rounded corner between two lines using a radius of "
+"half the line width.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr ""
+"«Juntura biribila»k bi lerroren arteko ertz borobildua eskaintzen du, lerro "
+"zabalera erdiko erradioa erabiliz.\n"
+"\n"
+"Soilik betegarririk gabeko bideei dagokie."
+
+#: src/MainWindow.cpp:896
+#, kde-format
+msgid ""
+"Increases the line width.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr ""
+"Lerroaren zabalera handiagotzen du.\n"
+"\n"
+"Soilik bete gabeko bideekin ezar daiteke."
+
+#: src/MainWindow.cpp:903
+#, kde-format
+msgid ""
+"Decreases the line width.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr ""
+"Lerroaren zabalera txikiagotzen du.\n"
+"\n"
+"Soilik bete gabeko bideekin ezar daiteke."
+
+#: src/MainWindow.cpp:914
+#, kde-format
+msgid ""
+"Move the current point to a new position. This implicitly closes any "
+"existing sub path, starting a new one."
+msgstr ""
+"Eraman uneko puntua beste kokaleku batera. Inplizituki, egon litezkeen "
+"azpibideak ixten ditu, berri bat hasten duelarik."
+
+#: src/MainWindow.cpp:923
+#, kde-format
+msgid ""
+"Add a straight line from the current position to a defined end point. The "
+"end point becomes the new current position."
+msgstr ""
+"Gehitu lerro zuzen bat uneko kokalekutik, definitutako amaierako puntura. "
+"Amaierako puntua bilakatzen da uneko kokaleku berria."
+
+#: src/MainWindow.cpp:932
+#, kde-format
+msgid ""
+"Add a cubic bezier curve from the current position using two control points "
+"and an end point. The end point becomes the new current position."
+msgstr ""
+"Gehitu bezier kurba kubiko bat uneko kokalekutik, bi aginte puntu eta "
+"amaierako puntu bat erabiliz. Amaierako puntua bilakatzen da uneko kokaleku "
+"berria."
+
+#: src/MainWindow.cpp:940
+#, kde-format
+msgid "Rectangle"
+msgstr "Laukizuzena"
+
+#: src/MainWindow.cpp:941
+#, kde-format
+msgid ""
+"Add a rectangle as a separate sub path defined by two points representing "
+"the opposite corners."
+msgstr ""
+"Gehitu laukizuzen bat azpi-bide bereizi baten gisan, aurrez-aurreko erpinak "
+"ordezkatzen dituzten bi puntuen bidez definituta."
+
+#: src/MainWindow.cpp:949
+#, kde-format
+msgid "Ellipse"
+msgstr "Elipsea"
+
+#: src/MainWindow.cpp:950
+#, kde-format
+msgid ""
+"Add an ellipse as a separate sub path defined by a bounding rectangle "
+"represented by two opposite corners."
+msgstr ""
+"Gehitu elipse bat azpi-bide bereizi gisa, aurrez-aurreko bi erpinek "
+"definitzen duten mugatzen duen laukizuzen baten bidez definituta."
+
+#: src/MainWindow.cpp:958
+#, kde-format
+msgid "Insert Character"
+msgstr "Txertatu karakterea"
+
+#: src/MainWindow.cpp:959
+#, kde-format
+msgid ""
+"Allows selection of a character from any font to be inserted as a closed sub "
+"path. The inserted character will overwrite any existing path, but "
+"additional sub paths may be added to the character."
+msgstr ""
+"Edozein letra-tipoko karaktere baten hautapena azpi-bide itxi gisa "
+"txertatzen uzten du. Txertatutako karaktereak existitzen den edozein bide "
+"gainidatziko du, baino karaktereari azpi-bide osagarriak gehitu dakizkioke."
+
+#: src/MainWindow.cpp:970
+#, kde-format
+msgid ""
+"Rotate all the points of a path counter-clockwise 90 degrees around the "
+"center of the editor."
+msgstr ""
+"Biratu bide bateko puntu guztiak 90º erloju-orratzen aurkako noranzkoan "
+"editorearen erdigunearekiko."
+
+#: src/MainWindow.cpp:977
+#, kde-format
+msgid ""
+"Rotate all the points of a path clockwise 90 degrees around the center point "
+"of the editor."
+msgstr ""
+"Biratu bide bateko puntu guztiak 90º erloju-orratzen noranzkoan editorearen "
+"erdigunearekiko."
+
+#: src/MainWindow.cpp:984
+#, kde-format
+msgid ""
+"Flip all the points of the path horizontally about the vertical center of "
+"the editor."
+msgstr ""
+"Horizontalki irauli bideko puntu guztiak editorearen erdigune "
+"bertikalarekiko."
+
+#: src/MainWindow.cpp:991
+#, kde-format
+msgid ""
+"Flip all the points of the path vertically about the horizontal center of "
+"the editor."
+msgstr ""
+"Bertikalki irauli bideko puntu guztiak editorearen erdigune "
+"horizontalarekiko."
+
+#: src/MainWindow.cpp:998
+#, kde-format
+msgid ""
+"Scale the current symbol so that it fits within the preferred size of a "
+"symbol."
+msgstr "Eskalatu uneko ikurra ikur baten hobetsitako neurrian sar dadin."
+
+#: src/MainWindow.cpp:1004
+#, kde-format
+msgid "Enable Snap"
+msgstr "Gaitu atxikitzea"
+
+#: src/MainWindow.cpp:1005
+#, kde-format
+msgid "Enable snapping of points to guide intersections or to the grid."
+msgstr "Gaitu gidaren elkarguneetara edo sarera atxikitzea."
+
+#: src/MainWindow.cpp:1012
+#, kde-format
+msgid "Enable Guides"
+msgstr "Gaitu gidak"
+
+#: src/MainWindow.cpp:1013
+#, kde-format
+msgid "Enable the generation of guide intersections."
+msgstr "Gaitu giden elkarguneak sortzea."
+
+#. i18n: ectx: label, entry (Editor_GridElements), group (editor)
+#: SymbolEditor.kcfg:10
+#, kde-format
+msgid "The number of elements in a grid."
+msgstr "Sareta bateko elementu kopurua."
+
+#. i18n: ectx: label, entry (Editor_ElementSize), group (editor)
+#: SymbolEditor.kcfg:14
+#, kde-format
+msgid "The size in pixels of a grid element."
+msgstr "Sareta elementu baten neurria pixeletan."
+
+#. i18n: ectx: label, entry (Editor_ElementGrouping), group (editor)
+#: SymbolEditor.kcfg:18
+#, kde-format
+msgid "The number of elements in a group."
+msgstr "Talde bateko elementu kopurua."
+
+#. i18n: ectx: label, entry (Editor_PointSize), group (editor)
+#: SymbolEditor.kcfg:22
+#, kde-format
+msgid "The size of a point in pixels."
+msgstr "Puntu baten neurria pixeletan."
+
+#. i18n: ectx: label, entry (Editor_SnapThreshold), group (editor)
+#: SymbolEditor.kcfg:26
+#, kde-format
+msgid "The distance to check within the range of a point."
+msgstr "Puntu baten irismenaren barruan aztertu beharreko distantzia."
+
+#. i18n: ectx: label, entry (Editor_BorderSize), group (editor)
+#: SymbolEditor.kcfg:30
+#, kde-format
+msgid "The number of cell elements used for the border."
+msgstr "Ertzerako erabilitako gelaxka elementuen kopurua."
+
+#. i18n: ectx: label, entry (Editor_PreferredSizeColor), group (editor)
+#: SymbolEditor.kcfg:34
+#, kde-format
+msgid "The color of the preferred size rectangle"
+msgstr "Hobetsitako laukizuzen neurriaren kolorea"
+
+#. i18n: ectx: label, entry (Editor_GuideLineColor), group (editor)
+#: SymbolEditor.kcfg:38
+#, kde-format
+msgid "The color of the guide lines"
+msgstr "Gida-lerroen kolorea"
+
+#. i18n: ectx: label, entry (Editor_SimplifiedGuideLines), group (editor)
+#: SymbolEditor.kcfg:42
+#, kde-format
+msgid "Whether to use a simplified range of angles to test"
+msgstr "Probatarako angelu multzo sinplifikatu bat erabili behar den"
+
+#. i18n: ectx: Menu (tools)
+#: SymbolEditorui.rc:10
+#, kde-format
+msgid "&Tools"
+msgstr "&Tresnak"
+
+#. i18n: ectx: Menu (rendering)
+#: SymbolEditorui.rc:27
+#, kde-format
+msgid "&Rendering"
+msgstr "E&rrendatzea"
+
+#. i18n: ectx: ToolBar (ToolsToolbar)
+#: SymbolEditorui.rc:47
+#, kde-format
+msgid "Tool Toolbar"
+msgstr "Tresna-barra"
+
+#. i18n: ectx: ToolBar (RenderingToolbar)
+#: SymbolEditorui.rc:64
+#, kde-format
+msgid "Rendering Toolbar"
+msgstr "Errendatzeko tresna-barra"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, EditorConfigPage)
+#: ui/EditorConfigPage.ui:14
+#, kde-format
+msgid "Editor Configuration Page"
+msgstr "Editorea konfiguratzeko orria"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/EditorConfigPage.ui:20
+#, kde-format
+msgid "Grid elements"
+msgstr "Sareta elementuak"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/EditorConfigPage.ui:40
+#, kde-format
+msgid "Element size"
+msgstr "Elementuaren neurria"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: ui/EditorConfigPage.ui:60
+#, kde-format
+msgid "Element grouping"
+msgstr "Elementuak taldekatzea"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: ui/EditorConfigPage.ui:80
+#, kde-format
+msgid "Point size"
+msgstr "Puntuaren neurria"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: ui/EditorConfigPage.ui:100
+#, kde-format
+msgid "Snap threshold"
+msgstr "Atxikitzeko atalasea"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: ui/EditorConfigPage.ui:123
+#, kde-format
+msgid "Border size"
+msgstr "Ertzen neurria"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: ui/EditorConfigPage.ui:140
+#, kde-format
+msgid "Preferred size box color"
+msgstr "Hobetsitako kutxa neurriaren kolorea"
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: ui/EditorConfigPage.ui:158
+#, kde-format
+msgid "Guide line color"
+msgstr "Gida-lerroaren kolorea"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_Editor_SimplifiedGuideLines)
+#: ui/EditorConfigPage.ui:176
+#, kde-format
+msgid "Simplified guide lines"
+msgstr "Gida-lerro sinplifikatuak"

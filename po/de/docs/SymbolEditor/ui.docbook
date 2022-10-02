@@ -1,0 +1,56 @@
+<chapter id="using-symboleditor">
+    <title
+>Die Benutzeroberfläche</title>
+
+    <sect1 id="face-screenshot">
+        <title
+>Das Hauptfenster von &symboleditor;</title>
+        <para
+>Das Hauptfenster besteht aus einem Dialog mit Karteikarten, das den Symboleditor und eine Bibliotheksansicht enthält. Es gibt eine Menüleiste und mehrere Symbolleisten mit Standardaktionen, Bearbeitungswerkzeugen und Rendering-Optionen. In der Statusleiste finden Sie Aktionen für die Verwendung der verschiedenen Werkzeuge. </para>
+        <sect2 id="editor-window">
+            <title
+>Editor-Fenster</title>
+            <para>
+                <screenshot>
+                    <screeninfo
+>Hier sehen Sie ein Bildschirmfoto des Editor-Fensters von &symboleditor;</screeninfo>
+                    <mediaobject
+><imageobject
+><imagedata fileref="mainwindow-editor.png" format="PNG"/></imageobject
+></mediaobject>
+                </screenshot>
+            </para>
+            <para
+>Im Editor-Fenster können Sie Symbole mit den verfügbaren Werkzeugen bearbeiten. Es besteht aus einem Raster mit Fangpunkten und zeigt eine bevorzugte Größe,  damit Symbole in einer einheitlichen Größe erstellt werden. Die Größe des Rasters, die Anzahl der Elemente und die bevorzugte Größe sind einstellbar. </para>
+            <para
+>Im Editor finden Sie Hilfslinien für die Positionierung von Punkten relativ zu bestehenden Punkten. Die Hilfslinien befinden sich auf den horizontalen, vertikalen und diagonalen Vektoren von einem vorhandenen Punkt aus sowie auf einer kreisförmigen Bezugsbasis um den Mittelpunkt des Gitters. </para>
+            <screenshot>
+                <screeninfo
+>Hier sehen Sie ein Bildschirmfoto des Editor-Hilfslinien</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="editor-guides.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </sect2>
+        <sect2 id="library-window">
+            <title
+>Bibliothek-Fenster</title>
+            <para>
+                <screenshot>
+                    <screeninfo
+>Hier sehen Sie ein Bildschirmfoto des Bibliothek-Fensters von &symboleditor;</screeninfo>
+                    <mediaobject
+><imageobject
+><imagedata fileref="mainwindow-library.png" format="PNG"/></imageobject
+></mediaobject>
+                </screenshot>
+            </para>
+            <para
+>Im Bibliotheksfenster werden die in der Bibliothek enthaltenen Symbole angezeigt.  Das gerade bearbeitete Symbol wird hervorgehoben. Durch Auswählen eines Symbols wird es im Editor geöffnet, so dass es bearbeitet werden kann. </para>
+            <para
+>Sie können mehrere Instanzen des SymbolEditors öffnen und Symbole durch Ziehen und Ablegen von einer Bibliothek in eine andere kopieren. Wenn beide Bibliotheksfenster sichtbar sind, klicken Sie auf das gewünschte Symbol und ziehen Sie es von einem Bibliotheksfenster in das andere. Das Symbol wird dann an die Zielbibliothek angehängt. </para>
+        </sect2>
+    </sect1>
+</chapter>

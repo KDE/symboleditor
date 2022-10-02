@@ -1,0 +1,623 @@
+<chapter id="commands">
+    <title
+>Довідка щодо команд</title>
+
+    <sect1 id="menus">
+        <title
+>Меню &symboleditor;</title>
+        <sect2>
+            <title
+>Меню «Файл»</title>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl; <keycap
+>N</keycap
+></keycombo
+></shortcut
+> <guimenuitem
+>Створити</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Створити бібліотеку.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+> </keycombo
+> </shortcut
+><guimenuitem
+>Відкрити</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Відкрити наявну бібліотеку.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Відкрити недавні</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Відкрити нещодавно використану бібліотеку.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+> </keycombo
+> </shortcut
+><guimenuitem
+>Зберегти</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Зберегти бібліотеку.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>S</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Зберегти як</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Зберегти бібліотеку під новою назвою.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Зберегти позначку</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Зберегти редаговану позначку.</action
+></simpara
+> <simpara
+>Якщо редагований символ було вибрано з бібліотеки, у результаті позначку буде збережено до бібліотеки. Якщо позначка є новою, її буде дописано до бібліотеки, наступні спроби збереження дописуватимуть до бібліотеки нові позначки.</simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Зберегти позначку як нову</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Зберегти редаговану позначку як нову.</action
+></simpara
+> <simpara
+>Якщо ви зберігатимете позначку як нову, незалежно від того, чи був її запис у бібліотеці, її буде дописано до бібліотеки. Наступні спроби збереження дописуватимуть до бібліотеки нові позначки.</simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Імпортувати бібліотеку</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Імпортувати бібліотеку, дописавши позначки, що у ній містяться, до поточної бібліотеки.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>W</keycap
+></keycombo
+></shortcut
+> <guimenuitem
+>Закрити</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Закрити бібліотеку.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+> </keycombo
+> </shortcut
+><guimenuitem
+>Вийти</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Завершити роботу &symboleditor;.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>Меню «Зміни»</title>
+            <para
+>У &symboleditor; передбачено типові для &kde; пункти меню <guimenu
+>Зміни</guimenu
+>. Докладніший опис цих пунктів можна знайти у <ulink url="help:/fundamentals/menus.html#menus-edit"
+>розділі щодо меню «Зміни»</ulink
+> підручника з основ роботи у &kde;. </para>
+        </sect2>
+
+        <sect2>
+            <title
+>Меню показу та панель інструментів</title>
+            <screenshot>
+                <screeninfo
+>Знімок вікна панелі інструментів показу</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="renderer-toolbar.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+                </screenshot>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Заповнювати контур</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Увімкнути заповнення контуру.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Цілковите заповнення</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Вибрати спосіб цілковитого заповнення.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Картате заповнення</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Вибрати спосіб картатого заповнення.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Плоский кінчик</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Вибрати плоский кінчик для лінії.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Квадратний кінчик</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Вибрати квадратний кінчик для лінії.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Круглий кінчик</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Вибрати круглий кінчик для лінії.</action
+></simpara
+></listitem
+></varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Скісне з’єднання</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Вибрати скісний тип з’єднання ліній.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>З’єднання під кутом</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Вибрати тип з’єднання під кутом.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Скруглене з’єднання</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Вибрати тип скругленого з’єднання ліній.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Збільшити товщину ліній</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Збільшити товщину ліній контуру.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Зменшити товщину ліній</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Зменшити товщину ліній контуру.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>Меню інструментів і відповідна панель</title>
+            <para
+>У програмі передбачено декілька інструментів, які допоможуть вам у створенні позначок. Кожна позначка складається з послідовності підконтурів, а кожен підконтур — із команди пересування у початкову позицію (типовою позицією для нових символів є початок координат, точка 0,0) і команд малювання прямих або кривих. Криві визначаються як кубічні сплайни, які мають точку початку, точку кінця та дві контрольні точки, які визначають форму кривої. Передбачено інструмент для створення прямокутників та еліпсів, але кожна така фігура все одно складається з окремих прямих відрізків та кривих. </para>
+            <para
+>Усі точки, створені для визначення елементів, можна пересувати перетягуванням їх на нові позиції за допомогою вказівника миші. Усі точки можуть прилипати до перетинів ліній сітки, якщо увімкнено таке прилипання. Якщо прилипання вимкнено, точки можуть мати довільне розташування. </para>
+            <para
+>Позначку можна обертати за годинниковою стрілкою та проти неї, а також віддзеркалювати у вертикальному або горизонтальному напрямку. Такі перетворення надають змогу створювати декілька позначок на основі однієї форми. Для зберігання нових позначок слід скористатися пунктом зберігання позначки з новою назвою. </para>
+            <screenshot>
+                <screeninfo
+>Це знімок панелі інструментів</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="tool-toolbar.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+                </screenshot>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Пересування</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Пересунути початкову позицію підконтуру.</action
+></simpara
+><simpara
+>Якщо на малюнку вже є підконтур, його буде замкнено, новий підконтур буде розпочато з нової позиції.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Малювання</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Намалювати лінію до наступної позначеної точки.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Кубічна крива</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Намалювати криву Безьє на основі двох контрольних точок та кінцевої точки кривої.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Прямокутник</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Намалювати прямокутник за двома протилежними вершинами.</action
+></simpara
+> <simpara
+>Будь-який поточний підконтур буде замкнено, програма створить новий підконтур, що складатиметься з прямокутника.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Еліпс</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Намалювати еліпс за двома протилежними вершинами описаного прямокутника.</action
+></simpara
+> <simpara
+>Будь-який поточний підконтур буде замкнено, програма створить новий підконтур, що складатиметься з еліпса.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Вставити символ</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Вибрати символ зі шрифту і вставити його на панель редагування.</action
+></simpara
+> <simpara
+>Усі наявні на панелі редагування контури при цьому буде замінено на новий.</simpara
+> <screenshot
+> <screeninfo
+>Знімок вікна вибору символу</screeninfo
+> <mediaobject
+> <imageobject
+> <imagedata fileref="charselect-dialog.png" format="PNG"/> </imageobject
+> </mediaobject
+> </screenshot
+> <simpara
+>Діалогове вікно вибору символу є стандартним для &kde;. За його допомогою ви зможете вибрати символ з будь-якого шрифту. Розмір вибраного символу використано не буде, оскільки програма автоматично виконає масштабування символу до бажаного розміру позначки.</simpara
+> <simpara
+>Подвійне клацання на символі призведе до вставлення символу на панель редактора. Діалогове вікно вибору символу залишиться відкритим, отже, ви зможете вставити інший символ, хоча при цьому буде втрачено попередній вставлений символ. Цим можна скористатися для вставляння символу, збереження позначки, вставлення наступного символу, збереження цього символу тощо. Таким чином, можна дуже швидко побудувати бібліотеку позначок. Вам слід переконатися, що редагована позначка є новою, а не вибраною з бібліотеки, інакше у результаті першої спроби збереження наявну позначку буде перезаписано позначкою, створеною на основі вибраного символу шрифту.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Повернути ліворуч</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Обернути позначку на дев’яносто градусів проти годинникової стрілки.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Повернути праворуч</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Обернути позначку на дев’яносто градусів за годинниковою стрілкою.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Віддзеркалити горизонтально</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Віддзеркалити позначку навколо вертикальної вісі.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Віддзеркалити вертикально</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Віддзеркалити позначку навколо горизонтальної вісі.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Масштабувати до бажаного розміру</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Масштабувати позначку до визначеного бажаного розміру.</action
+></simpara
+> <simpara
+>Зауважте, це стосуватиметься лише точок позначки. Якщо створюється незаповнений символ і визначено товщину лінії, розміри позначки можуть перевищити бажані розміри.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Увімкнути прилипання</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Увімкнути прилипання точок до сітки.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Напрямні</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Увімкнути створення напрямних ліній.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>Меню «Параметри» і «Довідка»</title>
+            <para
+>У &symboleditor; передбачено типові для &kde; пункти меню <guimenu
+>Параметри</guimenu
+> і <guimenu
+>Довідка</guimenu
+>. Щоб дізнатися більше, ознайомтеся з розділами щодо <ulink url="help:/fundamentals/menus.html#menus-settings"
+>меню «Параметри»</ulink
+> та <ulink url="help:/fundamentals/menus.html#menus-help"
+>меню «Довідка»</ulink
+> підручника з основ роботи у &kde;. </para>
+        </sect2>
+    </sect1>
+</chapter>

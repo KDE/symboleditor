@@ -1,0 +1,78 @@
+<?xml version = '1.0'?>
+    <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+    <!ENTITY symboleditor '<application
+>SymbolEditor</application
+>'>
+    <!ENTITY kxstitch '<application
+>KXStitch</application
+>'>
+    <!ENTITY % addindex "IGNORE">
+    <!ENTITY % Catalan  "INCLUDE">
+    <!ENTITY introduction SYSTEM "introduction.docbook">
+    <!ENTITY ui SYSTEM "ui.docbook">
+    <!ENTITY commands SYSTEM "commands.docbook">
+    <!ENTITY symbols SYSTEM "symbols.docbook">
+    <!ENTITY dialogs SYSTEM "dialogs.docbook">
+    <!ENTITY credits SYSTEM "credits.docbook">
+    ]>
+
+<book lang="&language;">
+    <bookinfo>
+        <title
+>El manual del &symboleditor;</title>
+        <authorgroup>
+            <author
+><firstname
+>Stephen</firstname
+> <othername
+>P.</othername
+> <surname
+>Allewell</surname
+> <affiliation
+><address
+><email
+>steve.allewell@gmail.com</email
+></address
+></affiliation>
+            </author>
+            &traductor.Antoni.Bella; 
+        </authorgroup>
+        <copyright>
+            <year
+>2012-2019</year>
+            <holder
+>Stephen P. Allewell</holder>
+        </copyright>
+        <legalnotice
+>&FDLNotice;</legalnotice>
+        <date
+>19 de juny de 2019</date>
+        <releaseinfo
+>SymbolEditor 2.1.0</releaseinfo>
+        <abstract>
+            <para
+>El &symboleditor; és una aplicació que permet la creació i edició de biblioteques de símbols per a l'aplicació &kxstitch;. </para>
+        </abstract>
+        <keywordset>
+            <keyword
+>KDE</keyword>
+            <keyword
+>Puntades</keyword>
+            <keyword
+>Creu</keyword>
+            <keyword
+>Puntada</keyword>
+            <keyword
+>Símbol</keyword>
+        </keywordset>
+    </bookinfo>
+
+    &introduction;
+    &ui;
+    &symbols;
+    &commands;
+    &dialogs;
+    &credits;
+
+    &documentation.index;
+</book>

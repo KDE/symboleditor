@@ -1,0 +1,26 @@
+<chapter id="credits">
+    <title
+>Riconoscimenti e licenza</title>
+    <para
+>&symboleditor;</para>
+    <para
+>Copyright del programma 2012-2015 Stephen P. Allewell <email
+>steve.allewell@gmail.com</email
+></para>
+    <para
+>Collaboratori: <itemizedlist
+> <listitem
+> <para
+>Traduzioni fornite da vari collaboratori. Vedere il file della traduzione per i dettagli. </para>
+            </listitem>
+        </itemizedlist>
+    </para>
+    <para
+>Copyright della documentazione 2012-2015 Stephen P. Allewell <email
+>steve.allewell@gmail.com</email
+> </para>
+    <para
+>Traduzione italiana di Vincenzo Reale <email
+>smart2128vr@gmail.com</email
+></para
+> &underFDL; &underGPL; </chapter>

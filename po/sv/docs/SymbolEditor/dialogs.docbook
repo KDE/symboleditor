@@ -1,0 +1,19 @@
+<chapter id="Dialogs">
+    <title
+>Dialogrutor</title>
+
+    <sect1 id="ConfigurationDialog">
+        <title
+>Inställningsdialogrutan</title>
+        <para>
+            <screenshot
+><mediaobject
+><imageobject
+><imagedata fileref="configuration-dialog.png" format="PNG"/></imageobject
+></mediaobject
+></screenshot>
+        </para>
+        <para
+>Inställningsdialogrutan låter ett antal alternativ ställas in. </para>
+    </sect1>
+</chapter>

@@ -1,0 +1,56 @@
+<chapter id="using-symboleditor">
+    <title
+>A Interface do Utilizador</title>
+
+    <sect1 id="face-screenshot">
+        <title
+>A Janela Principal do &symboleditor;</title>
+        <para
+>A janela principal consiste numa janela em páginas que contêm o editor do símbolo e uma área da biblioteca. Existe um menu e diversas barras de ferramentas que contêm as acções normais, as ferramentas de edição e as opções de desenho. A barra de estado dá-lhe mensagens para usar as diversas ferramentas. </para>
+        <sect2 id="editor-window">
+            <title
+>Janela do Editor</title>
+            <para>
+                <screenshot>
+                    <screeninfo
+>Aqui está uma imagem da janela do editor do &symboleditor;</screeninfo>
+                    <mediaobject
+><imageobject
+><imagedata fileref="mainwindow-editor.png" format="PNG"/></imageobject
+></mediaobject>
+                </screenshot>
+            </para>
+            <para
+>A janela do editor permite a edição de um símbolo com as ferramentas disponíveis. Consiste numa grelha que oferece pontos de ajuste e mostra uma guia com o tamanho preferido, a qual permite que os símbolos sejam criados com um tamanho consistente. O tamanho da grelha, o número de elementos e a guia do tamanho preferido são todos configuráveis. </para>
+            <para
+>O editor oferece linhas-guias para posicionar os pontos em relação a outros pontos existentes. As guias são posicionadas nos vectores horizontais, verticais e diagonais a partir de um ponto existente e também numa referência circular em torno do centro da grelha. </para>
+            <screenshot>
+                <screeninfo
+>Aqui está uma imagem das guias do editor</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="editor-guides.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </sect2>
+        <sect2 id="library-window">
+            <title
+>Janela da Biblioteca</title>
+            <para>
+                <screenshot>
+                    <screeninfo
+>Aqui está uma imagem da janela da biblioteca no &symboleditor;</screeninfo>
+                    <mediaobject
+><imageobject
+><imagedata fileref="mainwindow-library.png" format="PNG"/></imageobject
+></mediaobject>
+                </screenshot>
+            </para>
+            <para
+>A janela da biblioteca mostra representações dos símbolos contidos na biblioteca. O símbolo a ser editado de momento é apresentado realçado. A selecção de um símbolo abri-lo-á no editor, para que possa ser modificado. </para>
+            <para
+>É possível abrir várias instâncias da aplicação SymbolEditor e copiar os símbolos de uma biblioteca para outra por arrastamento. Certifique-se que ambas as janelas das bibliotecas estão visíveis, depois carregue e arraste o símbolo desejado de uma janela para a outra. O símbolo será então adicionado à biblioteca de destino. </para>
+        </sect2>
+    </sect1>
+</chapter>

@@ -1,0 +1,12 @@
+<chapter id="symbols">
+    <title
+>Sümbolid</title>
+    <para
+>Sümbolid luuakse QPainterPath-objektidena koos lisateabega, mis määratleb nende kompleksjoone atribuudid. QPainterPath koosneb alamkompleksjoontest, näiteks ristkülikud, ellipsid, joonte ahelad või Bézieri kõverad. Kompleksjooned võivad üksteisega kattuda ning moodustada keerukamaid kujundeid. </para>
+    <para
+>Sümboli võib täita keerdtäitmisega, mille korral täidetakse kogu kompleksjoon, või paaris-paaritu täitmisega, mille korral täidetakse kompleksjoone vahelduvad osad. </para>
+    <para
+>Kui kompleksjoon pole täidetud, on kontuuril määratud joone paksus ning otsa ja ühenduse tüüp. </para>
+    <para
+>Täpsemalt kõneleb sellest QPainterPathi dokumentatsioon. </para>
+</chapter>

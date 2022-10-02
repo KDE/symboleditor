@@ -1,0 +1,75 @@
+<?xml version = '1.0'?>
+    <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+    <!ENTITY symboleditor '<application
+>SymbolEditor</application
+>'>
+    <!ENTITY kapp "&symboleditor;">
+    <!ENTITY % addindex "IGNORE">
+    <!ENTITY % Estonian  "INCLUDE">
+    <!ENTITY introduction SYSTEM "introduction.docbook">
+    <!ENTITY ui SYSTEM "ui.docbook">
+    <!ENTITY commands SYSTEM "commands.docbook">
+    <!ENTITY symbols SYSTEM "symbols.docbook">
+    <!ENTITY dialogs SYSTEM "dialogs.docbook">
+    <!ENTITY credits SYSTEM "credits.docbook">
+    ]>
+
+<book lang="&language;">
+    <bookinfo>
+        <title
+>&kapp;i käsiraamat</title>
+        <authorgroup>
+            <author
+><firstname
+>Stephen</firstname
+> <othername
+>P.</othername
+> <surname
+>Allewell</surname
+> <affiliation
+><address
+><email
+>steve.allewell@gmail.com</email
+></address
+></affiliation>
+            </author>
+        </authorgroup>
+        <copyright>
+            <year
+>2012-2014</year>
+            <holder
+>Stephen P. Allewell</holder>
+        </copyright>
+        <legalnotice
+>&FDLNotice;</legalnotice>
+        <date
+>27/07/2014</date>
+        <releaseinfo
+>V.1.5.0</releaseinfo>
+        <abstract>
+            <para
+>&kapp; on rakendus, mis võimaldab luua ja redigeerida tikkimisrakendusele KXStitch vajalikke sümbolite kogusid. </para>
+        </abstract>
+        <keywordset>
+            <keyword
+>KDE</keyword>
+            <keyword
+>tikkimine</keyword>
+            <keyword
+>ristpisted</keyword>
+            <keyword
+>pisted</keyword>
+            <keyword
+>sümbol</keyword>
+        </keywordset>
+    </bookinfo>
+
+    &introduction;
+    &ui;
+    &symbols;
+    &commands;
+    &dialogs;
+    &credits;
+
+    &documentation.index;
+</book>

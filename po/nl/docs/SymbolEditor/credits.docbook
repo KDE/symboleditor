@@ -1,0 +1,22 @@
+<chapter id="credits">
+    <title
+>Dankbetuigingen en licentie</title>
+    <para
+>&symboleditor;</para>
+    <para
+>Programma copyright 2012-2015 Stephen P. Allewell <email
+>steve.allewell@gmail.com</email
+></para>
+    <para
+>Met dank aan: <itemizedlist
+> <listitem
+> <para
+>Vertalingen geleverd door verschillende medewerkers. Zie het vertaalbestand voor details. </para>
+            </listitem>
+        </itemizedlist>
+    </para>
+    <para
+>Documentatie copyright 2012-2015 Stephen P. Allewell <email
+>steve.allewell@gmail.com</email
+> </para>
+    &meld.fouten;&vertaling.freek; &underFDL; &underGPL; </chapter>

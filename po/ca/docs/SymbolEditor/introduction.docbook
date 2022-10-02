@@ -1,0 +1,20 @@
+<chapter id="introduction">
+    <title
+>Introducció</title>
+    <para
+>El &symboleditor; s'utilitza per a crear símbols de punt de creu per a l'aplicació &kxstitch;. Originalment, el &kxstitch; es basava en els tipus de lletra dels caràcters estàndard per a proporcionar aquests símbols, però les diferències en els idiomes d'usuari i la qualitat dels tipus de lletra disponibles juntament amb l'alineació dels caràcters i el nombre limitat disponible ha portat a la necessitat de crear un conjunt de símbols dedicat. </para>
+    <para
+>El conjunt de símbols s'emmagatzemarà en un fitxer i es poden crear diversos fitxers segons les necessitats dels usuaris, per exemple, tenir un símbol de Halloween configurat per a patrons amb temes de Halloween. </para>
+    <para
+>Cadascun dels fitxers contindrà una sèrie de símbols que es mostraran a la pestanya de la biblioteca de símbols. L'edició dels símbols existents es pot fer fent clic sobre l'entrada de la biblioteca, la qual completarà l'editor amb aquest símbol. De manera alternativa, es poden crear i afegir símbols nous a la biblioteca. </para>
+    <para
+>Si us plau, informeu de qualsevol problema o sol·licitud de característiques a la llista de correu &symboleditor; del &kde; symboleditor@kde.org, us hi podeu subscriure <ulink url="http://mail.kde.org/mailman/listinfo/symboleditor"
+>aquí</ulink
+> o amb el sistema de seguiment d'errors del &kde; a <ulink url="https://bugs.kde.org/"
+>https://bugs.kde.org/</ulink
+>. </para>
+    <para
+>La pàgina d'inici del &symboleditor; es troba a <ulink url="https://userbase.kde.org/SymbolEditor"
+>https://userbase.kde.org/SymbolEditor</ulink
+> </para>
+</chapter>

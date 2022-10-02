@@ -1,0 +1,842 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Vít Pelčák <vit@pelcak.org>, 2014, 2016, 2017.
+# Vit Pelcak <vpelcak@suse.cz>, 2015, 2019, 2020, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-08-02 02:13+0200\n"
+"PO-Revision-Date: 2021-08-16 09:49+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.04.3\n"
+
+#: src/Commands.cpp:72 src/MainWindow.cpp:913
+#, kde-format
+msgid "Move To"
+msgstr "Posunout do"
+
+#: src/Commands.cpp:105 src/MainWindow.cpp:922
+#, kde-format
+msgid "Draw To"
+msgstr "Kreslit do"
+
+#: src/Commands.cpp:140 src/MainWindow.cpp:931
+#, kde-format
+msgid "Cubic To"
+msgstr "Prostorový do"
+
+#: src/Commands.cpp:176
+#, kde-format
+msgid "Add Rectangle"
+msgstr "Přidat obdélník"
+
+#: src/Commands.cpp:211
+#, kde-format
+msgid "Add Ellipse"
+msgstr "Přidat elipsu"
+
+#: src/Commands.cpp:247
+#, kde-format
+msgid "Move point"
+msgstr "Posunout bod"
+
+#: src/Commands.cpp:284
+#, kde-format
+msgid "Update Symbol"
+msgstr "Aktualizovat symbol"
+
+#: src/Commands.cpp:326 src/MainWindow.cpp:773
+#, kde-format
+msgid "Import Library"
+msgstr "Importovat knihovnu"
+
+#: src/Commands.cpp:375 src/MainWindow.cpp:969
+#, kde-format
+msgid "Rotate Left"
+msgstr "Otočit vlevo"
+
+#: src/Commands.cpp:406 src/MainWindow.cpp:976
+#, kde-format
+msgid "Rotate Right"
+msgstr "Otočit vpravo"
+
+#: src/Commands.cpp:437 src/MainWindow.cpp:983
+#, kde-format
+msgid "Flip Horizontal"
+msgstr "Obrátit vodorovně"
+
+#: src/Commands.cpp:467 src/MainWindow.cpp:990
+#, kde-format
+msgid "Flip Vertical"
+msgstr "Obrátit svisle"
+
+#: src/Commands.cpp:500 src/MainWindow.cpp:997
+#, kde-format
+msgid "Scale to Preferred Size"
+msgstr "Změnit velikost na upřednostňovanou velikost"
+
+#: src/Commands.cpp:557
+#, kde-format
+msgid "Change Fill State"
+msgstr "Změnit stav výplně"
+
+#: src/Commands.cpp:591
+#, kde-format
+msgid "Change Fill Rule"
+msgstr "Změnit pravidlo výplně"
+
+#: src/Commands.cpp:625
+#, kde-format
+msgid "Change Cap Style"
+msgstr "Změnit styl závěru"
+
+#: src/Commands.cpp:659
+#, kde-format
+msgid "Change Join Style"
+msgstr "Změnit styl spojení"
+
+#: src/Commands.cpp:692 src/MainWindow.cpp:712
+#, kde-format
+msgid "Delete Symbol"
+msgstr "Smazat symbol"
+
+#: src/Commands.cpp:725 src/MainWindow.cpp:895
+#, kde-format
+msgid "Increase Line Width"
+msgstr "Zvětšit šířku čáry"
+
+#: src/Commands.cpp:789 src/MainWindow.cpp:902
+#, kde-format
+msgid "Decrease Line Width"
+msgstr "Zmenšit šířku čáry"
+
+#: src/Commands.cpp:852
+#, kde-format
+msgid "Add Symbols"
+msgstr "Přidat symboly"
+
+#: src/Commands.cpp:897
+#, kde-format
+msgid "Add Character"
+msgstr "Přidat znak"
+
+#: src/Editor.cpp:172
+#, kde-format
+msgid "Select a new starting position."
+msgstr "Vybrat novou počáteční polohu."
+
+#: src/Editor.cpp:177
+#, kde-format
+msgid "Select the line end point."
+msgstr "Vybrat čáru a bod."
+
+#: src/Editor.cpp:182
+#, kde-format
+msgid "Select the first control point."
+msgstr "Vybrat první ovládací bod."
+
+#: src/Editor.cpp:183
+#, kde-format
+msgid "Select the second control point."
+msgstr "Vybrat druhý ovládací bod."
+
+#: src/Editor.cpp:184
+#, kde-format
+msgid "Select the end point"
+msgstr "Vybrat koncový bod."
+
+#: src/Editor.cpp:187
+#, kde-format
+msgid "Select the first corner."
+msgstr "Vybrat první roh."
+
+#: src/Editor.cpp:188
+#, kde-format
+msgid "Select the second corner."
+msgstr "Vybrat druhý roh."
+
+#: src/Editor.cpp:192
+#, kde-format
+msgid "Select the first corner of the bounding rectangle."
+msgstr "Vybrat první roh svazujícího obdélníku."
+
+#: src/Editor.cpp:193
+#, kde-format
+msgid "Select the second corner of the bounding rectangle."
+msgstr "Vybrat druhý roh svazujícího obdélníku."
+
+#: src/Editor.cpp:197
+#, kde-format
+msgid "Double click a character to insert into the editor."
+msgstr "Kliknout dvakrát na znak pro jeho vložení do editoru."
+
+#: src/Exceptions.cpp:69
+#, kde-format
+msgid "Tried to read past the end of the data"
+msgstr "Pokus o čtení za konec dat"
+
+#: src/Exceptions.cpp:73
+#, kde-format
+msgid "Tried to read corrupted data"
+msgstr "Pokus o čtení poškozených dat"
+
+#: src/Exceptions.cpp:76 src/Exceptions.cpp:106
+#, kde-format
+msgid "Undefined status message %1"
+msgstr "Neurčená stavová zpráva %1"
+
+#: src/Exceptions.cpp:101
+#, kde-format
+msgid "Failed to write to the device"
+msgstr "Nepodařilo se zapisovat na zařízení"
+
+#: src/Main.cpp:87
+#, kde-format
+msgid "SymbolEditor"
+msgstr "SymbolEditor"
+
+#: src/Main.cpp:89
+#, kde-format
+msgid "A cross stitch symbol editor."
+msgstr "Editor symbolů pro vyšívání křížkovým stehem."
+
+#: src/Main.cpp:91
+#, kde-format
+msgid "(c)2011-2019 Stephen Allewell"
+msgstr "(c)2011-2019 Stephen Allewell"
+
+#: src/Main.cpp:97
+#, kde-format
+msgid "Project Lead"
+msgstr "Vedoucí projektu"
+
+#: src/Main.cpp:98
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Pavel Fric"
+
+#: src/Main.cpp:98
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "pavelfric@seznam.cz"
+
+#: src/MainWindow.cpp:198 src/MainWindow.cpp:420 src/MainWindow.cpp:575
+#, kde-format
+msgid "Untitled"
+msgstr "Bez názvu"
+
+#: src/MainWindow.cpp:207
+#, kde-format
+msgctxt "The editor tab title"
+msgid "Editor"
+msgstr "Editor"
+
+#: src/MainWindow.cpp:208
+#, kde-format
+msgctxt "The library tab title"
+msgid "Library"
+msgstr "Knihovna"
+
+#: src/MainWindow.cpp:278
+#, kde-format
+msgid ""
+"Save changes to the symbol?\n"
+"Selecting No discards changes."
+msgstr ""
+"Uložit změny do symbolu?\n"
+"Vybráním Ne dojde k zahození změn."
+
+#: src/MainWindow.cpp:311
+#, kde-format
+msgid ""
+"Save changes to the library?\n"
+"Selecting No discards changes."
+msgstr ""
+"Uložit změny do knihovny?\n"
+"Vybráním Ne dojde k zahození změn."
+
+#: src/MainWindow.cpp:339
+#, kde-format
+msgid "Open file"
+msgstr "Otevřít soubor"
+
+#: src/MainWindow.cpp:339 src/MainWindow.cpp:451 src/MainWindow.cpp:529
+#, kde-format
+msgid "Cross Stitch Symbols (*.sym)"
+msgstr "Symboly pro křížkový steh (*.sym)"
+
+#: src/MainWindow.cpp:388 src/MainWindow.cpp:549
+#, kde-format
+msgid "This doesn't appear to be a valid symbol file"
+msgstr "Zdá se, že toto není platný soubor se symbolem"
+
+#: src/MainWindow.cpp:390 src/MainWindow.cpp:551
+#, kde-format
+msgid ""
+"Version %1 of the library file is not supported in this version of "
+"SymbolEditor"
+msgstr ""
+"Verze %1 souboru s knihovnou není podporována v této verzi SymbolEditoru"
+
+#: src/MainWindow.cpp:392
+#, kde-format
+msgid ""
+"Version %1 of the symbol is not supported in this version of SymbolEditor"
+msgstr "Verze %1 symbolu není podporována v této verzi SymbolEditoru"
+
+#: src/MainWindow.cpp:394
+#, kde-format
+msgid ""
+"Failed to read the library\n"
+"%1"
+msgstr ""
+"Nepodařilo se přečíst knihovnu\n"
+"%1"
+
+#: src/MainWindow.cpp:407 src/MainWindow.cpp:560
+#, kde-format
+msgid "The url %1 is invalid"
+msgstr "Adresa (URL) %1 je neplatná"
+
+#: src/MainWindow.cpp:432
+#, kde-format
+msgid ""
+"Failed to write the library\n"
+"%1"
+msgstr ""
+"Nepodařilo se zapsat knihovnu\n"
+"%1"
+
+#: src/MainWindow.cpp:438
+#, kde-format
+msgid ""
+"Failed to open the file %1\n"
+"%2"
+msgstr ""
+"Nepodařilo se otevřít soubor %1\n"
+"%2"
+
+#: src/MainWindow.cpp:451
+#, kde-format
+msgid "Save As..."
+msgstr "Uložit jako..."
+
+#: src/MainWindow.cpp:457
+#, kde-format
+msgid ""
+"This file already exists\n"
+"Do you want to overwrite it?"
+msgstr ""
+"Tento soubor již existuje.\n"
+"Opravdu si jej přejete přepsat?"
+
+#: src/MainWindow.cpp:529
+#, kde-format
+msgid "Import library"
+msgstr "Importovat knihovnu"
+
+#: src/MainWindow.cpp:621
+#, kde-format
+msgid "Undo %1"
+msgstr "Zpět %1"
+
+#: src/MainWindow.cpp:634
+#, kde-format
+msgid "Redo %1"
+msgstr "Znovu %1"
+
+#: src/MainWindow.cpp:648
+#, kde-format
+msgctxt "The library tab title %1 is the file name"
+msgid "%1 Library"
+msgstr "%1 Knihovna"
+
+#: src/MainWindow.cpp:650
+#, kde-format
+msgctxt "The editor tab title %1 is the file name"
+msgid "%1 Editor"
+msgstr "%1 Editor"
+
+#: src/MainWindow.cpp:742
+#, kde-format
+msgctxt "The Editor configuration page"
+msgid "Editor"
+msgstr "Editor"
+
+#: src/MainWindow.cpp:774
+#, kde-format
+msgid ""
+"Imports another library appending the symbols it contains to the current "
+"library."
+msgstr ""
+"Importuje jinou knihovnu a připojí v ní obsažené symboly k nynější knihovně."
+
+#: src/MainWindow.cpp:779
+#, kde-format
+msgid "Save Symbol"
+msgstr "Uložit symbol"
+
+#: src/MainWindow.cpp:780
+#, kde-format
+msgid ""
+"Save the symbol to the library. If this is a new symbol, subsequent saves "
+"will create additional symbols in the library. If the symbol was selected "
+"from the library to edit then saving will update that symbol in the library."
+msgstr ""
+"Uložit symbol do knihovny. Pokud je to nový symbol, pozdější uložení v "
+"knihovně vytvoří dodatečné symboly. Pokud byl symbol vybrán z knihovny k "
+"upravení, potom uložení onen symbol v knihovně zaktualizuje."
+
+#: src/MainWindow.cpp:786
+#, kde-format
+msgid "Save Symbol as New"
+msgstr "Uložit symbol jako nový"
+
+#: src/MainWindow.cpp:787
+#, kde-format
+msgid ""
+"Save the current symbol as a new one in the library. Subsequent saves will "
+"update the new symbol."
+msgstr ""
+"Uložit nynější symbol jako nový symbol v knihovně. Pozdější uložení nový "
+"symbol zaktualizuje."
+
+#: src/MainWindow.cpp:800
+#, kde-format
+msgid "Fill Path"
+msgstr "Cesta výplně"
+
+#: src/MainWindow.cpp:801
+#, kde-format
+msgid ""
+"Enable path filling. The path defines the closed boundary of the shape and "
+"the path is filled with the selected fill method."
+msgstr ""
+"Povolit vyplnění cesty. Cesta stanovuje uzavřené hranice tvaru a cesta je "
+"vyplněna zvoleným způsobem výplně."
+
+#: src/MainWindow.cpp:811
+#, kde-format
+msgid "Odd Even Fill"
+msgstr "Lichá a sudá výplň"
+
+#: src/MainWindow.cpp:812
+#, kde-format
+msgid "The Odd Even fill method will fill alternate areas of the symbol."
+msgstr "Lichý sudý způsob výplně vyplní protilehlé oblasti symbolu."
+
+#: src/MainWindow.cpp:820
+#, kde-format
+msgid "Winding Fill"
+msgstr "Klikatá výplň"
+
+#: src/MainWindow.cpp:821
+#, kde-format
+msgid "The Winding fill method will fill the complete interior of the path."
+msgstr "Klikatá metoda výplně vyplní celý vnitřek cesty."
+
+#: src/MainWindow.cpp:834
+#, kde-format
+msgid "Flat Cap"
+msgstr "Plochý závěr"
+
+#: src/MainWindow.cpp:835
+#, kde-format
+msgid ""
+"The Flat Cap end type provides a square end that stops at the end point of "
+"the line.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr ""
+"Plochý závěr jako typ ukončení poskytuje čtvercový konec, který končí na "
+"koncovém bodu čáry.\n"
+"\n"
+"Toto se dá použít jen na nevyplněné cesty."
+
+#: src/MainWindow.cpp:843
+#, kde-format
+msgid "Square Cap"
+msgstr "Čtvercový závěr"
+
+#: src/MainWindow.cpp:844
+#, kde-format
+msgid ""
+"The Square Cap end type provides a square end that projects beyond the end "
+"point of the line by half the line width.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr ""
+"Čtvercový závěr jako typ ukončení poskytuje čtvercový konec, který vyčnívá "
+"za koncový bod čáry o polovinu šířky čáry.\n"
+"\n"
+"Toto se dá použít jen na nevyplněné cesty."
+
+#: src/MainWindow.cpp:852
+#, kde-format
+msgid "Round Cap"
+msgstr "Kulatý závěr"
+
+#: src/MainWindow.cpp:853
+#, kde-format
+msgid ""
+"The Round Cap end type provides a round end that projects beyond the end "
+"point of the line with a radius of half the line width.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr ""
+"Kulatý závěr jako typ ukončení poskytuje kulatý konec, který vyčnívá za "
+"koncový bod čáry. Jeho poloměrem je polovina šířky čáry.\n"
+"\n"
+"Toto se dá použít jen na nevyplněné cesty."
+
+#: src/MainWindow.cpp:866
+#, kde-format
+msgid "Bevel Join"
+msgstr "Kosý spoj"
+
+#: src/MainWindow.cpp:867
+#, kde-format
+msgid ""
+"The Bevel Join provides a beveled corner between two lines.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr ""
+"Kosý spoj poskytuje zkosenou hranu mezi dvěma čarami.\n"
+"\n"
+"Toto se dá použít jen na nevyplněné cesty."
+
+#: src/MainWindow.cpp:875
+#, kde-format
+msgid "Miter Join"
+msgstr "Spojení na pokos"
+
+#: src/MainWindow.cpp:876
+#, kde-format
+msgid ""
+"The Miter Join provides a mitered corner between two lines.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr ""
+"Pokosový spoj poskytuje hranu pokosem mezi dvěma čarami.\n"
+"\n"
+"Toto se dá použít jen na nevyplněné cesty."
+
+#: src/MainWindow.cpp:884
+#, kde-format
+msgid "Round Join"
+msgstr "Kulatý spoj"
+
+#: src/MainWindow.cpp:885
+#, kde-format
+msgid ""
+"The Round Join provides a rounded corner between two lines using a radius of "
+"half the line width.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr ""
+"Kulatý spoj poskytuje zaoblenou hranu mezi dvěma čarami. Jako poloměr spoje "
+"se používá polovina šířky čáry.\n"
+"\n"
+"Toto se dá použít jen na nevyplněné cesty."
+
+#: src/MainWindow.cpp:896
+#, kde-format
+msgid ""
+"Increases the line width.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr ""
+"Zmenší šířku čáry.\n"
+"\n"
+"Toto se dá použít jen na nevyplněné cesty."
+
+#: src/MainWindow.cpp:903
+#, kde-format
+msgid ""
+"Decreases the line width.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr ""
+"Zvětší šířku čáry.\n"
+"\n"
+"Toto se dá použít jen na nevyplněné cesty."
+
+#: src/MainWindow.cpp:914
+#, kde-format
+msgid ""
+"Move the current point to a new position. This implicitly closes any "
+"existing sub path, starting a new one."
+msgstr ""
+"Přesunout nynější bod do nového umístění. Tím dojde k zavření všech "
+"stávajících podcest, a začne se nová."
+
+#: src/MainWindow.cpp:923
+#, kde-format
+msgid ""
+"Add a straight line from the current position to a defined end point. The "
+"end point becomes the new current position."
+msgstr ""
+"Přidat přímou čáru z nynější polohy ke stanovenému koncovému bodu. Koncový "
+"bod se stane novou nynější polohou."
+
+#: src/MainWindow.cpp:932
+#, kde-format
+msgid ""
+"Add a cubic bezier curve from the current position using two control points "
+"and an end point. The end point becomes the new current position."
+msgstr ""
+"Přidat kubickou beziérovu křivku z nynější polohy pomocí dvou ovládacích "
+"bodů a jednoho koncového bodu. Koncový bod se stane novou nynější polohou."
+
+#: src/MainWindow.cpp:940
+#, kde-format
+msgid "Rectangle"
+msgstr "Obdélník"
+
+#: src/MainWindow.cpp:941
+#, kde-format
+msgid ""
+"Add a rectangle as a separate sub path defined by two points representing "
+"the opposite corners."
+msgstr ""
+"Přidat obdélník jako samostatnou podcestu vymezenou pomocí dvou bodů "
+"představujících protější rohy."
+
+#: src/MainWindow.cpp:949
+#, kde-format
+msgid "Ellipse"
+msgstr "Elipsa"
+
+#: src/MainWindow.cpp:950
+#, kde-format
+msgid ""
+"Add an ellipse as a separate sub path defined by a bounding rectangle "
+"represented by two opposite corners."
+msgstr ""
+"Přidat elipsu jako samostatnou podcestu vymezenou hraničním obdélníkem "
+"představovaným dvěma protějšími rohy."
+
+#: src/MainWindow.cpp:958
+#, kde-format
+msgid "Insert Character"
+msgstr "Vložit znak"
+
+#: src/MainWindow.cpp:959
+#, kde-format
+msgid ""
+"Allows selection of a character from any font to be inserted as a closed sub "
+"path. The inserted character will overwrite any existing path, but "
+"additional sub paths may be added to the character."
+msgstr ""
+"Umožňuje výběr znaku z jakéhokoli písma pro jeho vložení jako uzavřené "
+"podcesty. Vložený znak přepíše všechny stávající cesty, ale dodatečné "
+"podcesty mohou být ke znaku přidány."
+
+#: src/MainWindow.cpp:970
+#, kde-format
+msgid ""
+"Rotate all the points of a path counter-clockwise 90 degrees around the "
+"center of the editor."
+msgstr ""
+"Otočit všechny body cesty proti směru hodinových ručiček o 90 stupňů okolo "
+"středu editoru."
+
+#: src/MainWindow.cpp:977
+#, kde-format
+msgid ""
+"Rotate all the points of a path clockwise 90 degrees around the center point "
+"of the editor."
+msgstr ""
+"Otočit všechny body cesty po směru hodinových ručiček o 90 stupňů okolo "
+"středu editoru."
+
+#: src/MainWindow.cpp:984
+#, kde-format
+msgid ""
+"Flip all the points of the path horizontally about the vertical center of "
+"the editor."
+msgstr "Převrátit všechny body cesty vodorovně okolo svislého středu editoru."
+
+#: src/MainWindow.cpp:991
+#, kde-format
+msgid ""
+"Flip all the points of the path vertically about the horizontal center of "
+"the editor."
+msgstr "Převrátit všechny body cesty svisle okolo vodorovného středu editoru."
+
+#: src/MainWindow.cpp:998
+#, kde-format
+msgid ""
+"Scale the current symbol so that it fits within the preferred size of a "
+"symbol."
+msgstr ""
+"Změnit velikost nynějšího symbolu, takže se přizpůsobí upřednostňované "
+"velikosti symbolu."
+
+#: src/MainWindow.cpp:1004
+#, kde-format
+msgid "Enable Snap"
+msgstr "Povolit přichycení"
+
+#: src/MainWindow.cpp:1005
+#, kde-format
+msgid "Enable snapping of points to guide intersections or to the grid."
+msgstr "Povolit přichytávání bodů k průsečíkům vodicích linek nebo ke mřížce."
+
+#: src/MainWindow.cpp:1012
+#, kde-format
+msgid "Enable Guides"
+msgstr "Povolit vodicí linky"
+
+#: src/MainWindow.cpp:1013
+#, kde-format
+msgid "Enable the generation of guide intersections."
+msgstr "Povolit vytváření průsečíků vodicích linek."
+
+#. i18n: ectx: label, entry (Editor_GridElements), group (editor)
+#: SymbolEditor.kcfg:10
+#, kde-format
+msgid "The number of elements in a grid."
+msgstr "Počet prvků ve mřížce."
+
+#. i18n: ectx: label, entry (Editor_ElementSize), group (editor)
+#: SymbolEditor.kcfg:14
+#, kde-format
+msgid "The size in pixels of a grid element."
+msgstr "Velikost v pixelech prvku mřížky."
+
+#. i18n: ectx: label, entry (Editor_ElementGrouping), group (editor)
+#: SymbolEditor.kcfg:18
+#, kde-format
+msgid "The number of elements in a group."
+msgstr "Počet prvků ve skupině."
+
+#. i18n: ectx: label, entry (Editor_PointSize), group (editor)
+#: SymbolEditor.kcfg:22
+#, kde-format
+msgid "The size of a point in pixels."
+msgstr "Velikost bodu v pixelech."
+
+#. i18n: ectx: label, entry (Editor_SnapThreshold), group (editor)
+#: SymbolEditor.kcfg:26
+#, kde-format
+msgid "The distance to check within the range of a point."
+msgstr "Vzdálenost ke kontrole uvnitř rozsahu bodu."
+
+#. i18n: ectx: label, entry (Editor_BorderSize), group (editor)
+#: SymbolEditor.kcfg:30
+#, kde-format
+msgid "The number of cell elements used for the border."
+msgstr "Počet buněčných prvků použitých pro okraj."
+
+#. i18n: ectx: label, entry (Editor_PreferredSizeColor), group (editor)
+#: SymbolEditor.kcfg:34
+#, kde-format
+msgid "The color of the preferred size rectangle"
+msgstr "Barva obdélníku upřednostňované velikosti"
+
+#. i18n: ectx: label, entry (Editor_GuideLineColor), group (editor)
+#: SymbolEditor.kcfg:38
+#, kde-format
+msgid "The color of the guide lines"
+msgstr "Barva vodicích linek"
+
+#. i18n: ectx: label, entry (Editor_SimplifiedGuideLines), group (editor)
+#: SymbolEditor.kcfg:42
+#, kde-format
+msgid "Whether to use a simplified range of angles to test"
+msgstr "Použít pro zkoušku zjednodušený rozsah úhlů"
+
+#. i18n: ectx: Menu (tools)
+#: SymbolEditorui.rc:10
+#, kde-format
+msgid "&Tools"
+msgstr "&Nástroje"
+
+#. i18n: ectx: Menu (rendering)
+#: SymbolEditorui.rc:27
+#, kde-format
+msgid "&Rendering"
+msgstr "&Renderování"
+
+#. i18n: ectx: ToolBar (ToolsToolbar)
+#: SymbolEditorui.rc:47
+#, kde-format
+msgid "Tool Toolbar"
+msgstr "Nástrojový panel pro nástroje"
+
+#. i18n: ectx: ToolBar (RenderingToolbar)
+#: SymbolEditorui.rc:64
+#, kde-format
+msgid "Rendering Toolbar"
+msgstr "Nástrojový panel pro vykreslování"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, EditorConfigPage)
+#: ui/EditorConfigPage.ui:14
+#, kde-format
+msgid "Editor Configuration Page"
+msgstr "Stránka s nastavením editoru"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/EditorConfigPage.ui:20
+#, kde-format
+msgid "Grid elements"
+msgstr "Prvky mřížky"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/EditorConfigPage.ui:40
+#, kde-format
+msgid "Element size"
+msgstr "Velikost prvku"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: ui/EditorConfigPage.ui:60
+#, kde-format
+msgid "Element grouping"
+msgstr "Seskupení prvků"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: ui/EditorConfigPage.ui:80
+#, kde-format
+msgid "Point size"
+msgstr "Velikost bodu"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: ui/EditorConfigPage.ui:100
+#, kde-format
+msgid "Snap threshold"
+msgstr "Práh přichycení"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: ui/EditorConfigPage.ui:123
+#, kde-format
+msgid "Border size"
+msgstr "Velikost okraje"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: ui/EditorConfigPage.ui:140
+#, kde-format
+msgid "Preferred size box color"
+msgstr "Upřednostňovaná velikost barvy boxu"
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: ui/EditorConfigPage.ui:158
+#, kde-format
+msgid "Guide line color"
+msgstr "Barva vodicí linky"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_Editor_SimplifiedGuideLines)
+#: ui/EditorConfigPage.ui:176
+#, kde-format
+msgid "Simplified guide lines"
+msgstr "Zjednodušené vodicí linky"

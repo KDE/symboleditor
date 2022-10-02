@@ -1,0 +1,836 @@
+<chapter id="commands">
+    <title
+>Referência de Comandos</title>
+
+    <sect1 id="menus">
+        <title
+>Os Menus do &kapp;</title>
+        <sect2>
+            <title
+>O Menu Ficheiro</title>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+><keycap
+>Ctrl</keycap
+><keycap
+>n</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Novo</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Cria uma nova biblioteca</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+><keycap
+>Ctrl</keycap
+><keycap
+>o</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Abrir</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Abre uma biblioteca existente</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+><keycap
+>Ctrl</keycap
+><keycap
+>r</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Abrir um Recente</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Abre uma biblioteca usada recentemente</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+><keycap
+>Ctrl</keycap
+><keycap
+>s</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Gravar</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Grava a biblioteca</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Gravar Como</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Grava a biblioteca com um novo nome</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Gravar o Símbolo</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Grava o símbolo a ser editado de momento</action
+></simpara
+> <simpara
+>Se o símbolo a ser editado foi seleccionado a partir da biblioteca, a gravação irá actualizar esse símbolo. Se for um símbolo novo, será adicionado à biblioteca e as gravações subsequentes irão adicionar um novo símbolo à biblioteca.</simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Gravar o Símbolo como Novo</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Grava o símbolo a ser editado como um novo símbolo</action
+></simpara
+> <simpara
+>Quando um novo símbolo for gravado como novo, ele será adicionado à biblioteca, independentemente de ter sido originalmente seleccionado a partir da biblioteca para edição. As gravações subsequentes irão adicionar outro símbolo novo à biblioteca.</simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Importar uma Biblioteca</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Importa uma biblioteca, adicionando os símbolos contidos à biblioteca actual</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+><keycap
+>Ctrl</keycap
+><keycap
+>w</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Fechar</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Fecha a biblioteca</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+><keycap
+>Ctrl</keycap
+><keycap
+>q</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Sair</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Sai do &kapp;</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>O Menu Editar</title>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+><keycap
+>Ctrl</keycap
+><keycap
+>z</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Desfazer</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Anula a última alteração</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+><keycap
+>Ctrl</keycap
+><keycap
+>Shift</keycap
+><keycap
+>z</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Refazer</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Repete a última acção anulada</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>O Menu e a Barra de Ferramentas de Desenho</title>
+            <screenshot>
+                <screeninfo
+>Aqui está uma imagem da barra de ferramentas de desenho</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="renderer-toolbar.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+                </screenshot>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Preenchimento do Caminho</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Activa o preenchimento da caminho</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Preenchimento à Passagem</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selecciona o método de preenchimento à passagem</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Preenchimento Par-Ímpar</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selecciona o método de preenchimento par-ímpar</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Extremo Plano</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selecciona o tipo de fim de linha plano</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Extremo Quadrado</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selecciona o tipo de fim de linha quadrado</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Extremo Redondo</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selecciona o tipo de fim de linha arredondado</action
+></simpara
+></listitem
+></varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Junção em Relevo</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selecciona o tipo de junção de linha em relevo</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Junção em Cunha</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selecciona o tipo de junção de linha em cunha</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Junção Redonda</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selecciona o tipo de junção de linha arredondado</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Aumentar a Espessura da Linha</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Aumenta a espessura de linha do caminho</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Diminuir a Espessura da Linha</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Diminui a espessura de linha do caminho</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>O Menu e a Barra de Ferramentas</title>
+            <para
+>Está disponível um conjunto de ferramentas para ajudar no desenho dos símbolos. Os símbolos são compostos por uma série de sub-caminhos, e onde cada sub-caminho é composto por uma colocação na posição da origem (esta é 0,0 por omissão para os símbolos novos), seguida de linhas e curvas. As curvas são curvas cúbicas que têm um início, um fim e dois pontos de controlo que definem a curva. Existem ferramentas de conveniência para criar rectângulos e elipses, mas estes serão decompostos em linhas e curvas. </para>
+            <para
+>Todos os pontos criados para os elementos podem ser movidos se os arrastar para a sua nova posição. Todos os pontos podem ser ajustados às intersecções das grelhas, caso a opção de ajuste esteja activa, caso contrário poderão ser colocados em qualquer lado. </para>
+            <para
+>O símbolo pode ser rodado no sentido dos ponteiros do relógio e no sentido contrário, assim como pode ser invertido na horizontal ou na vertical. Isto permite criar vários símbolos facilmente, com base no mesmo desenho. Lembre-se de usar o símbolo de gravação como uma nova opção para isto. </para>
+            <screenshot>
+                <screeninfo
+>Aqui está uma imagem da barra de ferramentas</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="tool-toolbar.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+                </screenshot>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Mover Para</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Move a posição inicial do sub-caminho</action
+></simpara
+> <simpara
+>Se um sub-caminho existente estiver a ser criado, este será fechado e será iniciado um novo sub-caminho na nova posição</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Desenhar Até</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Desenha uma linha até ao ponto seleccionado seguinte</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Cúbica Até</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Desenha uma curva de Bézier, usando dois pontos de controlo e um ponto final</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Rectângulo</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Desenha um rectângulo entre dois cantos opostos</action
+></simpara
+> <simpara
+>Isto fecha qualquer sub-caminho existente e cria um novo sub-caminho que consiste no rectângulo.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Elipse</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Desenha uma elipse entre dois cantos opostos</action
+></simpara
+> <simpara
+>Isto fecha qualquer sub-caminho existente e cria um novo sub-caminho que consiste na elipse.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Inserir Carácter</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selecciona um carácter de um dado tipo de letra e insere-o no editor</action
+></simpara
+> <simpara
+>Isto irá substituir todos os caminhos existentes</simpara
+> <screenshot
+> <screeninfo
+>Aqui está uma imagem do selector de caracteres</screeninfo
+> <mediaobject
+> <imageobject
+> <imagedata fileref="charselect-dialog.png" format="PNG"/> </imageobject
+> </mediaobject
+> </screenshot
+> <simpara
+>A janela de selecção de caracteres é a janela normal do KDE e permite a selecção de caracteres a partir de qualquer tipo de letra. O tamanho não é usado, dado que o carácter é escalado para caber dentro da guia do tamanho preferido.</simpara
+> <simpara
+>Se fizer duplo-click sobre um carácter, inseri-lo-á no editor. Isto permite A janela irá permanecer aberta para que possa introduzir outro carácter, ainda que este vá substituir o primeiro. Isto permite inserir um carácter, gravar, inserir um carácter, gravar de forma rápida para compor uma biblioteca de símbolos. Certifique-se que o símbolo a ser editado é um símbolo novo e não um que tenha sido previamente seleccionado a partir da biblioteca, caso contrário a gravação iria continuar a sobrepor o da biblioteca.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Rodar para a Esquerda</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Roda o símbolo inteiro em 90 graus no sentido contrário aos ponteiros do relógio</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Rodar para a Direita</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Roda o símbolo inteiro em 90 graus no sentido dos ponteiros do relógio</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Inverter na Horizontal</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Inverte o símbolo ao longo do eixo vertical</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Inverter na Vertical</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Inverte o símbolo ao longo do eixo horizontal</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Ajustar ao Tamanho Preferido</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Ajusta a escala do símbolo para caber dentro do tamanho preferido que tiver sido definido</action
+></simpara
+> <simpara
+>Lembre-se que isto só afecta os pontos; onde for criado um símbolo não preenchido e for definida uma dada espessura de linha, isto poderá alargar-se para além do tamanho da guia.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Activar o Ajuste</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Activa o ajuste dos pontos à grelha</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Linhas-Guias</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Activar a geração das linhas-guias</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>O Menu Configuração</title>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Barras de Ferramentas Visíveis</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selecciona as barras de ferramentas a apresentar</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Mostrar a Barra de Estado</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Activa/desactiva a visibilidade da barra de estado</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Configurar os Atalhos</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Configura os atalhos das aplicações</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Configurar as Barras de Ferramentas</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Configura as barras de ferramentas das aplicações</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Configurar o Editor de Símbolos</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Configura as definições das aplicações</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>O Menu Ajuda</title>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Manual do &kapp;</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Mostra esta ajuda.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>O Que é Isto.</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Mostra uma ajuda sobre uma determinada funcionalidade em particular.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Comunicar um Erro.</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Preenche um relatório de erros.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Mudar a Língua da Aplicação</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Modifica a língua da aplicação</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Acerca do &kapp;</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Mostra alguma informação acerca do &kapp;.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Acerca do KDE</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Mostra alguma informação acerca do KDE.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+    </sect1>
+</chapter>

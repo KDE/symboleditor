@@ -1,0 +1,20 @@
+<chapter id="introduction">
+    <title
+>Inleiding</title>
+    <para
+>&symboleditor; wordt gebruikt voor het maken van kruissteeksymbolen voor de toepassing &kxstitch;. Oorspronkelijk gebruikte &kxstitch; standaard lettertypen om deze symbolen te bieden, maar verschillen in talen van gebruikers en de kwaliteit van de lettertypen samen met de uitlijning van de tekens en het beperkte aantal beschikbaar maakten het noodzakelijk om een specifieke set symbolen te maken. </para>
+    <para
+>De set symbolen zal opgeslagen worden in een bestand en verschillende bestanden kunnen gemaakt worden afhankelijk van wat de gebruikers nodig hebben, bijvoorbeeld het hebben van een symbool voor Halloween voor patronen met een thema Halloween. </para>
+    <para
+>Elk bestand zal een aantal symbolen bevatten die getoond zullen worden in het tabblad bibliotheek met symbolen. Bewerken van bestaande symbolen kan gedaan worden door te klikken op het item in de bibliotheek die de bewerker zal voorzien van dit symbool. Ook kunnen nieuwe symbolen gemaakt worden en toegevoegd aan de bibliotheek. </para>
+    <para
+>Rapporteer elk probleem of verzoek om functies aan de KDE e-maillijst van &symboleditor;, symboleditor@kde.org, u kunt zich <ulink url="http://mail.kde.org/mailman/listinfo/symboleditor"
+>hier</ulink
+> inschrijven, of via het systeem voor het volgend van bugs in KDE op <ulink url="http://bugs.kde.org/"
+>http://bugs.kde.org/</ulink
+>. </para>
+    <para
+>De homepagina van SymbolEditor is op <ulink url="http://userbase.kde.org/SymbolEditor"
+>http://userbase.kde.org/SymbolEditor</ulink
+> </para>
+</chapter>

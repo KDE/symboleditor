@@ -1,0 +1,19 @@
+<chapter id="Dialogs">
+    <title
+>Janelas</title>
+
+    <sect1 id="ConfigurationDialog">
+        <title
+>O diálogo de configuração</title>
+        <para>
+            <screenshot
+><mediaobject
+><imageobject
+><imagedata fileref="configuration-dialog.png" format="PNG"/></imageobject
+></mediaobject
+></screenshot>
+        </para>
+        <para
+>A janela de configuração permite a definição de um conjunto de opções. </para>
+    </sect1>
+</chapter>

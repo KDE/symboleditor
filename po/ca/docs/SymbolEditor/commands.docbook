@@ -1,0 +1,623 @@
+<chapter id="commands">
+    <title
+>Referència d'ordres</title>
+
+    <sect1 id="menus">
+        <title
+>Menús del &symboleditor;</title>
+        <sect2>
+            <title
+>El menú Fitxer</title>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Nova</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Crea una biblioteca nova.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Obre</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Obre una biblioteca existent.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Obre'n una de recent</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Obre una biblioteca utilitzada recentment.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Desa</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Desa la biblioteca.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;&Maj;<keycap
+>S</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Desa com a</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Desa la biblioteca amb un nom nou.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Desa el símbol</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Es desa el símbol que s'està editant.</action
+></simpara
+> <simpara
+>Si el símbol que s'està editant es va seleccionar des de la biblioteca, en desar-lo s'actualitzarà aquest símbol. Si es tracta d'un símbol nou, s'annexarà a la biblioteca i els desaments posteriors annexaran un altre símbol nou a la biblioteca.</simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Desa el símbol com a nou</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Es desa el símbol que s'està editant com un símbol nou.</action
+></simpara
+> <simpara
+>Quan un símbol es desa com a nou, s'annexarà a la biblioteca independentment que s'hagi seleccionat originalment des de la biblioteca per editar-lo. Els desaments posteriors annexaran un altre símbol nou a la biblioteca.</simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Importa la biblioteca</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Importa una biblioteca annexant els símbols continguts a la biblioteca actual.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>W</keycap
+></keycombo
+></shortcut
+> <guimenuitem
+>Tanca</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Tanca la biblioteca.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+> </shortcut
+> <guimenuitem
+>Surt</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Surt del &symboleditor;.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>El menú Edita</title>
+            <para
+>De manera addicional, el &symboleditor; té la configuració comuna al &kde; i els elements del menú <guimenu
+>Edita</guimenu
+>. Per a obtenir més informació, llegiu la secció sobre <ulink url="help:/fundamentals/menus.html#menus-edit"
+>El menú Edita</ulink
+> en els Fonaments del &kde;. </para>
+        </sect2>
+
+        <sect2>
+            <title
+>El menú i la barra d'eines Dibuixa</title>
+            <screenshot>
+                <screeninfo
+>Aquesta és una captura de pantalla de la barra d'eines per a dibuixar</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="renderer-toolbar.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+                </screenshot>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Emplena el camí</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Permet l'emplenament del camí.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Emplenat sinuós</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selecciona el mètode d'emplenat sinuós.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Emplenat altern</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selecciona el mètode d'emplenat altern.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Punta plana</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selecciona el tipus de final de línia en punta plana.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Punta quadrada</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selecciona el tipus de final de línia en punta quadrada.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Punta arrodonida</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selecciona el tipus de final de línia en punta arrodonida.</action
+></simpara
+></listitem
+></varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Unió en bisell</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selecciona el tipus d'unió de línia en bisell.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Unió en biaix</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selecciona el tipus d'unió de línia en biaix.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Unió arrodonida</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selecciona el tipus d'unió de línia arrodonida.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Augmenta l'amplada de la línia</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Augmenta l'amplada de la línia del camí.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Disminueix l'amplada de la línia</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Disminueix l'amplada de la línia del camí.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>El menú i la barra d'eines Eines</title>
+            <para
+>Hi ha diverses eines disponibles per ajudar amb el disseny dels símbols. Els símbols es componen d'una sèrie de subcamins i cada subcamí es compon d'un moviment a la posició d'inici (predeterminat 0,0 per als símbols nous) seguit de línies i corbes. Les corbes són línia amb corbes cúbiques que tenen un inici, un final i dos punts de control que defineixen la corba. Hi ha eines convenients per a crear rectangles i el·lipses, però es dividiran en línies i corbes. </para>
+            <para
+>Tots els punts creats per als elements es poden moure arrossegant-los a la seva posició nova. Tots els punts es poden ajustar a les interseccions de la quadrícula si l'opció d'ajust està activada, en cas contrari es poden posar en qualsevol lloc. </para>
+            <para
+>El símbol es pot girar en el sentit horari i antihorari, i també es pot invertir verticalment i horitzontalment. Això permet crear múltiples símbols amb facilitat basats en el mateix disseny. Recordeu utilitzar el símbol de desar com una opció nova per això. </para>
+            <screenshot>
+                <screeninfo
+>Aquesta és una captura de pantalla de la barra d'eines Eines</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="tool-toolbar.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+                </screenshot>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Mou a</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Es mou la posició d'inici del subcamí.</action
+></simpara
+> <simpara
+>Si s'està creant un subcamí existent, es tancarà i s'iniciarà una subcamí nou fins a la posició nova.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Dibuixa a</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Dibuixa una línia fins al següent punt seleccionat.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Cúbic a</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Dibuixa una corba de Bézier utilitzant dos punts de control i un punt final.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Rectangle</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Es dibuixa un rectangle entre dues cantonades oposades.</action
+></simpara
+> <simpara
+>Això tancarà qualsevol subcamí existent i crearà un subcamí nou que consistirà en el rectangle.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>El·lipse</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Es dibuixa una el·lipse entre dues cantonades oposades</action
+></simpara
+> <simpara
+>Això tancarà qualsevol subcamí existent i crearà un subcamí nou que consistirà en l'el·lipse.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Insereix un caràcter</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Se selecciona un caràcter des d'un tipus de lletra i s'insereix a l'editor.</action
+></simpara
+> <simpara
+>Això sobreescriurà qualsevol camí existent</simpara
+> <screenshot
+> <screeninfo
+>Aquí teniu una captura de pantalla del selector de caràcters</screeninfo
+> <mediaobject
+> <imageobject
+> <imagedata fileref="charselect-dialog.png" format="PNG"/> </imageobject
+> </mediaobject
+> </screenshot
+> <simpara
+>El diàleg del selector de caràcters és el diàleg estàndard del &kde; i permet la selecció de caràcters a partir de qualsevol tipus de lletra. La mida no s'utilitzarà, ja que el caràcter s'escalarà per ajustar-lo a la guia de mida preferida.</simpara
+> <simpara
+>Fer doble clic sobre un caràcter l'inserirà a l'editor. El diàleg romandrà obert per a poder inserir un altre caràcter, encara que això sobreescriurà el primer. Això permet inserir un caràcter, desar, inserir un caràcter, desar el flux de treball per a construir ràpidament una biblioteca de símbols. Assegureu-vos que el símbol que s'està editant és un símbol nou i no un seleccionat prèviament des de la biblioteca. En cas contrari, el fet de desar continuaria sobreescrivint el de la biblioteca.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Gira a l'esquerra</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Gira tot el símbol 90 graus en sentit antihorari.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Gira a la dreta</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Gira tot el símbol 90 graus en sentit horari.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Inverteix horitzontalment</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Inverteix el símbol sobre l'eix vertical.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Inverteix verticalment</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Inverteix el símbol sobre l'eix horitzontal.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Escala a la mida preferida</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>S'escala el símbol perquè s'ajusti a la mida preferida que s'ha definit.</action
+></simpara
+> <simpara
+>Tingueu en compte que això només afecta els punts. On es crea un símbol sense emplenament i es defineix una amplada de línia, aquest es pot estendre més enllà de la mida de la guia.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Activa l'ajustament</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Permet l'ajust de punts a la quadrícula.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Línies guia</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Permet la generació de línies guia.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>Els menús Arranjament i Ajuda</title>
+            <para
+>De manera addicional, el &symboleditor; té la configuració comuna al &kde; i els elements dels menús <guimenu
+>Arranjament</guimenu
+> i <guimenu
+>Ajuda</guimenu
+>. Per a obtenir més informació, llegiu les seccions sobre <ulink url="help:/fundamentals/menus.html#menus-settings"
+>El menú Arranjament</ulink
+> i <ulink url="help:/fundamentals/menus.html#menus-help"
+>El menú Ajuda</ulink
+> en els Fonaments del &kde;. </para>
+        </sect2>
+    </sect1>
+</chapter>

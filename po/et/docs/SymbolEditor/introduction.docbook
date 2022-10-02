@@ -1,0 +1,20 @@
+<chapter id="introduction">
+    <title
+>Sissejuhatus</title>
+    <para
+>&kapp; on mõeldud tikkimissümbolite loomiseks, mida saab kasutada rakendus KXStitch. Algul tugines KXStitch sümbolite kasutamisel tavalistele fontidele, kuid erinevused kasutajate keeltes ning saadaolevate fontide kvaliteedis, samuti raskused märkide joondamisel ning nende piiratud arv ajendasid looma spetsiaalset sümbolikogumit. </para>
+    <para
+>Sümbolikogu salvestatakse faili ning vastavalt kasutaja vajadustele võib luua mitu faili, näiteks spetsiaalse jõulusümbolite kogu jõuluteemaliste mustrite loomiseks. </para>
+    <para
+>Kõik failid sisaldavad hulka sümboleid, mida näeb sümbolikogu kaardil. Sümboleid saab muuta kogu vastaval kirjel klõpsates, mis kannab ühtlasi sümboli üle redaktorisse. Soovi korral saab mõistagi ise luua uusi sümboleid ja neid kogusse lisada. </para>
+    <para
+>Palun anna ükspuha millisest probleemist või soovist teada &kapp;i postiloendis symboleditor@kde.org, mille saab tellida  <ulink url="http://mail.kde.org/mailman/listinfo/symboleditor"
+>siit</ulink
+>, või KDE veateadete jälgimise süsteemis  <ulink url="http://bugs.kde.org/"
+>http://bugs.kde.org/</ulink
+>. </para>
+    <para
+>Sümbolite redaktori kodulehekülg asub aadressil <ulink url="http://userbase.kde.org/SymbolEditor"
+>http://userbase.kde.org/SymbolEditor</ulink
+>. </para>
+</chapter>

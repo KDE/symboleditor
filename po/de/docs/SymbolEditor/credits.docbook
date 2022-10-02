@@ -1,0 +1,26 @@
+<chapter id="credits">
+    <title
+>Danksagungen und Lizenz</title>
+    <para
+>&symboleditor;</para>
+    <para
+>Programm Copyright 2012-2015 Stephen P. Allewell <email
+>steve.allewell@gmail.com</email
+></para>
+    <para
+>Mitwirkende: <itemizedlist
+> <listitem
+> <para
+>Übersetzungen wurden von verschiedenen Personen erstellt, Einzelheiten dazu finden Sie in den Übersetzungsdateien. </para>
+            </listitem>
+        </itemizedlist>
+    </para>
+    <para
+>Dokumentation Copyright 2012-2015 Stephen P. Allewell <email
+>steve.allewell@gmail.com</email
+> </para>
+    <para
+>Übersetzung Deutsches KDE-Übersetzerteam<email
+>kde-i18n-de@kde.org</email
+></para
+> &underFDL; &underGPL; </chapter>

@@ -1,0 +1,836 @@
+<chapter id="commands">
+    <title
+>Käskude seletused</title>
+
+    <sect1 id="menus">
+        <title
+>&kapp;i menüüd</title>
+        <sect2>
+            <title
+>Menüü Fail</title>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+><keycap
+>Ctrl</keycap
+><keycap
+>n</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Uus</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Uue kogu loomine</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+><keycap
+>Ctrl</keycap
+><keycap
+>o</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Ava</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Olemasoleva kogu avamine</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+><keycap
+>Ctrl</keycap
+><keycap
+>r</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Ava viimati kasutatud</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Viimati kasutatud kogu avamine</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+><keycap
+>Ctrl</keycap
+><keycap
+>s</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Salvesta</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Kogu salvestamine</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Salvesta kui</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Kogu salvestamine uue nimega</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Salvesta sümbol</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Redigeeritava sümboli salvestamine</action
+></simpara
+> <simpara
+>Kui redigeeritav sümbol on valitud kogust, uuendab salvestamine sümbolit. Kui see on uus sümbol, lisatakse see kogusse ning järgnevad salvestamised lisavad taas kogusse uue sümboli. </simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Salvesta sümbol uuena</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Redigeeritava sümboli salvestamine uue sümbolina</action
+></simpara
+> <simpara
+>Kui sümbol salvestatakse uuena, lisatakse see kogusse sellest hoolimata, kas see oli algselt valitud kogust redigeerimiseks või mitte. Järgmised salvestamised lisavad taas uue sümboli kogusse. </simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Impordi kogu</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Kogu importimine, lisades selle sümbolid aktiivsesse kogusse</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+><keycap
+>Ctrl</keycap
+><keycap
+>w</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Sulge</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Kogu sulgemine</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+><keycap
+>Ctrl</keycap
+><keycap
+>q</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Välju</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>&kapp;i töö lõpetamine</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>Menüü Redigeerimine</title>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+><keycap
+>Ctrl</keycap
+><keycap
+>z</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Võta tagasi</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Viimase muudatuse tühistamine</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+><keycap
+>Ctrl</keycap
+><keycap
+>Shift</keycap
+><keycap
+>z</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Tee uuesti</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Viimase tühistatud muudatuse taastegemine</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>Menüü Renderdamine ja renderdamisriba</title>
+            <screenshot>
+                <screeninfo
+>Selline näeb välja renderdamisriba</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="renderer-toolbar.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+                </screenshot>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Kompleksjoone täitmine</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Kompleksjoone täitmise võimaldamine</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Keerdtäitmine</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Keerdtäitmise valimine</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Paaris-paaritu täitmine</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Paaris-paaritu täitmise valimine</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Lameots</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Joonele lameotsa valimine</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Ruutots</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Joonele ruutotsa valimine</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Ümarots</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Joonele ümarotsa valimine</action
+></simpara
+></listitem
+></varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Längühendus</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Joonte längühenduse valimine</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Nurkühendus</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Joonte nurkühenduse valimine</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Ümarühendus</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Joonte ümarühenduse valimine</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Suurenda joone paksust</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Kompleksjoone paksuse suurendamine</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Vähenda joone paksust</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Kompleksjoone paksuse vähendamine</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>Menüü Tööriistad ja tööriistade riba</title>
+            <para
+>Sümbolite kujundamisel on abiks õige mitu tööriista. Sümbolid koosnevad mitmest alamkompleksjoonest ning igaüks neist koosneb liikumisest algsesse asukohta (uute sümbolite puhul vaikimisi 0,0), millele järgnevad jooned ja kõverad. Kõverad on kuupsplainid, millel on algus, lõpp ja kaks kõverat tegelikult määravat kontrollpunkti. Mugavuse pärast on ka tööriistad ristkülikute ja ellipsite loomiseks, mis tegelikult mõistagi koosnevad samuti joontest ja kõveratest. </para>
+            <para
+>Kõik elementide tarbeks loodud punktid on pelgalt lohistamisega liigutatavad uude asukohta. Kõiki punkte võib lasta haarata alusvõrgu lõikepunktidele, kui vastav valik sisse lülitada. Vastasel juhul võib neid asetada suvaliselt kõikjale. </para>
+            <para
+>Sümbolit võib pöörata päri- ja vastupäeva ning peegeldada rõht- ja püstsuunas. See lubab ühe ja sama kujundi baasil luua ka mitu sümbolit. Sel juhul tuleb mõistagi meeles pidada, et muudetud sümbol salvestatakse ikka uuena. </para>
+            <screenshot>
+                <screeninfo
+>Selline näeb välja tööriistade riba</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="tool-toolbar.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+                </screenshot>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Liigutamine</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Alamkompleksjoone alguse asukohta liigutamine</action
+></simpara
+> <simpara
+>Olemasoleva kompleksjoone juures olles seda kasutades kompleksjoon suletakse ning uut kompleksjoont alustatakse uuest asukohast</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Joonistamine</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Joone tõmbamine järgmise valitud punktini</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Bézieri kõver</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Bézieri kõvera joonistamine kahe kontrollpunkti ja lõpp-punkti abil</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Ristkülik</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Ristküliku joonistamine kahe vastasnurga vahele</action
+></simpara
+> <simpara
+>See sulgeb olemasoleva kompleksjoone ja loob uue, ristkülikut sisaldava kompleksjoone.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Ellips</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Ellipsi joonistamine kahe vastasnurga vahele</action
+></simpara
+> <simpara
+>See sulgeb olemasoleva kompleksjoone ja loob uue, ellipsit sisaldava kompleksjoone.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Lisa märk</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Märgi valimine fondist ja lisamine redaktorisse</action
+></simpara
+> <simpara
+>See kirjutab üles olemasolevad kompleksjooned</simpara
+> <screenshot
+> <screeninfo
+>Selline näeb välja märgivalija</screeninfo
+> <mediaobject
+> <imageobject
+> <imagedata fileref="charselect-dialog.png" format="PNG"/> </imageobject
+> </mediaobject
+> </screenshot
+> <simpara
+>Märgi valimise dialoog on tavaline KDE dialoog, mis lubab valida mis tahes fondis leiduva märgi. Suurust ei arvestata, sest märk skaleeritakse sobivaks eelistatud suuruse kasti järgi.</simpara
+> <simpara
+>Topeltklõps märgil lisab märgi redaktorisse. Dialoog jääb lahti, nii et saab lisada ka järgmise märgi, ehkki see kirjutab eelmise üle. Küll saab nii lisada märgi, salvestada, lisada uue märgi, salvestada ja nii edasi - sel moel saab kiiresti luua terve sümbolite kogu. Sel juhul tuleb mõistagi kontrollida, et redigeeritav sümbol on ikka uus, mitte varem kogust valitud, sest muidu kirjutatakse nii lihtsalt kogus olev märk aina uuesti üle.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Pööra vasakule</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Kogu sümboli pööramine 90 kraadi vastupäeva</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Pööra paremale</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Kogu sümboli pööramine 90 kraadi päripäeva</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Peegelda rõhtsalt</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Sümboli peegeldamine piki vertikaaltelge</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Peegelda püstiselt</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Sümboli peegeldamine piki horisontaaltelge</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Skaleeri eelistatud suurusele</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Sümboli skaleerimine mahutamaks seda määratud eelissuurusele</action
+></simpara
+> <simpara
+>Arvesta, et see mõjutab ainult punkte; kui luua täitmata sümbol ja joone paksus on määratud, võib see ulatuda väljapoole kasti mõõtmeid.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Haaramise lubamine</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Punktide haaramise lubamine alusvõrgule</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Juhtjooned</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Juhtjoonte genereerimise lubamine</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>Menüü Seadistused</title>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Näidatavad tööriistaribad</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Näidatavate tööriistaribade valimine</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Olekuriba näitamine</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Olekuriba näitamise sisse või välja lülitamine</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Kiirklahvide seadistamine</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Rakenduse kiirklahvide seadistamine</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Tööriistaribade seadistamine</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Rakenduse tööriistaribade seadistamine</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Sümbolite redaktori seadistamine</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Rakenduse seadistamine</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>Menüü Abi</title>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>&kapp;i käsiraamat</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Käesoleva käsiraamatu avamine</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Mis see on?</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Abi näitamine konkreetse omaduse kohta</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Saada vearaport</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Veateate saatmine</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Vaheta rakenduse keelt</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Rakenduse keele vahetamine</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>&kapp;i info</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Teave &kapp;i kohta</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>KDE info</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Teave KDE kohta</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+    </sect1>
+</chapter>

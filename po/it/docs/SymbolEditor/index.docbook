@@ -1,0 +1,106 @@
+<?xml version = '1.0'?>
+    <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+    <!ENTITY symboleditor '<application
+>SymbolEditor</application
+>'>
+    <!ENTITY kxstitch '<application
+>KXStitch</application
+>'>
+    <!ENTITY % addindex "IGNORE">
+    <!ENTITY % Italian "INCLUDE">
+    <!ENTITY introduction SYSTEM "introduction.docbook">
+    <!ENTITY ui SYSTEM "ui.docbook">
+    <!ENTITY commands SYSTEM "commands.docbook">
+    <!ENTITY symbols SYSTEM "symbols.docbook">
+    <!ENTITY dialogs SYSTEM "dialogs.docbook">
+    <!ENTITY credits SYSTEM "credits.docbook">
+    ]>
+
+<book lang="&language;">
+    <bookinfo>
+        <title
+>Manuale di &symboleditor;</title>
+        <authorgroup>
+            <author
+><firstname
+>Stephen</firstname
+> <othername
+>P.</othername
+> <surname
+>Allewell</surname
+> <affiliation
+><address
+><email
+>steve.allewell@gmail.com</email
+></address
+></affiliation>
+            </author>
+            <othercredit role="translator"
+><firstname
+>Vincenzo</firstname
+><surname
+>Reale</surname
+><affiliation
+><address
+><email
+>smart2128vr@gmail.com</email
+></address
+></affiliation
+><contrib
+>Traduzione della documentazione</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Ercole</firstname
+><surname
+>Carpanetto</surname
+><affiliation
+><address
+><email
+>ercole69@gmail.com</email
+></address
+></affiliation
+><contrib
+>Traduzione della documentazione</contrib
+></othercredit
+> 
+        </authorgroup>
+        <copyright>
+            <year
+>2012-2019</year>
+            <holder
+>Stephen P. Allewell</holder>
+        </copyright>
+        <legalnotice
+>&FDLNotice;</legalnotice>
+        <date
+>19/6/2019</date>
+        <releaseinfo
+>SymbolEditor 2.1.0</releaseinfo>
+        <abstract>
+            <para
+>&symboleditor; è un'applicazione che permette di creare e modificare le librerie di simboli per l'applicazione &kxstitch; </para>
+        </abstract>
+        <keywordset>
+            <keyword
+>KDE</keyword>
+            <keyword
+>Ricamo</keyword>
+            <keyword
+>Croce</keyword>
+            <keyword
+>Punto</keyword>
+            <keyword
+>Simbolo</keyword>
+        </keywordset>
+    </bookinfo>
+
+    &introduction;
+    &ui;
+    &symbols;
+    &commands;
+    &dialogs;
+    &credits;
+
+    &documentation.index;
+</book>

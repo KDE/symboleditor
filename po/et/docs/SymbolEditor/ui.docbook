@@ -1,0 +1,56 @@
+<chapter id="using-kapp">
+    <title
+>Kasutajaliides</title>
+
+    <sect1 id="face-screenshot">
+        <title
+>&kapp;i peaaken</title>
+        <para
+>Peaaken koosneb mitme kaardiga vidinast, mis sisaldab sümbolite redaktorit ja kogu vaadet. Menüüriba ja mitu tööriistariba sisaldavad standardseid toiminguid, redigeerimistööriistu ja renderdamisvalikuid. Olekuriba annab teada eri tööriistade seisundist ja teadetest. </para>
+        <sect2 id="editor-window">
+            <title
+>Redaktoriaken</title>
+            <para>
+                <screenshot>
+                    <screeninfo
+>Selline näeb välja &kapp;i redaktoriaken</screeninfo>
+                    <mediaobject
+><imageobject
+><imagedata fileref="mainwindow-editor.png" format="PNG"/></imageobject
+></mediaobject>
+                </screenshot>
+            </para>
+            <para
+>Redaktoriaken võimaldab muuta sümboleid saadaolevate tööriistadega. See koosneb alusvõrgust, mis pakub välja haardepunkte ning näitab eelistatud suuruse kasti, mis lubab luua kooskõlalise suurusega sümboleid. Alusvõrgu suurust, elementide arvu ja eelistatud suuruse kasti saab igati seadistada. </para>
+            <para
+>Redaktir pakub juhtjooni punktide asetamiseks nii, et nad seonduksid olemasolevate punktidega. Juhtjooned seatakse olemasoleva punkti suhtes rõht-, püst- ja diagonaalsuunas, samuti on olemas alusvõrgu keskme ümber tõmmatud ringjas juhtjoon. </para>
+            <screenshot>
+                <screeninfo
+>Sellised näevad välja redaktori juhtjooned</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="editor-guides.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </sect2>
+        <sect2 id="library-window">
+            <title
+>Kogu aken</title>
+            <para>
+                <screenshot>
+                    <screeninfo
+>Selline näeb välja &kapp;i kogu aken</screeninfo>
+                    <mediaobject
+><imageobject
+><imagedata fileref="mainwindow-library.png" format="PNG"/></imageobject
+></mediaobject>
+                </screenshot>
+            </para>
+            <para
+>Kogu aknas on näha kogus sisalduvad sümbolid. Parajasti redigeeritav sümbol on esile tõstetud. Sümboli valimine avab selle redaktoris ja lubab sümbolit muutma hakata. </para>
+            <para
+>Korraga võib avada mitu sümbolite redaktori akent ning kopeerida sümboleid ühest kogust teise lohistades. Hoolitse selle eest, et mõlemad kogu aknad oleksid nähtavad, klõpsa vajalikul sümbolil ja lohista see lihtsalt teise kogusse. Sümbol lisataksegi sihtkogusse. </para>
+        </sect2>
+    </sect1>
+</chapter>

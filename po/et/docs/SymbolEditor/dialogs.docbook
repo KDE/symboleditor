@@ -1,0 +1,19 @@
+<chapter id="Dialogs">
+    <title
+>Dialoogid</title>
+
+    <sect1 id="ConfigurationDialog">
+        <title
+>Seadistustedialoog</title>
+        <para>
+            <screenshot
+><mediaobject
+><imageobject
+><imagedata fileref="configuration-dialog.png" format="PNG"/></imageobject
+></mediaobject
+></screenshot>
+        </para>
+        <para
+>Seadistustedialoogis saab määrata mitmeid valikuid. </para>
+    </sect1>
+</chapter>

@@ -1,0 +1,24 @@
+<chapter id="credits">
+    <title
+>Crèdits i llicència</title>
+    <para
+>&symboleditor;</para>
+    <para
+>Copyright del programa 2012-2015 Stephen P. Allewell <email
+>steve.allewell@gmail.com</email
+></para>
+    <para
+>Col·laboradors: <itemizedlist
+> <listitem
+> <para
+>Les traduccions són proporcionades per diversos col·laboradors. Per a més detalls vegeu el fitxer de la traducció. </para>
+            </listitem>
+        </itemizedlist>
+    </para>
+    <para
+>Copyright de la documentació 2012-2015 Stephen P. Allewell <email
+>steve.allewell@gmail.com</email
+> </para>
+    <para
+>Traductor de la documentació: &credits.Antoni.Bella;</para
+> &underFDL; &underGPL; </chapter>
