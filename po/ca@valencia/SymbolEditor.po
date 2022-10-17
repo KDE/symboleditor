@@ -467,7 +467,7 @@ msgid ""
 "\n"
 "This is only applicable to non-filled paths."
 msgstr ""
-"El tipus «Punta plana» final proporciona un extrem quadrat que s'para en el "
+"El tipus «Punta plana» final proporciona un extrem quadrat que es para en el "
 "punt final de la línia.\n"
 "\n"
 "Només és aplicable als camins no farcits."
@@ -749,7 +749,7 @@ msgstr "La mida d'un punt en píxels."
 #: SymbolEditor.kcfg:26
 #, kde-format
 msgid "The distance to check within the range of a point."
-msgstr "La distància a comprovar dins l'abast d'un punt."
+msgstr "La distància que es comprovarà dins l'abast d'un punt."
 
 #. i18n: ectx: label, entry (Editor_BorderSize), group (editor)
 #: SymbolEditor.kcfg:30
