@@ -158,7 +158,6 @@
 #include <KConfigDialog>
 #include <KConfigGroup>
 #include <KIO/FileCopyJob>
-#include <KIO/StatJob>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KRecentFilesAction>
@@ -451,14 +450,6 @@ void MainWindow::saveAs()
     QUrl url = QFileDialog::getSaveFileUrl(this, i18n("Save As..."), QUrl::fromLocalFile(QDir::homePath()), i18n("Cross Stitch Symbols (*.sym)"));
 
     if (url.isValid()) {
-        KIO::StatJob *statJob = KIO::stat(url, KIO::StatJob::DestinationSide, 0);
-
-        if (statJob->exec()) {
-            if (KMessageBox::warningYesNo(this, i18n("This file already exists\nDo you want to overwrite it?")) == KMessageBox::No) {
-                return;
-            }
-        }
-
         m_url = url;
         save();
         KRecentFilesAction *action = static_cast<KRecentFilesAction *>(actionCollection()->action(QStringLiteral("file_open_recent")));
