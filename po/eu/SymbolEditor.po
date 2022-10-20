@@ -1,16 +1,16 @@
 # Translation for SymbolEditor.po to Euskara/Basque (eu).
-# Copyright (C) 2019-2020, This file is copyright:
+# Copyright (C) 2019-2022 This file is copyright:
 # This file is distributed under the same license as the symboleditor package.
-# KDE euskaratzeko proiektuko arduraduna <xalba@euskalnet.net>.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2019, 2020.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2019, 2020, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: symboleditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-19 00:45+0000\n"
-"PO-Revision-Date: 2020-08-17 21:31+0200\n"
+"PO-Revision-Date: 2022-10-19 05:32+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 20.08.0\n"
+"X-Generator: Lokalize 22.08.1\n"
 
 #: src/Commands.cpp:72 src/MainWindow.cpp:937
 #, kde-format
@@ -250,24 +250,14 @@ msgid "Library"
 msgstr "Liburutegia"
 
 #: src/MainWindow.cpp:283
-#, fuzzy, kde-format
-#| msgid ""
-#| "Save changes to the symbol?\n"
-#| "Selecting No discards changes."
+#, kde-format
 msgid "Save changes to the symbol?"
-msgstr ""
-"Gorde ikurrari egindako aldaketak?\n"
-"Ez hautatzea aldaketak baztertzen ditu."
+msgstr "Ikurraren aldaketak gorde?"
 
 #: src/MainWindow.cpp:332
-#, fuzzy, kde-format
-#| msgid ""
-#| "Save changes to the library?\n"
-#| "Selecting No discards changes."
+#, kde-format
 msgid "Save changes to the library?"
-msgstr ""
-"Gorde liburutegiari egindako aldaketak?\n"
-"Ez hautatzea aldaketak baztertzen ditu."
+msgstr "Liburutegiko aldaketak gorde?"
 
 #: src/MainWindow.cpp:371
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SymbolEditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-19 00:45+0000\n"
-"PO-Revision-Date: 2022-05-04 12:27+0300\n"
+"PO-Revision-Date: 2022-10-19 12:24+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.04.0\n"
+"X-Generator: Lokalize 22.08.1\n"
 "X-POOTLE-MTIME: 1497554702.000000\n"
 
 #: src/Commands.cpp:72 src/MainWindow.cpp:937
@@ -249,24 +249,14 @@ msgid "Library"
 msgstr "Kitaplık"
 
 #: src/MainWindow.cpp:283
-#, fuzzy, kde-format
-#| msgid ""
-#| "Save changes to the symbol?\n"
-#| "Selecting No discards changes."
+#, kde-format
 msgid "Save changes to the symbol?"
-msgstr ""
-"Sembole olan değişiklikleri kaydet?\n"
-"Hayır'ı seçmek değişiklikleri iptal edecektir."
+msgstr "Değişiklikler sembole kaydedilsin mi?"
 
 #: src/MainWindow.cpp:332
-#, fuzzy, kde-format
-#| msgid ""
-#| "Save changes to the library?\n"
-#| "Selecting No discards changes."
+#, kde-format
 msgid "Save changes to the library?"
-msgstr ""
-"Değişiklikleri kitaplığa kaydet?\n"
-"Hayır'ı seçmek değişiklikleri iptal edecektir."
+msgstr "Değişiklikler kitaplığa kaydedilsin mi?"
 
 #: src/MainWindow.cpp:371
 #, kde-format
@@ -276,7 +266,7 @@ msgstr "Dosya aç"
 #: src/MainWindow.cpp:371 src/MainWindow.cpp:483 src/MainWindow.cpp:553
 #, kde-format
 msgid "Cross Stitch Symbols (*.sym)"
-msgstr "Cross Stitch Symbols (*.sym)"
+msgstr "Çapraz Dikiş Sembolleri(*.sym)"
 
 #: src/MainWindow.cpp:420 src/MainWindow.cpp:573
 #, kde-format
@@ -353,7 +343,7 @@ msgstr "Yinele: %1"
 #, kde-format
 msgctxt "The library tab title %1 is the file name"
 msgid "%1 Library"
-msgstr "%1 Kitaplık"
+msgstr "%1 Kitaplığı"
 
 #: src/MainWindow.cpp:674
 #, kde-format
@@ -764,7 +754,7 @@ msgstr "&Araçlar"
 #: SymbolEditorui.rc:27
 #, kde-format
 msgid "&Rendering"
-msgstr "&Gerçekleniyor"
+msgstr "&Dokuma"
 
 #. i18n: ectx: ToolBar (ToolsToolbar)
 #: SymbolEditorui.rc:47

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: SymbolEditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-19 00:45+0000\n"
-"PO-Revision-Date: 2020-08-03 00:19+0100\n"
+"PO-Revision-Date: 2022-10-19 09:25+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -244,24 +244,14 @@ msgid "Library"
 msgstr "Biblioteca"
 
 #: src/MainWindow.cpp:283
-#, fuzzy, kde-format
-#| msgid ""
-#| "Save changes to the symbol?\n"
-#| "Selecting No discards changes."
+#, kde-format
 msgid "Save changes to the symbol?"
-msgstr ""
-"Deseja gravar as alterações no símbolo?\n"
-"Se escolher 'Não', irá ignorar as alterações."
+msgstr "Deseja gravar as alterações no símbolo?"
 
 #: src/MainWindow.cpp:332
-#, fuzzy, kde-format
-#| msgid ""
-#| "Save changes to the library?\n"
-#| "Selecting No discards changes."
+#, kde-format
 msgid "Save changes to the library?"
-msgstr ""
-"Deseja gravar as alterações na biblioteca?\n"
-"Se escolher 'Não', irá ignorar as alterações."
+msgstr "Deseja gravar as alterações na biblioteca?"
 
 #: src/MainWindow.cpp:371
 #, kde-format
@@ -842,10 +832,3 @@ msgstr "Cor da linhas-guias"
 #, kde-format
 msgid "Simplified guide lines"
 msgstr "Linhas-guias simplificadas"
-
-#~ msgid ""
-#~ "This file already exists\n"
-#~ "Do you want to overwrite it?"
-#~ msgstr ""
-#~ "O ficheiro já existe\n"
-#~ "Deseja sobrepô-lo?"
