@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-08-02 02:13+0200\n"
+"POT-Creation-Date: 2022-10-19 00:45+0000\n"
 "PO-Revision-Date: 2019-07-21 09:39+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -19,17 +19,17 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: src/Commands.cpp:72 src/MainWindow.cpp:913
+#: src/Commands.cpp:72 src/MainWindow.cpp:937
 #, kde-format
 msgid "Move To"
 msgstr "Flytt til"
 
-#: src/Commands.cpp:105 src/MainWindow.cpp:922
+#: src/Commands.cpp:105 src/MainWindow.cpp:946
 #, kde-format
 msgid "Draw To"
 msgstr "Teikn til"
 
-#: src/Commands.cpp:140 src/MainWindow.cpp:931
+#: src/Commands.cpp:140 src/MainWindow.cpp:955
 #, kde-format
 msgid "Cubic To"
 msgstr "Kubisk til"
@@ -54,32 +54,32 @@ msgstr "Flytt punkt"
 msgid "Update Symbol"
 msgstr "Oppdater symbol"
 
-#: src/Commands.cpp:326 src/MainWindow.cpp:773
+#: src/Commands.cpp:326 src/MainWindow.cpp:797
 #, kde-format
 msgid "Import Library"
 msgstr "Importer bibliotek"
 
-#: src/Commands.cpp:375 src/MainWindow.cpp:969
+#: src/Commands.cpp:375 src/MainWindow.cpp:993
 #, kde-format
 msgid "Rotate Left"
 msgstr "Drei til venstre"
 
-#: src/Commands.cpp:406 src/MainWindow.cpp:976
+#: src/Commands.cpp:406 src/MainWindow.cpp:1000
 #, kde-format
 msgid "Rotate Right"
 msgstr "Drei til høgre"
 
-#: src/Commands.cpp:437 src/MainWindow.cpp:983
+#: src/Commands.cpp:437 src/MainWindow.cpp:1007
 #, kde-format
 msgid "Flip Horizontal"
 msgstr "Spegla vassrett"
 
-#: src/Commands.cpp:467 src/MainWindow.cpp:990
+#: src/Commands.cpp:467 src/MainWindow.cpp:1014
 #, kde-format
 msgid "Flip Vertical"
 msgstr "Spegla loddrett"
 
-#: src/Commands.cpp:500 src/MainWindow.cpp:997
+#: src/Commands.cpp:500 src/MainWindow.cpp:1021
 #, kde-format
 msgid "Scale to Preferred Size"
 msgstr "Skaler til føretrekt storleik"
@@ -104,17 +104,17 @@ msgstr "Endra endestil"
 msgid "Change Join Style"
 msgstr "Endra hjørnestil"
 
-#: src/Commands.cpp:692 src/MainWindow.cpp:712
+#: src/Commands.cpp:692 src/MainWindow.cpp:736
 #, kde-format
 msgid "Delete Symbol"
 msgstr "Slett symbol"
 
-#: src/Commands.cpp:725 src/MainWindow.cpp:895
+#: src/Commands.cpp:725 src/MainWindow.cpp:919
 #, kde-format
 msgid "Increase Line Width"
 msgstr "Auk linjebreidd"
 
-#: src/Commands.cpp:789 src/MainWindow.cpp:902
+#: src/Commands.cpp:789 src/MainWindow.cpp:926
 #, kde-format
 msgid "Decrease Line Width"
 msgstr "Minsk linjebreidd"
@@ -231,7 +231,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "karl@huftis.org"
 
-#: src/MainWindow.cpp:198 src/MainWindow.cpp:420 src/MainWindow.cpp:575
+#: src/MainWindow.cpp:198 src/MainWindow.cpp:452 src/MainWindow.cpp:599
 #, kde-format
 msgid "Untitled"
 msgstr "Namnlaus"
@@ -249,40 +249,32 @@ msgctxt "The library tab title"
 msgid "Library"
 msgstr "Bibliotek"
 
-#: src/MainWindow.cpp:278
+#: src/MainWindow.cpp:283
 #, kde-format
-msgid ""
-"Save changes to the symbol?\n"
-"Selecting No discards changes."
+msgid "Save changes to the symbol?"
 msgstr ""
-"Vil du lagra endringane av symbolet?\n"
-"Viss du svarar nei, vert endringane forkasta."
 
-#: src/MainWindow.cpp:311
+#: src/MainWindow.cpp:332
 #, kde-format
-msgid ""
-"Save changes to the library?\n"
-"Selecting No discards changes."
+msgid "Save changes to the library?"
 msgstr ""
-"Vil du lagra endringane av biblioteket?\n"
-"Viss du svarar nei, vert endringane forkasta."
 
-#: src/MainWindow.cpp:339
+#: src/MainWindow.cpp:371
 #, kde-format
 msgid "Open file"
 msgstr "Opna fil"
 
-#: src/MainWindow.cpp:339 src/MainWindow.cpp:451 src/MainWindow.cpp:529
+#: src/MainWindow.cpp:371 src/MainWindow.cpp:483 src/MainWindow.cpp:553
 #, kde-format
 msgid "Cross Stitch Symbols (*.sym)"
 msgstr "Krosstingsymbol (*.sym)"
 
-#: src/MainWindow.cpp:388 src/MainWindow.cpp:549
+#: src/MainWindow.cpp:420 src/MainWindow.cpp:573
 #, kde-format
 msgid "This doesn't appear to be a valid symbol file"
 msgstr "Dette er ikkje ei gyldig symbolfil"
 
-#: src/MainWindow.cpp:390 src/MainWindow.cpp:551
+#: src/MainWindow.cpp:422 src/MainWindow.cpp:575
 #, kde-format
 msgid ""
 "Version %1 of the library file is not supported in this version of "
@@ -290,14 +282,14 @@ msgid ""
 msgstr ""
 "Versjon %1 av bibliotekfila er ikkje støtta i denne versjonen av SymbolEditor"
 
-#: src/MainWindow.cpp:392
+#: src/MainWindow.cpp:424
 #, kde-format
 msgid ""
 "Version %1 of the symbol is not supported in this version of SymbolEditor"
 msgstr ""
 "Versjon %1 av symbolfila er ikkje støtta i denne versjonen av SymbolEditor"
 
-#: src/MainWindow.cpp:394
+#: src/MainWindow.cpp:426
 #, kde-format
 msgid ""
 "Failed to read the library\n"
@@ -306,12 +298,12 @@ msgstr ""
 "Klarte ikkje lesa biblioteket\n"
 "%1"
 
-#: src/MainWindow.cpp:407 src/MainWindow.cpp:560
+#: src/MainWindow.cpp:439 src/MainWindow.cpp:584
 #, kde-format
 msgid "The url %1 is invalid"
 msgstr "Adressa %1 er ugyldig"
 
-#: src/MainWindow.cpp:432
+#: src/MainWindow.cpp:464
 #, kde-format
 msgid ""
 "Failed to write the library\n"
@@ -320,7 +312,7 @@ msgstr ""
 "Klarte ikkje lagra til biblioteket\n"
 "%1"
 
-#: src/MainWindow.cpp:438
+#: src/MainWindow.cpp:470
 #, kde-format
 msgid ""
 "Failed to open the file %1\n"
@@ -329,54 +321,45 @@ msgstr ""
 "Klarte ikkje opna fila %1\n"
 "%2"
 
-#: src/MainWindow.cpp:451
+#: src/MainWindow.cpp:483
 #, kde-format
 msgid "Save As..."
 msgstr "Lagra som …"
 
-#: src/MainWindow.cpp:457
-#, kde-format
-msgid ""
-"This file already exists\n"
-"Do you want to overwrite it?"
-msgstr ""
-"Fila finst frå før.\n"
-"Vil du overskriva ho?"
-
-#: src/MainWindow.cpp:529
+#: src/MainWindow.cpp:553
 #, kde-format
 msgid "Import library"
 msgstr "Importer bibliotek"
 
-#: src/MainWindow.cpp:621
+#: src/MainWindow.cpp:645
 #, kde-format
 msgid "Undo %1"
 msgstr "Angra %1"
 
-#: src/MainWindow.cpp:634
+#: src/MainWindow.cpp:658
 #, kde-format
 msgid "Redo %1"
 msgstr "Gjer om %1"
 
-#: src/MainWindow.cpp:648
+#: src/MainWindow.cpp:672
 #, kde-format
 msgctxt "The library tab title %1 is the file name"
 msgid "%1 Library"
 msgstr "%1-bibliotek"
 
-#: src/MainWindow.cpp:650
+#: src/MainWindow.cpp:674
 #, kde-format
 msgctxt "The editor tab title %1 is the file name"
 msgid "%1 Editor"
 msgstr "%1-redigering"
 
-#: src/MainWindow.cpp:742
+#: src/MainWindow.cpp:766
 #, kde-format
 msgctxt "The Editor configuration page"
 msgid "Editor"
 msgstr "Teikneprogram"
 
-#: src/MainWindow.cpp:774
+#: src/MainWindow.cpp:798
 #, kde-format
 msgid ""
 "Imports another library appending the symbols it contains to the current "
@@ -385,12 +368,12 @@ msgstr ""
 "Importer eit anna bibliotek og legg symbola der til i det gjeldande "
 "biblioteket."
 
-#: src/MainWindow.cpp:779
+#: src/MainWindow.cpp:803
 #, kde-format
 msgid "Save Symbol"
 msgstr "Lagra symbol"
 
-#: src/MainWindow.cpp:780
+#: src/MainWindow.cpp:804
 #, kde-format
 msgid ""
 "Save the symbol to the library. If this is a new symbol, subsequent saves "
@@ -401,12 +384,12 @@ msgstr ""
 "lagring leggja til nye symbol i biblioteket. Viss symbolet vert redigert frå "
 "biblioteket, vert det berre oppdatert i biblioteket."
 
-#: src/MainWindow.cpp:786
+#: src/MainWindow.cpp:810
 #, kde-format
 msgid "Save Symbol as New"
 msgstr "Lagra symbol som nytt"
 
-#: src/MainWindow.cpp:787
+#: src/MainWindow.cpp:811
 #, kde-format
 msgid ""
 "Save the current symbol as a new one in the library. Subsequent saves will "
@@ -415,12 +398,12 @@ msgstr ""
 "Lagra det gjeldande symbolet som eitt nytt symbol i biblioteket. Seinare "
 "lagring vil oppdatera det nye symbolet."
 
-#: src/MainWindow.cpp:800
+#: src/MainWindow.cpp:824
 #, kde-format
 msgid "Fill Path"
 msgstr "Fyll stiar"
 
-#: src/MainWindow.cpp:801
+#: src/MainWindow.cpp:825
 #, kde-format
 msgid ""
 "Enable path filling. The path defines the closed boundary of the shape and "
@@ -429,33 +412,33 @@ msgstr ""
 "Slå på innfylling av stiar. Stien definerer grensa til ein lukka figur, og "
 "denne vert fylt med den valde fyllmetoden."
 
-#: src/MainWindow.cpp:811
+#: src/MainWindow.cpp:835
 #, kde-format
 msgid "Odd Even Fill"
 msgstr "Vekslefyll"
 
-#: src/MainWindow.cpp:812
+#: src/MainWindow.cpp:836
 #, kde-format
 msgid "The Odd Even fill method will fill alternate areas of the symbol."
 msgstr ""
 "Vekslefyllmetoden («odd even»-regelen) vil fylla annakvart område i symbolet."
 
-#: src/MainWindow.cpp:820
+#: src/MainWindow.cpp:844
 #, kde-format
 msgid "Winding Fill"
 msgstr "Retningsfyll"
 
-#: src/MainWindow.cpp:821
+#: src/MainWindow.cpp:845
 #, kde-format
 msgid "The Winding fill method will fill the complete interior of the path."
 msgstr "Retningsfyllmetoden fyller heile innsida av stien."
 
-#: src/MainWindow.cpp:834
+#: src/MainWindow.cpp:858
 #, kde-format
 msgid "Flat Cap"
 msgstr "Flat ende"
 
-#: src/MainWindow.cpp:835
+#: src/MainWindow.cpp:859
 #, kde-format
 msgid ""
 "The Flat Cap end type provides a square end that stops at the end point of "
@@ -468,12 +451,12 @@ msgstr ""
 "\n"
 "Denne stilen er berre aktuell for ikkjefylte stiar."
 
-#: src/MainWindow.cpp:843
+#: src/MainWindow.cpp:867
 #, kde-format
 msgid "Square Cap"
 msgstr "Kvadratisk ende"
 
-#: src/MainWindow.cpp:844
+#: src/MainWindow.cpp:868
 #, kde-format
 msgid ""
 "The Square Cap end type provides a square end that projects beyond the end "
@@ -486,12 +469,12 @@ msgstr ""
 "\n"
 "Denne stilen er berre aktuell for ikkjefylte stiar."
 
-#: src/MainWindow.cpp:852
+#: src/MainWindow.cpp:876
 #, kde-format
 msgid "Round Cap"
 msgstr "Avrunda ende"
 
-#: src/MainWindow.cpp:853
+#: src/MainWindow.cpp:877
 #, kde-format
 msgid ""
 "The Round Cap end type provides a round end that projects beyond the end "
@@ -504,12 +487,12 @@ msgstr ""
 "\n"
 "Denne stilen er berre aktuell for ikkjefylte stiar."
 
-#: src/MainWindow.cpp:866
+#: src/MainWindow.cpp:890
 #, kde-format
 msgid "Bevel Join"
 msgstr "Skrått hjørne"
 
-#: src/MainWindow.cpp:867
+#: src/MainWindow.cpp:891
 #, kde-format
 msgid ""
 "The Bevel Join provides a beveled corner between two lines.\n"
@@ -520,12 +503,12 @@ msgstr ""
 "\n"
 "Denne stilen er berre aktuell for ikkjefylte stiar."
 
-#: src/MainWindow.cpp:875
+#: src/MainWindow.cpp:899
 #, kde-format
 msgid "Miter Join"
 msgstr "Spist hjørne"
 
-#: src/MainWindow.cpp:876
+#: src/MainWindow.cpp:900
 #, kde-format
 msgid ""
 "The Miter Join provides a mitered corner between two lines.\n"
@@ -537,12 +520,12 @@ msgstr ""
 "\n"
 "Denne stilen er berre aktuell for ikkjefylte stiar."
 
-#: src/MainWindow.cpp:884
+#: src/MainWindow.cpp:908
 #, kde-format
 msgid "Round Join"
 msgstr "Avrunda hjørne"
 
-#: src/MainWindow.cpp:885
+#: src/MainWindow.cpp:909
 #, kde-format
 msgid ""
 "The Round Join provides a rounded corner between two lines using a radius of "
@@ -555,7 +538,7 @@ msgstr ""
 "\n"
 "Denne stilen er berre aktuell for ikkjefylte stiar."
 
-#: src/MainWindow.cpp:896
+#: src/MainWindow.cpp:920
 #, kde-format
 msgid ""
 "Increases the line width.\n"
@@ -566,7 +549,7 @@ msgstr ""
 "\n"
 "Dette er berre aktuelt for ikkjefylte stiar."
 
-#: src/MainWindow.cpp:903
+#: src/MainWindow.cpp:927
 #, kde-format
 msgid ""
 "Decreases the line width.\n"
@@ -577,7 +560,7 @@ msgstr ""
 "\n"
 "Dette er berre aktuelt for ikkjefylte stiar."
 
-#: src/MainWindow.cpp:914
+#: src/MainWindow.cpp:938
 #, kde-format
 msgid ""
 "Move the current point to a new position. This implicitly closes any "
@@ -586,7 +569,7 @@ msgstr ""
 "Flytt det gjeldande punktet til ei ny plassering. Du lukkar automatisk "
 "eventuelle understiar og startar ein ny."
 
-#: src/MainWindow.cpp:923
+#: src/MainWindow.cpp:947
 #, kde-format
 msgid ""
 "Add a straight line from the current position to a defined end point. The "
@@ -595,7 +578,7 @@ msgstr ""
 "Legg til eit rett linjestykke frå den gjeldande plasseringa til eit valt "
 "endepunkt. Endepunktet vert den nye gjeldande plasseringa."
 
-#: src/MainWindow.cpp:932
+#: src/MainWindow.cpp:956
 #, kde-format
 msgid ""
 "Add a cubic bezier curve from the current position using two control points "
@@ -605,12 +588,12 @@ msgstr ""
 "kontrollpunkt og eit endepunkt. Endepunktet vert den nye gjeldande "
 "plasseringa."
 
-#: src/MainWindow.cpp:940
+#: src/MainWindow.cpp:964
 #, kde-format
 msgid "Rectangle"
 msgstr "Rektangel"
 
-#: src/MainWindow.cpp:941
+#: src/MainWindow.cpp:965
 #, kde-format
 msgid ""
 "Add a rectangle as a separate sub path defined by two points representing "
@@ -619,12 +602,12 @@ msgstr ""
 "Legg til eit rektangel som ein ny understi, definert av to punkt som "
 "representerer motståande hjørne."
 
-#: src/MainWindow.cpp:949
+#: src/MainWindow.cpp:973
 #, kde-format
 msgid "Ellipse"
 msgstr "Ellipse"
 
-#: src/MainWindow.cpp:950
+#: src/MainWindow.cpp:974
 #, kde-format
 msgid ""
 "Add an ellipse as a separate sub path defined by a bounding rectangle "
@@ -634,12 +617,12 @@ msgstr ""
 "avgrensingsrektangel laga ut frå to punkt som representerer motståande "
 "hjørne."
 
-#: src/MainWindow.cpp:958
+#: src/MainWindow.cpp:982
 #, kde-format
 msgid "Insert Character"
 msgstr "Set inn teikn"
 
-#: src/MainWindow.cpp:959
+#: src/MainWindow.cpp:983
 #, kde-format
 msgid ""
 "Allows selection of a character from any font to be inserted as a closed sub "
@@ -650,7 +633,7 @@ msgstr ""
 "overskriva eksisterande stiar, men du kan i ettertid leggja til nye "
 "understiar."
 
-#: src/MainWindow.cpp:970
+#: src/MainWindow.cpp:994
 #, kde-format
 msgid ""
 "Rotate all the points of a path counter-clockwise 90 degrees around the "
@@ -659,7 +642,7 @@ msgstr ""
 "Drei alle stipunkta 90° gradar mot klokka, med midten av teikneområdet som "
 "sentrum."
 
-#: src/MainWindow.cpp:977
+#: src/MainWindow.cpp:1001
 #, kde-format
 msgid ""
 "Rotate all the points of a path clockwise 90 degrees around the center point "
@@ -668,21 +651,21 @@ msgstr ""
 "Drei alle stipunkta 90° gradar med klokka, med midten av teikneområdet som "
 "sentrum."
 
-#: src/MainWindow.cpp:984
+#: src/MainWindow.cpp:1008
 #, kde-format
 msgid ""
 "Flip all the points of the path horizontally about the vertical center of "
 "the editor."
 msgstr "Spegla alle stipunkta vassrett rundt midten av teikneområdet."
 
-#: src/MainWindow.cpp:991
+#: src/MainWindow.cpp:1015
 #, kde-format
 msgid ""
 "Flip all the points of the path vertically about the horizontal center of "
 "the editor."
 msgstr "Spegla alle stipunkta loddrett rundt midten av teikneområdet."
 
-#: src/MainWindow.cpp:998
+#: src/MainWindow.cpp:1022
 #, kde-format
 msgid ""
 "Scale the current symbol so that it fits within the preferred size of a "
@@ -691,22 +674,22 @@ msgstr ""
 "Skaler det gjeldande symbolet slik at det får plass på området for føretrekt "
 "symbolstorleik."
 
-#: src/MainWindow.cpp:1004
+#: src/MainWindow.cpp:1028
 #, kde-format
 msgid "Enable Snap"
 msgstr "Fest til rutenett"
 
-#: src/MainWindow.cpp:1005
+#: src/MainWindow.cpp:1029
 #, kde-format
 msgid "Enable snapping of points to guide intersections or to the grid."
 msgstr "Fest punkta til rutenettet eller til krysningspunkta for hjelpelinjer."
 
-#: src/MainWindow.cpp:1012
+#: src/MainWindow.cpp:1036
 #, kde-format
 msgid "Enable Guides"
 msgstr "Vis hjelpelinjer"
 
-#: src/MainWindow.cpp:1013
+#: src/MainWindow.cpp:1037
 #, kde-format
 msgid "Enable the generation of guide intersections."
 msgstr "Vis hjelpelinjer og krysningspunkt mellom desse."
