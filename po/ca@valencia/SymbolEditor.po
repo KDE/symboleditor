@@ -385,9 +385,9 @@ msgid ""
 "from the library to edit then saving will update that symbol in the library."
 msgstr ""
 "Guardeu el símbol a la biblioteca. Si es tracta d'un símbol nou, tornar-lo a "
-"guardar crearà símbols addicionals a la biblioteca. Si el símbol va ser "
+"guardar crearà símbols addicionals en la biblioteca. Si el símbol va ser "
 "seleccionat des de la biblioteca per a editar, guardar-lo actualitzarà este "
-"símbol a la biblioteca."
+"símbol en la biblioteca."
 
 #: src/MainWindow.cpp:810
 #, kde-format
@@ -400,8 +400,8 @@ msgid ""
 "Save the current symbol as a new one in the library. Subsequent saves will "
 "update the new symbol."
 msgstr ""
-"Guardeu el símbol actual com a nou a la biblioteca. Tornar-lo a guardar "
-"actualitzarà el nou símbol."
+"Guardeu el símbol actual com a nou en la biblioteca. Tornar-lo a guardar "
+"actualitzarà el símbol nou."
 
 #: src/MainWindow.cpp:824
 #, kde-format
