@@ -605,7 +605,7 @@ msgid ""
 "the opposite corners."
 msgstr ""
 "Afig un rectangle com un camí secundari definit per dos punts que "
-"representen les cantonades oposades."
+"representen els cantons oposats."
 
 #: src/MainWindow.cpp:973
 #, kde-format
@@ -619,7 +619,7 @@ msgid ""
 "represented by two opposite corners."
 msgstr ""
 "Afig una el·lipse com un camí secundari definit per un rectangle delimitador "
-"representat per dues cantonades oposades."
+"representat per dos cantons oposats."
 
 #: src/MainWindow.cpp:982
 #, kde-format
