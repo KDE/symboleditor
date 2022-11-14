@@ -1,21 +1,23 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # Frederik Schwarzer <schwarzer@kde.org>, 2014, 2016.
 # Burkhard Lück <lueck@hube-lueck.de>, 2014, 2015, 2016, 2017, 2019, 2020, 2021.
+# Frank Steinmetzger <dev-kde@felsenfleischer.de>, 2022.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-19 00:45+0000\n"
-"PO-Revision-Date: 2021-05-05 15:32+0200\n"
-"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
+"PO-Revision-Date: 2022-11-09 23:00+0100\n"
+"Last-Translator: Frank Steinmetzger <dev-kde@felsenfleischer.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: src/Commands.cpp:72 src/MainWindow.cpp:937
 #, kde-format
@@ -247,24 +249,14 @@ msgid "Library"
 msgstr "Bibliothek"
 
 #: src/MainWindow.cpp:283
-#, fuzzy, kde-format
-#| msgid ""
-#| "Save changes to the symbol?\n"
-#| "Selecting No discards changes."
+#, kde-format
 msgid "Save changes to the symbol?"
-msgstr ""
-"Änderungen der Symbole speichern?\n"
-"„Nein“ verwirft die Änderungen."
+msgstr "Änderungen am Symbol speichern?"
 
 #: src/MainWindow.cpp:332
-#, fuzzy, kde-format
-#| msgid ""
-#| "Save changes to the library?\n"
-#| "Selecting No discards changes."
+#, kde-format
 msgid "Save changes to the library?"
-msgstr ""
-"Änderungen der Bibliothek speichern?\n"
-"„Nein“ verwirft die Änderungen."
+msgstr "Änderungen an der Bibliothek speichern?"
 
 #: src/MainWindow.cpp:371
 #, kde-format
