@@ -63,8 +63,11 @@ ki18n_wrap_ui (SymbolEditor_SRCS ${SymbolEditor_UI})
 
 add_subdirectory (icons)
 
+ki18n_install(po)
+
 if (KF5DocTools_FOUND)
     add_subdirectory (doc)
+    kdoctools_install(po)
 endif (KF5DocTools_FOUND)
 
 kconfig_add_kcfg_files (SymbolEditor_SRCS SymbolEditor.kcfgc)
