@@ -259,6 +259,7 @@
       <li xml:lang="x-test">xxSymbol creation from charactersxx</li>
     </ul>
   </description>
+  <content_rating type="oars-1.1"/>
   <url type="homepage">https://userbase.kde.org/Special:myLanguage/SymbolEditor</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=SymbolEditor</url>
   <url type="help">http://docs.kde.org/?application=SymbolEditor</url>
