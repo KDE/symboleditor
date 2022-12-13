@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component type="desktop">
   <id>org.kde.SymbolEditor.desktop</id>
-  <metadata_license>GFDL-1.2-without-invariant</metadata_license>
+  <metadata_license>GFDL-1.2-only</metadata_license>
   <name>SymbolEditor</name>
   <name xml:lang="ca">SymbolEditor</name>
   <name xml:lang="ca-valencia">SymbolEditor</name>
