@@ -208,10 +208,9 @@ msgid "A cross stitch symbol editor."
 msgstr "Un editor de símbolos de cruz en punta."
 
 #: src/Main.cpp:91
-#, fuzzy, kde-format
-#| msgid "(c)2011-2015 Stephen Allewell"
+#, kde-format
 msgid "(c)2011-2019 Stephen Allewell"
-msgstr "© 2011-2015 Stephen Allewell"
+msgstr "© 2011-2019 Stephen Allewell"
 
 #: src/Main.cpp:97
 #, kde-format
