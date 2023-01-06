@@ -1,624 +1,260 @@
-<chapter id="commands">
-    <title
->Befehlsreferenz</title>
+<chapter id="commands" >
+    <title>Command Reference</title>
 
-    <sect1 id="menus">
-        <title
->&symboleditor;-Menüs</title>
+    <sect1 id="menus" >
+        <title>&symboleditor; Menus</title>
         <sect2>
-            <title
->Das Menü Datei</title>
+            <title>The File Menu</title>
             <para>
                 <variablelist>
                     <varlistentry>
-                        <term
-><menuchoice
-><shortcut
-><keycombo
->&Ctrl;<keycap
->N</keycap
-></keycombo
-></shortcut
-><guimenuitem
->Neu</guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Erstellt eine neue Bibliothek</action
-></simpara
-></listitem>
+                        <term><menuchoice><shortcut><keycombo>&Ctrl;<keycap>N</keycap></keycombo></shortcut><guimenuitem>New</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Creates a new library</action></simpara></listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term
-><menuchoice
-><shortcut
-><keycombo action="simul"
->&Ctrl;<keycap
->O</keycap
-></keycombo
-></shortcut
-><guimenuitem
->Öffnen </guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Öffnet eine vorhandene Bibliothek</action
-></simpara
-></listitem>
+                        <term><menuchoice><shortcut><keycombo>&Ctrl;<keycap>O</keycap></keycombo></shortcut><guimenuitem>Open</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Opens an existing library</action></simpara></listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term
-><menuchoice
-><guimenuitem
->Zuletzt geöffnete Dateien</guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Öffnet eine zuletzt verwendete Bibliothek</action
-></simpara
-></listitem>
+                        <term><menuchoice><guimenuitem>Open Recent</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Open a recently used library</action></simpara></listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term
-><menuchoice
-><shortcut
-><keycombo action="simul"
->&Ctrl;<keycap
->S</keycap
-></keycombo
-></shortcut
-><guimenuitem
->Speichern</guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Speichert die Bibliothek</action
-></simpara
-></listitem>
+                        <term><menuchoice><shortcut><keycombo>&Ctrl;<keycap>S</keycap></keycombo></shortcut><guimenuitem>Save</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Saves the library</action></simpara></listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term
-><menuchoice
-><shortcut
-><keycombo action="simul"
->&Ctrl;&Shift;<keycap
->S</keycap
-></keycombo
-></shortcut
-><guimenuitem
->Speichern</guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Speichert die Bibliothek unter einem neuen Namen</action
-></simpara
-></listitem>
+                        <term><menuchoice><shortcut><keycombo>&Ctrl;&Shift;<keycap>S</keycap></keycombo></shortcut><guimenuitem>Save As</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Saves the library under a new name</action></simpara></listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term
-><menuchoice
-><guimenuitem
->Symbol speichern</guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Speichert das bearbeiteten Symbol</action
-></simpara
-> <simpara
->Wenn das bearbeitete Symbol aus der Bibliothek ausgewählt wurde, wird es durch das Speichern aktualisiert. Wenn es ein neues Symbol ist, wird es an die Bibliothek angehängt und nachfolgende Speicherungen fügen der Bibliothek ein weiteres neues Symbol hinzu. </simpara
-></listitem>
+                        <term><menuchoice><guimenuitem>Save Symbol</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Save the symbol being edited</action></simpara>
+                        <simpara>If the symbol being edited was selected from the library, saving will
+                            update that symbol. If it is a new symbol, it will be appended to the
+                            library and subsequent saves will append another new symbol to the library.
+                        </simpara></listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term
-><menuchoice
-><guimenuitem
->Als neues Symbol speichern</guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Speichert das bearbeitete Symbol als neues Symbol</action
-></simpara
-> <simpara
->Wenn ein Symbol als neues Symbol gespeichert wird, wird es an die Bibliothek angehängt unabhängig davon, ob es ursprünglich in der Bibliothek zur Bearbeitung ausgewählt wurde. Nachfolgende Speicherungen fügen ein weiteres neues Symbol an die Bibliothek an. </simpara
-></listitem>
+                        <term><menuchoice><guimenuitem>Save Symbol as New</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Save the symbol being edited as a new symbol</action></simpara>
+                        <simpara>When a symbol is saved as new it will be appended to the library regardless
+                            of it having originally been selected from the library for editing.
+                            Subsequent saves will append another new symbol to the library.
+                        </simpara></listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term
-><menuchoice
-><guimenuitem
->Bibliothek importieren</guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Importiert eine Bibliothek und fügt die darin enthaltenen Symbole in die aktuelle Bibliothek ein</action
-></simpara
-></listitem>
+                        <term><menuchoice><guimenuitem>Import Library</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Import a library appending the contained symbols into the current library</action></simpara></listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term
-><menuchoice
-><shortcut
-><keycombo action="simul"
->&Ctrl;<keycap
->W</keycap
-></keycombo
-></shortcut
-><guimenuitem
->Schließen</guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Schließt die Bibliothek</action
-></simpara
-></listitem>
+                        <term><menuchoice><shortcut><keycombo>&Ctrl;<keycap>W</keycap></keycombo></shortcut><guimenuitem>Close</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Close the library</action></simpara></listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term
-><menuchoice
-><shortcut
-> <keycombo action="simul"
->&Ctrl;<keycap
->Q</keycap
-></keycombo
-> </shortcut
-> <guimenuitem
->Beenden</guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Beendet &symboleditor;</action
-></simpara
-></listitem>
+                        <term><menuchoice><shortcut><keycombo>&Ctrl;<keycap>Q</keycap></keycombo></shortcut><guimenuitem>Quit</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Quits &symboleditor;</action></simpara></listitem>
                     </varlistentry>
                 </variablelist>
             </para>
         </sect2>
 
         <sect2>
-            <title
->Das Menü Bearbeiten</title>
-            <para
->&symboleditor; benutzt die bekannten &kde;-Menüeinträge <guimenu
->Bearbeiten</guimenu
->. Mehr dazu erfahren Sie im Abschnitt zum Menü <ulink url="help:/fundamentals/menus.html#menus-edit"
->Bearbeiten</ulink
-> in den &kde;-Grundlagen. </para>
+            <title>The Edit Menu</title>
+            <para>&symboleditor; has the common &kde; <guimenu>Edit</guimenu> menu items, for more information read the sections about the 
+            <ulink url="help:/fundamentals/menus.html#menus-edit">Edit Menu</ulink> of the &kde; Fundamentals.
+            </para>
         </sect2>
 
         <sect2>
-            <title
->Das Menü und die Werkzeugleiste Rendering</title>
+            <title>The Rendering Menu and Toolbar</title>
             <screenshot>
-                <screeninfo
->Hier sehen Sie ein Bildschirmfoto der Rendering-Werkzeugleiste</screeninfo>
+                <screeninfo>Here is a screen shot of the rendering toolbar</screeninfo>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="renderer-toolbar.png" format="PNG"/>
+                        <imagedata fileref="renderer-toolbar.png" format="PNG" />
                     </imageobject>
                 </mediaobject>
                 </screenshot>
             <para>
                 <variablelist>
                     <varlistentry>
-                        <term
-><menuchoice
-><guimenuitem
->Pfad füllen</guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Aktiviert die Füllung des Pfads</action
-></simpara
-></listitem>
+                        <term><menuchoice><guimenuitem>Fill Path</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Enable filling of the path</action></simpara></listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term
-><menuchoice
-><guimenuitem
->Gewundene Füllung</guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Auswahl der Methode gewundene Füllung</action
-></simpara
-></listitem>
+                        <term><menuchoice><guimenuitem>Winding Fill</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Select the winding fill method</action></simpara></listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term
-><menuchoice
-><guimenuitem
->Füllung Gerade-Ungerade</guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Auswahl der Methode gerade-ungerade Füllung</action
-></simpara
-></listitem>
+                        <term><menuchoice><guimenuitem>Odd Even Fill</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Select the odd even fill method</action></simpara></listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term
-><menuchoice
-><guimenuitem
->Flaches Ende</guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Auswahl des flachen Endes für Linien</action
-></simpara
-></listitem>
+                        <term><menuchoice><guimenuitem>Flat Cap</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Select the flat cap line end type</action></simpara></listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term
-><menuchoice
-><guimenuitem
->Eckiges Ende</guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Auswahl des eckigen Endes für Linien</action
-></simpara
-></listitem>
+                        <term><menuchoice><guimenuitem>Square Cap</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Select the square cap line end type</action></simpara></listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term
-><menuchoice
-><guimenuitem
->Rundes Ende</guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Auswahl des runden Endes für Linien</action
-></simpara
-></listitem
-></varlistentry>
+                        <term><menuchoice><guimenuitem>Round Cap</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Select the round cap line end type</action></simpara></listitem></varlistentry>
                     <varlistentry>
-                        <term
-><menuchoice
-><guimenuitem
->Fasenverbindung</guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Auswahl der Fasenverbindung für Linien</action
-></simpara
-></listitem>
+                        <term><menuchoice><guimenuitem>Bevel Join</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Select the bevel line join type</action></simpara></listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term
-><menuchoice
-><guimenuitem
->Gehrungsverbindung</guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Auswahl der Gehrungsverbindung für Linien</action
-></simpara
-></listitem>
+                        <term><menuchoice><guimenuitem>Miter Join</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Select the miter line join type</action></simpara></listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term
-><menuchoice
-><guimenuitem
->Runde Verbindung</guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Auswahl der runden Verbindung für Linien</action
-></simpara
-></listitem>
+                        <term><menuchoice><guimenuitem>Round Join</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Select the round line join type</action></simpara></listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term
-><menuchoice
-><guimenuitem
->Linienbreite vergrößern</guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Vergrößert die Linienbreite des Pfads</action
-></simpara
-></listitem>
+                        <term><menuchoice><guimenuitem>Increase Line Width</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Increase the path line width</action></simpara></listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term
-><menuchoice
-><guimenuitem
->Linienbreite verkleinern</guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Verkleinert die Linienbreite des Pfads</action
-></simpara
-></listitem>
+                        <term><menuchoice><guimenuitem>Decrease Line Width</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Decrease the path line width</action></simpara></listitem>
                     </varlistentry>
                 </variablelist>
             </para>
         </sect2>
 
         <sect2>
-            <title
->Das Menü und die Werkzeugleiste Extras</title>
-            <para
->Für die Gestaltung der Symbole stehen eine Reihe von Werkzeugen zur Verfügung. Die Symbole setzen sich aus einer Reihe von Unterpfaden zusammen und jeder Unterpfad besteht aus aus einer Verschiebung zur Startposition (diese ist bei neuen Symbolen standardmäßig 0,0) gefolgt von Linien und Kurven. Die Kurven sind kubische Splines mit einem Start, einem Ende und zwei Kontrollpunkten, die die Kurve definieren. Es gibt praktische Werkzeuge zum Erstellen von Rechtecken und Ellipsen, aber diese werden in Linien und Kurven unterteilt. </para>
-            <para
->Alle für die Elemente erstellten Punkte sind verschiebbar, Sie können sie an ihre neue Position ziehen. Alle Punkte können an den Gitterschnittpunkten eingerastet werden, wenn diese Einstellung aktiviert ist, ansonsten können sie beliebig positioniert werden. </para>
-            <para
->Das Symbol kann im und gegen den Uhrzeigersinn gedreht und auch senkrecht und waagerecht gespiegelt werden. Auf diese Weise lassen sich leicht mehrere Symbole auf der Grundlage desselben Entwurfs erstellen. Denken Sie daran, das Symbol als neues Symbol zu speichern. </para>
+            <title>The Tools Menu and Toolbar</title>
+            <para>
+                A number of tools are available to aid the design of the symbols. The symbols are
+                composed of a series of sub paths and each sub path is composed of a move to the
+                start position (this defaults to 0,0 for new symbols) followed by lines and curves.
+                The curves are cubic splines having a start, an end and two control points defining
+                the curve. There are convenience tools to create rectangles and ellipses, but these
+                will be broken down into lines and curves.
+            </para>
+            <para>
+                All points created for the elements are moveable by dragging them to their new
+                position. All points can be snapped to the grid intersections if the snap option is
+                turned on, otherwise they can be positioned anywhere.
+            </para>
+            <para>
+                The symbol can be rotated clockwise and counter clockwise and also flipped vertically
+                and horizontally. This allows multiple symbols to be easily created based on the same
+                design. Remember to use the save symbol as new option for this.
+            </para>
             <screenshot>
-                <screeninfo
->Hier sehen Sie ein Bildschirmfoto der Werkzeugleiste</screeninfo>
+                <screeninfo>Here is a screen shot of the tools toolbar</screeninfo>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="tool-toolbar.png" format="PNG"/>
+                        <imagedata fileref="tool-toolbar.png" format="PNG" />
                     </imageobject>
                 </mediaobject>
                 </screenshot>
             <para>
                 <variablelist>
                     <varlistentry>
-                        <term
-><menuchoice
-><guimenuitem
->Verschieben nach</guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Verschiebt den Startpunkt des Unterpfads</action
-></simpara
-> <simpara
->Wenn ein bestehender Unterpfad erstellt wird, wird dieser geschlossen und ein neuer Unterpfad an der neuen Position gestartet</simpara
-> </listitem>
+                        <term><menuchoice><guimenuitem>Move To</guimenuitem></menuchoice></term>
+                        <listitem>
+                            <simpara><action>Move the starting position of the sub path</action></simpara>
+                            <simpara>If an existing sub path is being created, this will be closed and
+                                a new sub path started at the new position</simpara>
+                            </listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term
-><menuchoice
-><guimenuitem
->Zeichnen nach</guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Zeichnet eine Linie zum nächsten ausgewählten Punkt</action
-></simpara
-></listitem>
+                        <term><menuchoice><guimenuitem>Draw To</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Draw a line to the next selected point</action></simpara></listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term
-><menuchoice
-><guimenuitem
->Kubisch nach</guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Zeichnet eine Bézier-Kurve mit zwei Kontrollpunkten und einem Endpunkt</action
-></simpara
-></listitem>
+                        <term><menuchoice><guimenuitem>Cubic To</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Draw a bezier curve using two control points and an end point</action></simpara></listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term
-><menuchoice
-><guimenuitem
->Rechteck</guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Zeichnet ein Rechteck zwischen zwei gegenüberliegenden Ecken</action
-></simpara
-> <simpara
->Dies schließt einen vorhandenen Unterpfad und erzeugt einen neuen Unterpfad, der aus dem Rechteck besteht.</simpara
-> </listitem>
+                        <term><menuchoice><guimenuitem>Rectangle</guimenuitem></menuchoice></term>
+                        <listitem>
+                            <simpara><action>Draw a rectangle between two opposite corners</action></simpara>
+                            <simpara>This closes any existing sub path and creates a new sub path
+                                consisting of the rectangle.</simpara>
+                        </listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term
-><menuchoice
-><guimenuitem
->Ellipse</guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Zeichnet eine Ellipse zwischen zwei gegenüberliegenden Ecken</action
-></simpara
-> <simpara
->Dies schließt einen vorhandenen Unterpfad und erzeugt einen neuen Unterpfad, der aus der Ellipse besteht.</simpara
-> </listitem>
+                        <term><menuchoice><guimenuitem>Ellipse</guimenuitem></menuchoice></term>
+                        <listitem>
+                            <simpara><action>Draw an ellipse between two opposite corners</action></simpara>
+                            <simpara>This closes any existing sub path and creates a new sub path
+                                consisting of the ellipse.</simpara>
+                        </listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term
-><menuchoice
-><guimenuitem
->Zeichen einfügen</guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Wählen Sie ein Zeichen aus einer Schriftart und fügen Sie es in den Editor ein</action
-></simpara
-> <simpara
->Dies überschreibt alle vorhandenen Pfade</simpara
-> <screenshot
-> <screeninfo
->Hier ist ein Bildschirmfoto der Zeichenauswahl</screeninfo
-> <mediaobject
-> <imageobject
-> <imagedata fileref="charselect-dialog.png" format="PNG"/> </imageobject
-> </mediaobject
-> </screenshot
-> <simpara
->Der Standarddialog von KDE erlaubt die Auswahl von Zeichen aus einer beliebigen Schriftart. Die Größe wird nicht verwendet, da das Zeichen so skaliert wird, dass es in die bevorzugte Größe passt.</simpara
-> <simpara
->Doppelklick auf ein Zeichen fügt dieses Zeichen in den Editor ein. Der Dialog bleibt geöffnet, so dass ein weiteres Zeichen eingefügt werden kann. Das Dialogfeld bleibt geöffnet, so dass ein weiteres Zeichen eingefügt werden kann, dieses überschreibt jedoch das erste Zeichen. Dies ermöglicht einen Arbeitsablauf mit den wiederholten Schritten Zeichen einfügen und speichern zum schnellen Aufbau einer Bibliothek von Symbolen.  Achten Sie darauf, dass das zu bearbeitende Symbol ein neues Symbol ist und nicht zuvor aus der Bibliothek ausgewählt wurde, sonst überschreibt das Speichern  das Symbol in der Bibliothek.</simpara
-> </listitem>
+                        <term><menuchoice><guimenuitem>Insert Character</guimenuitem></menuchoice></term>
+                        <listitem>
+                            <simpara><action>Select a character from a font and insert it into the editor</action></simpara>
+                            <simpara>This will overwrite any existing paths</simpara>
+                            <screenshot>
+                                <screeninfo>Here is a screen shot of the character selector</screeninfo>
+                                <mediaobject>
+                                    <imageobject>
+                                        <imagedata fileref="charselect-dialog.png" format="PNG" />
+                                    </imageobject>
+                                </mediaobject>
+                            </screenshot>
+                            <simpara>The character selector dialog is the standard KDE dialog and allows
+                                selection of characters from any font. The size is not used as the
+                                character is scaled to fit within the preferred size guide.</simpara>
+                            <simpara>Double clicking a character will insert that character into the
+                                editor. The dialog will stay open so that another character could be
+                                inserted, although this will overwrite the first. This does allow an
+                                insert character, save, insert character, save workflow to quickly
+                                build up a library of symbols. Ensure that the symbol being edited is
+                                a new symbol and not one previously selected from the library, otherwise
+                                saving would keep overwriting the one in the library.</simpara>
+                        </listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term
-><menuchoice
-><guimenuitem
->Nach links drehen</guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Dreht das ganze Symbol um 90° gegen den Uhrzeigersinn</action
-></simpara
-></listitem>
+                        <term><menuchoice><guimenuitem>Rotate Left</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Rotate the whole symbol counter clockwise 90 degrees</action></simpara></listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term
-><menuchoice
-><guimenuitem
->Nach rechts drehen</guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Dreht das ganze Symbol um 90° im Uhrzeigersinn</action
-></simpara
-></listitem>
+                        <term><menuchoice><guimenuitem>Rotate Right</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Rotate the whole symbol clockwise 90 degrees</action></simpara></listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term
-><menuchoice
-><guimenuitem
->Waagerecht spiegeln</guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Spiegelt das Symbol an der senkrechten Achse</action
-></simpara
-></listitem>
+                        <term><menuchoice><guimenuitem>Flip Horizontal</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Flip the symbol across the vertical axis</action></simpara></listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term
-><menuchoice
-><guimenuitem
->Senkrecht spiegeln</guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Spiegelt das Symbol an der waagerechten Achse</action
-></simpara
-></listitem>
+                        <term><menuchoice><guimenuitem>Flip Vertical</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Flip the symbol across the horizontal axis</action></simpara></listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term
-><menuchoice
-><guimenuitem
->Auf bevorzugte Größe skalieren</guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Skaliert das Symbol so, dass es in die definierte Vorzugsgröße passt</action
-></simpara
-> <simpara
->Beachten Sie, dass dies nur die Punkte betrifft. Wenn ein nicht gefülltes Symbol erzeugt wird und eine Linienbreite definiert ist, kann diese über die Vorzugsgröße hinausgehen.</simpara
-> </listitem>
+                        <term><menuchoice><guimenuitem>Scale to Preferred Size</guimenuitem></menuchoice></term>
+                        <listitem>
+                            <simpara><action>Scale the symbol to fit within the defined preferred size</action></simpara>
+                            <simpara>Note that this only affects the points; where a non filled symbol
+                                is created and a line width is defined, this may extend beyond the
+                                guide size.</simpara>
+                            </listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term
-><menuchoice
-><guimenuitem
->Fang einschalten</guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Aktiviert das Fangen von Punkten auf dem Gitter</action
-></simpara
-></listitem>
+                        <term><menuchoice><guimenuitem>Enable Snap</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Enable snapping of points to the grid</action></simpara></listitem>
                     </varlistentry>
                     <varlistentry>
-                        <term
-><menuchoice
-><guimenuitem
->Hilfslinien</guimenuitem
-></menuchoice
-></term>
-                        <listitem
-><simpara
-><action
->Aktiviert die Erstellung von Hilfslinien</action
-></simpara
-></listitem>
+                        <term><menuchoice><guimenuitem>Guide Lines</guimenuitem></menuchoice></term>
+                        <listitem><simpara><action>Enable the generation of guide lines</action></simpara></listitem>
                     </varlistentry>
                 </variablelist>
             </para>
         </sect2>
 
         <sect2>
-            <title
->Die Menüs Einstellungen und Hilfe</title>
-            <para
->&symboleditor; benutzt die bekannten &kde;-Menüeinträge <guimenu
->Einstellungen</guimenu
-> und <guimenu
->Hilfe</guimenu
->. Mehr dazu erfahren Sie in den Abschnitten zu den Menüs <ulink url="help:/fundamentals/menus.html#menus-settings"
->Einstellungen</ulink
-> und <ulink url="help:/fundamentals/menus.html#menus-help"
->
->Hilfe</ulink
-> in den &kde;-Grundlagen. </para>
+            <title>The Settings and Help Menu</title>
+            <para>&symboleditor; has the common &kde; <guimenu>Settings</guimenu> and <guimenu>Help</guimenu>
+            menu items, for more information read the sections about the <ulink url="help:/fundamentals/menus.html#menus-settings">Settings 
+            Menu</ulink> and <ulink url="help:/fundamentals/menus.html#menus-help">Help Menu</ulink> of the &kde; Fundamentals.
+            </para>
         </sect2>
     </sect1>
 </chapter>

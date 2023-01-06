@@ -1,13 +1,9 @@
 <?xml version = '1.0'?>
     <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
-    <!ENTITY symboleditor '<application
->SymbolEditor</application
->'>
-    <!ENTITY kxstitch '<application
->KXStitch</application
->'>
+    <!ENTITY symboleditor '<application>SymbolEditor</application>'>
+    <!ENTITY kxstitch '<application>KXStitch</application>'>
     <!ENTITY % addindex "IGNORE">
-    <!ENTITY % German "INCLUDE">
+    <!ENTITY % English "INCLUDE">
     <!ENTITY introduction SYSTEM "introduction.docbook">
     <!ENTITY ui SYSTEM "ui.docbook">
     <!ENTITY commands SYSTEM "commands.docbook">
@@ -18,60 +14,35 @@
 
 <book lang="&language;">
     <bookinfo>
-        <title
->Das Handbuch zu &symboleditor;</title>
+        <title>The &symboleditor; Handbook</title>
         <authorgroup>
-            <author
-><firstname
->Stephen</firstname
-> <othername
->P.</othername
-> <surname
->Allewell</surname
-> <affiliation
-><address
-><email
->steve.allewell@gmail.com</email
-></address
-></affiliation>
+            <author>
+                <firstname>Stephen</firstname>
+                <othername>P.</othername>
+                <surname>Allewell</surname>
+                <affiliation><address><email>steve.allewell@gmail.com</email></address></affiliation>
             </author>
-            <othercredit role="translator"
-><firstname
->Deutsches KDE-Übersetzerteam</firstname
-><surname
-></surname
-><contrib
->Übersetzung</contrib
-></othercredit
-> 
+            <!-- TRANS:ROLES_OF_TRANSLATORS -->
         </authorgroup>
         <copyright>
-            <year
->2012-2019</year>
-            <holder
->Stephen P. Allewell</holder>
+            <year>2012-2019</year>
+            <holder>Stephen P. Allewell</holder>
         </copyright>
-        <legalnotice
->&FDLNotice;</legalnotice>
-        <date
->2019-06-19</date>
-        <releaseinfo
->SymbolEditor 2.1.0</releaseinfo>
+        <legalnotice>&FDLNotice;</legalnotice>
+        <date>2019-06-19</date>
+        <releaseinfo>SymbolEditor 2.1.0</releaseinfo>
         <abstract>
-            <para
->Mit &symboleditor; können Sie Symbolbibliotheken für das Programm &kxstitch; erstellen und bearbeiten. </para>
+            <para>
+                &symboleditor; is an application to allow the creation and editing of symbol libraries for the &kxstitch;
+                application.
+            </para>
         </abstract>
         <keywordset>
-            <keyword
->KDE</keyword>
-            <keyword
->Sticken</keyword>
-            <keyword
->Kreuz</keyword>
-            <keyword
->Stich</keyword>
-            <keyword
->Symbol</keyword>
+            <keyword>KDE</keyword>
+            <keyword>Stitching</keyword>
+            <keyword>Cross</keyword>
+            <keyword>Stitch</keyword>
+            <keyword>Symbol</keyword>
         </keywordset>
     </bookinfo>
 
