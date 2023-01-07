@@ -1,60 +1,56 @@
-<chapter id="using-symboleditor" >
-    <title>The User Interface</title>
+<chapter id="using-symboleditor">
+    <title
+>Die Benutzeroberfläche</title>
 
     <sect1 id="face-screenshot">
-        <title>The &symboleditor; Main Window</title>
-        <para>
-            The main window consists of a tabbed widget containing the symbol editor and a library
-            view. There is a menu bar and several tool bars containing standard actions, editing tools
-            and rendering options. The status bar gives prompts for using the various tools.
-        </para>
+        <title
+>Das Hauptfenster von &symboleditor;</title>
+        <para
+>Das Hauptfenster besteht aus einem Dialog mit Karteikarten, das den Symboleditor und eine Bibliotheksansicht enthält. Es gibt eine Menüleiste und mehrere Symbolleisten mit Standardaktionen, Bearbeitungswerkzeugen und Rendering-Optionen. In der Statusleiste finden Sie Aktionen für die Verwendung der verschiedenen Werkzeuge. </para>
         <sect2 id="editor-window">
-            <title>Editor Window</title>
+            <title
+>Editor-Fenster</title>
             <para>
                 <screenshot>
-                    <screeninfo>Here is a screen shot of the &symboleditor; editor window</screeninfo>
-                    <mediaobject><imageobject><imagedata fileref="mainwindow-editor.png" format="PNG" /></imageobject></mediaobject>
+                    <screeninfo
+>Hier sehen Sie ein Bildschirmfoto des Editor-Fensters von &symboleditor;</screeninfo>
+                    <mediaobject
+><imageobject
+><imagedata fileref="mainwindow-editor.png" format="PNG"/></imageobject
+></mediaobject>
                 </screenshot>
             </para>
-            <para>
-                The Editor window allows editing of a symbol using the available tools. It consists
-                of a grid providing snap points and shows a preferred size guide which allows symbols
-                to be created to a consistent size. The size of the grid, the number of elements and
-                the preferred size guide are all configurable.
-            </para>
-            <para>
-                The editor provides guidelines for positioning points relative to existing points.
-                The guides are positioned on the horizontal, vertical and diagonal vectors from an
-                existing point and also on a circular reference around the center of the grid.
-            </para>
+            <para
+>Im Editor-Fenster können Sie Symbole mit den verfügbaren Werkzeugen bearbeiten. Es besteht aus einem Raster mit Fangpunkten und zeigt eine bevorzugte Größe,  damit Symbole in einer einheitlichen Größe erstellt werden. Die Größe des Rasters, die Anzahl der Elemente und die bevorzugte Größe sind einstellbar. </para>
+            <para
+>Im Editor finden Sie Hilfslinien für die Positionierung von Punkten relativ zu bestehenden Punkten. Die Hilfslinien befinden sich auf den horizontalen, vertikalen und diagonalen Vektoren von einem vorhandenen Punkt aus sowie auf einer kreisförmigen Bezugsbasis um den Mittelpunkt des Gitters. </para>
             <screenshot>
-                <screeninfo>Here is a screen shot of the editor guides</screeninfo>
+                <screeninfo
+>Hier sehen Sie ein Bildschirmfoto des Editor-Hilfslinien</screeninfo>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="editor-guides.png" format="PNG" />
+                        <imagedata fileref="editor-guides.png" format="PNG"/>
                     </imageobject>
                 </mediaobject>
             </screenshot>
         </sect2>
         <sect2 id="library-window">
-            <title>Library Window</title>
+            <title
+>Bibliothek-Fenster</title>
             <para>
                 <screenshot>
-                    <screeninfo>Here is a screen shot of the &symboleditor; library window</screeninfo>
-                    <mediaobject><imageobject><imagedata fileref="mainwindow-library.png" format="PNG" /></imageobject></mediaobject>
+                    <screeninfo
+>Hier sehen Sie ein Bildschirmfoto des Bibliothek-Fensters von &symboleditor;</screeninfo>
+                    <mediaobject
+><imageobject
+><imagedata fileref="mainwindow-library.png" format="PNG"/></imageobject
+></mediaobject>
                 </screenshot>
             </para>
-            <para>
-                The library window shows representations of the symbols contained in the library. The
-                symbol currently being edited is shown highlighted. Selecting a symbol will open it
-                in the editor so that it can be modified.
-            </para>
-            <para>
-                It is possible to open several instances of the SymbolEditor application and copy
-                symbols from one library to another using drag and drop. Ensure that both library
-                windows are visible, then click and drag the required symbol from one library window
-                to the other. The symbol will then be appended to the target library.
-            </para>
+            <para
+>Im Bibliotheksfenster werden die in der Bibliothek enthaltenen Symbole angezeigt.  Das gerade bearbeitete Symbol wird hervorgehoben. Durch Auswählen eines Symbols wird es im Editor geöffnet, so dass es bearbeitet werden kann. </para>
+            <para
+>Sie können mehrere Instanzen des SymbolEditors öffnen und Symbole durch Ziehen und Ablegen von einer Bibliothek in eine andere kopieren. Wenn beide Bibliotheksfenster sichtbar sind, klicken Sie auf das gewünschte Symbol und ziehen Sie es von einem Bibliotheksfenster in das andere. Das Symbol wird dann an die Zielbibliothek angehängt. </para>
         </sect2>
     </sect1>
 </chapter>
