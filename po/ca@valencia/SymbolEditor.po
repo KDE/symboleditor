@@ -425,7 +425,7 @@ msgstr "Emplenat altern"
 #: src/MainWindow.cpp:836
 #, kde-format
 msgid "The Odd Even fill method will fill alternate areas of the symbol."
-msgstr "El mètode «Emplenat altern» omplirà àrees alternes del símbol."
+msgstr "El mètode «Emplenat altern», emplenarà àrees alternes del símbol."
 
 #: src/MainWindow.cpp:844
 #, kde-format
@@ -435,7 +435,7 @@ msgstr "Emplenat sinuós"
 #: src/MainWindow.cpp:845
 #, kde-format
 msgid "The Winding fill method will fill the complete interior of the path."
-msgstr "El mètode «Emplenat sinuós», omplirà tot l'interior del camí."
+msgstr "El mètode «Emplenat sinuós», emplenarà tot l'interior del camí."
 
 #: src/MainWindow.cpp:858
 #, kde-format
