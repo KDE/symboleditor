@@ -1,0 +1,12 @@
+<chapter id="symbols">
+    <title
+>Simboli</title>
+    <para
+>I simboli vengono creati come oggetti QPainterPath con informazioni aggiuntive che definiscono gli attributi del percorso. Un QPainterPath è costituito da sotto-tracciati come rettangoli, ellissi o catene di linee e curve di Bezier. I percorsi possono intersecarsi formando forme complesse. </para>
+    <para
+>Il simbolo può essere riempito utilizzando l'opzione di avvolgimento che riempie l'intero tracciato o l'opzione dispari pari che riempie sezioni alternative del tracciato. </para>
+    <para
+>Se il percorso non viene riempito, il contorno avrà una larghezza di linea, un tipo di chiusura e un tipo di unione definiti. </para>
+    <para
+>Vedere la documentazione di QPainterPath per ulteriori dettagli. </para>
+</chapter>

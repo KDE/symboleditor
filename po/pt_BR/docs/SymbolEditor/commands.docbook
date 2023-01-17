@@ -1,0 +1,623 @@
+<chapter id="commands">
+    <title
+>Referência de comandos</title>
+
+    <sect1 id="menus">
+        <title
+>Menus do &kapp;</title>
+        <sect2>
+            <title
+>Menu Arquivo</title>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Novo</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Cria uma nova biblioteca</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Abrir</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Abre uma biblioteca existente</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Abrir recente</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Abre uma biblioteca usada recentemente</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Salvar</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Salva a biblioteca</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;&Shift;<keycap
+>S</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Salvar como</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Salva a biblioteca com um novo nome</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Salvar símbolo</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Salva o símbolo editado no momento</action
+></simpara
+> <simpara
+>Se o símbolo a ser editado foi selecionado a partir da biblioteca, o salvamento irá atualizar esse símbolo. Se for um símbolo novo, será adicionado à biblioteca e os salvamentos subsequentes irão adicionar um novo símbolo à biblioteca.</simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Salvar o símbolo como novo</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Salva o símbolo a ser editado como um novo símbolo</action
+></simpara
+> <simpara
+>Quando um símbolo for salvo como novo, ele será adicionado à biblioteca, independentemente de ter sido originalmente selecionado para edição a partir da biblioteca. As gravações subsequentes irão adicionar outro símbolo novo à biblioteca. </simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Importar biblioteca</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Importa uma biblioteca, adicionando os símbolos contidos à biblioteca atual</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;<keycap
+>W</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Fechar</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Fecha a biblioteca</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Sair</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Sai do &kapp;</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>Menu Editar</title>
+            <para
+>O &kapp; possui os itens de menu normais do &kde; para <guimenu
+>Editar</guimenu
+>; para mais informações, leia as seções sobre o <ulink url="help:/fundamentals/ui.html#menus-settings"
+>Menu Editar</ulink
+> dos Fundamentos do &kde;. </para>
+        </sect2>
+
+        <sect2>
+            <title
+>O Menu e a barra de ferramentas Desenho</title>
+            <screenshot>
+                <screeninfo
+>Aqui está uma imagem da barra de ferramentas de desenho</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="renderer-toolbar.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+                </screenshot>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Preenchimento do caminho</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Ativa o preenchimento do caminho</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Preenchimento em espiral</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Seleciona o método de preenchimento em espiral</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Preenchimento par-ímpar</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Seleciona o método de preenchimento par-ímpar</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Extremo plano</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Seleciona o tipo de fim de linha plano</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Extremo quadrado</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Seleciona o tipo de fim de linha quadrado</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Extremo arredondado</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Seleciona o tipo de fim de linha arredondado</action
+></simpara
+></listitem
+></varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Junção em cunha</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Seleciona o tipo de junção de linha em cunha</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Junção central</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Seleciona o tipo de junção de linha central</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Junção arredondada</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Seleciona o tipo de junção de linha arredondada</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Aumentar a espessura da linha</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Aumenta a espessura de linha do caminho</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Diminuir a espessura da linha</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Diminui a espessura de linha do caminho</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>Menu Ferramentas e Barra de Ferramentas</title>
+            <para
+>Está disponível um conjunto de ferramentas para ajudar no desenho dos símbolos. Os símbolos são compostos por uma série de subcaminhos, onde cada subcaminho é composto por uma colocação na posição inicial (o padrão é 0,0 para novos símbolos), seguida de linhas e curvas. As curvas são ranhuras cúbicas que têm um início, um fim e dois pontos de controle que definem a curva. Existem ferramentas de conveniência para criar retângulos e elipses, mas estes serão divididos em linhas e curvas. </para>
+            <para
+>Todos os pontos criados para os elementos podem ser movidos, arrastando-os para sua nova posição. Todos os pontos podem ser ajustados às intersecções das grades, caso a opção de ajuste esteja ativa, caso contrário, poderão ser colocados em qualquer lado. </para>
+            <para
+>O símbolo pode ser girado no sentido horário e anti-horário, assim como pode ser invertido na horizontal ou na vertical. Isto permite criar vários símbolos facilmente, com base no mesmo desenho. Lembre-se de usar o símbolo de gravação como uma nova opção para isto. </para>
+            <screenshot>
+                <screeninfo
+>Aqui está uma imagem da barra de ferramentas</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="tool-toolbar.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+                </screenshot>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Mover para</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Move a posição inicial do subcaminho</action
+></simpara
+> <simpara
+>Se um subcaminho existente está sendo criado, este será fechado e iniciado um novo subcaminho na nova posição</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Desenhar até</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Desenha uma linha até o próximo ponto selecionado</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Cúbica até</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Desenha uma curva de Bezier, usando dois pontos de controle e um ponto final</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Retângulo</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Desenha um retângulo entre dois cantos opostos</action
+></simpara
+> <simpara
+>Isto fecha qualquer subcaminho existente e cria um novo subcaminho que consiste no retângulo.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Elipse</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Desenha uma elipse entre dois cantos opostos</action
+></simpara
+> <simpara
+>Isto fecha qualquer subcaminho existente e cria um novo subcaminho que consiste na elipse.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Inserir caractere</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Seleciona um caractere de uma determinada fonte e insere-o no editor</action
+></simpara
+> <simpara
+>Isto irá substituir todos os caminhos existentes</simpara
+> <screenshot
+> <screeninfo
+>Aqui está uma imagem do seletor de caracteres</screeninfo
+> <mediaobject
+> <imageobject
+> <imagedata fileref="charselect-dialog.png" format="PNG"/> </imageobject
+> </mediaobject
+> </screenshot
+> <simpara
+>A janela de seleção de caracteres é a janela padrão do KDE e permite selecionar caracteres a partir de qualquer fonte. O tamanho não é usado porque o caractere é dimensionado para se ajustar dentro da guia do tamanho preferido.</simpara
+> <simpara
+>Um clique duplo sobre um caractere irá inseri-lo no editor. A janela permanecerá aberta para que outro caractere possa ser inserido, mesmo que este vá substituir o primeiro. Isto permite inserir um caractere, salvar, inserir um caractere, salvar de forma rápida para compor uma biblioteca de símbolos. Verifique se o símbolo a ser editado é novo e não um previamente selecionado a partir da biblioteca, caso contrário, a gravação continuaria sobrescrevendo o da biblioteca.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Girar à esquerda</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Gira o símbolo inteiro em 90 graus no sentido anti-horário</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Girar à direita</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Gira o símbolo inteiro em 90 graus no sentido horário</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Inverter na horizontal</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Inverte o símbolo ao longo do eixo vertical</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Inverter na vertical</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Inverte o símbolo ao longo do eixo horizontal</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Ajustar ao tamanho preferido</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Ajusta a escala do símbolo para caber dentro do tamanho preferido que tiver sido definido</action
+></simpara
+> <simpara
+>Lembre-se de que isto só afeta os pontos; onde for criado um símbolo não preenchido e definida uma espessura de linha, podendo superar o tamanho da guia.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Ativar o ajuste</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Ativa o ajuste dos pontos à grade</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Linhas-guia</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Ativa a geração das linhas-guia</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>Menus Configurações e Ajuda</title>
+            <para
+>O &kapp; possui os itens dos menus <guimenu
+>Configurações</guimenu
+> e <guimenu
+>Ajuda</guimenu
+>, comuns do &kde;. Para mais informações, consulte as seções sobre o <ulink url="help:/fundamentals/ui.html#menus-settings"
+>Menu Configurações</ulink
+> e o <ulink url="help:/fundamentals/ui.html#menus-help"
+>Menu Ajuda</ulink
+> dos Fundamentos do &kde;. </para>
+        </sect2>
+    </sect1>
+</chapter>

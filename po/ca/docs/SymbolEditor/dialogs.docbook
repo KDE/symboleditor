@@ -1,0 +1,19 @@
+<chapter id="Dialogs">
+    <title
+>Diàlegs</title>
+
+    <sect1 id="ConfigurationDialog">
+        <title
+>El diàleg de configuració</title>
+        <para>
+            <screenshot
+><mediaobject
+><imageobject
+><imagedata fileref="configuration-dialog.png" format="PNG"/></imageobject
+></mediaobject
+></screenshot>
+        </para>
+        <para
+>El diàleg de configuració permet establir una sèrie d'opcions. </para>
+    </sect1>
+</chapter>

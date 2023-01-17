@@ -1,0 +1,78 @@
+<?xml version = '1.0'?>
+    <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+    <!ENTITY symboleditor '<application
+>SymbolEditor</application
+>'>
+    <!ENTITY kxstitch '<application
+>KXStitch</application
+>'>
+    <!ENTITY % addindex "IGNORE">
+    <!ENTITY % Dutch "INCLUDE">
+    <!ENTITY introduction SYSTEM "introduction.docbook">
+    <!ENTITY ui SYSTEM "ui.docbook">
+    <!ENTITY commands SYSTEM "commands.docbook">
+    <!ENTITY symbols SYSTEM "symbols.docbook">
+    <!ENTITY dialogs SYSTEM "dialogs.docbook">
+    <!ENTITY credits SYSTEM "credits.docbook">
+    ]>
+
+<book lang="&language;">
+    <bookinfo>
+        <title
+>Het handboek van &symboleditor;</title>
+        <authorgroup>
+            <author
+><firstname
+>Stephen</firstname
+> <othername
+>P.</othername
+> <surname
+>Allewell</surname
+> <affiliation
+><address
+><email
+>steve.allewell@gmail.com</email
+></address
+></affiliation>
+            </author>
+            &Freek.de.Kruijf; 
+        </authorgroup>
+        <copyright>
+            <year
+>2012-2019</year>
+            <holder
+>Stephen P. Allewell</holder>
+        </copyright>
+        <legalnotice
+>&FDLNotice;</legalnotice>
+        <date
+>2019-06-19</date>
+        <releaseinfo
+>SymbolEditor 2.1.0</releaseinfo>
+        <abstract>
+            <para
+>&symboleditor; is een toepassing voor het maken en bewerken van symboolbibliotheken voor de toepassing &kxstitch;. </para>
+        </abstract>
+        <keywordset>
+            <keyword
+>KDE</keyword>
+            <keyword
+>Borduren</keyword>
+            <keyword
+>Kruissteek</keyword>
+            <keyword
+>Borduursel</keyword>
+            <keyword
+>Symbool</keyword>
+        </keywordset>
+    </bookinfo>
+
+    &introduction;
+    &ui;
+    &symbols;
+    &commands;
+    &dialogs;
+    &credits;
+
+    &documentation.index;
+</book>

@@ -1,0 +1,19 @@
+<chapter id="Dialogs">
+    <title
+>Finestre</title>
+
+    <sect1 id="ConfigurationDialog">
+        <title
+>La finestra di configurazione</title>
+        <para>
+            <screenshot
+><mediaobject
+><imageobject
+><imagedata fileref="configuration-dialog.png" format="PNG"/></imageobject
+></mediaobject
+></screenshot>
+        </para>
+        <para
+>La finestra di configurazione consente di impostare numerose opzioni. </para>
+    </sect1>
+</chapter>

@@ -1,0 +1,12 @@
+<chapter id="symbols">
+    <title
+>Symboler</title>
+    <para
+>Symboler skapas som QPainterPath-objekt, med ytterligare information som definieras konturens egenskaper. En QPainterPath består av delkonturer såsom rektanglar, ellipser eller kedjor av linjer och Bezier-kurvor. Konturerna kan korsa varandra för att skapa komplexa former. </para>
+    <para
+>Symbolen kan fyllas i genom att antingen använda alternativet slingrande, vilket fyller i hela konturen, eller alternativet udda jämn, vilket fyller i omväxlande områden av konturen. </para>
+    <para
+>Om konturen inte fylls i har kanten en definierad linjebredd, ändtyp och ihopfogningstyp. </para>
+    <para
+>Se dokumentationen av QPainterPath för mer detaljerad information. </para>
+</chapter>

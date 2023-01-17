@@ -1,0 +1,623 @@
+<chapter id="commands">
+    <title
+>Kommandoreferens</title>
+
+    <sect1 id="menus">
+        <title
+>Menyer i &symboleditor;</title>
+        <sect2>
+            <title
+>Menyn Arkiv</title>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Ny</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Skapar ett nytt bibliotek</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Öppna</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Öppnar ett befintligt bibliotek</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Öppna senaste</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Öppna senast använda bibliotek</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Spara</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Sparar biblioteket</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;&Shift;<keycap
+>S</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Spara som</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Sparar biblioteket med ett nytt namn</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Spara symbol</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Spara symbolen som redigeras</action
+></simpara
+> <simpara
+>Om symbolen som redigeras valdes i biblioteket, uppdateras den symbolen när den sparas. Om det är en ny symbol, läggs den till sist i biblioteket och när den sparas nästa gång läggs en ny symbol till sist i biblioteket.</simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Spara symbol som ny</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Spara symbolen som redigeras som en ny symbol</action
+></simpara
+> <simpara
+>När en symbol sparas som ny, läggs den till sist i biblioteket oavsett om den ursprungligen har valts från biblioteket för redigering. När den sparas nästa gång läggs en ny symbol till sist i biblioteket.</simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Importera bibliotek</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Importera ett bibliotek och lägg till symbolerna det innehåller sist i det aktuella biblioteket</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;<keycap
+>W</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Stäng</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Stäng biblioteket</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Avsluta</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Avslutar &symboleditor;</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>Menyn Redigera</title>
+            <para
+>&symboleditor; has the common &kde; <guimenu
+>Edit</guimenu
+> menu items, for more information read the sections about the <ulink url="help:/fundamentals/menus.html#menus-edit"
+>Edit Menu</ulink
+> of the &kde; Fundamentals. </para>
+        </sect2>
+
+        <sect2>
+            <title
+>Menyn och verktygsraden Återgivning</title>
+            <screenshot>
+                <screeninfo
+>Här är en skärmbild av återgivningsverktygsraden</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="renderer-toolbar.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+                </screenshot>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Fyllnadskontur</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Aktivera konturfyllnad</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Fyll slingrande</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Välj fyllmetoden slingrande</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Fyll udda jämn</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Välj fyllmetoden udda jämn</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Platt ända</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Välj platt ändtyp för linjer</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Fyrkantig ända</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Välj fyrkantig ändtyp för linjer</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Rundad ända</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Välj rundad ändtyp för linjer</action
+></simpara
+></listitem
+></varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Fasad hopfogning</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Välj fasad hopfogningstyp för linjer</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Sned hopfogning</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Välj sned hopfogningstyp för linjer</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Rundad hopfogning</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Välj rundad hopfogningstyp för linjer</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Öka linjebredd</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Öka konturens linjebredd</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Minska linjebredd</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Minska konturens linjebredd</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>Menyn och verktygsraden Verktyg</title>
+            <para
+>Ett antal verktyg är tillgängliga för att hjälpa till att konstruerar symbolerna. Symbolerna består av en serie delkonturer och varje delkontur består av en förflyttning till startpositionen (det är normalt 0 0 för nya symboler) följt av linjer och kurvor. Kurvorna är kubiska spline-kurvor som har en startpunkt och två styrpunkter som definierar kurvan. Det finns bekvämlighetsverktyg för att skapa rektanglar och ellipser, men de delas upp i linjer och kurvor. </para>
+            <para
+>Alla punkter som skapas för elementen är flyttbara genom att dra dem till deras nya position. Alla punkter kan låsas till rutnätets korsningar om låsalternativet är aktiverat, annars kan de placeras var som helst. </para>
+            <para
+>Symbolen kan roteras medurs och moturs, och dessutom vändas vertikalt och horisontellt. Det gör det möjligt att skapa flera symboler baserade på samma design. Kom ihåg att använda alternativet för att spara symbolen som ny för detta. </para>
+            <screenshot>
+                <screeninfo
+>Här är en skärmbild av verktygsraden Verktyg</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="tool-toolbar.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+                </screenshot>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Flytta till</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Flytta delkonturens startposition</action
+></simpara
+> <simpara
+>Om en befintlig delkontur håller på att skapas, slutes den och en ny delkontur påbörjas på den nya positionen</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Rita till</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Rita en linje till nästa markerade punkt</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Kurva till</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Rita en Bezier-kurva genom att använda två styrpunkter och en slutpunkt</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Rektangel</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Rita en rektangel mellan två motstående hörn</action
+></simpara
+> <simpara
+>Detta sluter en eventuell befintlig delkontur, och skapar en ny delkontur som utgör rektangeln.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Ellips</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Rita en ellips mellan två motstående hörn</action
+></simpara
+> <simpara
+>Detta sluter en eventuell befintlig delkontur, och skapar en ny delkontur som utgör ellipsen.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Infoga tecken</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Välj ett tecken i ett teckensnitt och infoga den i editorn</action
+></simpara
+> <simpara
+>Det skriver över en eventuell befintlig kontur</simpara
+> <screenshot
+><screeninfo
+>Här är en skärmbild av teckenväljaren</screeninfo
+> <mediaobject
+> <imageobject
+> <imagedata fileref="charselect-dialog.png" format="PNG"/> </imageobject
+> </mediaobject
+> </screenshot
+> <simpara
+>Dialogrutan för teckenväljaren är KDE:s vanliga dialogruta som tillåter att tecken väljes från vilket teckensnitt som helst. Storleken används inte, eftersom tecknet skalas för att passa inom föredragen storlek.</simpara
+> <simpara
+>Att dubbelklicka på ett tecken gör att det infogas i editorn. Dialogrutan förblir öppen så att ett annat tecken kan infogas, även om det skriver över det första. Detta tillåter ett arbetsflöde där ett tecken infogas, det sparas, ett tecken infogas, det sparas, för att snabbt bygga upp ett symbolbibliotek. Försäkra dig om att symbolen som redigeras är en ny symbol, och inte en som tidigare valts i biblioteket, annars skulle den i biblioteket skrivas över hela tiden när den sparas.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Rotera åt vänster</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Rotera hela symbolen moturs 90 grader</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Rotera åt höger</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Rotera hela symbolen medurs 90 grader</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Vänd horisontellt</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Vänd symbolen längs den vertikala axeln</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Vänd vertikalt</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Vänd symbolen längs den horisontella axeln</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Skala till önskad storlek</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Skala symbolen så att den passar inom den definierade föredragna storleken</action
+></simpara
+> <simpara
+>Observera att det bara påverkar punkterna. När en symbol som inte är ifylld skapas, och en linjebredd definieras, kan den sticka ut utanför styrlinjerna.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Aktivera låsning</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Aktivera låsning av punkter till rutnätet</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Hjälplinjer</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Aktivera generering av hjälplinjer</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>Menyerna Inställningar och Hjälp</title>
+            <para
+>&symboleditor; has the common &kde; <guimenu
+>Settings</guimenu
+> and <guimenu
+>Help</guimenu
+> menu items, for more information read the sections about the <ulink url="help:/fundamentals/menus.html#menus-settings"
+>Settings Menu</ulink
+> and <ulink url="help:/fundamentals/menus.html#menus-help"
+>Help Menu</ulink
+> of the &kde; Fundamentals. </para>
+        </sect2>
+    </sect1>
+</chapter>

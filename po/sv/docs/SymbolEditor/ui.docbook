@@ -1,0 +1,56 @@
+<chapter id="using-symboleditor">
+    <title
+>Användargränssnittet</title>
+
+    <sect1 id="face-screenshot">
+        <title
+>Huvudfönster i &symboleditor;</title>
+        <para
+>Huvudfönstret består av en grafisk flikkomponent, som innehåller symboleditorn och en biblioteksvy. Det finns en menyrad och flera verktygsrader som innehåller standardåtgärder, redigeringsverktyg och återgivningsalternativ. Statusraden visar information om användning av de olika verktygen. </para>
+        <sect2 id="editor-window">
+            <title
+>Redigeringsfönster</title>
+            <para>
+                <screenshot>
+                    <screeninfo
+>Här är en skärmbild av redigeringsfönstret i &symboleditor;</screeninfo>
+                    <mediaobject
+><imageobject
+><imagedata fileref="mainwindow-editor.png" format="PNG"/></imageobject
+></mediaobject>
+                </screenshot>
+            </para>
+            <para
+>Editorfönstret gör det möjligt att redigera en symbol med de tillgängliga verktygen. Det består av ett rutnät som tillhandahåller låspunkter och visar en önskad storlek, som gör det möjligt att skapa symboler med likvärdiga storlekar. Rutnätets storlek, antal element och önskad storlek kan ställas in. </para>
+            <para
+>Editorn tillhandahåller hjälplinjer för att placera punkter i förhållande till befintliga punkter. Hjälplinjerna är placerade längs den horisontella, den vertikala och den diagonala vektorn från en befintlig punkt, och också vid en cirkulär referens omkring rutnätets centrum. </para>
+            <screenshot>
+                <screeninfo
+>Här är en skärmbild av editorns hjälplinjer</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="editor-guides.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </sect2>
+        <sect2 id="library-window">
+            <title
+>Biblioteksfönstret</title>
+            <para>
+                <screenshot>
+                    <screeninfo
+>Här är en skärmbild av biblioteksfönstret i &symboleditor;</screeninfo>
+                    <mediaobject
+><imageobject
+><imagedata fileref="mainwindow-library.png" format="PNG"/></imageobject
+></mediaobject>
+                </screenshot>
+            </para>
+            <para
+>Biblioteksfönstret visar representationer av symbolerna som finns i biblioteket. Symbolen som för närvarande redigeras visas markerad. Väljes en symbol öppnas den i editorn så att den kan ändras. </para>
+            <para
+>Det är möjligt att öppna flera instanser av symboleditor-programmet och kopiera symboler från ett bibliotek till ett annat med drag och släpp. Försäkra dig om att båda biblioteksfönstren är synliga, klicka och dra önskad symbol från ett biblioteksfönster till det andra. Symbolen läggs då till sist i målbiblioteket. </para>
+        </sect2>
+    </sect1>
+</chapter>

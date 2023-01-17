@@ -1,0 +1,857 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Steve Allewell <steve.allewell@gmail.com>, 2014, 2015, 2019, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-08-30 07:38+0200\n"
+"PO-Revision-Date: 2020-06-09 23:18+0100\n"
+"Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
+"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.04.1\n"
+
+#: src/Commands.cpp:72 src/MainWindow.cpp:913
+#, kde-format
+msgid "Move To"
+msgstr "Move To"
+
+#: src/Commands.cpp:105 src/MainWindow.cpp:922
+#, kde-format
+msgid "Draw To"
+msgstr "Draw To"
+
+#: src/Commands.cpp:140 src/MainWindow.cpp:931
+#, kde-format
+msgid "Cubic To"
+msgstr "Cubic To"
+
+#: src/Commands.cpp:176
+#, kde-format
+msgid "Add Rectangle"
+msgstr "Add Rectangle"
+
+#: src/Commands.cpp:211
+#, kde-format
+msgid "Add Ellipse"
+msgstr "Add Ellipse"
+
+#: src/Commands.cpp:247
+#, kde-format
+msgid "Move point"
+msgstr "Move point"
+
+#: src/Commands.cpp:284
+#, kde-format
+msgid "Update Symbol"
+msgstr "Update Symbol"
+
+#: src/Commands.cpp:326 src/MainWindow.cpp:773
+#, kde-format
+msgid "Import Library"
+msgstr "Import Library"
+
+#: src/Commands.cpp:375 src/MainWindow.cpp:969
+#, kde-format
+msgid "Rotate Left"
+msgstr "Rotate Left"
+
+#: src/Commands.cpp:406 src/MainWindow.cpp:976
+#, kde-format
+msgid "Rotate Right"
+msgstr "Rotate Right"
+
+#: src/Commands.cpp:437 src/MainWindow.cpp:983
+#, kde-format
+msgid "Flip Horizontal"
+msgstr "Flip Horizontal"
+
+#: src/Commands.cpp:467 src/MainWindow.cpp:990
+#, kde-format
+msgid "Flip Vertical"
+msgstr "Flip Vertical"
+
+#: src/Commands.cpp:500 src/MainWindow.cpp:997
+#, kde-format
+msgid "Scale to Preferred Size"
+msgstr "Scale to Preferred Size"
+
+#: src/Commands.cpp:557
+#, kde-format
+msgid "Change Fill State"
+msgstr "Change Fill State"
+
+#: src/Commands.cpp:591
+#, kde-format
+msgid "Change Fill Rule"
+msgstr "Change Fill Rule"
+
+#: src/Commands.cpp:625
+#, kde-format
+msgid "Change Cap Style"
+msgstr "Change Cap Style"
+
+#: src/Commands.cpp:659
+#, kde-format
+msgid "Change Join Style"
+msgstr "Change Join Style"
+
+#: src/Commands.cpp:692 src/MainWindow.cpp:712
+#, kde-format
+msgid "Delete Symbol"
+msgstr "Delete Symbol"
+
+#: src/Commands.cpp:725 src/MainWindow.cpp:895
+#, kde-format
+msgid "Increase Line Width"
+msgstr "Increase Line Width"
+
+#: src/Commands.cpp:789 src/MainWindow.cpp:902
+#, kde-format
+msgid "Decrease Line Width"
+msgstr "Decrease Line Width"
+
+#: src/Commands.cpp:852
+#, kde-format
+msgid "Add Symbols"
+msgstr "Add Symbols"
+
+#: src/Commands.cpp:897
+#, kde-format
+msgid "Add Character"
+msgstr "Add Character"
+
+#: src/Editor.cpp:172
+#, kde-format
+msgid "Select a new starting position."
+msgstr "Select a new starting position."
+
+#: src/Editor.cpp:177
+#, kde-format
+msgid "Select the line end point."
+msgstr "Select the line end point."
+
+#: src/Editor.cpp:182
+#, kde-format
+msgid "Select the first control point."
+msgstr "Select the first control point."
+
+#: src/Editor.cpp:183
+#, kde-format
+msgid "Select the second control point."
+msgstr "Select the second control point."
+
+#: src/Editor.cpp:184
+#, kde-format
+msgid "Select the end point"
+msgstr "Select the end point"
+
+#: src/Editor.cpp:187
+#, kde-format
+msgid "Select the first corner."
+msgstr "Select the first corner."
+
+#: src/Editor.cpp:188
+#, kde-format
+msgid "Select the second corner."
+msgstr "Select the second corner."
+
+#: src/Editor.cpp:192
+#, kde-format
+msgid "Select the first corner of the bounding rectangle."
+msgstr "Select the first corner of the bounding rectangle."
+
+#: src/Editor.cpp:193
+#, kde-format
+msgid "Select the second corner of the bounding rectangle."
+msgstr "Select the second corner of the bounding rectangle."
+
+#: src/Editor.cpp:197
+#, kde-format
+msgid "Double click a character to insert into the editor."
+msgstr "Double click a character to insert into the editor."
+
+#: src/Exceptions.cpp:69
+#, kde-format
+msgid "Tried to read past the end of the data"
+msgstr "Tried to read past the end of the data"
+
+#: src/Exceptions.cpp:73
+#, kde-format
+msgid "Tried to read corrupted data"
+msgstr "Tried to read corrupted data"
+
+#: src/Exceptions.cpp:76 src/Exceptions.cpp:106
+#, kde-format
+msgid "Undefined status message %1"
+msgstr "Undefined status message %1"
+
+#: src/Exceptions.cpp:101
+#, kde-format
+msgid "Failed to write to the device"
+msgstr "Failed to write to the device"
+
+#: src/Main.cpp:87
+#, kde-format
+msgid "SymbolEditor"
+msgstr "SymbolEditor"
+
+#: src/Main.cpp:89
+#, kde-format
+msgid "A cross stitch symbol editor."
+msgstr "A cross stitch symbol editor."
+
+#: src/Main.cpp:91
+#, kde-format
+msgid "(c)2011-2019 Stephen Allewell"
+msgstr "(c)2011-2019 Steve Allewell"
+
+#: src/Main.cpp:97
+#, kde-format
+msgid "Project Lead"
+msgstr "Project Lead"
+
+#: src/Main.cpp:98
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Steve Allewell"
+
+#: src/Main.cpp:98
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sallewell@users.sourceforge.net"
+
+#: src/MainWindow.cpp:198 src/MainWindow.cpp:420 src/MainWindow.cpp:575
+#, kde-format
+msgid "Untitled"
+msgstr "Untitled"
+
+#: src/MainWindow.cpp:207
+#, kde-format
+msgctxt "The editor tab title"
+msgid "Editor"
+msgstr "Editor"
+
+#: src/MainWindow.cpp:208
+#, kde-format
+msgctxt "The library tab title"
+msgid "Library"
+msgstr "Library"
+
+#: src/MainWindow.cpp:278
+#, kde-format
+msgid ""
+"Save changes to the symbol?\n"
+"Selecting No discards changes."
+msgstr ""
+"Save changes to the symbol?\n"
+"Selecting No discards changes."
+
+#: src/MainWindow.cpp:311
+#, kde-format
+msgid ""
+"Save changes to the library?\n"
+"Selecting No discards changes."
+msgstr ""
+"Save changes to the library?\n"
+"Selecting No discards changes."
+
+#: src/MainWindow.cpp:339
+#, kde-format
+msgid "Open file"
+msgstr "Open file"
+
+#: src/MainWindow.cpp:339 src/MainWindow.cpp:451 src/MainWindow.cpp:529
+#, kde-format
+msgid "Cross Stitch Symbols (*.sym)"
+msgstr "Cross Stitch Symbols (*.sym)"
+
+#: src/MainWindow.cpp:388 src/MainWindow.cpp:549
+#, kde-format
+msgid "This doesn't appear to be a valid symbol file"
+msgstr "This doesn't appear to be a valid symbol file"
+
+#: src/MainWindow.cpp:390 src/MainWindow.cpp:551
+#, kde-format
+msgid ""
+"Version %1 of the library file is not supported in this version of "
+"SymbolEditor"
+msgstr ""
+"Version %1 of the library file is not supported in this version of "
+"SymbolEditor"
+
+#: src/MainWindow.cpp:392
+#, kde-format
+msgid ""
+"Version %1 of the symbol is not supported in this version of SymbolEditor"
+msgstr ""
+"Version %1 of the symbol is not supported in this version of SymbolEditor"
+
+#: src/MainWindow.cpp:394
+#, kde-format
+msgid ""
+"Failed to read the library\n"
+"%1"
+msgstr ""
+"Failed to read the library\n"
+"%1"
+
+#: src/MainWindow.cpp:407 src/MainWindow.cpp:560
+#, kde-format
+msgid "The url %1 is invalid"
+msgstr "The url %1 is invalid"
+
+#: src/MainWindow.cpp:432
+#, kde-format
+msgid ""
+"Failed to write the library\n"
+"%1"
+msgstr ""
+"Failed to write the library\n"
+"%1"
+
+#: src/MainWindow.cpp:438
+#, kde-format
+msgid ""
+"Failed to open the file %1\n"
+"%2"
+msgstr ""
+"Failed to open the file %1\n"
+"%2"
+
+#: src/MainWindow.cpp:451
+#, kde-format
+msgid "Save As..."
+msgstr "Save As..."
+
+#: src/MainWindow.cpp:457
+#, kde-format
+msgid ""
+"This file already exists\n"
+"Do you want to overwrite it?"
+msgstr ""
+"This file already exists\n"
+"Do you want to overwrite it?"
+
+#: src/MainWindow.cpp:529
+#, kde-format
+msgid "Import library"
+msgstr "Import library"
+
+#: src/MainWindow.cpp:621
+#, kde-format
+msgid "Undo %1"
+msgstr "Undo %1"
+
+#: src/MainWindow.cpp:634
+#, kde-format
+msgid "Redo %1"
+msgstr "Redo %1"
+
+#: src/MainWindow.cpp:648
+#, kde-format
+msgctxt "The library tab title %1 is the file name"
+msgid "%1 Library"
+msgstr "%1 Library"
+
+#: src/MainWindow.cpp:650
+#, kde-format
+msgctxt "The editor tab title %1 is the file name"
+msgid "%1 Editor"
+msgstr "%1 Editor"
+
+#: src/MainWindow.cpp:742
+#, kde-format
+msgctxt "The Editor configuration page"
+msgid "Editor"
+msgstr "Editor"
+
+#: src/MainWindow.cpp:774
+#, kde-format
+msgid ""
+"Imports another library appending the symbols it contains to the current "
+"library."
+msgstr ""
+"Imports another library appending the symbols it contains to the current "
+"library."
+
+#: src/MainWindow.cpp:779
+#, kde-format
+msgid "Save Symbol"
+msgstr "Save Symbol"
+
+#: src/MainWindow.cpp:780
+#, kde-format
+msgid ""
+"Save the symbol to the library. If this is a new symbol, subsequent saves "
+"will create additional symbols in the library. If the symbol was selected "
+"from the library to edit then saving will update that symbol in the library."
+msgstr ""
+"Save the symbol to the library. If this is a new symbol, subsequent saves "
+"will create additional symbols in the library. If the symbol was selected "
+"from the library to edit then saving will update that symbol in the library."
+
+#: src/MainWindow.cpp:786
+#, kde-format
+msgid "Save Symbol as New"
+msgstr "Save Symbol as New"
+
+#: src/MainWindow.cpp:787
+#, kde-format
+msgid ""
+"Save the current symbol as a new one in the library. Subsequent saves will "
+"update the new symbol."
+msgstr ""
+"Save the current symbol as a new one in the library. Subsequent saves will "
+"update the new symbol."
+
+#: src/MainWindow.cpp:800
+#, kde-format
+msgid "Fill Path"
+msgstr "Fill Path"
+
+#: src/MainWindow.cpp:801
+#, kde-format
+msgid ""
+"Enable path filling. The path defines the closed boundary of the shape and "
+"the path is filled with the selected fill method."
+msgstr ""
+"Enable path filling. The path defines the closed boundary of the shape and "
+"the path is filled with the selected fill method."
+
+#: src/MainWindow.cpp:811
+#, kde-format
+msgid "Odd Even Fill"
+msgstr "Odd Even Fill"
+
+#: src/MainWindow.cpp:812
+#, kde-format
+msgid "The Odd Even fill method will fill alternate areas of the symbol."
+msgstr "The Odd Even fill method will fill alternate areas of the symbol."
+
+#: src/MainWindow.cpp:820
+#, kde-format
+msgid "Winding Fill"
+msgstr "Winding Fill"
+
+#: src/MainWindow.cpp:821
+#, kde-format
+msgid "The Winding fill method will fill the complete interior of the path."
+msgstr "The Winding fill method will fill the complete interior of the path."
+
+#: src/MainWindow.cpp:834
+#, kde-format
+msgid "Flat Cap"
+msgstr "Flat Cap"
+
+#: src/MainWindow.cpp:835
+#, kde-format
+msgid ""
+"The Flat Cap end type provides a square end that stops at the end point of "
+"the line.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr ""
+"The Flat Cap end type provides a square end that stops at the end point of "
+"the line.\n"
+"\n"
+"This is only applicable to non-filled paths."
+
+#: src/MainWindow.cpp:843
+#, kde-format
+msgid "Square Cap"
+msgstr "Square Cap"
+
+#: src/MainWindow.cpp:844
+#, kde-format
+msgid ""
+"The Square Cap end type provides a square end that projects beyond the end "
+"point of the line by half the line width.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr ""
+"The Square Cap end type provides a square end that projects beyond the end "
+"point of the line by half the line width.\n"
+"\n"
+"This is only applicable to non-filled paths."
+
+#: src/MainWindow.cpp:852
+#, kde-format
+msgid "Round Cap"
+msgstr "Round Cap"
+
+#: src/MainWindow.cpp:853
+#, kde-format
+msgid ""
+"The Round Cap end type provides a round end that projects beyond the end "
+"point of the line with a radius of half the line width.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr ""
+"The Round Cap end type provides a round end that projects beyond the end "
+"point of the line with a radius of half the line width.\n"
+"\n"
+"This is only applicable to non-filled paths."
+
+#: src/MainWindow.cpp:866
+#, kde-format
+msgid "Bevel Join"
+msgstr "Bevel Join"
+
+#: src/MainWindow.cpp:867
+#, kde-format
+msgid ""
+"The Bevel Join provides a beveled corner between two lines.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr ""
+"The Bevel Join provides a bevelled corner between two lines.\n"
+"\n"
+"This is only applicable to non-filled paths."
+
+#: src/MainWindow.cpp:875
+#, kde-format
+msgid "Miter Join"
+msgstr "Mitre Join"
+
+#: src/MainWindow.cpp:876
+#, kde-format
+msgid ""
+"The Miter Join provides a mitered corner between two lines.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr ""
+"The Mitre Join provides a mitred corner between two lines.\n"
+"\n"
+"This is only applicable to non-filled paths."
+
+#: src/MainWindow.cpp:884
+#, kde-format
+msgid "Round Join"
+msgstr "Round Join"
+
+#: src/MainWindow.cpp:885
+#, kde-format
+msgid ""
+"The Round Join provides a rounded corner between two lines using a radius of "
+"half the line width.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr ""
+"The Round Join provides a rounded corner between two lines using a radius of "
+"half the line width.\n"
+"\n"
+"This is only applicable to non-filled paths."
+
+#: src/MainWindow.cpp:896
+#, kde-format
+msgid ""
+"Increases the line width.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr ""
+"Increases the line width.\n"
+"\n"
+"This is only applicable to non-filled paths."
+
+#: src/MainWindow.cpp:903
+#, kde-format
+msgid ""
+"Decreases the line width.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr ""
+"Decreases the line width.\n"
+"\n"
+"This is only applicable to non-filled paths."
+
+#: src/MainWindow.cpp:914
+#, kde-format
+msgid ""
+"Move the current point to a new position. This implicitly closes any "
+"existing sub path, starting a new one."
+msgstr ""
+"Move the current point to a new position. This implicitly closes any "
+"existing sub path, starting a new one."
+
+#: src/MainWindow.cpp:923
+#, kde-format
+msgid ""
+"Add a straight line from the current position to a defined end point. The "
+"end point becomes the new current position."
+msgstr ""
+"Add a straight line from the current position to a defined end point. The "
+"end point becomes the new current position."
+
+#: src/MainWindow.cpp:932
+#, kde-format
+msgid ""
+"Add a cubic bezier curve from the current position using two control points "
+"and an end point. The end point becomes the new current position."
+msgstr ""
+"Add a cubic bezier curve from the current position using two control points "
+"and an end point. The end point becomes the new current position."
+
+#: src/MainWindow.cpp:940
+#, kde-format
+msgid "Rectangle"
+msgstr "Rectangle"
+
+#: src/MainWindow.cpp:941
+#, kde-format
+msgid ""
+"Add a rectangle as a separate sub path defined by two points representing "
+"the opposite corners."
+msgstr ""
+"Add a rectangle as a separate sub path defined by two points representing "
+"the opposite corners."
+
+#: src/MainWindow.cpp:949
+#, kde-format
+msgid "Ellipse"
+msgstr "Ellipse"
+
+#: src/MainWindow.cpp:950
+#, kde-format
+msgid ""
+"Add an ellipse as a separate sub path defined by a bounding rectangle "
+"represented by two opposite corners."
+msgstr ""
+"Add an ellipse as a separate sub path defined by a bounding rectangle "
+"represented by two opposite corners."
+
+#: src/MainWindow.cpp:958
+#, kde-format
+msgid "Insert Character"
+msgstr "Insert Character"
+
+#: src/MainWindow.cpp:959
+#, kde-format
+msgid ""
+"Allows selection of a character from any font to be inserted as a closed sub "
+"path. The inserted character will overwrite any existing path, but "
+"additional sub paths may be added to the character."
+msgstr ""
+"Allows selection of a character from any font to be inserted as a closed sub "
+"path. The inserted character will overwrite any existing path, but "
+"additional sub paths may be added to the character."
+
+#: src/MainWindow.cpp:970
+#, kde-format
+msgid ""
+"Rotate all the points of a path counter-clockwise 90 degrees around the "
+"center of the editor."
+msgstr ""
+"Rotate all the points of a path counter-clockwise 90 degrees around the "
+"centre of the editor."
+
+#: src/MainWindow.cpp:977
+#, kde-format
+msgid ""
+"Rotate all the points of a path clockwise 90 degrees around the center point "
+"of the editor."
+msgstr ""
+"Rotate all the points of a path clockwise 90 degrees around the centre point "
+"of the editor."
+
+#: src/MainWindow.cpp:984
+#, kde-format
+msgid ""
+"Flip all the points of the path horizontally about the vertical center of "
+"the editor."
+msgstr ""
+"Flip all the points of the path horizontally about the vertical centre of "
+"the editor."
+
+#: src/MainWindow.cpp:991
+#, kde-format
+msgid ""
+"Flip all the points of the path vertically about the horizontal center of "
+"the editor."
+msgstr ""
+"Flip all the points of the path vertically about the horizontal centre of "
+"the editor."
+
+#: src/MainWindow.cpp:998
+#, kde-format
+msgid ""
+"Scale the current symbol so that it fits within the preferred size of a "
+"symbol."
+msgstr ""
+"Scale the current symbol so that it fits within the preferred size of a "
+"symbol."
+
+#: src/MainWindow.cpp:1004
+#, kde-format
+msgid "Enable Snap"
+msgstr "Enable Snap"
+
+#: src/MainWindow.cpp:1005
+#, kde-format
+msgid "Enable snapping of points to guide intersections or to the grid."
+msgstr "Enable snapping of points to guide intersections or to the grid."
+
+#: src/MainWindow.cpp:1012
+#, kde-format
+msgid "Enable Guides"
+msgstr "Enable Guides"
+
+#: src/MainWindow.cpp:1013
+#, kde-format
+msgid "Enable the generation of guide intersections."
+msgstr "Enable the generation of guide intersections."
+
+#. i18n: ectx: label, entry (Editor_GridElements), group (editor)
+#: SymbolEditor.kcfg:10
+#, kde-format
+msgid "The number of elements in a grid."
+msgstr "The number of elements in a grid."
+
+#. i18n: ectx: label, entry (Editor_ElementSize), group (editor)
+#: SymbolEditor.kcfg:14
+#, kde-format
+msgid "The size in pixels of a grid element."
+msgstr "The size in pixels of a grid element."
+
+#. i18n: ectx: label, entry (Editor_ElementGrouping), group (editor)
+#: SymbolEditor.kcfg:18
+#, kde-format
+msgid "The number of elements in a group."
+msgstr "The number of elements in a group."
+
+#. i18n: ectx: label, entry (Editor_PointSize), group (editor)
+#: SymbolEditor.kcfg:22
+#, kde-format
+msgid "The size of a point in pixels."
+msgstr "The size of a point in pixels."
+
+#. i18n: ectx: label, entry (Editor_SnapThreshold), group (editor)
+#: SymbolEditor.kcfg:26
+#, kde-format
+msgid "The distance to check within the range of a point."
+msgstr "The distance to check within the range of a point."
+
+#. i18n: ectx: label, entry (Editor_BorderSize), group (editor)
+#: SymbolEditor.kcfg:30
+#, kde-format
+msgid "The number of cell elements used for the border."
+msgstr "The number of cell elements used for the border."
+
+#. i18n: ectx: label, entry (Editor_PreferredSizeColor), group (editor)
+#: SymbolEditor.kcfg:34
+#, kde-format
+msgid "The color of the preferred size rectangle"
+msgstr "The colour of the preferred size rectangle"
+
+#. i18n: ectx: label, entry (Editor_GuideLineColor), group (editor)
+#: SymbolEditor.kcfg:38
+#, kde-format
+msgid "The color of the guide lines"
+msgstr "The colour of the guide lines"
+
+#. i18n: ectx: label, entry (Editor_SimplifiedGuideLines), group (editor)
+#: SymbolEditor.kcfg:42
+#, kde-format
+msgid "Whether to use a simplified range of angles to test"
+msgstr "Whether to use a simplified range of angles to test"
+
+#. i18n: ectx: Menu (tools)
+#: SymbolEditorui.rc:10
+#, kde-format
+msgid "&Tools"
+msgstr "&Tools"
+
+#. i18n: ectx: Menu (rendering)
+#: SymbolEditorui.rc:27
+#, kde-format
+msgid "&Rendering"
+msgstr "&Rendering"
+
+#. i18n: ectx: ToolBar (ToolsToolbar)
+#: SymbolEditorui.rc:47
+#, kde-format
+msgid "Tool Toolbar"
+msgstr "Tool Toolbar"
+
+#. i18n: ectx: ToolBar (RenderingToolbar)
+#: SymbolEditorui.rc:64
+#, kde-format
+msgid "Rendering Toolbar"
+msgstr "Rendering Toolbar"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, EditorConfigPage)
+#: ui/EditorConfigPage.ui:14
+#, kde-format
+msgid "Editor Configuration Page"
+msgstr "Editor Configuration Page"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/EditorConfigPage.ui:20
+#, kde-format
+msgid "Grid elements"
+msgstr "Grid elements"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/EditorConfigPage.ui:40
+#, kde-format
+msgid "Element size"
+msgstr "Element size"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: ui/EditorConfigPage.ui:60
+#, kde-format
+msgid "Element grouping"
+msgstr "Element grouping"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: ui/EditorConfigPage.ui:80
+#, kde-format
+msgid "Point size"
+msgstr "Point size"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: ui/EditorConfigPage.ui:100
+#, kde-format
+msgid "Snap threshold"
+msgstr "Snap threshold"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: ui/EditorConfigPage.ui:123
+#, kde-format
+msgid "Border size"
+msgstr "Border size"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: ui/EditorConfigPage.ui:140
+#, kde-format
+msgid "Preferred size box color"
+msgstr "Preferred size box colour"
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: ui/EditorConfigPage.ui:158
+#, kde-format
+msgid "Guide line color"
+msgstr "Guide line colour"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_Editor_SimplifiedGuideLines)
+#: ui/EditorConfigPage.ui:176
+#, kde-format
+msgid "Simplified guide lines"
+msgstr "Simplified guide lines"
+
+#~ msgid "Steve Allewell"
+#~ msgstr "Steve Allewell"
+
+#~ msgid "Failed to open the file %1"
+#~ msgstr "Failed to open the file %1"
+
+#~ msgid "Failed to download the file %1"
+#~ msgstr "Failed to download the file %1"

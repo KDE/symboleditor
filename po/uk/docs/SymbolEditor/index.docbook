@@ -1,0 +1,92 @@
+<?xml version = '1.0'?>
+    <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+    <!ENTITY symboleditor '<application
+>SymbolEditor</application
+>'>
+    <!ENTITY kxstitch '<application
+>KXStitch</application
+>'>
+    <!ENTITY % addindex "IGNORE">
+    <!ENTITY % Ukrainian "INCLUDE">
+    <!ENTITY introduction SYSTEM "introduction.docbook">
+    <!ENTITY ui SYSTEM "ui.docbook">
+    <!ENTITY commands SYSTEM "commands.docbook">
+    <!ENTITY symbols SYSTEM "symbols.docbook">
+    <!ENTITY dialogs SYSTEM "dialogs.docbook">
+    <!ENTITY credits SYSTEM "credits.docbook">
+    ]>
+
+<book lang="&language;">
+    <bookinfo>
+        <title
+>Підручник з &symboleditor;</title>
+        <authorgroup>
+            <author
+><firstname
+>Stephen</firstname
+> <othername
+>P.</othername
+> <surname
+>Allewell</surname
+> <affiliation
+><address
+><email
+>steve.allewell@gmail.com</email
+></address
+></affiliation>
+            </author>
+            <othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+> 
+        </authorgroup>
+        <copyright>
+            <year
+>2012-2019</year>
+            <holder
+>Stephen P. Allewell</holder>
+        </copyright>
+        <legalnotice
+>&FDLNotice;</legalnotice>
+        <date
+>19 червня 2019 року</date>
+        <releaseinfo
+>SymbolEditor 2.1.0</releaseinfo>
+        <abstract>
+            <para
+>&symboleditor; — програма для створення та редагування бібліотек позначок програми &kxstitch;. </para>
+        </abstract>
+        <keywordset>
+            <keyword
+>KDE</keyword>
+            <keyword
+>Вишивання</keyword>
+            <keyword
+>Хрестик</keyword>
+            <keyword
+>Стібок</keyword>
+            <keyword
+>Позначка</keyword>
+        </keywordset>
+    </bookinfo>
+
+    &introduction;
+    &ui;
+    &symbols;
+    &commands;
+    &dialogs;
+    &credits;
+
+    &documentation.index;
+</book>

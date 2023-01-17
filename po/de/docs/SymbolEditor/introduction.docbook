@@ -1,0 +1,20 @@
+<chapter id="introduction">
+    <title
+>Einführung</title>
+    <para
+>&symboleditor; wird verwendet, um Kreuzstichsymbole für die Anwendung &kxstitch; zu erstellen. Ursprünglich verwendete &kxstitch; Standard-Schriftarten, um diese Symbole bereitzustellen, aber die Unterschiede in den Benutzersprachen und die Qualität der verfügbaren Zeichensätze zusammen mit der Ausrichtung der Zeichen und der begrenzten Anzahl verfügbarer Zeichen haben dazu geführt, dass ein eigener Symbolzeichensatz erstellt werden musste. </para>
+    <para
+>Der Symbolzeichensatz wird in einer Datei gespeichert und es können mehrere Dateien je nach den Bedürfnissen des Benutzers erstellt werden, z. B. ein Halloween-Symbolzeichensatz für Halloween-Muster. </para>
+    <para
+>Jede Datei enthält eine Reihe von Symbolen, die in der Karteikarte „Symbolbibliothek“ angezeigt werden. Die Bearbeitung vorhandener Symbole erfolgt durch durch Anklicken des Eintrags in der Bibliothek, wodurch der Editor mit diesem Symbol geöffnet wird. Alternativ können auch neue Symbole erstellt und der Bibliothek hinzugefügt werden. </para>
+    <para
+>Bitte melden Sie Probleme oder Funktionswünsche an die KDE-Mailingliste symboleditor@kde.org, die Sie <ulink url="http://mail.kde.org/mailman/listinfo/symboleditor"
+>hier</ulink
+> abonnieren können oder an das KDE-Fehlerverfolgungssystem unter <ulink url="http://bugs.kde.org/"
+>https://bugs.kde.org/</ulink
+>. </para>
+    <para
+>Die Webseite von &symboleditor; finden Sie auf <ulink url="http://userbase.kde.org/SymbolEditor"
+>http://userbase.kde.org/SymbolEditor</ulink
+>. </para>
+</chapter>

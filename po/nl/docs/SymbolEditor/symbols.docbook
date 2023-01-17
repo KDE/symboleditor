@@ -1,0 +1,12 @@
+<chapter id="symbols">
+    <title
+>Symbolen</title>
+    <para
+>Symbolen worden gemaakt als QPainterPath objecten met additionele informatie die attributen van het pad definiëren. Een QPainterPath bestaat uit subpaden zoals rechthoeken, ellipsen of gekoppelde lijnen en bezier-krommen. De paden kunnen elkaar kruisen waardoor complexe vormen ontstaan. </para>
+    <para
+>Het symbool kan gevuld zijn met ofwel de draaioptie die het gehele pad zal vullen of de oneven-even optie die afwisselende secties van het pad vullen. </para>
+    <para
+>Als het pad niet is gevuld zal de rand een gedefinieerde lijnbreedte bezitten, type eindpuntvorm en type lijnaansluiting. </para>
+    <para
+>Zie de documentatie van QPainterPath voor meer detail. </para>
+</chapter>

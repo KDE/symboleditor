@@ -1,0 +1,12 @@
+<chapter id="symbols">
+    <title
+>Symbole</title>
+    <para
+>Symbole werden als QPainterPath-Objekte mit zusätzlichen Informationen erzeugt, die Attribute des Pfades definieren. Ein QPainterPath setzt sich aus Unterpfaden zusammen wie wie Rechtecke, Ellipsen oder Ketten von Linien und Bezier-Kurven. Die Pfade können sich gegenseitig überschneiden und komplexe Formen bilden. </para>
+    <para
+>Das Symbol kann entweder mit der Einstellung „Gewundene Füllung“ gefüllt werden, die den gesamten Pfad ausfüllt, oder mit der Einstellung „Gerade-Ungerade“, die abwechselnde Abschnitte des Pfades ausfüllt. </para>
+    <para
+>Wenn der Pfad nicht gefüllt ist, hat die Umrisslinie eine definierte Linienbreite, Endkappentyp, und Linienverbindungstyp. </para>
+    <para
+>Weitergehende Informationen finden Sie in der Dokumentation zu QPainterPath. </para>
+</chapter>

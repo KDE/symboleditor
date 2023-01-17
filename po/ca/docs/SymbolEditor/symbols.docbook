@@ -1,0 +1,12 @@
+<chapter id="symbols">
+    <title
+>Símbols</title>
+    <para
+>Els símbols es creen com a objectes QPainterPath amb informació addicional que defineix els atributs del camí. Un QPainterPath es compon de subcamins, com rectangles, el·lipses o cadenes de línies i corbes de Bézier. Els camins es poden creuar entre si formant formes complexes. </para>
+    <para
+>El símbol pot emplenar-se utilitzant l'opció de sinuós, la qual emplenarà tot el camí o l'opció alterna, la qual emplenarà seccions alternatives del camí. </para>
+    <para
+>Si el camí no està emplenat, el contorn tindrà una amplada definida de línia, un tipus de punta final i un tipus d'unió de línia. </para>
+    <para
+>Per a més detalls, vegeu la documentació del QPainterPath. </para>
+</chapter>

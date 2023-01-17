@@ -1,0 +1,631 @@
+<chapter id="commands">
+    <title
+>Overzicht van de opdrachten</title>
+
+    <sect1 id="menus">
+        <title
+>Menu's van &symboleditor;</title>
+        <sect2>
+            <title
+>Het menu Bestand</title>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+><keycap
+>&Ctrl;</keycap
+><keycap
+>N</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Nieuw</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Maakt een nieuwe bibliotheek</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+><keycap
+>&Ctrl;</keycap
+><keycap
+>O</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Openen</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Opent een bestaand bibliotheek</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Recent geopend</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Een onlangs gebruikte bibliotheek openen</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+><keycap
+>&Ctrl;</keycap
+><keycap
+>S</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Opslaan</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Slaat de bibliotheek op</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+><keycap
+>&Ctrl;&Shift;</keycap
+><keycap
+>S</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Opslaan als</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Slaat de bibliotheek op onder een nieuwe naam</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Symbool opslaan</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Bewerkte symbool opslaan</action
+></simpara
+> <simpara
+>Als het bewerkte symbool uit een bibliotheek komt, dan zal het symbool door het opslaan worden bijgewerkt. Als het een nieuw symbool is, dan zal het aan de bibliotheek worden toegevoegd. </simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Symbool opslaan als nieuw</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Bewerkt symbool opslaan als nieuw symbool</action
+></simpara
+> <simpara
+>Als u een symbool als nieuw opslaat dan wordt het aan de bibliotheek toegevoegd, onafhankelijk van het feit of het al een in de bibliotheek bestaand symbool was. Als gevolg daarvan zal het als nieuw symbool aan de bibliotheek toegevoegd worden. </simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Bibliotheek importeren</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Importeer een bibliotheek zodat de zich daarin bevindende symbolen worden toegevoegd aan de huidige bibliotheek</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;<keycap
+>W</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Sluiten</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>De bibliotheek sluiten</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+></shortcut
+> <guimenuitem
+>Afsluiten</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>&symboleditor; afsluiten</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>Het menu Bewerken</title>
+            <para
+>&symboleditor; heeft de standaard &kde;-menuitems <guimenu
+>Bewerken</guimenu
+>, lees voor meer informatie de secties over het <ulink url="help:/fundamentals/ui.html#menu-edit"
+>Bewerken Menu</ulink
+> van de &kde; Fundamentals. </para>
+        </sect2>
+
+        <sect2>
+            <title
+>De menu's voor renderen en de werkbalk</title>
+            <screenshot>
+                <screeninfo
+>Hier is een schermafbeelding van de werkbalk voor renderen</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="renderer-toolbar.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+                </screenshot>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Pad invullen</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Pad invullen inschakelen</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Winding vullen</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selecteer de volledige binnenkant van het pad vullen</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Oneven-even vullen</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selecteer de alternerende gebieden van het symbool vullen</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Platte kap</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selecteer het type platte eindpunt</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Vierkante kap</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selecteer het type vierkante eindpunt</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Ronde kap</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selecteer het type ronde eindpunt</action
+></simpara
+></listitem
+></varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Gekante verbinding</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selecteer het type gekante lijnverbinding</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Verstekverbinding</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selecteer het type verstek lijnverbinding</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Ronde verbinding</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selecteer het type ronde lijnverbinding</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Lijnbreedte vergroten</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Vergroot de lijnbreedte van pad</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Lijnbreedte verkleinen</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Verkleint de lijnbreedte van pad</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>Het menu Hulpmiddelen en Werkbalk</title>
+            <para
+>Een aantal hulpmiddelen zijn beschikbaar voor het ontwerpen van de symbolen. De symbolen zijn samengesteld uit een serie sub paden en ieder sub pad bestaat uit een beweging naar de startpositie (standaard is dit 0,0 voor nieuwe symbolen) gevolgd door lijnen en curves. De curves zijn cubic splines met een beginpunt, een eindpunt en twee controle punten die de curve definiëren. Er zijn handige hulpmiddelen voor het creëren van rechthoeken en ellipsen, maar deze zijn wel opgedeeld in lijnen en curves. </para>
+            <para
+>Alle voor de elementen gecreëerde punten zijn verplaatsbaar door ze te verslepen naar hun nieuwe positie. Alle punten klikken aan het rooster vast als het vastklikken is ingeschakeld, in het andere geval kunt u ze overal plaatsen. </para>
+            <para
+>U kunt het symbool met de klok mee of tegen de klok in roteren en ook verticaal of horizontaal spiegelen. Hierdoor kunt u op hetzelfde ontwerp gebaseerd makkelijk meerdere symbolen creëren. Vergeet niet om het als nieuw symbool op te slaan. </para>
+            <screenshot>
+                <screeninfo
+>Hier is een schermafbeelding van de werkbalk</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="tool-toolbar.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+                </screenshot>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Verplaatsen naar</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Verplaats het startpositie van het sub pad</action
+></simpara
+> <simpara
+>Als een bestaand sub pad is gecreëerd, dan zal dit worden gesloten en een nieuw sub pad gestart op de nieuwe positie</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Tekenen naar</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Tekent een lijn naar het volgende geselecteerde punt</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Kubus naar</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Tekent een bezier curve met behulp van twee controle punten, een beginpunt en een eindpunt</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Rechthoek</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Tekent een rechthoek tussen twee tegenover liggende hoekpunten</action
+></simpara
+> <simpara
+>Dit sluit een bestaand sub path en creëert een nieuw sub path bestaand uit de rechthoek.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Ellips</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Tekent een ellips tussen twee tegenover liggende hoekpunten</action
+></simpara
+> <simpara
+>Dit sluit een bestaand sub path en creëert een nieuw sub path bestaand uit de ellips.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Teken invoegen</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selecteert een karakter uit een font en voegt die in het bewerkingscherm</action
+></simpara
+> <simpara
+>Dit overschrijft bestaande paden</simpara
+> <screenshot
+> <screeninfo
+>Hier ziet u een schermafbeelding van het selecteren van een karakter</screeninfo
+> <mediaobject
+> <imageobject
+> <imagedata fileref="charselect-dialog.png" format="PNG"/> </imageobject
+> </mediaobject
+> </screenshot
+> <simpara
+>Het selectie dialoog voor karakters is een standaard KDE dialoog waarmee u karakters uit elk font kunt selecteren. De grootte wordt niet gebruikt omdat het karakter verschaalt wordt zodat het past in het ingestelde grootte.</simpara
+> <simpara
+>Dubbel klikken zal het karakter in de editor doen voegen. Het hulpvenster blijft open zodat u een ander karakter kan invoegen, maar die dan wel de eerste overschrijft. Dit maakt een werkmethode mogelijk van karakter invoegen, opslaan, karakter invoegen, opslaan, zodat u snel een bibliotheek met symbolen kan opbouwen. Let er wel op dat u het als nieuw symbool opslaat, omdat u anders iedere keer weer de vorige in de bibliotheek overschrijft.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Linksom draaien</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Roteert het hele symbool 90 graden tegen de klok in</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Rechtsom draaien</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Roteert het hele symbool 90 graden met de klok mee</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Horizontaal omklappen</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Spiegelt het symbool over de verticale as</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Vertikaal omklappen</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Spiegelt het symbool over de horizontale as</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Schalen naar grootte van voorkeur</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Verschaalt het symbool zodat het past in de ingestelde grootte</action
+></simpara
+> <simpara
+>Merk op dat dit alleen de punten wijzigt; als u een niet gevuld symbool heeft gecreëerd en een lijnbreedte heeft gedefinieerd, dan kan dit uitsteken.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Magnetisch inschakelen</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Magnetisch aanklikken van punten aan het raster inschakelen</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Hulplijnen</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>De generatie van hulpraster inschakelen</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>De menu's Instellingen en Help</title>
+            <para
+>&symboleditor; heeft de standaard &kde;-menuitems <guimenu
+>Instellingen</guimenu
+> en <guimenu
+>Help</guimenu
+>, lees voor meer informatie de secties over het <ulink url="help:/fundamentals/ui.html#menus-settings"
+>Menu Instellingen</ulink
+> en <ulink url="help:/fundamentals/ui.html#menus-help"
+>Help Menu</ulink
+> van de &kde; Fundamentals. </para>
+        </sect2>
+    </sect1>
+</chapter>

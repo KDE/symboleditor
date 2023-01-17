@@ -1,0 +1,12 @@
+<chapter id="symbols">
+    <title
+>Símbolos</title>
+    <para
+>Os símbolos são criados como objetos QPainterPath com informações adicionais que definem os atributos do caminho. Um QPainterPath é composto por subcaminhos, como retângulos, elipses ou sequências de linhas e curvas Bezier. Os caminhos podem se cruzar, criando formas complexas. </para>
+    <para
+>O símbolo poderá ser preenchido com a opção de pesquisa, que irá preencher o caminho completo, ou a opção de par-ímpar que irá preencher seções alternadas do caminho. </para>
+    <para
+>Se o caminho não estiver preenchido, o contorno terá uma espessura de linha, um tipo de extremos e de junções de linhas definidos. </para>
+    <para
+>Consulte a documentação do QPainterPath para obter mais detalhes. </para>
+</chapter>

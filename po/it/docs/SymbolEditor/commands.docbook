@@ -1,0 +1,623 @@
+<chapter id="commands">
+    <title
+>Guida ai comandi</title>
+
+    <sect1 id="menus">
+        <title
+>I menu di &symboleditor;</title>
+        <sect2>
+            <title
+>Il menu File</title>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Nuovo</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Crea una nuova libreria</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Apri</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Apre una libreria esistente</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Aprire recenti</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Aprire una libreria utilizzata di recente</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Salva</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Salva la libreria</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;&Shift;<keycap
+>S</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Salva come</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Salva la libreria con un nuovo nome</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Salvare un simbolo</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Salvare il simbolo in fase di modifica</action
+></simpara
+><simpara
+>Se il simbolo in fase di modifica è stato selezionato dalla libreria, il salvataggio aggiornerà quel simbolo. Se si tratta di un nuovo simbolo, sarà aggiunto alla libreria e i salvataggi successivi aggiungeranno un altro nuovo simbolo alla libreria. </simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Salvare un simbolo come nuovo</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Salvare il simbolo in fase di modifica come nuovo simbolo</action
+></simpara
+><simpara
+>Quando un simbolo viene salvato come nuovo, sarà aggiunto alla libreria indipendentemente dal fatto che sia stato originariamente selezionato dalla libreria per la modifica. I salvataggi successivi aggiungeranno un altro nuovo simbolo alla libreria. </simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Importare una libreria</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Importare una libreria aggiungendo i simboli contenuti nella libreria attuale</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;<keycap
+>W</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Chiudi</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Chiudere la libreria</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Esci</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Chiude &symboleditor;</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>Il menu Modifica</title>
+            <para
+>&symboleditor; ha gli elementi comuni del menu <guimenu
+>Modifica</guimenu
+> di &kde;, per ulteriori informazioni leggere le sezioni relative <ulink url="help:/fundamentals/ui.html#menus-edit"
+>Menu Aiuto</ulink
+> dei Fondamentali di &kde;. </para>
+        </sect2>
+
+        <sect2>
+            <title
+>Il menu Rendering e la barra degli strumenti</title>
+            <screenshot>
+                <screeninfo
+>Ecco una schermata della barra degli strumenti di rendering</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="renderer-toolbar.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+                </screenshot>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Riempimento tracciato</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Abilitare il riempimento del percorso</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Riempimento ad avvolgimento</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selezionare il metodo di riempimento ad avvolgimento</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Riempimento pari-dispari</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selezionare il metodo di riempimento pari-dispari</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Punta piatta</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selezionare il tipo di chiusura della linea a punta piatta</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Punta quadrata</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selezionare il tipo di chiusura della linea a punta quadrata</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Punta arrotondata</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selezionare il tipo di chiusura della linea a punta arrotondata</action
+></simpara
+></listitem
+></varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Unione smussata</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selezionare il tipo di unione smussata della linea</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Unione rettangolare</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selezionare il tipo di unione rettangolare della linea</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Unione arrotondata</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selezionare il tipo di unione arrotondata della linea</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Aumenta spessore linea</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Aumentare lo spessore linea del tracciato</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Diminuisci spessore linea</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Diminuire lo spessore della linea del tracciato</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>Il menu Strumenti e la barra degli strumenti</title>
+            <para
+>Sono disponibili numerosi strumenti per facilitare la progettazione dei simboli. I simboli sono composti da una serie di sotto-tracciati e ogni sotto-tracciato è composto da un movimento alla posizione iniziale (l'impostazione predefinita è 0,0 per i nuovi simboli) seguita da linee e curve. Le curve sono spline cubiche che hanno un inizio, una fine e due punti di controllo che definiscono la curva. Ci sono strumenti utili da creare rettangoli ed ellissi, ma questi saranno suddivisi in linee e curve. </para>
+            <para
+>Tutti i punti creati per gli elementi sono mobili trascinandoli nella loro nuova posizione. Tutti i punti possono essere agganciati alle intersezioni della griglia se l'opzione di aggancio è attivata, altrimenti possono essere posizionati ovunque. </para>
+            <para
+>Il simbolo può essere ruotato in senso orario e antiorario e anche ribaltato verticalmente e orizzontalmente. Ciò consente di creare facilmente più simboli in base allo stesso progetto. Ricordarsi di utilizzare il simbolo di salvataggio come nuova opzione per questo. </para>
+            <screenshot>
+                <screeninfo
+>Ecco una schermata della barra degli strumenti</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="tool-toolbar.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+                </screenshot>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Spostare a</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Spostare la posizione iniziale del sotto-tracciato</action
+></simpara
+> <simpara
+>Se viene creato un sotto-tracciato esistente, questo sarà chiuso e un nuovo sotto-tracciato iniziato nella nuova posizione</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Traccia a</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Traccia una linea al successivo punto selezionato</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Cubica a</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Tracciare una curva di Bezier utilizzando due punti di controllo e un punto di chiusura</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Rettangolo</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Tracciare un rettangolo tra due angoli opposti</action
+></simpara
+> <simpara
+>Questo chiude qualsiasi sotto-tracciato esistente e crea un nuovo sotto-tracciato costituito dal rettangolo.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Ellisse</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Tracciare un'ellisse tra due angoli opposti</action
+></simpara
+> <simpara
+>Questo chiude qualsiasi sotto-tracciato esistente e crea un nuovo sotto-tracciato costituito dall'ellisse.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Inserire un carattere</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Selezionare un carattere da un tipo di carattere e inserirlo nell'editor</action
+></simpara
+> <simpara
+>Questo sovrascriverà tutti i tracciati esistenti</simpara
+> <screenshot
+> <screeninfo
+>Ecco una schermata del selettore di caratteri</screeninfo
+> <mediaobject
+> <imageobject
+> <imagedata fileref="charselect-dialog.png" format="PNG" /> </imageobject
+> </mediaobject
+> </screenshot
+> <simpara
+>La finestra di selezione dei caratteri è la finestra standard di KDE e consente la selezione di caratteri da qualsiasi tipo di carattere. La dimensione non viene utilizzata in quanto il carattere viene ridimensionato per adattarsi alla guida alle dimensioni preferita.</simpara
+> <simpara
+>Facendo doppio clic su un carattere si inserirà quel carattere nell'editor. La finestra rimarrà aperta in modo da poter inserire un altro carattere, anche se questo sovrascriverà il primo. Ciò consente di inserire un carattere, salvare, inserire un carattere, salvare il flusso di lavoro per creare rapidamente una libreria di simboli. Assicurarsi che il simbolo in fase di modifica sia un nuovo simbolo e non uno precedentemente selezionato dalla libreria, altrimenti il ​​salvataggio continuerebbe a sovrascrivere quello nella libreria.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Ruotare a sinistra</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Ruotare l'intero simbolo in senso antiorario di 90 gradi</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Ruotare a destra</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Ruotare l'intero simbolo in senso orario di 90 gradi</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Ribaltare orizzontalmente</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Ribaltare il simbolo sull'asse verticale</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Ribaltare verticalmente</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Ribaltare il simbolo sull'asse orizzontale</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Scalare alla dimensione preferita</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Ridimensionare il simbolo per adattarlo alla dimensione preferita definita</action
+></simpara
+> <simpara
+>Notare che questo riguarda solo i punti; dove viene creato un simbolo non riempito e viene definita una larghezza della linea, ciò può estendersi oltre la dimensione della guida.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Abilitare l'allineamento alla griglia</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Abilitare l'allineamento dei punti alla griglia</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Linee guida</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Abilita la generazione delle linee guida</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>I menu Impostazioni e Aiuto</title>
+            <para
+>&symboleditor; ha gli elementi comuni dei menu di &kde; <guimenu
+>Impostazioni</guimenu
+> e <guimenu
+>Aiuto</guimenu
+>, per ulteriori informazioni leggere le sezioni relative <ulink url="help:/fundamentals/ui.html#menus-settings"
+>Menu Impostazioni</ulink
+> e <ulink url="help:/fundamentals/ui.html#menus-help"
+>Menu Aiuto</ulink
+> dei Fondamentali di &kde;. </para>
+        </sect2>
+    </sect1>
+</chapter>

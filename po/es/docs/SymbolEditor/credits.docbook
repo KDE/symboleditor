@@ -1,0 +1,27 @@
+<chapter id="credits">
+    <title
+>Créditos y licencia</title>
+    <para
+>&kapp;</para>
+    <para
+>Copyright del programa 2012-2015 Stephen P. Allewell <email
+>steve.allewell@gmail.com</email
+></para>
+    <para
+>Colaboradores: <itemizedlist
+> <listitem
+> <para
+>Traducciones proporcionadas por diversos colaboradores. Consulte el archivos de traducciones para más detalles. </para>
+            </listitem>
+        </itemizedlist>
+    </para>
+    <para
+>Copyright de la documentación 2012-2015 Stephen P. Allewell <email
+>steve.allewell@gmail.com</email
+> </para>
+    <para
+>Traducido por Eloy Cuadra <email
+>ecuadra@eloihr.net</email
+>.</para
+> 
+&underFDL; &underGPL; </chapter>

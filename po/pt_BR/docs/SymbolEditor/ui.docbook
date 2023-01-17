@@ -1,0 +1,56 @@
+<chapter id="using-kapp">
+    <title
+>Interface do Usuário</title>
+
+    <sect1 id="face-screenshot">
+        <title
+>Janela principal do &kapp;</title>
+        <para
+>A janela principal consiste em uma janela em abas que contêm o editor de símbolos e uma área da biblioteca. Existe uma barra de menus e diversas barras de ferramentas que contêm as ações normais, as ferramentas de edição e as opções de desenho. A barra de status apresenta mensagens de uso das diversas ferramentas. </para>
+        <sect2 id="editor-window">
+            <title
+>Janela do Editor</title>
+            <para>
+                <screenshot>
+                    <screeninfo
+>Aqui está uma imagem da janela do Editor do &kapp;</screeninfo>
+                    <mediaobject
+><imageobject
+><imagedata fileref="mainwindow-editor.png" format="PNG"/></imageobject
+></mediaobject>
+                </screenshot>
+            </para>
+            <para
+>A janela do Editor permite a edição de um símbolo usando as ferramentas disponíveis. Consiste em uma grade que oferece pontos de ajuste e mostra uma guia com o tamanho preferido, permitindo que os símbolos sejam criados com um tamanho consistente. O tamanho da grade, o número de elementos e a guia do tamanho preferido são todos configuráveis. </para>
+            <para
+>O Editor oferece diretrizes para posicionamento dos pontos em relação a outros pontos existentes. As guias são posicionadas nos vetores horizontais, verticais e diagonais, a partir de um ponto existente e também em uma referência circular em torno do centro da grade. </para>
+            <screenshot>
+                <screeninfo
+>Aqui está uma imagem das guias do editor</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="editor-guides.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </sect2>
+        <sect2 id="library-window">
+            <title
+>Janela da Biblioteca</title>
+            <para>
+                <screenshot>
+                    <screeninfo
+>Aqui está uma imagem da janela da biblioteca do &kapp;</screeninfo>
+                    <mediaobject
+><imageobject
+><imagedata fileref="mainwindow-library.png" format="PNG"/></imageobject
+></mediaobject>
+                </screenshot>
+            </para>
+            <para
+>A janela da biblioteca mostra representações dos símbolos contidos na biblioteca. O símbolo em edição é apresentado com realce. A seleção de um símbolo irá abri-lo no editor, para que possa ser modificado. </para>
+            <para
+>É possível abrir várias instâncias do aplicativo Editor de Símbolos e copiar os símbolos de uma biblioteca para outra com a funcionalidade de arrastar e soltar. Certifique-se de que ambas as janelas das bibliotecas estão visíveis, depois clique e arraste o símbolo desejado de uma janela para a outra. O símbolo será então adicionado à biblioteca de destino. </para>
+        </sect2>
+    </sect1>
+</chapter>

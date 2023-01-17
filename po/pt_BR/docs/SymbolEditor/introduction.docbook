@@ -1,0 +1,20 @@
+<chapter id="introduction">
+    <title
+>Introdução</title>
+    <para
+>O &kapp; é usado para criar símbolos em ponto cruz para o aplicativo KXStitch. Originalmente, o KXStitch se baseava em fontes normais para fornecer esses símbolos, mas as diferenças nos idiomas do usuários e a qualidade das fontes disponíveis, em conjunto com o alinhamento dos caracteres e seu número limitado, criaram a necessidade de definir um conjunto de símbolos dedicado. </para>
+    <para
+>O conjunto de símbolos ficará armazenado em um arquivo, sendo possível criar vários arquivos, dependendo das necessidades dos usuários. Por exemplo, ter um conjunto de símbolos do Dia das Bruxas para um conjunto de padrões baseados nesse tema. </para>
+    <para
+>Cada um dos arquivos conterá uma série de símbolos que será apresentada na aba da biblioteca de símbolos. A edição dos símbolos existentes poderá ser feita clicando no item da biblioteca, o qual irá popular o editor com este símbolo. Alternativamente, novos símbolos pode ser criados e adicionados à biblioteca. </para>
+    <para
+>Por favor, relate todos os problemas ou solicitações de novas funcionalidades na lista de discussão para o &kapp; - symboleditor@kde.org. Você pode fazer a inscrição <ulink url="http://mail.kde.org/mailman/listinfo/symboleditor"
+>aqui</ulink
+> ou acessar o Sistema de Gerenciamento de Erros do KDE em <ulink url="http://bugs.kde.org/"
+>http://bugs.kde.org/</ulink
+>. </para>
+    <para
+>A página Web do SymbolEditor está em <ulink url="http://userbase.kde.org/SymbolEditor"
+>http://userbase.kde.org/SymbolEditor</ulink
+> </para>
+</chapter>

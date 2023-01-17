@@ -1,0 +1,56 @@
+<chapter id="using-symboleditor">
+    <title
+>L'interfaccia utente</title>
+
+    <sect1 id="face-screenshot">
+        <title
+>La finestra principale di &symboleditor;</title>
+        <para
+>La finestra principale è costituita da un oggetto a schede contenente l'editor dei simboli e una vista della libreria. C'è una barra dei menu e diverse barre degli strumenti contenenti azioni standard, strumenti di modifica e opzioni di rendering. La barra di stato fornisce istruzioni per l'uso dei vari strumenti. </para>
+        <sect2 id="editor-window">
+            <title
+>Finestra dell'editor</title>
+            <para>
+                <screenshot>
+                    <screeninfo
+>Ecco una schermata della finestra dell'editor di &symboleditor;</screeninfo>
+                    <mediaobject
+><imageobject
+><imagedata fileref="mainwindow-editor.png" format="PNG"/></imageobject
+></mediaobject>
+                </screenshot>
+            </para>
+            <para
+>La finestra dell'editor consente la modifica di un simbolo utilizzando gli strumenti disponibili. È costituita da una griglia che fornisce punti di aggancio e mostra una guida alle dimensioni preferita che consente di creare simboli con dimensioni coerenti. La dimensione della griglia, il numero di elementi e la guida alle dimensioni preferita sono tutti configurabili. </para>
+            <para
+>L'editor fornisce linee guida per posizionare i punti rispetto ai punti esistenti. Le guide sono posizionate sui vettori orizzontale, verticale e diagonale da un punto esistente e anche su un riferimento circolare attorno al centro della griglia. </para>
+            <screenshot>
+                <screeninfo
+>Ecco una schermata delle guide dell'editor</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="editor-guides.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </sect2>
+        <sect2 id="library-window">
+            <title
+>Finestra delle librerie</title>
+            <para>
+                <screenshot>
+                    <screeninfo
+>Ecco una schermata della finestra delle librerie di &symboleditor;</screeninfo>
+                    <mediaobject
+><imageobject
+><imagedata fileref="mainwindow-library.png" format="PNG"/></imageobject
+></mediaobject>
+                </screenshot>
+            </para>
+            <para
+>La finestra della libreria mostra le rappresentazioni dei simboli contenuti nella libreria. Il simbolo attualmente in fase di modifica è evidenziato. La selezione di un simbolo lo aprirà nell'editor in modo che possa essere modificato. </para>
+            <para
+>È possibile aprire diverse istanze dell'applicazione SymbolEditor e copiare i simboli da una libreria all'altra mediante il trascinamento della selezione. Assicurarsi che entrambe le finestre della libreria siano visibili, quindi fare clic e trascinare il simbolo richiesto da una finestra della libreria all'altra. Il simbolo sarà quindi aggiunto alla libreria di destinazione. </para>
+        </sect2>
+    </sect1>
+</chapter>

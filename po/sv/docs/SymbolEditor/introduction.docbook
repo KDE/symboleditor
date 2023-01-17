@@ -1,0 +1,20 @@
+<chapter id="introduction">
+    <title
+>Inledning</title>
+    <para
+>&symboleditor; används för att skapa korsstygnssymboler för programmet &kxstitch;. Från början förlitade sig &kxstitch; på standardteckensnitt för att tillhandahålla symbolerna, men skillnader i användarnas språk och kvaliteten på tillgängliga teckensnitt tillsammans med tecknens justering och det begränsade antalet tillgängliga teckensnitt, har lett till behovet att skapa en speciell symboluppsättning. </para>
+    <para
+>Symboluppsättningen lagras i en fil, och flera filer kan skapas beroende på användarens behov, exempelvis för att ha en Halloween-symboluppsättning för mönster med Halloween-tema. </para>
+    <para
+>Var och en av filerna innehåller en följd av symboler som visas under symbolbiblioteksfliken. Redigering av befintliga symboler kan göras genom att klicka på posten i biblioteket, vilket uppdaterar editorn med den symbolen. Som alternativ kan nya symboler skapas och läggas till i biblioteket. </para>
+    <para
+>Rapportera gärna eventuella problem eller önskemål om funktioner till KDE:s e-postlista symboleditor@kde.org för &symboleditor;, som du kan prenumerera på <ulink url="http://mail.kde.org/mailman/listinfo/symboleditor"
+>här</ulink
+>, eller med KDE:s felspårningssystem på <ulink url="http://bugs.kde.org/"
+>http://bugs.kde.org/</ulink
+>. </para>
+    <para
+>Symboleditorns hemsida finns på <ulink url="http://userbase.kde.org/SymbolEditor"
+>http://userbase.kde.org/SymbolEditor</ulink
+> </para>
+</chapter>

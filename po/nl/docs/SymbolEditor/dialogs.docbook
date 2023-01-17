@@ -1,0 +1,19 @@
+<chapter id="Dialogs">
+    <title
+>Dialogen</title>
+
+    <sect1 id="ConfigurationDialog">
+        <title
+>De instellingendialoog</title>
+        <para>
+            <screenshot
+><mediaobject
+><imageobject
+><imagedata fileref="configuration-dialog.png" format="PNG"/></imageobject
+></mediaobject
+></screenshot>
+        </para>
+        <para
+>De instellingendialoog stelt u in staat een aantal opties in te stellen. </para>
+    </sect1>
+</chapter>
