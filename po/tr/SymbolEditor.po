@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2021.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: SymbolEditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-19 00:45+0000\n"
-"PO-Revision-Date: 2022-12-17 18:44+0300\n"
+"PO-Revision-Date: 2023-01-18 22:31+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 "X-POOTLE-MTIME: 1497554702.000000\n"
 
 #: src/Commands.cpp:72 src/MainWindow.cpp:937
@@ -445,7 +445,7 @@ msgid ""
 msgstr ""
 "Düz Kapak bitiş türü, çizginin bitiş noktasında duran bir kare sağlar.\n"
 "\n"
-"Sadece doldurulmamış yollar içindir."
+"Yalnızca doldurulmamış yollar içindir."
 
 #: src/MainWindow.cpp:867
 #, kde-format
@@ -463,7 +463,7 @@ msgstr ""
 "Kare kapak bitiş türü, çizginin bitiş noktasından yarım çizgi genişliği "
 "sonrasında kare son sağlar.\n"
 "\n"
-"Sadece doldurulmamış yollar içindir."
+"Yalnızca doldurulmamış yollar içindir."
 
 #: src/MainWindow.cpp:876
 #, kde-format
@@ -481,7 +481,7 @@ msgstr ""
 "Yuvarlak Kapak bitiş türü, çizginin bitiş noktasından çizgi genişliğinin "
 "yarısı yarıçapında bir yuvarlak son sağlar.\n"
 "\n"
-"Sadece doldurulmamış yollar içindir."
+"Yalnızca doldurulmamış yollar içindir."
 
 #: src/MainWindow.cpp:890
 #, kde-format
@@ -497,7 +497,7 @@ msgid ""
 msgstr ""
 "Eğimli Birleştirme iki çizge arasında bir eğim sağlar.\n"
 "\n"
-"Bu sadece doldurulmamış yollar için uygulanabilirdir."
+"Bu yalnızca doldurulmamış yollar için uygulanabilirdir."
 
 #: src/MainWindow.cpp:899
 #, kde-format
@@ -513,7 +513,7 @@ msgid ""
 msgstr ""
 "Köşeli Birleştirme iki çizgi arasında köşeli köşe sağlar.\n"
 "\n"
-"Bu sadece doldurulmamış yollar içindir."
+"Bu yalnızca doldurulmamış yollar içindir."
 
 #: src/MainWindow.cpp:908
 #, kde-format
@@ -531,7 +531,7 @@ msgstr ""
 "Yuvarlak birleştirme iki çizgi arasında çizginin yarı uzunluğunu yarıçap "
 "olarak kullanan bir yuvarlak köşe sağlar.\n"
 "\n"
-"Bu sadece doldurulmamış yollar içindir."
+"Bu yalnızca doldurulmamış yollar içindir."
 
 #: src/MainWindow.cpp:920
 #, kde-format
@@ -542,7 +542,7 @@ msgid ""
 msgstr ""
 "Çizgi genişliğini artırır.\n"
 "\n"
-"Bu sadece doldurulmamış yollar içindir."
+"Bu yalnızca doldurulmamış yollar içindir."
 
 #: src/MainWindow.cpp:927
 #, kde-format
@@ -553,7 +553,7 @@ msgid ""
 msgstr ""
 "Çizgi genişliğini azaltır.\n"
 "\n"
-"Bu sadece doldurulmamış yollar içindir."
+"Bu yalnızca doldurulmamış yollar içindir."
 
 #: src/MainWindow.cpp:938
 #, kde-format
