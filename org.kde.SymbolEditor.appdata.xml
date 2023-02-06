@@ -19,6 +19,7 @@
   <name xml:lang="ia">SymbolEditor (Editor se symbolos)</name>
   <name xml:lang="id">SymbolEditor</name>
   <name xml:lang="it">SymbolEditor</name>
+  <name xml:lang="ka">SymbolEditor</name>
   <name xml:lang="ko">SymbolEditor</name>
   <name xml:lang="nl">SymbolEditor</name>
   <name xml:lang="nn">SymbolEditor</name>
@@ -106,6 +107,7 @@
     <p xml:lang="ia">Characteristicas:</p>
     <p xml:lang="id">Fitur:</p>
     <p xml:lang="it">Funzionalità:</p>
+    <p xml:lang="ka">თვისებები:</p>
     <p xml:lang="ko">기능:</p>
     <p xml:lang="nl">Kenmerken:</p>
     <p xml:lang="nn">Funksjonar:</p>
@@ -136,6 +138,7 @@
       <li xml:lang="hu">Több könyvtár létrehozása</li>
       <li xml:lang="id">Penciptaan pustaka yang multipel</li>
       <li xml:lang="it">Creazione di librerie multiple</li>
+      <li xml:lang="ka">ბევრი ბიბლიოთეკის შექმნა</li>
       <li xml:lang="ko">다양한 라이브러리 만들기</li>
       <li xml:lang="nl">Maken van meerdere bibliotheken</li>
       <li xml:lang="nn">Kan laga fleire symbolbibliotek</li>
@@ -164,6 +167,7 @@
       <li xml:lang="hu">Kitöltött és kitöltetlen szimbólumok</li>
       <li xml:lang="id">Simbol-simbol terisi dan takterisi</li>
       <li xml:lang="it">Simboli riempiti e svuotati</li>
+      <li xml:lang="ka">შევსებული და შეუვსებელი სიმბოლოები</li>
       <li xml:lang="ko">채워지거나 채워지지 않은 기호</li>
       <li xml:lang="nl">Gevulde en niet gevulde symbolen</li>
       <li xml:lang="nn">Fylde og tomme symbol</li>
@@ -191,6 +195,7 @@
       <li xml:lang="hu">Változó vonalvastagság, végződés- és csatlakozástípus</li>
       <li xml:lang="id">Lebar garis variabel, tipe ujung dan tipe gabung</li>
       <li xml:lang="it">Linee a larghezza variabile, tipi di fine e di unione</li>
+      <li xml:lang="ka">ცვლადი ხაზის სიგანეები, ტიპები და შეერთების ტიპები</li>
       <li xml:lang="ko">다양한 선 폭, 끝과 결합 형식</li>
       <li xml:lang="nl">Variabele lijnbreedte, eindsoorten en samenvoegsoorten</li>
       <li xml:lang="nn">Ulike breidder og hjørne- og endestilar for linjer</li>
@@ -218,6 +223,7 @@
       <li xml:lang="hu">Fogd és vidd egyik könyvtárból a másikba</li>
       <li xml:lang="id">Seret dan taruh dari salahsatu pustaka ke lainnya</li>
       <li xml:lang="it">Trascina da una libreria ad un'altra</li>
+      <li xml:lang="ka">გადაათრიეთ და დააგდეთ ერთი ბიბლიოთეკიდან სხვაზე</li>
       <li xml:lang="ko">라이브러리간 드래그 앤 드롭</li>
       <li xml:lang="nl">Verslepen en loslaten uit de ene bibliotheek naar een andere</li>
       <li xml:lang="nn">Dra og slepp mellom bibliotek</li>
