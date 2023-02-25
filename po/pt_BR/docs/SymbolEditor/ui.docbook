@@ -1,10 +1,10 @@
-<chapter id="using-kapp">
+<chapter id="using-symboleditor">
     <title
 >Interface do Usuário</title>
 
     <sect1 id="face-screenshot">
         <title
->Janela principal do &kapp;</title>
+>Janela principal do &symboleditor;</title>
         <para
 >A janela principal consiste em uma janela em abas que contêm o editor de símbolos e uma área da biblioteca. Existe uma barra de menus e diversas barras de ferramentas que contêm as ações normais, as ferramentas de edição e as opções de desenho. A barra de status apresenta mensagens de uso das diversas ferramentas. </para>
         <sect2 id="editor-window">
@@ -13,7 +13,7 @@
             <para>
                 <screenshot>
                     <screeninfo
->Aqui está uma imagem da janela do Editor do &kapp;</screeninfo>
+>Aqui está uma imagem da janela do Editor do &symboleditor;</screeninfo>
                     <mediaobject
 ><imageobject
 ><imagedata fileref="mainwindow-editor.png" format="PNG"/></imageobject
@@ -40,7 +40,7 @@
             <para>
                 <screenshot>
                     <screeninfo
->Aqui está uma imagem da janela da biblioteca do &kapp;</screeninfo>
+>Aqui está uma imagem da janela da biblioteca do &symboleditor;</screeninfo>
                     <mediaobject
 ><imageobject
 ><imagedata fileref="mainwindow-library.png" format="PNG"/></imageobject
