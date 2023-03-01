@@ -3,7 +3,9 @@
     <!ENTITY symboleditor '<application
 >SymbolEditor</application
 >'>
-    <!ENTITY kapp "&symboleditor;">
+    <!ENTITY kxstitch '<application
+>KXStitch</application
+>'>
     <!ENTITY % addindex "IGNORE">
     <!ENTITY % Brazilian-Portuguese "INCLUDE">
     <!ENTITY introduction SYSTEM "introduction.docbook">
@@ -17,7 +19,7 @@
 <book lang="&language;">
     <bookinfo>
         <title
->Manual do &kapp;</title>
+>Manual do &symboleditor;</title>
         <authorgroup>
             <author
 ><firstname
@@ -51,19 +53,19 @@
         </authorgroup>
         <copyright>
             <year
->2012-2015</year>
+>2012-2019</year>
             <holder
 >Stephen P. Allewell</holder>
         </copyright>
         <legalnotice
 >&FDLNotice;</legalnotice>
         <date
->27/07/2015</date>
+>19/06/2019</date>
         <releaseinfo
->V.2.0.0</releaseinfo>
+>SymbolEditor 2.1.0</releaseinfo>
         <abstract>
             <para
->&kapp; é um aplicativo que permite a criação e edição das bibliotecas de símbolos do aplicativo KXStitch. </para>
+>O &symboleditor; é um aplicativo que permite a criação e edição das bibliotecas de símbolos do aplicativo &kxstitch;. </para>
         </abstract>
         <keywordset>
             <keyword
