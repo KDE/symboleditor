@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the symboleditor package.
-# Shinjo Park <kde@peremen.name>, 2021.
+# Shinjo Park <kde@peremen.name>, 2021, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: symboleditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-19 00:45+0000\n"
-"PO-Revision-Date: 2021-05-24 19:16+0200\n"
+"PO-Revision-Date: 2023-03-01 01:34+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 20.12.3\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: src/Commands.cpp:72 src/MainWindow.cpp:937
 #, kde-format
@@ -247,24 +247,14 @@ msgid "Library"
 msgstr "라이브러리"
 
 #: src/MainWindow.cpp:283
-#, fuzzy, kde-format
-#| msgid ""
-#| "Save changes to the symbol?\n"
-#| "Selecting No discards changes."
+#, kde-format
 msgid "Save changes to the symbol?"
-msgstr ""
-"기호에 변경 사항을 저장하시겠습니까?\n"
-"아니요를 선택하면 변경 사항을 삭제합니다."
+msgstr "기호에 변경 사항을 저장하시겠습니까?"
 
 #: src/MainWindow.cpp:332
-#, fuzzy, kde-format
-#| msgid ""
-#| "Save changes to the library?\n"
-#| "Selecting No discards changes."
+#, kde-format
 msgid "Save changes to the library?"
-msgstr ""
-"라이브러리에 변경 사항을 저장하시겠습니까?\n"
-"아니요를 선택하면 변경 사항을 삭제합니다."
+msgstr "라이브러리에 변경 사항을 저장하시겠습니까?"
 
 #: src/MainWindow.cpp:371
 #, kde-format

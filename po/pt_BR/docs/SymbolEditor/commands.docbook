@@ -4,7 +4,7 @@
 
     <sect1 id="menus">
         <title
->Menus do &kapp;</title>
+>Menus do &symboleditor;</title>
         <sect2>
             <title
 >Menu Arquivo</title>
@@ -186,7 +186,7 @@
                         <listitem
 ><simpara
 ><action
->Sai do &kapp;</action
+>Sai do &symboleditor;</action
 ></simpara
 ></listitem>
                     </varlistentry>
@@ -198,9 +198,9 @@
             <title
 >Menu Editar</title>
             <para
->O &kapp; possui os itens de menu normais do &kde; para <guimenu
+>O &symboleditor; possui os itens de menu normais do &kde; para <guimenu
 >Editar</guimenu
->; para mais informações, leia as seções sobre o <ulink url="help:/fundamentals/ui.html#menus-settings"
+>; para mais informações, leia as seções sobre o <ulink url="help:/fundamentals/menus.html#menus-edit"
 >Menu Editar</ulink
 > dos Fundamentos do &kde;. </para>
         </sect2>
@@ -609,13 +609,13 @@
             <title
 >Menus Configurações e Ajuda</title>
             <para
->O &kapp; possui os itens dos menus <guimenu
+>O &symboleditor; possui os itens dos menus <guimenu
 >Configurações</guimenu
 > e <guimenu
 >Ajuda</guimenu
->, comuns do &kde;. Para mais informações, consulte as seções sobre o <ulink url="help:/fundamentals/ui.html#menus-settings"
+>, comuns do &kde;. Para mais informações, consulte as seções sobre o <ulink url="help:/fundamentals/menus.html#menus-settings"
 >Menu Configurações</ulink
-> e o <ulink url="help:/fundamentals/ui.html#menus-help"
+> e o <ulink url="help:/fundamentals/menus.html#menus-help"
 >Menu Ajuda</ulink
 > dos Fundamentos do &kde;. </para>
         </sect2>

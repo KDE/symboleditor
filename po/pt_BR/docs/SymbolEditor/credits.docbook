@@ -2,7 +2,7 @@
     <title
 >Créditos e Licença</title>
     <para
->&kapp;</para>
+>&symboleditor;</para>
     <para
 >Direitos autorais do programa 2012-2015 Stephen P. Allewell <email
 >steve.allewell@gmail.com</email
@@ -23,5 +23,4 @@
 >Tradução de André Marcelo Alvarenga <email
 >alvarenga@kde.org</email
 ></para
-> 
-&underFDL; &underGPL; </chapter>
+> &underFDL; &underGPL; </chapter>
