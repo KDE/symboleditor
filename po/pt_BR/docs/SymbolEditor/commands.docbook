@@ -198,11 +198,11 @@
             <title
 >Menu Editar</title>
             <para
->&symboleditor; has the common &kde; <guimenu
->Edit</guimenu
-> menu items, for more information read the sections about the <ulink url="help:/fundamentals/menus.html#menus-edit"
->Edit Menu</ulink
-> of the &kde; Fundamentals. </para>
+>O &symboleditor; possui os itens de menu normais do &kde; para <guimenu
+>Editar</guimenu
+>; para mais informações, leia as seções sobre o <ulink url="help:/fundamentals/ui.html#menus-settings"
+>Menu Editar</ulink
+> dos Fundamentos do &kde;. </para>
         </sect2>
 
         <sect2>
@@ -609,15 +609,15 @@
             <title
 >Menus Configurações e Ajuda</title>
             <para
->&symboleditor; has the common &kde; <guimenu
->Settings</guimenu
-> and <guimenu
->Help</guimenu
-> menu items, for more information read the sections about the <ulink url="help:/fundamentals/menus.html#menus-settings"
->Settings Menu</ulink
-> and <ulink url="help:/fundamentals/menus.html#menus-help"
->Help Menu</ulink
-> of the &kde; Fundamentals. </para>
+>O &symboleditor; possui os itens dos menus <guimenu
+>Configurações</guimenu
+> e <guimenu
+>Ajuda</guimenu
+>, comuns do &kde;. Para mais informações, consulte as seções sobre o <ulink url="help:/fundamentals/ui.html#menus-settings"
+>Menu Configurações</ulink
+> e o <ulink url="help:/fundamentals/ui.html#menus-help"
+>Menu Ajuda</ulink
+> dos Fundamentos do &kde;. </para>
         </sect2>
     </sect1>
 </chapter>
