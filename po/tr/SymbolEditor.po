@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2021.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: SymbolEditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2019-08-30 07:38+0200\n"
-"PO-Revision-Date: 2022-12-17 18:44+0300\n"
+"PO-Revision-Date: 2023-07-04 00:56+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-i18n-doc@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 23.07.70\n"
 
 #: src/Commands.cpp:72 src/MainWindow.cpp:913
 #, kde-format
@@ -191,7 +191,7 @@ msgstr "Bozuk veriden okunmaya çalışıldı"
 #: src/Exceptions.cpp:76 src/Exceptions.cpp:106
 #, kde-format
 msgid "Undefined status message %1"
-msgstr "Tanımlanmamış durum mesajı %1"
+msgstr "Tanımlanmamış durum iletisi %1"
 
 #: src/Exceptions.cpp:101
 #, kde-format
