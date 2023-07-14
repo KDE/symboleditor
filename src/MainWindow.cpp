@@ -1102,3 +1102,5 @@ void MainWindow::setActionsFromSymbol(const Symbol &symbol)
     action("increaseLineWidth")->setDisabled(symbol.lineWidth() == 1.00);
     action("decreaseLineWidth")->setDisabled(symbol.lineWidth() == 0.01);
 }
+
+#include "moc_MainWindow.cpp"

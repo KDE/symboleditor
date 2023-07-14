@@ -1623,3 +1623,5 @@ QLineF Editor::projected(const QLineF &line) const
 
     return QLineF(intersectTop, intersectBottom);
 }
+
+#include "moc_Editor.cpp"

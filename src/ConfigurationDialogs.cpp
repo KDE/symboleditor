@@ -36,3 +36,5 @@ EditorConfigPage::EditorConfigPage(QWidget *parent, const QString &name)
     setObjectName(name);
     setupUi(this);
 }
+
+#include "moc_ConfigurationDialogs.cpp"
