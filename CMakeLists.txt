@@ -52,6 +52,8 @@ set (SymbolEditor_SRCS
     src/Symbol.cpp
     src/SymbolLibrary.cpp
     src/SymbolListWidget.cpp
+
+    SymbolEditor.qrc
 )
 
 file (GLOB SymbolEditor_UI ${CMAKE_CURRENT_SOURCE_DIR}/ui/*.ui)
@@ -94,7 +96,6 @@ if (SILENCE_DEPRECATED)
 endif (SILENCE_DEPRECATED)
 
 install (TARGETS SymbolEditor DESTINATION ${KDE_INSTALL_BINDIR})
-install (FILES SymbolEditorui.rc DESTINATION ${KDE_INSTALL_KXMLGUI5DIR}/SymbolEditor)
 install (FILES SymbolEditor.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install (FILES org.kde.SymbolEditor.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install (FILES org.kde.SymbolEditor.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
