@@ -85,10 +85,8 @@ target_link_libraries (SymbolEditor
 )
 
 add_definitions (
-    -DQT_NO_COMPAT
     -DQT_NO_CAST_FROM_ASCII
     -DQT_NO_CAST_TO_ASCII
-    -DKDE_NO_COMPAT
 )
 
 if (SILENCE_DEPRECATED)
