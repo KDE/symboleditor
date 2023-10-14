@@ -27,7 +27,7 @@ msgstr ""
 #: src/Commands.cpp:72 src/MainWindow.cpp:937
 #, kde-format
 msgid "Move To"
-msgstr "Mou a"
+msgstr "Mou cap a"
 
 #: src/Commands.cpp:105 src/MainWindow.cpp:946
 #, kde-format
