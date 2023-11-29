@@ -9,6 +9,7 @@
   <name xml:lang="da">SymbolEditor</name>
   <name xml:lang="de">SymbolEditor</name>
   <name xml:lang="en-GB">SymbolEditor</name>
+  <name xml:lang="eo">SymbolEditor</name>
   <name xml:lang="es">SymbolEditor</name>
   <name xml:lang="et">Sümbolite redaktor</name>
   <name xml:lang="eu">Ikur Editorea</name>
@@ -41,6 +42,7 @@
   <summary xml:lang="cs">Editor symbolů pro vyšívání křížkovým stehem</summary>
   <summary xml:lang="de">Ein Kreuzstich-Symboleditor</summary>
   <summary xml:lang="en-GB">A cross stitch symbol editor</summary>
+  <summary xml:lang="eo">Kruckudra simbolredaktilo</summary>
   <summary xml:lang="es">Un editor de símbolos de punto de cruz</summary>
   <summary xml:lang="et">Tikkimispistete sümbolite redaktor</summary>
   <summary xml:lang="eu">Gurutze-puntuko ikurren editore bat</summary>
@@ -97,6 +99,7 @@
     <p xml:lang="cs">Vlastnosti:</p>
     <p xml:lang="de">Funktionen:</p>
     <p xml:lang="en-GB">Features:</p>
+    <p xml:lang="eo">Trajtoj:</p>
     <p xml:lang="es">Funciones:</p>
     <p xml:lang="et">Omadused:</p>
     <p xml:lang="eu">Ezaugarriak:</p>
@@ -129,6 +132,7 @@
       <li xml:lang="ca-valencia">Creació de múltiples biblioteques</li>
       <li xml:lang="de">Erstellung mehrerer Bibliotheken</li>
       <li xml:lang="en-GB">Creation of multiple libraries</li>
+      <li xml:lang="eo">Kreo de multoblaj bibliotekoj</li>
       <li xml:lang="es">Creación de bibliotecas múltiples</li>
       <li xml:lang="et">Mitme teegi loomine</li>
       <li xml:lang="eu">Liburutegi ugari sortzea</li>
@@ -158,6 +162,7 @@
       <li xml:lang="ca-valencia">Símbols farcits i no farcits</li>
       <li xml:lang="de">Gefüllte und ungefüllte Symbole</li>
       <li xml:lang="en-GB">Filled and unfilled symbols</li>
+      <li xml:lang="eo">Plenigitaj kaj neplenigitaj simboloj</li>
       <li xml:lang="es">Símbolos rellenos y sin rellenar</li>
       <li xml:lang="et">Täidetud ja täitmata sümbolid</li>
       <li xml:lang="eu">Sinbolo beteak eta betegarririk gabeak</li>
@@ -186,6 +191,7 @@
       <li xml:lang="ca-valencia">Amplàries de línia, tipus de final i tipus d'unió variables</li>
       <li xml:lang="de">Variable Linienstärke, Linienenden und -Verbindungen</li>
       <li xml:lang="en-GB">Variable line widths, end types and join types</li>
+      <li xml:lang="eo">Variablaj liniolarĝecoj, finaĵtipoj kaj kuniĝtipoj</li>
       <li xml:lang="es">Anchos de línea, remates y juntas variables</li>
       <li xml:lang="et">Arvukalt joonepikkusi, tiputüüpe ja ühendusetüüpe</li>
       <li xml:lang="eu">Lerro zabalera, erremate mota eta lotura mota aldakorrak</li>
@@ -214,6 +220,7 @@
       <li xml:lang="ca-valencia">Arrossegar i deixar anar des d'una biblioteca a una altra</li>
       <li xml:lang="de">Ziehen und Ablegen (Drag and Drop) zwischen Bibliotheken</li>
       <li xml:lang="en-GB">Drag and drop from one library to another</li>
+      <li xml:lang="eo">Treni kaj faligi de unu biblioteko al alia</li>
       <li xml:lang="es">Arrastrar y soltar de una biblioteca a otra</li>
       <li xml:lang="et">Ühest teegist teise lohistamine</li>
       <li xml:lang="eu">Arrastatu eta jaregin liburutegi batetik bestera.</li>
@@ -243,6 +250,7 @@
       <li xml:lang="cs">Vytváření symbolu ze znaků</li>
       <li xml:lang="de">Symbol-Erstellung aus Zeichen</li>
       <li xml:lang="en-GB">Symbol creation from characters</li>
+      <li xml:lang="eo">Simbolkreado el signoj</li>
       <li xml:lang="es">Creación de símbolos a partir de caracteres</li>
       <li xml:lang="et">Sümboli loomine märgi põhjal</li>
       <li xml:lang="eu">Karaktereen ikurrak sortzea</li>
