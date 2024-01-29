@@ -133,7 +133,7 @@
 >Es desa el símbol que s'està editant com un símbol nou.</action
 ></simpara
 > <simpara
->Quan un símbol es desa com a nou, s'annexarà a la biblioteca independentment que s'hagi seleccionat originalment des de la biblioteca per editar-lo. Els desaments posteriors annexaran un altre símbol nou a la biblioteca.</simpara
+>Quan un símbol es desa com a nou, s'annexarà a la biblioteca independentment que s'hagi seleccionat originalment des de la biblioteca per a editar-lo. Els desaments posteriors annexaran un altre símbol nou a la biblioteca.</simpara
 ></listitem>
                     </varlistentry>
                     <varlistentry>
@@ -381,7 +381,7 @@
             <title
 >El menú i la barra d'eines Eines</title>
             <para
->Hi ha diverses eines disponibles per ajudar amb el disseny dels símbols. Els símbols es componen d'una sèrie de subcamins i cada subcamí es compon d'un moviment a la posició d'inici (predeterminat 0,0 per als símbols nous) seguit de línies i corbes. Les corbes són línia amb corbes cúbiques que tenen un inici, un final i dos punts de control que defineixen la corba. Hi ha eines convenients per a crear rectangles i el·lipses, però es dividiran en línies i corbes. </para>
+>Hi ha diverses eines disponibles per a ajudar amb el disseny dels símbols. Els símbols es componen d'una sèrie de subcamins i cada subcamí es compon d'un moviment a la posició d'inici (predeterminat 0,0 per als símbols nous) seguit de línies i corbes. Les corbes són línia amb corbes cúbiques que tenen un inici, un final i dos punts de control que defineixen la corba. Hi ha eines convenients per a crear rectangles i el·lipses, però es dividiran en línies i corbes. </para>
             <para
 >Tots els punts creats per als elements es poden moure arrossegant-los a la seva posició nova. Tots els punts es poden ajustar a les interseccions de la quadrícula si l'opció d'ajust està activada, en cas contrari es poden posar en qualsevol lloc. </para>
             <para
@@ -423,7 +423,7 @@
                         <listitem
 ><simpara
 ><action
->Dibuixa una línia fins al següent punt seleccionat.</action
+>Dibuixa una línia fins al punt seleccionat següent.</action
 ></simpara
 ></listitem>
                     </varlistentry>
@@ -496,7 +496,7 @@
 > </mediaobject
 > </screenshot
 > <simpara
->El diàleg del selector de caràcters és el diàleg estàndard del &kde; i permet la selecció de caràcters a partir de qualsevol tipus de lletra. La mida no s'utilitzarà, ja que el caràcter s'escalarà per ajustar-lo a la guia de mida preferida.</simpara
+>El diàleg del selector de caràcters és el diàleg estàndard del &kde; i permet la selecció de caràcters a partir de qualsevol tipus de lletra. La mida no s'utilitzarà, ja que el caràcter s'escalarà per a ajustar-lo a la guia de mida preferida.</simpara
 > <simpara
 >Fer doble clic sobre un caràcter l'inserirà a l'editor. El diàleg romandrà obert per a poder inserir un altre caràcter, encara que això sobreescriurà el primer. Això permet inserir un caràcter, desar, inserir un caràcter, desar el flux de treball per a construir ràpidament una biblioteca de símbols. Assegureu-vos que el símbol que s'està editant és un símbol nou i no un seleccionat prèviament des de la biblioteca. En cas contrari, el fet de desar continuaria sobreescrivint el de la biblioteca.</simpara
 > </listitem>
