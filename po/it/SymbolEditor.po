@@ -1,7 +1,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Ercole 'ercolinux' Carpanetto <ercole69@gmail.com>, 2014, 2017.
-# Vincenzo Reale <smart2128vr@gmail.com>, 2020, 2022.
+# SPDX-FileCopyrightText: 2020, 2022, 2024 Vincenzo Reale <smart2128vr@gmail.com>
 #
 # Translators:
 msgid ""
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: SymbolEditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-05 12:27+0000\n"
-"PO-Revision-Date: 2022-10-22 15:27+0200\n"
+"PO-Revision-Date: 2024-05-01 13:51+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: src/Commands.cpp:72 src/MainWindow.cpp:937
 #, kde-format
@@ -508,7 +508,7 @@ msgstr ""
 #: src/MainWindow.cpp:899
 #, kde-format
 msgid "Miter Join"
-msgstr "Giunzione piana"
+msgstr "Quartabuono"
 
 #: src/MainWindow.cpp:900
 #, kde-format
