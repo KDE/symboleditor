@@ -199,7 +199,11 @@ void SymbolLibrary::setName(const QString &name)
 QList<qint16> SymbolLibrary::indexes() const
 {
     QList<qint16> keys = m_symbols.keys();
+#if QT_VERSION > QT_VERSION_CHECK(5, 2, 0)
+    std::sort(keys.begin(), keys.end());
+#else
     qSort(keys.begin(), keys.end());
+#endif
     return keys;
 }
 

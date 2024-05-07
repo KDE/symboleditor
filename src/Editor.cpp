@@ -1487,7 +1487,11 @@ void Editor::constructGuides(const QPointF &to)
             QPointF intersection;
 
             foreach (const QLineF &line, guideLines) {
+#if QT_VERSION > QT_VERSION_CHECK(5, 13, 0)
+		if (projectedGuideLine.intersects(line, &intersection)) {
+#else
                 if (projectedGuideLine.intersect(line, &intersection)) {
+#endif
                     if (((to - intersection).manhattanLength() < m_snapThreshold)) {
                         addGuideLine(line);
                         addGuideLine(projectedGuideLine);
@@ -1612,10 +1616,17 @@ QLineF Editor::projected(const QLineF &line) const
     QPointF intersectLeft;
     QPointF intersectRight;
 
+#if QT_VERSION > QT_VERSION_CHECK(5, 13, 0)
+    QLineF::IntersectType t = line.intersects(m_topEdge, &intersectTop);;
+    line.intersects(m_bottomEdge, &intersectBottom);
+    line.intersects(m_leftEdge, &intersectLeft);
+    line.intersects(m_rightEdge, &intersectRight);
+#else
     QLineF::IntersectType t = line.intersect(m_topEdge, &intersectTop);;
     line.intersect(m_bottomEdge, &intersectBottom);
     line.intersect(m_leftEdge, &intersectLeft);
     line.intersect(m_rightEdge, &intersectRight);
+#endif
 
     if (t == QLineF::NoIntersection) {      // horizontal line
         return QLineF(intersectLeft, intersectRight);
