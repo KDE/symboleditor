@@ -328,7 +328,7 @@ msgstr "No s'ha pogut obrir el fitxer %1%2"
 #: src/MainWindow.cpp:483
 #, kde-format
 msgid "Save As..."
-msgstr "Anomena i guarda..."
+msgstr "Anomena i guarda…"
 
 #: src/MainWindow.cpp:553
 #, kde-format
