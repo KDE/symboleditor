@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component type="desktop-application">
   <id>org.kde.SymbolEditor.desktop</id>
+  <project_license> GPL-2.0-or-later</project_license>
   <metadata_license>GFDL-1.2-only</metadata_license>
   <developer id="org.kde">
     <name translate="no">KDE</name>
