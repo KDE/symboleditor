@@ -1,0 +1,623 @@
+<chapter id="commands">
+    <title
+>Referenca ukazov</title>
+
+    <sect1 id="menus">
+        <title
+>&symboleditor; Meniji</title>
+        <sect2>
+            <title
+>Meni Datoteka</title>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Nova</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Ustvari novo knjižnico</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Odpri</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Odpre obstoječo knjižnico</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Odpri Nedavno</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Odpre nedavno uporabljeno knjižnico</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Shrani</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Shrani knjižnico</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;&Shift;<keycap
+>S</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Shrani kot</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Shrani knjižnico pod novim imenom</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Shrani simbol</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Shrani simbol, ki ga urejate</action
+></simpara
+> <simpara
+>Če je bil simbol, ki ga urejate, izbran iz knjižnice, bo shranjevanje posodobilo ta simbol. Če gre za nov simbol, bo dodan v knjižnico in nadaljnja shranjevanja bodo v knjižnico dodala še en nov simbol. </simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Shrani simbol kot nov</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Shrani simbol, ki ga urejate, kot nov simbol</action
+></simpara
+> <simpara
+>Ko je simbol shranjen kot nov, bo dodan v knjižnico, ne glede na to, da je bil prvotno izbran iz knjižnice za urejanje. Naslednja shranjevanja bodo v knjižnico dodala še en nov simbol. </simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Uvozi knjižnico</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Uvoz knjižnice z dodajanjem vsebovanih simbolov v trenutno knjižnico</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;<keycap
+>W</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Zapri</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Zapri knjižnico</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Zapri</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Zapusti &symboleditor;</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>Meni Urejanje</title>
+            <para
+>&symboleditor; ima skupno &kde; Elementi menija <guimenu
+>Urejanje</guimenu
+>, za več informacij preberite razdelke o <ulink url="help:/fundamentals/menus.html#menus-edit"
+>meniju Uredi</ulink
+> programa &kde; Osnove. </para>
+        </sect2>
+
+        <sect2>
+            <title
+>Meni upodabljanja in orodna vrstica</title>
+            <screenshot>
+                <screeninfo
+>Tukaj je posnetek zaslona orodne vrstice za upodabljanje</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="renderer-toolbar.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+                </screenshot>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Izpolni pot</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Omogoči polnjenje poti</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Navijanje Polnjenje</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Izberite način navijanja polnjenja</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Liho sodo polnjenje</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Izberite liho sodo metodo polnjenja</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Ravna kapica</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Izberite vrsto konca črte z ravno kapico</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Kvadratna kapica</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Izberite vrsto konca črte kvadratne kapice</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Okrogla kapica</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Izberite vrsto konca črte okrogle kapice</action
+></simpara
+></listitem
+></varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Prirezan spoj</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Izbere vrsto spoja črte</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Poševni spoj</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Izbere poševni spoj</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Okrogli spoj</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Izberi vrsto okroglega spoja</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Povečaj širino črte</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Povečaj širino črte poti</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Zmanjšaj širino črte</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Zmanjšaj širino črte poti</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>Meni Orodja in orodna vrstica</title>
+            <para
+>Na voljo so številna orodja za pomoč pri oblikovanju simbolov. Simboli so sestavljeni iz niza podpoti in vsaka podpot je sestavljena iz premika na začetni položaj (to je privzeto 0,0 za nove simbole), ki mu sledijo črte in krivulje. Krivulje so kubični zlepki z začetkom, koncem in dvema kontrolnima točkama, ki določata krivuljo. Obstajajo priročna orodja za ustvarjanje pravokotnikov in elips, vendar bodo ti razdeljeni na črte in krivulje. </para>
+            <para
+>Vse točke, ustvarjene za elemente, lahko premaknete tako, da jih povlečete na nov položaj. Vse točke lahko pripnete na križišča mrež, če je možnost pripenjanja vklopljena, sicer jih lahko postavite kamor koli. </para>
+            <para
+>Simbol je mogoče vrteti v smeri urinega kazalca in nasprotni smeri urinega kazalca ter ga obrniti navpično in vodoravno. To omogoča preprosto ustvarjanje več simbolov na podlagi iste zasnove. Za to ne pozabite uporabiti simbola za shranjevanje kot nove možnosti. </para>
+            <screenshot>
+                <screeninfo
+>Tukaj je posnetek zaslona orodne vrstice z orodji</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="tool-toolbar.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+                </screenshot>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Premakni na</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Premakni začetni položaj podpoti</action
+></simpara
+> <simpara
+>Če se ustvarja obstoječa podpot, bo ta zaprta in na novem mestu se bo začela nova podpot</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Riši do</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Nariši črto do naslednje izbrane točke</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Kubični do</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Nariši Bezierjevo krivuljo z uporabo dveh kontrolnih točk in končne točke</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Pravokotnik</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Nariše pravokotnik med dvema nasprotnima vogaloma</action
+></simpara
+> <simpara
+>S tem zapre katero koli obstoječo podpot in ustvarite novo podpot, sestavljeno iz pravokotnika.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Elipsa</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Nariše elipso med dvema nasprotnima vogaloma</action
+></simpara
+> <simpara
+>S tem zaprete katero koli obstoječo podpot in ustvarite novo podpot, sestavljeno iz elipse.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Vstavi znak</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Izbere znak iz pisave in ga vstavi v urejevalnik</action
+></simpara
+> <simpara
+>To bo prepisalo vse obstoječe poti</simpara
+> <screenshot
+> <screeninfo
+>Tukaj je posnetek zaslona izbirnika znakov</screeninfo
+> <mediaobject
+> <imageobject
+> <imagedata fileref="charselect-dialog.png" format="PNG"/> </imageobject
+> </mediaobject
+> </screenshot
+> <simpara
+>Izbirnik znakov je standardno pogovorno okno KDE in omogoča izbiro znakov iz katere koli pisave. Velikost ni uporabljena, ker je znak prilagojen tako, da se prilega vodniku po želeni velikosti.</simpara
+> <simpara
+>Dvojni klik na znak bo ta znak vstavil v urejevalnik. Pogovorno okno bo ostalo odprto, tako da lahko vstavite drug znak, čeprav bo to prepisalo prvega. To omogoča potek dela vstavljanje znaka, shranjevanje, vstavljanje znaka, shranjevanje za hitro sestavljanje knjižnice simbolov. Prepričajte se, da je simbol, ki ga urejate, nov simbol in ne simbol, ki je bil predhodno izbran iz knjižnice, sicer bi shranjevanje še naprej prepisalo tistega v knjižnici.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Zavrti v levo</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Zavrti celoten simbol v nasprotni smeri urinega kazalca za 90 stopinj</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Zavrti desno</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Celoten simbol zavrti za 90 stopinj v smeri urinega kazalca</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Obrni vodoravno</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Obrni simbol čez navpično os</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Obrni navpično</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Obrni simbol čez vodoravno os</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Prilagodi na želeno velikost</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Prilagodi simbol tako, da se prilega določeni želeni velikosti</action
+></simpara
+> <simpara
+>Upoštevajte, da to vpliva samo na točke; kjer je ustvarjen nezapolnjen simbol in je definirana širina črte, lahko ta presega velikost vodila.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Omogoči pripenjanje</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Omogoči pripenjanje točk na mrežo</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Vodilne črte</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Omogoči generiranje vodilnih črt</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>Meni Nastavitve in pomoč</title>
+            <para
+>&symboleditor; ima skupno &kde; Elementi menija <guimenu
+>Nastavitve</guimenu
+> in <guimenu
+>Pomoč</guimenu
+>, za več informacij preberite razdelke o <ulink url="help:/fundamentals/ui.html#menus-settings"
+>meniju z nastavitvami</ulink
+> in <ulink url="help:/fundamentals/menus.html#menus-help"
+>meni Pomoč</ulink
+> v &kde; Osnove. </para>
+        </sect2>
+    </sect1>
+</chapter>

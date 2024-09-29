@@ -1,0 +1,56 @@
+<chapter id="using-symboleditor">
+    <title
+>Uporabniški vmesnik</title>
+
+    <sect1 id="face-screenshot">
+        <title
+>&symboleditor; Glavno okno</title>
+        <para
+>Glavno okno je sestavljeno iz pripomočka z zavihki, ki vsebuje urejevalnik simbolov in pogled knjižnice. Obstaja menijska vrstica in več orodnih vrstic, ki vsebujejo standardna dejanja, orodja za urejanje in možnosti upodabljanja. Vrstica stanja daje pozive za uporabo različnih orodij. </para>
+        <sect2 id="editor-window">
+            <title
+>Okno urejevalnika</title>
+            <para>
+                <screenshot>
+                    <screeninfo
+>Tukaj je posnetek zaslona &symboleditor; okno urejevalnika</screeninfo>
+                    <mediaobject
+><imageobject
+><imagedata fileref="mainwindow-editor.png" format="PNG"/></imageobject
+></mediaobject>
+                </screenshot>
+            </para>
+            <para
+>Okno urejevalnika omogoča urejanje simbola z uporabo razpoložljivih orodij. Sestavljen je iz mreže, ki zagotavlja zaskočne točke in prikazuje prednostni vodnik po velikosti, ki omogoča ustvarjanje simbolov dosledne velikosti. Velikost mreže, število elementov in želeni vodnik velikosti so nastavljivi. </para>
+            <para
+>Urejevalnik nudi smernice za pozicioniranje točk glede na obstoječe točke. Vodila so postavljena na vodoravne, navpične in diagonalne vektorje od obstoječe točke in tudi na krožno referenco okoli središča mreže. </para>
+            <screenshot>
+                <screeninfo
+>Tukaj je posnetek zaslona vodil urejevalnika</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="editor-guides.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </sect2>
+        <sect2 id="library-window">
+            <title
+>Okno knjižnice</title>
+            <para>
+                <screenshot>
+                    <screeninfo
+>Tukaj je posnetek zaslona &symboleditor; okno knjižnice</screeninfo>
+                    <mediaobject
+><imageobject
+><imagedata fileref="mainwindow-library.png" format="PNG"/></imageobject
+></mediaobject>
+                </screenshot>
+            </para>
+            <para
+>Okno knjižnice prikazuje predstavitve simbolov v knjižnici. Simbol, ki se trenutno ureja, je označen. Če izberete simbol, se ta odpre v urejevalniku, da ga lahko spreminjate. </para>
+            <para
+>Možno je odpreti več pojavkov aplikacije SymbolEditor in kopirati simbole iz ene knjižnice v drugo z uporabo povleci in spusti. Prepričajte se, da sta obe okni knjižnice vidni, nato kliknite in povlecite zahtevani simbol iz enega okna knjižnice v drugega. Simbol bo nato dodan v ciljno knjižnico. </para>
+        </sect2>
+    </sect1>
+</chapter>

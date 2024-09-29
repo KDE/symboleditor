@@ -1,0 +1,20 @@
+<chapter id="introduction">
+    <title
+>Uvod</title>
+    <para
+>&symboleditor; se uporablja za ustvarjanje simbolov križnega šiva za aplikacijo &kxstitch;. Prvotno se je &kxstitch; pri zagotavljanju teh simbolov zanašala na standardne pisave znakov, vendar so razlike v uporabniških jezikih in kakovosti pisav, ki so na voljo, skupaj s poravnavo znakov in omejenim številom razpoložljivih, povzročile potrebo po ustvarjanju namenskega nabora simbolov. </para>
+    <para
+>Nabor simbolov bo shranjen v datoteki in glede na potrebe uporabnikov je mogoče ustvariti več datotek, na primer imeti nabor simbolov za noč čarovnic za vzorce na temo noči čarovnic. </para>
+    <para
+>Vsaka od datotek bo vsebovala vrsto simbolov, ki bodo prikazani na zavihku knjižnice simbolov. Urejanje obstoječih simbolov lahko izvedete s klikom na vnos v knjižnici, ki bo zapolnila urejevalnik s tem simbolom. Lahko pa ustvarite nove simbole in jih dodate v knjižnico. </para>
+    <para
+>Prosimo, da sporočite morebitne težave ali zahteve po funkcijah &symboleditor; Dopisni seznam KDE symboleditor@kde.org, naročite se lahko <ulink url="http://mail.kde.org/mailman/listinfo/symboleditor"
+>tukaj</ulink
+> ali na sistem za sledenje hroščem KDE na <ulink url= "http://bugs.kde.org/"
+>http://bugs.kde.org/</ulink
+>. </para>
+    <para
+>Domača stran urejevalnika simbolov je na <ulink url="http://userbase.kde.org/SymbolEditor"
+>http://userbase.kde.org/SymbolEditor</ulink
+> </para>
+</chapter>

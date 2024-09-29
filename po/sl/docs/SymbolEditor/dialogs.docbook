@@ -1,0 +1,19 @@
+<chapter id="Dialogs">
+    <title
+>Pogovorna okna</title>
+
+    <sect1 id="ConfigurationDialog">
+        <title
+>Pogovorno okno konfiguracije</title>
+        <para>
+            <screenshot
+><mediaobject
+><imageobject
+><imagedata fileref="configuration-dialog.png" format="PNG"/></imageobject
+></mediaobject
+></screenshot>
+        </para>
+        <para
+>Pogovorno okno konfiguracije omogoča nastavitev številnih možnosti. </para>
+    </sect1>
+</chapter>

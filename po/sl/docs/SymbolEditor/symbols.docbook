@@ -1,0 +1,12 @@
+<chapter id="symbols">
+    <title
+>Simboli</title>
+    <para
+>Simboli so ustvarjeni kot predmeti QPainterPath z dodatnimi informacijami, ki definirajo atribute poti. QPainterPath je sestavljen iz podpoti, kot so pravokotniki, elipse ali verige črt in Bezierjeve krivulje. Poti se lahko sekajo in tvorijo kompleksne oblike. </para>
+    <para
+>Simbol se lahko zapolni bodisi z možnostjo vijuganja, ki zapolni celotno pot, bodisi z možnostjo liho sodega polnjenja nadomestnih delov poti. </para>
+    <para
+>Če pot ni zapolnjena, bo imel obris definirano širino črte, vrsto končne kapice in vrsto spoja črte. </para>
+    <para
+>Za več podrobnosti glejte dokumentacijo QPainterPath. </para>
+</chapter>
