@@ -56,7 +56,7 @@ public:
 protected:
     virtual QStringList mimeTypes() const Q_DECL_OVERRIDE;
     virtual Qt::DropActions supportedDropActions() const Q_DECL_OVERRIDE;
-    virtual QMimeData *mimeData(const QList<QListWidgetItem *> items) const Q_DECL_OVERRIDE;
+    virtual QMimeData *mimeData(const QList<QListWidgetItem *> &items) const Q_DECL_OVERRIDE;
     virtual bool dropMimeData(int index, const QMimeData *mimeData, Qt::DropAction action) Q_DECL_OVERRIDE;
     virtual bool event(QEvent *e) Q_DECL_OVERRIDE;
 

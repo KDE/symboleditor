@@ -167,36 +167,36 @@
 
 const int pointsRequired[] = {1, 1, 3, 2, 2};   /**< The number of points required for commands from Editor::ToolMode */
 
-const char *statusMessages[][3] = {
+const KLocalizedString statusMessages[][3] = {
     {
-        I18N_NOOP("Select a new starting position."),
-        "",
-        ""
+        ki18n("Select a new starting position."),
+        ki18n(""),
+        ki18n("")
     },
     {
-        I18N_NOOP("Select the line end point."),
-        "",
-        ""
+        ki18n("Select the line end point."),
+        ki18n(""),
+        ki18n("")
     },
     {
-        I18N_NOOP("Select the first control point."),
-        I18N_NOOP("Select the second control point."),
-        I18N_NOOP("Select the end point"),
+        ki18n("Select the first control point."),
+        ki18n("Select the second control point."),
+        ki18n("Select the end point"),
     },
     {
-        I18N_NOOP("Select the first corner."),
-        I18N_NOOP("Select the second corner."),
-        ""
+        ki18n("Select the first corner."),
+        ki18n("Select the second corner."),
+        ki18n("")
     },
     {
-        I18N_NOOP("Select the first corner of the bounding rectangle."),
-        I18N_NOOP("Select the second corner of the bounding rectangle."),
-        ""
+        ki18n("Select the first corner of the bounding rectangle."),
+        ki18n("Select the second corner of the bounding rectangle."),
+        ki18n("")
     },
     {
-        I18N_NOOP("Double click a character to insert into the editor."),
-        "",
-        ""
+        ki18n("Double click a character to insert into the editor."),
+        ki18n(""),
+        ki18n("")
     }
 };
 
@@ -969,7 +969,7 @@ void Editor::addPoint(const QPointF &point)
  */
 void Editor::updateStatusMessage()
 {
-    emit message(i18n(statusMessages[m_toolMode][m_activePoints.count()]));
+    emit message(statusMessages[m_toolMode][m_activePoints.count()].toString());
 }
 
 
@@ -1487,11 +1487,7 @@ void Editor::constructGuides(const QPointF &to)
             QPointF intersection;
 
             foreach (const QLineF &line, guideLines) {
-#if QT_VERSION > QT_VERSION_CHECK(5, 13, 0)
 		if (projectedGuideLine.intersects(line, &intersection)) {
-#else
-                if (projectedGuideLine.intersect(line, &intersection)) {
-#endif
                     if (((to - intersection).manhattanLength() < m_snapThreshold)) {
                         addGuideLine(line);
                         addGuideLine(projectedGuideLine);
@@ -1616,17 +1612,10 @@ QLineF Editor::projected(const QLineF &line) const
     QPointF intersectLeft;
     QPointF intersectRight;
 
-#if QT_VERSION > QT_VERSION_CHECK(5, 13, 0)
     QLineF::IntersectType t = line.intersects(m_topEdge, &intersectTop);;
     line.intersects(m_bottomEdge, &intersectBottom);
     line.intersects(m_leftEdge, &intersectLeft);
     line.intersects(m_rightEdge, &intersectRight);
-#else
-    QLineF::IntersectType t = line.intersect(m_topEdge, &intersectTop);;
-    line.intersect(m_bottomEdge, &intersectBottom);
-    line.intersect(m_leftEdge, &intersectLeft);
-    line.intersect(m_rightEdge, &intersectRight);
-#endif
 
     if (t == QLineF::NoIntersection) {      // horizontal line
         return QLineF(intersectLeft, intersectRight);

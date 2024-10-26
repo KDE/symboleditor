@@ -145,6 +145,7 @@
 #include "MainWindow.h"
 
 #include <QAction>
+#include <QActionGroup>
 #include <QFileDialog>
 #include <QIcon>
 #include <QVBoxLayout>
@@ -1052,29 +1053,29 @@ void MainWindow::setupActions()
  */
 void MainWindow::setActionsFromSymbol(const Symbol &symbol)
 {
-    action("fillPath")->setChecked(symbol.filled());
+    action(QStringLiteral("fillPath"))->setChecked(symbol.filled());
 
     switch (symbol.path().fillRule()) {
     case Qt::WindingFill:
-        action("windingFill")->setChecked(true);
+        action(QStringLiteral("windingFill"))->setChecked(true);
         break;
 
     case Qt::OddEvenFill:
-        action("oddEvenFill")->setChecked(true);
+        action(QStringLiteral("oddEvenFill"))->setChecked(true);
         break;
     }
 
     switch (symbol.capStyle()) {
     case Qt::FlatCap:
-        action("flatCap")->setChecked(true);
+        action(QStringLiteral("flatCap"))->setChecked(true);
         break;
 
     case Qt::SquareCap:
-        action("squareCap")->setChecked(true);
+        action(QStringLiteral("squareCap"))->setChecked(true);
         break;
 
     case Qt::RoundCap:
-        action("roundCap")->setChecked(true);
+        action(QStringLiteral("roundCap"))->setChecked(true);
         break;
 
     case Qt::MPenCapStyle: // this is a combination of the Qt::FlatCap, Qt::SquareCap and Qt::RoundCap
@@ -1083,24 +1084,24 @@ void MainWindow::setActionsFromSymbol(const Symbol &symbol)
 
     switch (symbol.joinStyle()) {
     case Qt::BevelJoin:
-        action("bevelJoin")->setChecked(true);
+        action(QStringLiteral("bevelJoin"))->setChecked(true);
         break;
 
     case Qt::MiterJoin:
     case Qt::SvgMiterJoin:
-        action("miterJoin")->setChecked(true);
+        action(QStringLiteral("miterJoin"))->setChecked(true);
         break;
 
     case Qt::RoundJoin:
-        action("roundJoin")->setChecked(true);
+        action(QStringLiteral("roundJoin"))->setChecked(true);
         break;
 
     case Qt::MPenJoinStyle: // this is a combination of Qt::BevelJoin, Qt::MiterJoin, Qt::SvgMiterJoin and Qt::RoundJoin
         break;
     }
 
-    action("increaseLineWidth")->setDisabled(symbol.lineWidth() == 1.00);
-    action("decreaseLineWidth")->setDisabled(symbol.lineWidth() == 0.01);
+    action(QStringLiteral("increaseLineWidth"))->setDisabled(symbol.lineWidth() == 1.00);
+    action(QStringLiteral("decreaseLineWidth"))->setDisabled(symbol.lineWidth() == 0.01);
 }
 
 #include "moc_MainWindow.cpp"

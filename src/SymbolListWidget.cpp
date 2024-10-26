@@ -32,6 +32,7 @@
 #include "SymbolListWidget.h"
 
 #include <QApplication>
+#include <QIODevice>
 #include <QMimeData>
 #include <QPainter>
 #include <QPalette>
@@ -212,11 +213,11 @@ Qt::DropActions SymbolListWidget::supportedDropActions() const
 /**
  * Called when dragging items from one QListWidget to another to provide the serialised data.
  *
- * @param items a QList of pointers to the QListWidgetItems to provide data for
+ * @param items a reference to a QList of pointers to the QListWidgetItems to provide data for
  *
  * @return a pointer to the QMimeData created
  */
-QMimeData *SymbolListWidget::mimeData(const QList<QListWidgetItem *> items) const
+QMimeData *SymbolListWidget::mimeData(const QList<QListWidgetItem *> &items) const
 {
     QMimeData *mimeData = new QMimeData;
 

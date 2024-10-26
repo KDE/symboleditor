@@ -30,6 +30,7 @@
 
 #include "Commands.h"
 
+#include <QIODevice>
 #include <QPainterPath>
 #include <QMimeData>
 

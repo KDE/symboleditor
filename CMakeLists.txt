@@ -2,27 +2,28 @@ cmake_minimum_required (VERSION 3.16)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-project (SymbolEditor)
+project (SymbolEditor VERSION "3.0.0")
 
 find_package (ECM REQUIRED NO_MODULE)
 set (CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
 include (KDEInstallDirs)
 include (KDECMakeSettings)
-include (KDECompilerSettings)
+include (KDECompilerSettings NO_POLICY_SCOPE)
+include (ECMSetupVersion)
 include (ECMInstallIcons)
 include (FeatureSummary)
 
 kde_enable_exceptions ()
 
-find_package (Qt5 CONFIG REQUIRED
+find_package (Qt6 CONFIG REQUIRED
     Core
     Widgets
 )
 
-find_package (KF5DocTools)
+find_package (KF6DocTools)
 
-find_package (KF5 REQUIRED COMPONENTS
+find_package (KF6 REQUIRED COMPONENTS
     Config
     I18n
     KIO
@@ -41,6 +42,11 @@ if (DOXYGEN_FOUND)
 endif (DOXYGEN_FOUND)
 
 include_directories (BEFORE ${CMAKE_CURENT_BINARY_DIR})
+
+ecm_setup_version(${SymbolEditor_VERSION}
+    VARIABLE_PREFIX SYMBOLEDITOR
+    VERSION_HEADER Version.h
+)
 
 set (SymbolEditor_SRCS
     src/Commands.cpp
@@ -62,11 +68,10 @@ ki18n_wrap_ui (SymbolEditor_SRCS ${SymbolEditor_UI})
 add_subdirectory (icons)
 
 ki18n_install(po)
-
-if (KF5DocTools_FOUND)
+if (KF6DocTools_FOUND)
     add_subdirectory (doc)
     kdoctools_install(po)
-endif (KF5DocTools_FOUND)
+endif (KF6DocTools_FOUND)
 
 kconfig_add_kcfg_files (SymbolEditor_SRCS SymbolEditor.kcfgc)
 
@@ -75,13 +80,13 @@ ecm_install_icons (ICONS sc-apps-symboleditor.svgz DESTINATION ${KDE_INSTALL_ICO
 add_executable (SymbolEditor ${SymbolEditor_SRCS})
 
 target_link_libraries (SymbolEditor
-    Qt5::Core
-    Qt5::Widgets
-    KF5::ConfigGui
-    KF5::I18n
-    KF5::KIOFileWidgets
-    KF5::WidgetsAddons
-    KF5::XmlGui
+    Qt6::Core
+    Qt6::Widgets
+    KF6::ConfigGui
+    KF6::I18n
+    KF6::KIOFileWidgets
+    KF6::WidgetsAddons
+    KF6::XmlGui
 )
 
 add_definitions (
