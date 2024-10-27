@@ -1,8 +1,11 @@
+#: src/Editor.cpp:173 src/Editor.cpp:174 src/Editor.cpp:178 src/Editor.cpp:179
+#: src/Editor.cpp:189 src/Editor.cpp:194 src/Editor.cpp:198 src/Editor.cpp:199
+#, kde-format
 msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:27+0000\n"
+"POT-Creation-Date: 2024-10-27 00:39+0000\n"
 "PO-Revision-Date: 2024-04-23 19:31\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -17,112 +20,112 @@ msgstr ""
 "X-Crowdin-File: /kf5-trunk/messages/symboleditor/SymbolEditor.pot\n"
 "X-Crowdin-File-ID: 4825\n"
 
-#: src/Commands.cpp:72 src/MainWindow.cpp:937
+#: src/Commands.cpp:73 src/MainWindow.cpp:938
 #, kde-format
 msgid "Move To"
 msgstr "移动到"
 
-#: src/Commands.cpp:105 src/MainWindow.cpp:946
+#: src/Commands.cpp:106 src/MainWindow.cpp:947
 #, kde-format
 msgid "Draw To"
 msgstr "绘制到"
 
-#: src/Commands.cpp:140 src/MainWindow.cpp:955
+#: src/Commands.cpp:141 src/MainWindow.cpp:956
 #, kde-format
 msgid "Cubic To"
 msgstr "立方到"
 
-#: src/Commands.cpp:176
+#: src/Commands.cpp:177
 #, kde-format
 msgid "Add Rectangle"
 msgstr "添加矩形"
 
-#: src/Commands.cpp:211
+#: src/Commands.cpp:212
 #, kde-format
 msgid "Add Ellipse"
 msgstr "添加椭圆"
 
-#: src/Commands.cpp:247
+#: src/Commands.cpp:248
 #, kde-format
 msgid "Move point"
 msgstr "移动点"
 
-#: src/Commands.cpp:284
+#: src/Commands.cpp:285
 #, kde-format
 msgid "Update Symbol"
 msgstr "更新符号"
 
-#: src/Commands.cpp:326 src/MainWindow.cpp:797
+#: src/Commands.cpp:327 src/MainWindow.cpp:798
 #, kde-format
 msgid "Import Library"
 msgstr "导入库"
 
-#: src/Commands.cpp:375 src/MainWindow.cpp:993
+#: src/Commands.cpp:376 src/MainWindow.cpp:994
 #, kde-format
 msgid "Rotate Left"
 msgstr "旋转 (向左)"
 
-#: src/Commands.cpp:406 src/MainWindow.cpp:1000
+#: src/Commands.cpp:407 src/MainWindow.cpp:1001
 #, kde-format
 msgid "Rotate Right"
 msgstr "旋转 (向右)"
 
-#: src/Commands.cpp:437 src/MainWindow.cpp:1007
+#: src/Commands.cpp:438 src/MainWindow.cpp:1008
 #, kde-format
 msgid "Flip Horizontal"
 msgstr "翻转 (水平)"
 
-#: src/Commands.cpp:467 src/MainWindow.cpp:1014
+#: src/Commands.cpp:468 src/MainWindow.cpp:1015
 #, kde-format
 msgid "Flip Vertical"
 msgstr "翻转 (垂直)"
 
-#: src/Commands.cpp:500 src/MainWindow.cpp:1021
+#: src/Commands.cpp:501 src/MainWindow.cpp:1022
 #, kde-format
 msgid "Scale to Preferred Size"
 msgstr "缩放到偏好大小"
 
-#: src/Commands.cpp:557
+#: src/Commands.cpp:558
 #, kde-format
 msgid "Change Fill State"
 msgstr "更改填充状态"
 
-#: src/Commands.cpp:591
+#: src/Commands.cpp:592
 #, kde-format
 msgid "Change Fill Rule"
 msgstr "更改填充规则"
 
-#: src/Commands.cpp:625
+#: src/Commands.cpp:626
 #, kde-format
 msgid "Change Cap Style"
 msgstr "更改端点样式"
 
-#: src/Commands.cpp:659
+#: src/Commands.cpp:660
 #, kde-format
 msgid "Change Join Style"
 msgstr "更改交点样式"
 
-#: src/Commands.cpp:692 src/MainWindow.cpp:736
+#: src/Commands.cpp:693 src/MainWindow.cpp:737
 #, kde-format
 msgid "Delete Symbol"
 msgstr "删除符号"
 
-#: src/Commands.cpp:725 src/MainWindow.cpp:919
+#: src/Commands.cpp:726 src/MainWindow.cpp:920
 #, kde-format
 msgid "Increase Line Width"
 msgstr "增大线宽"
 
-#: src/Commands.cpp:789 src/MainWindow.cpp:926
+#: src/Commands.cpp:790 src/MainWindow.cpp:927
 #, kde-format
 msgid "Decrease Line Width"
 msgstr "减小线宽"
 
-#: src/Commands.cpp:852
+#: src/Commands.cpp:853
 #, kde-format
 msgid "Add Symbols"
 msgstr "添加符号"
 
-#: src/Commands.cpp:897
+#: src/Commands.cpp:898
 #, kde-format
 msgid "Add Character"
 msgstr "添加字符"
@@ -197,94 +200,94 @@ msgstr "未定义的状态消息 %1"
 msgid "Failed to write to the device"
 msgstr "写入设备失败"
 
-#: src/Main.cpp:87
+#: src/Main.cpp:88
 #, kde-format
 msgid "SymbolEditor"
 msgstr "符号编辑器"
 
-#: src/Main.cpp:89
+#: src/Main.cpp:90
 #, kde-format
 msgid "A cross stitch symbol editor."
 msgstr "十字绣符号编辑器。"
 
-#: src/Main.cpp:91
+#: src/Main.cpp:92
 #, kde-format
 msgid "(c)2011-2019 Stephen Allewell"
 msgstr "(c)2011-2019 Stephen Allewell"
 
-#: src/Main.cpp:97
+#: src/Main.cpp:98
 #, kde-format
 msgid "Project Lead"
 msgstr "项目负责人"
 
-#: src/Main.cpp:98
+#: src/Main.cpp:99
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "KDE 中国"
 
-#: src/Main.cpp:98
+#: src/Main.cpp:99
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde-china@kde.org"
 
-#: src/MainWindow.cpp:198 src/MainWindow.cpp:452 src/MainWindow.cpp:599
+#: src/MainWindow.cpp:199 src/MainWindow.cpp:453 src/MainWindow.cpp:600
 #, kde-format
 msgid "Untitled"
 msgstr "无标题"
 
-#: src/MainWindow.cpp:207
+#: src/MainWindow.cpp:208
 #, kde-format
 msgctxt "The editor tab title"
 msgid "Editor"
 msgstr "编辑"
 
-#: src/MainWindow.cpp:208
+#: src/MainWindow.cpp:209
 #, kde-format
 msgctxt "The library tab title"
 msgid "Library"
 msgstr "库"
 
-#: src/MainWindow.cpp:283
+#: src/MainWindow.cpp:284
 #, kde-format
 msgid "Save changes to the symbol?"
 msgstr ""
 
-#: src/MainWindow.cpp:332
+#: src/MainWindow.cpp:333
 #, kde-format
 msgid "Save changes to the library?"
 msgstr ""
 
-#: src/MainWindow.cpp:371
+#: src/MainWindow.cpp:372
 #, kde-format
 msgid "Open file"
 msgstr "打开文件"
 
-#: src/MainWindow.cpp:371 src/MainWindow.cpp:483 src/MainWindow.cpp:553
+#: src/MainWindow.cpp:372 src/MainWindow.cpp:484 src/MainWindow.cpp:554
 #, kde-format
 msgid "Cross Stitch Symbols (*.sym)"
 msgstr "十字绣符号 (*.sym)"
 
-#: src/MainWindow.cpp:420 src/MainWindow.cpp:573
+#: src/MainWindow.cpp:421 src/MainWindow.cpp:574
 #, kde-format
 msgid "This doesn't appear to be a valid symbol file"
 msgstr "这似乎不是一个有效的符号文件"
 
-#: src/MainWindow.cpp:422 src/MainWindow.cpp:575
+#: src/MainWindow.cpp:423 src/MainWindow.cpp:576
 #, kde-format
 msgid ""
 "Version %1 of the library file is not supported in this version of "
 "SymbolEditor"
 msgstr "此版本的符号编辑器不支持 %1 版本的库文件"
 
-#: src/MainWindow.cpp:424
+#: src/MainWindow.cpp:425
 #, kde-format
 msgid ""
 "Version %1 of the symbol is not supported in this version of SymbolEditor"
 msgstr "此版本的符号编辑器不支持 %1 版本的符号"
 
-#: src/MainWindow.cpp:426
+#: src/MainWindow.cpp:427
 #, kde-format
 msgid ""
 "Failed to read the library\n"
@@ -293,12 +296,12 @@ msgstr ""
 "未能读取库\n"
 "%1"
 
-#: src/MainWindow.cpp:439 src/MainWindow.cpp:584
+#: src/MainWindow.cpp:440 src/MainWindow.cpp:585
 #, kde-format
 msgid "The url %1 is invalid"
 msgstr "链接 %1 无效"
 
-#: src/MainWindow.cpp:464
+#: src/MainWindow.cpp:465
 #, kde-format
 msgid ""
 "Failed to write the library\n"
@@ -307,7 +310,7 @@ msgstr ""
 "未能写入库\n"
 "%1"
 
-#: src/MainWindow.cpp:470
+#: src/MainWindow.cpp:471
 #, kde-format
 msgid ""
 "Failed to open the file %1\n"
@@ -316,57 +319,57 @@ msgstr ""
 "未能打开文件 %1\n"
 "%2"
 
-#: src/MainWindow.cpp:483
+#: src/MainWindow.cpp:484
 #, kde-format
 msgid "Save As..."
 msgstr "另存为..."
 
-#: src/MainWindow.cpp:553
+#: src/MainWindow.cpp:554
 #, kde-format
 msgid "Import library"
 msgstr "导入库"
 
-#: src/MainWindow.cpp:645
+#: src/MainWindow.cpp:646
 #, kde-format
 msgid "Undo %1"
 msgstr "撤销 %1"
 
-#: src/MainWindow.cpp:658
+#: src/MainWindow.cpp:659
 #, kde-format
 msgid "Redo %1"
 msgstr "重做 %1"
 
-#: src/MainWindow.cpp:672
+#: src/MainWindow.cpp:673
 #, kde-format
 msgctxt "The library tab title %1 is the file name"
 msgid "%1 Library"
 msgstr "%1 库"
 
-#: src/MainWindow.cpp:674
+#: src/MainWindow.cpp:675
 #, kde-format
 msgctxt "The editor tab title %1 is the file name"
 msgid "%1 Editor"
 msgstr "%1 编辑器"
 
-#: src/MainWindow.cpp:766
+#: src/MainWindow.cpp:767
 #, kde-format
 msgctxt "The Editor configuration page"
 msgid "Editor"
 msgstr "编辑"
 
-#: src/MainWindow.cpp:798
+#: src/MainWindow.cpp:799
 #, kde-format
 msgid ""
 "Imports another library appending the symbols it contains to the current "
 "library."
 msgstr "导入另一个库，将其包含的符号追加到但前的库中。"
 
-#: src/MainWindow.cpp:803
+#: src/MainWindow.cpp:804
 #, kde-format
 msgid "Save Symbol"
 msgstr "保存符号"
 
-#: src/MainWindow.cpp:804
+#: src/MainWindow.cpp:805
 #, kde-format
 msgid ""
 "Save the symbol to the library. If this is a new symbol, subsequent saves "
@@ -376,56 +379,56 @@ msgstr ""
 "将符号保存到库中。如果这是一个新符号，随后的保存将在库中创建额外的符号。如果"
 "符号是从库中选择来编辑的，之后保存时会更新库中的符号。"
 
-#: src/MainWindow.cpp:810
+#: src/MainWindow.cpp:811
 #, kde-format
 msgid "Save Symbol as New"
 msgstr "另存符号为新文件"
 
-#: src/MainWindow.cpp:811
+#: src/MainWindow.cpp:812
 #, kde-format
 msgid ""
 "Save the current symbol as a new one in the library. Subsequent saves will "
 "update the new symbol."
 msgstr "将当前的符号保存为库中的新符号。后续的保存将更新新建的符号。"
 
-#: src/MainWindow.cpp:824
+#: src/MainWindow.cpp:825
 #, kde-format
 msgid "Fill Path"
 msgstr "填充路径"
 
-#: src/MainWindow.cpp:825
+#: src/MainWindow.cpp:826
 #, kde-format
 msgid ""
 "Enable path filling. The path defines the closed boundary of the shape and "
 "the path is filled with the selected fill method."
 msgstr "启用路径填充。路径定义形状的闭合边界，且路径用所选的填充方式填充。"
 
-#: src/MainWindow.cpp:835
+#: src/MainWindow.cpp:836
 #, kde-format
 msgid "Odd Even Fill"
 msgstr "奇偶填充"
 
-#: src/MainWindow.cpp:836
+#: src/MainWindow.cpp:837
 #, kde-format
 msgid "The Odd Even fill method will fill alternate areas of the symbol."
 msgstr "奇偶填充方法将填充符号的替代区域。"
 
-#: src/MainWindow.cpp:844
+#: src/MainWindow.cpp:845
 #, kde-format
 msgid "Winding Fill"
 msgstr "卷绕填充"
 
-#: src/MainWindow.cpp:845
+#: src/MainWindow.cpp:846
 #, kde-format
 msgid "The Winding fill method will fill the complete interior of the path."
 msgstr "绕组填充方法将填充路径的完整内部。"
 
-#: src/MainWindow.cpp:858
+#: src/MainWindow.cpp:859
 #, kde-format
 msgid "Flat Cap"
 msgstr "扁平头"
 
-#: src/MainWindow.cpp:859
+#: src/MainWindow.cpp:860
 #, kde-format
 msgid ""
 "The Flat Cap end type provides a square end that stops at the end point of "
@@ -437,12 +440,12 @@ msgstr ""
 "\n"
 "这只适用于未填充的路径。"
 
-#: src/MainWindow.cpp:867
+#: src/MainWindow.cpp:868
 #, kde-format
 msgid "Square Cap"
 msgstr "方头"
 
-#: src/MainWindow.cpp:868
+#: src/MainWindow.cpp:869
 #, kde-format
 msgid ""
 "The Square Cap end type provides a square end that projects beyond the end "
@@ -454,12 +457,12 @@ msgstr ""
 "\n"
 "这只适用于未填充的路径。"
 
-#: src/MainWindow.cpp:876
+#: src/MainWindow.cpp:877
 #, kde-format
 msgid "Round Cap"
 msgstr "圆头"
 
-#: src/MainWindow.cpp:877
+#: src/MainWindow.cpp:878
 #, kde-format
 msgid ""
 "The Round Cap end type provides a round end that projects beyond the end "
@@ -471,12 +474,12 @@ msgstr ""
 "\n"
 "这只适用于未填充的路径。"
 
-#: src/MainWindow.cpp:890
+#: src/MainWindow.cpp:891
 #, kde-format
 msgid "Bevel Join"
 msgstr "斜角连接"
 
-#: src/MainWindow.cpp:891
+#: src/MainWindow.cpp:892
 #, kde-format
 msgid ""
 "The Bevel Join provides a beveled corner between two lines.\n"
@@ -487,12 +490,12 @@ msgstr ""
 "\n"
 "这只适用于未填充的路径。"
 
-#: src/MainWindow.cpp:899
+#: src/MainWindow.cpp:900
 #, kde-format
 msgid "Miter Join"
 msgstr "斜切连接"
 
-#: src/MainWindow.cpp:900
+#: src/MainWindow.cpp:901
 #, kde-format
 msgid ""
 "The Miter Join provides a mitered corner between two lines.\n"
@@ -503,12 +506,12 @@ msgstr ""
 "\n"
 "这只适用于未填充的路径。"
 
-#: src/MainWindow.cpp:908
+#: src/MainWindow.cpp:909
 #, kde-format
 msgid "Round Join"
 msgstr "圆角连接"
 
-#: src/MainWindow.cpp:909
+#: src/MainWindow.cpp:910
 #, kde-format
 msgid ""
 "The Round Join provides a rounded corner between two lines using a radius of "
@@ -520,7 +523,7 @@ msgstr ""
 "\n"
 "这只适用于未填充的路径。"
 
-#: src/MainWindow.cpp:920
+#: src/MainWindow.cpp:921
 #, kde-format
 msgid ""
 "Increases the line width.\n"
@@ -531,7 +534,7 @@ msgstr ""
 "\n"
 "这只适用于未填充的路径。"
 
-#: src/MainWindow.cpp:927
+#: src/MainWindow.cpp:928
 #, kde-format
 msgid ""
 "Decreases the line width.\n"
@@ -542,7 +545,7 @@ msgstr ""
 "\n"
 "这只适用于未填充的路径。"
 
-#: src/MainWindow.cpp:938
+#: src/MainWindow.cpp:939
 #, kde-format
 msgid ""
 "Move the current point to a new position. This implicitly closes any "
@@ -550,14 +553,14 @@ msgid ""
 msgstr ""
 "将当前点移动到新位置。这将隐式闭合任何现有的子路径，从而启动一个新的子路径。"
 
-#: src/MainWindow.cpp:947
+#: src/MainWindow.cpp:948
 #, kde-format
 msgid ""
 "Add a straight line from the current position to a defined end point. The "
 "end point becomes the new current position."
 msgstr "添加一条从当前位置到定义的终点的直线。终点将成为新的当前位置。"
 
-#: src/MainWindow.cpp:956
+#: src/MainWindow.cpp:957
 #, kde-format
 msgid ""
 "Add a cubic bezier curve from the current position using two control points "
@@ -566,36 +569,36 @@ msgstr ""
 "使用两个控制点和一个终点从当前位置添加一条立方贝塞尔曲线。终点将成为新的当前"
 "位置。"
 
-#: src/MainWindow.cpp:964
+#: src/MainWindow.cpp:965
 #, kde-format
 msgid "Rectangle"
 msgstr "矩形"
 
-#: src/MainWindow.cpp:965
+#: src/MainWindow.cpp:966
 #, kde-format
 msgid ""
 "Add a rectangle as a separate sub path defined by two points representing "
 "the opposite corners."
 msgstr "添加一个矩形作为一个单独的子路径，由表示对角的两个点定义。"
 
-#: src/MainWindow.cpp:973
+#: src/MainWindow.cpp:974
 #, kde-format
 msgid "Ellipse"
 msgstr "椭圆形"
 
-#: src/MainWindow.cpp:974
+#: src/MainWindow.cpp:975
 #, kde-format
 msgid ""
 "Add an ellipse as a separate sub path defined by a bounding rectangle "
 "represented by two opposite corners."
 msgstr "由两个对角表示的边框定义添加椭圆作为单独子路径。"
 
-#: src/MainWindow.cpp:982
+#: src/MainWindow.cpp:983
 #, kde-format
 msgid "Insert Character"
 msgstr "插入字符"
 
-#: src/MainWindow.cpp:983
+#: src/MainWindow.cpp:984
 #, kde-format
 msgid ""
 "Allows selection of a character from any font to be inserted as a closed sub "
@@ -605,57 +608,57 @@ msgstr ""
 "允许从任何字体中选择字符作为封闭的子路径插入。插入的字符将覆盖任何现有路径，"
 "但可能会向字符中添加其他子路径。"
 
-#: src/MainWindow.cpp:994
+#: src/MainWindow.cpp:995
 #, kde-format
 msgid ""
 "Rotate all the points of a path counter-clockwise 90 degrees around the "
 "center of the editor."
 msgstr "路径的所有点围绕编辑器中心逆时针旋转 90 度。"
 
-#: src/MainWindow.cpp:1001
+#: src/MainWindow.cpp:1002
 #, kde-format
 msgid ""
 "Rotate all the points of a path clockwise 90 degrees around the center point "
 "of the editor."
 msgstr "路径的所有点围绕编辑器中心顺时针旋转 90 度。"
 
-#: src/MainWindow.cpp:1008
+#: src/MainWindow.cpp:1009
 #, kde-format
 msgid ""
 "Flip all the points of the path horizontally about the vertical center of "
 "the editor."
 msgstr "围绕编辑器的垂直中线水平翻转路径的所有点。"
 
-#: src/MainWindow.cpp:1015
+#: src/MainWindow.cpp:1016
 #, kde-format
 msgid ""
 "Flip all the points of the path vertically about the horizontal center of "
 "the editor."
 msgstr "围绕编辑器的水平中线竖直翻转路径的所有点。"
 
-#: src/MainWindow.cpp:1022
+#: src/MainWindow.cpp:1023
 #, kde-format
 msgid ""
 "Scale the current symbol so that it fits within the preferred size of a "
 "symbol."
 msgstr "缩放当前符号，使其符合符号的偏好大小。"
 
-#: src/MainWindow.cpp:1028
+#: src/MainWindow.cpp:1029
 #, kde-format
 msgid "Enable Snap"
 msgstr "启用捕捉"
 
-#: src/MainWindow.cpp:1029
+#: src/MainWindow.cpp:1030
 #, kde-format
 msgid "Enable snapping of points to guide intersections or to the grid."
 msgstr "启用点的捕捉来引导交叉点或网格。"
 
-#: src/MainWindow.cpp:1036
+#: src/MainWindow.cpp:1037
 #, kde-format
 msgid "Enable Guides"
 msgstr "启用参考线"
 
-#: src/MainWindow.cpp:1037
+#: src/MainWindow.cpp:1038
 #, kde-format
 msgid "Enable the generation of guide intersections."
 msgstr "启用参考线交点生成。"

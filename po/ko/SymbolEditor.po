@@ -2,11 +2,14 @@
 # This file is distributed under the same license as the symboleditor package.
 # Shinjo Park <kde@peremen.name>, 2021, 2023.
 #
+#: src/Editor.cpp:173 src/Editor.cpp:174 src/Editor.cpp:178 src/Editor.cpp:179
+#: src/Editor.cpp:189 src/Editor.cpp:194 src/Editor.cpp:198 src/Editor.cpp:199
+#, kde-format
 msgid ""
 msgstr ""
 "Project-Id-Version: symboleditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:27+0000\n"
+"POT-Creation-Date: 2024-10-27 00:39+0000\n"
 "PO-Revision-Date: 2023-03-01 01:34+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -17,112 +20,112 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: src/Commands.cpp:72 src/MainWindow.cpp:937
+#: src/Commands.cpp:73 src/MainWindow.cpp:938
 #, kde-format
 msgid "Move To"
 msgstr "이동"
 
-#: src/Commands.cpp:105 src/MainWindow.cpp:946
+#: src/Commands.cpp:106 src/MainWindow.cpp:947
 #, kde-format
 msgid "Draw To"
 msgstr "그리기"
 
-#: src/Commands.cpp:140 src/MainWindow.cpp:955
+#: src/Commands.cpp:141 src/MainWindow.cpp:956
 #, kde-format
 msgid "Cubic To"
 msgstr "3차 곡선"
 
-#: src/Commands.cpp:176
+#: src/Commands.cpp:177
 #, kde-format
 msgid "Add Rectangle"
 msgstr "직사각형 추가"
 
-#: src/Commands.cpp:211
+#: src/Commands.cpp:212
 #, kde-format
 msgid "Add Ellipse"
 msgstr "타원 추가"
 
-#: src/Commands.cpp:247
+#: src/Commands.cpp:248
 #, kde-format
 msgid "Move point"
 msgstr "점 이동"
 
-#: src/Commands.cpp:284
+#: src/Commands.cpp:285
 #, kde-format
 msgid "Update Symbol"
 msgstr "기호 업데이트"
 
-#: src/Commands.cpp:326 src/MainWindow.cpp:797
+#: src/Commands.cpp:327 src/MainWindow.cpp:798
 #, kde-format
 msgid "Import Library"
 msgstr "라이브러리 가져오기"
 
-#: src/Commands.cpp:375 src/MainWindow.cpp:993
+#: src/Commands.cpp:376 src/MainWindow.cpp:994
 #, kde-format
 msgid "Rotate Left"
 msgstr "왼쪽으로 회전"
 
-#: src/Commands.cpp:406 src/MainWindow.cpp:1000
+#: src/Commands.cpp:407 src/MainWindow.cpp:1001
 #, kde-format
 msgid "Rotate Right"
 msgstr "오른쪽으로 회전"
 
-#: src/Commands.cpp:437 src/MainWindow.cpp:1007
+#: src/Commands.cpp:438 src/MainWindow.cpp:1008
 #, kde-format
 msgid "Flip Horizontal"
 msgstr "수평 뒤집기"
 
-#: src/Commands.cpp:467 src/MainWindow.cpp:1014
+#: src/Commands.cpp:468 src/MainWindow.cpp:1015
 #, kde-format
 msgid "Flip Vertical"
 msgstr "수직 뒤집기"
 
-#: src/Commands.cpp:500 src/MainWindow.cpp:1021
+#: src/Commands.cpp:501 src/MainWindow.cpp:1022
 #, kde-format
 msgid "Scale to Preferred Size"
 msgstr "선호하는 크기로 조정"
 
-#: src/Commands.cpp:557
+#: src/Commands.cpp:558
 #, kde-format
 msgid "Change Fill State"
 msgstr "채우기 상태 변경"
 
-#: src/Commands.cpp:591
+#: src/Commands.cpp:592
 #, kde-format
 msgid "Change Fill Rule"
 msgstr "채우기 규칙 변경"
 
-#: src/Commands.cpp:625
+#: src/Commands.cpp:626
 #, kde-format
 msgid "Change Cap Style"
 msgstr "끝 부분 스타일 변경"
 
-#: src/Commands.cpp:659
+#: src/Commands.cpp:660
 #, kde-format
 msgid "Change Join Style"
 msgstr "결합 스타일 변경"
 
-#: src/Commands.cpp:692 src/MainWindow.cpp:736
+#: src/Commands.cpp:693 src/MainWindow.cpp:737
 #, kde-format
 msgid "Delete Symbol"
 msgstr "기호 삭제"
 
-#: src/Commands.cpp:725 src/MainWindow.cpp:919
+#: src/Commands.cpp:726 src/MainWindow.cpp:920
 #, kde-format
 msgid "Increase Line Width"
 msgstr "선 폭 증가"
 
-#: src/Commands.cpp:789 src/MainWindow.cpp:926
+#: src/Commands.cpp:790 src/MainWindow.cpp:927
 #, kde-format
 msgid "Decrease Line Width"
 msgstr "선 폭 감소"
 
-#: src/Commands.cpp:852
+#: src/Commands.cpp:853
 #, kde-format
 msgid "Add Symbols"
 msgstr "기호 추가"
 
-#: src/Commands.cpp:897
+#: src/Commands.cpp:898
 #, kde-format
 msgid "Add Character"
 msgstr "글자 추가"
@@ -197,81 +200,81 @@ msgstr "정의되지 않은 상태 메시지 %1"
 msgid "Failed to write to the device"
 msgstr "장치에 기록할 수 없음"
 
-#: src/Main.cpp:87
+#: src/Main.cpp:88
 #, kde-format
 msgid "SymbolEditor"
 msgstr "SymbolEditor"
 
-#: src/Main.cpp:89
+#: src/Main.cpp:90
 #, kde-format
 msgid "A cross stitch symbol editor."
 msgstr "십자수 기호 편집기입니다."
 
-#: src/Main.cpp:91
+#: src/Main.cpp:92
 #, kde-format
 msgid "(c)2011-2019 Stephen Allewell"
 msgstr "(c)2011-2019 Stephen Allewell"
 
-#: src/Main.cpp:97
+#: src/Main.cpp:98
 #, kde-format
 msgid "Project Lead"
 msgstr "프로젝트 주도"
 
-#: src/Main.cpp:98
+#: src/Main.cpp:99
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "박신조"
 
-#: src/Main.cpp:98
+#: src/Main.cpp:99
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde@peremen.name"
 
-#: src/MainWindow.cpp:198 src/MainWindow.cpp:452 src/MainWindow.cpp:599
+#: src/MainWindow.cpp:199 src/MainWindow.cpp:453 src/MainWindow.cpp:600
 #, kde-format
 msgid "Untitled"
 msgstr "제목 없음"
 
-#: src/MainWindow.cpp:207
+#: src/MainWindow.cpp:208
 #, kde-format
 msgctxt "The editor tab title"
 msgid "Editor"
 msgstr "편집기"
 
-#: src/MainWindow.cpp:208
+#: src/MainWindow.cpp:209
 #, kde-format
 msgctxt "The library tab title"
 msgid "Library"
 msgstr "라이브러리"
 
-#: src/MainWindow.cpp:283
+#: src/MainWindow.cpp:284
 #, kde-format
 msgid "Save changes to the symbol?"
 msgstr "기호에 변경 사항을 저장하시겠습니까?"
 
-#: src/MainWindow.cpp:332
+#: src/MainWindow.cpp:333
 #, kde-format
 msgid "Save changes to the library?"
 msgstr "라이브러리에 변경 사항을 저장하시겠습니까?"
 
-#: src/MainWindow.cpp:371
+#: src/MainWindow.cpp:372
 #, kde-format
 msgid "Open file"
 msgstr "파일 열기"
 
-#: src/MainWindow.cpp:371 src/MainWindow.cpp:483 src/MainWindow.cpp:553
+#: src/MainWindow.cpp:372 src/MainWindow.cpp:484 src/MainWindow.cpp:554
 #, kde-format
 msgid "Cross Stitch Symbols (*.sym)"
 msgstr "십자수 기호 (*.sym)"
 
-#: src/MainWindow.cpp:420 src/MainWindow.cpp:573
+#: src/MainWindow.cpp:421 src/MainWindow.cpp:574
 #, kde-format
 msgid "This doesn't appear to be a valid symbol file"
 msgstr "올바른 기호 파일이 아닌 것 같습니다"
 
-#: src/MainWindow.cpp:422 src/MainWindow.cpp:575
+#: src/MainWindow.cpp:423 src/MainWindow.cpp:576
 #, kde-format
 msgid ""
 "Version %1 of the library file is not supported in this version of "
@@ -279,13 +282,13 @@ msgid ""
 msgstr ""
 "이 버전의 기호 편집기에서는 라이브러리 파일 버전 %1을(를) 지원하지 않음"
 
-#: src/MainWindow.cpp:424
+#: src/MainWindow.cpp:425
 #, kde-format
 msgid ""
 "Version %1 of the symbol is not supported in this version of SymbolEditor"
 msgstr "이 버전의 기호 편집기에서는 기호 파일 버전 %1을(를) 지원하지 않음"
 
-#: src/MainWindow.cpp:426
+#: src/MainWindow.cpp:427
 #, kde-format
 msgid ""
 "Failed to read the library\n"
@@ -294,12 +297,12 @@ msgstr ""
 "라이브러리를 읽을 수 없음:\n"
 "%1"
 
-#: src/MainWindow.cpp:439 src/MainWindow.cpp:584
+#: src/MainWindow.cpp:440 src/MainWindow.cpp:585
 #, kde-format
 msgid "The url %1 is invalid"
 msgstr "URL %1이(가) 잘못됨"
 
-#: src/MainWindow.cpp:464
+#: src/MainWindow.cpp:465
 #, kde-format
 msgid ""
 "Failed to write the library\n"
@@ -308,7 +311,7 @@ msgstr ""
 "라이브러리에 쓸 수 없음:\n"
 "%1"
 
-#: src/MainWindow.cpp:470
+#: src/MainWindow.cpp:471
 #, kde-format
 msgid ""
 "Failed to open the file %1\n"
@@ -317,57 +320,57 @@ msgstr ""
 "파일 %1을(를) 열 수 없음\n"
 "%2"
 
-#: src/MainWindow.cpp:483
+#: src/MainWindow.cpp:484
 #, kde-format
 msgid "Save As..."
 msgstr "다른 이름으로 저장..."
 
-#: src/MainWindow.cpp:553
+#: src/MainWindow.cpp:554
 #, kde-format
 msgid "Import library"
 msgstr "라이브러리 가져오기"
 
-#: src/MainWindow.cpp:645
+#: src/MainWindow.cpp:646
 #, kde-format
 msgid "Undo %1"
 msgstr "%1 실행 취소"
 
-#: src/MainWindow.cpp:658
+#: src/MainWindow.cpp:659
 #, kde-format
 msgid "Redo %1"
 msgstr "%1 다시 실행"
 
-#: src/MainWindow.cpp:672
+#: src/MainWindow.cpp:673
 #, kde-format
 msgctxt "The library tab title %1 is the file name"
 msgid "%1 Library"
 msgstr "%1 라이브러리"
 
-#: src/MainWindow.cpp:674
+#: src/MainWindow.cpp:675
 #, kde-format
 msgctxt "The editor tab title %1 is the file name"
 msgid "%1 Editor"
 msgstr "%1 편집기"
 
-#: src/MainWindow.cpp:766
+#: src/MainWindow.cpp:767
 #, kde-format
 msgctxt "The Editor configuration page"
 msgid "Editor"
 msgstr "편집기"
 
-#: src/MainWindow.cpp:798
+#: src/MainWindow.cpp:799
 #, kde-format
 msgid ""
 "Imports another library appending the symbols it contains to the current "
 "library."
 msgstr "다른 라이브러리의 기호를 가져와서 현재 라이브러리 뒤에 추가합니다."
 
-#: src/MainWindow.cpp:803
+#: src/MainWindow.cpp:804
 #, kde-format
 msgid "Save Symbol"
 msgstr "기호 저장"
 
-#: src/MainWindow.cpp:804
+#: src/MainWindow.cpp:805
 #, kde-format
 msgid ""
 "Save the symbol to the library. If this is a new symbol, subsequent saves "
@@ -378,12 +381,12 @@ msgstr ""
 "이브러리에 추가로 기호를 만듭니다. 라이브러리에서 기호를 선택했다면 라이브러"
 "리의 해당 기호를 업데이트합니다."
 
-#: src/MainWindow.cpp:810
+#: src/MainWindow.cpp:811
 #, kde-format
 msgid "Save Symbol as New"
 msgstr "다른 이름으로 기호 저장"
 
-#: src/MainWindow.cpp:811
+#: src/MainWindow.cpp:812
 #, kde-format
 msgid ""
 "Save the current symbol as a new one in the library. Subsequent saves will "
@@ -392,12 +395,12 @@ msgstr ""
 "현재 기호를 라이브러리에 새 기호로 저장합니다. 나중에 다시 저장하면 새 기호"
 "를 업데이트합니다."
 
-#: src/MainWindow.cpp:824
+#: src/MainWindow.cpp:825
 #, kde-format
 msgid "Fill Path"
 msgstr "경로 채우기"
 
-#: src/MainWindow.cpp:825
+#: src/MainWindow.cpp:826
 #, kde-format
 msgid ""
 "Enable path filling. The path defines the closed boundary of the shape and "
@@ -406,32 +409,32 @@ msgstr ""
 "경로 채우기를 사용합니다. 경로는 도형의 닫힌 경계를 정의하고 선택한 채우기 방"
 "법으로 경로를 채웁니다."
 
-#: src/MainWindow.cpp:835
+#: src/MainWindow.cpp:836
 #, kde-format
 msgid "Odd Even Fill"
 msgstr "홀짝 채우기"
 
-#: src/MainWindow.cpp:836
+#: src/MainWindow.cpp:837
 #, kde-format
 msgid "The Odd Even fill method will fill alternate areas of the symbol."
 msgstr "홀짝 채우기는 경로의 인접한 영역을 서로 다르게 칠합니다."
 
-#: src/MainWindow.cpp:844
+#: src/MainWindow.cpp:845
 #, kde-format
 msgid "Winding Fill"
 msgstr "굴곡 채우기"
 
-#: src/MainWindow.cpp:845
+#: src/MainWindow.cpp:846
 #, kde-format
 msgid "The Winding fill method will fill the complete interior of the path."
 msgstr "굴곡 채우기는 경로의 전체 내부 영역을 채웁니다."
 
-#: src/MainWindow.cpp:858
+#: src/MainWindow.cpp:859
 #, kde-format
 msgid "Flat Cap"
 msgstr "평면 모양으로 덮기"
 
-#: src/MainWindow.cpp:859
+#: src/MainWindow.cpp:860
 #, kde-format
 msgid ""
 "The Flat Cap end type provides a square end that stops at the end point of "
@@ -443,12 +446,12 @@ msgstr ""
 "\n"
 "채워지지 않은 경로에만 적용 가능합니다."
 
-#: src/MainWindow.cpp:867
+#: src/MainWindow.cpp:868
 #, kde-format
 msgid "Square Cap"
 msgstr "사각 모양으로 덮기"
 
-#: src/MainWindow.cpp:868
+#: src/MainWindow.cpp:869
 #, kde-format
 msgid ""
 "The Square Cap end type provides a square end that projects beyond the end "
@@ -461,12 +464,12 @@ msgstr ""
 "\n"
 "채워지지 않은 경로에만 적용 가능합니다."
 
-#: src/MainWindow.cpp:876
+#: src/MainWindow.cpp:877
 #, kde-format
 msgid "Round Cap"
 msgstr "둥근 모양으로 덮기"
 
-#: src/MainWindow.cpp:877
+#: src/MainWindow.cpp:878
 #, kde-format
 msgid ""
 "The Round Cap end type provides a round end that projects beyond the end "
@@ -479,12 +482,12 @@ msgstr ""
 "\n"
 "채워지지 않은 경로에만 적용 가능합니다."
 
-#: src/MainWindow.cpp:890
+#: src/MainWindow.cpp:891
 #, kde-format
 msgid "Bevel Join"
 msgstr "모서리 깎기"
 
-#: src/MainWindow.cpp:891
+#: src/MainWindow.cpp:892
 #, kde-format
 msgid ""
 "The Bevel Join provides a beveled corner between two lines.\n"
@@ -495,12 +498,12 @@ msgstr ""
 "\n"
 "채워지지 않은 경로에만 적용 가능합니다."
 
-#: src/MainWindow.cpp:899
+#: src/MainWindow.cpp:900
 #, kde-format
 msgid "Miter Join"
 msgstr "모서리 각지게"
 
-#: src/MainWindow.cpp:900
+#: src/MainWindow.cpp:901
 #, kde-format
 msgid ""
 "The Miter Join provides a mitered corner between two lines.\n"
@@ -511,12 +514,12 @@ msgstr ""
 "\n"
 "채워지지 않은 경로에만 적용 가능합니다."
 
-#: src/MainWindow.cpp:908
+#: src/MainWindow.cpp:909
 #, kde-format
 msgid "Round Join"
 msgstr "모서리 둥글게"
 
-#: src/MainWindow.cpp:909
+#: src/MainWindow.cpp:910
 #, kde-format
 msgid ""
 "The Round Join provides a rounded corner between two lines using a radius of "
@@ -529,7 +532,7 @@ msgstr ""
 "\n"
 "채워지지 않은 경로에만 적용 가능합니다."
 
-#: src/MainWindow.cpp:920
+#: src/MainWindow.cpp:921
 #, kde-format
 msgid ""
 "Increases the line width.\n"
@@ -540,7 +543,7 @@ msgstr ""
 "\n"
 "채워지지 않은 경로에만 적용 가능합니다."
 
-#: src/MainWindow.cpp:927
+#: src/MainWindow.cpp:928
 #, kde-format
 msgid ""
 "Decreases the line width.\n"
@@ -551,7 +554,7 @@ msgstr ""
 "\n"
 "채워지지 않은 경로에만 적용 가능합니다."
 
-#: src/MainWindow.cpp:938
+#: src/MainWindow.cpp:939
 #, kde-format
 msgid ""
 "Move the current point to a new position. This implicitly closes any "
@@ -559,7 +562,7 @@ msgid ""
 msgstr ""
 "현재 지점을 새 위치로 이동합니다. 기존 하위 경로를 닫고 새 경로를 시작합니다."
 
-#: src/MainWindow.cpp:947
+#: src/MainWindow.cpp:948
 #, kde-format
 msgid ""
 "Add a straight line from the current position to a defined end point. The "
@@ -568,7 +571,7 @@ msgstr ""
 "현재 지점과 지정한 끝 지점을 잇는 직선을 추가합니다. 현재 지점은 끝 지점으로 "
 "변경됩니다."
 
-#: src/MainWindow.cpp:956
+#: src/MainWindow.cpp:957
 #, kde-format
 msgid ""
 "Add a cubic bezier curve from the current position using two control points "
@@ -577,24 +580,24 @@ msgstr ""
 "제어점 두 개와 끝 지점으로 현재 위치에 3차 베지어 곡선을 추가합니다. 현재 지"
 "점은 끝 지점으로 변경됩니다."
 
-#: src/MainWindow.cpp:964
+#: src/MainWindow.cpp:965
 #, kde-format
 msgid "Rectangle"
 msgstr "직사각형"
 
-#: src/MainWindow.cpp:965
+#: src/MainWindow.cpp:966
 #, kde-format
 msgid ""
 "Add a rectangle as a separate sub path defined by two points representing "
 "the opposite corners."
 msgstr "두 꼭짓점으로 정의한 직사각형을 별도의 하위 경로로 추가합니다."
 
-#: src/MainWindow.cpp:973
+#: src/MainWindow.cpp:974
 #, kde-format
 msgid "Ellipse"
 msgstr "타원"
 
-#: src/MainWindow.cpp:974
+#: src/MainWindow.cpp:975
 #, kde-format
 msgid ""
 "Add an ellipse as a separate sub path defined by a bounding rectangle "
@@ -603,12 +606,12 @@ msgstr ""
 "두 꼭짓점으로 정의한 직사각형 내에 들어차는 타원을 별도의 하위 경로로 추가합"
 "니다."
 
-#: src/MainWindow.cpp:982
+#: src/MainWindow.cpp:983
 #, kde-format
 msgid "Insert Character"
 msgstr "문자 삽입"
 
-#: src/MainWindow.cpp:983
+#: src/MainWindow.cpp:984
 #, kde-format
 msgid ""
 "Allows selection of a character from any font to be inserted as a closed sub "
@@ -618,7 +621,7 @@ msgstr ""
 "임의 글꼴의 임의 문자를 닫힌 하위 경로로 삽입합니다. 선택한 글자는 기존 경로"
 "를 삭제하지만, 추가한 글자에 하위 경로를 추가할 수 있습니다."
 
-#: src/MainWindow.cpp:994
+#: src/MainWindow.cpp:995
 #, kde-format
 msgid ""
 "Rotate all the points of a path counter-clockwise 90 degrees around the "
@@ -626,50 +629,50 @@ msgid ""
 msgstr ""
 "경로의 모든 점을 편집기 중심을 기준으로 반시계 방향으로 90도 회전합니다."
 
-#: src/MainWindow.cpp:1001
+#: src/MainWindow.cpp:1002
 #, kde-format
 msgid ""
 "Rotate all the points of a path clockwise 90 degrees around the center point "
 "of the editor."
 msgstr "경로의 모든 점을 편집기 중심을 기준으로 시계 방향으로 90도 회전합니다."
 
-#: src/MainWindow.cpp:1008
+#: src/MainWindow.cpp:1009
 #, kde-format
 msgid ""
 "Flip all the points of the path horizontally about the vertical center of "
 "the editor."
 msgstr "경로의 모든 점을 편집기 수직 가운데를 기준으로 수평으로 뒤집습니다."
 
-#: src/MainWindow.cpp:1015
+#: src/MainWindow.cpp:1016
 #, kde-format
 msgid ""
 "Flip all the points of the path vertically about the horizontal center of "
 "the editor."
 msgstr "경로의 모든 점을 편집기 수평 가운데를 기준으로 수직으로 뒤집습니다."
 
-#: src/MainWindow.cpp:1022
+#: src/MainWindow.cpp:1023
 #, kde-format
 msgid ""
 "Scale the current symbol so that it fits within the preferred size of a "
 "symbol."
 msgstr "현재 기호의 크기를 조절하여 선호하는 크기에 맞춥니다."
 
-#: src/MainWindow.cpp:1028
+#: src/MainWindow.cpp:1029
 #, kde-format
 msgid "Enable Snap"
 msgstr "스냅 활성화"
 
-#: src/MainWindow.cpp:1029
+#: src/MainWindow.cpp:1030
 #, kde-format
 msgid "Enable snapping of points to guide intersections or to the grid."
 msgstr "점이 안내선 교차점이나 격자에 스냅할 수 있도록 활성화합니다."
 
-#: src/MainWindow.cpp:1036
+#: src/MainWindow.cpp:1037
 #, kde-format
 msgid "Enable Guides"
 msgstr "안내선 활성화"
 
-#: src/MainWindow.cpp:1037
+#: src/MainWindow.cpp:1038
 #, kde-format
 msgid "Enable the generation of guide intersections."
 msgstr "안내선 교차점을 생성합니다."
