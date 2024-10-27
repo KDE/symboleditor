@@ -59,6 +59,15 @@ set (SymbolEditor_SRCS
     src/SymbolLibrary.cpp
     src/SymbolListWidget.cpp
 
+    src/Commands.h
+    src/ConfigurationDialogs.h
+    src/Editor.h
+    src/Exceptions.h
+    src/MainWindow.h
+    src/Symbol.h
+    src/SymbolLibrary.h
+    src/SymbolListWidget.h
+
     SymbolEditor.qrc
 )
 
