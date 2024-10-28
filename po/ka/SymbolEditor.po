@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: symboleditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 00:39+0000\n"
-"PO-Revision-Date: 2023-02-05 07:28+0100\n"
+"PO-Revision-Date: 2024-10-27 04:21+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: src/Commands.cpp:73 src/MainWindow.cpp:938
 #, kde-format
@@ -169,12 +169,12 @@ msgstr "აირჩიეთ მეორე კუთხე."
 #: src/Editor.cpp:192
 #, kde-format
 msgid "Select the first corner of the bounding rectangle."
-msgstr ""
+msgstr "შემომსაზღვრელი მართკუთხედის პირველი კუთხის მონიშვნა."
 
 #: src/Editor.cpp:193
 #, kde-format
 msgid "Select the second corner of the bounding rectangle."
-msgstr ""
+msgstr "შემომსაზღვრელი მართკუთხედის მეორე კუთხის მონიშვნა."
 
 #: src/Editor.cpp:197
 #, kde-format
@@ -268,7 +268,7 @@ msgstr "ფაილის გახსნა"
 #: src/MainWindow.cpp:372 src/MainWindow.cpp:484 src/MainWindow.cpp:554
 #, kde-format
 msgid "Cross Stitch Symbols (*.sym)"
-msgstr ""
+msgstr "ჯვარედინი გვირისტის სიმბოლოები (*.sym)"
 
 #: src/MainWindow.cpp:421 src/MainWindow.cpp:574
 #, kde-format
@@ -281,12 +281,13 @@ msgid ""
 "Version %1 of the library file is not supported in this version of "
 "SymbolEditor"
 msgstr ""
+"ბიბლიოთეკის ფაილის ვერსია %1 SymbolEditor-ის ამ ვერსიაში მხარდაჭერილი არაა"
 
 #: src/MainWindow.cpp:425
 #, kde-format
 msgid ""
 "Version %1 of the symbol is not supported in this version of SymbolEditor"
-msgstr ""
+msgstr "სიმბოლოს ვერსია %1 SymbolEditor-ის ამ ვერსიაში მხარდაჭერილი არაა"
 
 #: src/MainWindow.cpp:427
 #, kde-format
@@ -364,6 +365,8 @@ msgid ""
 "Imports another library appending the symbols it contains to the current "
 "library."
 msgstr ""
+"შემოიტანს სხვა ბიბლიოთეკა და სიმბოლოებს, რომლებსაც ის შეიცავს, მიმდინარე "
+"ბიბლიოთეკას ბოლოში მიაწერს."
 
 #: src/MainWindow.cpp:804
 #, kde-format
@@ -377,6 +380,9 @@ msgid ""
 "will create additional symbols in the library. If the symbol was selected "
 "from the library to edit then saving will update that symbol in the library."
 msgstr ""
+"სიმბოლოს შენახვა ბიბლიოთეკაში. თუ სიმბოლო ახალია, ყოველი შემდეგი შენახვა "
+"ბიბლიოთეკაში ახალ სიმბოლოს შექმნის. თუ სიმბოლო ბიბლიოთეკიდანაა არჩეული, "
+"მაშინ მისი შენახვა ბიბლიოთეკის სიმბოლოს განაახლებს."
 
 #: src/MainWindow.cpp:811
 #, kde-format
@@ -389,6 +395,8 @@ msgid ""
 "Save the current symbol as a new one in the library. Subsequent saves will "
 "update the new symbol."
 msgstr ""
+"მიმდინარე სიმბოლოს შენახვა ბიბლიოთეკაში ახლის სახით. შემდგომი შენახვები ამ "
+"ახალ სიმბოლოს განაახლებს."
 
 #: src/MainWindow.cpp:825
 #, kde-format
@@ -401,16 +409,20 @@ msgid ""
 "Enable path filling. The path defines the closed boundary of the shape and "
 "the path is filled with the selected fill method."
 msgstr ""
+"კონტურით შევსების ჩართვა. კონტური აღწერს ფორმის დახურულ საზღვარს და ბილიკი "
+"არჩეული შევსების მეთოდით შეივსება."
 
 #: src/MainWindow.cpp:836
 #, kde-format
 msgid "Odd Even Fill"
-msgstr ""
+msgstr "მონაცვლეობითი შევსება"
 
 #: src/MainWindow.cpp:837
 #, kde-format
 msgid "The Odd Even fill method will fill alternate areas of the symbol."
 msgstr ""
+"ცვალებადი შევსების მეთოდი სიმბოლოს ისე შეავსებს, რომ შევსებული და შეუვსებელი "
+"ადგილები ერთმანეთის მიყოლებით იქნება."
 
 #: src/MainWindow.cpp:845
 #, kde-format
@@ -420,7 +432,7 @@ msgstr "სრული შევსება"
 #: src/MainWindow.cpp:846
 #, kde-format
 msgid "The Winding fill method will fill the complete interior of the path."
-msgstr ""
+msgstr "სრული შევსება კონტურის შიდა ნაწილს მთლიანად შეავსებს."
 
 #: src/MainWindow.cpp:859
 #, kde-format
@@ -435,6 +447,10 @@ msgid ""
 "\n"
 "This is only applicable to non-filled paths."
 msgstr ""
+"ბრტყელი ბოლოს ტიპი მოგაწოდებთ ოთხკუთხედ ბოლოს, რომელიც ხაზის ბოლო წერტილში "
+"სრულდება.\n"
+"\n"
+"ეს, მხოლოდ, არაშევსებულ ბილიკებს ეხება."
 
 #: src/MainWindow.cpp:868
 #, kde-format
@@ -449,6 +465,10 @@ msgid ""
 "\n"
 "This is only applicable to non-filled paths."
 msgstr ""
+"ოთხკუთხედი ბოლოს ტიპი მოგაწოდებთ ოთხკუთხედ ბოლოს, რომლის პროექციაც ხაზის "
+"ბოლოს ნახევარი ხაზის სიგანით სცდება.\n"
+"\n"
+"ეს, მხოლოდ, შეუვსებელ კონტურებს ეხება."
 
 #: src/MainWindow.cpp:877
 #, kde-format
@@ -463,6 +483,10 @@ msgid ""
 "\n"
 "This is only applicable to non-filled paths."
 msgstr ""
+"მრგვალი ბოლოს ტიპი მოგაწოდებთ მრგვალ ბოლოს, რომლის პროექციაც ხაზის ბოლოს "
+"შემდეგ ხაზის სიგანის ნახევარი რადიუსით ხდება.\n"
+"\n"
+"ეხება, მხოლოდ, შეუვსებელ კონტურებს."
 
 #: src/MainWindow.cpp:891
 #, kde-format
@@ -476,6 +500,9 @@ msgid ""
 "\n"
 "This is only applicable to non-filled paths."
 msgstr ""
+"ცერა მიერთება მოგაწოდებთ დაცერებულ კუთხეს ორ ხაზს შორის.\n"
+"\n"
+"ეს, მხოლოდ, შეუვსებელ კონტურებს ეხება."
 
 #: src/MainWindow.cpp:900
 #, kde-format
@@ -489,6 +516,9 @@ msgid ""
 "\n"
 "This is only applicable to non-filled paths."
 msgstr ""
+"ფაცეტური მიერთება ორ ხაზს შორის ფაცეტურ კუთხეს მოგაწოდებთ.\n"
+"\n"
+"ეს, მხოლოდ, შეუვსებელ კონტურებს ეხება."
 
 #: src/MainWindow.cpp:909
 #, kde-format
@@ -503,6 +533,10 @@ msgid ""
 "\n"
 "This is only applicable to non-filled paths."
 msgstr ""
+"მრგვალი მიერთება მოგაწოდებთ მომრგვალებულ კუთხეს ორ ხაზს შორის ხაზის სიგანის "
+"ნახევარი რადიუსის გამოყენებით.\n"
+"\n"
+"ეს, მხოლოდ, შეუვსებელ კონტურებს ეხება."
 
 #: src/MainWindow.cpp:921
 #, kde-format
@@ -532,6 +566,8 @@ msgid ""
 "Move the current point to a new position. This implicitly closes any "
 "existing sub path, starting a new one."
 msgstr ""
+"მიმდინარე წერტილის გადატანა ახალ ადგილას. ეს დახურავს ყველა არსებულ "
+"ქვეკონტურს და ახალს შექმნის."
 
 #: src/MainWindow.cpp:948
 #, kde-format
@@ -539,6 +575,8 @@ msgid ""
 "Add a straight line from the current position to a defined end point. The "
 "end point becomes the new current position."
 msgstr ""
+"სწორი ხაზის დამატება მიმდინარე პოზიციიდან აღწერილი ბოლოწერტილამდე. შემდეგ "
+"ბოლოწერტილი ახალი მიმდინარე პოზიცია გახდება."
 
 #: src/MainWindow.cpp:957
 #, kde-format
@@ -546,6 +584,8 @@ msgid ""
 "Add a cubic bezier curve from the current position using two control points "
 "and an end point. The end point becomes the new current position."
 msgstr ""
+"კუბური ბეზიეს მრუდის დამატება მიმდინარე პოზიციიდან ორი საკონტროლო წერტილისა "
+"და ბოლოწერტილის გამოყენებით. შემდეგ, ბოლო წერტილი მიმდინარე გახდება."
 
 #: src/MainWindow.cpp:965
 #, kde-format
@@ -558,6 +598,8 @@ msgid ""
 "Add a rectangle as a separate sub path defined by two points representing "
 "the opposite corners."
 msgstr ""
+"დაამატებს ოთხკუთხედს ცალკე ქვეკონტურის სახით, რომელიც აღწერილია ორი "
+"წერტილით, რომლებიც საპირისპირო კუთხეებს წარმოადგენენ."
 
 #: src/MainWindow.cpp:974
 #, kde-format
@@ -570,6 +612,8 @@ msgid ""
 "Add an ellipse as a separate sub path defined by a bounding rectangle "
 "represented by two opposite corners."
 msgstr ""
+"დაამატებს ოვალს ცალკე ქვეკონტურის სახით, რომელიც აღწერილია შემომსაზღვრელი "
+"ოთხკუთხედით, რომელიც ორი საპირისპირო კუთხითაა წარმოდგენილი."
 
 #: src/MainWindow.cpp:983
 #, kde-format
@@ -583,6 +627,9 @@ msgid ""
 "path. The inserted character will overwrite any existing path, but "
 "additional sub paths may be added to the character."
 msgstr ""
+"საშუალებას გაძლევთ, აირჩიოთ სიმბოლო ნებისმიერი ფონტიდან და დახურული "
+"ქვეკონტურის სახით ჩასვათ. ჩასმული სიმბოლო თავზე გადააწერს არსებულ კონტურებს, "
+"მაგრამ სიმბოლოს, შეგიძლიათ, ქვეკონტურები დაამატოთ."
 
 #: src/MainWindow.cpp:995
 #, kde-format
@@ -590,6 +637,8 @@ msgid ""
 "Rotate all the points of a path counter-clockwise 90 degrees around the "
 "center of the editor."
 msgstr ""
+"კონტურის შებრუნება საათის საპირისპირო მიმართულებით 90 გრადუსით რედაქტორის "
+"ცენტრის გარშემო."
 
 #: src/MainWindow.cpp:1002
 #, kde-format
@@ -597,6 +646,8 @@ msgid ""
 "Rotate all the points of a path clockwise 90 degrees around the center point "
 "of the editor."
 msgstr ""
+"კონტურის შებრუნება საათის მიმართულებით 90 გრადუსით რედაქტორის ცენტრის "
+"გარშემო."
 
 #: src/MainWindow.cpp:1009
 #, kde-format
@@ -604,6 +655,8 @@ msgid ""
 "Flip all the points of the path horizontally about the vertical center of "
 "the editor."
 msgstr ""
+"კონტურის ყველა წერტილის გადაბრუნება ჰორიზონტალურად რედაქტორის ვერტიკალური "
+"ცენტრის გარშემო."
 
 #: src/MainWindow.cpp:1016
 #, kde-format
@@ -611,6 +664,8 @@ msgid ""
 "Flip all the points of the path vertically about the horizontal center of "
 "the editor."
 msgstr ""
+"კონტურის ყველა წერტლის გადაბრუნება ვერტიკალურად რედაქტორის ჰორიზონტალური "
+"ცენტრის გარშემო."
 
 #: src/MainWindow.cpp:1023
 #, kde-format
@@ -618,6 +673,7 @@ msgid ""
 "Scale the current symbol so that it fits within the preferred size of a "
 "symbol."
 msgstr ""
+"მიმდინარე სიმბოლოს დამასშტაბება ისე, რომ ის სიმბოლოს სასურველ ზომაში ჩაეტიოს."
 
 #: src/MainWindow.cpp:1029
 #, kde-format
@@ -627,7 +683,7 @@ msgstr "მიმაგრების ჩართვა"
 #: src/MainWindow.cpp:1030
 #, kde-format
 msgid "Enable snapping of points to guide intersections or to the grid."
-msgstr ""
+msgstr "წერტილის მიწებების ჩართვა მიმმართველების კვეთაზე ან ბადეზე."
 
 #: src/MainWindow.cpp:1037
 #, kde-format
@@ -667,19 +723,19 @@ msgstr "წერტილის ზომის პიქსელებში 
 #: SymbolEditor.kcfg:26
 #, kde-format
 msgid "The distance to check within the range of a point."
-msgstr ""
+msgstr "მაქს. მანძილი, რომელსაც უნდა იყოს წერტილი მისაწებებლად."
 
 #. i18n: ectx: label, entry (Editor_BorderSize), group (editor)
 #: SymbolEditor.kcfg:30
 #, kde-format
 msgid "The number of cell elements used for the border."
-msgstr ""
+msgstr "საზღვრისთვის გამოყენებული უჯრედის ელემენტების რაოდენობა."
 
 #. i18n: ectx: label, entry (Editor_PreferredSizeColor), group (editor)
 #: SymbolEditor.kcfg:34
 #, kde-format
 msgid "The color of the preferred size rectangle"
-msgstr ""
+msgstr "სასურველი ზომის მართკუთხედის ფერი"
 
 #. i18n: ectx: label, entry (Editor_GuideLineColor), group (editor)
 #: SymbolEditor.kcfg:38
@@ -692,6 +748,7 @@ msgstr "გიდი ხაზების ფერი"
 #, kde-format
 msgid "Whether to use a simplified range of angles to test"
 msgstr ""
+"გამოყენებული იქნება თუ არა შესამოწმებლად კუთხეების გამარტივებული შუალედი"
 
 #. i18n: ectx: Menu (tools)
 #: SymbolEditorui.rc:10
@@ -763,7 +820,7 @@ msgstr "საზღვრის ზომა"
 #: ui/EditorConfigPage.ui:140
 #, kde-format
 msgid "Preferred size box color"
-msgstr ""
+msgstr "სასურველი ზომის მართკუთხედის ფერი"
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: ui/EditorConfigPage.ui:158

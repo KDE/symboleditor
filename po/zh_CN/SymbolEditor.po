@@ -17,8 +17,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/symboleditor/SymbolEditor.pot\n"
-"X-Crowdin-File-ID: 4825\n"
+"X-Crowdin-File: /kf6-trunk/messages/symboleditor/SymbolEditor.pot\n"
+"X-Crowdin-File-ID: 56320\n"
 
 #: src/Commands.cpp:73 src/MainWindow.cpp:938
 #, kde-format

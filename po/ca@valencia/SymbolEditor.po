@@ -1,12 +1,12 @@
 # Translation of SymbolEditor.po to Catalan (Valencian)
-# Copyright (C) 2014-2022 This_file_is_part_of_KDE
+# Copyright (C) 2014-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # JoanTeixi <JoanTeixidoParramona@gmail.com>, 2014.
 # Joan Teixido Parramona <joan4@users.sourceforge.net>, 2014.
 # Orestes Mas <orestes@tsc.upc.edu>, 2014.
-# Josep M. Ferrer <txemaq@gmail.com>, 2015, 2018, 2021, 2022.
+# SPDX-FileCopyrightText: 2015, 2018, 2021, 2022, 2024 Josep M. Ferrer <txemaq@gmail.com>
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2015, 2017, 2020.
 #: src/Editor.cpp:173 src/Editor.cpp:174 src/Editor.cpp:178 src/Editor.cpp:179
 #: src/Editor.cpp:189 src/Editor.cpp:194 src/Editor.cpp:198 src/Editor.cpp:199
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: symboleditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 00:39+0000\n"
-"PO-Revision-Date: 2022-10-19 09:19+0200\n"
+"PO-Revision-Date: 2024-10-27 19:09+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: src/Commands.cpp:73 src/MainWindow.cpp:938
 #, kde-format
@@ -423,22 +423,22 @@ msgstr ""
 #: src/MainWindow.cpp:836
 #, kde-format
 msgid "Odd Even Fill"
-msgstr "Emplenat altern"
+msgstr "Emplenament altern"
 
 #: src/MainWindow.cpp:837
 #, kde-format
 msgid "The Odd Even fill method will fill alternate areas of the symbol."
-msgstr "El mètode «Emplenat altern», emplenarà àrees alternes del símbol."
+msgstr "El mètode «Emplenament altern» omplirà àrees alternes del símbol."
 
 #: src/MainWindow.cpp:845
 #, kde-format
 msgid "Winding Fill"
-msgstr "Emplenat sinuós"
+msgstr "Emplenament sinuós"
 
 #: src/MainWindow.cpp:846
 #, kde-format
 msgid "The Winding fill method will fill the complete interior of the path."
-msgstr "El mètode «Emplenat sinuós», emplenarà tot l'interior del camí."
+msgstr "El mètode «Emplenament sinuós», omplirà tot l'interior del camí."
 
 #: src/MainWindow.cpp:859
 #, kde-format
@@ -636,10 +636,10 @@ msgid ""
 "path. The inserted character will overwrite any existing path, but "
 "additional sub paths may be added to the character."
 msgstr ""
-"Permet la selecció d'un caràcter des de qualsevol tipus de lletra que "
-"s'inserix com un camí secundari tancat. El caràcter inserit sobreescriurà "
-"qualsevol camí existent, però els camins secundaris addicionals poden ser "
-"agregats al caràcter."
+"Permet la selecció d'un caràcter des de qualsevol lletra que s'inserix com "
+"un camí secundari tancat. El caràcter inserit sobreescriurà qualsevol camí "
+"existent, però els camins secundaris addicionals poden ser agregats al "
+"caràcter."
 
 #: src/MainWindow.cpp:995
 #, kde-format

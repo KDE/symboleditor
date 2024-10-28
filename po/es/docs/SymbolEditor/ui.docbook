@@ -1,0 +1,58 @@
+<chapter id="using-symboleditor">
+    <title
+>La interfaz de usuario</title>
+
+    <sect1 id="face-screenshot">
+        <title
+>La ventana principal de &symboleditor;</title>
+        <para
+>La ventana principal consta de un <emphasis
+>widget</emphasis
+> con pestañas, que contienen el editor de símbolos y una vista de la biblioteca. Hay una barra de menú y varias barras de herramientas que contienen acciones estándares, herramientas de edición y opciones de renderizado. La barra de estado ofrece indicaciones para usar las distintas herramientas. </para>
+        <sect2 id="editor-window">
+            <title
+>Ventana del editor</title>
+            <para>
+                <screenshot>
+                    <screeninfo
+>Captura de pantalla de la ventana del editor de &symboleditor;</screeninfo>
+                    <mediaobject
+><imageobject
+><imagedata fileref="mainwindow-editor.png" format="PNG"/></imageobject
+></mediaobject>
+                </screenshot>
+            </para>
+            <para
+>La ventana del editor permite modificar un símbolo usando las herramientas disponibles. Consta de una cuadrícula que proporciona puntos de ajuste y muestra una guía del tamaño preferido, que permite crear símbolos con un tamaño consistente. El tamaño de la cuadrícula, el número de elementos y la guía del tamaño preferido se pueden configurar. </para>
+            <para
+>El editor proporciona guías para posicionar los puntos en relación con puntos existentes. Estas guías están ubicadas en los vectores horizontal, vertical y diagonal de un punto existente y también en una referencia circular alrededor del centro de la cuadrícula. </para>
+            <screenshot>
+                <screeninfo
+>Captura de pantalla de las guías del editor</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="editor-guides.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </sect2>
+        <sect2 id="library-window">
+            <title
+>Ventana de la biblioteca</title>
+            <para>
+                <screenshot>
+                    <screeninfo
+>Captura de pantalla de la ventana de la biblioteca de &symboleditor;</screeninfo>
+                    <mediaobject
+><imageobject
+><imagedata fileref="mainwindow-library.png" format="PNG"/></imageobject
+></mediaobject>
+                </screenshot>
+            </para>
+            <para
+>La ventana de la biblioteca muestra representaciones de los símbolos que contiene. El símbolo que se está editando se muestra resaltado. Al seleccionar un símbolo, se abrirá en el editor para que pueda modificarlo. </para>
+            <para
+>Se pueden abrir varias instancias de la aplicación SymbolEditor y copiar símbolos de una biblioteca a otra usando la técnica de arrastrar y soltar. Para ello, asegúrese de que las ventanas de ambas bibliotecas están visibles y arrastre un símbolo de una ventana de biblioteca a la otra. El símbolo aparecerá en la biblioteca de destino. </para>
+        </sect2>
+    </sect1>
+</chapter>

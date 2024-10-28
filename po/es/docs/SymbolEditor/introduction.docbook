@@ -1,0 +1,20 @@
+<chapter id="introduction">
+    <title
+>Introducción</title>
+    <para
+>&symboleditor; se usa para crear símbolos de punto de cruz para la aplicación &kxstitch;. Originalmente, &kxstitch; dependía de fuentes de caracteres estándar para proporcionar dichos símbolos, pero las diferencias entre los idiomas de los usuarios y la calidad de los tipos de letra disponibles, junto con la alineación de los caracteres y su cantidad limitada disponible, han impulsado la necesidad de crear un conjunto de símbolos dedicado. </para>
+    <para
+>El conjunto de símbolos se guardará en un archivo y se pueden crear varios archivos según las necesidades del usuario. Por ejemplo, se puede tener un conjunto de símbolos de Halloween para patrones con temática de Halloween. </para>
+    <para
+>Cada uno de los archivos contendrá una serie de símbolos que se mostrarán en la pestaña de la biblioteca de símbolos. Los símbolos existentes se pueden editar haciendo clic en sus entradas de la biblioteca, que rellenará el editor con el símbolo escogido. También se pueden crear y añadir símbolos nuevos a la biblioteca. </para>
+    <para
+>Informe de los problemas que encuentre o solicite funcionalidades en la lista de distribución de KDE de &symboleditor;, symboleditor@kde.org (puede suscribirse <ulink url="http://mail.kde.org/mailman/listinfo/symboleditor"
+>aquí</ulink
+>) o en el sistema de seguimiento de fallos de KDE, <ulink url="http://bugs.kde.org/"
+>http://bugs.kde.org/</ulink
+>. </para>
+    <para
+>El página web de SymbolEditor es <ulink url="http://userbase.kde.org/SymbolEditor"
+>http://userbase.kde.org/SymbolEditor</ulink
+> </para>
+</chapter>

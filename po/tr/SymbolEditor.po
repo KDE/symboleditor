@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: SymbolEditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 00:39+0000\n"
-"PO-Revision-Date: 2024-09-23 15:28+0300\n"
+"PO-Revision-Date: 2024-10-27 18:11+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -19,23 +19,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 24.08.2\n"
 "X-POOTLE-MTIME: 1497554702.000000\n"
 
 #: src/Commands.cpp:73 src/MainWindow.cpp:938
 #, kde-format
 msgid "Move To"
-msgstr "Buraya Taşı"
+msgstr "Şuraya Taşı"
 
 #: src/Commands.cpp:106 src/MainWindow.cpp:947
 #, kde-format
 msgid "Draw To"
-msgstr "Buraya Çiz"
+msgstr "Şuraya Çiz"
 
 #: src/Commands.cpp:141 src/MainWindow.cpp:956
 #, kde-format
 msgid "Cubic To"
-msgstr "Buraya Kübik"
+msgstr "Şuraya Kübik"
 
 #: src/Commands.cpp:177
 #, kde-format
@@ -50,12 +50,12 @@ msgstr "Elips Ekle"
 #: src/Commands.cpp:248
 #, kde-format
 msgid "Move point"
-msgstr "Nokta taşı"
+msgstr "Noktayı Taşı"
 
 #: src/Commands.cpp:285
 #, kde-format
 msgid "Update Symbol"
-msgstr "Sembol Güncelle"
+msgstr "Sembolü Güncelle"
 
 #: src/Commands.cpp:327 src/MainWindow.cpp:798
 #, kde-format
@@ -110,7 +110,7 @@ msgstr "Birleşme Biçemini Değiştir"
 #: src/Commands.cpp:693 src/MainWindow.cpp:737
 #, kde-format
 msgid "Delete Symbol"
-msgstr "Sembol Sil"
+msgstr "Sembolü Sil"
 
 #: src/Commands.cpp:726 src/MainWindow.cpp:920
 #, kde-format
@@ -135,47 +135,47 @@ msgstr "Karakter Ekle"
 #: src/Editor.cpp:172
 #, kde-format
 msgid "Select a new starting position."
-msgstr "Yeni başlangıç noktası seç."
+msgstr "Yeni başlangıç noktasını seçin."
 
 #: src/Editor.cpp:177
 #, kde-format
 msgid "Select the line end point."
-msgstr "Çizgi bitiş noktası seç."
+msgstr "Çizgi bitiş noktasını seçin."
 
 #: src/Editor.cpp:182
 #, kde-format
 msgid "Select the first control point."
-msgstr "İlk denetim noktasını seç."
+msgstr "İlk denetim noktasını seçin."
 
 #: src/Editor.cpp:183
 #, kde-format
 msgid "Select the second control point."
-msgstr "İkinci denetim noktasını seç."
+msgstr "İkinci denetim noktasını seçin."
 
 #: src/Editor.cpp:184
 #, kde-format
 msgid "Select the end point"
-msgstr "Bitiş noktası seç"
+msgstr "Bitiş noktasını seçin."
 
 #: src/Editor.cpp:187
 #, kde-format
 msgid "Select the first corner."
-msgstr "İlk köşeyi seç."
+msgstr "İlk köşeyi seçin."
 
 #: src/Editor.cpp:188
 #, kde-format
 msgid "Select the second corner."
-msgstr "İkinci köşeyi seç."
+msgstr "İkinci köşeyi seçin."
 
 #: src/Editor.cpp:192
 #, kde-format
 msgid "Select the first corner of the bounding rectangle."
-msgstr "Çevreleyen dikdörtgendeki ilk köşeyi seç."
+msgstr "Çevreleyen dikdörtgendeki ilk köşeyi seçin."
 
 #: src/Editor.cpp:193
 #, kde-format
 msgid "Select the second corner of the bounding rectangle."
-msgstr "Çevreleyen dikdörtgendeki ikinci köşeyi seç."
+msgstr "Çevreleyen dikdörtgendeki ikinci köşeyi seçin."
 
 #: src/Editor.cpp:197
 #, kde-format
@@ -264,17 +264,17 @@ msgstr "Değişiklikler kitaplığa kaydedilsin mi?"
 #: src/MainWindow.cpp:372
 #, kde-format
 msgid "Open file"
-msgstr "Dosya aç"
+msgstr "Dosya Aç"
 
 #: src/MainWindow.cpp:372 src/MainWindow.cpp:484 src/MainWindow.cpp:554
 #, kde-format
 msgid "Cross Stitch Symbols (*.sym)"
-msgstr "Çapraz Dikiş Sembolleri(*.sym)"
+msgstr "Çapraz dikiş sembolleri (*.sym)"
 
 #: src/MainWindow.cpp:421 src/MainWindow.cpp:574
 #, kde-format
 msgid "This doesn't appear to be a valid symbol file"
-msgstr "Bu geçerli bir sembol dosyası değil"
+msgstr "Bu geçerli bir sembol dosyası değil."
 
 #: src/MainWindow.cpp:423 src/MainWindow.cpp:576
 #, kde-format
@@ -282,15 +282,15 @@ msgid ""
 "Version %1 of the library file is not supported in this version of "
 "SymbolEditor"
 msgstr ""
-"Kitaplık dosyasının %1 sürümü, Sembol Düzenleyicisi'nin bu sürümünde "
-"desteklenmiyor"
+"Kitaplık dosyasının %1 sürümü, Sembol Düzenleyicisi’nin bu sürümünde "
+"desteklenmiyor."
 
 #: src/MainWindow.cpp:425
 #, kde-format
 msgid ""
 "Version %1 of the symbol is not supported in this version of SymbolEditor"
 msgstr ""
-"Sembolün %1 sürümü, Sembol Düzenleyicisi'nin bu sürümünde desteklenmiyor"
+"Sembolün %1 sürümü, Sembol Düzenleyicisi’nin bu sürümünde desteklenmiyor."
 
 #: src/MainWindow.cpp:427
 #, kde-format
@@ -298,13 +298,13 @@ msgid ""
 "Failed to read the library\n"
 "%1"
 msgstr ""
-"Kitaplık okunamadı\n"
+"Kitaplık okunamadı.\n"
 "%1"
 
 #: src/MainWindow.cpp:440 src/MainWindow.cpp:585
 #, kde-format
 msgid "The url %1 is invalid"
-msgstr "%1 URL'si geçersiz"
+msgstr "%1 URL’si geçersiz"
 
 #: src/MainWindow.cpp:465
 #, kde-format
@@ -332,7 +332,7 @@ msgstr "Farklı Kaydet..."
 #: src/MainWindow.cpp:554
 #, kde-format
 msgid "Import library"
-msgstr "Kitaplık içe aktar"
+msgstr "Kitaplık İçe Aktar"
 
 #: src/MainWindow.cpp:646
 #, kde-format
@@ -368,7 +368,7 @@ msgid ""
 "Imports another library appending the symbols it contains to the current "
 "library."
 msgstr ""
-"Mevcut kitaplıkda var olan sembolleri ekleyerek başka bir kitaplık içe "
+"Geçerli kitaplıkta var olan sembolleri ekleyerek başka bir kitaplık içe "
 "aktarır."
 
 #: src/MainWindow.cpp:804
@@ -383,7 +383,7 @@ msgid ""
 "will create additional symbols in the library. If the symbol was selected "
 "from the library to edit then saving will update that symbol in the library."
 msgstr ""
-"Sembolü kitaplığa kaydet. Eğer yeni bir sembol ise, sonraki kayıtlar "
+"Sembolü kitaplığa kaydedin. Eğer yeni bir sembol ise sonraki kayıtlar "
 "kitaplıkta ek semboller oluşturacaktır. Eğer sembol kitaplıktan düzenlemek "
 "üzere seçildiyse bu sembolü kaydetmek kitaplıktakini güncelleyecektir."
 
@@ -398,8 +398,8 @@ msgid ""
 "Save the current symbol as a new one in the library. Subsequent saves will "
 "update the new symbol."
 msgstr ""
-"Mevcut sembolü kitaplıkta yeni bir tane olarak kaydet. Sonraki kayıtlar yeni "
-"sembolü güncelleyecektir."
+"Geçerli sembolü kitaplıkta yeni bir tane olarak kaydedin. Sonraki kayıtlar "
+"yeni sembolü güncelleyecektir."
 
 #: src/MainWindow.cpp:825
 #, kde-format
@@ -412,7 +412,7 @@ msgid ""
 "Enable path filling. The path defines the closed boundary of the shape and "
 "the path is filled with the selected fill method."
 msgstr ""
-"Yol doldurmayı etkinleştir. Yol, şeklin kapalı sınırlarını belirler ve yol "
+"Yol doldurmayı etkinleştirin. Yol, şeklin kapalı sınırlarını belirler ve yol "
 "belirtilen doldurma yöntemi ile doldurulur."
 
 #: src/MainWindow.cpp:836
@@ -423,7 +423,7 @@ msgstr "Tek Çift Doldurma"
 #: src/MainWindow.cpp:837
 #, kde-format
 msgid "The Odd Even fill method will fill alternate areas of the symbol."
-msgstr "Tek Çift doldurma yöntemi sembolün değişimli alanlarını doldurur."
+msgstr "Tek Çift doldurma yöntemi, sembolün değişimli alanlarını doldurur."
 
 #: src/MainWindow.cpp:845
 #, kde-format
@@ -433,7 +433,7 @@ msgstr "Sargı Dolgusu"
 #: src/MainWindow.cpp:846
 #, kde-format
 msgid "The Winding fill method will fill the complete interior of the path."
-msgstr "Sargı dolgusu yöntemi yolun iç kısmını doldurur."
+msgstr "Sargı dolgusu yöntemi, yolun iç kısmını doldurur."
 
 #: src/MainWindow.cpp:859
 #, kde-format
@@ -500,9 +500,9 @@ msgid ""
 "\n"
 "This is only applicable to non-filled paths."
 msgstr ""
-"Eğimli Birleştirme iki çizge arasında bir eğim sağlar.\n"
+"Eğimli Birleştirme iki çizgi arasında bir eğim sağlar.\n"
 "\n"
-"Bu yalnızca doldurulmamış yollar için uygulanabilirdir."
+"Bu yalnızca doldurulmamış yollar için uygulanabilir."
 
 #: src/MainWindow.cpp:900
 #, kde-format
@@ -533,7 +533,7 @@ msgid ""
 "\n"
 "This is only applicable to non-filled paths."
 msgstr ""
-"Yuvarlak birleştirme iki çizgi arasında çizginin yarı uzunluğunu yarıçap "
+"Yuvarlak birleştirme, iki çizgi arasında çizginin yarı uzunluğunu yarıçap "
 "olarak kullanan bir yuvarlak köşe sağlar.\n"
 "\n"
 "Bu yalnızca doldurulmamış yollar içindir."
@@ -566,8 +566,8 @@ msgid ""
 "Move the current point to a new position. This implicitly closes any "
 "existing sub path, starting a new one."
 msgstr ""
-"Mevcut noktayı yeni bir konuma taşı. Bu herhangi mevcut alt yolu özellikle "
-"kapatır, yeni bir tane başlatır."
+"Geçerli noktayı yeni bir konuma taşıyın. Bu herhangi bir var olan alt yolu "
+"örtük olarak kapatır, yeni bir tane başlatır."
 
 #: src/MainWindow.cpp:948
 #, kde-format
@@ -575,8 +575,8 @@ msgid ""
 "Add a straight line from the current position to a defined end point. The "
 "end point becomes the new current position."
 msgstr ""
-"Mevcut konumdan belirlenmi son noktaya kadar düz çizgi ekler. Son nokta yeni "
-"mevcut konum olur."
+"Geçerli konumdan belirlenmiş son noktaya kadar düz bir çizgi ekler. Son "
+"nokta yeni geçerli konum olur."
 
 #: src/MainWindow.cpp:957
 #, kde-format
@@ -584,8 +584,8 @@ msgid ""
 "Add a cubic bezier curve from the current position using two control points "
 "and an end point. The end point becomes the new current position."
 msgstr ""
-"İki denetim noktası ve bir bitiş noktası kullanarak mevcut konumdan kübik "
-"bezier eğrisi ekle. Bitiş noktası yeni mevcut konum olur."
+"İki denetim noktası ve bir bitiş noktası kullanarak geçerli konumdan kübik "
+"Bezier eğrisi ekleyin. Bitiş noktası yeni geçerli konum olur."
 
 #: src/MainWindow.cpp:965
 #, kde-format
@@ -599,7 +599,7 @@ msgid ""
 "the opposite corners."
 msgstr ""
 "Karşı köşeleri temsil eden iki nokta tarafından tanımlanan ayrı alt yol "
-"olarak bir dikdörtgen ekle."
+"olarak bir dikdörtgen ekleyin."
 
 #: src/MainWindow.cpp:974
 #, kde-format
@@ -613,7 +613,7 @@ msgid ""
 "represented by two opposite corners."
 msgstr ""
 "İki karşı köşe tarafından temsil edilen bir çevreleyen dikdörtgen tarafından "
-"tanımlanan ayrı alt yol olarak bir elips ekle."
+"tanımlanan ayrı alt yol olarak bir elips ekleyin."
 
 #: src/MainWindow.cpp:983
 #, kde-format
@@ -638,7 +638,7 @@ msgid ""
 "center of the editor."
 msgstr ""
 "Yoldaki bütün noktaları düzenleyicinin merkez noktasında saat yönünün "
-"tersine 90 derece döndür."
+"tersine 90 derece döndürün."
 
 #: src/MainWindow.cpp:1002
 #, kde-format
@@ -647,7 +647,7 @@ msgid ""
 "of the editor."
 msgstr ""
 "Yoldaki bütün noktaları düzenleyicinin merkez noktasında saat yönünde 90 "
-"derece döndür."
+"derece döndürün."
 
 #: src/MainWindow.cpp:1009
 #, kde-format
@@ -656,7 +656,7 @@ msgid ""
 "the editor."
 msgstr ""
 "Düzenleyicinin dikey merkezine göre yolun bütün noktalarını dikey olarak "
-"döndür."
+"döndürün."
 
 #: src/MainWindow.cpp:1016
 #, kde-format
@@ -665,7 +665,7 @@ msgid ""
 "the editor."
 msgstr ""
 "Düzenleyicinin yatay merkezine göre yolun bütün noktalarını yatay olarak "
-"döndür."
+"döndürün."
 
 #: src/MainWindow.cpp:1023
 #, kde-format
@@ -673,7 +673,8 @@ msgid ""
 "Scale the current symbol so that it fits within the preferred size of a "
 "symbol."
 msgstr ""
-"Mevcut sembolü bir sembolün tercih edilen boyutuna sığacak şekilde ölçekle."
+"Geçerli sembolü bir sembolün tercih edilen boyutuna sığacak şekilde "
+"ölçekleyin."
 
 #: src/MainWindow.cpp:1029
 #, kde-format
@@ -683,7 +684,8 @@ msgstr "Tutturmayı Etkinleştir"
 #: src/MainWindow.cpp:1030
 #, kde-format
 msgid "Enable snapping of points to guide intersections or to the grid."
-msgstr "Noktaları kılavuz kesişimlerine ya da ızgaraya tutturmayı etkinleştir."
+msgstr ""
+"Noktaları kılavuz kesişimlerine ya da ızgaraya tutturmayı etkinleştirin."
 
 #: src/MainWindow.cpp:1037
 #, kde-format
@@ -693,43 +695,43 @@ msgstr "Kılavuzları Etkinleştir"
 #: src/MainWindow.cpp:1038
 #, kde-format
 msgid "Enable the generation of guide intersections."
-msgstr "Kılavuz kesişimlerini oluşturmayı etkinleştir."
+msgstr "Kılavuz kesişimlerini oluşturmayı etkinleştirin."
 
 #. i18n: ectx: label, entry (Editor_GridElements), group (editor)
 #: SymbolEditor.kcfg:10
 #, kde-format
 msgid "The number of elements in a grid."
-msgstr "Kılavuzdaki öge sayısı."
+msgstr "Kılavuzdaki öge sayısı"
 
 #. i18n: ectx: label, entry (Editor_ElementSize), group (editor)
 #: SymbolEditor.kcfg:14
 #, kde-format
 msgid "The size in pixels of a grid element."
-msgstr "Izgara ögesinin piksel cinsinden boyutu."
+msgstr "Izgara ögesinin piksel türünden boyutu"
 
 #. i18n: ectx: label, entry (Editor_ElementGrouping), group (editor)
 #: SymbolEditor.kcfg:18
 #, kde-format
 msgid "The number of elements in a group."
-msgstr "Gruptaki öge sayısı."
+msgstr "Gruptaki öge sayısı"
 
 #. i18n: ectx: label, entry (Editor_PointSize), group (editor)
 #: SymbolEditor.kcfg:22
 #, kde-format
 msgid "The size of a point in pixels."
-msgstr "Bir noktanın piksel cinsinden boyutu."
+msgstr "Bir noktanın piksel türünden boyutu"
 
 #. i18n: ectx: label, entry (Editor_SnapThreshold), group (editor)
 #: SymbolEditor.kcfg:26
 #, kde-format
 msgid "The distance to check within the range of a point."
-msgstr "Bir nokta aralığında denetlenmesi gereken uzaklık."
+msgstr "Bir nokta aralığında denetlenmesi gereken uzaklık"
 
 #. i18n: ectx: label, entry (Editor_BorderSize), group (editor)
 #: SymbolEditor.kcfg:30
 #, kde-format
 msgid "The number of cell elements used for the border."
-msgstr "Kenarlık için kullanılan hücre ögesi sayısı."
+msgstr "Kenarlık için kullanılan hücre ögesi sayısı"
 
 #. i18n: ectx: label, entry (Editor_PreferredSizeColor), group (editor)
 #: SymbolEditor.kcfg:34
@@ -765,7 +767,7 @@ msgstr "&Sunum"
 #: SymbolEditorui.rc:47
 #, kde-format
 msgid "Tool Toolbar"
-msgstr "Araç Araç Çubuğu"
+msgstr "Araçlar Araç Çubuğu"
 
 #. i18n: ectx: ToolBar (RenderingToolbar)
 #: SymbolEditorui.rc:64
@@ -831,7 +833,7 @@ msgstr "Kılavuz çizgi rengi"
 #: ui/EditorConfigPage.ui:176
 #, kde-format
 msgid "Simplified guide lines"
-msgstr "Basitleştirilmiş kılavuz çizgiler"
+msgstr "Basitleştirilmiş kılavuz çizgileri"
 
 #~ msgid ""
 #~ "This file already exists\n"

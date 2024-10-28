@@ -2,7 +2,7 @@
     <title
 >Introducció</title>
     <para
->El &symboleditor; s'utilitza per a crear símbols de punt de creu per a l'aplicació &kxstitch;. Originalment, el &kxstitch; es basava en els tipus de lletra dels caràcters estàndard per a proporcionar aquests símbols, però les diferències en els idiomes d'usuari i la qualitat dels tipus de lletra disponibles juntament amb l'alineació dels caràcters i el nombre limitat disponible ha portat a la necessitat de crear un conjunt de símbols dedicat. </para>
+>El &symboleditor; s'utilitza per a crear símbols de punt de creu per a l'aplicació &kxstitch;. Originalment, el &kxstitch; es basava en les lletres dels caràcters estàndard per a proporcionar aquests símbols, però les diferències en els idiomes d'usuari i la qualitat de les lletres disponibles juntament amb l'alineació dels caràcters i el nombre limitat disponible ha portat a la necessitat de crear un conjunt de símbols dedicat. </para>
     <para
 >El conjunt de símbols s'emmagatzemarà en un fitxer i es poden crear diversos fitxers segons les necessitats dels usuaris, per exemple, tenir un símbol de Halloween configurat per a patrons amb temes de Halloween. </para>
     <para
