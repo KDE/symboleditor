@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: symboleditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 00:39+0000\n"
-"PO-Revision-Date: 2024-10-28 06:41+0200\n"
+"PO-Revision-Date: 2024-10-29 08:08+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -438,6 +438,9 @@ msgid ""
 "\n"
 "This is only applicable to non-filled paths."
 msgstr ""
+"סוג הקצה השטוח מספק קצה מרובע שעוצר בנקודת הסיום של הקו.\n"
+"\n"
+"תקף רק על נתיבים שאינם מלאים."
 
 #: src/MainWindow.cpp:868
 #, kde-format
@@ -452,6 +455,10 @@ msgid ""
 "\n"
 "This is only applicable to non-filled paths."
 msgstr ""
+"סוג הקצה המרובע מספק קצה מרובע שמתקדם מעבר לנקודת הסיום של הקו במחצית מהעובי "
+"שלו.\n"
+"\n"
+"תקף רק על נתיבים שאינם מלאים."
 
 #: src/MainWindow.cpp:877
 #, kde-format
@@ -466,6 +473,10 @@ msgid ""
 "\n"
 "This is only applicable to non-filled paths."
 msgstr ""
+"סוג הקצה העגול מספק קצה עגול שמתקדם מעבר לנקודת הסיום של הקו ברדיוס של מחצית "
+"מהעובי שלו.\n"
+"\n"
+"תקף רק על נתיבים שאינם מלאים."
 
 #: src/MainWindow.cpp:891
 #, kde-format
@@ -514,6 +525,9 @@ msgid ""
 "\n"
 "This is only applicable to non-filled paths."
 msgstr ""
+"עיבוי הקו.\n"
+"\n"
+"תקף על נתיבים שאינם מלאים."
 
 #: src/MainWindow.cpp:928
 #, kde-format
@@ -522,6 +536,9 @@ msgid ""
 "\n"
 "This is only applicable to non-filled paths."
 msgstr ""
+"הצרת הקו.\n"
+"\n"
+"תקף על נתיבים שאינם מלאים."
 
 #: src/MainWindow.cpp:939
 #, kde-format
@@ -529,6 +546,7 @@ msgid ""
 "Move the current point to a new position. This implicitly closes any "
 "existing sub path, starting a new one."
 msgstr ""
+"העברת הנקודה הנוכחית למקום חדש. סוגר תת־נתיבים קיימים במרומז ומתחיל אחד חדש."
 
 #: src/MainWindow.cpp:948
 #, kde-format
@@ -536,6 +554,8 @@ msgid ""
 "Add a straight line from the current position to a defined end point. The "
 "end point becomes the new current position."
 msgstr ""
+"הוספת קו ישיר מהמקום הנוכחי לנקודת קצה מוגדרת. נקודת הקצה הופכת להיות הנקודה "
+"הנוכחית החדשה."
 
 #: src/MainWindow.cpp:957
 #, kde-format
@@ -589,6 +609,7 @@ msgid ""
 "Rotate all the points of a path counter-clockwise 90 degrees around the "
 "center of the editor."
 msgstr ""
+"סיבוב כל הנקודות של נתיב ב־90 מעלות נגד כיוון השעון סביב המרכז של העורך."
 
 #: src/MainWindow.cpp:1002
 #, kde-format
@@ -596,182 +617,183 @@ msgid ""
 "Rotate all the points of a path clockwise 90 degrees around the center point "
 "of the editor."
 msgstr ""
+"סיבוב כל הנקודות של נתיב ב־90 מעלות עם כיוון השעון סביב נקודת המרכז של העורך."
 
 #: src/MainWindow.cpp:1009
 #, kde-format
 msgid ""
 "Flip all the points of the path horizontally about the vertical center of "
 "the editor."
-msgstr ""
+msgstr "היפוך כל הנקודות של הנתיב אופקית סביב המרכז האנכי של העורך."
 
 #: src/MainWindow.cpp:1016
 #, kde-format
 msgid ""
 "Flip all the points of the path vertically about the horizontal center of "
 "the editor."
-msgstr ""
+msgstr "היפוך כל הנקודות של הנתיב אנכית סביב המרכז האופקי של העורך."
 
 #: src/MainWindow.cpp:1023
 #, kde-format
 msgid ""
 "Scale the current symbol so that it fits within the preferred size of a "
 "symbol."
-msgstr ""
+msgstr "לשנות את קנה המידה של הסמל הנוכחי כך שיתאים לגודל מועדף של סמל."
 
 #: src/MainWindow.cpp:1029
 #, kde-format
 msgid "Enable Snap"
-msgstr ""
+msgstr "הפעלת הצמדה"
 
 #: src/MainWindow.cpp:1030
 #, kde-format
 msgid "Enable snapping of points to guide intersections or to the grid."
-msgstr ""
+msgstr "הפעלת הצמדת נקודות לצמתי הרשת או לרשת."
 
 #: src/MainWindow.cpp:1037
 #, kde-format
 msgid "Enable Guides"
-msgstr ""
+msgstr "הפעלת קווים מנחים"
 
 #: src/MainWindow.cpp:1038
 #, kde-format
 msgid "Enable the generation of guide intersections."
-msgstr ""
+msgstr "הפעלת יצירת צמתים של קווים מנחים."
 
 #. i18n: ectx: label, entry (Editor_GridElements), group (editor)
 #: SymbolEditor.kcfg:10
 #, kde-format
 msgid "The number of elements in a grid."
-msgstr ""
+msgstr "מספר הרכיבים ברשת."
 
 #. i18n: ectx: label, entry (Editor_ElementSize), group (editor)
 #: SymbolEditor.kcfg:14
 #, kde-format
 msgid "The size in pixels of a grid element."
-msgstr ""
+msgstr "הגודל בפיקסלים של רכיב ברשת."
 
 #. i18n: ectx: label, entry (Editor_ElementGrouping), group (editor)
 #: SymbolEditor.kcfg:18
 #, kde-format
 msgid "The number of elements in a group."
-msgstr ""
+msgstr "מספר הרכיבים בקבוצה."
 
 #. i18n: ectx: label, entry (Editor_PointSize), group (editor)
 #: SymbolEditor.kcfg:22
 #, kde-format
 msgid "The size of a point in pixels."
-msgstr ""
+msgstr "גודל נקודה בפיקסלים."
 
 #. i18n: ectx: label, entry (Editor_SnapThreshold), group (editor)
 #: SymbolEditor.kcfg:26
 #, kde-format
 msgid "The distance to check within the range of a point."
-msgstr ""
+msgstr "המרחב לבדיקה בתוך טווח של נקודה."
 
 #. i18n: ectx: label, entry (Editor_BorderSize), group (editor)
 #: SymbolEditor.kcfg:30
 #, kde-format
 msgid "The number of cell elements used for the border."
-msgstr ""
+msgstr "מספר רכיבי התא לשימוש למסגרת."
 
 #. i18n: ectx: label, entry (Editor_PreferredSizeColor), group (editor)
 #: SymbolEditor.kcfg:34
 #, kde-format
 msgid "The color of the preferred size rectangle"
-msgstr ""
+msgstr "צבע מרובע בגודל מועדף"
 
 #. i18n: ectx: label, entry (Editor_GuideLineColor), group (editor)
 #: SymbolEditor.kcfg:38
 #, kde-format
 msgid "The color of the guide lines"
-msgstr ""
+msgstr "צבע הקווים המנחים"
 
 #. i18n: ectx: label, entry (Editor_SimplifiedGuideLines), group (editor)
 #: SymbolEditor.kcfg:42
 #, kde-format
 msgid "Whether to use a simplified range of angles to test"
-msgstr ""
+msgstr "האם להשתמש בטווח מופשט של זוויות לבדיקה"
 
 #. i18n: ectx: Menu (tools)
 #: SymbolEditorui.rc:10
 #, kde-format
 msgid "&Tools"
-msgstr ""
+msgstr "&כלים"
 
 #. i18n: ectx: Menu (rendering)
 #: SymbolEditorui.rc:27
 #, kde-format
 msgid "&Rendering"
-msgstr ""
+msgstr "&תיצוג/עיבוד"
 
 #. i18n: ectx: ToolBar (ToolsToolbar)
 #: SymbolEditorui.rc:47
 #, kde-format
 msgid "Tool Toolbar"
-msgstr ""
+msgstr "סרגל כלים"
 
 #. i18n: ectx: ToolBar (RenderingToolbar)
 #: SymbolEditorui.rc:64
 #, kde-format
 msgid "Rendering Toolbar"
-msgstr ""
+msgstr "סרגל תיצוג/עיבוד"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, EditorConfigPage)
 #: ui/EditorConfigPage.ui:14
 #, kde-format
 msgid "Editor Configuration Page"
-msgstr ""
+msgstr "עריכת עמוד הגדרות"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ui/EditorConfigPage.ui:20
 #, kde-format
 msgid "Grid elements"
-msgstr ""
+msgstr "רכיבי רשת"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/EditorConfigPage.ui:40
 #, kde-format
 msgid "Element size"
-msgstr ""
+msgstr "גודל רכיב"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: ui/EditorConfigPage.ui:60
 #, kde-format
 msgid "Element grouping"
-msgstr ""
+msgstr "קיבוץ רכיבים"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: ui/EditorConfigPage.ui:80
 #, kde-format
 msgid "Point size"
-msgstr ""
+msgstr "גודל נקודה"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: ui/EditorConfigPage.ui:100
 #, kde-format
 msgid "Snap threshold"
-msgstr ""
+msgstr "סף הצמדה"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: ui/EditorConfigPage.ui:123
 #, kde-format
 msgid "Border size"
-msgstr ""
+msgstr "גודל מסגרת"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: ui/EditorConfigPage.ui:140
 #, kde-format
 msgid "Preferred size box color"
-msgstr ""
+msgstr "צבע תיבת גודל מועדף"
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: ui/EditorConfigPage.ui:158
 #, kde-format
 msgid "Guide line color"
-msgstr ""
+msgstr "צבע קו מנחה"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_Editor_SimplifiedGuideLines)
 #: ui/EditorConfigPage.ui:176
 #, kde-format
 msgid "Simplified guide lines"
-msgstr ""
+msgstr "קווים מנחים מופשטים"
