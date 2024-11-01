@@ -10,15 +10,16 @@ msgstr ""
 "Project-Id-Version: symboleditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 00:39+0000\n"
-"PO-Revision-Date: 2024-10-29 08:08+0200\n"
+"PO-Revision-Date: 2024-10-30 22:21+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
+"n % 10 == 0) ? 2 : 3));\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #: src/Commands.cpp:73 src/MainWindow.cpp:938
 #, kde-format
@@ -418,12 +419,12 @@ msgstr "שיטת המילוי אי־זוגי זוגי תמלא אזור כן א�
 #: src/MainWindow.cpp:845
 #, kde-format
 msgid "Winding Fill"
-msgstr ""
+msgstr "מילוי מפותל"
 
 #: src/MainWindow.cpp:846
 #, kde-format
 msgid "The Winding fill method will fill the complete interior of the path."
-msgstr ""
+msgstr "שיטת המילוי המפותל תמלא את כל פנים הנתיב."
 
 #: src/MainWindow.cpp:859
 #, kde-format
@@ -490,6 +491,9 @@ msgid ""
 "\n"
 "This is only applicable to non-filled paths."
 msgstr ""
+"התפר המשופע מספק פינה משופעת בין שני קווים.\n"
+"\n"
+"תקף רק על נתיבים שאינם מלאים."
 
 #: src/MainWindow.cpp:900
 #, kde-format
@@ -503,6 +507,9 @@ msgid ""
 "\n"
 "This is only applicable to non-filled paths."
 msgstr ""
+"התפר החד מספק פינה חדה בין שני קווים.\n"
+"\n"
+"תקף רק על נתיבים שאינם מלאים."
 
 #: src/MainWindow.cpp:909
 #, kde-format
@@ -517,6 +524,9 @@ msgid ""
 "\n"
 "This is only applicable to non-filled paths."
 msgstr ""
+"התפר המעוגל מספק פינה מעוגלת בין שני קווים בעזרת רדיוס של מחצית מעובי הקו.\n"
+"\n"
+"תקף רק על נתיבים שאינם מלאים."
 
 #: src/MainWindow.cpp:921
 #, kde-format
@@ -563,6 +573,8 @@ msgid ""
 "Add a cubic bezier curve from the current position using two control points "
 "and an end point. The end point becomes the new current position."
 msgstr ""
+"הוספת עקומת בזייה מרובעת מהמקום הנוכחי בעזרת שתי נקודות בקרה ונקודת קצה. "
+"נקודת הקצה הופכת להיות הנקודה הנוכחית החדשה."
 
 #: src/MainWindow.cpp:965
 #, kde-format
@@ -575,6 +587,8 @@ msgid ""
 "Add a rectangle as a separate sub path defined by two points representing "
 "the opposite corners."
 msgstr ""
+"הוספת מרובע כתת־נתיב נפרד שמוגדר על ידי שתי נקודות שמייצגות את הפינות "
+"הנגדיות."
 
 #: src/MainWindow.cpp:974
 #, kde-format
@@ -602,6 +616,8 @@ msgid ""
 "path. The inserted character will overwrite any existing path, but "
 "additional sub paths may be added to the character."
 msgstr ""
+"מאפשר בחירה של תו מכל גופן שהוא להוספה כתת־נתיב סגור. התו שנוסף ידרוס כל "
+"נתיב קיים שהוא, אבל אפשר להוסיף תת־נתיבים נוספים לתו."
 
 #: src/MainWindow.cpp:995
 #, kde-format
