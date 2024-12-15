@@ -223,13 +223,13 @@ msgstr "परियोजना प्रमुख"
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "भवतः नामानि"
 
 #: src/Main.cpp:99
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "भवतः ईमेलपत्राणि"
 
 #: src/MainWindow.cpp:199 src/MainWindow.cpp:453 src/MainWindow.cpp:600
 #, kde-format
@@ -240,13 +240,13 @@ msgstr "अनामिका"
 #, kde-format
 msgctxt "The editor tab title"
 msgid "Editor"
-msgstr ""
+msgstr "सम्पादक"
 
 #: src/MainWindow.cpp:209
 #, kde-format
 msgctxt "The library tab title"
 msgid "Library"
-msgstr ""
+msgstr "पुस्तकालय"
 
 #: src/MainWindow.cpp:284
 #, kde-format
@@ -342,19 +342,19 @@ msgstr "पुनः %1"
 #, kde-format
 msgctxt "The library tab title %1 is the file name"
 msgid "%1 Library"
-msgstr ""
+msgstr "%1 पुस्तकालयः"
 
 #: src/MainWindow.cpp:675
 #, kde-format
 msgctxt "The editor tab title %1 is the file name"
 msgid "%1 Editor"
-msgstr ""
+msgstr "%1 सम्पादकः"
 
 #: src/MainWindow.cpp:767
 #, kde-format
 msgctxt "The Editor configuration page"
 msgid "Editor"
-msgstr ""
+msgstr "सम्पादक"
 
 #: src/MainWindow.cpp:799
 #, kde-format
