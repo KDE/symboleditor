@@ -1,0 +1,820 @@
+# Hindi translations for symboleditor package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the symboleditor package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+#: src/Editor.cpp:173 src/Editor.cpp:174 src/Editor.cpp:178 src/Editor.cpp:179
+#: src/Editor.cpp:189 src/Editor.cpp:194 src/Editor.cpp:198 src/Editor.cpp:199
+#, kde-format
+msgid ""
+msgstr ""
+"Project-Id-Version: symboleditor\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-10-27 00:39+0000\n"
+"PO-Revision-Date: 2024-12-15 17:36+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/Commands.cpp:73 src/MainWindow.cpp:938
+#, kde-format
+msgid "Move To"
+msgstr "करने के लिए कदम"
+
+#: src/Commands.cpp:106 src/MainWindow.cpp:947
+#, kde-format
+msgid "Draw To"
+msgstr "ड्रा करें"
+
+#: src/Commands.cpp:141 src/MainWindow.cpp:956
+#, kde-format
+msgid "Cubic To"
+msgstr "घन से"
+
+#: src/Commands.cpp:177
+#, kde-format
+msgid "Add Rectangle"
+msgstr "आयत जोड़ें"
+
+#: src/Commands.cpp:212
+#, kde-format
+msgid "Add Ellipse"
+msgstr "दीर्घवृत्त जोड़ें"
+
+#: src/Commands.cpp:248
+#, kde-format
+msgid "Move point"
+msgstr "बिंदु ले जाएँ"
+
+#: src/Commands.cpp:285
+#, kde-format
+msgid "Update Symbol"
+msgstr "प्रतीक अद्यतन करें"
+
+#: src/Commands.cpp:327 src/MainWindow.cpp:798
+#, kde-format
+msgid "Import Library"
+msgstr "लाइब्रेरी आयात करें"
+
+#: src/Commands.cpp:376 src/MainWindow.cpp:994
+#, kde-format
+msgid "Rotate Left"
+msgstr "बायीं तरफ"
+
+#: src/Commands.cpp:407 src/MainWindow.cpp:1001
+#, kde-format
+msgid "Rotate Right"
+msgstr "दाएं घुमाएं"
+
+#: src/Commands.cpp:438 src/MainWindow.cpp:1008
+#, kde-format
+msgid "Flip Horizontal"
+msgstr "क्षैतिज पलटें"
+
+#: src/Commands.cpp:468 src/MainWindow.cpp:1015
+#, kde-format
+msgid "Flip Vertical"
+msgstr "फ़्लिप वर्टिकल"
+
+#: src/Commands.cpp:501 src/MainWindow.cpp:1022
+#, kde-format
+msgid "Scale to Preferred Size"
+msgstr "पसंदीदा आकार के अनुसार स्केल करें"
+
+#: src/Commands.cpp:558
+#, kde-format
+msgid "Change Fill State"
+msgstr "भरण स्थिति बदलें"
+
+#: src/Commands.cpp:592
+#, kde-format
+msgid "Change Fill Rule"
+msgstr "भरण नियम बदलें"
+
+#: src/Commands.cpp:626
+#, kde-format
+msgid "Change Cap Style"
+msgstr "कैप शैली बदलें"
+
+#: src/Commands.cpp:660
+#, kde-format
+msgid "Change Join Style"
+msgstr "जॉइन स्टाइल बदलें"
+
+#: src/Commands.cpp:693 src/MainWindow.cpp:737
+#, kde-format
+msgid "Delete Symbol"
+msgstr "प्रतीक हटाएं"
+
+#: src/Commands.cpp:726 src/MainWindow.cpp:920
+#, kde-format
+msgid "Increase Line Width"
+msgstr "लाइन की चौड़ाई बढ़ाएँ"
+
+#: src/Commands.cpp:790 src/MainWindow.cpp:927
+#, kde-format
+msgid "Decrease Line Width"
+msgstr "लाइन की चौड़ाई घटाएँ"
+
+#: src/Commands.cpp:853
+#, kde-format
+msgid "Add Symbols"
+msgstr "प्रतीक जोड़ें"
+
+#: src/Commands.cpp:898
+#, kde-format
+msgid "Add Character"
+msgstr "चरित्र जोड़ें"
+
+#: src/Editor.cpp:172
+#, kde-format
+msgid "Select a new starting position."
+msgstr "एक नई प्रारंभिक स्थिति का चयन करें."
+
+#: src/Editor.cpp:177
+#, kde-format
+msgid "Select the line end point."
+msgstr "पंक्ति अंत बिंदु का चयन करें."
+
+#: src/Editor.cpp:182
+#, kde-format
+msgid "Select the first control point."
+msgstr "प्रथम नियंत्रण बिंदु का चयन करें."
+
+#: src/Editor.cpp:183
+#, kde-format
+msgid "Select the second control point."
+msgstr "दूसरे नियंत्रण बिंदु का चयन करें."
+
+#: src/Editor.cpp:184
+#, kde-format
+msgid "Select the end point"
+msgstr "अंतिम बिंदु चुनें"
+
+#: src/Editor.cpp:187
+#, kde-format
+msgid "Select the first corner."
+msgstr "पहले कोने का चयन करें."
+
+#: src/Editor.cpp:188
+#, kde-format
+msgid "Select the second corner."
+msgstr "दूसरे कोने का चयन करें."
+
+#: src/Editor.cpp:192
+#, kde-format
+msgid "Select the first corner of the bounding rectangle."
+msgstr "बाउंडिंग आयत के पहले कोने का चयन करें."
+
+#: src/Editor.cpp:193
+#, kde-format
+msgid "Select the second corner of the bounding rectangle."
+msgstr "बाउंडिंग आयत के दूसरे कोने का चयन करें।"
+
+#: src/Editor.cpp:197
+#, kde-format
+msgid "Double click a character to insert into the editor."
+msgstr "संपादक में सम्मिलित करने के लिए किसी वर्ण पर डबल क्लिक करें।"
+
+#: src/Exceptions.cpp:69
+#, kde-format
+msgid "Tried to read past the end of the data"
+msgstr "डेटा के अंत से आगे पढ़ने की कोशिश की"
+
+#: src/Exceptions.cpp:73
+#, kde-format
+msgid "Tried to read corrupted data"
+msgstr "दूषित डेटा को पढ़ने का प्रयास किया गया"
+
+#: src/Exceptions.cpp:76 src/Exceptions.cpp:106
+#, kde-format
+msgid "Undefined status message %1"
+msgstr "अपरिभाषित स्थिति संदेश %1"
+
+#: src/Exceptions.cpp:101
+#, kde-format
+msgid "Failed to write to the device"
+msgstr "डिवाइस पर लिखने में विफल"
+
+#: src/Main.cpp:88
+#, kde-format
+msgid "SymbolEditor"
+msgstr "प्रतीक संपादक"
+
+#: src/Main.cpp:90
+#, kde-format
+msgid "A cross stitch symbol editor."
+msgstr "एक क्रॉस सिलाई प्रतीक संपादक."
+
+#: src/Main.cpp:92
+#, kde-format
+msgid "(c)2011-2019 Stephen Allewell"
+msgstr "(c)2011-2019 स्टीफन एलेवेल"
+
+#: src/Main.cpp:98
+#, kde-format
+msgid "Project Lead"
+msgstr "प्रोजेक्ट लीड"
+
+#: src/Main.cpp:99
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "तुम्हारे नाम"
+
+#: src/Main.cpp:99
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "आपके ईमेल"
+
+#: src/MainWindow.cpp:199 src/MainWindow.cpp:453 src/MainWindow.cpp:600
+#, kde-format
+msgid "Untitled"
+msgstr "शीर्षकहीन"
+
+#: src/MainWindow.cpp:208
+#, kde-format
+msgctxt "The editor tab title"
+msgid "Editor"
+msgstr "संपादक"
+
+#: src/MainWindow.cpp:209
+#, kde-format
+msgctxt "The library tab title"
+msgid "Library"
+msgstr "पुस्तकालय"
+
+#: src/MainWindow.cpp:284
+#, kde-format
+msgid "Save changes to the symbol?"
+msgstr "प्रतीक में परिवर्तन सहेजें?"
+
+#: src/MainWindow.cpp:333
+#, kde-format
+msgid "Save changes to the library?"
+msgstr "लाइब्रेरी में परिवर्तन सहेजें?"
+
+#: src/MainWindow.cpp:372
+#, kde-format
+msgid "Open file"
+msgstr "खुली फाइल"
+
+#: src/MainWindow.cpp:372 src/MainWindow.cpp:484 src/MainWindow.cpp:554
+#, kde-format
+msgid "Cross Stitch Symbols (*.sym)"
+msgstr "क्रॉस सिलाई प्रतीक (*.sym)"
+
+#: src/MainWindow.cpp:421 src/MainWindow.cpp:574
+#, kde-format
+msgid "This doesn't appear to be a valid symbol file"
+msgstr "यह एक वैध प्रतीक फ़ाइल प्रतीत नहीं होती"
+
+#: src/MainWindow.cpp:423 src/MainWindow.cpp:576
+#, kde-format
+msgid ""
+"Version %1 of the library file is not supported in this version of "
+"SymbolEditor"
+msgstr "लाइब्रेरी फ़ाइल का संस्करण %1 SymbolEditor के इस संस्करण में समर्थित नहीं है"
+
+#: src/MainWindow.cpp:425
+#, kde-format
+msgid ""
+"Version %1 of the symbol is not supported in this version of SymbolEditor"
+msgstr "SymbolEditor के इस संस्करण में प्रतीक का संस्करण %1 समर्थित नहीं है"
+
+#: src/MainWindow.cpp:427
+#, kde-format
+msgid ""
+"Failed to read the library\n"
+"%1"
+msgstr ""
+"लाइब्रेरी पढ़ने में विफल\n"
+"%1"
+
+#: src/MainWindow.cpp:440 src/MainWindow.cpp:585
+#, kde-format
+msgid "The url %1 is invalid"
+msgstr "यूआरएल %1 अमान्य है"
+
+#: src/MainWindow.cpp:465
+#, kde-format
+msgid ""
+"Failed to write the library\n"
+"%1"
+msgstr ""
+"लाइब्रेरी लिखने में विफल\n"
+"%1"
+
+#: src/MainWindow.cpp:471
+#, kde-format
+msgid ""
+"Failed to open the file %1\n"
+"%2"
+msgstr ""
+"फ़ाइल %1 खोलने में विफल\n"
+"%2"
+
+#: src/MainWindow.cpp:484
+#, kde-format
+msgid "Save As..."
+msgstr "के रूप रक्षित करें..."
+
+#: src/MainWindow.cpp:554
+#, kde-format
+msgid "Import library"
+msgstr "लाइब्रेरी आयात करें"
+
+#: src/MainWindow.cpp:646
+#, kde-format
+msgid "Undo %1"
+msgstr "पूर्ववत करें%1"
+
+#: src/MainWindow.cpp:659
+#, kde-format
+msgid "Redo %1"
+msgstr "फिर से करें %1"
+
+#: src/MainWindow.cpp:673
+#, kde-format
+msgctxt "The library tab title %1 is the file name"
+msgid "%1 Library"
+msgstr "%1 लाइब्रेरी"
+
+#: src/MainWindow.cpp:675
+#, kde-format
+msgctxt "The editor tab title %1 is the file name"
+msgid "%1 Editor"
+msgstr "%1 संपादक"
+
+#: src/MainWindow.cpp:767
+#, kde-format
+msgctxt "The Editor configuration page"
+msgid "Editor"
+msgstr "संपादक"
+
+#: src/MainWindow.cpp:799
+#, kde-format
+msgid ""
+"Imports another library appending the symbols it contains to the current "
+"library."
+msgstr ""
+"किसी अन्य लाइब्रेरी को आयात करता है तथा उसमें मौजूद प्रतीकों को वर्तमान लाइब्रेरी में "
+"जोड़ता है।"
+
+#: src/MainWindow.cpp:804
+#, kde-format
+msgid "Save Symbol"
+msgstr "प्रतीक सहेजें"
+
+#: src/MainWindow.cpp:805
+#, kde-format
+msgid ""
+"Save the symbol to the library. If this is a new symbol, subsequent saves "
+"will create additional symbols in the library. If the symbol was selected "
+"from the library to edit then saving will update that symbol in the library."
+msgstr ""
+"प्रतीक को लाइब्रेरी में सेव करें। यदि यह एक नया प्रतीक है, तो बाद में सेव करने पर लाइब्रेरी "
+"में अतिरिक्त प्रतीक बनेंगे। यदि प्रतीक को संपादित करने के लिए लाइब्रेरी से चुना गया था, तो "
+"सेव करने से वह प्रतीक लाइब्रेरी में अपडेट हो जाएगा।"
+
+#: src/MainWindow.cpp:811
+#, kde-format
+msgid "Save Symbol as New"
+msgstr "प्रतीक को नए रूप में सहेजें"
+
+#: src/MainWindow.cpp:812
+#, kde-format
+msgid ""
+"Save the current symbol as a new one in the library. Subsequent saves will "
+"update the new symbol."
+msgstr ""
+"वर्तमान प्रतीक को लाइब्रेरी में नए प्रतीक के रूप में सहेजें। बाद में सहेजने से नया प्रतीक अपडेट "
+"हो जाएगा।"
+
+#: src/MainWindow.cpp:825
+#, kde-format
+msgid "Fill Path"
+msgstr "पथ भरें"
+
+#: src/MainWindow.cpp:826
+#, kde-format
+msgid ""
+"Enable path filling. The path defines the closed boundary of the shape and "
+"the path is filled with the selected fill method."
+msgstr ""
+"पथ भरना सक्षम करें। पथ आकृति की बंद सीमा को परिभाषित करता है और पथ को चयनित भरण "
+"विधि से भरा जाता है।"
+
+#: src/MainWindow.cpp:836
+#, kde-format
+msgid "Odd Even Fill"
+msgstr "विषम सम भरण"
+
+#: src/MainWindow.cpp:837
+#, kde-format
+msgid "The Odd Even fill method will fill alternate areas of the symbol."
+msgstr "विषम सम भरण विधि प्रतीक के वैकल्पिक क्षेत्रों को भरेगी।"
+
+#: src/MainWindow.cpp:845
+#, kde-format
+msgid "Winding Fill"
+msgstr "वाइंडिंग फिल"
+
+#: src/MainWindow.cpp:846
+#, kde-format
+msgid "The Winding fill method will fill the complete interior of the path."
+msgstr "वाइंडिंग फिल विधि पथ के सम्पूर्ण आंतरिक भाग को भर देगी।"
+
+#: src/MainWindow.cpp:859
+#, kde-format
+msgid "Flat Cap"
+msgstr "फ्लैट कैप"
+
+#: src/MainWindow.cpp:860
+#, kde-format
+msgid ""
+"The Flat Cap end type provides a square end that stops at the end point of "
+"the line.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr ""
+"फ्लैट कैप एंड टाइप एक चौकोर अंत प्रदान करता है जो लाइन के अंतिम बिंदु पर रुकता है।\n"
+"\n"
+"यह केवल गैर-भरे पथों पर लागू होता है।"
+
+#: src/MainWindow.cpp:868
+#, kde-format
+msgid "Square Cap"
+msgstr "स्क्वायर कैप"
+
+#: src/MainWindow.cpp:869
+#, kde-format
+msgid ""
+"The Square Cap end type provides a square end that projects beyond the end "
+"point of the line by half the line width.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr ""
+"स्क्वायर कैप एंड टाइप एक स्क्वायर एंड प्रदान करता है जो लाइन के अंतिम बिंदु से आधी लाइन "
+"चौड़ाई से आगे निकलता है।\n"
+"\n"
+"यह केवल गैर-भरे पथों पर लागू होता है।"
+
+#: src/MainWindow.cpp:877
+#, kde-format
+msgid "Round Cap"
+msgstr "गोल कैप"
+
+#: src/MainWindow.cpp:878
+#, kde-format
+msgid ""
+"The Round Cap end type provides a round end that projects beyond the end "
+"point of the line with a radius of half the line width.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr ""
+"राउंड कैप एंड टाइप एक राउंड एंड प्रदान करता है जो लाइन की चौड़ाई के आधे हिस्से की त्रिज्या "
+"के साथ लाइन के अंतिम बिंदु से आगे निकलता है।\n"
+"\n"
+"यह केवल गैर-भरे पथों पर लागू होता है।"
+
+#: src/MainWindow.cpp:891
+#, kde-format
+msgid "Bevel Join"
+msgstr "बेवल जॉइन"
+
+#: src/MainWindow.cpp:892
+#, kde-format
+msgid ""
+"The Bevel Join provides a beveled corner between two lines.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr ""
+"बेवल जॉइन दो लाइनों के बीच एक बेवल वाला कोना प्रदान करता है।\n"
+"\n"
+"यह केवल गैर-भरे पथों पर लागू होता है।"
+
+#: src/MainWindow.cpp:900
+#, kde-format
+msgid "Miter Join"
+msgstr "मेटर जॉइन"
+
+#: src/MainWindow.cpp:901
+#, kde-format
+msgid ""
+"The Miter Join provides a mitered corner between two lines.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr ""
+"मिटर जॉइन दो लाइनों के बीच एक मिटर कॉर्नर प्रदान करता है।\n"
+"\n"
+"यह केवल गैर-भरे पथों पर लागू होता है।"
+
+#: src/MainWindow.cpp:909
+#, kde-format
+msgid "Round Join"
+msgstr "राउंड जॉइन"
+
+#: src/MainWindow.cpp:910
+#, kde-format
+msgid ""
+"The Round Join provides a rounded corner between two lines using a radius of "
+"half the line width.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr ""
+"राउंड जॉइन लाइन की चौड़ाई के आधे हिस्से की त्रिज्या का उपयोग करके दो लाइनों के बीच एक "
+"गोल कोना प्रदान करता है।\n"
+"\n"
+"यह केवल गैर-भरे पथों पर लागू होता है।"
+
+#: src/MainWindow.cpp:921
+#, kde-format
+msgid ""
+"Increases the line width.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr ""
+"लाइन की चौड़ाई बढ़ाता है।\n"
+"\n"
+"यह केवल गैर-भरे पथों पर लागू होता है।"
+
+#: src/MainWindow.cpp:928
+#, kde-format
+msgid ""
+"Decreases the line width.\n"
+"\n"
+"This is only applicable to non-filled paths."
+msgstr ""
+"लाइन की चौड़ाई कम हो जाती है।\n"
+"\n"
+"यह केवल गैर-भरे पथों पर लागू होता है।"
+
+#: src/MainWindow.cpp:939
+#, kde-format
+msgid ""
+"Move the current point to a new position. This implicitly closes any "
+"existing sub path, starting a new one."
+msgstr ""
+"वर्तमान बिंदु को एक नई स्थिति पर ले जाएँ। यह किसी भी मौजूदा उप पथ को बंद कर देता है, "
+"और एक नया पथ शुरू करता है।"
+
+#: src/MainWindow.cpp:948
+#, kde-format
+msgid ""
+"Add a straight line from the current position to a defined end point. The "
+"end point becomes the new current position."
+msgstr ""
+"वर्तमान स्थिति से एक निर्धारित अंतिम बिंदु तक एक सीधी रेखा जोड़ें। अंतिम बिंदु नई वर्तमान "
+"स्थिति बन जाती है।"
+
+#: src/MainWindow.cpp:957
+#, kde-format
+msgid ""
+"Add a cubic bezier curve from the current position using two control points "
+"and an end point. The end point becomes the new current position."
+msgstr ""
+"दो नियंत्रण बिंदुओं और एक अंतिम बिंदु का उपयोग करके वर्तमान स्थिति से एक क्यूबिक बेज़ियर वक्र "
+"जोड़ें। अंतिम बिंदु नई वर्तमान स्थिति बन जाती है।"
+
+#: src/MainWindow.cpp:965
+#, kde-format
+msgid "Rectangle"
+msgstr "आयत"
+
+#: src/MainWindow.cpp:966
+#, kde-format
+msgid ""
+"Add a rectangle as a separate sub path defined by two points representing "
+"the opposite corners."
+msgstr ""
+"विपरीत कोनों का प्रतिनिधित्व करने वाले दो बिंदुओं द्वारा परिभाषित एक अलग उप पथ के रूप में "
+"एक आयत जोड़ें।"
+
+#: src/MainWindow.cpp:974
+#, kde-format
+msgid "Ellipse"
+msgstr "अंडाकार"
+
+#: src/MainWindow.cpp:975
+#, kde-format
+msgid ""
+"Add an ellipse as a separate sub path defined by a bounding rectangle "
+"represented by two opposite corners."
+msgstr ""
+"दो विपरीत कोनों द्वारा दर्शाए गए एक बाउंडिंग आयत द्वारा परिभाषित एक अलग उप पथ के रूप "
+"में एक दीर्घवृत्त जोड़ें।"
+
+#: src/MainWindow.cpp:983
+#, kde-format
+msgid "Insert Character"
+msgstr "वर्ण डालें"
+
+#: src/MainWindow.cpp:984
+#, kde-format
+msgid ""
+"Allows selection of a character from any font to be inserted as a closed sub "
+"path. The inserted character will overwrite any existing path, but "
+"additional sub paths may be added to the character."
+msgstr ""
+"किसी भी फ़ॉन्ट से किसी वर्ण का चयन बंद उप पथ के रूप में सम्मिलित करने की अनुमति देता है। "
+"सम्मिलित वर्ण किसी भी मौजूदा पथ को अधिलेखित कर देगा, लेकिन वर्ण में अतिरिक्त उप पथ जोड़े "
+"जा सकते हैं।"
+
+#: src/MainWindow.cpp:995
+#, kde-format
+msgid ""
+"Rotate all the points of a path counter-clockwise 90 degrees around the "
+"center of the editor."
+msgstr "पथ के सभी बिंदुओं को संपादक के केंद्र के चारों ओर 90 डिग्री वामावर्त घुमाएं।"
+
+#: src/MainWindow.cpp:1002
+#, kde-format
+msgid ""
+"Rotate all the points of a path clockwise 90 degrees around the center point "
+"of the editor."
+msgstr "पथ के सभी बिंदुओं को संपादक के केंद्र बिंदु के चारों ओर 90 डिग्री दक्षिणावर्त घुमाएं।"
+
+#: src/MainWindow.cpp:1009
+#, kde-format
+msgid ""
+"Flip all the points of the path horizontally about the vertical center of "
+"the editor."
+msgstr "पथ के सभी बिंदुओं को संपादक के ऊर्ध्वाधर केंद्र के चारों ओर क्षैतिज रूप से पलटें।"
+
+#: src/MainWindow.cpp:1016
+#, kde-format
+msgid ""
+"Flip all the points of the path vertically about the horizontal center of "
+"the editor."
+msgstr "पथ के सभी बिंदुओं को संपादक के क्षैतिज केंद्र के चारों ओर लंबवत रूप से पलटें।"
+
+#: src/MainWindow.cpp:1023
+#, kde-format
+msgid ""
+"Scale the current symbol so that it fits within the preferred size of a "
+"symbol."
+msgstr ""
+"वर्तमान प्रतीक को इस प्रकार स्केल करें कि वह प्रतीक के पसंदीदा आकार में फिट हो जाए।"
+
+#: src/MainWindow.cpp:1029
+#, kde-format
+msgid "Enable Snap"
+msgstr "स्नैप सक्षम करें"
+
+#: src/MainWindow.cpp:1030
+#, kde-format
+msgid "Enable snapping of points to guide intersections or to the grid."
+msgstr "चौराहों या ग्रिड को निर्देशित करने के लिए बिंदुओं को स्नैप करना सक्षम करें।"
+
+#: src/MainWindow.cpp:1037
+#, kde-format
+msgid "Enable Guides"
+msgstr "गाइड सक्षम करें"
+
+#: src/MainWindow.cpp:1038
+#, kde-format
+msgid "Enable the generation of guide intersections."
+msgstr "गाइड इंटरसेक्शन्स की पीढ़ी को सक्षम करें।"
+
+#. i18n: ectx: label, entry (Editor_GridElements), group (editor)
+#: SymbolEditor.kcfg:10
+#, kde-format
+msgid "The number of elements in a grid."
+msgstr "ग्रिड में तत्वों की संख्या."
+
+#. i18n: ectx: label, entry (Editor_ElementSize), group (editor)
+#: SymbolEditor.kcfg:14
+#, kde-format
+msgid "The size in pixels of a grid element."
+msgstr "ग्रिड तत्व का पिक्सेल में आकार."
+
+#. i18n: ectx: label, entry (Editor_ElementGrouping), group (editor)
+#: SymbolEditor.kcfg:18
+#, kde-format
+msgid "The number of elements in a group."
+msgstr "एक समूह में तत्वों की संख्या."
+
+#. i18n: ectx: label, entry (Editor_PointSize), group (editor)
+#: SymbolEditor.kcfg:22
+#, kde-format
+msgid "The size of a point in pixels."
+msgstr "पिक्सेल में एक बिंदु का आकार."
+
+#. i18n: ectx: label, entry (Editor_SnapThreshold), group (editor)
+#: SymbolEditor.kcfg:26
+#, kde-format
+msgid "The distance to check within the range of a point."
+msgstr "किसी बिंदु की सीमा के भीतर जाँच की जाने वाली दूरी।"
+
+#. i18n: ectx: label, entry (Editor_BorderSize), group (editor)
+#: SymbolEditor.kcfg:30
+#, kde-format
+msgid "The number of cell elements used for the border."
+msgstr "बॉर्डर के लिए उपयोग किये गये सेल तत्वों की संख्या."
+
+#. i18n: ectx: label, entry (Editor_PreferredSizeColor), group (editor)
+#: SymbolEditor.kcfg:34
+#, kde-format
+msgid "The color of the preferred size rectangle"
+msgstr "पसंदीदा आकार के आयत का रंग"
+
+#. i18n: ectx: label, entry (Editor_GuideLineColor), group (editor)
+#: SymbolEditor.kcfg:38
+#, kde-format
+msgid "The color of the guide lines"
+msgstr "गाइड लाइन्स का रंग"
+
+#. i18n: ectx: label, entry (Editor_SimplifiedGuideLines), group (editor)
+#: SymbolEditor.kcfg:42
+#, kde-format
+msgid "Whether to use a simplified range of angles to test"
+msgstr "परीक्षण के लिए कोणों की सरलीकृत श्रेणी का उपयोग करना है या नहीं"
+
+#. i18n: ectx: Menu (tools)
+#: SymbolEditorui.rc:10
+#, kde-format
+msgid "&Tools"
+msgstr "&औजार"
+
+#. i18n: ectx: Menu (rendering)
+#: SymbolEditorui.rc:27
+#, kde-format
+msgid "&Rendering"
+msgstr "&रेंडरिंग"
+
+#. i18n: ectx: ToolBar (ToolsToolbar)
+#: SymbolEditorui.rc:47
+#, kde-format
+msgid "Tool Toolbar"
+msgstr "टूल टूलबार"
+
+#. i18n: ectx: ToolBar (RenderingToolbar)
+#: SymbolEditorui.rc:64
+#, kde-format
+msgid "Rendering Toolbar"
+msgstr "रेंडरिंग टूलबार"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, EditorConfigPage)
+#: ui/EditorConfigPage.ui:14
+#, kde-format
+msgid "Editor Configuration Page"
+msgstr "संपादक कॉन्फ़िगरेशन पृष्ठ"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/EditorConfigPage.ui:20
+#, kde-format
+msgid "Grid elements"
+msgstr "ग्रिड तत्व"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/EditorConfigPage.ui:40
+#, kde-format
+msgid "Element size"
+msgstr "तत्व का आकार"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: ui/EditorConfigPage.ui:60
+#, kde-format
+msgid "Element grouping"
+msgstr "तत्व समूहीकरण"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: ui/EditorConfigPage.ui:80
+#, kde-format
+msgid "Point size"
+msgstr "बिंदु आकार"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: ui/EditorConfigPage.ui:100
+#, kde-format
+msgid "Snap threshold"
+msgstr "स्नैप सीमा"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: ui/EditorConfigPage.ui:123
+#, kde-format
+msgid "Border size"
+msgstr "सीमा का आकार"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: ui/EditorConfigPage.ui:140
+#, kde-format
+msgid "Preferred size box color"
+msgstr "पसंदीदा आकार बॉक्स रंग"
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: ui/EditorConfigPage.ui:158
+#, kde-format
+msgid "Guide line color"
+msgstr "गाइड लाइन का रंग"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_Editor_SimplifiedGuideLines)
+#: ui/EditorConfigPage.ui:176
+#, kde-format
+msgid "Simplified guide lines"
+msgstr "सरलीकृत दिशानिर्देश"
