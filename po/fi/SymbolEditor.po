@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the symboleditor package.
-# Tommi Nieminen <translator@legisign.org>, 2019, 2021.
+# Tommi Nieminen <translator@legisign.org>, 2019, 2021, 2024.
 #
 #: src/Editor.cpp:173 src/Editor.cpp:174 src/Editor.cpp:178 src/Editor.cpp:179
 #: src/Editor.cpp:189 src/Editor.cpp:194 src/Editor.cpp:198 src/Editor.cpp:199
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: symboleditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 00:39+0000\n"
-"PO-Revision-Date: 2021-01-11 13:41+0200\n"
+"PO-Revision-Date: 2024-12-11 22:45+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -18,16 +18,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: src/Commands.cpp:73 src/MainWindow.cpp:938
 #, kde-format
 msgid "Move To"
-msgstr ""
+msgstr "Siirrä kohteeseen"
 
 #: src/Commands.cpp:106 src/MainWindow.cpp:947
 #, kde-format
 msgid "Draw To"
-msgstr ""
+msgstr "Piirrä kohteeseen"
 
 #: src/Commands.cpp:141 src/MainWindow.cpp:956
 #, kde-format
@@ -47,7 +48,7 @@ msgstr "Lisää ellipsi"
 #: src/Commands.cpp:248
 #, kde-format
 msgid "Move point"
-msgstr ""
+msgstr "Siirrä pistettä"
 
 #: src/Commands.cpp:285
 #, kde-format
@@ -87,12 +88,12 @@ msgstr "Skaalaa haluttuun kokoon"
 #: src/Commands.cpp:558
 #, kde-format
 msgid "Change Fill State"
-msgstr ""
+msgstr "Vaihda täytön tilaa"
 
 #: src/Commands.cpp:592
 #, kde-format
 msgid "Change Fill Rule"
-msgstr ""
+msgstr "Muuta täyttösääntöä"
 
 #: src/Commands.cpp:626
 #, kde-format
@@ -401,6 +402,8 @@ msgid ""
 "Save the current symbol as a new one in the library. Subsequent saves will "
 "update the new symbol."
 msgstr ""
+"Tallenna nykyinen symboli kirjastoon uutena. Myöhemmät tallennukset "
+"päivittävät uutta symbolia."
 
 #: src/MainWindow.cpp:825
 #, kde-format
@@ -419,22 +422,23 @@ msgstr ""
 #: src/MainWindow.cpp:836
 #, kde-format
 msgid "Odd Even Fill"
-msgstr ""
+msgstr "Pariton–parillinen-täyttö"
 
 #: src/MainWindow.cpp:837
 #, kde-format
 msgid "The Odd Even fill method will fill alternate areas of the symbol."
 msgstr ""
+"Pariton–parillinen-täyttötapa täyttää symbolista vuorottelevia alueita."
 
 #: src/MainWindow.cpp:845
 #, kde-format
 msgid "Winding Fill"
-msgstr ""
+msgstr "Kiemurtava täyttö"
 
 #: src/MainWindow.cpp:846
 #, kde-format
 msgid "The Winding fill method will fill the complete interior of the path."
-msgstr ""
+msgstr "Kiemurtava täyttötapa täyttää polun koko sisäosan."
 
 #: src/MainWindow.cpp:859
 #, kde-format
