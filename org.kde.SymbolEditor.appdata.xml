@@ -22,6 +22,7 @@
   <name xml:lang="he">עורך סמלים</name>
   <name xml:lang="hi">प्रतीक संपादक</name>
   <name xml:lang="hu">SymbolEditor</name>
+  <name xml:lang="ia">SymbolEditor (Editor de symbolos)</name>
   <name xml:lang="id">SymbolEditor</name>
   <name xml:lang="it">SymbolEditor</name>
   <name xml:lang="ka">SymbolEditor</name>
@@ -126,6 +127,7 @@
     <p xml:lang="he">יכולות:</p>
     <p xml:lang="hi">विशेषताएँ:</p>
     <p xml:lang="hu">Szolgáltatások:</p>
+    <p xml:lang="ia">Characteristicas:</p>
     <p xml:lang="id">Fitur:</p>
     <p xml:lang="it">Funzionalità:</p>
     <p xml:lang="ka">თვისებები:</p>
