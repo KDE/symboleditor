@@ -226,13 +226,13 @@ msgstr "Projektleiter"
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Maik Wagner"
+msgstr "Deutsches KDE-Übersetzungsteam"
 
 #: src/Main.cpp:99
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "maiktapwagner@aol.com"
+msgstr "kde-i18n-de@kde.org"
 
 #: src/MainWindow.cpp:199 src/MainWindow.cpp:453 src/MainWindow.cpp:600
 #, kde-format
