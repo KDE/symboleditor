@@ -225,7 +225,7 @@ msgstr "Líder do proxecto."
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Adrián Chaves Fernández"
+msgstr "Adrián Chaves"
 
 #: src/Main.cpp:99
 #, kde-format
