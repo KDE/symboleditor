@@ -185,7 +185,7 @@ msgstr "Selecciona el segon cantó del rectangle delimitador."
 #: src/Editor.cpp:197
 #, kde-format
 msgid "Double click a character to insert into the editor."
-msgstr "Feu doble clic en un caràcter per a inserir-lo en l'editor."
+msgstr "Feu doble clic damunt d'un caràcter per a inserir-lo en l'editor."
 
 #: src/Exceptions.cpp:69
 #, kde-format
@@ -541,7 +541,7 @@ msgid ""
 "\n"
 "This is only applicable to non-filled paths."
 msgstr ""
-"La «Unió en biaix» oferix un cantó arredonida entre dues línies amb un radi "
+"La «Unió en biaix» oferix un cantó arredonit entre dues línies amb un radi "
 "de la meitat de l'amplària de la línia.\n"
 "\n"
 "Només és aplicable als camins no farcits."
