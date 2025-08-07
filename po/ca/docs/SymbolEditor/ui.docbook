@@ -6,7 +6,7 @@
         <title
 >La finestra principal del &symboleditor;</title>
         <para
->La finestra principal consta d'un giny amb pestanyes que conté l'editor de símbols i una vista de la biblioteca. Hi ha una barra de menús i diverses barres d'eines que contenen accions estàndard, eines d'edició i opcions de dibuix. La barra d'estat dona indicacions per a utilitzar les diverses eines. </para>
+>La finestra principal consta d'un giny amb pestanyes que conté l'editor de símbols i una vista de la biblioteca. Hi ha una barra de menús i diverses barres d'eines que contenen accions estàndard, eines d'edició i opcions de dibuix. La barra d'estat dona indicadors per a utilitzar les diverses eines. </para>
         <sect2 id="editor-window">
             <title
 >Finestra de l'editor</title>
