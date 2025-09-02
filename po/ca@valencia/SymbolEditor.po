@@ -140,47 +140,47 @@ msgstr "Afig un caràcter"
 #: src/Editor.cpp:172
 #, kde-format
 msgid "Select a new starting position."
-msgstr "Selecciona una nova posició inicial."
+msgstr "Tria una nova posició inicial."
 
 #: src/Editor.cpp:177
 #, kde-format
 msgid "Select the line end point."
-msgstr "Selecciona el punt final de la línia."
+msgstr "Tria el punt final de la línia."
 
 #: src/Editor.cpp:182
 #, kde-format
 msgid "Select the first control point."
-msgstr "Selecciona el primer punt de control."
+msgstr "Tria el primer punt de control."
 
 #: src/Editor.cpp:183
 #, kde-format
 msgid "Select the second control point."
-msgstr "Selecciona el segon punt de control."
+msgstr "Tria el segon punt de control."
 
 #: src/Editor.cpp:184
 #, kde-format
 msgid "Select the end point"
-msgstr "Selecciona el punt final"
+msgstr "Tria el punt final"
 
 #: src/Editor.cpp:187
 #, kde-format
 msgid "Select the first corner."
-msgstr "Selecciona el primer cantó."
+msgstr "Tria el primer cantó."
 
 #: src/Editor.cpp:188
 #, kde-format
 msgid "Select the second corner."
-msgstr "Selecciona el segon cantó."
+msgstr "Tria el segon cantó."
 
 #: src/Editor.cpp:192
 #, kde-format
 msgid "Select the first corner of the bounding rectangle."
-msgstr "Selecciona el primer cantó del rectangle delimitador."
+msgstr "Tria el primer cantó del rectangle delimitador."
 
 #: src/Editor.cpp:193
 #, kde-format
 msgid "Select the second corner of the bounding rectangle."
-msgstr "Selecciona el segon cantó del rectangle delimitador."
+msgstr "Tria el segon cantó del rectangle delimitador."
 
 #: src/Editor.cpp:197
 #, kde-format
