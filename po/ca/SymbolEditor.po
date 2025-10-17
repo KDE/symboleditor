@@ -3,11 +3,11 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# JoanTeixi <JoanTeixidoParramona@gmail.com>, 2014.
-# Joan Teixido Parramona <joan4@users.sourceforge.net>, 2014.
-# Orestes Mas <orestes@tsc.upc.edu>, 2014.
+# SPDX-FileCopyrightText: 2014 JoanTeixi <JoanTeixidoParramona@gmail.com>
+# SPDX-FileCopyrightText: 2014 Joan Teixido Parramona <joan4@users.sourceforge.net>
+# SPDX-FileCopyrightText: 2014 Orestes Mas <orestes@tsc.upc.edu>
 # SPDX-FileCopyrightText: 2015, 2018, 2021, 2022, 2024 Josep M. Ferrer <txemaq@gmail.com>
-# Antoni Bella Pérez <antonibella5@yahoo.com>, 2015, 2017, 2020.
+# SPDX-FileCopyrightText: 2015, 2017, 2020 Antoni Bella Pérez <antonibella5@yahoo.com>
 #: src/Editor.cpp:173 src/Editor.cpp:174 src/Editor.cpp:178 src/Editor.cpp:179
 #: src/Editor.cpp:189 src/Editor.cpp:194 src/Editor.cpp:198 src/Editor.cpp:199
 #, kde-format
