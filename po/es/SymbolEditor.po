@@ -1,9 +1,9 @@
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Spanish translations for SymbolEditor.po package.
+# Copyright (C) 2014-2025 This file is copyright:
+# This file is distributed under the same license as the symboleditor package.
 #
-# Translators:
-# JoanTeixi <JoanTeixidoParramona@gmail.com>, 2014.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2014, 2015, 2016, 2020, 2022.
+# SPDX-FileCopyrightText: 2014 JoanTeixi <JoanTeixidoParramona@gmail.com>
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2020, 2022, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 #: src/Editor.cpp:173 src/Editor.cpp:174 src/Editor.cpp:178 src/Editor.cpp:179
 #: src/Editor.cpp:189 src/Editor.cpp:194 src/Editor.cpp:198 src/Editor.cpp:199
 #, kde-format
@@ -12,14 +12,13 @@ msgstr ""
 "Project-Id-Version: SymbolEditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:50+0000\n"
-"PO-Revision-Date: 2022-10-19 16:57+0200\n"
+"PO-Revision-Date: 2025-12-08 11:59+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"language/es/)\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.08.2\n"
 
@@ -329,7 +328,7 @@ msgstr ""
 #: src/MainWindow.cpp:484
 #, kde-format
 msgid "Save As..."
-msgstr "Guardar como..."
+msgstr "Guardar como…"
 
 #: src/MainWindow.cpp:554
 #, kde-format
@@ -843,19 +842,3 @@ msgstr "Color de la línea de guía"
 #, kde-format
 msgid "Simplified guide lines"
 msgstr "Líneas de guía simplificadas"
-
-#~ msgid ""
-#~ "This file already exists\n"
-#~ "Do you want to overwrite it?"
-#~ msgstr ""
-#~ "Este archivo ya existe\n"
-#~ "¿Lo quiere sobreescribir?"
-
-#~ msgid "Stephen Allewell"
-#~ msgstr "Stephen Allewell"
-
-#~ msgid "Failed to open the file %1"
-#~ msgstr "Error al abrir el archivo %1"
-
-#~ msgid "Failed to download the file %1"
-#~ msgstr "Error al descargar el archivo %1"
