@@ -207,7 +207,7 @@
 
         <sect2>
             <title
->O Menu e a barra de ferramentas Desenho</title>
+>O Menu e a barra de ferramentas de desenho</title>
             <screenshot>
                 <screeninfo
 >Aqui está uma imagem da barra de ferramentas de desenho</screeninfo>
@@ -379,7 +379,7 @@
 
         <sect2>
             <title
->Menu Ferramentas e Barra de Ferramentas</title>
+>Menu e a e barra de ferramentas de ferramentas</title>
             <para
 >Está disponível um conjunto de ferramentas para ajudar no desenho dos símbolos. Os símbolos são compostos por uma série de subcaminhos, onde cada subcaminho é composto por uma colocação na posição inicial (o padrão é 0,0 para novos símbolos), seguida de linhas e curvas. As curvas são ranhuras cúbicas que têm um início, um fim e dois pontos de controle que definem a curva. Existem ferramentas de conveniência para criar retângulos e elipses, mas estes serão divididos em linhas e curvas. </para>
             <para
