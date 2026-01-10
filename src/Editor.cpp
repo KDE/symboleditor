@@ -170,13 +170,13 @@ const int pointsRequired[] = {1, 1, 3, 2, 2};   /**< The number of points requir
 const KLocalizedString statusMessages[][3] = {
     {
         ki18n("Select a new starting position."),
-        ki18n(""),
-        ki18n("")
+        KLocalizedString(),
+        KLocalizedString()
     },
     {
         ki18n("Select the line end point."),
-        ki18n(""),
-        ki18n("")
+        KLocalizedString(),
+        KLocalizedString()
     },
     {
         ki18n("Select the first control point."),
@@ -186,17 +186,17 @@ const KLocalizedString statusMessages[][3] = {
     {
         ki18n("Select the first corner."),
         ki18n("Select the second corner."),
-        ki18n("")
+        KLocalizedString()
     },
     {
         ki18n("Select the first corner of the bounding rectangle."),
         ki18n("Select the second corner of the bounding rectangle."),
-        ki18n("")
+        KLocalizedString()
     },
     {
         ki18n("Double click a character to insert into the editor."),
-        ki18n(""),
-        ki18n("")
+        KLocalizedString(),
+        KLocalizedString()
     }
 };
 
