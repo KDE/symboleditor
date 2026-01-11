@@ -4,14 +4,12 @@
 # Alexander Potashev <aspotashev@gmail.com>, 2015.
 # Olesya Gerasimenko <translation-team@basealt.ru>, 2022.
 # SPDX-FileCopyrightText: 2025 Alexander Yavorsky <kekcuha@gmail.com>
-#: src/Editor.cpp:173 src/Editor.cpp:174 src/Editor.cpp:178 src/Editor.cpp:179
-#: src/Editor.cpp:189 src/Editor.cpp:194 src/Editor.cpp:198 src/Editor.cpp:199
-#, fuzzy, kde-format
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:50+0000\n"
+"POT-Creation-Date: 2026-01-11 00:41+0000\n"
 "PO-Revision-Date: 2025-05-22 18:21+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"

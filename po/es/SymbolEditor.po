@@ -4,14 +4,11 @@
 #
 # SPDX-FileCopyrightText: 2014 JoanTeixi <JoanTeixidoParramona@gmail.com>
 # SPDX-FileCopyrightText: 2014, 2015, 2016, 2020, 2022, 2025 Eloy Cuadra <ecuadra@eloihr.net>
-#: src/Editor.cpp:173 src/Editor.cpp:174 src/Editor.cpp:178 src/Editor.cpp:179
-#: src/Editor.cpp:189 src/Editor.cpp:194 src/Editor.cpp:198 src/Editor.cpp:199
-#, kde-format
 msgid ""
 msgstr ""
 "Project-Id-Version: SymbolEditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:50+0000\n"
+"POT-Creation-Date: 2026-01-11 00:41+0000\n"
 "PO-Revision-Date: 2025-12-08 11:59+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
