@@ -4,7 +4,6 @@
 # Alexander Potashev <aspotashev@gmail.com>, 2015.
 # Olesya Gerasimenko <translation-team@basealt.ru>, 2022.
 # SPDX-FileCopyrightText: 2025 Alexander Yavorsky <kekcuha@gmail.com>
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"

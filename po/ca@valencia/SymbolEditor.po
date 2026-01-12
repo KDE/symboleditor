@@ -202,7 +202,7 @@ msgstr "Missatge amb estat sense definir %1"
 #: src/Exceptions.cpp:101
 #, kde-format
 msgid "Failed to write to the device"
-msgstr "No s'ha pogut escriure al dispositiu"
+msgstr "Ha fallat mentre s'escrivia al dispositiu"
 
 #: src/Main.cpp:88
 #, kde-format
@@ -301,7 +301,7 @@ msgid ""
 "Failed to read the library\n"
 "%1"
 msgstr ""
-"No s'ha pogut llegir la biblioteca\n"
+"Ha fallat mentre es llegia la biblioteca\n"
 "%1"
 
 #: src/MainWindow.cpp:440 src/MainWindow.cpp:585
@@ -315,7 +315,7 @@ msgid ""
 "Failed to write the library\n"
 "%1"
 msgstr ""
-"No s'ha pogut escriure la biblioteca\n"
+"Ha fallat mentre s'escrivia la biblioteca\n"
 "%1"
 
 #: src/MainWindow.cpp:471
@@ -323,7 +323,7 @@ msgstr ""
 msgid ""
 "Failed to open the file %1\n"
 "%2"
-msgstr "No s'ha pogut obrir el fitxer %1%2"
+msgstr "Ha fallat mentre s'obria el fitxer %1%2"
 
 #: src/MainWindow.cpp:484
 #, kde-format

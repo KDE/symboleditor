@@ -2,7 +2,6 @@
 # This file is distributed under the same license as the symboleditor package.
 #
 # Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2022.
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: symboleditor\n"

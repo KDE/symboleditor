@@ -4,7 +4,6 @@
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Yuri Chornoivan <yurchor@ukr.net>, 2014, 2015, 2020, 2022.
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: SymbolEditor\n"
