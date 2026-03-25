@@ -1,13 +1,13 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the symboleditor package.
-# SPDX-FileCopyrightText: 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2025, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: symboleditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-11 00:41+0000\n"
-"PO-Revision-Date: 2025-10-06 11:58+0400\n"
+"PO-Revision-Date: 2026-03-24 11:07+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -76,7 +76,7 @@ msgstr "اقلب أفقياً"
 #: src/Commands.cpp:468 src/MainWindow.cpp:1015
 #, kde-format
 msgid "Flip Vertical"
-msgstr "اقلب رأسياً"
+msgstr "اقلب عموديًا"
 
 #: src/Commands.cpp:501 src/MainWindow.cpp:1022
 #, kde-format
@@ -645,7 +645,7 @@ msgstr "اقلب جميع نقاط المسار أفقياً حول المركز
 msgid ""
 "Flip all the points of the path vertically about the horizontal center of "
 "the editor."
-msgstr "اقلب جميع نقاط المسار رأسياً حول المركز الأفقي للمحرّر."
+msgstr "اقلب جميع نقاط المسار عموديًا حول المركز الأفقي للمحرّر."
 
 #: src/MainWindow.cpp:1023
 #, kde-format
