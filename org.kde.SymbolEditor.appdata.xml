@@ -41,6 +41,7 @@
   <name xml:lang="sl">SymbolEditor</name>
   <name xml:lang="sv">Symboleditor</name>
   <name xml:lang="tr">Sembol Düzenleyicisi</name>
+  <name xml:lang="ug">بەلگە تەھرىرلىگۈچ</name>
   <name xml:lang="uk">SymbolEditor</name>
   <name xml:lang="zh-CN">符号编辑器</name>
   <summary>A cross stitch symbol editor</summary>
@@ -147,6 +148,7 @@
     <p xml:lang="sl">Zmožnosti:</p>
     <p xml:lang="sv">Funktioner:</p>
     <p xml:lang="tr">Özellikler:</p>
+    <p xml:lang="ug">ئىقتىدار:</p>
     <p xml:lang="uk">Можливості:</p>
     <p xml:lang="zh-CN">功能：</p>
     <ul>
