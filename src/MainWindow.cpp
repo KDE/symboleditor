@@ -155,7 +155,6 @@
 #include <QTabWidget>
 #include <QTemporaryFile>
 
-#include <kwidgetsaddons_version.h>
 #include <KActionCollection>
 #include <KConfigDialog>
 #include <KConfigGroup>
@@ -276,32 +275,20 @@ bool MainWindow::editorClean()
     bool clean = m_editor->undoStack()->isClean();
 
     if (!clean) {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         int messageBoxResult = KMessageBox::warningTwoActionsCancel(this,
-#else
-        int messageBoxResult = KMessageBox::warningYesNoCancel(this,
-#endif
                                                                i18n("Save changes to the symbol?"), QString(),
                                                                KStandardGuiItem::save(),
                                                                KStandardGuiItem::discard(),
                                                                KStandardGuiItem::cancel());
 
         switch (messageBoxResult) {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         case KMessageBox::PrimaryAction:
-#else
-        case KMessageBox::Yes:
-#endif
             saveSymbol();
             save();
             clean = true;
             break;
 
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         case KMessageBox::SecondaryAction:
-#else
-        case KMessageBox::No:
-#endif
             clean = true;
             break;
 
@@ -325,31 +312,19 @@ bool MainWindow::libraryClean()
     bool clean = m_symbolLibrary->undoStack()->isClean();
 
     if (!clean) {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         int messageBoxResult = KMessageBox::warningTwoActionsCancel(this,
-#else
-        int messageBoxResult = KMessageBox::warningYesNoCancel(this,
-#endif
                                                                i18n("Save changes to the library?"), QString(),
                                                                KStandardGuiItem::save(),
                                                                KStandardGuiItem::discard(),
                                                                KStandardGuiItem::cancel());
 
         switch (messageBoxResult) {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         case KMessageBox::PrimaryAction:
-#else
-        case KMessageBox::Yes:
-#endif
             save();
             clean = true;
             break;
 
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         case KMessageBox::SecondaryAction:
-#else
-        case KMessageBox::No:
-#endif
             clean = true;
             break;
 
