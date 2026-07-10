@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symboleditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-11 00:41+0000\n"
+"POT-Creation-Date: 2026-07-10 00:42+0000\n"
 "PO-Revision-Date: 2026-03-24 11:07+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -18,17 +18,17 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: src/Commands.cpp:73 src/MainWindow.cpp:938
+#: src/Commands.cpp:73 src/MainWindow.cpp:913
 #, kde-format
 msgid "Move To"
 msgstr "انقل إلى"
 
-#: src/Commands.cpp:106 src/MainWindow.cpp:947
+#: src/Commands.cpp:106 src/MainWindow.cpp:922
 #, kde-format
 msgid "Draw To"
 msgstr "ارسم إلى"
 
-#: src/Commands.cpp:141 src/MainWindow.cpp:956
+#: src/Commands.cpp:141 src/MainWindow.cpp:931
 #, kde-format
 msgid "Cubic To"
 msgstr "تكعيبي إلى"
@@ -53,32 +53,32 @@ msgstr "انقل نقطة"
 msgid "Update Symbol"
 msgstr "حدّث الرمز"
 
-#: src/Commands.cpp:327 src/MainWindow.cpp:798
+#: src/Commands.cpp:327 src/MainWindow.cpp:773
 #, kde-format
 msgid "Import Library"
 msgstr "استيراد المكتبة"
 
-#: src/Commands.cpp:376 src/MainWindow.cpp:994
+#: src/Commands.cpp:376 src/MainWindow.cpp:969
 #, kde-format
 msgid "Rotate Left"
 msgstr "دوّر لليسار"
 
-#: src/Commands.cpp:407 src/MainWindow.cpp:1001
+#: src/Commands.cpp:407 src/MainWindow.cpp:976
 #, kde-format
 msgid "Rotate Right"
 msgstr "دوّر لليمين"
 
-#: src/Commands.cpp:438 src/MainWindow.cpp:1008
+#: src/Commands.cpp:438 src/MainWindow.cpp:983
 #, kde-format
 msgid "Flip Horizontal"
 msgstr "اقلب أفقياً"
 
-#: src/Commands.cpp:468 src/MainWindow.cpp:1015
+#: src/Commands.cpp:468 src/MainWindow.cpp:990
 #, kde-format
 msgid "Flip Vertical"
 msgstr "اقلب عموديًا"
 
-#: src/Commands.cpp:501 src/MainWindow.cpp:1022
+#: src/Commands.cpp:501 src/MainWindow.cpp:997
 #, kde-format
 msgid "Scale to Preferred Size"
 msgstr "قيّس للحجم المبدئي"
@@ -103,17 +103,17 @@ msgstr "غيّر نمط الغطاء"
 msgid "Change Join Style"
 msgstr "غيّر نمط الوصل"
 
-#: src/Commands.cpp:693 src/MainWindow.cpp:737
+#: src/Commands.cpp:693 src/MainWindow.cpp:712
 #, kde-format
 msgid "Delete Symbol"
 msgstr "احذف الرمز"
 
-#: src/Commands.cpp:726 src/MainWindow.cpp:920
+#: src/Commands.cpp:726 src/MainWindow.cpp:895
 #, kde-format
 msgid "Increase Line Width"
 msgstr "زد عرض الخط"
 
-#: src/Commands.cpp:790 src/MainWindow.cpp:927
+#: src/Commands.cpp:790 src/MainWindow.cpp:902
 #, kde-format
 msgid "Decrease Line Width"
 msgstr "قلّل عرض الخط"
@@ -230,62 +230,62 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "zayed.alsaidi@gmail.com"
 
-#: src/MainWindow.cpp:199 src/MainWindow.cpp:453 src/MainWindow.cpp:600
+#: src/MainWindow.cpp:198 src/MainWindow.cpp:428 src/MainWindow.cpp:575
 #, kde-format
 msgid "Untitled"
 msgstr "غير معنون"
 
-#: src/MainWindow.cpp:208
+#: src/MainWindow.cpp:207
 #, kde-format
 msgctxt "The editor tab title"
 msgid "Editor"
 msgstr "المحرّر"
 
-#: src/MainWindow.cpp:209
+#: src/MainWindow.cpp:208
 #, kde-format
 msgctxt "The library tab title"
 msgid "Library"
 msgstr "المكتبة"
 
-#: src/MainWindow.cpp:284
+#: src/MainWindow.cpp:279
 #, kde-format
 msgid "Save changes to the symbol?"
 msgstr "احفظ التغييرات على الرمز؟"
 
-#: src/MainWindow.cpp:333
+#: src/MainWindow.cpp:316
 #, kde-format
 msgid "Save changes to the library?"
 msgstr "احفظ التغييرات على المكتبة؟"
 
-#: src/MainWindow.cpp:372
+#: src/MainWindow.cpp:347
 #, kde-format
 msgid "Open file"
 msgstr "افتح ملفًا"
 
-#: src/MainWindow.cpp:372 src/MainWindow.cpp:484 src/MainWindow.cpp:554
+#: src/MainWindow.cpp:347 src/MainWindow.cpp:459 src/MainWindow.cpp:529
 #, kde-format
 msgid "Cross Stitch Symbols (*.sym)"
 msgstr "رموز الغرز المتقاطعة (*.sym)"
 
-#: src/MainWindow.cpp:421 src/MainWindow.cpp:574
+#: src/MainWindow.cpp:396 src/MainWindow.cpp:549
 #, kde-format
 msgid "This doesn't appear to be a valid symbol file"
 msgstr "لا يبدو أن هذا ملف رمز صالح"
 
-#: src/MainWindow.cpp:423 src/MainWindow.cpp:576
+#: src/MainWindow.cpp:398 src/MainWindow.cpp:551
 #, kde-format
 msgid ""
 "Version %1 of the library file is not supported in this version of "
 "SymbolEditor"
 msgstr "الإصدار %1 من ملف المكتبة غير مدعوم في هذا الإصدار من محرّر الرموز"
 
-#: src/MainWindow.cpp:425
+#: src/MainWindow.cpp:400
 #, kde-format
 msgid ""
 "Version %1 of the symbol is not supported in this version of SymbolEditor"
 msgstr "الإصدار %1 من الرمز غير مدعوم في هذا الإصدار من محرّر الرموز"
 
-#: src/MainWindow.cpp:427
+#: src/MainWindow.cpp:402
 #, kde-format
 msgid ""
 "Failed to read the library\n"
@@ -294,12 +294,12 @@ msgstr ""
 "فشل قراءة المكتبة\n"
 "%1"
 
-#: src/MainWindow.cpp:440 src/MainWindow.cpp:585
+#: src/MainWindow.cpp:415 src/MainWindow.cpp:560
 #, kde-format
 msgid "The url %1 is invalid"
 msgstr "الرابط %1 غير صالح"
 
-#: src/MainWindow.cpp:465
+#: src/MainWindow.cpp:440
 #, kde-format
 msgid ""
 "Failed to write the library\n"
@@ -308,7 +308,7 @@ msgstr ""
 "فشل كتابة المكتبة\n"
 "%1"
 
-#: src/MainWindow.cpp:471
+#: src/MainWindow.cpp:446
 #, kde-format
 msgid ""
 "Failed to open the file %1\n"
@@ -317,57 +317,57 @@ msgstr ""
 "فشل فتح الملف %1\n"
 "%2"
 
-#: src/MainWindow.cpp:484
+#: src/MainWindow.cpp:459
 #, kde-format
 msgid "Save As..."
 msgstr "1احفظ كَ‍..."
 
-#: src/MainWindow.cpp:554
+#: src/MainWindow.cpp:529
 #, kde-format
 msgid "Import library"
 msgstr "استيراد المكتبة"
 
-#: src/MainWindow.cpp:646
+#: src/MainWindow.cpp:621
 #, kde-format
 msgid "Undo %1"
 msgstr "تراجع %1"
 
-#: src/MainWindow.cpp:659
+#: src/MainWindow.cpp:634
 #, kde-format
 msgid "Redo %1"
 msgstr "كرّر %1"
 
-#: src/MainWindow.cpp:673
+#: src/MainWindow.cpp:648
 #, kde-format
 msgctxt "The library tab title %1 is the file name"
 msgid "%1 Library"
 msgstr "المكتبة %1"
 
-#: src/MainWindow.cpp:675
+#: src/MainWindow.cpp:650
 #, kde-format
 msgctxt "The editor tab title %1 is the file name"
 msgid "%1 Editor"
 msgstr "المحرّر %1"
 
-#: src/MainWindow.cpp:767
+#: src/MainWindow.cpp:742
 #, kde-format
 msgctxt "The Editor configuration page"
 msgid "Editor"
 msgstr "المحرّر"
 
-#: src/MainWindow.cpp:799
+#: src/MainWindow.cpp:774
 #, kde-format
 msgid ""
 "Imports another library appending the symbols it contains to the current "
 "library."
 msgstr "يستورد مكتبة أخرى و يلحق الرموز التي تحويها بالمكتبة الحالية."
 
-#: src/MainWindow.cpp:804
+#: src/MainWindow.cpp:779
 #, kde-format
 msgid "Save Symbol"
 msgstr "احفظ الرمز"
 
-#: src/MainWindow.cpp:805
+#: src/MainWindow.cpp:780
 #, kde-format
 msgid ""
 "Save the symbol to the library. If this is a new symbol, subsequent saves "
@@ -378,12 +378,12 @@ msgstr ""
 "رموزاً إضافية في المكتبة. وإذا اختير الرمز من المكتبة للتحرير، فسيعمل الحفظ "
 "على تحديث هذا الرمز في المكتبة."
 
-#: src/MainWindow.cpp:811
+#: src/MainWindow.cpp:786
 #, kde-format
 msgid "Save Symbol as New"
 msgstr "احفظ الرمز كجديد"
 
-#: src/MainWindow.cpp:812
+#: src/MainWindow.cpp:787
 #, kde-format
 msgid ""
 "Save the current symbol as a new one in the library. Subsequent saves will "
@@ -392,12 +392,12 @@ msgstr ""
 "احفظ الرمز الحالي كرمز جديد في المكتبة. ستحدّث عمليات الحفظ اللاحقة الرمز "
 "الجديد."
 
-#: src/MainWindow.cpp:825
+#: src/MainWindow.cpp:800
 #, kde-format
 msgid "Fill Path"
 msgstr "تعبئة المسار"
 
-#: src/MainWindow.cpp:826
+#: src/MainWindow.cpp:801
 #, kde-format
 msgid ""
 "Enable path filling. The path defines the closed boundary of the shape and "
@@ -406,32 +406,32 @@ msgstr ""
 "فعّل تعبئة المسار. يحدد المسار الحد المغلق للشكل ويُملأ المسار بطريقة التعبئة "
 "المختارة."
 
-#: src/MainWindow.cpp:836
+#: src/MainWindow.cpp:811
 #, kde-format
 msgid "Odd Even Fill"
 msgstr "تعبئة فردي-زوجي"
 
-#: src/MainWindow.cpp:837
+#: src/MainWindow.cpp:812
 #, kde-format
 msgid "The Odd Even fill method will fill alternate areas of the symbol."
 msgstr "تملأ طريقة تعبئة فردي-زوجي مناطق متناوبة من الرمز."
 
-#: src/MainWindow.cpp:845
+#: src/MainWindow.cpp:820
 #, kde-format
 msgid "Winding Fill"
 msgstr "تعبئة لولبية"
 
-#: src/MainWindow.cpp:846
+#: src/MainWindow.cpp:821
 #, kde-format
 msgid "The Winding fill method will fill the complete interior of the path."
 msgstr "تملأ طريقة التعبئة اللولبية كامل داخل المسار."
 
-#: src/MainWindow.cpp:859
+#: src/MainWindow.cpp:834
 #, kde-format
 msgid "Flat Cap"
 msgstr "قبعة مسطحة"
 
-#: src/MainWindow.cpp:860
+#: src/MainWindow.cpp:835
 #, kde-format
 msgid ""
 "The Flat Cap end type provides a square end that stops at the end point of "
@@ -443,12 +443,12 @@ msgstr ""
 "\n"
 "هذا قابل للتطبيق فقط على المسارات غير المعبأة."
 
-#: src/MainWindow.cpp:868
+#: src/MainWindow.cpp:843
 #, kde-format
 msgid "Square Cap"
 msgstr "غطاء مربع"
 
-#: src/MainWindow.cpp:869
+#: src/MainWindow.cpp:844
 #, kde-format
 msgid ""
 "The Square Cap end type provides a square end that projects beyond the end "
@@ -461,12 +461,12 @@ msgstr ""
 "\n"
 "هذا قابل للتطبيق فقط على المسارات غير المعبأة."
 
-#: src/MainWindow.cpp:877
+#: src/MainWindow.cpp:852
 #, kde-format
 msgid "Round Cap"
 msgstr "مستدير"
 
-#: src/MainWindow.cpp:878
+#: src/MainWindow.cpp:853
 #, kde-format
 msgid ""
 "The Round Cap end type provides a round end that projects beyond the end "
@@ -479,12 +479,12 @@ msgstr ""
 "\n"
 "هذا قابل للتطبيق فقط على المسارات غير المعبأة."
 
-#: src/MainWindow.cpp:891
+#: src/MainWindow.cpp:866
 #, kde-format
 msgid "Bevel Join"
 msgstr "وصلة مخروطية"
 
-#: src/MainWindow.cpp:892
+#: src/MainWindow.cpp:867
 #, kde-format
 msgid ""
 "The Bevel Join provides a beveled corner between two lines.\n"
@@ -495,12 +495,12 @@ msgstr ""
 "\n"
 "هذا قابل للتطبيق فقط على المسارات غير المعبأة."
 
-#: src/MainWindow.cpp:900
+#: src/MainWindow.cpp:875
 #, kde-format
 msgid "Miter Join"
 msgstr "وصلة مائلة"
 
-#: src/MainWindow.cpp:901
+#: src/MainWindow.cpp:876
 #, kde-format
 msgid ""
 "The Miter Join provides a mitered corner between two lines.\n"
@@ -511,12 +511,12 @@ msgstr ""
 "\n"
 "هذا قابل للتطبيق فقط على المسارات غير المعبأة."
 
-#: src/MainWindow.cpp:909
+#: src/MainWindow.cpp:884
 #, kde-format
 msgid "Round Join"
 msgstr "وصلة مستديرة"
 
-#: src/MainWindow.cpp:910
+#: src/MainWindow.cpp:885
 #, kde-format
 msgid ""
 "The Round Join provides a rounded corner between two lines using a radius of "
@@ -529,7 +529,7 @@ msgstr ""
 "\n"
 "هذا قابل للتطبيق فقط على المسارات غير المعبأة."
 
-#: src/MainWindow.cpp:921
+#: src/MainWindow.cpp:896
 #, kde-format
 msgid ""
 "Increases the line width.\n"
@@ -540,7 +540,7 @@ msgstr ""
 "\n"
 "هذا قابل للتطبيق فقط على المسارات غير المعبأة."
 
-#: src/MainWindow.cpp:928
+#: src/MainWindow.cpp:903
 #, kde-format
 msgid ""
 "Decreases the line width.\n"
@@ -551,7 +551,7 @@ msgstr ""
 "\n"
 "هذا قابل للتطبيق فقط على المسارات غير المعبأة."
 
-#: src/MainWindow.cpp:939
+#: src/MainWindow.cpp:914
 #, kde-format
 msgid ""
 "Move the current point to a new position. This implicitly closes any "
@@ -560,7 +560,7 @@ msgstr ""
 "انقل النقطة الحالية إلى موضع جديد. يغلق هذا ضمناً أي مسار فرعي موجود، ويبدأ "
 "مساراً جديداً."
 
-#: src/MainWindow.cpp:948
+#: src/MainWindow.cpp:923
 #, kde-format
 msgid ""
 "Add a straight line from the current position to a defined end point. The "
@@ -569,7 +569,7 @@ msgstr ""
 "أضف خطاً مستقيماً من الموضع الحالي إلى نقطة نهاية محددة. تصبح نقطة النهاية هي "
 "الموضع الحالي الجديد."
 
-#: src/MainWindow.cpp:957
+#: src/MainWindow.cpp:932
 #, kde-format
 msgid ""
 "Add a cubic bezier curve from the current position using two control points "
@@ -578,12 +578,12 @@ msgstr ""
 "أضف منحنى بيزيه تكعيبي من الموضع الحالي باستخدام نقطتي تحكم ونقطة نهاية. "
 "تصبح نقطة النهاية هي الموضع الحالي الجديد."
 
-#: src/MainWindow.cpp:965
+#: src/MainWindow.cpp:940
 #, kde-format
 msgid "Rectangle"
 msgstr "مستطيل"
 
-#: src/MainWindow.cpp:966
+#: src/MainWindow.cpp:941
 #, kde-format
 msgid ""
 "Add a rectangle as a separate sub path defined by two points representing "
@@ -591,12 +591,12 @@ msgid ""
 msgstr ""
 "أضف مستطيلاً كمسار فرعي منفصل محدد بنقطتين تمثلان الزاويتين المتقابلتين."
 
-#: src/MainWindow.cpp:974
+#: src/MainWindow.cpp:949
 #, kde-format
 msgid "Ellipse"
 msgstr "بيضاوي"
 
-#: src/MainWindow.cpp:975
+#: src/MainWindow.cpp:950
 #, kde-format
 msgid ""
 "Add an ellipse as a separate sub path defined by a bounding rectangle "
@@ -604,12 +604,12 @@ msgid ""
 msgstr ""
 "أضف شكلًا بيضاوياً كمسار فرعي منفصل محدد بمستطيل محدد ممثل بزوايا متقابلة."
 
-#: src/MainWindow.cpp:983
+#: src/MainWindow.cpp:958
 #, kde-format
 msgid "Insert Character"
 msgstr "أدرج محرفًا"
 
-#: src/MainWindow.cpp:984
+#: src/MainWindow.cpp:959
 #, kde-format
 msgid ""
 "Allows selection of a character from any font to be inserted as a closed sub "
@@ -619,57 +619,57 @@ msgstr ""
 "يسمح باختيار محرف من أي خط ليُدرج كمسار فرعي مغلق. سيكتب المحرف المدرج فوق أي "
 "مسار موجود، ولكن قد تُضاف مسارات فرعية إضافية إلى المحرف."
 
-#: src/MainWindow.cpp:995
+#: src/MainWindow.cpp:970
 #, kde-format
 msgid ""
 "Rotate all the points of a path counter-clockwise 90 degrees around the "
 "center of the editor."
 msgstr "دوّر جميع نقاط المسار عكس عقارب الساعة ٩٠ درجة حول مركز المحرّر."
 
-#: src/MainWindow.cpp:1002
+#: src/MainWindow.cpp:977
 #, kde-format
 msgid ""
 "Rotate all the points of a path clockwise 90 degrees around the center point "
 "of the editor."
 msgstr "دوّر جميع نقاط المسار مع عقارب الساعة ٩٠ درجة حول نقطة مركز المحرّر."
 
-#: src/MainWindow.cpp:1009
+#: src/MainWindow.cpp:984
 #, kde-format
 msgid ""
 "Flip all the points of the path horizontally about the vertical center of "
 "the editor."
 msgstr "اقلب جميع نقاط المسار أفقياً حول المركز العمودي للمحرّر."
 
-#: src/MainWindow.cpp:1016
+#: src/MainWindow.cpp:991
 #, kde-format
 msgid ""
 "Flip all the points of the path vertically about the horizontal center of "
 "the editor."
 msgstr "اقلب جميع نقاط المسار عموديًا حول المركز الأفقي للمحرّر."
 
-#: src/MainWindow.cpp:1023
+#: src/MainWindow.cpp:998
 #, kde-format
 msgid ""
 "Scale the current symbol so that it fits within the preferred size of a "
 "symbol."
 msgstr "قيّس الرمز الحالي بحيث يناسب الحجم المبدئي للرمز."
 
-#: src/MainWindow.cpp:1029
+#: src/MainWindow.cpp:1004
 #, kde-format
 msgid "Enable Snap"
 msgstr "فعّل الالتقاط"
 
-#: src/MainWindow.cpp:1030
+#: src/MainWindow.cpp:1005
 #, kde-format
 msgid "Enable snapping of points to guide intersections or to the grid."
 msgstr "فعّل التقاط النقاط لتقاطعات الدليل أو للشبكة."
 
-#: src/MainWindow.cpp:1037
+#: src/MainWindow.cpp:1012
 #, kde-format
 msgid "Enable Guides"
 msgstr "فعّل الأدلة"
 
-#: src/MainWindow.cpp:1038
+#: src/MainWindow.cpp:1013
 #, kde-format
 msgid "Enable the generation of guide intersections."
 msgstr "فعّل إنشاء تقاطعات الدليل."

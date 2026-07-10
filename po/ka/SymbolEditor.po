@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symboleditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-11 00:41+0000\n"
+"POT-Creation-Date: 2026-07-10 00:42+0000\n"
 "PO-Revision-Date: 2024-10-27 04:21+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,17 +18,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.5\n"
 
-#: src/Commands.cpp:73 src/MainWindow.cpp:938
+#: src/Commands.cpp:73 src/MainWindow.cpp:913
 #, kde-format
 msgid "Move To"
 msgstr "გადატანა"
 
-#: src/Commands.cpp:106 src/MainWindow.cpp:947
+#: src/Commands.cpp:106 src/MainWindow.cpp:922
 #, kde-format
 msgid "Draw To"
 msgstr "დახატვა"
 
-#: src/Commands.cpp:141 src/MainWindow.cpp:956
+#: src/Commands.cpp:141 src/MainWindow.cpp:931
 #, kde-format
 msgid "Cubic To"
 msgstr "კუბიკი"
@@ -53,32 +53,32 @@ msgstr "წერტილის გადატან"
 msgid "Update Symbol"
 msgstr "სიმბოლოს განახლება"
 
-#: src/Commands.cpp:327 src/MainWindow.cpp:798
+#: src/Commands.cpp:327 src/MainWindow.cpp:773
 #, kde-format
 msgid "Import Library"
 msgstr "ბიბლიოთეკის შემოტანა"
 
-#: src/Commands.cpp:376 src/MainWindow.cpp:994
+#: src/Commands.cpp:376 src/MainWindow.cpp:969
 #, kde-format
 msgid "Rotate Left"
 msgstr "მარცხნივ შებრუნება"
 
-#: src/Commands.cpp:407 src/MainWindow.cpp:1001
+#: src/Commands.cpp:407 src/MainWindow.cpp:976
 #, kde-format
 msgid "Rotate Right"
 msgstr "მარჯვნივ შებრუნება"
 
-#: src/Commands.cpp:438 src/MainWindow.cpp:1008
+#: src/Commands.cpp:438 src/MainWindow.cpp:983
 #, kde-format
 msgid "Flip Horizontal"
 msgstr "ჰორიზონტალურად გადაბრუნება"
 
-#: src/Commands.cpp:468 src/MainWindow.cpp:1015
+#: src/Commands.cpp:468 src/MainWindow.cpp:990
 #, kde-format
 msgid "Flip Vertical"
 msgstr "ვერტიკალურად გადაბრუნება"
 
-#: src/Commands.cpp:501 src/MainWindow.cpp:1022
+#: src/Commands.cpp:501 src/MainWindow.cpp:997
 #, kde-format
 msgid "Scale to Preferred Size"
 msgstr "რჩეულ მასშტაბში გადაყვანა"
@@ -103,17 +103,17 @@ msgstr "ბოლოს სტილის შეცვლა"
 msgid "Change Join Style"
 msgstr "შეერთების სტილის შეცვლა"
 
-#: src/Commands.cpp:693 src/MainWindow.cpp:737
+#: src/Commands.cpp:693 src/MainWindow.cpp:712
 #, kde-format
 msgid "Delete Symbol"
 msgstr "სიმბოლოს წაშლა"
 
-#: src/Commands.cpp:726 src/MainWindow.cpp:920
+#: src/Commands.cpp:726 src/MainWindow.cpp:895
 #, kde-format
 msgid "Increase Line Width"
 msgstr "ხაზის სიგანის გაზრდა"
 
-#: src/Commands.cpp:790 src/MainWindow.cpp:927
+#: src/Commands.cpp:790 src/MainWindow.cpp:902
 #, kde-format
 msgid "Decrease Line Width"
 msgstr "ხაზის სიგანის შემცირება"
@@ -230,49 +230,49 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Temuri.doghonadze@gmail.com"
 
-#: src/MainWindow.cpp:199 src/MainWindow.cpp:453 src/MainWindow.cpp:600
+#: src/MainWindow.cpp:198 src/MainWindow.cpp:428 src/MainWindow.cpp:575
 #, kde-format
 msgid "Untitled"
 msgstr "უსახელო"
 
-#: src/MainWindow.cpp:208
+#: src/MainWindow.cpp:207
 #, kde-format
 msgctxt "The editor tab title"
 msgid "Editor"
 msgstr "რედაქტორი"
 
-#: src/MainWindow.cpp:209
+#: src/MainWindow.cpp:208
 #, kde-format
 msgctxt "The library tab title"
 msgid "Library"
 msgstr "ბიბლიოთეკა"
 
-#: src/MainWindow.cpp:284
+#: src/MainWindow.cpp:279
 #, kde-format
 msgid "Save changes to the symbol?"
 msgstr "შევინახო სიმბოლოს ცვლილებები?"
 
-#: src/MainWindow.cpp:333
+#: src/MainWindow.cpp:316
 #, kde-format
 msgid "Save changes to the library?"
 msgstr "შევინახო ბიბლიოთეკის ცვლილებები?"
 
-#: src/MainWindow.cpp:372
+#: src/MainWindow.cpp:347
 #, kde-format
 msgid "Open file"
 msgstr "ფაილის გახსნა"
 
-#: src/MainWindow.cpp:372 src/MainWindow.cpp:484 src/MainWindow.cpp:554
+#: src/MainWindow.cpp:347 src/MainWindow.cpp:459 src/MainWindow.cpp:529
 #, kde-format
 msgid "Cross Stitch Symbols (*.sym)"
 msgstr "ჯვარედინი გვირისტის სიმბოლოები (*.sym)"
 
-#: src/MainWindow.cpp:421 src/MainWindow.cpp:574
+#: src/MainWindow.cpp:396 src/MainWindow.cpp:549
 #, kde-format
 msgid "This doesn't appear to be a valid symbol file"
 msgstr "სწორ სიმბოლოს ფაილს არ ჰგავს"
 
-#: src/MainWindow.cpp:423 src/MainWindow.cpp:576
+#: src/MainWindow.cpp:398 src/MainWindow.cpp:551
 #, kde-format
 msgid ""
 "Version %1 of the library file is not supported in this version of "
@@ -280,13 +280,13 @@ msgid ""
 msgstr ""
 "ბიბლიოთეკის ფაილის ვერსია %1 SymbolEditor-ის ამ ვერსიაში მხარდაჭერილი არაა"
 
-#: src/MainWindow.cpp:425
+#: src/MainWindow.cpp:400
 #, kde-format
 msgid ""
 "Version %1 of the symbol is not supported in this version of SymbolEditor"
 msgstr "სიმბოლოს ვერსია %1 SymbolEditor-ის ამ ვერსიაში მხარდაჭერილი არაა"
 
-#: src/MainWindow.cpp:427
+#: src/MainWindow.cpp:402
 #, kde-format
 msgid ""
 "Failed to read the library\n"
@@ -295,12 +295,12 @@ msgstr ""
 "ბიბლიოთეკის წაკითხვის შეცდომა\n"
 "%1"
 
-#: src/MainWindow.cpp:440 src/MainWindow.cpp:585
+#: src/MainWindow.cpp:415 src/MainWindow.cpp:560
 #, kde-format
 msgid "The url %1 is invalid"
 msgstr "ბმული %1 არასწორია"
 
-#: src/MainWindow.cpp:465
+#: src/MainWindow.cpp:440
 #, kde-format
 msgid ""
 "Failed to write the library\n"
@@ -309,7 +309,7 @@ msgstr ""
 "ბიბლიოთეკაში ჩაწერის შეცდომა\n"
 "%1"
 
-#: src/MainWindow.cpp:471
+#: src/MainWindow.cpp:446
 #, kde-format
 msgid ""
 "Failed to open the file %1\n"
@@ -318,45 +318,45 @@ msgstr ""
 "ფაილის %1 გახსნის შეცდომა\n"
 "%2"
 
-#: src/MainWindow.cpp:484
+#: src/MainWindow.cpp:459
 #, kde-format
 msgid "Save As..."
 msgstr "შენახვა, როგორც..."
 
-#: src/MainWindow.cpp:554
+#: src/MainWindow.cpp:529
 #, kde-format
 msgid "Import library"
 msgstr "ბიბლიოთეკის შემოტანა"
 
-#: src/MainWindow.cpp:646
+#: src/MainWindow.cpp:621
 #, kde-format
 msgid "Undo %1"
 msgstr "%1-ის დაბრუნება"
 
-#: src/MainWindow.cpp:659
+#: src/MainWindow.cpp:634
 #, kde-format
 msgid "Redo %1"
 msgstr "%1-ის გამეორება"
 
-#: src/MainWindow.cpp:673
+#: src/MainWindow.cpp:648
 #, kde-format
 msgctxt "The library tab title %1 is the file name"
 msgid "%1 Library"
 msgstr "%1 ბიბლიოთეკა"
 
-#: src/MainWindow.cpp:675
+#: src/MainWindow.cpp:650
 #, kde-format
 msgctxt "The editor tab title %1 is the file name"
 msgid "%1 Editor"
 msgstr "%1 რედაქტორი"
 
-#: src/MainWindow.cpp:767
+#: src/MainWindow.cpp:742
 #, kde-format
 msgctxt "The Editor configuration page"
 msgid "Editor"
 msgstr "რედაქტორი"
 
-#: src/MainWindow.cpp:799
+#: src/MainWindow.cpp:774
 #, kde-format
 msgid ""
 "Imports another library appending the symbols it contains to the current "
@@ -365,12 +365,12 @@ msgstr ""
 "შემოიტანს სხვა ბიბლიოთეკა და სიმბოლოებს, რომლებსაც ის შეიცავს, მიმდინარე "
 "ბიბლიოთეკას ბოლოში მიაწერს."
 
-#: src/MainWindow.cpp:804
+#: src/MainWindow.cpp:779
 #, kde-format
 msgid "Save Symbol"
 msgstr "სიმბოლოს შენახვა"
 
-#: src/MainWindow.cpp:805
+#: src/MainWindow.cpp:780
 #, kde-format
 msgid ""
 "Save the symbol to the library. If this is a new symbol, subsequent saves "
@@ -381,12 +381,12 @@ msgstr ""
 "ბიბლიოთეკაში ახალ სიმბოლოს შექმნის. თუ სიმბოლო ბიბლიოთეკიდანაა არჩეული, "
 "მაშინ მისი შენახვა ბიბლიოთეკის სიმბოლოს განაახლებს."
 
-#: src/MainWindow.cpp:811
+#: src/MainWindow.cpp:786
 #, kde-format
 msgid "Save Symbol as New"
 msgstr "სიმბოლოს, როგორც ახლის შენახვა"
 
-#: src/MainWindow.cpp:812
+#: src/MainWindow.cpp:787
 #, kde-format
 msgid ""
 "Save the current symbol as a new one in the library. Subsequent saves will "
@@ -395,12 +395,12 @@ msgstr ""
 "მიმდინარე სიმბოლოს შენახვა ბიბლიოთეკაში ახლის სახით. შემდგომი შენახვები ამ "
 "ახალ სიმბოლოს განაახლებს."
 
-#: src/MainWindow.cpp:825
+#: src/MainWindow.cpp:800
 #, kde-format
 msgid "Fill Path"
 msgstr "კონტურის შევსება"
 
-#: src/MainWindow.cpp:826
+#: src/MainWindow.cpp:801
 #, kde-format
 msgid ""
 "Enable path filling. The path defines the closed boundary of the shape and "
@@ -409,34 +409,34 @@ msgstr ""
 "კონტურით შევსების ჩართვა. კონტური აღწერს ფორმის დახურულ საზღვარს და ბილიკი "
 "არჩეული შევსების მეთოდით შეივსება."
 
-#: src/MainWindow.cpp:836
+#: src/MainWindow.cpp:811
 #, kde-format
 msgid "Odd Even Fill"
 msgstr "მონაცვლეობითი შევსება"
 
-#: src/MainWindow.cpp:837
+#: src/MainWindow.cpp:812
 #, kde-format
 msgid "The Odd Even fill method will fill alternate areas of the symbol."
 msgstr ""
 "ცვალებადი შევსების მეთოდი სიმბოლოს ისე შეავსებს, რომ შევსებული და შეუვსებელი "
 "ადგილები ერთმანეთის მიყოლებით იქნება."
 
-#: src/MainWindow.cpp:845
+#: src/MainWindow.cpp:820
 #, kde-format
 msgid "Winding Fill"
 msgstr "სრული შევსება"
 
-#: src/MainWindow.cpp:846
+#: src/MainWindow.cpp:821
 #, kde-format
 msgid "The Winding fill method will fill the complete interior of the path."
 msgstr "სრული შევსება კონტურის შიდა ნაწილს მთლიანად შეავსებს."
 
-#: src/MainWindow.cpp:859
+#: src/MainWindow.cpp:834
 #, kde-format
 msgid "Flat Cap"
 msgstr "გლუვი ბოლო"
 
-#: src/MainWindow.cpp:860
+#: src/MainWindow.cpp:835
 #, kde-format
 msgid ""
 "The Flat Cap end type provides a square end that stops at the end point of "
@@ -449,12 +449,12 @@ msgstr ""
 "\n"
 "ეს, მხოლოდ, არაშევსებულ ბილიკებს ეხება."
 
-#: src/MainWindow.cpp:868
+#: src/MainWindow.cpp:843
 #, kde-format
 msgid "Square Cap"
 msgstr "ოთხკუთხედი ბოლო"
 
-#: src/MainWindow.cpp:869
+#: src/MainWindow.cpp:844
 #, kde-format
 msgid ""
 "The Square Cap end type provides a square end that projects beyond the end "
@@ -467,12 +467,12 @@ msgstr ""
 "\n"
 "ეს, მხოლოდ, შეუვსებელ კონტურებს ეხება."
 
-#: src/MainWindow.cpp:877
+#: src/MainWindow.cpp:852
 #, kde-format
 msgid "Round Cap"
 msgstr "მრგვალი ბოლო"
 
-#: src/MainWindow.cpp:878
+#: src/MainWindow.cpp:853
 #, kde-format
 msgid ""
 "The Round Cap end type provides a round end that projects beyond the end "
@@ -485,12 +485,12 @@ msgstr ""
 "\n"
 "ეხება, მხოლოდ, შეუვსებელ კონტურებს."
 
-#: src/MainWindow.cpp:891
+#: src/MainWindow.cpp:866
 #, kde-format
 msgid "Bevel Join"
 msgstr "მოღუნული შეერთება"
 
-#: src/MainWindow.cpp:892
+#: src/MainWindow.cpp:867
 #, kde-format
 msgid ""
 "The Bevel Join provides a beveled corner between two lines.\n"
@@ -501,12 +501,12 @@ msgstr ""
 "\n"
 "ეს, მხოლოდ, შეუვსებელ კონტურებს ეხება."
 
-#: src/MainWindow.cpp:900
+#: src/MainWindow.cpp:875
 #, kde-format
 msgid "Miter Join"
 msgstr "ფაცეტური შეერთება"
 
-#: src/MainWindow.cpp:901
+#: src/MainWindow.cpp:876
 #, kde-format
 msgid ""
 "The Miter Join provides a mitered corner between two lines.\n"
@@ -517,12 +517,12 @@ msgstr ""
 "\n"
 "ეს, მხოლოდ, შეუვსებელ კონტურებს ეხება."
 
-#: src/MainWindow.cpp:909
+#: src/MainWindow.cpp:884
 #, kde-format
 msgid "Round Join"
 msgstr "მომრგვალებული შეერთება"
 
-#: src/MainWindow.cpp:910
+#: src/MainWindow.cpp:885
 #, kde-format
 msgid ""
 "The Round Join provides a rounded corner between two lines using a radius of "
@@ -535,7 +535,7 @@ msgstr ""
 "\n"
 "ეს, მხოლოდ, შეუვსებელ კონტურებს ეხება."
 
-#: src/MainWindow.cpp:921
+#: src/MainWindow.cpp:896
 #, kde-format
 msgid ""
 "Increases the line width.\n"
@@ -546,7 +546,7 @@ msgstr ""
 "\n"
 "ეხება მხოლოდ შეუვსებელ ბილიკებს."
 
-#: src/MainWindow.cpp:928
+#: src/MainWindow.cpp:903
 #, kde-format
 msgid ""
 "Decreases the line width.\n"
@@ -557,7 +557,7 @@ msgstr ""
 "\n"
 "ეხება მხოლოდ შეუვსებელ ბილიკებს."
 
-#: src/MainWindow.cpp:939
+#: src/MainWindow.cpp:914
 #, kde-format
 msgid ""
 "Move the current point to a new position. This implicitly closes any "
@@ -566,7 +566,7 @@ msgstr ""
 "მიმდინარე წერტილის გადატანა ახალ ადგილას. ეს დახურავს ყველა არსებულ "
 "ქვეკონტურს და ახალს შექმნის."
 
-#: src/MainWindow.cpp:948
+#: src/MainWindow.cpp:923
 #, kde-format
 msgid ""
 "Add a straight line from the current position to a defined end point. The "
@@ -575,7 +575,7 @@ msgstr ""
 "სწორი ხაზის დამატება მიმდინარე პოზიციიდან აღწერილი ბოლოწერტილამდე. შემდეგ "
 "ბოლოწერტილი ახალი მიმდინარე პოზიცია გახდება."
 
-#: src/MainWindow.cpp:957
+#: src/MainWindow.cpp:932
 #, kde-format
 msgid ""
 "Add a cubic bezier curve from the current position using two control points "
@@ -584,12 +584,12 @@ msgstr ""
 "კუბური ბეზიეს მრუდის დამატება მიმდინარე პოზიციიდან ორი საკონტროლო წერტილისა "
 "და ბოლოწერტილის გამოყენებით. შემდეგ, ბოლო წერტილი მიმდინარე გახდება."
 
-#: src/MainWindow.cpp:965
+#: src/MainWindow.cpp:940
 #, kde-format
 msgid "Rectangle"
 msgstr "მართკუთხედი"
 
-#: src/MainWindow.cpp:966
+#: src/MainWindow.cpp:941
 #, kde-format
 msgid ""
 "Add a rectangle as a separate sub path defined by two points representing "
@@ -598,12 +598,12 @@ msgstr ""
 "დაამატებს ოთხკუთხედს ცალკე ქვეკონტურის სახით, რომელიც აღწერილია ორი "
 "წერტილით, რომლებიც საპირისპირო კუთხეებს წარმოადგენენ."
 
-#: src/MainWindow.cpp:974
+#: src/MainWindow.cpp:949
 #, kde-format
 msgid "Ellipse"
 msgstr "ოვალი"
 
-#: src/MainWindow.cpp:975
+#: src/MainWindow.cpp:950
 #, kde-format
 msgid ""
 "Add an ellipse as a separate sub path defined by a bounding rectangle "
@@ -612,12 +612,12 @@ msgstr ""
 "დაამატებს ოვალს ცალკე ქვეკონტურის სახით, რომელიც აღწერილია შემომსაზღვრელი "
 "ოთხკუთხედით, რომელიც ორი საპირისპირო კუთხითაა წარმოდგენილი."
 
-#: src/MainWindow.cpp:983
+#: src/MainWindow.cpp:958
 #, kde-format
 msgid "Insert Character"
 msgstr "სიმბოლოს ჩასმა"
 
-#: src/MainWindow.cpp:984
+#: src/MainWindow.cpp:959
 #, kde-format
 msgid ""
 "Allows selection of a character from any font to be inserted as a closed sub "
@@ -628,7 +628,7 @@ msgstr ""
 "ქვეკონტურის სახით ჩასვათ. ჩასმული სიმბოლო თავზე გადააწერს არსებულ კონტურებს, "
 "მაგრამ სიმბოლოს, შეგიძლიათ, ქვეკონტურები დაამატოთ."
 
-#: src/MainWindow.cpp:995
+#: src/MainWindow.cpp:970
 #, kde-format
 msgid ""
 "Rotate all the points of a path counter-clockwise 90 degrees around the "
@@ -637,7 +637,7 @@ msgstr ""
 "კონტურის შებრუნება საათის საპირისპირო მიმართულებით 90 გრადუსით რედაქტორის "
 "ცენტრის გარშემო."
 
-#: src/MainWindow.cpp:1002
+#: src/MainWindow.cpp:977
 #, kde-format
 msgid ""
 "Rotate all the points of a path clockwise 90 degrees around the center point "
@@ -646,7 +646,7 @@ msgstr ""
 "კონტურის შებრუნება საათის მიმართულებით 90 გრადუსით რედაქტორის ცენტრის "
 "გარშემო."
 
-#: src/MainWindow.cpp:1009
+#: src/MainWindow.cpp:984
 #, kde-format
 msgid ""
 "Flip all the points of the path horizontally about the vertical center of "
@@ -655,7 +655,7 @@ msgstr ""
 "კონტურის ყველა წერტილის გადაბრუნება ჰორიზონტალურად რედაქტორის ვერტიკალური "
 "ცენტრის გარშემო."
 
-#: src/MainWindow.cpp:1016
+#: src/MainWindow.cpp:991
 #, kde-format
 msgid ""
 "Flip all the points of the path vertically about the horizontal center of "
@@ -664,7 +664,7 @@ msgstr ""
 "კონტურის ყველა წერტლის გადაბრუნება ვერტიკალურად რედაქტორის ჰორიზონტალური "
 "ცენტრის გარშემო."
 
-#: src/MainWindow.cpp:1023
+#: src/MainWindow.cpp:998
 #, kde-format
 msgid ""
 "Scale the current symbol so that it fits within the preferred size of a "
@@ -672,22 +672,22 @@ msgid ""
 msgstr ""
 "მიმდინარე სიმბოლოს დამასშტაბება ისე, რომ ის სიმბოლოს სასურველ ზომაში ჩაეტიოს."
 
-#: src/MainWindow.cpp:1029
+#: src/MainWindow.cpp:1004
 #, kde-format
 msgid "Enable Snap"
 msgstr "მიმაგრების ჩართვა"
 
-#: src/MainWindow.cpp:1030
+#: src/MainWindow.cpp:1005
 #, kde-format
 msgid "Enable snapping of points to guide intersections or to the grid."
 msgstr "წერტილის მიწებების ჩართვა მიმმართველების კვეთაზე ან ბადეზე."
 
-#: src/MainWindow.cpp:1037
+#: src/MainWindow.cpp:1012
 #, kde-format
 msgid "Enable Guides"
 msgstr "გიდების ჩართვა"
 
-#: src/MainWindow.cpp:1038
+#: src/MainWindow.cpp:1013
 #, kde-format
 msgid "Enable the generation of guide intersections."
 msgstr "გიდის კვეთების გენერაციის ჩართვა."

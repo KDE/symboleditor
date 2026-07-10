@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: symboleditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-11 00:41+0000\n"
+"POT-Creation-Date: 2026-07-10 00:42+0000\n"
 "PO-Revision-Date: 2022-02-22 11:02+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.07.70\n"
 
-#: src/Commands.cpp:73 src/MainWindow.cpp:938
+#: src/Commands.cpp:73 src/MainWindow.cpp:913
 #, kde-format
 msgid "Move To"
 msgstr "Mozgatás ide"
 
-#: src/Commands.cpp:106 src/MainWindow.cpp:947
+#: src/Commands.cpp:106 src/MainWindow.cpp:922
 #, kde-format
 msgid "Draw To"
 msgstr "Rajzolás ide"
 
-#: src/Commands.cpp:141 src/MainWindow.cpp:956
+#: src/Commands.cpp:141 src/MainWindow.cpp:931
 #, kde-format
 msgid "Cubic To"
 msgstr "Köbös ide"
@@ -52,32 +52,32 @@ msgstr "Pont mozgatása"
 msgid "Update Symbol"
 msgstr "Szimbólum frissítése"
 
-#: src/Commands.cpp:327 src/MainWindow.cpp:798
+#: src/Commands.cpp:327 src/MainWindow.cpp:773
 #, kde-format
 msgid "Import Library"
 msgstr "Könyvtár importálása"
 
-#: src/Commands.cpp:376 src/MainWindow.cpp:994
+#: src/Commands.cpp:376 src/MainWindow.cpp:969
 #, kde-format
 msgid "Rotate Left"
 msgstr "Forgatás balra"
 
-#: src/Commands.cpp:407 src/MainWindow.cpp:1001
+#: src/Commands.cpp:407 src/MainWindow.cpp:976
 #, kde-format
 msgid "Rotate Right"
 msgstr "Forgatás jobbra"
 
-#: src/Commands.cpp:438 src/MainWindow.cpp:1008
+#: src/Commands.cpp:438 src/MainWindow.cpp:983
 #, kde-format
 msgid "Flip Horizontal"
 msgstr "Vízszintes tükrözés"
 
-#: src/Commands.cpp:468 src/MainWindow.cpp:1015
+#: src/Commands.cpp:468 src/MainWindow.cpp:990
 #, kde-format
 msgid "Flip Vertical"
 msgstr "Függőleges tükrözés"
 
-#: src/Commands.cpp:501 src/MainWindow.cpp:1022
+#: src/Commands.cpp:501 src/MainWindow.cpp:997
 #, kde-format
 msgid "Scale to Preferred Size"
 msgstr "Méretezés a kívánt méretre"
@@ -102,17 +102,17 @@ msgstr "Végpontstílus módosítása"
 msgid "Change Join Style"
 msgstr "Csatlakozásstílus módosítása"
 
-#: src/Commands.cpp:693 src/MainWindow.cpp:737
+#: src/Commands.cpp:693 src/MainWindow.cpp:712
 #, kde-format
 msgid "Delete Symbol"
 msgstr "Szimbólum törlése"
 
-#: src/Commands.cpp:726 src/MainWindow.cpp:920
+#: src/Commands.cpp:726 src/MainWindow.cpp:895
 #, kde-format
 msgid "Increase Line Width"
 msgstr "Vonalvastagság növelése"
 
-#: src/Commands.cpp:790 src/MainWindow.cpp:927
+#: src/Commands.cpp:790 src/MainWindow.cpp:902
 #, kde-format
 msgid "Decrease Line Width"
 msgstr "Vonalvastagság csökkentése"
@@ -229,24 +229,24 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ulysses@fsf.hu"
 
-#: src/MainWindow.cpp:199 src/MainWindow.cpp:453 src/MainWindow.cpp:600
+#: src/MainWindow.cpp:198 src/MainWindow.cpp:428 src/MainWindow.cpp:575
 #, kde-format
 msgid "Untitled"
 msgstr "Névtelen"
 
-#: src/MainWindow.cpp:208
+#: src/MainWindow.cpp:207
 #, kde-format
 msgctxt "The editor tab title"
 msgid "Editor"
 msgstr "Szerkesztő"
 
-#: src/MainWindow.cpp:209
+#: src/MainWindow.cpp:208
 #, kde-format
 msgctxt "The library tab title"
 msgid "Library"
 msgstr "Könyvtár"
 
-#: src/MainWindow.cpp:284
+#: src/MainWindow.cpp:279
 #, fuzzy, kde-format
 #| msgid ""
 #| "Save changes to the symbol?\n"
@@ -256,7 +256,7 @@ msgstr ""
 "Menti a szimbólum változtatásait?\n"
 "A Nem választása elveti a változtatásokat."
 
-#: src/MainWindow.cpp:333
+#: src/MainWindow.cpp:316
 #, fuzzy, kde-format
 #| msgid ""
 #| "Save changes to the library?\n"
@@ -266,22 +266,22 @@ msgstr ""
 "Menti a könyvtár változtatásait?\n"
 "A Nem választása elveti a változtatásokat."
 
-#: src/MainWindow.cpp:372
+#: src/MainWindow.cpp:347
 #, kde-format
 msgid "Open file"
 msgstr "Fájl megnyitása"
 
-#: src/MainWindow.cpp:372 src/MainWindow.cpp:484 src/MainWindow.cpp:554
+#: src/MainWindow.cpp:347 src/MainWindow.cpp:459 src/MainWindow.cpp:529
 #, kde-format
 msgid "Cross Stitch Symbols (*.sym)"
 msgstr "Keresztszemes szimbólum (*.sym)"
 
-#: src/MainWindow.cpp:421 src/MainWindow.cpp:574
+#: src/MainWindow.cpp:396 src/MainWindow.cpp:549
 #, kde-format
 msgid "This doesn't appear to be a valid symbol file"
 msgstr "Érvénytelen szimbólumfájlnak tűnik"
 
-#: src/MainWindow.cpp:423 src/MainWindow.cpp:576
+#: src/MainWindow.cpp:398 src/MainWindow.cpp:551
 #, kde-format
 msgid ""
 "Version %1 of the library file is not supported in this version of "
@@ -289,14 +289,14 @@ msgid ""
 msgstr ""
 "A SymbolEditor ezen verziója nem támogatja a(z) %1 verziójú könyvtárfájlt"
 
-#: src/MainWindow.cpp:425
+#: src/MainWindow.cpp:400
 #, kde-format
 msgid ""
 "Version %1 of the symbol is not supported in this version of SymbolEditor"
 msgstr ""
 "A SymbolEditor ezen verziója nem támogatja a(z) %1 verziójú szimbólumfájlt"
 
-#: src/MainWindow.cpp:427
+#: src/MainWindow.cpp:402
 #, kde-format
 msgid ""
 "Failed to read the library\n"
@@ -305,12 +305,12 @@ msgstr ""
 "Nem sikerült olvasni a könyvtárat:\n"
 "%1"
 
-#: src/MainWindow.cpp:440 src/MainWindow.cpp:585
+#: src/MainWindow.cpp:415 src/MainWindow.cpp:560
 #, kde-format
 msgid "The url %1 is invalid"
 msgstr "A(z) %1 URL érvénytelen"
 
-#: src/MainWindow.cpp:465
+#: src/MainWindow.cpp:440
 #, kde-format
 msgid ""
 "Failed to write the library\n"
@@ -319,7 +319,7 @@ msgstr ""
 "Nem sikerült írni a könyvtárat:\n"
 "%1"
 
-#: src/MainWindow.cpp:471
+#: src/MainWindow.cpp:446
 #, kde-format
 msgid ""
 "Failed to open the file %1\n"
@@ -328,45 +328,45 @@ msgstr ""
 "Nem sikerült megnyitni a(z) %1 fájlt:\n"
 "%2"
 
-#: src/MainWindow.cpp:484
+#: src/MainWindow.cpp:459
 #, kde-format
 msgid "Save As..."
 msgstr "Mentés másként…"
 
-#: src/MainWindow.cpp:554
+#: src/MainWindow.cpp:529
 #, kde-format
 msgid "Import library"
 msgstr "Könyvtár importálása"
 
-#: src/MainWindow.cpp:646
+#: src/MainWindow.cpp:621
 #, kde-format
 msgid "Undo %1"
 msgstr "%1 visszavonása"
 
-#: src/MainWindow.cpp:659
+#: src/MainWindow.cpp:634
 #, kde-format
 msgid "Redo %1"
 msgstr "%1 újra végrehajtása"
 
-#: src/MainWindow.cpp:673
+#: src/MainWindow.cpp:648
 #, kde-format
 msgctxt "The library tab title %1 is the file name"
 msgid "%1 Library"
 msgstr "%1 könyvtár"
 
-#: src/MainWindow.cpp:675
+#: src/MainWindow.cpp:650
 #, kde-format
 msgctxt "The editor tab title %1 is the file name"
 msgid "%1 Editor"
 msgstr "%1 szerkesztő"
 
-#: src/MainWindow.cpp:767
+#: src/MainWindow.cpp:742
 #, kde-format
 msgctxt "The Editor configuration page"
 msgid "Editor"
 msgstr "Szerkesztő"
 
-#: src/MainWindow.cpp:799
+#: src/MainWindow.cpp:774
 #, kde-format
 msgid ""
 "Imports another library appending the symbols it contains to the current "
@@ -375,12 +375,12 @@ msgstr ""
 "Másik könyvtár importálása után hozzáfűzi annak szimbólumait a jelenlegi "
 "könyvtárhoz."
 
-#: src/MainWindow.cpp:804
+#: src/MainWindow.cpp:779
 #, kde-format
 msgid "Save Symbol"
 msgstr "Szimbólum mentése"
 
-#: src/MainWindow.cpp:805
+#: src/MainWindow.cpp:780
 #, kde-format
 msgid ""
 "Save the symbol to the library. If this is a new symbol, subsequent saves "
@@ -392,12 +392,12 @@ msgstr ""
 "könyvtárból választotta ki szerkesztésre, mentéskor frissíti a könyvtárban "
 "lévő szimbólumot."
 
-#: src/MainWindow.cpp:811
+#: src/MainWindow.cpp:786
 #, kde-format
 msgid "Save Symbol as New"
 msgstr "Szimbólum mentése újként"
 
-#: src/MainWindow.cpp:812
+#: src/MainWindow.cpp:787
 #, kde-format
 msgid ""
 "Save the current symbol as a new one in the library. Subsequent saves will "
@@ -406,12 +406,12 @@ msgstr ""
 "Új szimbólumként menti a jelenlegit a könyvtárba. A további mentések "
 "frissítik az új szimbólumot."
 
-#: src/MainWindow.cpp:825
+#: src/MainWindow.cpp:800
 #, kde-format
 msgid "Fill Path"
 msgstr "Útvonal kitöltése"
 
-#: src/MainWindow.cpp:826
+#: src/MainWindow.cpp:801
 #, kde-format
 msgid ""
 "Enable path filling. The path defines the closed boundary of the shape and "
@@ -420,33 +420,33 @@ msgstr ""
 "Bekapcsolja az útvonal kitöltését. Az útvonal meghatározza az alakzat zárt "
 "határát, és az útvonal kitöltését a kiválasztott módon."
 
-#: src/MainWindow.cpp:836
+#: src/MainWindow.cpp:811
 #, kde-format
 msgid "Odd Even Fill"
 msgstr "Páros-páratlan kitöltés"
 
-#: src/MainWindow.cpp:837
+#: src/MainWindow.cpp:812
 #, kde-format
 msgid "The Odd Even fill method will fill alternate areas of the symbol."
 msgstr ""
 "A páros-páratlan kitöltési mód a szimbólum váltakozó területeit tölti ki."
 
-#: src/MainWindow.cpp:845
+#: src/MainWindow.cpp:820
 #, kde-format
 msgid "Winding Fill"
 msgstr "Tekercselő kitöltés"
 
-#: src/MainWindow.cpp:846
+#: src/MainWindow.cpp:821
 #, kde-format
 msgid "The Winding fill method will fill the complete interior of the path."
 msgstr "A tekercselő kitöltési módszer kitölti az útvonal teljes belsejét."
 
-#: src/MainWindow.cpp:859
+#: src/MainWindow.cpp:834
 #, kde-format
 msgid "Flat Cap"
 msgstr "Lapos kupak"
 
-#: src/MainWindow.cpp:860
+#: src/MainWindow.cpp:835
 #, kde-format
 msgid ""
 "The Flat Cap end type provides a square end that stops at the end point of "
@@ -459,12 +459,12 @@ msgstr ""
 "\n"
 "Ez csak a nem kitöltött útvonalakra alkalmazható."
 
-#: src/MainWindow.cpp:868
+#: src/MainWindow.cpp:843
 #, kde-format
 msgid "Square Cap"
 msgstr "Négyzetes kupak"
 
-#: src/MainWindow.cpp:869
+#: src/MainWindow.cpp:844
 #, kde-format
 msgid ""
 "The Square Cap end type provides a square end that projects beyond the end "
@@ -477,12 +477,12 @@ msgstr ""
 "\n"
 "Ez csak a nem kitöltött útvonalakra alkalmazható."
 
-#: src/MainWindow.cpp:877
+#: src/MainWindow.cpp:852
 #, kde-format
 msgid "Round Cap"
 msgstr "Kerek kupak"
 
-#: src/MainWindow.cpp:878
+#: src/MainWindow.cpp:853
 #, kde-format
 msgid ""
 "The Round Cap end type provides a round end that projects beyond the end "
@@ -495,12 +495,12 @@ msgstr ""
 "\n"
 "Ez csak a nem kitöltött útvonalakra alkalmazható."
 
-#: src/MainWindow.cpp:891
+#: src/MainWindow.cpp:866
 #, kde-format
 msgid "Bevel Join"
 msgstr ""
 
-#: src/MainWindow.cpp:892
+#: src/MainWindow.cpp:867
 #, kde-format
 msgid ""
 "The Bevel Join provides a beveled corner between two lines.\n"
@@ -508,12 +508,12 @@ msgid ""
 "This is only applicable to non-filled paths."
 msgstr ""
 
-#: src/MainWindow.cpp:900
+#: src/MainWindow.cpp:875
 #, kde-format
 msgid "Miter Join"
 msgstr ""
 
-#: src/MainWindow.cpp:901
+#: src/MainWindow.cpp:876
 #, kde-format
 msgid ""
 "The Miter Join provides a mitered corner between two lines.\n"
@@ -521,12 +521,12 @@ msgid ""
 "This is only applicable to non-filled paths."
 msgstr ""
 
-#: src/MainWindow.cpp:909
+#: src/MainWindow.cpp:884
 #, kde-format
 msgid "Round Join"
 msgstr ""
 
-#: src/MainWindow.cpp:910
+#: src/MainWindow.cpp:885
 #, kde-format
 msgid ""
 "The Round Join provides a rounded corner between two lines using a radius of "
@@ -535,7 +535,7 @@ msgid ""
 "This is only applicable to non-filled paths."
 msgstr ""
 
-#: src/MainWindow.cpp:921
+#: src/MainWindow.cpp:896
 #, kde-format
 msgid ""
 "Increases the line width.\n"
@@ -543,7 +543,7 @@ msgid ""
 "This is only applicable to non-filled paths."
 msgstr ""
 
-#: src/MainWindow.cpp:928
+#: src/MainWindow.cpp:903
 #, kde-format
 msgid ""
 "Decreases the line width.\n"
@@ -551,57 +551,57 @@ msgid ""
 "This is only applicable to non-filled paths."
 msgstr ""
 
-#: src/MainWindow.cpp:939
+#: src/MainWindow.cpp:914
 #, kde-format
 msgid ""
 "Move the current point to a new position. This implicitly closes any "
 "existing sub path, starting a new one."
 msgstr ""
 
-#: src/MainWindow.cpp:948
+#: src/MainWindow.cpp:923
 #, kde-format
 msgid ""
 "Add a straight line from the current position to a defined end point. The "
 "end point becomes the new current position."
 msgstr ""
 
-#: src/MainWindow.cpp:957
+#: src/MainWindow.cpp:932
 #, kde-format
 msgid ""
 "Add a cubic bezier curve from the current position using two control points "
 "and an end point. The end point becomes the new current position."
 msgstr ""
 
-#: src/MainWindow.cpp:965
+#: src/MainWindow.cpp:940
 #, kde-format
 msgid "Rectangle"
 msgstr ""
 
-#: src/MainWindow.cpp:966
+#: src/MainWindow.cpp:941
 #, kde-format
 msgid ""
 "Add a rectangle as a separate sub path defined by two points representing "
 "the opposite corners."
 msgstr ""
 
-#: src/MainWindow.cpp:974
+#: src/MainWindow.cpp:949
 #, kde-format
 msgid "Ellipse"
 msgstr ""
 
-#: src/MainWindow.cpp:975
+#: src/MainWindow.cpp:950
 #, kde-format
 msgid ""
 "Add an ellipse as a separate sub path defined by a bounding rectangle "
 "represented by two opposite corners."
 msgstr ""
 
-#: src/MainWindow.cpp:983
+#: src/MainWindow.cpp:958
 #, kde-format
 msgid "Insert Character"
 msgstr ""
 
-#: src/MainWindow.cpp:984
+#: src/MainWindow.cpp:959
 #, kde-format
 msgid ""
 "Allows selection of a character from any font to be inserted as a closed sub "
@@ -609,57 +609,57 @@ msgid ""
 "additional sub paths may be added to the character."
 msgstr ""
 
-#: src/MainWindow.cpp:995
+#: src/MainWindow.cpp:970
 #, kde-format
 msgid ""
 "Rotate all the points of a path counter-clockwise 90 degrees around the "
 "center of the editor."
 msgstr ""
 
-#: src/MainWindow.cpp:1002
+#: src/MainWindow.cpp:977
 #, kde-format
 msgid ""
 "Rotate all the points of a path clockwise 90 degrees around the center point "
 "of the editor."
 msgstr ""
 
-#: src/MainWindow.cpp:1009
+#: src/MainWindow.cpp:984
 #, kde-format
 msgid ""
 "Flip all the points of the path horizontally about the vertical center of "
 "the editor."
 msgstr ""
 
-#: src/MainWindow.cpp:1016
+#: src/MainWindow.cpp:991
 #, kde-format
 msgid ""
 "Flip all the points of the path vertically about the horizontal center of "
 "the editor."
 msgstr ""
 
-#: src/MainWindow.cpp:1023
+#: src/MainWindow.cpp:998
 #, kde-format
 msgid ""
 "Scale the current symbol so that it fits within the preferred size of a "
 "symbol."
 msgstr ""
 
-#: src/MainWindow.cpp:1029
+#: src/MainWindow.cpp:1004
 #, kde-format
 msgid "Enable Snap"
 msgstr ""
 
-#: src/MainWindow.cpp:1030
+#: src/MainWindow.cpp:1005
 #, kde-format
 msgid "Enable snapping of points to guide intersections or to the grid."
 msgstr ""
 
-#: src/MainWindow.cpp:1037
+#: src/MainWindow.cpp:1012
 #, kde-format
 msgid "Enable Guides"
 msgstr "Segédvonalak bekapcsolása"
 
-#: src/MainWindow.cpp:1038
+#: src/MainWindow.cpp:1013
 #, kde-format
 msgid "Enable the generation of guide intersections."
 msgstr ""
