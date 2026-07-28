@@ -1,13 +1,13 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the symboleditor package.
 #
-# SPDX-FileCopyrightText: 2025 giovanni <g.sora@tiscali.it>
+# SPDX-FileCopyrightText: 2025, 2026 giovanni <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: symboleditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-10 00:42+0000\n"
-"PO-Revision-Date: 2025-01-10 11:44+0100\n"
+"PO-Revision-Date: 2026-07-27 12:12+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: src/Commands.cpp:73 src/MainWindow.cpp:913
 #, kde-format
@@ -443,7 +443,7 @@ msgstr ""
 #: src/MainWindow.cpp:852
 #, kde-format
 msgid "Round Cap"
-msgstr ""
+msgstr "Round cap (tappo circular)"
 
 #: src/MainWindow.cpp:853
 #, kde-format
@@ -457,7 +457,7 @@ msgstr ""
 #: src/MainWindow.cpp:866
 #, kde-format
 msgid "Bevel Join"
-msgstr ""
+msgstr "Juncto blasate"
 
 #: src/MainWindow.cpp:867
 #, kde-format
@@ -470,7 +470,7 @@ msgstr ""
 #: src/MainWindow.cpp:875
 #, kde-format
 msgid "Miter Join"
-msgstr ""
+msgstr "Juncto mitra"
 
 #: src/MainWindow.cpp:876
 #, kde-format
@@ -483,7 +483,7 @@ msgstr ""
 #: src/MainWindow.cpp:884
 #, kde-format
 msgid "Round Join"
-msgstr ""
+msgstr "Juncto circular"
 
 #: src/MainWindow.cpp:885
 #, kde-format
@@ -558,7 +558,7 @@ msgstr ""
 #: src/MainWindow.cpp:958
 #, kde-format
 msgid "Insert Character"
-msgstr ""
+msgstr "Inserta character"
 
 #: src/MainWindow.cpp:959
 #, kde-format
@@ -753,10 +753,10 @@ msgstr ""
 #: ui/EditorConfigPage.ui:158
 #, kde-format
 msgid "Guide line color"
-msgstr ""
+msgstr "Color  de linea guida"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_Editor_SimplifiedGuideLines)
 #: ui/EditorConfigPage.ui:176
 #, kde-format
 msgid "Simplified guide lines"
-msgstr ""
+msgstr "Lineas guida simplificate"
