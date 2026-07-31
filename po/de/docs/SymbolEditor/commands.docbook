@@ -198,7 +198,7 @@
             <title
 >Das Menü Bearbeiten</title>
             <para
->&symboleditor; benutzt die bekannten &kde;-Menüeinträge <guimenu
+>&symboleditor; verwendet die bekannten &kde;-Menüeinträge <guimenu
 >Bearbeiten</guimenu
 >. Mehr dazu erfahren Sie im Abschnitt zum Menü <ulink url="help:/fundamentals/menus.html#menus-edit"
 >Bearbeiten</ulink
@@ -609,7 +609,7 @@
             <title
 >Die Menüs Einstellungen und Hilfe</title>
             <para
->&symboleditor; benutzt die bekannten &kde;-Menüeinträge <guimenu
+>&symboleditor; verwendet die bekannten &kde;-Menüeinträge <guimenu
 >Einstellungen</guimenu
 > und <guimenu
 >Hilfe</guimenu
