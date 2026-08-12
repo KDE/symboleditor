@@ -71,7 +71,7 @@ msgstr "دوّر لليمين"
 #: src/Commands.cpp:438 src/MainWindow.cpp:983
 #, kde-format
 msgid "Flip Horizontal"
-msgstr "اقلب أفقياً"
+msgstr "اقلب أفقيًا"
 
 #: src/Commands.cpp:468 src/MainWindow.cpp:990
 #, kde-format
@@ -121,7 +121,7 @@ msgstr "قلّل عرض الخط"
 #: src/Commands.cpp:853
 #, kde-format
 msgid "Add Symbols"
-msgstr "أضف رموزاً"
+msgstr "أضف رموزًا"
 
 #: src/Commands.cpp:898
 #, kde-format
@@ -131,7 +131,7 @@ msgstr "أضف شخصية"
 #: src/Editor.cpp:172
 #, kde-format
 msgid "Select a new starting position."
-msgstr "اختر موقع بداية جديداً."
+msgstr "اختر موقع بداية جديدًا."
 
 #: src/Editor.cpp:177
 #, kde-format
@@ -176,7 +176,7 @@ msgstr "اختر الزاوية الثانية للمستطيل المحدّد."
 #: src/Editor.cpp:197
 #, kde-format
 msgid "Double click a character to insert into the editor."
-msgstr "انقر نقراً مزدوجاً على المحرف لإدراجه في المحرّر."
+msgstr "انقر نقرًا مزدوجًا على المحرف لإدراجه في المحرّر."
 
 #: src/Exceptions.cpp:69
 #, kde-format
@@ -374,8 +374,8 @@ msgid ""
 "will create additional symbols in the library. If the symbol was selected "
 "from the library to edit then saving will update that symbol in the library."
 msgstr ""
-"احفظ الرمز في المكتبة. إذا كان هذا رمزاً جديداً، ستنشئ عمليات الحفظ اللاحقة "
-"رموزاً إضافية في المكتبة. وإذا اختير الرمز من المكتبة للتحرير، فسيعمل الحفظ "
+"احفظ الرمز في المكتبة. إذا كان هذا رمزًا جديدًا، ستنشئ عمليات الحفظ اللاحقة "
+"رموزًا إضافية في المكتبة. وإذا اختير الرمز من المكتبة للتحرير، فسيعمل الحفظ "
 "على تحديث هذا الرمز في المكتبة."
 
 #: src/MainWindow.cpp:786
@@ -557,8 +557,8 @@ msgid ""
 "Move the current point to a new position. This implicitly closes any "
 "existing sub path, starting a new one."
 msgstr ""
-"انقل النقطة الحالية إلى موضع جديد. يغلق هذا ضمناً أي مسار فرعي موجود، ويبدأ "
-"مساراً جديداً."
+"انقل النقطة الحالية إلى موضع جديد. يغلق هذا ضمنًا أي مسار فرعي موجود، ويبدأ "
+"مسارًا جديدًا."
 
 #: src/MainWindow.cpp:923
 #, kde-format
@@ -566,7 +566,7 @@ msgid ""
 "Add a straight line from the current position to a defined end point. The "
 "end point becomes the new current position."
 msgstr ""
-"أضف خطاً مستقيماً من الموضع الحالي إلى نقطة نهاية محددة. تصبح نقطة النهاية هي "
+"أضف خطًا مستقيمًا من الموضع الحالي إلى نقطة نهاية محددة. تصبح نقطة النهاية هي "
 "الموضع الحالي الجديد."
 
 #: src/MainWindow.cpp:932
@@ -589,7 +589,7 @@ msgid ""
 "Add a rectangle as a separate sub path defined by two points representing "
 "the opposite corners."
 msgstr ""
-"أضف مستطيلاً كمسار فرعي منفصل محدد بنقطتين تمثلان الزاويتين المتقابلتين."
+"أضف مستطيلًا كمسار فرعي منفصل محدد بنقطتين تمثلان الزاويتين المتقابلتين."
 
 #: src/MainWindow.cpp:949
 #, kde-format
@@ -602,7 +602,7 @@ msgid ""
 "Add an ellipse as a separate sub path defined by a bounding rectangle "
 "represented by two opposite corners."
 msgstr ""
-"أضف شكلًا بيضاوياً كمسار فرعي منفصل محدد بمستطيل محدد ممثل بزوايا متقابلة."
+"أضف شكلًا بيضاويًا كمسار فرعي منفصل محدد بمستطيل محدد ممثل بزوايا متقابلة."
 
 #: src/MainWindow.cpp:958
 #, kde-format
@@ -638,7 +638,7 @@ msgstr "دوّر جميع نقاط المسار مع عقارب الساعة ٩�
 msgid ""
 "Flip all the points of the path horizontally about the vertical center of "
 "the editor."
-msgstr "اقلب جميع نقاط المسار أفقياً حول المركز العمودي للمحرّر."
+msgstr "اقلب جميع نقاط المسار أفقيًا حول المركز العمودي للمحرّر."
 
 #: src/MainWindow.cpp:991
 #, kde-format
@@ -726,7 +726,7 @@ msgstr "لون خطوط دليل"
 #: SymbolEditor.kcfg:42
 #, kde-format
 msgid "Whether to use a simplified range of angles to test"
-msgstr "هل نستخدم نطاقاً مبسطاً من الزوايا للاختبار"
+msgstr "هل نستخدم نطاقًا مبسطًا من الزوايا للاختبار"
 
 #. i18n: ectx: Menu (tools)
 #: SymbolEditorui.rc:10
