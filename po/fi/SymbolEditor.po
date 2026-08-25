@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the symboleditor package.
-# Tommi Nieminen <translator@legisign.org>, 2019, 2021, 2024.
+# SPDX-FileCopyrightText: 2019, 2021, 2024, 2026 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: symboleditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-10 00:42+0000\n"
-"PO-Revision-Date: 2024-12-11 22:45+0200\n"
+"PO-Revision-Date: 2026-03-03 17:05+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: src/Commands.cpp:73 src/MainWindow.cpp:913
 #, kde-format
@@ -247,24 +247,14 @@ msgid "Library"
 msgstr "Kirjasto"
 
 #: src/MainWindow.cpp:279
-#, fuzzy, kde-format
-#| msgid ""
-#| "Save changes to the symbol?\n"
-#| "Selecting No discards changes."
+#, kde-format
 msgid "Save changes to the symbol?"
-msgstr ""
-"Tallennetaan symbolin muutokset?\n"
-"Hylkää muutokset valitsemalla ”Ei”."
+msgstr "Tallennetaan symbolin muutokset?"
 
 #: src/MainWindow.cpp:316
-#, fuzzy, kde-format
-#| msgid ""
-#| "Save changes to the library?\n"
-#| "Selecting No discards changes."
+#, kde-format
 msgid "Save changes to the library?"
-msgstr ""
-"Tallennetaanko muutokset kirjastoon?\n"
-"Hylkää muutokset valitsemalla ”Ei”."
+msgstr "Tallennetaanko muutokset kirjastoon?"
 
 #: src/MainWindow.cpp:347
 #, kde-format
@@ -579,6 +569,9 @@ msgid ""
 "Add a cubic bezier curve from the current position using two control points "
 "and an end point. The end point becomes the new current position."
 msgstr ""
+"Lisää kuutiomainen bézierkäyrä nykyisestä sijainnista kahdella "
+"kontrollipisteellä ja loppupisteellä. Loppupisteestä tulee uusi nykyinen "
+"sijainti."
 
 #: src/MainWindow.cpp:940
 #, kde-format
@@ -591,6 +584,8 @@ msgid ""
 "Add a rectangle as a separate sub path defined by two points representing "
 "the opposite corners."
 msgstr ""
+"Lisää nelikulmio erilliseksi alipoluksi, jonka määrittävät vastakkaisia "
+"kulmia osoittavat pisteet."
 
 #: src/MainWindow.cpp:949
 #, kde-format
@@ -644,6 +639,8 @@ msgid ""
 "Flip all the points of the path horizontally about the vertical center of "
 "the editor."
 msgstr ""
+"Käännä kaikki polun pisteet vaakasuuntaan muokkaimen pystykeskipisteen "
+"suhteen."
 
 #: src/MainWindow.cpp:991
 #, kde-format
@@ -651,6 +648,8 @@ msgid ""
 "Flip all the points of the path vertically about the horizontal center of "
 "the editor."
 msgstr ""
+"Käännä kaikki polun pisteet pystysuuntaan muokkaimen vaakakeskipisteen "
+"suhteen."
 
 #: src/MainWindow.cpp:998
 #, kde-format
@@ -658,6 +657,7 @@ msgid ""
 "Scale the current symbol so that it fits within the preferred size of a "
 "symbol."
 msgstr ""
+"Skaalaa nykyistä symbolia niin, että se sopii symbolin suosittuun kokoon."
 
 #: src/MainWindow.cpp:1004
 #, kde-format
@@ -707,19 +707,19 @@ msgstr "Pisteen koko kuvapisteinä."
 #: SymbolEditor.kcfg:26
 #, kde-format
 msgid "The distance to check within the range of a point."
-msgstr ""
+msgstr "Tarkistettava etäisyys pisteen alueella"
 
 #. i18n: ectx: label, entry (Editor_BorderSize), group (editor)
 #: SymbolEditor.kcfg:30
 #, kde-format
 msgid "The number of cell elements used for the border."
-msgstr ""
+msgstr "Reunaan käytettyjen solualkioiden määrä."
 
 #. i18n: ectx: label, entry (Editor_PreferredSizeColor), group (editor)
 #: SymbolEditor.kcfg:34
 #, kde-format
 msgid "The color of the preferred size rectangle"
-msgstr ""
+msgstr "Ensisijaisen kokonelikulmion väri"
 
 #. i18n: ectx: label, entry (Editor_GuideLineColor), group (editor)
 #: SymbolEditor.kcfg:38
@@ -804,7 +804,7 @@ msgstr "Reunan koko"
 #: ui/EditorConfigPage.ui:140
 #, kde-format
 msgid "Preferred size box color"
-msgstr ""
+msgstr "Ensisijaisen kokolaatikon väri"
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: ui/EditorConfigPage.ui:158
