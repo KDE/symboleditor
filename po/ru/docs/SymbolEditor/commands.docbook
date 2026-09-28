@@ -1,0 +1,623 @@
+<chapter id="commands">
+    <title
+>Список команд</title>
+
+    <sect1 id="menus">
+        <title
+>Меню &symboleditor;</title>
+        <sect2>
+            <title
+>Меню «Файл»</title>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Создать</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Создать новую библиотеку.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Открыть</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Открыть существующую библиотеку.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Открыть недавние</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Открыть недавно использованную библиотеку.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Сохранить</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Сохранить библиотеку.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;&Shift;<keycap
+>S</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Сохранить как...</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Сохранить библиотеку под новым именем.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Сохранить обозначение</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Сохранить редактируемое обозначение</action
+></simpara
+> <simpara
+>Если редактируемое обозначение было выбрано из библиотеки, при сохранении оно обновится. Если это новое обозначение, оно будет добавлено в конец библиотеки, а при каждом следующем сохранении в библиотеку будет добавляться ещё одно новое обозначение. </simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Сохранить обозначение как новое</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Сохранить редактируемое обозначение как новое</action
+></simpara
+> <simpara
+>Обозначение, сохранённое как новое, добавляется в конец библиотеки, даже если было выбрано из неё для редактирования. При каждом следующем сохранении в библиотеку будет добавляться ещё одно новое обозначение.</simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Импорт библиотеки</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Импортировать библиотеку, добавив её обозначения в текущую библиотеку.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;<keycap
+>W</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Закрыть</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Закрыть библиотеку.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>Выход</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Выйти из &symboleditor;.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>Меню «Правка»</title>
+            <para
+>В &symboleditor; есть стандартное для &kde; меню <guimenu
+>Правка</guimenu
+>, описанное в разделе <ulink url="help:/fundamentals/menus.html#menus-edit"
+>Меню «Правка»</ulink
+> руководства «Основы &kde;». </para>
+        </sect2>
+
+        <sect2>
+            <title
+>Меню и панель инструментов «Отрисовка»</title>
+            <screenshot>
+                <screeninfo
+>Снимок панели инструментов «Отрисовка»</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="renderer-toolbar.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+                </screenshot>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Заполнить контур</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Включить заливку контура.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Полное заполнение</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Выбрать заливку по правилу ненулевого числа оборотов.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Чередующееся заполнение</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Выбрать заливку по правилу чётности.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Плоский конец</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Выбрать плоский конец линии.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Квадратный конец</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Выбрать квадратный конец линии.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Круглый конец</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Выбрать скруглённый конец линии.</action
+></simpara
+></listitem
+></varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Скошенное соединение</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Выбрать соединение линий со скосом.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Фацетное соединение</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Выбрать соединение линий под острым углом.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Скруглённое соединение</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Выбрать скруглённое соединение линий.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Увеличить толщину линии</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Увеличить толщину линии контура.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Уменьшить толщину линии</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Уменьшить толщину линии контура.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>Меню и панель инструментов «Сервис»</title>
+            <para
+>Для разработки обозначений есть ряд инструментов. Обозначение состоит из нескольких подконтуров; каждый подконтур начинается с перемещения в начальную точку (для новых обозначений по умолчанию 0,0), за которым идут линии и кривые. Кривые — кубические сплайны с начальной, конечной и двумя управляющими точками. Для удобства есть инструменты для прямоугольников и эллипсов, но они тоже разбиваются на линии и кривые. </para>
+            <para
+>Любую точку элемента можно передвинуть, перетащив её на новое место. Если включена привязка, точки прилипают к узлам сетки, иначе их можно ставить где угодно. </para>
+            <para
+>Обозначение можно поворачивать по и против часовой стрелки, а также отражать по вертикали и горизонтали. Так легко получить несколько обозначений из одного рисунка — только не забудьте сохранять их как новые. </para>
+            <screenshot>
+                <screeninfo
+>Снимок панели инструментов «Сервис»</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="tool-toolbar.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+                </screenshot>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Перемещение</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Переместить начальную точку подконтура</action
+></simpara
+> <simpara
+>Если подконтур уже рисуется, он будет замкнут, а в новой точке начнётся новый подконтур</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Рисование</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Нарисовать линию до следующей выбранной точки.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Кубическая кривая</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Нарисовать кривую Безье по двум управляющим и конечной точке.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Прямоугольник</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Нарисовать прямоугольник по двум противоположным углам</action
+></simpara
+> <simpara
+>Текущий подконтур замыкается, и создаётся новый подконтур из прямоугольника.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Эллипс</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Нарисовать эллипс по двум противоположным углам</action
+></simpara
+> <simpara
+>Текущий подконтур замыкается, и создаётся новый подконтур из эллипса.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Вставить символ</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Выбрать символ шрифта и вставить его в редактор</action
+></simpara
+> <simpara
+>Все существующие контуры будут заменены</simpara
+> <screenshot
+> <screeninfo
+>Снимок диалога выбора символа</screeninfo
+> <mediaobject
+> <imageobject
+> <imagedata fileref="charselect-dialog.png" format="PNG"/> </imageobject
+> </mediaobject
+> </screenshot
+> <simpara
+>Диалог выбора символа — стандартный диалог KDE, в котором можно выбрать символ любого шрифта. Размер шрифта не учитывается: символ масштабируется по рамке предпочтительного размера.</simpara
+> <simpara
+>Двойной щелчок по символу вставляет его в редактор. Диалог остаётся открытым, так что можно вставить другой символ, хотя он заменит первый. Благодаря этому можно быстро наполнить библиотеку: вставить символ, сохранить, вставить следующий, сохранить. Следите, чтобы редактируемое обозначение было новым, а не выбранным из библиотеки, иначе при сохранении будет каждый раз перезаписываться одно и то же обозначение в библиотеке.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Поворот налево</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Повернуть всё обозначение на 90 градусов против часовой стрелки.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Поворот направо</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Повернуть всё обозначение на 90 градусов по часовой стрелке.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Отразить горизонтально</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Отразить обозначение относительно вертикальной оси.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Отразить вертикально</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Отразить обозначение относительно горизонтальной оси.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Масштабировать до предпочтительного размера</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Масштабировать обозначение, чтобы оно поместилось в заданный предпочтительный размер</action
+></simpara
+> <simpara
+>Учтите, что масштабируются только точки: у незалитого обозначения с заданной толщиной линии линии могут выходить за рамку.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Включить прилипание</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Включить привязку точек к сетке.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>Включить направляющие</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>Включить построение направляющих.</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>Меню «Настройка» и «Справка»</title>
+            <para
+>Кроме того, в &symboleditor; есть стандартные для &kde; меню <guimenu
+>Настройка</guimenu
+> и <guimenu
+>Справка</guimenu
+>, описанные в разделах <ulink url="help:/fundamentals/menus.html#menus-settings"
+>Меню «Настройка»</ulink
+> и <ulink url="help:/fundamentals/menus.html#menus-help"
+>Меню «Справка»</ulink
+> руководства «Основы &kde;». </para>
+        </sect2>
+    </sect1>
+</chapter>

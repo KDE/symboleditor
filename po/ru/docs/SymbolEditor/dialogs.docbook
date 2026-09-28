@@ -1,0 +1,19 @@
+<chapter id="Dialogs">
+    <title
+>Диалоговые окна</title>
+
+    <sect1 id="ConfigurationDialog">
+        <title
+>Диалог настройки</title>
+        <para>
+            <screenshot
+><mediaobject
+><imageobject
+><imagedata fileref="configuration-dialog.png" format="PNG"/></imageobject
+></mediaobject
+></screenshot>
+        </para>
+        <para
+>В диалоге настройки задаётся ряд параметров. </para>
+    </sect1>
+</chapter>

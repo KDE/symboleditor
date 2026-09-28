@@ -1,0 +1,56 @@
+<chapter id="using-symboleditor">
+    <title
+>Пользовательский интерфейс</title>
+
+    <sect1 id="face-screenshot">
+        <title
+>Главное окно &symboleditor;</title>
+        <para
+>Главное окно состоит из вкладок с редактором обозначений и библиотекой. Есть строка меню и несколько панелей инструментов со стандартными действиями, инструментами редактирования и параметрами отрисовки. В строке состояния показываются подсказки по работе с инструментами. </para>
+        <sect2 id="editor-window">
+            <title
+>Окно редактора</title>
+            <para>
+                <screenshot>
+                    <screeninfo
+>Снимок окна редактора &symboleditor;</screeninfo>
+                    <mediaobject
+><imageobject
+><imagedata fileref="mainwindow-editor.png" format="PNG"/></imageobject
+></mediaobject>
+                </screenshot>
+            </para>
+            <para
+>В окне редактора обозначение редактируется с помощью доступных инструментов. Окно содержит сетку с точками привязки и рамку предпочтительного размера, чтобы все обозначения получались одного размера. Размер сетки, число её элементов и рамка предпочтительного размера настраиваются. </para>
+            <para
+>Редактор показывает направляющие, помогающие ставить точки относительно уже существующих: по горизонтали, вертикали и диагоналям от существующей точки, а также по окружности вокруг центра сетки. </para>
+            <screenshot>
+                <screeninfo
+>Снимок направляющих редактора</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="editor-guides.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </sect2>
+        <sect2 id="library-window">
+            <title
+>Окно библиотеки</title>
+            <para>
+                <screenshot>
+                    <screeninfo
+>Снимок окна библиотеки &symboleditor;</screeninfo>
+                    <mediaobject
+><imageobject
+><imagedata fileref="mainwindow-library.png" format="PNG"/></imageobject
+></mediaobject>
+                </screenshot>
+            </para>
+            <para
+>В окне библиотеки показаны все обозначения библиотеки; редактируемое в данный момент выделено. Если выбрать обозначение, оно откроется в редакторе для изменения. </para>
+            <para
+>Можно запустить несколько экземпляров SymbolEditor и копировать обозначения из одной библиотеки в другую перетаскиванием. Сделайте так, чтобы были видны окна обеих библиотек, и перетащите нужное обозначение из одного окна библиотеки в другое. Обозначение будет добавлено в конец целевой библиотеки. </para>
+        </sect2>
+    </sect1>
+</chapter>
