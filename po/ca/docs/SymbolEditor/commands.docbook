@@ -237,13 +237,13 @@
                         <term
 ><menuchoice
 ><guimenuitem
->Emplenat sinuós</guimenuitem
+>Emplenament sinuós</guimenuitem
 ></menuchoice
 ></term>
                         <listitem
 ><simpara
 ><action
->Selecciona el mètode d'emplenat sinuós.</action
+>Selecciona el mètode d'emplenament sinuós.</action
 ></simpara
 ></listitem>
                     </varlistentry>
@@ -251,13 +251,13 @@
                         <term
 ><menuchoice
 ><guimenuitem
->Emplenat altern</guimenuitem
+>Emplenament altern</guimenuitem
 ></menuchoice
 ></term>
                         <listitem
 ><simpara
 ><action
->Selecciona el mètode d'emplenat altern.</action
+>Selecciona el mètode d'emplenament altern.</action
 ></simpara
 ></listitem>
                     </varlistentry>
@@ -451,7 +451,7 @@
                         <listitem
 ><simpara
 ><action
->Es dibuixa un rectangle entre dues cantonades oposades.</action
+>Es dibuixa un rectangle entre dues cantonades oposades</action
 ></simpara
 > <simpara
 >Això tancarà qualsevol subcamí existent i crearà un subcamí nou que consistirà en el rectangle.</simpara

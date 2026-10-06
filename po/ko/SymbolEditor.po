@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the symboleditor package.
-# Shinjo Park <kde@peremen.name>, 2021, 2023.
+# SPDX-FileCopyrightText: 2021, 2023, 2026 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: symboleditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-10 00:42+0000\n"
-"PO-Revision-Date: 2023-03-01 01:34+0100\n"
+"PO-Revision-Date: 2026-10-05 21:53+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: src/Commands.cpp:73 src/MainWindow.cpp:913
 #, kde-format
@@ -678,13 +678,13 @@ msgstr "안내선 교차점을 생성합니다."
 #: SymbolEditor.kcfg:10
 #, kde-format
 msgid "The number of elements in a grid."
-msgstr "모순의 원소 개수입니다."
+msgstr "격자의 원소 개수입니다."
 
 #. i18n: ectx: label, entry (Editor_ElementSize), group (editor)
 #: SymbolEditor.kcfg:14
 #, kde-format
 msgid "The size in pixels of a grid element."
-msgstr "픽셀 단위의 모눈 원소의 크기입니다."
+msgstr "픽셀 단위의 격자 원소의 크기입니다."
 
 #. i18n: ectx: label, entry (Editor_ElementGrouping), group (editor)
 #: SymbolEditor.kcfg:18
@@ -762,7 +762,7 @@ msgstr "편집기 설정 페이지"
 #: ui/EditorConfigPage.ui:20
 #, kde-format
 msgid "Grid elements"
-msgstr "모눈 원소"
+msgstr "격자 원소"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/EditorConfigPage.ui:40
