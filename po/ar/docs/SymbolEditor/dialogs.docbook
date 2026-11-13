@@ -1,0 +1,19 @@
+<chapter id="Dialogs">
+    <title
+>مربعات الحوار</title>
+
+    <sect1 id="ConfigurationDialog">
+        <title
+>حواريّ الضّبط</title>
+        <para>
+            <screenshot
+><mediaobject
+><imageobject
+><imagedata fileref="configuration-dialog.png" format="PNG"/></imageobject
+></mediaobject
+></screenshot>
+        </para>
+        <para
+>يتيح مربع حوار الضبط ضبط عدد من الخيارات. </para>
+    </sect1>
+</chapter>

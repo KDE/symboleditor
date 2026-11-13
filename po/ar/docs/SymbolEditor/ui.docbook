@@ -1,0 +1,56 @@
+<chapter id="using-symboleditor">
+    <title
+>واجهة المستخدم</title>
+
+    <sect1 id="face-screenshot">
+        <title
+>نافذة محرر الرموز الرئيسة</title>
+        <para
+>تتكون النافذة الرئيسة من أداة ذات ألسنة تحتوي على محرر الرموز وعرض المكتبة. يوجد شريط قوائم وعدة أشرطة أدوات تحتوي على إجراءات قياسية وأدوات تحرير وخيارات عرض. يعطي شريط الحالة توجيهات لاستخدام الأدوات المختلفة. </para>
+        <sect2 id="editor-window">
+            <title
+>نافذة المحرّر</title>
+            <para>
+                <screenshot>
+                    <screeninfo
+>هذه لقطة شاشة لنافذة محرر محرر الرموز</screeninfo>
+                    <mediaobject
+><imageobject
+><imagedata fileref="mainwindow-editor.png" format="PNG"/></imageobject
+></mediaobject>
+                </screenshot>
+            </para>
+            <para
+>تسمح نافذة المحرر بتحرير رمز باستخدام الأدوات المتاحة. تتكون من شبكة توفر نقاط التقاط وتظهر دليل حجم مفضل يسمح بإنشاء رموز بحجم متناسق. حجم الشبكة وعدد العناصر ودليل الحجم المفضل كلها قابلة للضبط. </para>
+            <para
+>يوفر المحرر خطوط إرشاد لتحديد موضع النقاط نسبةً إلى النقاط الموجودة. تُوضع خطوط الإرشاد على المتجهات الأفقية والعمودية والقطرية من نقطة موجودة وأيضًا على مرجع دائري حول مركز الشبكة. </para>
+            <screenshot>
+                <screeninfo
+>هذه لقطة شاشة لخطوط إرشاد المحرر</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="editor-guides.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </sect2>
+        <sect2 id="library-window">
+            <title
+>نافذة المكتبة</title>
+            <para>
+                <screenshot>
+                    <screeninfo
+>هذه لقطة شاشة لنافذة مكتبة محرر الرموز</screeninfo>
+                    <mediaobject
+><imageobject
+><imagedata fileref="mainwindow-library.png" format="PNG"/></imageobject
+></mediaobject>
+                </screenshot>
+            </para>
+            <para
+>تعرض نافذة المكتبة تمثيلات الرموز الموجودة في المكتبة. يُظهر الرمز الجاري تحريره مظللًا. اختيار رمز سيفتحه في المحرر ليُعدّل. </para>
+            <para
+>من الممكن فتح عدة نسخ من تطبيق SymbolEditor ونسخ الرموز من مكتبة إلى أخرى باستخدام السحب والإفلات. تأكد من أن نافذتي المكتبة مرئيتان، ثم انقر واسحب الرمز المطلوب من نافذة مكتبة إلى الأخرى. سيُضاف الرمز بعد ذلك إلى المكتبة الهدف. </para>
+        </sect2>
+    </sect1>
+</chapter>

@@ -1,0 +1,623 @@
+<chapter id="commands">
+    <title
+>مرجع الأوامر</title>
+
+    <sect1 id="menus">
+        <title
+>قوائم محرر الرموز</title>
+        <sect2>
+            <title
+>قائمة ملف</title>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>جديد</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>ينشئ مكتبة جديدة</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>افتح</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>يفتح مكتبة موجودة</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>أحدث ملفات</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>افتح مكتبة استُخدمت مؤخرًا</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;<keycap
+>S</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>احفظ</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>يحفظ المكتبة</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl;&Shift;<keycap
+>S</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>احفظ باسم</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>يحفظ المكتبة باسم جديد</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>احفظ الرمز</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>احفظ الرمز الجاري تحريره</action
+></simpara
+> <simpara
+>إذا كان الرمز الجاري تحريره مختارًا من المكتبة، فسيؤدي الحفظ إلى تحديث ذلك الرمز. إذا كان رمزًا جديدًا، فسيُلحق بالمكتبة، وستُلحق عمليات الحفظ اللاحقة رمزًا جديدًا آخر بالمكتبة.</simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>احفظ الرمز كجديد</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>احفظ الرمز الجاري تحريره كرمز جديد</action
+></simpara
+> <simpara
+>عند حفظ رمز كجديد، سيُلحق بالمكتبة بغض النظر عن اختياره أصلًا من المكتبة للتحرير. ستُلحق عمليات الحفظ اللاحقة رمزًا جديدًا آخر بالمكتبة.</simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>استيراد المكتبة</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>استورد مكتبة مرفقًا الرموز المحتواة في المكتبة الحالية</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+> <keycombo
+>&Ctrl;<keycap
+>W</keycap
+></keycombo
+> </shortcut
+> <guimenuitem
+>إغلاق</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>أغلق المكتبة</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><shortcut
+><keycombo
+>&Ctrl; <keycap
+>Q</keycap
+></keycombo
+></shortcut
+><guimenuitem
+>أنهِ</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>يخرج من محرر الرموز</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>قائمة حرر</title>
+            <para
+>يحتوي محرر الرموز على عناصر قائمة <guimenu
+>تحرير</guimenu
+> الشائعة في كيدي، لمزيد من المعلومات اقرأ الأقسام حول <ulink url="help:/fundamentals/menus.html#menus-edit"
+>قائمة التحرير</ulink
+> من أساسيات كيدي. </para>
+        </sect2>
+
+        <sect2>
+            <title
+>قائمة العرض وشريط الأدوات</title>
+            <screenshot>
+                <screeninfo
+>هذه لقطة شاشة لشريط أدوات العرض</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="renderer-toolbar.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+                </screenshot>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>تعبئة المسار</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>فعّل تعبئة المسار</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>تعبئة لولبية</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>اختر طريقة تعبئة اللف</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>تعبئة فردي-زوجي</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>اختر طريقة تعبئة الزوجي والفردي</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>قبعة مسطحة</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>اختر نوع نهاية الخط المسطح</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>غطاء مربع</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>اختر نوع نهاية الخط المربع</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>مستدير</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>اختر نوع نهاية الخط المستدير</action
+></simpara
+></listitem
+></varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>وصلة مخروطية</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>اختر نوع وصلة الخط المشطوف</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>وصلة مائلة</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>اختر نوع وصلة الخط الميتر</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>وصلة مستديرة</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>اختر نوع وصلة الخط المستدير</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>زد عرض الخط</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>زد عرض خط المسار</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>قلّل عرض الخط</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>أنقص عرض خط المسار</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>قائمة الأدوات وشريط الأدوات</title>
+            <para
+>تتوفر عدة أدوات للمساعدة في تصميم الرموز. تتكون الرموز من سلسلة من المسارات الفرعية، ويتكون كل مسار فرعي من انتقال إلى موضع البداية (مبدئيًا 0,0 للرموز الجديدة) متبوعًا بخطوط ومنحنيات. المنحنيات هي خطوط تكعيبية لها بداية ونهاية ونقطتا تحكم تحددان المنحنى. توجد أدوات تسهيل لإنشاء المستطيلات والأهليلات، لكنها ستُفكك إلى خطوط ومنحنيات. </para>
+            <para
+>جميع النقاط المنشأة للعناصر قابلة للتحريك بسحبها إلى موضعها الجديد. يمكن تثبيت جميع النقاط على تقاطعات الشبكة إذا كان خيار التثبيت مفعّلًا، وإلا يمكن وضعها في أي مكان. </para>
+            <para
+>يمكن تدوير الرمز مع عقارب الساعة وعكس عقارب الساعة، وكذلك قلبه عموديًا وأفقيًا. يتيح هذا إنشاء رموز متعددة بسهولة بناءً على نفس التصميم. تذكر استخدام خيار حفظ الرمز كجديد لهذا الغرض. </para>
+            <screenshot>
+                <screeninfo
+>هذه لقطة شاشة لشريط أدوات الأدوات</screeninfo>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="tool-toolbar.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+                </screenshot>
+            <para>
+                <variablelist>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>انقل إلى</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>انقل موضع بداية المسار الفرعي</action
+></simpara
+> <simpara
+>إذا كان مسار فرعي موجود يُنشأ، فسيُغلق هذا المسار ويُبدأ مسار فرعي جديد في الموضع الجديد</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>ارسم إلى</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>ارسم خطًا إلى النقطة المحددة التالية</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>تكعيبي إلى</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>ارسم منحنى بيزيه باستخدام نقطتي تحكم ونقطة نهاية</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>مستطيل</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>ارسم مستطيلًا بين زاويتين متقابلتين</action
+></simpara
+> <simpara
+>يُغلق هذا أي مسار فرعي موجود ويُنشئ مسارًا فرعيًا جديدًا يتكون من المستطيل.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>بيضاوي</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>ارسم أهليلًا بين زاويتين متقابلتين</action
+></simpara
+> <simpara
+>يُغلق هذا أي مسار فرعي موجود ويُنشئ مسارًا فرعيًا جديدًا يتكون من الأهليل.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>أدرج محرفًا</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>اختر حرفًا من خط وأدرجه في المحرر</action
+></simpara
+> <simpara
+>سيؤدي هذا إلى استبدال أي مسارات موجودة</simpara
+> <screenshot
+> <screeninfo
+>هذه لقطة شاشة لمُحدد الحروف</screeninfo
+> <mediaobject
+> <imageobject
+> <imagedata fileref="charselect-dialog.png" format="PNG"/> </imageobject
+> </mediaobject
+> </screenshot
+> <simpara
+>حوار مُحدد الحروف هو حوار كيدي القياسي ويسمح باختيار حروف من أي خط. لا يُستخدم الحجم لأن الحرف يُقاس ليتناسب مع دليل الحجم المفضل.</simpara
+> <simpara
+>النقر المزدوج على حرف سيدرج ذلك الحرف في المحرر. سيبقى الحوار مفتوحًا بحيث يمكن إدراج حرف آخر، رغم أن هذا سيستبدل الأول. يتيح هذا سير عمل إدراج حرف، حفظ، إدراج حرف، حفظ لبناء مكتبة رموز بسرعة. تأكد من أن الرمز الذي يُحرر هو رمز جديد وليس رمزًا مختارًا سابقًا من المكتبة، وإلا فسيستمر الحفظ في استبدال الرمز الموجود في المكتبة.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>دوّر لليسار</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>دور الرمز بالكامل عكس عقارب الساعة 90 درجة</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>دوّر لليمين</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>دور الرمز بالكامل مع عقارب الساعة 90 درجة</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>اقلب أفقيًا</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>اقلب الرمز عبر المحور العمودي</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>اقلب عموديًا</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>اقلب الرمز عبر المحور الأفقي</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>قيّس للحجم المبدئي</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>قس الرمز ليتناسب مع الحجم المفضل المُحدد</action
+></simpara
+> <simpara
+>لاحظ أن هذا يؤثر فقط على النقاط؛ حيث يُنشأ رمز غير معبأ ويُحدد عرض خط، قد يمتد هذا إلى ما بعد حجم الدليل.</simpara
+> </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>فعّل الالتقاط</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>فعّل تثبيت النقاط على الشبكة</action
+></simpara
+></listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term
+><menuchoice
+><guimenuitem
+>خطوط دليل</guimenuitem
+></menuchoice
+></term>
+                        <listitem
+><simpara
+><action
+>فعّل توليد خطوط الدليل</action
+></simpara
+></listitem>
+                    </varlistentry>
+                </variablelist>
+            </para>
+        </sect2>
+
+        <sect2>
+            <title
+>قائمة الإعدادات والمساعدة</title>
+            <para
+>يحتوي محرر الرموز على عناصر القائمة الشائعة في كيدي <guimenu
+>الإعدادات</guimenu
+> و<guimenu
+>المساعدة</guimenu
+>، لمزيد من المعلومات اقرأ الأقسام حول <ulink url="help:/fundamentals/menus.html#menus-settings"
+>قائمة الإعدادات</ulink
+> و<ulink url="help:/fundamentals/menus.html#menus-help"
+>قائمة المساعدة</ulink
+> من أساسيات كيدي. </para>
+        </sect2>
+    </sect1>
+</chapter>
